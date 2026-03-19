@@ -1,102 +1,56 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import GenerateBar from './GenerateBar'
 
 describe('GenerateBar', () => {
+  const buttonName = /generate listing/i
+
   it('button is disabled when fewer than 5 photos are ready', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={3}
-        hasRequiredFields={true}
-        onGenerate={vi.fn()}
-      />
+      <GenerateBar readyPhotoCount={3} hasRequiredFields={true} />
     )
-    expect(screen.getByRole('button', { name: /generate listing/i })).toBeDisabled()
+    expect(screen.getByRole('button', { name: buttonName })).toBeDisabled()
   })
 
   it('button is disabled when required form fields are empty', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={5}
-        hasRequiredFields={false}
-        onGenerate={vi.fn()}
-      />
+      <GenerateBar readyPhotoCount={5} hasRequiredFields={false} />
     )
-    expect(screen.getByRole('button', { name: /generate listing/i })).toBeDisabled()
+    expect(screen.getByRole('button', { name: buttonName })).toBeDisabled()
   })
 
   it('button is disabled with 0 photos even with required fields', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={0}
-        hasRequiredFields={true}
-        onGenerate={vi.fn()}
-      />
+      <GenerateBar readyPhotoCount={0} hasRequiredFields={true} />
     )
-    expect(screen.getByRole('button', { name: /generate listing/i })).toBeDisabled()
+    expect(screen.getByRole('button', { name: buttonName })).toBeDisabled()
   })
 
   it('button is enabled when all conditions are met', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={5}
-        hasRequiredFields={true}
-        onGenerate={vi.fn()}
-      />
+      <GenerateBar readyPhotoCount={5} hasRequiredFields={true} />
     )
-    expect(screen.getByRole('button', { name: /generate listing/i })).not.toBeDisabled()
+    expect(screen.getByRole('button', { name: buttonName })).not.toBeDisabled()
   })
 
-  it('calls onGenerate when button is clicked', async () => {
-    const user = userEvent.setup()
-    const onGenerate = vi.fn()
+  it('renders as submit button', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={5}
-        hasRequiredFields={true}
-        onGenerate={onGenerate}
-      />
+      <GenerateBar readyPhotoCount={5} hasRequiredFields={true} />
     )
-    await user.click(screen.getByRole('button', { name: /generate listing/i }))
-    expect(onGenerate).toHaveBeenCalledTimes(1)
+    expect(screen.getByRole('button', { name: buttonName })).toHaveAttribute('type', 'submit')
   })
 
   it('shows loading state when isLoading is true', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={5}
-        hasRequiredFields={true}
-        onGenerate={vi.fn()}
-        isLoading={true}
-      />
+      <GenerateBar readyPhotoCount={5} hasRequiredFields={true} isLoading={true} />
     )
     expect(screen.getByText(/generating/i)).toBeInTheDocument()
     expect(screen.getByRole('button')).toBeDisabled()
   })
 
-  it('shows correct language badges for active market', () => {
-    render(
-      <GenerateBar
-        readyPhotoCount={5}
-        hasRequiredFields={true}
-        onGenerate={vi.fn()}
-      />
-    )
-    // Luxembourg market has DE, FR, EN, LU
-    expect(screen.getByText('de')).toBeInTheDocument()
-    expect(screen.getByText('fr')).toBeInTheDocument()
-    expect(screen.getByText('en')).toBeInTheDocument()
-    expect(screen.getByText('lu')).toBeInTheDocument()
-  })
-
   it('shows photo count hint when photos are insufficient', () => {
     render(
-      <GenerateBar
-        readyPhotoCount={2}
-        hasRequiredFields={true}
-        onGenerate={vi.fn()}
-      />
+      <GenerateBar readyPhotoCount={2} hasRequiredFields={true} />
     )
     expect(screen.getByText(/3 more photo/i)).toBeInTheDocument()
   })

@@ -4,7 +4,7 @@
 CREATE TABLE IF NOT EXISTS properties (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   bedrooms INTEGER NOT NULL CHECK (bedrooms >= 0),
-  bathrooms NUMERIC(3,1) NOT NULL CHECK (bathrooms >= 0),
+  bathrooms INTEGER NOT NULL CHECK (bathrooms >= 0),
   sqm NUMERIC(8,2) NOT NULL CHECK (sqm > 0),
   price NUMERIC(12,2) NOT NULL CHECK (price > 0),
   neighborhood TEXT NOT NULL,

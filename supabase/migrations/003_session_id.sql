@@ -1,0 +1,1 @@
+ALTER TABLE properties ADD COLUMN IF NOT EXISTS session_id UUID;

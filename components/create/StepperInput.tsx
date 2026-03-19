@@ -1,5 +1,8 @@
 'use client'
 
+import { Minus, Plus } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+
 interface StepperInputProps {
   value: number
   onChange: (value: number) => void
@@ -35,32 +38,36 @@ export default function StepperInput({
         {label}
       </label>
       <div className="flex items-center gap-0">
-        <button
+        <Button
           type="button"
+          variant="outline"
+          size="icon"
           onClick={decrement}
           disabled={value <= min}
           aria-label={`Decrease ${label}`}
-          className="w-10 h-10 rounded-l-md border border-gray-300 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="w-11 h-11 rounded-l-md rounded-r-none border-gray-300 bg-white text-gray-600 hover:bg-gray-50 shadow-none disabled:opacity-40"
         >
-          −
-        </button>
+          <Minus className="size-4" />
+        </Button>
         <div
           id={id}
-          className="w-14 h-10 border-t border-b border-gray-300 bg-white flex items-center justify-center text-[#1a2332] font-semibold text-sm"
+          className="w-14 h-11 border-t border-b border-gray-300 bg-white flex items-center justify-center text-navy-deep font-semibold text-sm"
           aria-live="polite"
           aria-atomic="true"
         >
           {value % 1 === 0 ? value : value.toFixed(1)}
         </div>
-        <button
+        <Button
           type="button"
+          variant="outline"
+          size="icon"
           onClick={increment}
           disabled={value >= max}
           aria-label={`Increase ${label}`}
-          className="w-10 h-10 rounded-r-md border border-gray-300 bg-white flex items-center justify-center text-gray-600 hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="w-11 h-11 rounded-r-md rounded-l-none border-gray-300 bg-white text-gray-600 hover:bg-gray-50 shadow-none disabled:opacity-40"
         >
-          +
-        </button>
+          <Plus className="size-4" />
+        </Button>
       </div>
     </div>
   )

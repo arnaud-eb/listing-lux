@@ -1,34 +1,135 @@
-import type { Language } from '@/lib/types'
+"use client";
+
+import type { Language, Listing } from "@/lib/types";
+import { LANGUAGE_LABELS } from "@/lib/constants";
+import { Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import type { GenerationStatus } from "@/app/(wizard)/listing/[listingId]/use-listing-generation";
+
+const HIGHLIGHTS_LABEL: Record<Language, string> = {
+  de: "Highlights",
+  fr: "Points forts",
+  en: "Highlights",
+  lu: "Highlights",
+};
 
 interface ListingContentProps {
-  language: Language
-  isGenerating?: boolean
-}
-
-const LANGUAGE_LABELS: Record<Language, string> = {
-  de: 'Deutsch',
-  fr: 'Français',
-  en: 'English',
-  lu: 'Lëtzebuergesch',
+  language: Language;
+  status: GenerationStatus;
+  listing?: Partial<Listing> | null;
+  error?: string;
+  currentlyGenerating?: Language;
+  onRetry?: () => void;
 }
 
 export default function ListingContent({
   language,
-  isGenerating = true,
+  status,
+  listing,
+  error,
+  currentlyGenerating,
+  onRetry,
 }: ListingContentProps) {
-  if (isGenerating) {
-    return (
-      <div className="flex flex-col items-center justify-center py-16 gap-4 text-gray-400">
-        <div className="w-8 h-8 border-2 border-[#C5A059] border-t-transparent rounded-full animate-spin" />
-        <p className="text-sm">Generating your {LANGUAGE_LABELS[language]} listing…</p>
-        <p className="text-xs text-gray-300">Phase 3 — coming soon</p>
-      </div>
-    )
-  }
-
   return (
-    <div className="prose prose-sm max-w-none text-gray-600">
-      <p className="text-gray-400 italic">No content generated yet.</p>
+    <div className="min-h-[400px]">
+      {status === "queued" && (
+        <div className="flex flex-col items-center justify-center py-16 gap-3 text-gray-400">
+          <div className="w-6 h-6 border-2 border-gray-200 border-t-transparent rounded-full animate-spin motion-reduce:animate-none" role="status" aria-label="Queued for generation" />
+          <p className="text-sm">
+            Queued — will generate after{" "}
+            {currentlyGenerating
+              ? LANGUAGE_LABELS[currentlyGenerating]
+              : "current language"}
+          </p>
+        </div>
+      )}
+
+      {status === "idle" && (
+        <div className="flex items-center justify-center py-16">
+          <p className="text-sm text-gray-400 italic">
+            No content generated yet.
+          </p>
+        </div>
+      )}
+
+      {status === "error" && (
+        <div className="flex flex-col items-center justify-center py-16 gap-3">
+          <p className="text-sm text-red-500">{error || "Generation failed"}</p>
+          {onRetry && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={onRetry}
+              className="text-red-500 border-red-200 hover:bg-red-50"
+            >
+              Retry
+            </Button>
+          )}
+        </div>
+      )}
+
+      {(status === "generating" || status === "complete") && (
+        <div className="flex flex-col gap-6 py-4">
+          {/* Title */}
+          {listing?.title ? (
+            <h2 className="font-serif text-2xl font-bold text-navy-deep">
+              {listing.title}
+            </h2>
+          ) : status === "generating" ? (
+            <div className="flex items-center gap-2 text-gray-400">
+              <div className="w-5 h-5 border-2 border-gold border-t-transparent rounded-full animate-spin motion-reduce:animate-none" role="status" aria-label="Generating listing" />
+              <span className="text-sm">
+                Preparing your {LANGUAGE_LABELS[language]} listing…
+              </span>
+            </div>
+          ) : null}
+
+          {/* Description */}
+          {listing?.description && (
+            <div className="flex flex-col gap-3">
+              {listing.description.split("\n\n").map((paragraph, i) => (
+                <p
+                  key={i}
+                  className="text-sm text-gray-600 leading-relaxed"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          )}
+
+          {/* Highlights */}
+          {listing?.highlights && listing.highlights.length > 0 && (
+            <div>
+              <h3 className="text-xs font-semibold text-navy-deep uppercase tracking-wider mb-3">
+                {HIGHLIGHTS_LABEL[language]}
+              </h3>
+              <div className="flex flex-col gap-2">
+                {listing.highlights.map((highlight, i) => (
+                  <div key={i} className="flex items-start gap-2">
+                    <Sparkles className="size-4 text-gold shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-600">{highlight}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* SEO Keywords */}
+          {listing?.seo_keywords && listing.seo_keywords.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 pt-2 border-t border-gray-100">
+              {listing.seo_keywords.filter(Boolean).map((keyword, i) => (
+                <span
+                  key={i}
+                  className="text-2xs bg-gray-100 text-gray-500 rounded-full px-2.5 py-0.5"
+                >
+                  {keyword}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
-  )
+  );
 }

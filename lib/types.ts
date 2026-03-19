@@ -1,6 +1,10 @@
+import type { PhotoAnalysis } from '@/lib/schemas/photo-analysis'
+
 export type Language = 'de' | 'fr' | 'en' | 'lu'
 
-export type PhotoStatus = 'selecting' | 'uploading' | 'processing' | 'ready' | 'error'
+export type PhotoStatus = 'uploading' | 'processing' | 'ready' | 'error'
+
+export type { PhotoAnalysis }
 
 export interface ListingPhoto {
   id: string
@@ -9,7 +13,7 @@ export interface ListingPhoto {
   publicUrl: string | null
   status: PhotoStatus
   uploadProgress: number
-  aiAnalysis: null           // Phase 2: PhotoAnalysis | null
+  aiAnalysis: PhotoAnalysis | null
 }
 
 export interface Property {
@@ -33,6 +37,8 @@ export interface Listing {
   description: string
   highlights: string[]
   seo_keywords: string[]
+  prompt_version?: string
+  model?: string
 }
 
 export interface PropertyFormData {
@@ -44,4 +50,5 @@ export interface PropertyFormData {
   property_type: string
   features: Record<string, boolean>
   photo_urls: string[]
+  photo_analyses?: PhotoAnalysis[]
 }

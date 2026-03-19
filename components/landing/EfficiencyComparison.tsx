@@ -1,89 +1,81 @@
+import { X, CheckCircle, Sparkles } from "lucide-react";
+
 export default function EfficiencyComparison() {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl font-bold text-[#1a2332] mb-4">
-            Stop Spending Hours on Listings
-          </h2>
-          <p className="text-lg text-gray-500 max-w-xl mx-auto">
-            See the difference AI makes for your daily workflow
-          </p>
+    <section className="bg-navy-deep/5 py-24 px-6 lg:px-20" id="comparison">
+      <div className="text-center mb-16">
+        <h2 className="font-serif text-4xl font-bold mb-4 max-md:text-3xl">
+          Stop Spending Hours on Listings
+        </h2>
+        <p className="text-slate-600 max-w-2xl mx-auto">
+          See the difference AI makes for your daily workflow
+        </p>
+      </div>
+
+      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border border-gold/10 flex flex-row max-md:flex-col">
+        {/* Old Way */}
+        <div className="p-10 flex-1 border-r border-slate-100 max-md:border-r-0 max-md:border-b" aria-label="Traditional copywriting approach">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-slate-400 font-bold uppercase tracking-widest text-xs">
+              The Old Way
+            </span>
+          </div>
+          <h4 className="font-serif text-2xl font-bold mb-4">
+            Traditional Copywriting
+          </h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3 text-slate-500 text-sm">
+              <X className="text-red-400 size-4 mt-0.5 shrink-0" />
+              2 hours of manual drafting
+            </li>
+            <li className="flex items-start gap-3 text-slate-500 text-sm">
+              <X className="text-red-400 size-4 mt-0.5 shrink-0" />
+              External translation costs
+            </li>
+            <li className="flex items-start gap-3 text-slate-500 text-sm">
+              <X className="text-red-400 size-4 mt-0.5 shrink-0" />
+              Inconsistent luxury tone
+            </li>
+          </ul>
+          <div className="mt-8 pt-8 border-t border-slate-50">
+            <p className="text-3xl font-light text-slate-400">
+              Total: <span className="font-bold text-navy-deep">120+ mins</span>
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 max-w-3xl mx-auto max-lg:grid-cols-1">
-          {/* Manual */}
-          <div className="rounded-2xl border border-gray-200 p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <span className="text-gray-500 text-lg">✎</span>
-              </div>
-              <div>
-                <div className="text-sm font-medium text-gray-500">Manual Writing</div>
-                <div className="text-2xl font-bold text-gray-800">2 Hours</div>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm text-gray-500 mb-1">
-                <span>Time per listing</span>
-                <span>100%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-3">
-                <div className="bg-gray-400 h-3 rounded-full w-full" />
-              </div>
-            </div>
-            <ul className="mt-6 space-y-2 text-sm text-gray-500">
-              <li className="flex items-center gap-2">
-                <span className="text-red-400">✗</span> Write 4 language versions
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-red-400">✗</span> Manual SEO keyword research
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-red-400">✗</span> Inconsistent tone and quality
-              </li>
-            </ul>
+        {/* ListingLux Way */}
+        <div className="p-10 flex-1 bg-gradient-to-br from-navy-deep to-slate-900 text-white relative" aria-label="ListingLux AI approach">
+          <div className="absolute top-0 right-0 p-4" aria-hidden="true">
+            <Sparkles className="text-gold/40 size-14" />
           </div>
-
-          {/* AI */}
-          <div className="rounded-2xl border-2 border-[#C5A059] p-8 relative overflow-hidden">
-            <div className="absolute top-4 right-4">
-              <span className="bg-[#C5A059] text-white text-xs font-bold px-3 py-1 rounded-full">
-                -96% Time
-              </span>
-            </div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-[#C5A059]/10 flex items-center justify-center">
-                <span className="text-[#C5A059] text-lg">✦</span>
-              </div>
-              <div>
-                <div className="text-sm font-medium text-[#C5A059]">ListingLux AI</div>
-                <div className="text-2xl font-bold text-[#1a2332]">5 Minutes</div>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <div className="flex justify-between text-sm text-gray-500 mb-1">
-                <span>Time per listing</span>
-                <span>4%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-3">
-                <div className="bg-[#C5A059] h-3 rounded-full" style={{ width: '5%' }} />
-              </div>
-            </div>
-            <ul className="mt-6 space-y-2 text-sm text-gray-600">
-              <li className="flex items-center gap-2">
-                <span className="text-[#C5A059]">✓</span> 4 languages generated at once
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-[#C5A059]">✓</span> SEO keywords included
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="text-[#C5A059]">✓</span> Consistent professional tone
-              </li>
-            </ul>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-gold font-bold uppercase tracking-widest text-xs">
+              The ListingLux Way
+            </span>
+          </div>
+          <h4 className="font-serif text-2xl font-bold mb-4">ListingLux AI</h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3 text-slate-300 text-sm">
+              <CheckCircle className="text-gold size-4 mt-0.5 shrink-0" />
+              Auto-generated in 5 minutes
+            </li>
+            <li className="flex items-start gap-3 text-slate-300 text-sm">
+              <CheckCircle className="text-gold size-4 mt-0.5 shrink-0" />
+              Native-level LU, FR, DE, EN
+            </li>
+            <li className="flex items-start gap-3 text-slate-300 text-sm">
+              <CheckCircle className="text-gold size-4 mt-0.5 shrink-0" />
+              Professional Sotheby&apos;s tone
+            </li>
+          </ul>
+          <div className="mt-8 pt-8 border-t border-white/10">
+            <p className="text-3xl font-light text-slate-300">
+              Total: <span className="font-bold text-gold">5 mins</span>
+            </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

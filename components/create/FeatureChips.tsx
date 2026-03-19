@@ -1,5 +1,8 @@
 'use client'
 
+import { Check } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+
 const FEATURE_OPTIONS = [
   { id: 'balcony', label: 'Balcony' },
   { id: 'parking', label: 'Parking' },
@@ -25,36 +28,32 @@ export default function FeatureChips({ features, onChange }: FeatureChipsProps) 
   }
 
   return (
-    <div className="flex flex-col gap-2">
-      <span className="text-sm font-medium text-gray-700">Features</span>
+    <fieldset>
+      <legend className="text-sm font-medium text-gray-700 mb-2">Features</legend>
       <div className="flex flex-wrap gap-2" role="group" aria-label="Property features">
         {FEATURE_OPTIONS.map((option) => {
           const checked = !!features[option.id]
           return (
-            <label
+            <Button
               key={option.id}
-              className={`
-                flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium cursor-pointer
-                border transition-colors select-none
-                ${checked
-                  ? 'bg-[#1a2332]/5 border-[#1a2332] text-[#1a2332]'
-                  : 'bg-white border-gray-300 text-gray-600 hover:border-gray-400'
-                }
-              `}
+              type="button"
+              role="checkbox"
+              aria-checked={checked}
+              variant="outline"
+              size="sm"
+              onClick={() => toggle(option.id)}
+              className={`rounded-full shadow-none ${
+                checked
+                  ? 'bg-navy-deep/10 border-navy-deep text-navy-deep hover:bg-navy-deep/15 hover:text-navy-deep'
+                  : 'border-gray-300 text-gray-600 hover:border-gray-400 hover:bg-gray-50 hover:text-gray-700'
+              }`}
             >
-              <input
-                type="checkbox"
-                className="sr-only"
-                checked={checked}
-                onChange={() => toggle(option.id)}
-                aria-label={option.label}
-              />
-              {checked && <span className="text-[#C5A059]">✓</span>}
+              {checked && <Check className="size-3.5 text-gold" aria-hidden="true" />}
               {option.label}
-            </label>
+            </Button>
           )
         })}
       </div>
-    </div>
+    </fieldset>
   )
 }

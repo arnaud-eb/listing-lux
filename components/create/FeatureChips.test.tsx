@@ -26,10 +26,10 @@ describe('FeatureChips', () => {
         onChange={vi.fn()}
       />
     )
-    const balconyCheckbox = screen.getByLabelText('Balcony')
-    const parkingCheckbox = screen.getByLabelText('Parking')
-    expect(balconyCheckbox).toBeChecked()
-    expect(parkingCheckbox).not.toBeChecked()
+    const balconyChip = screen.getByRole('checkbox', { name: /balcony/i })
+    const parkingChip = screen.getByRole('checkbox', { name: /parking/i })
+    expect(balconyChip).toHaveAttribute('aria-checked', 'true')
+    expect(parkingChip).toHaveAttribute('aria-checked', 'false')
   })
 
   it('toggles chip on click', async () => {
@@ -38,7 +38,7 @@ describe('FeatureChips', () => {
     render(
       <FeatureChips features={{ balcony: false }} onChange={onChange} />
     )
-    await user.click(screen.getByLabelText('Balcony'))
+    await user.click(screen.getByRole('checkbox', { name: /balcony/i }))
     expect(onChange).toHaveBeenCalledWith(
       expect.objectContaining({ balcony: true })
     )
@@ -50,7 +50,7 @@ describe('FeatureChips', () => {
     render(
       <FeatureChips features={{ balcony: true, parking: true }} onChange={onChange} />
     )
-    await user.click(screen.getByLabelText('Balcony'))
+    await user.click(screen.getByRole('checkbox', { name: /balcony/i }))
     expect(onChange).toHaveBeenCalledWith(
       expect.objectContaining({ balcony: false, parking: true })
     )

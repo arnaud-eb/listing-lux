@@ -1,85 +1,71 @@
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-
-const LANGUAGES = ['DE', 'FR', 'EN', 'LU']
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background overlay */}
+    <section className="relative px-6 py-16 lg:px-20 lg:py-24 bg-navy-deep text-white overflow-hidden">
+      {/* Radial gold glow */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-[#1a2332] via-[#1a2332]/90 to-[#1a2332]/70"
+        className="absolute inset-0 opacity-20 pointer-events-none"
         aria-hidden="true"
-      />
-      {/* Decorative background pattern */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C5A059' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-        aria-hidden="true"
-      />
+      >
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#d4af3522,transparent_70%)]" />
+      </div>
 
-      <div className="relative z-10 container mx-auto px-6 py-24 text-center">
-        {/* Language badges */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          {LANGUAGES.map((lang) => (
-            <span
-              key={lang}
-              className="px-3 py-1 rounded-full text-sm font-medium border border-[#C5A059]/60 text-[#C5A059] bg-[#C5A059]/10"
-            >
-              {lang}
+      <div className="relative max-w-7xl mx-auto grid grid-cols-2 gap-12 items-center max-lg:grid-cols-1">
+        {/* Text column */}
+        <div className="flex flex-col gap-8">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest w-fit">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75 motion-reduce:animate-none" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
             </span>
-          ))}
+            Now supporting Luxembourgish
+          </div>
+
+          <h1 className="font-serif text-6xl font-bold leading-tight max-md:text-4xl">
+            Generate Property Listings in 4 Languages —{" "}
+            <span className="text-gold italic">In 5 Minutes</span>
+          </h1>
+
+          <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
+            Elevate your portfolio with professional real estate copy in German,
+            French, English, and Luxembourgish. Tailored for the high-end luxury
+            market with precision and speed.
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/create"
+              className="h-14 px-8 rounded-lg bg-gold text-navy-deep font-bold text-lg shadow-xl shadow-gold/20 hover:bg-gold/90 transition-all inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep outline-none"
+            >
+              Try Demo Free
+            </Link>
+            <Link
+              href="/create"
+              className="h-14 px-8 rounded-lg border border-slate-500 text-white font-bold text-lg hover:bg-white/10 transition-all inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep outline-none"
+            >
+              Create Your Listing
+            </Link>
+          </div>
         </div>
 
-        {/* Headline */}
-        <h1 className="font-serif text-5xl font-bold text-white leading-tight max-w-3xl mx-auto mb-6 max-lg:text-4xl max-sm:text-3xl">
-          Elevate Your Listings with{' '}
-          <span className="text-[#C5A059]">Multilingual AI</span>
-        </h1>
-
-        {/* Subheading */}
-        <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed max-sm:text-lg">
-          Generate professional property descriptions in DE/FR/EN/LU in seconds.
-          Built for Luxembourg real estate agents.
-        </p>
-
-        {/* CTAs */}
-        <div className="flex items-center justify-center gap-4 flex-wrap">
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="border-white/60 text-white bg-transparent hover:bg-white/10 hover:text-white hover:border-white"
-          >
-            <Link href="/demo">Try Demo</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            className="bg-[#C5A059] text-white hover:bg-[#C5A059]/90 border-0"
-          >
-            <Link href="/create">Create Listing</Link>
-          </Button>
-        </div>
-
-        {/* Stats row */}
-        <div className="flex items-center justify-center gap-12 mt-16 pt-16 border-t border-white/10 max-sm:gap-6">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#C5A059] font-serif">4</div>
-            <div className="text-sm text-white/60 mt-1">Languages</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#C5A059] font-serif">5 min</div>
-            <div className="text-sm text-white/60 mt-1">Per listing</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#C5A059] font-serif">-96%</div>
-            <div className="text-sm text-white/60 mt-1">Time saved</div>
+        {/* Image column */}
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-r from-gold to-transparent rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000" />
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl bg-slate-800">
+            <Image
+              src="/images/hero-villa.jpg"
+              alt="Luxury modern villa exterior with sunset lighting"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

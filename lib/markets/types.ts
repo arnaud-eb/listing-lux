@@ -11,6 +11,8 @@ export interface Neighborhood {
   slug: string
   pricePerSqm: PriceRange
   tags: string[]
+  descriptions?: Partial<Record<'de' | 'fr' | 'en' | 'lu', string>>
+  keywords?: Partial<Record<'de' | 'fr' | 'en' | 'lu', string[]>>
 }
 
 export interface AreaData {

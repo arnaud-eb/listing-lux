@@ -33,6 +33,16 @@ export const luxembourgMarket: Market = {
           slug: 'kirchberg',
           pricePerSqm: { min: 8500, max: 14000, median: 11000, currency: 'EUR' },
           tags: ['EU quarter', 'modern', 'expat-friendly', 'business district'],
+          descriptions: {
+            de: 'Kirchberg ist das moderne Geschäftsviertel Luxemburgs mit EU-Institutionen, der Philharmonie und dem MUDAM. Exzellente internationale Schulen und moderne Wohnkomplexe machen es zum bevorzugten Standort für Expats und Berufstätige.',
+            fr: "Kirchberg est le quartier d'affaires moderne du Luxembourg, abritant les institutions européennes, la Philharmonie et le MUDAM. D'excellentes écoles internationales et des résidences modernes en font un lieu de choix pour les expatriés et les professionnels.",
+            en: 'Kirchberg is Luxembourg\'s modern business district, home to EU institutions, the Philharmonie, and MUDAM. Excellent international schools and contemporary residential complexes make it a prime location for expats and professionals.',
+          },
+          keywords: {
+            de: ['EU-Viertel', 'Philharmonie', 'MUDAM', 'internationale Schulen', 'moderne Architektur'],
+            fr: ['quartier européen', 'Philharmonie', 'MUDAM', 'écoles internationales', 'architecture moderne'],
+            en: ['EU quarter', 'Philharmonie', 'MUDAM', 'international schools', 'modern architecture'],
+          },
         },
         {
           id: 'belair',
@@ -40,6 +50,16 @@ export const luxembourgMarket: Market = {
           slug: 'belair',
           pricePerSqm: { min: 8000, max: 13000, median: 10500, currency: 'EUR' },
           tags: ['residential', 'upscale', 'green', 'family-friendly'],
+          descriptions: {
+            de: 'Belair ist eines der exklusivsten Wohnviertel Luxemburgs mit eleganten Villen, gepflegten Gärten und ruhigen baumgesäumten Straßen. Nahe dem Stadtzentrum gelegen, bietet es eine perfekte Balance zwischen urbanem Komfort und grüner Lebensqualität.',
+            fr: "Belair est l'un des quartiers résidentiels les plus exclusifs du Luxembourg, avec ses villas élégantes, ses jardins soignés et ses rues tranquilles bordées d'arbres. Proche du centre-ville, il offre un équilibre parfait entre confort urbain et qualité de vie verdoyante.",
+            en: 'Belair is one of Luxembourg\'s most exclusive residential neighborhoods, featuring elegant villas, manicured gardens, and quiet tree-lined streets. Close to the city center, it offers a perfect balance between urban convenience and green living.',
+          },
+          keywords: {
+            de: ['exklusiv', 'Villen', 'grüne Lage', 'ruhig', 'gehobenes Wohnen'],
+            fr: ['exclusif', 'villas', 'quartier vert', 'calme', 'résidentiel haut de gamme'],
+            en: ['exclusive', 'villas', 'green neighborhood', 'quiet', 'upscale residential'],
+          },
         },
         {
           id: 'limpertsberg',
@@ -47,6 +67,16 @@ export const luxembourgMarket: Market = {
           slug: 'limpertsberg',
           pricePerSqm: { min: 7500, max: 12500, median: 10000, currency: 'EUR' },
           tags: ['university area', 'cultural', 'parks', 'sought-after'],
+          descriptions: {
+            de: 'Limpertsberg ist ein begehrtes Wohnviertel nahe der Universität mit kulturellen Einrichtungen, dem Théâtre du Centaure und dem Park Edmond Klein. Beliebte Cafés, lokale Geschäfte und eine lebendige Atmosphäre zeichnen dieses Viertel aus.',
+            fr: "Le Limpertsberg est un quartier résidentiel prisé, proche de l'université, avec des institutions culturelles, le Théâtre du Centaure et le parc Edmond Klein. Cafés prisés, commerces locaux et une atmosphère vivante caractérisent ce quartier.",
+            en: 'Limpertsberg is a sought-after residential area near the university, featuring cultural institutions, the Théâtre du Centaure, and Edmond Klein Park. Popular cafés, local shops, and a vibrant atmosphere define this neighborhood.',
+          },
+          keywords: {
+            de: ['Universität', 'kulturell', 'Parks', 'lebendig', 'begehrt'],
+            fr: ['université', 'culturel', 'parcs', 'vivant', 'prisé'],
+            en: ['university', 'cultural', 'parks', 'vibrant', 'sought-after'],
+          },
         },
         {
           id: 'merl',
@@ -54,6 +84,16 @@ export const luxembourgMarket: Market = {
           slug: 'merl',
           pricePerSqm: { min: 7000, max: 12000, median: 9500, currency: 'EUR' },
           tags: ['quiet', 'residential', 'green', 'family-friendly'],
+          descriptions: {
+            de: 'Merl ist ein ruhiges, grünes Wohnviertel mit hervorragenden Schulen und dem Parc de Merl. Ideal für Familien, die Nähe zum Stadtzentrum mit einer entspannten, naturnahen Umgebung verbinden möchten.',
+            fr: "Merl est un quartier résidentiel calme et verdoyant, avec d'excellentes écoles et le Parc de Merl. Idéal pour les familles qui souhaitent combiner proximité du centre-ville et environnement détendu, proche de la nature.",
+            en: 'Merl is a quiet, green residential neighborhood with excellent schools and the Parc de Merl. Ideal for families seeking proximity to the city center combined with a relaxed, nature-oriented environment.',
+          },
+          keywords: {
+            de: ['familienfreundlich', 'Schulen', 'Park', 'ruhig', 'grün'],
+            fr: ['familial', 'écoles', 'parc', 'calme', 'vert'],
+            en: ['family-friendly', 'schools', 'park', 'quiet', 'green'],
+          },
         },
         {
           id: 'hollerich',
@@ -61,6 +101,16 @@ export const luxembourgMarket: Market = {
           slug: 'hollerich',
           pricePerSqm: { min: 6000, max: 10000, median: 8000, currency: 'EUR' },
           tags: ['up-and-coming', 'creative district', 'central', 'urban'],
+          descriptions: {
+            de: 'Hollerich erlebt einen bemerkenswerten Wandel zum kreativen Stadtviertel. Zentral gelegen mit guter Anbindung, entstehen hier moderne Wohnprojekte neben Galerien und innovativen Gastronomiekonzepten.',
+            fr: "Hollerich connaît une transformation remarquable en quartier créatif urbain. Situé au centre avec de bonnes connexions, des projets résidentiels modernes y côtoient galeries et concepts gastronomiques innovants.",
+            en: 'Hollerich is undergoing a remarkable transformation into a creative urban district. Centrally located with great connectivity, modern residential projects are emerging alongside galleries and innovative dining concepts.',
+          },
+          keywords: {
+            de: ['aufstrebend', 'kreativ', 'zentral', 'Neuentwicklung', 'urban'],
+            fr: ['en plein essor', 'créatif', 'central', 'nouveau développement', 'urbain'],
+            en: ['up-and-coming', 'creative', 'central', 'new development', 'urban'],
+          },
         },
         {
           id: 'bonnevoie',
@@ -68,6 +118,16 @@ export const luxembourgMarket: Market = {
           slug: 'bonnevoie',
           pricePerSqm: { min: 5500, max: 9500, median: 7500, currency: 'EUR' },
           tags: ['multicultural', 'lively', 'affordable', 'central'],
+          descriptions: {
+            de: 'Bonnevoie ist ein lebendiges, multikulturelles Viertel mit einer vielfältigen Gastroszene und dem beliebten Bonnevoie-Markt. Gute Anbindung an den Hauptbahnhof und erschwinglichere Preise machen es attraktiv für junge Berufstätige.',
+            fr: "Bonnevoie est un quartier vivant et multiculturel avec une scène gastronomique diversifiée et le populaire marché de Bonnevoie. Sa bonne connexion à la gare centrale et ses prix plus abordables en font un choix attractif pour les jeunes professionnels.",
+            en: 'Bonnevoie is a vibrant, multicultural neighborhood with a diverse dining scene and the popular Bonnevoie market. Good connections to the central station and more affordable prices make it attractive for young professionals.',
+          },
+          keywords: {
+            de: ['multikulturell', 'Markt', 'erschwinglich', 'lebendig', 'Bahnhofsnähe'],
+            fr: ['multiculturel', 'marché', 'abordable', 'vivant', 'proche gare'],
+            en: ['multicultural', 'market', 'affordable', 'lively', 'near station'],
+          },
         },
         {
           id: 'centre-ville',
@@ -75,6 +135,84 @@ export const luxembourgMarket: Market = {
           slug: 'centre-ville',
           pricePerSqm: { min: 9000, max: 15000, median: 12000, currency: 'EUR' },
           tags: ['city center', 'historic', 'premium', 'walkable'],
+          descriptions: {
+            de: 'Das Centre-Ville ist das pulsierende Herz Luxemburgs mit der Grand-Rue, dem Place d\'Armes und historischer Architektur. Premium-Wohnlagen mit fußläufigem Zugang zu Kultur, Gastronomie und Geschäften.',
+            fr: "Le Centre-Ville est le cœur battant du Luxembourg avec la Grand-Rue, la Place d'Armes et son architecture historique. Des emplacements résidentiels premium avec accès piéton à la culture, la gastronomie et les commerces.",
+            en: 'Centre-Ville is the vibrant heart of Luxembourg featuring the Grand-Rue, Place d\'Armes, and historic architecture. Premium residential locations with walkable access to culture, dining, and shopping.',
+          },
+          keywords: {
+            de: ['Stadtzentrum', 'historisch', 'Grand-Rue', 'Premium', 'fußläufig'],
+            fr: ['centre-ville', 'historique', 'Grand-Rue', 'premium', 'piéton'],
+            en: ['city center', 'historic', 'Grand-Rue', 'premium', 'walkable'],
+          },
+        },
+        {
+          id: 'gare',
+          name: 'Gare',
+          slug: 'gare',
+          pricePerSqm: { min: 5000, max: 9000, median: 7000, currency: 'EUR' },
+          tags: ['transport hub', 'urban', 'diverse', 'central'],
+          descriptions: {
+            de: 'Das Bahnhofsviertel bietet optimale Verkehrsanbindung und entwickelt sich zunehmend zu einem modernen urbanen Standort. Vielfältige Gastronomie, gute Infrastruktur und wachsendes kulturelles Angebot.',
+            fr: "Le quartier de la Gare offre des connexions de transport optimales et évolue vers un emplacement urbain moderne. Gastronomie diversifiée, bonne infrastructure et offre culturelle croissante.",
+            en: 'The Gare district offers optimal transport connections and is evolving into a modern urban location. Diverse dining, good infrastructure, and a growing cultural offering.',
+          },
+          keywords: {
+            de: ['Bahnhof', 'Verkehrsanbindung', 'urban', 'Entwicklung', 'zentral'],
+            fr: ['gare', 'transport', 'urbain', 'développement', 'central'],
+            en: ['station', 'transport', 'urban', 'development', 'central'],
+          },
+        },
+        {
+          id: 'grund',
+          name: 'Grund',
+          slug: 'grund',
+          pricePerSqm: { min: 7000, max: 12000, median: 9500, currency: 'EUR' },
+          tags: ['historic', 'charming', 'riverside', 'tourist attraction'],
+          descriptions: {
+            de: 'Grund liegt malerisch im Alzette-Tal unterhalb der Festung und verbindet historischen Charme mit einer lebendigen Gastroszene. UNESCO-Weltkulturerbe-Umgebung mit einzigartiger Atmosphäre.',
+            fr: "Le Grund est situé de manière pittoresque dans la vallée de l'Alzette, sous la forteresse, alliant charme historique et scène gastronomique vivante. Cadre classé UNESCO avec une atmosphère unique.",
+            en: 'Grund is picturesquely located in the Alzette valley below the fortress, combining historic charm with a lively dining scene. UNESCO World Heritage surroundings with a unique atmosphere.',
+          },
+          keywords: {
+            de: ['historisch', 'Alzette-Tal', 'UNESCO', 'charmant', 'Gastronomie'],
+            fr: ['historique', 'vallée Alzette', 'UNESCO', 'charmant', 'gastronomie'],
+            en: ['historic', 'Alzette valley', 'UNESCO', 'charming', 'dining'],
+          },
+        },
+        {
+          id: 'cents',
+          name: 'Cents',
+          slug: 'cents',
+          pricePerSqm: { min: 6500, max: 10500, median: 8500, currency: 'EUR' },
+          tags: ['residential', 'quiet', 'green', 'accessible'],
+          descriptions: {
+            de: 'Cents ist ein ruhiges Wohnviertel im Osten der Stadt mit guter Anbindung an Kirchberg und das Zentrum. Grüne Umgebung, erschwinglichere Preise und eine familiäre Atmosphäre.',
+            fr: "Cents est un quartier résidentiel calme à l'est de la ville, bien connecté à Kirchberg et au centre. Environnement vert, prix plus abordables et atmosphère familiale.",
+            en: 'Cents is a quiet residential neighborhood east of the city, well connected to Kirchberg and the center. Green surroundings, more affordable prices, and a family-oriented atmosphere.',
+          },
+          keywords: {
+            de: ['ruhig', 'Kirchberg-Nähe', 'grün', 'erschwinglich', 'familiär'],
+            fr: ['calme', 'proche Kirchberg', 'vert', 'abordable', 'familial'],
+            en: ['quiet', 'near Kirchberg', 'green', 'affordable', 'family'],
+          },
+        },
+        {
+          id: 'gasperich',
+          name: 'Gasperich',
+          slug: 'gasperich',
+          pricePerSqm: { min: 7500, max: 12500, median: 10000, currency: 'EUR' },
+          tags: ['new development', 'modern', 'Cloche d\'Or adjacent', 'growing'],
+          descriptions: {
+            de: 'Gasperich profitiert von der Nähe zum Geschäftsviertel Cloche d\'Or und entwickelt sich rasant mit modernen Wohnprojekten, dem neuen Einkaufszentrum und hervorragender Infrastruktur.',
+            fr: "Gasperich bénéficie de la proximité du quartier d'affaires de la Cloche d'Or et se développe rapidement avec des projets résidentiels modernes, le nouveau centre commercial et une excellente infrastructure.",
+            en: 'Gasperich benefits from proximity to the Cloche d\'Or business district and is rapidly developing with modern residential projects, the new shopping center, and excellent infrastructure.',
+          },
+          keywords: {
+            de: ['Cloche d\'Or', 'Neuentwicklung', 'modern', 'Einkaufszentrum', 'wachsend'],
+            fr: ['Cloche d\'Or', 'nouveau développement', 'moderne', 'centre commercial', 'croissant'],
+            en: ['Cloche d\'Or', 'new development', 'modern', 'shopping center', 'growing'],
+          },
         },
         {
           id: 'strassen',
@@ -82,6 +220,16 @@ export const luxembourgMarket: Market = {
           slug: 'strassen',
           pricePerSqm: { min: 6500, max: 10500, median: 8500, currency: 'EUR' },
           tags: ['suburban', 'family-friendly', 'good schools', 'accessible'],
+          descriptions: {
+            de: 'Strassen ist eine beliebte Wohngemeinde westlich der Stadt mit ausgezeichneten Schulen, guter Autobahnanbindung und einem dörflichen Charakter trotz der Stadtnähe.',
+            fr: "Strassen est une commune résidentielle prisée à l'ouest de la ville, avec d'excellentes écoles, un bon accès autoroutier et un caractère villageois malgré la proximité de la ville.",
+            en: 'Strassen is a popular residential municipality west of the city, with excellent schools, good motorway access, and a village character despite its proximity to the city.',
+          },
+          keywords: {
+            de: ['Schulen', 'Autobahnanbindung', 'dörflich', 'familiär', 'Stadtnähe'],
+            fr: ['écoles', 'accès autoroute', 'villageois', 'familial', 'proche ville'],
+            en: ['schools', 'motorway access', 'village feel', 'family', 'near city'],
+          },
         },
         {
           id: 'esch-sur-alzette',
@@ -89,6 +237,16 @@ export const luxembourgMarket: Market = {
           slug: 'esch-sur-alzette',
           pricePerSqm: { min: 4500, max: 8000, median: 6000, currency: 'EUR' },
           tags: ['second city', 'affordable', 'multicultural', 'growing'],
+          descriptions: {
+            de: 'Esch-sur-Alzette, Luxemburgs zweitgrößte Stadt, bietet eine lebendige Kulturszene, erschwingliche Immobilienpreise und wächst durch die Universität und Belval als attraktiver Standort.',
+            fr: "Esch-sur-Alzette, deuxième ville du Luxembourg, offre une scène culturelle vivante, des prix immobiliers abordables et se développe grâce à l'université et Belval comme lieu attractif.",
+            en: 'Esch-sur-Alzette, Luxembourg\'s second-largest city, offers a vibrant cultural scene, affordable property prices, and is growing as an attractive location thanks to the university and Belval.',
+          },
+          keywords: {
+            de: ['Universität', 'Belval', 'erschwinglich', 'Kulturszene', 'wachsend'],
+            fr: ['université', 'Belval', 'abordable', 'scène culturelle', 'croissant'],
+            en: ['university', 'Belval', 'affordable', 'cultural scene', 'growing'],
+          },
         },
         {
           id: 'cloche-dor',
@@ -96,6 +254,16 @@ export const luxembourgMarket: Market = {
           slug: 'cloche-dor',
           pricePerSqm: { min: 8000, max: 13500, median: 10800, currency: 'EUR' },
           tags: ['new development', 'modern', 'business hub', 'amenities'],
+          descriptions: {
+            de: 'Cloche d\'Or ist Luxemburgs neuestes Vorzeige-Stadtviertel mit modernen Bürogebäuden, dem großen Einkaufszentrum, Parks und hochwertigen Wohnresidenzen. Perfekt für urbanes, komfortables Wohnen.',
+            fr: "La Cloche d'Or est le tout nouveau quartier vitrine du Luxembourg, avec des immeubles de bureaux modernes, le grand centre commercial, des parcs et des résidences haut de gamme. Parfait pour un mode de vie urbain et confortable.",
+            en: 'Cloche d\'Or is Luxembourg\'s newest showcase district with modern office buildings, the large shopping center, parks, and high-end residential complexes. Perfect for urban, comfortable living.',
+          },
+          keywords: {
+            de: ['Geschäftsviertel', 'Einkaufszentrum', 'Parks', 'modern', 'Neubauten'],
+            fr: ['quartier d\'affaires', 'centre commercial', 'parcs', 'moderne', 'neufs'],
+            en: ['business district', 'shopping center', 'parks', 'modern', 'new builds'],
+          },
         },
       ],
     },

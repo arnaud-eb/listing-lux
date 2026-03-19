@@ -8,6 +8,19 @@ const REGISTRY: Record<string, Market> = {
 
 const ACTIVE = process.env.NEXT_PUBLIC_MARKET_ID ?? 'lu'
 
+// Pre-built index: slug → Neighborhood (avoids O(areas×neighborhoods) lookup)
+let neighborhoodIndex: Map<string, Neighborhood> | null = null
+
+function getNeighborhoodIndex(): Map<string, Neighborhood> {
+  if (!neighborhoodIndex) {
+    const market = getActiveMarket()
+    neighborhoodIndex = new Map(
+      market.areas.flatMap((a) => a.neighborhoods.map((n) => [n.slug, n]))
+    )
+  }
+  return neighborhoodIndex
+}
+
 export function getActiveMarket(): Market {
   const market = REGISTRY[ACTIVE]
   if (!market) {
@@ -17,12 +30,7 @@ export function getActiveMarket(): Market {
 }
 
 export function getNeighborhoodBySlug(slug: string): Neighborhood | null {
-  const market = getActiveMarket()
-  for (const area of market.areas) {
-    const found = area.neighborhoods.find((n) => n.slug === slug)
-    if (found) return found
-  }
-  return null
+  return getNeighborhoodIndex().get(slug) ?? null
 }
 
 export function estimatePrice(slug: string, sqm: number): number | null {

@@ -1,9 +1,8 @@
 import { createOpenAI } from '@ai-sdk/openai'
+import { OPENAI_API_KEY } from '@/lib/env'
+
+export const LISTING_MODEL = 'gpt-4.1-mini'
 
 export const openai = createOpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: OPENAI_API_KEY(),
 })
-
-// Phase 2: analyzePhotos(imageUrls: string[]) → PhotoAnalysis
-// Phase 3: generateListing(property, analysis, language) → Listing
-// Model: 'gpt-4.1-mini' for both (vision + text, cost-efficient)
