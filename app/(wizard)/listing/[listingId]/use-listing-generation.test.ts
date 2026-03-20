@@ -125,6 +125,60 @@ describe("useListingGeneration", () => {
 
     // Single regen should fire a per-language toast (not "all generated")
     expect(toast.success).toHaveBeenCalledWith("Deutsch listing regenerated");
+    expect(toast.success).not.toHaveBeenCalledWith("All listings generated");
+    expect(toast.success).toHaveBeenCalledTimes(1);
+  });
+
+  it("full batch fires only 'all generated' toast, not per-language toasts", () => {
+    const { result } = renderHook(() =>
+      useListingGeneration("prop-1", []),
+    );
+
+    // Complete all 4 languages
+    for (const lang of ["de", "fr", "en", "lu"]) {
+      act(() => {
+        capturedOnFinish?.({ object: makeListing(lang) });
+      });
+    }
+
+    // Should fire the batch toast only
+    expect(toast.success).toHaveBeenCalledWith("All listings generated");
+    // The first 3 languages chain to the next, so totalInQueueRef === 4
+    // and completedCount only equals totalInQueueRef on the last one.
+    // Per-language toasts only fire when totalInQueueRef === 0 (single regen).
+    expect(toast.success).not.toHaveBeenCalledWith(
+      expect.stringContaining("listing regenerated"),
+    );
+    expect(toast.success).toHaveBeenCalledTimes(1);
+  });
+
+  it("regenerating different languages fires correct per-language labels", () => {
+    const existing: Listing[] = (["de", "fr", "en", "lu"] as const).map(
+      (lang) => ({
+        id: `id-${lang}`,
+        property_id: "prop-1",
+        language: lang,
+        title: `Title ${lang}`,
+        description: `Desc ${lang}`,
+        highlights: [],
+        seo_keywords: [],
+      }),
+    );
+
+    const { result } = renderHook(() =>
+      useListingGeneration("prop-1", existing),
+    );
+
+    // Regenerate French
+    act(() => {
+      result.current.regenerate("fr");
+    });
+    act(() => {
+      capturedOnFinish?.({ object: makeListing("fr") });
+    });
+
+    expect(toast.success).toHaveBeenCalledWith("Français listing regenerated");
+    expect(toast.success).toHaveBeenCalledTimes(1);
   });
 
   it("sets error state when onFinish receives an error", () => {
