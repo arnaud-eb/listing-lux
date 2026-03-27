@@ -1,10 +1,15 @@
 import { describe, it, expect, vi } from "vitest";
 
+const mockCookieSet = vi.fn();
+const mockCookieGet = vi.fn((): { value: string } | null => null);
+
 // Mock next/headers before importing actions
 vi.mock("next/headers", () => ({
-  cookies: vi.fn(() => ({
+  cookies: vi.fn(async () => ({
     getAll: () => [],
-    set: vi.fn(),
+    get: mockCookieGet,
+    has: vi.fn(() => false),
+    set: mockCookieSet,
   })),
 }));
 
@@ -171,5 +176,44 @@ describe("saveProperty", () => {
         photo_urls: ["https://example.com/photo1.jpg"],
       }),
     ).rejects.toThrow("Validation failed");
+  });
+
+  it("creates session cookie when missing", async () => {
+    mockCookieGet.mockReturnValueOnce(null);
+    await saveProperty({
+      bedrooms: 3,
+      bathrooms: 2,
+      sqm: 150,
+      price: 1_200_000,
+      neighborhood: "belair",
+      property_type: "apartment",
+      features: {},
+      photo_urls: VALID_URLS,
+    });
+    expect(mockCookieSet).toHaveBeenCalledWith(
+      "llx_session",
+      expect.any(String),
+      expect.objectContaining({
+        httpOnly: true,
+        path: "/",
+        sameSite: "lax",
+      }),
+    );
+  });
+
+  it("reuses existing session cookie", async () => {
+    mockCookieGet.mockReturnValueOnce({ value: "existing-session-id" });
+    mockCookieSet.mockClear();
+    await saveProperty({
+      bedrooms: 3,
+      bathrooms: 2,
+      sqm: 150,
+      price: 1_200_000,
+      neighborhood: "belair",
+      property_type: "apartment",
+      features: {},
+      photo_urls: VALID_URLS,
+    });
+    expect(mockCookieSet).not.toHaveBeenCalled();
   });
 });

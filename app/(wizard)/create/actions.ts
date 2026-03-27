@@ -1,6 +1,7 @@
 "use server";
 
 import { createServiceClient } from "@/lib/supabase.server";
+import { getOrCreateSession } from "@/lib/session";
 import type { PropertyFormData } from "@/lib/types";
 import {
   PHOTO_BUCKET,
@@ -120,6 +121,9 @@ export async function saveProperty(
     throw new Error(`Validation failed: ${messages}`);
   }
 
+  // Session tracking: read or create session cookie
+  const sessionId = await getOrCreateSession();
+
   const supabase = createServiceClient();
 
   const { data, error } = await supabase
@@ -134,6 +138,7 @@ export async function saveProperty(
       features: formData.features,
       photo_urls: formData.photo_urls,
       photo_analyses: formData.photo_analyses ?? [],
+      session_id: sessionId,
     })
     .select("id")
     .single();

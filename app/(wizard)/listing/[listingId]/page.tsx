@@ -2,6 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase.server";
+import { verifyPropertyOwnership, UnauthorizedError } from "@/lib/auth";
 import { getNeighborhoodBySlug } from "@/lib/markets";
 import PhotoCarousel from "@/components/listing/PhotoCarousel";
 import PriceDisplay from "@/components/shared/PriceDisplay";
@@ -23,6 +24,14 @@ const getProperty = cache(async (id: string) => {
     .single();
 
   if (error || !data) return null;
+
+  // Verify session ownership
+  try {
+    await verifyPropertyOwnership(data.session_id);
+  } catch (e) {
+    if (e instanceof UnauthorizedError) return null;
+    throw e;
+  }
 
   const parsed = propertySchema.safeParse(data);
   if (!parsed.success) {

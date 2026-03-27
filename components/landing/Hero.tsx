@@ -54,7 +54,7 @@ export default function Hero() {
         {/* Image column */}
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-gold to-transparent rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000" />
-          <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-2xl bg-slate-800">
+          <div className="relative aspect-4/3 rounded-xl overflow-hidden shadow-2xl bg-slate-800">
             <Image
               src="/images/hero-villa.jpg"
               alt="Luxury modern villa exterior with sunset lighting"

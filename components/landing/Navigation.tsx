@@ -1,10 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+  SheetTitle,
+} from "@/components/ui/sheet";
 
 const NAV_LINKS = [
   { label: "Efficiency", href: "#comparison" },
@@ -14,21 +20,6 @@ const NAV_LINKS = [
 ] as const;
 
 export default function Navigation() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (!mobileOpen) return;
-    // Prevent conflicts with other scroll locks by saving/restoring previous value
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    document.body.style.touchAction = "none";
-    return () => {
-      document.body.style.overflow = prev;
-      document.body.style.touchAction = "";
-    };
-  }, [mobileOpen]);
-
   return (
     <>
       <header className="flex items-center justify-between border-b border-gold/20 px-6 py-4 lg:px-20 bg-white/80 backdrop-blur-md sticky top-0 z-50">
@@ -63,51 +54,43 @@ export default function Navigation() {
           </Button>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen(true)}
-          className="md:hidden p-2 -mr-2 text-navy-deep hover:text-gold transition-colors"
-          aria-label="Open menu"
-        >
-          <Menu className="size-6" />
-        </button>
-      </header>
+        {/* Mobile menu */}
+        <Sheet>
+          <SheetTrigger asChild>
+            <button
+              className="md:hidden p-2 -mr-2 text-navy-deep hover:text-gold transition-colors"
+              aria-label="Open menu"
+            >
+              <Menu className="size-6" />
+            </button>
+          </SheetTrigger>
+          <SheetContent
+            side="top"
+            showCloseButton={false}
+            className="border-gold/20 shadow-xl bg-white p-0 gap-0 md:hidden"
+          >
+            <SheetTitle className="sr-only">Navigation menu</SheetTitle>
 
-      {/* Mobile overlay menu */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-[60] md:hidden">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-navy-deep/40 backdrop-blur-sm animate-in fade-in duration-200"
-            onClick={() => setMobileOpen(false)}
-          />
-
-          {/* Menu panel */}
-          <div className="absolute inset-x-0 top-0 bg-white border-b border-gold/20 shadow-xl animate-in slide-in-from-top duration-300">
             {/* Header row — mirrors the sticky header */}
             <div className="flex items-center justify-between px-6 py-4">
               <Logo />
-              <button
-                onClick={() => setMobileOpen(false)}
-                className="p-2 -mr-2 text-navy-deep hover:text-gold transition-colors"
-                aria-label="Close menu"
-              >
+              <SheetClose className="p-2 -mr-2 text-navy-deep hover:text-gold transition-colors">
                 <X className="size-6" />
-              </button>
+                <span className="sr-only">Close menu</span>
+              </SheetClose>
             </div>
 
             {/* Nav links */}
             <nav className="flex flex-col px-6 pb-2">
-              {NAV_LINKS.map(({ label, href }, i) => (
-                <a
-                  key={href}
-                  href={href}
-                  onClick={() => setMobileOpen(false)}
-                  className="py-3 text-lg font-medium text-navy-deep hover:text-gold transition-colors border-b border-gray-100 last:border-0 focus-visible:text-gold outline-none focus-visible:underline underline-offset-4"
-                  style={{ animationDelay: `${i * 50}ms` }}
-                >
-                  {label}
-                </a>
+              {NAV_LINKS.map(({ label, href }) => (
+                <SheetClose asChild key={href}>
+                  <a
+                    href={href}
+                    className="py-3 text-lg font-medium text-navy-deep hover:text-gold transition-colors border-b border-gray-100 last:border-0 focus-visible:text-gold outline-none focus-visible:underline underline-offset-4"
+                  >
+                    {label}
+                  </a>
+                </SheetClose>
               ))}
             </nav>
 
@@ -119,18 +102,18 @@ export default function Navigation() {
               >
                 Login
               </Button>
-              <Button
-                asChild
-                className="rounded-lg h-12 w-full bg-gold text-navy-deep font-bold shadow-lg shadow-gold/20 hover:bg-gold/90"
-              >
-                <Link href="/create" onClick={() => setMobileOpen(false)}>
-                  Try Demo
-                </Link>
-              </Button>
+              <SheetClose asChild>
+                <Button
+                  asChild
+                  className="rounded-lg h-12 w-full bg-gold text-navy-deep font-bold shadow-lg shadow-gold/20 hover:bg-gold/90"
+                >
+                  <Link href="/create">Try Demo</Link>
+                </Button>
+              </SheetClose>
             </div>
-          </div>
-        </div>
-      )}
+          </SheetContent>
+        </Sheet>
+      </header>
     </>
   );
 }

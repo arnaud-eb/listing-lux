@@ -32,7 +32,11 @@ const INITIAL_STATE: PropertyFormState = {
 // --- Actions ---
 
 type FormAction =
-  | { type: "SET_FIELD"; key: keyof Omit<PropertyFormState, "photos">; value: PropertyFormState[keyof PropertyFormState] }
+  | {
+      type: "SET_FIELD";
+      key: keyof Omit<PropertyFormState, "photos">;
+      value: PropertyFormState[keyof PropertyFormState];
+    }
   | { type: "SET_FEATURES"; features: Record<string, boolean> }
   | { type: "ADD_PHOTO"; photo: ListingPhoto }
   | { type: "UPDATE_PHOTO"; id: string; updates: Partial<ListingPhoto> }
@@ -40,7 +44,10 @@ type FormAction =
   | { type: "RESTORE_DRAFT"; state: PropertyFormState }
   | { type: "RESET" };
 
-function formReducer(state: PropertyFormState, action: FormAction): PropertyFormState {
+function formReducer(
+  state: PropertyFormState,
+  action: FormAction,
+): PropertyFormState {
   switch (action.type) {
     case "SET_FIELD":
       return { ...state, [action.key]: action.value };
@@ -56,7 +63,10 @@ function formReducer(state: PropertyFormState, action: FormAction): PropertyForm
         ),
       };
     case "REMOVE_PHOTO":
-      return { ...state, photos: state.photos.filter((p) => p.id !== action.id) };
+      return {
+        ...state,
+        photos: state.photos.filter((p) => p.id !== action.id),
+      };
     case "RESTORE_DRAFT":
       return action.state;
     case "RESET":
@@ -83,18 +93,17 @@ export function usePropertyForm() {
     [],
   );
 
-  const updateFeatures = useCallback(
-    (features: Record<string, boolean>) => {
-      dispatch({ type: "SET_FEATURES", features });
-    },
-    [],
-  );
+  const updateFeatures = useCallback((features: Record<string, boolean>) => {
+    dispatch({ type: "SET_FEATURES", features });
+  }, []);
 
   // --- Derived state ---
-  const readyPhotoCount = state.photos.filter((p) => p.status === "ready").length;
+  const readyPhotoCount = state.photos.filter(
+    (p) => p.status === "ready",
+  ).length;
 
   const hasRequiredFields =
-    state.bedrooms > 0 &&
+    state.bedrooms >= 0 &&
     typeof state.sqm === "number" &&
     state.sqm > 0 &&
     typeof state.price === "number" &&
@@ -138,7 +147,11 @@ export function usePropertyForm() {
       const draft = {
         ...formFields,
         photos: photos
-          .filter((p) => (p.status === "ready" || p.status === "processing") && p.publicUrl)
+          .filter(
+            (p) =>
+              (p.status === "ready" || p.status === "processing") &&
+              p.publicUrl,
+          )
           .map(({ localPreviewUrl, uploadProgress, ...rest }) => rest),
       };
       sessionStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
@@ -220,10 +233,12 @@ export function usePropertyForm() {
     }
   }
 
-  const handleAddPhotos = useCallback((files: File[]) => {
-    files.forEach((file) => uploadPhoto(file));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const handleAddPhotos = useCallback(
+    (files: File[]) => {
+      files.forEach((file) => uploadPhoto(file));
+    },
+    [uploadPhoto],
+  );
 
   const handleRemovePhoto = useCallback((id: string) => {
     dispatch({ type: "REMOVE_PHOTO", id });

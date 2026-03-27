@@ -40,3 +40,14 @@ export const MAX_PHOTO_SIZE = 10 * 1024 * 1024
 
 /** Maximum photos allowed per listing */
 export const MAX_PHOTOS = 20
+
+/** Maximum characters for regeneration comment */
+export const MAX_COMMENT_LENGTH = 1000
+
+/** Localized label for the "Highlights" section */
+export const HIGHLIGHTS_LABEL: Record<Language, string> = {
+  de: "Highlights",
+  fr: "Points forts",
+  en: "Highlights",
+  lu: "Highlights",
+}

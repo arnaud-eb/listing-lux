@@ -52,6 +52,10 @@ export function useListingGeneration(
     initialListings.length > 0,
   );
 
+  // Ref for reading current state inside stable callbacks without re-creating them
+  const stateRef = useRef(state);
+  stateRef.current = state;
+
   // Track which language is currently being generated
   const currentLangRef = useRef<Language>("de");
   // Track the generation queue for sequential generation
@@ -185,7 +189,7 @@ export function useListingGeneration(
   );
 
   const regenerate = useCallback(
-    (language: Language) => {
+    (language: Language, comment?: string) => {
       // Abort any in-flight request
       stop();
 
@@ -194,12 +198,30 @@ export function useListingGeneration(
       completedCountRef.current = 0;
       totalInQueueRef.current = 0;
 
+      // Capture current listing for comment-guided regeneration
+      const currentListing = comment
+        ? stateRef.current[language].listing
+        : undefined;
+
       currentLangRef.current = language;
       setState((prev) => ({
         ...prev,
         [language]: { status: "generating", listing: null },
       }));
-      submit({ propertyId, language });
+      submit({
+        propertyId,
+        language,
+        ...(comment ? { comment } : {}),
+        ...(currentListing?.title
+          ? {
+              currentListing: {
+                title: currentListing.title,
+                description: currentListing.description ?? "",
+                highlights: currentListing.highlights ?? [],
+              },
+            }
+          : {}),
+      });
     },
     [propertyId, stop, submit],
   );
@@ -214,6 +236,22 @@ export function useListingGeneration(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const updateField = useCallback(
+    (language: Language, updates: Partial<Pick<Listing, "title" | "description" | "highlights" | "seo_keywords">>) => {
+      setState((prev) => ({
+        ...prev,
+        [language]: {
+          ...prev[language],
+          listing: {
+            ...prev[language].listing,
+            ...updates,
+          },
+        },
+      }));
+    },
+    [],
+  );
+
   return {
     state,
     activeTab,
@@ -222,5 +260,6 @@ export function useListingGeneration(
     initialGenerationDone,
     generateAll,
     regenerate,
+    updateField,
   };
 }

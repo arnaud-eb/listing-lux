@@ -130,7 +130,7 @@ export default function PhotoCarousel({
               aria-selected={i === mobileIndex}
               aria-label={`Photo ${i + 1}`}
               onClick={() => scrollToSlide(i)}
-              className="flex items-center justify-center min-w-[44px] min-h-[44px] cursor-pointer"
+              className="flex items-center justify-center min-w-11 min-h-11 cursor-pointer"
             >
               <span
                 className={`block rounded-full transition-all duration-300 ${

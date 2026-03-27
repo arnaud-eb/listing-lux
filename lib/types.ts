@@ -41,6 +41,13 @@ export interface Listing {
   model?: string
 }
 
+export interface ListingUpdates {
+  title?: string;
+  description?: string;
+  highlights?: string[];
+  seo_keywords?: string[];
+}
+
 export interface PropertyFormData {
   bedrooms: number
   bathrooms: number

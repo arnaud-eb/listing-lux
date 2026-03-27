@@ -34,21 +34,30 @@ vi.mock("@/lib/markets", () => ({
   })),
 }));
 
+const mockBuildListingPrompt = vi.fn(
+  (..._args: unknown[]) =>
+    ({
+      system: "You are a real estate agent.",
+      user: "Generate a listing.",
+      feedback: undefined as string | undefined,
+    }),
+);
 vi.mock("@/lib/ai/prompts", () => ({
-  buildListingPrompt: vi.fn(() => ({
-    system: "You are a real estate agent.",
-    user: "Generate a listing.",
-  })),
+  buildListingPrompt: (...args: Parameters<typeof mockBuildListingPrompt>) =>
+    mockBuildListingPrompt(...args),
   PROMPT_VERSION: "v1-test",
 }));
 
 // Import after mocks
 import { POST } from "./route";
 
-function makeRequest(body: unknown): Request {
+function makeRequest(body: unknown, sessionId = "session-123"): Request {
   return new Request("http://localhost:3000/api/generate/stream", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Cookie: `llx_session=${sessionId}`,
+    },
     body: JSON.stringify(body),
   });
 }
@@ -118,6 +127,7 @@ describe("/api/generate/stream", () => {
         property_type: "apartment",
         features: {},
         photo_urls: [],
+        session_id: "session-123",
       },
       error: null,
     });
@@ -141,6 +151,59 @@ describe("/api/generate/stream", () => {
     expect(res).toBe(mockResponse);
   });
 
+  it("returns 403 when session does not own the property", async () => {
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "other-session",
+      },
+      error: null,
+    });
+
+    const res = await POST(
+      makeRequest({ propertyId: "abc-123", language: "de" }),
+    );
+    expect(res.status).toBe(403);
+    const json = await res.json();
+    expect(json.error).toMatch(/unauthorized/i);
+  });
+
+  it("returns 403 when no session cookie", async () => {
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "session-123",
+      },
+      error: null,
+    });
+
+    const req = new Request("http://localhost:3000/api/generate/stream", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ propertyId: "abc-123", language: "de" }),
+    });
+    const res = await POST(req);
+    expect(res.status).toBe(403);
+  });
+
   it("onFinish parses text and upserts valid listing", async () => {
     mockSingle.mockResolvedValueOnce({
       data: {
@@ -154,6 +217,7 @@ describe("/api/generate/stream", () => {
         property_type: "apartment",
         features: {},
         photo_urls: [],
+        session_id: "session-123",
       },
       error: null,
     });
@@ -206,6 +270,7 @@ describe("/api/generate/stream", () => {
         property_type: "apartment",
         features: {},
         photo_urls: [],
+        session_id: "session-123",
       },
       error: null,
     });
@@ -227,6 +292,97 @@ describe("/api/generate/stream", () => {
     expect(mockUpsert).not.toHaveBeenCalled();
   });
 
+  it("passes comment and currentListing to buildListingPrompt", async () => {
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "session-123",
+      },
+      error: null,
+    });
+
+    mockStreamText.mockReturnValueOnce({
+      toTextStreamResponse: () => new Response("ok"),
+    });
+
+    await POST(
+      makeRequest({
+        propertyId: "abc-123",
+        language: "en",
+        comment: "emphasize the view",
+        currentListing: {
+          title: "Test Title",
+          description: "Test desc",
+          highlights: ["h1"],
+        },
+      }),
+    );
+
+    expect(mockBuildListingPrompt).toHaveBeenCalledWith(
+      "en",
+      expect.any(Object),
+      expect.any(Array),
+      expect.any(Object),
+      "emphasize the view",
+      { title: "Test Title", description: "Test desc", highlights: ["h1"] },
+    );
+  });
+
+  it("sends feedback as separate message for prompt injection defense", async () => {
+    mockBuildListingPrompt.mockReturnValueOnce({
+      system: "system prompt",
+      user: "user prompt",
+      feedback: "<user-feedback>make it shorter</user-feedback>",
+    });
+
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "session-123",
+      },
+      error: null,
+    });
+
+    mockStreamText.mockReturnValueOnce({
+      toTextStreamResponse: () => new Response("ok"),
+    });
+
+    await POST(
+      makeRequest({
+        propertyId: "abc-123",
+        language: "en",
+        comment: "make it shorter",
+      }),
+    );
+
+    const callArgs = mockStreamText.mock.calls[0][0];
+    expect(callArgs.messages).toHaveLength(3);
+    expect(callArgs.messages[0]).toEqual({ role: "system", content: "system prompt" });
+    expect(callArgs.messages[1]).toEqual({ role: "user", content: "user prompt" });
+    expect(callArgs.messages[2]).toEqual({
+      role: "user",
+      content: "<user-feedback>make it shorter</user-feedback>",
+    });
+  });
+
   it("onFinish skips upsert when schema validation fails", async () => {
     mockSingle.mockResolvedValueOnce({
       data: {
@@ -240,6 +396,7 @@ describe("/api/generate/stream", () => {
         property_type: "apartment",
         features: {},
         photo_urls: [],
+        session_id: "session-123",
       },
       error: null,
     });

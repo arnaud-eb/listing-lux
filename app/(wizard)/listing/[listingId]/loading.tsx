@@ -17,7 +17,7 @@ export default function ListingLoading() {
         <div className="grid grid-cols-[1fr_2fr] gap-8 max-lg:grid-cols-1">
           {/* Gallery skeleton */}
           <div className="max-lg:order-2">
-            <div className="aspect-[4/3] bg-gray-200 rounded-2xl animate-pulse" />
+            <div className="aspect-4/3 bg-gray-200 rounded-2xl animate-pulse" />
             <div className="flex gap-2 mt-3">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div

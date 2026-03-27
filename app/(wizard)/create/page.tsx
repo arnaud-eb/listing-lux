@@ -23,6 +23,11 @@ import { propertyFormSchema } from "@/lib/schemas/property";
 import { RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 
+/** Block non-numeric keys that HTML number inputs allow (e, E, +, -) */
+function blockNonNumeric(e: React.KeyboardEvent<HTMLInputElement>) {
+  if (["e", "E", "+", "-"].includes(e.key)) e.preventDefault();
+}
+
 const PROPERTY_TYPES = [
   { value: "apartment", label: "Apartment" },
   { value: "house", label: "House" },
@@ -174,6 +179,7 @@ export default function CreatePage() {
                           e.target.value ? Number(e.target.value) : "",
                         )
                       }
+                      onKeyDown={blockNonNumeric}
                       min={1}
                       required
                     />
@@ -186,6 +192,7 @@ export default function CreatePage() {
                       id="price"
                       type="number"
                       placeholder="e.g. 850000"
+                      autoComplete="off"
                       value={form.price}
                       onChange={(e) =>
                         updateField(
@@ -193,6 +200,7 @@ export default function CreatePage() {
                           e.target.value ? Number(e.target.value) : "",
                         )
                       }
+                      onKeyDown={blockNonNumeric}
                       min={1}
                       required
                     />

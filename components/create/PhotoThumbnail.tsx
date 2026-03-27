@@ -68,7 +68,7 @@ export default memo(function PhotoThumbnail({
 
         {/* Top-left badge: room type or "Main View" */}
         {photo.status === "ready" && photo.aiAnalysis ? (
-          <div className="absolute top-2 left-2 max-w-[75%]">
+          <div className="absolute top-2 left-2 max-w-3/4">
             <span className="bg-gold text-white text-2xs px-2 py-0.5 rounded font-bold uppercase tracking-tighter truncate block">
               {photo.aiAnalysis.room_type}
             </span>
@@ -95,7 +95,7 @@ export default memo(function PhotoThumbnail({
       </div>
 
       {/* Feature chips below thumbnail — min-h reserves space to prevent CLS */}
-      <div className="min-h-[22px] flex flex-wrap gap-1">
+      <div className="min-h-5.5 flex flex-wrap gap-1">
         {photo.aiAnalysis && photo.aiAnalysis.features.length > 0 &&
           photo.aiAnalysis.features.slice(0, 3).map((feature) => (
             <span

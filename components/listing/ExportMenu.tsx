@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
-export default function ExportMenu() {
+export default function ExportMenu({ hideTextOnMobile }: { hideTextOnMobile?: boolean } = {}) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -19,7 +19,7 @@ export default function ExportMenu() {
           className="gap-1.5 rounded-lg border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-navy-deep shadow-none"
         >
           <Download size={14} />
-          Export
+          <span className={hideTextOnMobile ? "max-sm:hidden" : undefined}>Export</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">

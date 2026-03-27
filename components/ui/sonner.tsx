@@ -1,6 +1,6 @@
 "use client"
 
-import { CircleCheckIcon, InfoIcon, Loader2Icon, OctagonXIcon, TriangleAlertIcon } from "lucide-react"
+import { CircleCheckIcon, InfoIcon, Loader2Icon, OctagonXIcon, TriangleAlertIcon, XIcon } from "lucide-react"
 import { Toaster as Sonner, type ToasterProps } from "sonner"
 
 const Toaster = ({ ...props }: ToasterProps) => {
@@ -14,9 +14,14 @@ const Toaster = ({ ...props }: ToasterProps) => {
         warning: <TriangleAlertIcon className="size-4" />,
         error: <OctagonXIcon className="size-4" />,
         loading: <Loader2Icon className="size-4 animate-spin" />,
+        close: <XIcon className="size-3.5 text-gold" />,
       }}
       toastOptions={{
         className: "font-sans",
+        classNames: {
+          closeButton:
+            "!bg-navy-deep !border-gold/40 !text-gold hover:!bg-navy-deep hover:!border-gold",
+        },
         style: {
           fontFamily: "var(--font-inter)",
         },
@@ -32,6 +37,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
           "--success-border": "rgba(212, 175, 53, 0.3)",
         } as React.CSSProperties
       }
+      closeButton
       {...props}
     />
   )
