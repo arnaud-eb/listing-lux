@@ -1,14 +1,12 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useImperativeHandle, forwardRef } from "react";
 import type { Language, Listing, ListingUpdates } from "@/lib/types";
 import { HIGHLIGHTS_LABEL } from "@/lib/constants";
 import { Sparkles, X, Plus } from "lucide-react";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import ConfirmDiscardDialog from "@/components/shared/ConfirmDiscardDialog";
 
 // --- Stable-key item helpers ---
 
@@ -71,19 +69,22 @@ function AutoSizeInput({
 
 // --- Component ---
 
+export interface EditableListingHandle {
+  save: () => void;
+  isDirty: () => boolean;
+}
+
 interface EditableListingContentProps {
   language: Language;
   listing: Partial<Listing>;
   onSave: (updates: ListingUpdates) => void;
-  onDiscard: () => void;
 }
 
-export default function EditableListingContent({
+const EditableListingContent = forwardRef<EditableListingHandle, EditableListingContentProps>(function EditableListingContent({
   language,
   listing,
   onSave,
-  onDiscard,
-}: EditableListingContentProps) {
+}, ref) {
   const [draftTitle, setDraftTitle] = useState(listing.title ?? "");
   const [draftDescription, setDraftDescription] = useState(
     listing.description ?? "",
@@ -106,7 +107,7 @@ export default function EditableListingContent({
     );
   }, [draftTitle, draftDescription, draftHighlights, draftKeywords, listing]);
 
-  const handleSave = () => {
+  const handleSave = useCallback(() => {
     if (!draftTitle.trim()) {
       toast.error("Title is required");
       return;
@@ -125,7 +126,9 @@ export default function EditableListingContent({
       updates.seo_keywords = keywords.filter(Boolean);
 
     onSave(updates);
-  };
+  }, [draftTitle, draftDescription, draftHighlights, draftKeywords, listing, onSave]);
+
+  useImperativeHandle(ref, () => ({ save: handleSave, isDirty }), [handleSave, isDirty]);
 
   const updateHighlight = (id: string, value: string) => {
     setDraftHighlights((prev) =>
@@ -242,42 +245,8 @@ export default function EditableListingContent({
         </div>
       </div>
 
-      {/* Edit actions */}
-      <div className="flex items-center justify-end gap-2 border-t border-gray-100 pt-4 mt-2">
-        {isDirty() ? (
-          <ConfirmDiscardDialog
-            trigger={
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="rounded-lg shadow-none"
-              >
-                Discard
-              </Button>
-            }
-            onConfirm={onDiscard}
-          />
-        ) : (
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            onClick={onDiscard}
-            className="rounded-lg shadow-none"
-          >
-            Discard
-          </Button>
-        )}
-        <Button
-          type="button"
-          size="sm"
-          onClick={handleSave}
-          className="rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
-        >
-          Save Changes
-        </Button>
-      </div>
     </>
   );
-}
+});
+
+export default EditableListingContent;

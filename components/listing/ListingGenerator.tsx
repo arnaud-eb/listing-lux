@@ -4,7 +4,7 @@ import { useState, useCallback, useRef } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import ConfirmDiscardDialog from "@/components/shared/ConfirmDiscardDialog";
-import { Pencil } from "lucide-react";
+import { Pencil, Check, X } from "lucide-react";
 import { toast } from "sonner";
 import type { Language, Listing } from "@/lib/types";
 import { LANGUAGES, LANGUAGE_LABELS } from "@/lib/constants";
@@ -12,6 +12,7 @@ import { useListingGeneration } from "@/app/(wizard)/listing/[listingId]/use-lis
 import { updateListing } from "@/app/(wizard)/listing/[listingId]/actions";
 import ListingContent from "./ListingContent";
 import ListingBottomBar from "./ListingBottomBar";
+import type { EditableListingHandle } from "./EditableListingContent";
 
 interface ListingGeneratorProps {
   propertyId: string;
@@ -34,7 +35,9 @@ export default function ListingGenerator({
 
   const [isEditing, setIsEditing] = useState(false);
   const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
+  const [discardSource, setDiscardSource] = useState<"tab" | "button">("button");
   const pendingTabRef = useRef<Language | null>(null);
+  const editableRef = useRef<EditableListingHandle>(null);
 
   // Find currently generating language for "queued" display
   const generatingLang = LANGUAGES.find(
@@ -47,7 +50,13 @@ export default function ListingGenerator({
     (v: string) => {
       if (isEditing) {
         pendingTabRef.current = v as Language;
-        setDiscardDialogOpen(true);
+        if (editableRef.current?.isDirty()) {
+          setDiscardSource("tab");
+          setDiscardDialogOpen(true);
+        } else {
+          setIsEditing(false);
+          setActiveTab(v as Language);
+        }
         return;
       }
       setActiveTab(v as Language);
@@ -148,6 +157,36 @@ export default function ListingGenerator({
               Edit
             </Button>
           )}
+          {isEditing && (
+            <div className="flex items-center gap-2">
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                onClick={() => {
+                  if (editableRef.current?.isDirty()) {
+                    setDiscardSource("button");
+                    setDiscardDialogOpen(true);
+                  } else {
+                    handleDiscard();
+                  }
+                }}
+                className="gap-1.5 rounded-lg text-gray-500 hover:text-navy-deep hover:bg-gray-100"
+              >
+                <X className="size-3.5" />
+                <span className="max-sm:hidden">Discard</span>
+              </Button>
+              <Button
+                type="button"
+                size="sm"
+                onClick={() => editableRef.current?.save()}
+                className="gap-1.5 rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
+              >
+                <Check className="size-3.5" />
+                <span className="max-sm:hidden">Save</span>
+              </Button>
+            </div>
+          )}
         </div>
 
         {LANGUAGES.map((lang) => (
@@ -161,7 +200,7 @@ export default function ListingGenerator({
               onRetry={() => regenerate(lang)}
               isEditing={isEditing && lang === activeTab}
               onSave={handleSave}
-              onDiscard={handleDiscard}
+              editableRef={editableRef}
             />
           </TabsContent>
         ))}

@@ -1,11 +1,12 @@
 "use client";
 
+import type { RefObject } from "react";
 import type { Language, Listing, ListingUpdates } from "@/lib/types";
 import { LANGUAGE_LABELS, HIGHLIGHTS_LABEL } from "@/lib/constants";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { GenerationStatus } from "@/app/(wizard)/listing/[listingId]/use-listing-generation";
-import EditableListingContent from "./EditableListingContent";
+import EditableListingContent, { type EditableListingHandle } from "./EditableListingContent";
 
 interface ListingContentProps {
   language: Language;
@@ -16,7 +17,7 @@ interface ListingContentProps {
   onRetry?: () => void;
   isEditing?: boolean;
   onSave?: (updates: ListingUpdates) => void;
-  onDiscard?: () => void;
+  editableRef?: RefObject<EditableListingHandle | null>;
 }
 
 export default function ListingContent({
@@ -28,7 +29,7 @@ export default function ListingContent({
   onRetry,
   isEditing,
   onSave,
-  onDiscard,
+  editableRef,
 }: ListingContentProps) {
   return (
     <div className="min-h-100">
@@ -74,13 +75,13 @@ export default function ListingContent({
 
       {(status === "generating" || status === "complete") && (
         <>
-          {isEditing && listing && onSave && onDiscard ? (
+          {isEditing && listing && onSave ? (
             <EditableListingContent
+              ref={editableRef}
               key={language}
               language={language}
               listing={listing}
               onSave={onSave}
-              onDiscard={onDiscard}
             />
           ) : (
             <div className="flex flex-col gap-6 py-4">

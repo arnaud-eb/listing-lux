@@ -61,7 +61,6 @@ export default function ListingBottomBar({
               onOpenChange={(open) => {
                 if (isEditing) return;
                 setPopoverOpen(open);
-                if (!open) setComment("");
               }}
             >
               <PopoverTrigger asChild>
@@ -82,7 +81,11 @@ export default function ListingBottomBar({
                   )}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent side="top" align="start" className="max-w-90 w-[calc(100vw-2rem)] p-4">
+              <PopoverContent
+                side="top"
+                align="start"
+                className="max-w-90 w-[calc(100vw-2rem)] p-4"
+              >
                 <PopoverArrow className="fill-white" />
                 <div className="flex flex-col gap-3">
                   <div className="flex items-center gap-2">
@@ -107,6 +110,10 @@ export default function ListingBottomBar({
                       onChange={(e) =>
                         setComment(e.target.value.slice(0, MAX_COMMENT_LENGTH))
                       }
+                      onFocus={(e) => {
+                        const len = e.target.value.length;
+                        e.target.setSelectionRange(len, len);
+                      }}
                       onKeyDown={(e) => {
                         if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
                           e.preventDefault();

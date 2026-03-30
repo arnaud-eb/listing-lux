@@ -34,6 +34,10 @@ export async function verifyListingOwnership(
 
   const supabase = createServiceClient();
 
+  // Single query with FK join — Supabase returns many-to-one joins as an object
+  // at runtime, but generated types infer an array. The `as unknown as` cast is
+  // scoped to this Supabase type mismatch; regenerate types to remove it:
+  //   bunx supabase gen types typescript --project-id <id> > lib/database.types.ts
   const { data: listing } = await supabase
     .from("listings")
     .select("property_id, properties(session_id)")
@@ -42,11 +46,11 @@ export async function verifyListingOwnership(
 
   if (!listing) throw new Error("Listing not found");
 
-  const properties = listing.properties as
+  const property = listing.properties as unknown as
     | { session_id: string }
     | null;
 
-  if (!properties || properties.session_id !== sessionId) {
+  if (!property || property.session_id !== sessionId) {
     throw new UnauthorizedError();
   }
 

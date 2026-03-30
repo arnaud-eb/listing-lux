@@ -22,11 +22,13 @@ import { usePropertyForm } from "./use-property-form";
 import { propertyFormSchema } from "@/lib/schemas/property";
 import { RotateCcw } from "lucide-react";
 import { toast } from "sonner";
+import { formatNumber, parseFormattedNumber } from "@/lib/format";
 
 /** Block non-numeric keys that HTML number inputs allow (e, E, +, -) */
 function blockNonNumeric(e: React.KeyboardEvent<HTMLInputElement>) {
   if (["e", "E", "+", "-"].includes(e.key)) e.preventDefault();
 }
+
 
 const PROPERTY_TYPES = [
   { value: "apartment", label: "Apartment" },
@@ -190,18 +192,14 @@ export default function CreatePage() {
                     <Label htmlFor="price">Asking Price (€) *</Label>
                     <Input
                       id="price"
-                      type="number"
-                      placeholder="e.g. 850000"
+                      type="text"
+                      inputMode="numeric"
+                      placeholder="e.g. 850.000"
                       autoComplete="off"
-                      value={form.price}
+                      value={formatNumber(form.price)}
                       onChange={(e) =>
-                        updateField(
-                          "price",
-                          e.target.value ? Number(e.target.value) : "",
-                        )
+                        updateField("price", parseFormattedNumber(e.target.value))
                       }
-                      onKeyDown={blockNonNumeric}
-                      min={1}
                       required
                     />
                   </div>

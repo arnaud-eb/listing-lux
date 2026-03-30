@@ -9,6 +9,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { getActiveMarket, estimatePrice } from '@/lib/markets'
+import { formatCurrency } from '@/lib/format'
 
 interface NeighborhoodSelectorProps {
   value: string
@@ -25,9 +26,6 @@ export default function NeighborhoodSelector({ value, onChange, sqm }: Neighborh
   )
 
   const estimate = value && sqm > 0 ? estimatePrice(value, sqm) : null
-
-  const locale = market.areas[0]?.locale ?? 'fr-LU'
-  const currency = market.areas[0]?.defaultCurrency ?? 'EUR'
 
   return (
     <div className="flex flex-col gap-1.5">
@@ -49,8 +47,8 @@ export default function NeighborhoodSelector({ value, onChange, sqm }: Neighborh
       {estimate !== null && (
         <div className="flex items-center gap-2 mt-1" aria-live="polite">
           <span className="text-xs text-gray-500">Estimated market value:</span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-gold/10 text-gold text-xs font-semibold" aria-label={`Estimated average price: ${new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: 0 }).format(estimate)}`}>
-            Avg: {new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: 0 }).format(estimate)}
+          <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-gold/10 text-gold text-xs font-semibold" aria-label={`Estimated average price: ${formatCurrency(estimate)}`}>
+            Avg: {formatCurrency(estimate)}
           </span>
         </div>
       )}
