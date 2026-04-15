@@ -38,7 +38,7 @@ beforeEach(() => {
 const makeListing = (lang: string) => ({
   title: `Title ${lang}`,
   description: `Description ${lang}`,
-  highlights: ["highlight"],
+  highlights: [{ text: "highlight", icon: "sparkles" }],
   seo_keywords: ["keyword"],
 });
 

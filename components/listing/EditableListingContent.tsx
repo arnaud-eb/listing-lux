@@ -1,18 +1,26 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback, useImperativeHandle, forwardRef } from "react";
-import type { Language, Listing, ListingUpdates } from "@/lib/types";
+import type { Language, Listing, ListingUpdates, Highlight } from "@/lib/types";
 import { HIGHLIGHTS_LABEL } from "@/lib/constants";
-import { Sparkles, X, Plus } from "lucide-react";
+import { X, Plus } from "lucide-react";
+import DynamicIcon from "@/components/shared/DynamicIcon";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { inferHighlightIcon } from "@/app/(wizard)/listing/[listingId]/infer-icon-action";
 
 // --- Stable-key item helpers ---
 
 interface KeyedItem {
   id: string;
   value: string;
+}
+
+interface KeyedHighlight {
+  id: string;
+  text: string;
+  icon: string;
 }
 
 let nextId = 0;
@@ -26,6 +34,14 @@ function toKeyed(items: string[]): KeyedItem[] {
 
 function fromKeyed(items: KeyedItem[]): string[] {
   return items.map((item) => item.value);
+}
+
+function toKeyedHighlights(items: Highlight[]): KeyedHighlight[] {
+  return items.map((h) => ({ id: makeId(), text: h.text, icon: h.icon }));
+}
+
+function fromKeyedHighlights(items: KeyedHighlight[]): Highlight[] {
+  return items.map(({ text, icon }) => ({ text, icon }));
 }
 
 // --- Auto-sizing input ---
@@ -89,19 +105,23 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
   const [draftDescription, setDraftDescription] = useState(
     listing.description ?? "",
   );
-  const [draftHighlights, setDraftHighlights] = useState<KeyedItem[]>(() =>
-    toKeyed(listing.highlights ?? []),
+  const [draftHighlights, setDraftHighlights] = useState<KeyedHighlight[]>(() =>
+    toKeyedHighlights((listing.highlights ?? []) as Highlight[]),
   );
   const [draftKeywords, setDraftKeywords] = useState<KeyedItem[]>(() =>
     toKeyed(listing.seo_keywords ?? []),
   );
 
   const isDirty = useCallback(() => {
+    // Normalize highlights to consistent {text, icon} for comparison
+    const normalizeHighlights = (items: Highlight[]) =>
+      items.map((h) => (typeof h === "string" ? { text: h, icon: "sparkles" } : { text: h.text, icon: h.icon }));
+
     return (
       draftTitle !== (listing.title ?? "") ||
       draftDescription !== (listing.description ?? "") ||
-      JSON.stringify(fromKeyed(draftHighlights)) !==
-        JSON.stringify(listing.highlights ?? []) ||
+      JSON.stringify(normalizeHighlights(fromKeyedHighlights(draftHighlights))) !==
+        JSON.stringify(normalizeHighlights((listing.highlights ?? []) as Highlight[])) ||
       JSON.stringify(fromKeyed(draftKeywords)) !==
         JSON.stringify(listing.seo_keywords ?? [])
     );
@@ -113,7 +133,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
       return;
     }
 
-    const highlights = fromKeyed(draftHighlights);
+    const highlights = fromKeyedHighlights(draftHighlights);
     const keywords = fromKeyed(draftKeywords);
 
     const updates: ListingUpdates = {};
@@ -121,7 +141,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
     if (draftDescription !== listing.description)
       updates.description = draftDescription;
     if (JSON.stringify(highlights) !== JSON.stringify(listing.highlights))
-      updates.highlights = highlights.filter(Boolean);
+      updates.highlights = highlights.filter((h) => h.text);
     if (JSON.stringify(keywords) !== JSON.stringify(listing.seo_keywords))
       updates.seo_keywords = keywords.filter(Boolean);
 
@@ -130,10 +150,44 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
 
   useImperativeHandle(ref, () => ({ save: handleSave, isDirty }), [handleSave, isDirty]);
 
-  const updateHighlight = (id: string, value: string) => {
+  // Track the last text that was used to infer an icon, keyed by highlight ID.
+  // Prevents re-inferring when the user clicks in/out without changing text.
+  const inferredTextsRef = useRef<Map<string, string>>(new Map());
+
+  const updateHighlight = (id: string, text: string) => {
     setDraftHighlights((prev) =>
-      prev.map((item) => (item.id === id ? { ...item, value } : item)),
+      prev.map((item) => (item.id === id ? { ...item, text } : item)),
     );
+  };
+
+  const handleHighlightBlur = async (id: string, text: string) => {
+    const trimmed = text.trim();
+    if (!trimmed) return;
+
+    // Skip if text hasn't changed since last inference (or since mount)
+    const lastInferred = inferredTextsRef.current.get(id);
+    const item = draftHighlights.find((h) => h.id === id);
+    const originalText = ((listing.highlights ?? []) as Highlight[]).find(
+      (h) => typeof h !== "string" && h.text === trimmed,
+    );
+
+    // Don't infer if: text matches what we last inferred, OR text matches an original highlight
+    if (trimmed === lastInferred || originalText) return;
+
+    // Show sparkles while inferring
+    setDraftHighlights((prev) =>
+      prev.map((h) => (h.id === id ? { ...h, icon: "sparkles" } : h)),
+    );
+
+    try {
+      const { icon } = await inferHighlightIcon(trimmed);
+      setDraftHighlights((prev) =>
+        prev.map((h) => (h.id === id ? { ...h, icon } : h)),
+      );
+      inferredTextsRef.current.set(id, trimmed);
+    } catch {
+      // Keep sparkles fallback on error
+    }
   };
 
   const removeHighlight = (id: string) => {
@@ -176,10 +230,11 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
           <div className="flex flex-col gap-2">
             {draftHighlights.map((item) => (
               <div key={item.id} className="flex items-center gap-2">
-                <Sparkles className="size-4 text-gold shrink-0" />
+                <DynamicIcon name={item.icon} className="size-4 text-gold shrink-0" />
                 <Input
-                  value={item.value}
+                  value={item.text}
                   onChange={(e) => updateHighlight(item.id, e.target.value)}
+                  onBlur={() => handleHighlightBlur(item.id, item.text)}
                   className="text-sm border-dashed border-gold bg-gold/5 h-8"
                 />
                 <button
@@ -197,7 +252,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
               onClick={() =>
                 setDraftHighlights((prev) => [
                   ...prev,
-                  { id: makeId(), value: "" },
+                  { id: makeId(), text: "", icon: "sparkles" },
                 ])
               }
               className="flex items-center gap-2 text-sm text-gold hover:text-gold/80 transition-colors py-1 cursor-pointer"

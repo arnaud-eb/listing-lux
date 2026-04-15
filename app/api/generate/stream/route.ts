@@ -67,7 +67,7 @@ export async function POST(request: Request) {
           title: cl.title as string,
           description: (cl.description as string) ?? "",
           highlights: Array.isArray(cl.highlights)
-            ? (cl.highlights as string[])
+            ? (cl.highlights as Array<{ text: string; icon: string }>)
             : [],
         }
       : undefined;

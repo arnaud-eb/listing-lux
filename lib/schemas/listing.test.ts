@@ -7,9 +7,9 @@ describe("listingOutputSchema", () => {
     description:
       "A beautiful apartment with panoramic views.\n\nThe open-plan living area floods with natural light.",
     highlights: [
-      "Panoramic city views",
-      "Open-plan kitchen",
-      "Private parking",
+      { text: "Panoramic city views", icon: "mountain" },
+      { text: "Open-plan kitchen", icon: "cooking-pot" },
+      { text: "Private parking", icon: "car" },
     ],
     seo_keywords: [
       "Kirchberg apartment",

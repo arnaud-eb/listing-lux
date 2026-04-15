@@ -2,7 +2,7 @@ import type { Language, PhotoAnalysis } from "@/lib/types";
 import type { Neighborhood } from "@/lib/markets/types";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "1.1";
+export const PROMPT_VERSION = "1.2";
 
 interface PropertyData {
   bedrooms: number;
@@ -24,8 +24,8 @@ Stil:
 - Beschreibe Räume lebendig und einladend
 - Vermeide Übertreibungen, bleibe glaubwürdig
 
-Die Beschreibung soll 3-5 Absätze umfassen, getrennt durch doppelte Zeilenumbrüche.
-Highlights sollen prägnante Stichpunkte sein (5-8 Punkte).
+Die Beschreibung soll 3-5 Absätze umfassen (maximal ca. 2000 Zeichen), getrennt durch doppelte Zeilenumbrüche.
+Highlights sollen prägnante Stichpunkte sein (5-8 Punkte). Für jeden Highlight, wähle einen passenden Lucide React Icon-Namen (z.B. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
 SEO-Keywords sollen relevante Suchbegriffe für den luxemburgischen Immobilienmarkt sein.`,
 
   fr: `Vous êtes un rédacteur immobilier de luxe expérimenté au Luxembourg. Rédigez des annonces immobilières haut de gamme en français qui séduisent les acheteurs fortunés et les investisseurs.
@@ -37,8 +37,8 @@ Style :
 - Décrivez les espaces de manière vivante et accueillante
 - Évitez les exagérations, restez crédible
 
-La description doit comprendre 3 à 5 paragraphes, séparés par des doubles sauts de ligne.
-Les points forts doivent être des phrases concises (5-8 points).
+La description doit comprendre 3 à 5 paragraphes (maximum environ 2000 caractères), séparés par des doubles sauts de ligne.
+Les points forts doivent être des phrases concises (5-8 points). Pour chaque point fort, choisissez un nom d'icône Lucide React approprié (ex: 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
 Les mots-clés SEO doivent être des termes de recherche pertinents pour le marché immobilier luxembourgeois.`,
 
   en: `You are an experienced luxury real estate copywriter in Luxembourg. Write premium property listings in English that appeal to high-net-worth buyers and investors.
@@ -50,8 +50,8 @@ Style:
 - Describe spaces vividly and invitingly
 - Avoid exaggeration, stay credible
 
-The description should contain 3-5 paragraphs, separated by double line breaks.
-Highlights should be concise bullet phrases (5-8 points).
+The description should contain 3-5 paragraphs (approximately 2000 characters max), separated by double line breaks.
+Highlights should be concise bullet phrases (5-8 points). For each highlight, assign a Lucide React icon name that best represents it (e.g. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
 SEO keywords should be relevant search terms for the Luxembourg property market.`,
 
   lu: `Du bass en erfaarene Lëtzebuerger Luxus-Immobilientexter. Schreiw héichwäerteg Immobilienannoncen op Lëtzebuergesch, déi räich Keefer a Investisseuren uspréchen.
@@ -63,8 +63,8 @@ Stil:
 - Beschreif d'Raim lieweg an aluedend
 - Vermeide Iwwerdreiwen, bleif glafwierdeg
 
-D'Beschreiwung soll 3-5 Abschnitter hunn, getrennt duerch duebel Zeilenëmbroch.
-Highlights solle kuerz Stéchpunkten sinn (5-8 Punkten).
+D'Beschreiwung soll 3-5 Abschnitter hunn (maximal ongeféier 2000 Zeechen), getrennt duerch duebel Zeilenëmbroch.
+Highlights solle kuerz Stéchpunkten sinn (5-8 Punkten). Fir all Highlight, wiel en passenden Lucide React Icon-Numm (z.B. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
 SEO-Keywords solle relevant Sichbegräffer fir de Lëtzebuerger Immobiliemaart sinn.`,
 };
 
@@ -112,7 +112,7 @@ function buildPhotoContext(analyses: PhotoAnalysis[]): string {
 interface CurrentListing {
   title: string;
   description: string;
-  highlights: string[];
+  highlights: Array<{ text: string; icon: string }>;
 }
 
 export interface PromptMessages {
@@ -157,7 +157,7 @@ ${photoContext}`;
 Current listing (use as starting point, refine based on user feedback):
 Title: ${currentListing.title}
 Description: ${currentListing.description}
-Highlights: ${currentListing.highlights.join(", ")}`;
+Highlights: ${currentListing.highlights.map((h) => h.text).join(", ")}`;
   }
 
   // User feedback is returned as a separate message to leverage role boundaries

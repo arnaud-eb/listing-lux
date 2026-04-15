@@ -139,6 +139,7 @@ export async function saveProperty(
       photo_urls: formData.photo_urls,
       photo_analyses: formData.photo_analyses ?? [],
       session_id: sessionId,
+      ...(formData.address ? { address: formData.address } : {}),
     })
     .select("id")
     .single();

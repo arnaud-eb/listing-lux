@@ -29,12 +29,19 @@ function makePhoto(overrides: Partial<ListingPhoto> = {}): ListingPhoto {
 
 function deriveCanGenerate(photos: ListingPhoto[], fields: { bedrooms: number; sqm: number; price: number; neighborhood: string }) {
   const readyPhotoCount = photos.filter((p) => p.status === "ready").length;
+  const inFlightPhotoCount = photos.filter(
+    (p) => p.status === "uploading" || p.status === "processing",
+  ).length;
   const hasRequiredFields =
     fields.bedrooms > 0 &&
     fields.sqm > 0 &&
     fields.price > 0 &&
     fields.neighborhood !== "";
-  return readyPhotoCount >= MIN_PHOTOS && hasRequiredFields;
+  return (
+    readyPhotoCount >= MIN_PHOTOS &&
+    inFlightPhotoCount === 0 &&
+    hasRequiredFields
+  );
 }
 
 function buildFormData(photos: ListingPhoto[], fields: { bedrooms: number; bathrooms: number; sqm: number; price: number; neighborhood: string; propertyType: string; features: Record<string, boolean> }) {
@@ -109,5 +116,33 @@ describe("canGenerate / toFormData invariant", () => {
 
     const formData = buildFormData(photos, VALID_FIELDS);
     expect(formData.photo_urls).toHaveLength(MIN_PHOTOS);
+  });
+
+  it("canGenerate is false when extra photos are still processing beyond the minimum", () => {
+    // 5 ready (enough to meet MIN_PHOTOS) + 2 still processing
+    const photos = [
+      ...Array.from({ length: MIN_PHOTOS }, () => makePhoto({ status: "ready" })),
+      makePhoto({ status: "processing" }),
+      makePhoto({ status: "processing" }),
+    ];
+
+    expect(deriveCanGenerate(photos, VALID_FIELDS)).toBe(false);
+  });
+
+  it("canGenerate is false when extra photos are still uploading beyond the minimum", () => {
+    const photos = [
+      ...Array.from({ length: MIN_PHOTOS }, () => makePhoto({ status: "ready" })),
+      makePhoto({ status: "uploading" }),
+    ];
+
+    expect(deriveCanGenerate(photos, VALID_FIELDS)).toBe(false);
+  });
+
+  it("canGenerate is true again once all in-flight photos resolve to ready", () => {
+    const photos = Array.from({ length: MIN_PHOTOS + 2 }, () =>
+      makePhoto({ status: "ready" }),
+    );
+
+    expect(deriveCanGenerate(photos, VALID_FIELDS)).toBe(true);
   });
 });

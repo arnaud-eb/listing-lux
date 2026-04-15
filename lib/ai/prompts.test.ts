@@ -180,7 +180,7 @@ describe("buildListingPrompt", () => {
       {
         title: "Luxury Apartment in Kirchberg",
         description: "A stunning apartment...",
-        highlights: ["Great view", "Modern kitchen"],
+        highlights: [{ text: "Great view", icon: "mountain" }, { text: "Modern kitchen", icon: "cooking-pot" }],
       },
     );
     expect(user).toContain("Current listing");
@@ -200,7 +200,7 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 1.1", () => {
-    expect(PROMPT_VERSION).toBe("1.1");
+  it("has version 1.2", () => {
+    expect(PROMPT_VERSION).toBe("1.2");
   });
 });

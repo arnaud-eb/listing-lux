@@ -51,3 +51,34 @@ export const HIGHLIGHTS_LABEL: Record<Language, string> = {
   en: "Highlights",
   lu: "Highlights",
 }
+
+/** Localized "Description" section label */
+export const DESCRIPTION_LABEL: Record<Language, string> = {
+  de: "Beschreibung",
+  fr: "Description",
+  en: "Description",
+  lu: "Beschreiwung",
+}
+
+/**
+ * Localized labels for property details (price | sqm | bedrooms | bathrooms).
+ * Returns short forms suitable for inline display (PDF details bar, copy formats).
+ */
+export const PROPERTY_DETAIL_LABELS: Record<Language, { bedroom: (n: number) => string; bathroom: (n: number) => string }> = {
+  de: {
+    bedroom: (n) => (n === 1 ? "Schlafzimmer" : "Schlafzimmer"),
+    bathroom: (n) => (n === 1 ? "Badezimmer" : "Badezimmer"),
+  },
+  fr: {
+    bedroom: (n) => (n === 1 ? "chambre" : "chambres"),
+    bathroom: (n) => (n === 1 ? "salle de bain" : "salles de bain"),
+  },
+  en: {
+    bedroom: (n) => (n === 1 ? "bedroom" : "bedrooms"),
+    bathroom: (n) => (n === 1 ? "bathroom" : "bathrooms"),
+  },
+  lu: {
+    bedroom: (n) => (n === 1 ? "Schlofzëmmer" : "Schlofzëmmeren"),
+    bathroom: (n) => (n === 1 ? "Buedzëmmer" : "Buedzëmmeren"),
+  },
+}

@@ -13,7 +13,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { LANGUAGE_LABELS, MAX_COMMENT_LENGTH } from "@/lib/constants";
-import type { Language } from "@/lib/types";
+import type { Language, Listing, Property } from "@/lib/types";
 
 const ExportMenu = dynamic(() => import("./ExportMenu"), { ssr: false });
 
@@ -29,6 +29,8 @@ interface ListingBottomBarProps {
   isGenerating?: boolean;
   activeLanguage?: Language;
   isEditing?: boolean;
+  listing?: Partial<Listing> | null;
+  property?: Property;
 }
 
 export default function ListingBottomBar({
@@ -36,6 +38,8 @@ export default function ListingBottomBar({
   isGenerating,
   activeLanguage,
   isEditing,
+  listing,
+  property,
 }: ListingBottomBarProps) {
   const [popoverOpen, setPopoverOpen] = useState(false);
   const [comment, setComment] = useState("");
@@ -190,7 +194,14 @@ export default function ListingBottomBar({
               New Listing
             </Link>
           </Button>
-          <ExportMenu hideTextOnMobile />
+          <ExportMenu
+            hideTextOnMobile
+            listing={listing ?? null}
+            property={property ?? null}
+            activeLanguage={activeLanguage ?? null}
+            isEditing={isEditing}
+            isGenerating={isGenerating}
+          />
         </div>
       </div>
     </div>

@@ -42,13 +42,13 @@ describe("updateListing", () => {
     await updateListing("listing-1", {
       title: "New Title",
       description: "New desc",
-      highlights: ["h1", "h2"],
+      highlights: [{ text: "h1", icon: "sparkles" }, { text: "h2", icon: "sparkles" }],
       seo_keywords: ["k1"],
     });
     expect(mockUpdate).toHaveBeenCalledWith({
       title: "New Title",
       description: "New desc",
-      highlights: ["h1", "h2"],
+      highlights: [{ text: "h1", icon: "sparkles" }, { text: "h2", icon: "sparkles" }],
       seo_keywords: ["k1"],
     });
   });

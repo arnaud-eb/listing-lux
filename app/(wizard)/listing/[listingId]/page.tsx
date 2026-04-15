@@ -6,9 +6,9 @@ import { verifyPropertyOwnership, UnauthorizedError } from "@/lib/auth";
 import { getNeighborhoodBySlug } from "@/lib/markets";
 import PhotoCarousel from "@/components/listing/PhotoCarousel";
 import PriceDisplay from "@/components/shared/PriceDisplay";
-import ListingGenerator from "@/components/listing/ListingGenerator";
+import ListingPageClient from "./listing-page-client";
 import { propertySchema } from "@/lib/schemas/property";
-import type { Listing } from "@/lib/types";
+import type { Listing, Property } from "@/lib/types";
 import { z } from "zod";
 
 interface PageProps {
@@ -21,6 +21,7 @@ const getProperty = cache(async (id: string) => {
     .from("properties")
     .select("*")
     .eq("id", id)
+    .is("deleted_at", null)
     .single();
 
   if (error || !data) return null;
@@ -92,46 +93,57 @@ export default async function ListingPage({ params }: PageProps) {
   const neighborhood = getNeighborhoodBySlug(p.neighborhood);
   const neighborhoodName = neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
 
+  const property: Property = {
+    id: p.id,
+    bedrooms: p.bedrooms,
+    bathrooms: p.bathrooms,
+    sqm: p.sqm,
+    price: p.price,
+    neighborhood: p.neighborhood,
+    property_type: p.property_type,
+    features: p.features,
+    photo_urls: p.photo_urls,
+    address: p.address,
+    created_at: p.created_at,
+  };
+
+  // Server-rendered header content — stays server via the slot pattern.
+  const header = (
+    <>
+      <h1 className="font-serif text-3xl font-bold text-navy-deep capitalize">
+        {p.property_type} in {neighborhoodName}
+      </h1>
+      <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
+        <span>{p.bedrooms} bed</span>
+        <span>·</span>
+        <span>{p.bathrooms} bath</span>
+        <span>·</span>
+        <span>{p.sqm} m²</span>
+        <span>·</span>
+        <PriceDisplay
+          amount={p.price}
+          className="font-semibold text-navy-deep"
+        />
+      </div>
+    </>
+  );
+
+  const gallery = (
+    <PhotoCarousel
+      urls={p.photo_urls}
+      alt={`${p.property_type} in ${p.neighborhood}`}
+    />
+  );
+
   return (
     <div className="min-h-screen bg-bg-light flex flex-col">
       <div className="container mx-auto px-6 py-8 flex-1">
-        {/* Page header */}
-        <div className="mb-8">
-          <h1 className="font-serif text-3xl font-bold text-navy-deep capitalize">
-            {p.property_type} in {neighborhoodName}
-          </h1>
-          <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
-            <span>{p.bedrooms} bed</span>
-            <span>·</span>
-            <span>{p.bathrooms} bath</span>
-            <span>·</span>
-            <span>{p.sqm} m²</span>
-            <span>·</span>
-            <PriceDisplay
-              amount={p.price}
-              className="font-semibold text-navy-deep"
-            />
-          </div>
-        </div>
-
-        {/* Two-column layout: gallery left, content right */}
-        <div className="grid grid-cols-[1fr_2fr] gap-8 max-lg:grid-cols-1 max-xl:grid-cols-[2fr_3fr]">
-          {/* Gallery — on mobile, show first so streaming text below doesn't push it */}
-          <div className="max-lg:order-1">
-            <PhotoCarousel
-              urls={p.photo_urls}
-              alt={`${p.property_type} in ${p.neighborhood}`}
-            />
-          </div>
-
-          {/* Listing content with language tabs */}
-          <div className="max-lg:order-2">
-            <ListingGenerator
-              propertyId={listingId}
-              initialListings={existingListings}
-            />
-          </div>
-        </div>
+        <ListingPageClient
+          property={property}
+          initialListings={existingListings}
+          header={header}
+          gallery={gallery}
+        />
       </div>
     </div>
   );

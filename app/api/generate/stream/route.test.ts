@@ -237,7 +237,10 @@ describe("/api/generate/stream", () => {
     const validOutput = {
       title: "Luxuswohnung in Kirchberg",
       description: "Eine wunderschöne Wohnung.",
-      highlights: ["Modern kitchen", "City view"],
+      highlights: [
+        { text: "Modern kitchen", icon: "cooking-pot" },
+        { text: "City view", icon: "mountain" },
+      ],
       seo_keywords: ["kirchberg", "luxury"],
     };
 
@@ -322,7 +325,7 @@ describe("/api/generate/stream", () => {
         currentListing: {
           title: "Test Title",
           description: "Test desc",
-          highlights: ["h1"],
+          highlights: [{ text: "h1", icon: "sparkles" }],
         },
       }),
     );
@@ -333,7 +336,7 @@ describe("/api/generate/stream", () => {
       expect.any(Array),
       expect.any(Object),
       "emphasize the view",
-      { title: "Test Title", description: "Test desc", highlights: ["h1"] },
+      { title: "Test Title", description: "Test desc", highlights: [{ text: "h1", icon: "sparkles" }] },
     );
   });
 

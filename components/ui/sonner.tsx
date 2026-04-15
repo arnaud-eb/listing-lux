@@ -38,6 +38,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
         } as React.CSSProperties
       }
       closeButton
+      expand
+      visibleToasts={3}
       {...props}
     />
   )

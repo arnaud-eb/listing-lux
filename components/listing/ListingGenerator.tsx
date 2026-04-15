@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import ConfirmDiscardDialog from "@/components/shared/ConfirmDiscardDialog";
 import { Pencil, Check, X } from "lucide-react";
 import { toast } from "sonner";
-import type { Language, Listing } from "@/lib/types";
+import type { Language, Listing, Property } from "@/lib/types";
 import { LANGUAGES, LANGUAGE_LABELS } from "@/lib/constants";
 import { useListingGeneration } from "@/app/(wizard)/listing/[listingId]/use-listing-generation";
 import { updateListing } from "@/app/(wizard)/listing/[listingId]/actions";
@@ -17,11 +17,16 @@ import type { EditableListingHandle } from "./EditableListingContent";
 interface ListingGeneratorProps {
   propertyId: string;
   initialListings: Listing[];
+  property: Property;
+  /** Optional callback fired when the generation state changes — lets parents disable actions during generation. */
+  onGeneratingChange?: (isGenerating: boolean) => void;
 }
 
 export default function ListingGenerator({
   propertyId,
   initialListings,
+  property,
+  onGeneratingChange,
 }: ListingGeneratorProps) {
   const {
     state,
@@ -38,6 +43,11 @@ export default function ListingGenerator({
   const [discardSource, setDiscardSource] = useState<"tab" | "button">("button");
   const pendingTabRef = useRef<Language | null>(null);
   const editableRef = useRef<EditableListingHandle>(null);
+
+  // Notify parent when generation state changes (used to disable external actions like delete)
+  useEffect(() => {
+    onGeneratingChange?.(isGenerating);
+  }, [isGenerating, onGeneratingChange]);
 
   // Find currently generating language for "queued" display
   const generatingLang = LANGUAGES.find(
@@ -211,6 +221,8 @@ export default function ListingGenerator({
         isGenerating={isGenerating}
         activeLanguage={initialGenerationDone ? activeTab : undefined}
         isEditing={isEditing}
+        listing={state[activeTab].listing ?? null}
+        property={property}
       />
 
       {/* Discard confirmation for tab switching while editing */}

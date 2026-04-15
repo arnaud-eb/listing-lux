@@ -16,6 +16,7 @@ interface PropertyFormState {
   propertyType: string;
   features: Record<string, boolean>;
   photos: ListingPhoto[];
+  address: string;
 }
 
 const INITIAL_STATE: PropertyFormState = {
@@ -27,6 +28,7 @@ const INITIAL_STATE: PropertyFormState = {
   propertyType: "apartment",
   features: {},
   photos: [],
+  address: "",
 };
 
 // --- Actions ---
@@ -102,6 +104,10 @@ export function usePropertyForm() {
     (p) => p.status === "ready",
   ).length;
 
+  const inFlightPhotoCount = state.photos.filter(
+    (p) => p.status === "uploading" || p.status === "processing",
+  ).length;
+
   const hasRequiredFields =
     state.bedrooms >= 0 &&
     typeof state.sqm === "number" &&
@@ -110,7 +116,10 @@ export function usePropertyForm() {
     state.price > 0 &&
     state.neighborhood !== "";
 
-  const canGenerate = readyPhotoCount >= MIN_PHOTOS && hasRequiredFields;
+  const canGenerate =
+    readyPhotoCount >= MIN_PHOTOS &&
+    inFlightPhotoCount === 0 &&
+    hasRequiredFields;
 
   // --- Draft persistence ---
   useEffect(() => {
@@ -126,9 +135,14 @@ export function usePropertyForm() {
         neighborhood: d.neighborhood ?? INITIAL_STATE.neighborhood,
         propertyType: d.propertyType ?? INITIAL_STATE.propertyType,
         features: d.features ?? INITIAL_STATE.features,
+        address: d.address ?? INITIAL_STATE.address,
         photos: d.photos?.length
           ? d.photos.map((p: Record<string, unknown>) => ({
               ...p,
+              // Restored photos are always "ready" — if they have a publicUrl,
+              // the upload succeeded. AI analysis is optional and non-blocking;
+              // we won't retry it on restore (analysis may be missing).
+              status: "ready" as const,
               localPreviewUrl: (p.publicUrl as string) ?? "",
               aiAnalysis: p.aiAnalysis ?? null,
             }))
@@ -267,6 +281,7 @@ export function usePropertyForm() {
       photo_analyses: readyPhotos
         .filter((p) => p.aiAnalysis)
         .map((p) => p.aiAnalysis!),
+      ...(state.address ? { address: state.address } : {}),
     };
   }
 
@@ -281,6 +296,7 @@ export function usePropertyForm() {
     updateFeatures,
     photos: state.photos,
     readyPhotoCount,
+    inFlightPhotoCount,
     hasRequiredFields,
     canGenerate,
     handleAddPhotos,

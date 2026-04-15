@@ -6,6 +6,7 @@ import { getNeighborhoodBySlug } from "@/lib/markets";
 import PriceDisplay from "@/components/shared/PriceDisplay";
 import { Button } from "@/components/ui/button";
 import { Bath, BedDouble, Maximize } from "lucide-react";
+import DeleteListingButton from "./DeleteListingButton";
 
 /** Shape returned by Supabase join: properties with nested listings */
 interface PropertyWithListings {
@@ -39,6 +40,7 @@ export default async function HistoryPage() {
     .from("properties")
     .select("*, listings(title, language)")
     .eq("session_id", sessionId)
+    .is("deleted_at", null)
     .order("created_at", { ascending: false });
 
   if (!properties || properties.length === 0) {
@@ -64,7 +66,7 @@ export default async function HistoryPage() {
           Your Listings
         </h1>
         <p className="text-sm text-gray-500 mt-1">
-          Properties you&apos;ve created in this session
+          Properties you&apos;ve created
         </p>
       </div>
 
@@ -79,65 +81,67 @@ export default async function HistoryPage() {
           );
 
           return (
-            <Link
+            <div
               key={property.id}
-              href={`/listing/${property.id}`}
-              className="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
+              className="group relative bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
             >
-              {/* Thumbnail */}
-              <div className="aspect-16/10 relative bg-gray-100 overflow-hidden">
-                {thumbnail ? (
-                  <Image
-                    src={thumbnail}
-                    alt={title ?? "Property photo"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full text-gray-300">
-                    <Maximize className="size-8" />
+              <DeleteListingButton propertyId={property.id} title={title} />
+              <Link href={`/listing/${property.id}`} className="block">
+                {/* Thumbnail */}
+                <div className="aspect-16/10 relative bg-gray-100 overflow-hidden">
+                  {thumbnail ? (
+                    <Image
+                      src={thumbnail}
+                      alt={title ?? "Property photo"}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full text-gray-300">
+                      <Maximize className="size-8" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Card body */}
+                <div className="p-4">
+                  {title && (
+                    <h2 className="font-serif text-base font-semibold text-navy-deep line-clamp-1 mb-1">
+                      {title}
+                    </h2>
+                  )}
+
+                  <p className="text-sm text-gray-500 capitalize">
+                    {property.property_type}
+                    {neighborhood ? ` · ${neighborhood.name}` : ""}
+                  </p>
+
+                  <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
+                    <span className="flex items-center gap-1">
+                      <BedDouble className="size-3.5" />
+                      {property.bedrooms}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Bath className="size-3.5" />
+                      {property.bathrooms}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Maximize className="size-3.5" />
+                      {property.sqm} m²
+                    </span>
                   </div>
-                )}
-              </div>
 
-              {/* Card body */}
-              <div className="p-4">
-                {title && (
-                  <h2 className="font-serif text-base font-semibold text-navy-deep line-clamp-1 mb-1">
-                    {title}
-                  </h2>
-                )}
-
-                <p className="text-sm text-gray-500 capitalize">
-                  {property.property_type}
-                  {neighborhood ? ` · ${neighborhood.name}` : ""}
-                </p>
-
-                <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
-                  <span className="flex items-center gap-1">
-                    <BedDouble className="size-3.5" />
-                    {property.bedrooms}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Bath className="size-3.5" />
-                    {property.bathrooms}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Maximize className="size-3.5" />
-                    {property.sqm} m²
-                  </span>
+                  <div className="flex items-center justify-between mt-3">
+                    <PriceDisplay
+                      amount={property.price}
+                      className="text-sm font-semibold text-navy-deep"
+                    />
+                    <span className="text-2xs text-gray-400">{createdAt}</span>
+                  </div>
                 </div>
-
-                <div className="flex items-center justify-between mt-3">
-                  <PriceDisplay
-                    amount={property.price}
-                    className="text-sm font-semibold text-navy-deep"
-                  />
-                  <span className="text-2xs text-gray-400">{createdAt}</span>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </div>

@@ -1,7 +1,8 @@
 "use client";
 
-import { useTransition } from "react";
+import { useTransition, useState } from "react";
 import { useRouter } from "next/navigation";
+import ConfirmDeleteDialog from "@/components/shared/ConfirmDeleteDialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -42,6 +43,7 @@ const PROPERTY_TYPES = [
 export default function CreatePage() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const [resetConfirmOpen, setResetConfirmOpen] = useState(false);
 
   const {
     form,
@@ -49,6 +51,7 @@ export default function CreatePage() {
     updateFeatures,
     photos,
     readyPhotoCount,
+    inFlightPhotoCount,
     hasRequiredFields,
     canGenerate,
     handleAddPhotos,
@@ -57,6 +60,23 @@ export default function CreatePage() {
     toFormData,
     clearDraft,
   } = usePropertyForm();
+
+  // Dirty check: has the user entered anything worth protecting?
+  const isDirty =
+    photos.length > 0 ||
+    form.sqm !== "" ||
+    form.price !== "" ||
+    form.neighborhood !== "" ||
+    form.address !== "" ||
+    Object.values(form.features).some(Boolean);
+
+  function handleResetClick() {
+    if (isDirty) {
+      setResetConfirmOpen(true);
+    } else {
+      reset();
+    }
+  }
 
   function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -98,13 +118,25 @@ export default function CreatePage() {
             type="button"
             variant="outline"
             size="sm"
-            onClick={reset}
-            className="text-gray-400 hover:text-gold hover:bg-gold/5 border-gray-200 shadow-none mt-3 lg:absolute lg:right-0 lg:top-2"
+            onClick={handleResetClick}
+            className="text-gray-400 hover:text-red-500 hover:bg-gray-50 border-gray-200 shadow-none mt-3 lg:absolute lg:right-0 lg:top-2"
           >
             <RotateCcw className="size-3" />
             Start Over
           </Button>
         </div>
+
+        <ConfirmDeleteDialog
+          open={resetConfirmOpen}
+          onOpenChange={setResetConfirmOpen}
+          onConfirm={() => {
+            reset();
+            setResetConfirmOpen(false);
+          }}
+          title="Start over?"
+          description="This will clear all the details and photos you've added. This action cannot be undone."
+          confirmLabel="Start Over"
+        />
 
         <form onSubmit={handleSubmit} noValidate>
           <div className="grid grid-cols-2 gap-8 items-start max-lg:grid-cols-1">
@@ -169,7 +201,9 @@ export default function CreatePage() {
 
                   {/* Size */}
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="sqm">Size (m²) *</Label>
+                    <Label htmlFor="sqm">
+                      Size (m²) <span className="text-red-400">*</span>
+                    </Label>
                     <Input
                       id="sqm"
                       type="number"
@@ -189,7 +223,9 @@ export default function CreatePage() {
 
                   {/* Price */}
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="price">Asking Price (€) *</Label>
+                    <Label htmlFor="price">
+                      Asking Price (€) <span className="text-red-400">*</span>
+                    </Label>
                     <Input
                       id="price"
                       type="text"
@@ -211,6 +247,19 @@ export default function CreatePage() {
                     sqm={typeof form.sqm === "number" ? form.sqm : 0}
                   />
 
+                  {/* Address (optional) */}
+                  <div className="flex flex-col gap-1.5">
+                    <Label htmlFor="address">Property Address</Label>
+                    <Input
+                      id="address"
+                      type="text"
+                      placeholder="e.g. 12 Rue de Clausen, Luxembourg"
+                      value={form.address ?? ""}
+                      onChange={(e) => updateField("address", e.target.value)}
+                    />
+                    <p className="text-2xs text-gray-400">Optional — included in PDF and social media exports</p>
+                  </div>
+
                   {/* Features */}
                   <FeatureChips
                     features={form.features}
@@ -222,6 +271,7 @@ export default function CreatePage() {
               {/* Generate bar — submit button lives here */}
               <GenerateBar
                 readyPhotoCount={readyPhotoCount}
+                inFlightPhotoCount={inFlightPhotoCount}
                 hasRequiredFields={hasRequiredFields}
                 isLoading={isPending}
               />

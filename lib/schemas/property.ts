@@ -12,16 +12,18 @@ const propertyBase = {
   photo_urls: z.array(z.url()).min(5),
 };
 
-/** Form submission — base + optional photo analyses */
+/** Form submission — base + optional photo analyses + optional address */
 export const propertyFormSchema = z.object({
   ...propertyBase,
   photo_analyses: z.array(z.any()).optional(),
+  address: z.string().optional(),
 });
 
 /** DB row — base + server-managed fields */
 export const propertySchema = z.object({
   ...propertyBase,
   id: z.uuid(),
+  address: z.string().optional().nullable(),
   created_at: z.string(),
 });
 

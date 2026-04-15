@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { experimental_useObject as useObject } from "@ai-sdk/react";
 import { toast } from "sonner";
-import type { Language, Listing } from "@/lib/types";
+import type { Language, Listing, Highlight } from "@/lib/types";
 import { LANGUAGES, LANGUAGE_LABELS } from "@/lib/constants";
 import { listingOutputSchema, type ListingOutput } from "@/lib/schemas/listing";
 

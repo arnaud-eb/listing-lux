@@ -14,14 +14,16 @@ import {
 
 interface WizardNavProps {
   hasSession: boolean;
+  hasProfile?: boolean;
 }
 
 interface NavItem {
   label: string;
   href: string;
+  badge?: "incomplete";
 }
 
-function getNavLinks(hasSession: boolean): NavItem[] {
+function getNavLinks(hasSession: boolean, hasProfile?: boolean): NavItem[] {
   const links: NavItem[] = [
     { label: "Home", href: "/" },
     { label: "Create Listing", href: "/create" },
@@ -29,6 +31,11 @@ function getNavLinks(hasSession: boolean): NavItem[] {
   if (hasSession) {
     links.push({ label: "Your Listings", href: "/history" });
   }
+  links.push({
+    label: "Profile",
+    href: "/profile",
+    badge: hasProfile ? undefined : "incomplete",
+  });
   return links;
 }
 
@@ -36,15 +43,15 @@ function isActive(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
 }
 
-export default function WizardNav({ hasSession }: WizardNavProps) {
+export default function WizardNav({ hasSession, hasProfile }: WizardNavProps) {
   const pathname = usePathname();
-  const links = getNavLinks(hasSession);
+  const links = getNavLinks(hasSession, hasProfile);
 
   return (
     <>
       {/* Desktop nav */}
       <nav className="flex items-center gap-6 ml-auto max-md:hidden">
-        {links.map(({ label, href }) => (
+        {links.map(({ label, href, badge }) => (
           <Link
             key={href}
             href={href}
@@ -55,6 +62,9 @@ export default function WizardNav({ hasSession }: WizardNavProps) {
             }`}
           >
             {label}
+            {badge === "incomplete" && (
+              <span className="ml-1 inline-block size-1.5 bg-gold rounded-full" aria-label="Profile incomplete" />
+            )}
           </Link>
         ))}
       </nav>

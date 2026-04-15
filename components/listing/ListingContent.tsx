@@ -3,8 +3,8 @@
 import type { RefObject } from "react";
 import type { Language, Listing, ListingUpdates } from "@/lib/types";
 import { LANGUAGE_LABELS, HIGHLIGHTS_LABEL } from "@/lib/constants";
-import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DynamicIcon from "@/components/shared/DynamicIcon";
 import type { GenerationStatus } from "@/app/(wizard)/listing/[listingId]/use-listing-generation";
 import EditableListingContent, { type EditableListingHandle } from "./EditableListingContent";
 
@@ -126,9 +126,12 @@ export default function ListingContent({
                   <div className="flex flex-col gap-2">
                     {listing.highlights.map((highlight, i) => (
                       <div key={i} className="flex items-start gap-2">
-                        <Sparkles className="size-4 text-gold shrink-0 mt-0.5" />
+                        <DynamicIcon
+                          name={typeof highlight === "string" ? "sparkles" : highlight.icon}
+                          className="size-4 text-gold shrink-0 mt-0.5"
+                        />
                         <span className="text-sm text-gray-600">
-                          {highlight}
+                          {typeof highlight === "string" ? highlight : highlight.text}
                         </span>
                       </div>
                     ))}

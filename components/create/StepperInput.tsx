@@ -45,7 +45,7 @@ export default function StepperInput({
           onClick={decrement}
           disabled={value <= min}
           aria-label={`Decrease ${label}`}
-          className="w-11 h-11 rounded-l-md rounded-r-none border-gray-300 bg-white text-gray-600 hover:bg-gray-50 shadow-none disabled:opacity-40"
+          className="w-11 h-11 rounded-l-md rounded-r-none border-gray-300 bg-white text-gray-600 hover:bg-gray-100 hover:text-navy-deep shadow-none disabled:opacity-40"
         >
           <Minus className="size-4" />
         </Button>
@@ -64,7 +64,7 @@ export default function StepperInput({
           onClick={increment}
           disabled={value >= max}
           aria-label={`Increase ${label}`}
-          className="w-11 h-11 rounded-r-md rounded-l-none border-gray-300 bg-white text-gray-600 hover:bg-gray-50 shadow-none disabled:opacity-40"
+          className="w-11 h-11 rounded-r-md rounded-l-none border-gray-300 bg-white text-gray-600 hover:bg-gray-100 hover:text-navy-deep shadow-none disabled:opacity-40"
         >
           <Plus className="size-4" />
         </Button>

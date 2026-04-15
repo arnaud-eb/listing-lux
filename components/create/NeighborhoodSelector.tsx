@@ -30,7 +30,7 @@ export default function NeighborhoodSelector({ value, onChange, sqm }: Neighborh
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-sm font-medium text-gray-700" htmlFor="neighborhood-select">
-        Neighborhood *
+        Neighborhood <span className="text-red-400">*</span>
       </label>
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger id="neighborhood-select" className="w-full">
