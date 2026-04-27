@@ -200,7 +200,7 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 1.2", () => {
-    expect(PROMPT_VERSION).toBe("1.2");
+  it("has version 1.3", () => {
+    expect(PROMPT_VERSION).toBe("1.3");
   });
 });

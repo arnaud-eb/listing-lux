@@ -3,9 +3,10 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { experimental_useObject as useObject } from "@ai-sdk/react";
 import { toast } from "sonner";
-import type { Language, Listing, Highlight } from "@/lib/types";
+import type { Language, Listing, Highlight, Property } from "@/lib/types";
 import { LANGUAGES, LANGUAGE_LABELS } from "@/lib/constants";
 import { listingOutputSchema, type ListingOutput } from "@/lib/schemas/listing";
+import { buildBaseHashtags, dedupeHashtags } from "@/lib/markets";
 
 export type GenerationStatus =
   | "idle"
@@ -43,6 +44,7 @@ function initState(initialListings: Listing[]): GenerationState {
 export function useListingGeneration(
   propertyId: string,
   initialListings: Listing[],
+  property: Pick<Property, "property_type" | "neighborhood">,
 ) {
   const [state, setState] = useState<GenerationState>(() =>
     initState(initialListings),
@@ -80,6 +82,17 @@ export function useListingGeneration(
         }));
       } else {
         completedCountRef.current++;
+        // Mirror the server-side merge so client state holds the full hashtag
+        // list (base + AI-specific). Without this, preservedHashtags on regen
+        // would only carry AI-specific tags and the base set would be lost.
+        const mergedHashtags = dedupeHashtags([
+          ...buildBaseHashtags({
+            language: lang,
+            propertyType: property.property_type,
+            neighborhood: property.neighborhood,
+          }),
+          ...(object.hashtags ?? []),
+        ]);
         setState((prev) => ({
           ...prev,
           [lang]: {
@@ -88,6 +101,7 @@ export function useListingGeneration(
               property_id: propertyId,
               language: lang,
               ...object,
+              hashtags: mergedHashtags,
             } as Partial<Listing>,
           },
         }));
@@ -108,7 +122,6 @@ export function useListingGeneration(
       const nextLang = queueRef.current.shift();
       if (nextLang) {
         currentLangRef.current = nextLang;
-        setActiveTab(nextLang);
         setState((prev) => ({
           ...prev,
           [nextLang]: { status: "generating", listing: null },
@@ -178,7 +191,6 @@ export function useListingGeneration(
       // Start the first language
       const firstLang = order[0];
       currentLangRef.current = firstLang;
-      setActiveTab(firstLang);
       setState((prev) => ({
         ...prev,
         [firstLang]: { status: "generating", listing: null },
@@ -219,6 +231,7 @@ export function useListingGeneration(
                 description: currentListing.description ?? "",
                 highlights: currentListing.highlights ?? [],
               },
+              preservedHashtags: currentListing.hashtags ?? [],
             }
           : {}),
       });
@@ -237,7 +250,7 @@ export function useListingGeneration(
   }, []);
 
   const updateField = useCallback(
-    (language: Language, updates: Partial<Pick<Listing, "title" | "description" | "highlights" | "seo_keywords">>) => {
+    (language: Language, updates: Partial<Pick<Listing, "title" | "description" | "highlights" | "hashtags">>) => {
       setState((prev) => ({
         ...prev,
         [language]: {

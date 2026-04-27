@@ -2,7 +2,7 @@ import type { Language, PhotoAnalysis } from "@/lib/types";
 import type { Neighborhood } from "@/lib/markets/types";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "1.2";
+export const PROMPT_VERSION = "1.3";
 
 interface PropertyData {
   bedrooms: number;
@@ -26,7 +26,7 @@ Stil:
 
 Die Beschreibung soll 3-5 Absätze umfassen (maximal ca. 2000 Zeichen), getrennt durch doppelte Zeilenumbrüche.
 Highlights sollen prägnante Stichpunkte sein (5-8 Punkte). Für jeden Highlight, wähle einen passenden Lucide React Icon-Namen (z.B. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
-SEO-Keywords sollen relevante Suchbegriffe für den luxemburgischen Immobilienmarkt sein.`,
+Hashtags: Erzeuge 3-5 objektspezifische Hashtags (z.B. besondere Architektur, herausragende Merkmale, Lifestyle). KEINE generischen Markt- oder Standort-Hashtags (#Luxemburg, #Immobilien) — diese werden separat hinzugefügt. Jeder Wert sollte ein einzelnes Wort oder CamelCase sein.`,
 
   fr: `Vous êtes un rédacteur immobilier de luxe expérimenté au Luxembourg. Rédigez des annonces immobilières haut de gamme en français qui séduisent les acheteurs fortunés et les investisseurs.
 
@@ -39,7 +39,7 @@ Style :
 
 La description doit comprendre 3 à 5 paragraphes (maximum environ 2000 caractères), séparés par des doubles sauts de ligne.
 Les points forts doivent être des phrases concises (5-8 points). Pour chaque point fort, choisissez un nom d'icône Lucide React approprié (ex: 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
-Les mots-clés SEO doivent être des termes de recherche pertinents pour le marché immobilier luxembourgeois.`,
+Hashtags : générez 3 à 5 hashtags spécifiques à ce bien (ex : style architectural distinctif, équipements remarquables, lifestyle). PAS de hashtags génériques de marché ou de localisation (#Luxembourg, #Immobilier) — ceux-ci sont ajoutés séparément. Chaque valeur doit être un seul mot ou en CamelCase.`,
 
   en: `You are an experienced luxury real estate copywriter in Luxembourg. Write premium property listings in English that appeal to high-net-worth buyers and investors.
 
@@ -52,7 +52,7 @@ Style:
 
 The description should contain 3-5 paragraphs (approximately 2000 characters max), separated by double line breaks.
 Highlights should be concise bullet phrases (5-8 points). For each highlight, assign a Lucide React icon name that best represents it (e.g. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
-SEO keywords should be relevant search terms for the Luxembourg property market.`,
+Hashtags: generate 3-5 listing-specific hashtags (e.g. distinctive architectural style, standout amenities, lifestyle). Do NOT include generic market or location hashtags (#Luxembourg, #RealEstate) — those are added separately. Each value should be a single word or CamelCase.`,
 
   lu: `Du bass en erfaarene Lëtzebuerger Luxus-Immobilientexter. Schreiw héichwäerteg Immobilienannoncen op Lëtzebuergesch, déi räich Keefer a Investisseuren uspréchen.
 
@@ -65,7 +65,7 @@ Stil:
 
 D'Beschreiwung soll 3-5 Abschnitter hunn (maximal ongeféier 2000 Zeechen), getrennt duerch duebel Zeilenëmbroch.
 Highlights solle kuerz Stéchpunkten sinn (5-8 Punkten). Fir all Highlight, wiel en passenden Lucide React Icon-Numm (z.B. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap', 'sofa', 'cooking-pot', 'map-pin', 'sun').
-SEO-Keywords solle relevant Sichbegräffer fir de Lëtzebuerger Immobiliemaart sinn.`,
+Hashtags: Erstell 3-5 objektspezifesch Hashtags (z.B. besonnesch Architektur, Merkmolen, Lifestyle). KENG generesch Maart- oder Standort-Hashtags (#Letzebuerg, #Immobilien) — déi gi separat dobäigesat. All Wäert soll e eenzelt Wuert oder CamelCase sinn.`,
 };
 
 function buildNeighborhoodContext(

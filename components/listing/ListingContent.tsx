@@ -139,17 +139,22 @@ export default function ListingContent({
                 </div>
               )}
 
-              {/* SEO Keywords */}
-              {listing?.seo_keywords && listing.seo_keywords.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {listing.seo_keywords.filter(Boolean).map((keyword, i) => (
+              {/* Hashtags */}
+              {listing?.hashtags && listing.hashtags.length > 0 && (
+                <div>
+                  <h3 className="text-xs font-semibold text-navy-deep uppercase tracking-wider mb-3">
+                    Hashtags
+                  </h3>
+                  <div className="flex flex-wrap gap-1.5">
+                  {listing.hashtags.filter(Boolean).map((tag, i) => (
                     <span
                       key={i}
                       className="text-2xs bg-gray-100 text-gray-500 rounded-full px-2.5 py-0.5"
                     >
-                      {keyword}
+                      {tag.startsWith("#") ? tag : `#${tag}`}
                     </span>
                   ))}
+                  </div>
                 </div>
               )}
             </div>

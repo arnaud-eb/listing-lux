@@ -2,20 +2,7 @@
 
 import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-
-const FEATURE_OPTIONS = [
-  { id: 'balcony', label: 'Balcony' },
-  { id: 'parking', label: 'Parking' },
-  { id: 'garden', label: 'Garden' },
-  { id: 'elevator', label: 'Elevator' },
-  { id: 'storage', label: 'Storage/Cellar' },
-  { id: 'pool', label: 'Pool' },
-  { id: 'terrace', label: 'Terrace' },
-  { id: 'furnished', label: 'Furnished' },
-  { id: 'new-build', label: 'New Build' },
-  { id: 'renovated', label: 'Renovated' },
-  { id: 'city-view', label: 'City View' },
-]
+import { FEATURE_OPTIONS } from '@/lib/constants'
 
 interface FeatureChipsProps {
   features: Record<string, boolean>

@@ -15,9 +15,11 @@ export const listingOutputSchema = z.object({
       icon: z.string().describe("Lucide React icon name that best represents this highlight (e.g. 'trees', 'car', 'bath', 'mountain', 'shield', 'zap')"),
     }))
     .describe("5-8 key selling points with contextual Lucide icon names"),
-  seo_keywords: z
+  hashtags: z
     .array(z.string().min(1))
-    .describe("8-12 SEO keywords relevant to the property and location"),
+    .describe(
+      "3-5 listing-specific social-media hashtags (e.g. distinctive architectural style, standout amenities, lifestyle). Do NOT include generic market/location hashtags (#Luxembourg, #RealEstate) — those are added separately. Each value should be a single word or CamelCase, leading # optional.",
+    ),
 });
 
 export type ListingOutput = z.infer<typeof listingOutputSchema>;

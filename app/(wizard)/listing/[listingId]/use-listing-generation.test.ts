@@ -4,6 +4,11 @@ import { useListingGeneration } from "./use-listing-generation";
 import { toast } from "sonner";
 import type { Listing } from "@/lib/types";
 
+vi.mock("@/lib/markets", () => ({
+  buildBaseHashtags: vi.fn(() => ["#LuxembourgRealEstate"]),
+  dedupeHashtags: vi.fn((tags: string[]) => [...new Set(tags)]),
+}));
+
 vi.mock("sonner", () => ({
   toast: { success: vi.fn() },
 }));
@@ -35,17 +40,19 @@ beforeEach(() => {
   capturedOnFinish = undefined;
 });
 
+const mockProperty = { property_type: "apartment", neighborhood: "kirchberg" };
+
 const makeListing = (lang: string) => ({
   title: `Title ${lang}`,
   description: `Description ${lang}`,
   highlights: [{ text: "highlight", icon: "sparkles" }],
-  seo_keywords: ["keyword"],
+  hashtags: ["#tag"],
 });
 
 describe("useListingGeneration", () => {
   it("fires success toast after all 4 languages complete via onFinish chain", async () => {
     const { result } = renderHook(() =>
-      useListingGeneration("prop-1", []),
+      useListingGeneration("prop-1", [], mockProperty),
     );
 
     // Auto-trigger on mount calls submit for the first language
@@ -80,11 +87,11 @@ describe("useListingGeneration", () => {
         title: `Title ${lang}`,
         description: `Desc ${lang}`,
         highlights: [],
-        seo_keywords: [],
+        hashtags: [],
       }),
     );
 
-    renderHook(() => useListingGeneration("prop-1", existing));
+    renderHook(() => useListingGeneration("prop-1", existing, mockProperty));
 
     // No submit called since we have existing listings
     expect(capturedSubmit).not.toHaveBeenCalled();
@@ -100,12 +107,12 @@ describe("useListingGeneration", () => {
         title: `Title ${lang}`,
         description: `Desc ${lang}`,
         highlights: [],
-        seo_keywords: [],
+        hashtags: [],
       }),
     );
 
     const { result } = renderHook(() =>
-      useListingGeneration("prop-1", existing),
+      useListingGeneration("prop-1", existing, mockProperty),
     );
 
     // Trigger single language regeneration
@@ -131,7 +138,7 @@ describe("useListingGeneration", () => {
 
   it("full batch fires only 'all generated' toast, not per-language toasts", () => {
     const { result } = renderHook(() =>
-      useListingGeneration("prop-1", []),
+      useListingGeneration("prop-1", [], mockProperty),
     );
 
     // Complete all 4 languages
@@ -161,12 +168,12 @@ describe("useListingGeneration", () => {
         title: `Title ${lang}`,
         description: `Desc ${lang}`,
         highlights: [],
-        seo_keywords: [],
+        hashtags: [],
       }),
     );
 
     const { result } = renderHook(() =>
-      useListingGeneration("prop-1", existing),
+      useListingGeneration("prop-1", existing, mockProperty),
     );
 
     // Regenerate French
@@ -183,7 +190,7 @@ describe("useListingGeneration", () => {
 
   it("sets error state when onFinish receives an error", () => {
     const { result } = renderHook(() =>
-      useListingGeneration("prop-1", []),
+      useListingGeneration("prop-1", [], mockProperty),
     );
 
     // Simulate SDK error on first language

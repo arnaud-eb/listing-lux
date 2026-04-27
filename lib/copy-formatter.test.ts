@@ -19,7 +19,7 @@ const mockListing: Partial<Listing> = {
     { text: "Two parking spaces", icon: "car" },
     { text: "Modern kitchen", icon: "cooking-pot" },
   ],
-  seo_keywords: ["kirchberg", "luxury"],
+  hashtags: ["#LuxuryRealEstate", "#LuxembourgRealEstate", "#Kirchberg", "#NeoclassicalFacade"],
   language: "en",
 };
 
@@ -56,6 +56,16 @@ describe("stripEmojis", () => {
 
   it("handles multiple consecutive emojis", () => {
     expect(stripEmojis("🏠🌳🚗 Test")).toBe("Test");
+  });
+
+  it("preserves paragraph breaks", () => {
+    expect(stripEmojis("Para 1\n\nPara 2\n\nPara 3")).toBe(
+      "Para 1\n\nPara 2\n\nPara 3",
+    );
+  });
+
+  it("preserves paragraph breaks even when emojis sit at line boundaries", () => {
+    expect(stripEmojis("🏠 Title\n\n🌳 Body line")).toBe("Title\n\nBody line");
   });
 });
 

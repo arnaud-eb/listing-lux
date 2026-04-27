@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Invalid JSON body" }, { status: 400 });
   }
 
-  const { propertyId, languages, includeBranding } = body;
+  const { propertyId, languages, includeBranding, selectedPhotos } = body;
 
   if (!propertyId || typeof propertyId !== "string") {
     return Response.json({ error: "propertyId is required" }, { status: 400 });
@@ -97,18 +97,33 @@ export async function POST(request: Request) {
     );
   }
 
+  // Apply optional photo selection (user-picked subset in click order).
+  // An explicit empty array means "no photos" — only fall back to the default
+  // first-5 when the caller omits the key entirely.
+  // Only keep URLs that actually belong to this property — ignores tampering.
+  const allPhotoUrls: string[] = Array.isArray(property.photo_urls)
+    ? property.photo_urls
+    : [];
+  const photoUrls = Array.isArray(selectedPhotos)
+    ? (selectedPhotos as unknown[])
+        .filter((url): url is string => typeof url === "string")
+        .filter((url) => allPhotoUrls.includes(url))
+        .slice(0, 5)
+    : allPhotoUrls.slice(0, 5);
+
+  const propertyForPdf: Property = {
+    ...(property as Property),
+    photo_urls: photoUrls,
+  };
+
   try {
     const pdfBuffer = await generateListingPDF(
-      property as Property,
+      propertyForPdf,
       listingData,
       profile,
     );
 
-    const filename = buildPdfFilename(
-      property as Property,
-      profile,
-      validLanguages,
-    );
+    const filename = buildPdfFilename(propertyForPdf, profile, validLanguages);
 
     return new Response(new Uint8Array(pdfBuffer), {
       headers: {

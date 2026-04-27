@@ -32,6 +32,21 @@ vi.mock("@/lib/markets", () => ({
     name: "Kirchberg",
     avgPricePerSqm: 12000,
   })),
+  buildBaseHashtags: vi.fn(() => ["#LuxembourgRealEstate", "#Kirchberg"]),
+  dedupeHashtags: vi.fn((tags: string[]) => {
+    const seen = new Set<string>();
+    const out: string[] = [];
+    for (const raw of tags) {
+      const t = raw?.trim();
+      if (!t) continue;
+      const h = t.startsWith("#") ? t : `#${t}`;
+      const k = h.toLowerCase();
+      if (seen.has(k)) continue;
+      seen.add(k);
+      out.push(h);
+    }
+    return out;
+  }),
 }));
 
 const mockBuildListingPrompt = vi.fn(
@@ -241,7 +256,7 @@ describe("/api/generate/stream", () => {
         { text: "Modern kitchen", icon: "cooking-pot" },
         { text: "City view", icon: "mountain" },
       ],
-      seo_keywords: ["kirchberg", "luxury"],
+      hashtags: ["#ModernKitchen", "#CityView"],
     };
 
     mockUpsert.mockResolvedValueOnce({ data: null, error: null });
@@ -254,7 +269,13 @@ describe("/api/generate/stream", () => {
         title: validOutput.title,
         description: validOutput.description,
         highlights: validOutput.highlights,
-        seo_keywords: validOutput.seo_keywords,
+        // Base set (from mocked buildBaseHashtags) merged with AI-specific
+        hashtags: [
+          "#LuxembourgRealEstate",
+          "#Kirchberg",
+          "#ModernKitchen",
+          "#CityView",
+        ],
       }),
       { onConflict: "property_id,language" },
     );
@@ -417,5 +438,59 @@ describe("/api/generate/stream", () => {
     await capturedOnFinish!({ text: JSON.stringify({ title: "Test" }) });
 
     expect(mockUpsert).not.toHaveBeenCalled();
+  });
+
+  it("onFinish preserves existing hashtags when regenerating with a comment", async () => {
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "session-123",
+      },
+      error: null,
+    });
+
+    let capturedOnFinish: ((event: { text: string }) => Promise<void>) | null = null;
+    mockStreamText.mockImplementationOnce((opts: Record<string, unknown>) => {
+      capturedOnFinish = opts.onFinish as typeof capturedOnFinish;
+      return { toTextStreamResponse: () => new Response("ok") };
+    });
+
+    const existingHashtags = ["#LuxembourgRealEstate", "#Kirchberg", "#TerrassenOase"];
+
+    await POST(
+      makeRequest({
+        propertyId: "abc-123",
+        language: "de",
+        comment: "make it shorter",
+        currentListing: { title: "Old title", description: "Old desc", highlights: [] },
+        preservedHashtags: existingHashtags,
+      }),
+    );
+
+    const aiOutput = {
+      title: "Shorter title",
+      description: "Shorter desc.",
+      highlights: [{ text: "City view", icon: "mountain" }],
+      hashtags: ["#DifferentTag", "#AnotherTag"],
+    };
+
+    mockUpsert.mockResolvedValueOnce({ data: null, error: null });
+    await capturedOnFinish!({ text: JSON.stringify(aiOutput) });
+
+    expect(mockUpsert).toHaveBeenCalledWith(
+      expect.objectContaining({
+        hashtags: existingHashtags,
+      }),
+      { onConflict: "property_id,language" },
+    );
   });
 });

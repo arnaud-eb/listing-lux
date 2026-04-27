@@ -72,7 +72,7 @@ export default function DeleteListingButton({
         type="button"
         disabled={isPending || disabled}
         onClick={() => setOpen(true)}
-        className="inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border border-gray-200 text-sm text-gray-400 hover:text-red-500 hover:bg-gray-50 shadow-none transition-colors cursor-pointer disabled:opacity-50 disabled:hover:text-gray-400 disabled:hover:bg-transparent mt-3 lg:absolute lg:right-0 lg:top-2"
+        className="inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border border-gray-200 text-sm text-gray-400 hover:text-red-500 hover:bg-gray-50 shadow-none transition-colors cursor-pointer disabled:opacity-50 disabled:hover:text-gray-400 disabled:hover:bg-transparent"
       >
         <Trash2 className="size-3" />
         Delete

@@ -11,10 +11,10 @@ describe("listingOutputSchema", () => {
       { text: "Open-plan kitchen", icon: "cooking-pot" },
       { text: "Private parking", icon: "car" },
     ],
-    seo_keywords: [
-      "Kirchberg apartment",
-      "luxury Luxembourg",
-      "modern living",
+    hashtags: [
+      "#NeoclassicalFacade",
+      "#MarbleFloors",
+      "#CityView",
     ],
   };
 
@@ -44,18 +44,18 @@ describe("listingOutputSchema", () => {
     expect(result.success).toBe(false);
   });
 
-  it("rejects missing seo_keywords", () => {
-    const { seo_keywords, ...rest } = validListing;
-    void seo_keywords;
+  it("rejects missing hashtags", () => {
+    const { hashtags, ...rest } = validListing;
+    void hashtags;
     const result = listingOutputSchema.safeParse(rest);
     expect(result.success).toBe(false);
   });
 
-  it("accepts empty arrays for highlights and keywords", () => {
+  it("accepts empty arrays for highlights and hashtags", () => {
     const result = listingOutputSchema.safeParse({
       ...validListing,
       highlights: [],
-      seo_keywords: [],
+      hashtags: [],
     });
     expect(result.success).toBe(true);
   });

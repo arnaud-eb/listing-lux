@@ -1,7 +1,7 @@
 import type { Language } from './types'
 
 /** Ordered list of supported languages (used for tabs, badges, generation) */
-export const LANGUAGES: Language[] = ['de', 'fr', 'en', 'lu'] as const
+export const LANGUAGES: Language[] = ['fr', 'en', 'de', 'lu'] as const
 
 /** Human-readable labels for each language */
 export const LANGUAGE_LABELS: Record<Language, string> = {
@@ -43,6 +43,35 @@ export const MAX_PHOTOS = 20
 
 /** Maximum characters for regeneration comment */
 export const MAX_COMMENT_LENGTH = 1000
+
+/** Property types — single source of truth for the dropdown, schema, and AI derivation */
+export const PROPERTY_TYPES = [
+  { value: 'apartment', label: 'Apartment' },
+  { value: 'house', label: 'House' },
+  { value: 'penthouse', label: 'Penthouse' },
+  { value: 'studio', label: 'Studio' },
+  { value: 'duplex', label: 'Duplex' },
+  { value: 'villa', label: 'Villa' },
+] as const
+
+export type PropertyTypeValue = (typeof PROPERTY_TYPES)[number]['value']
+
+/** Selectable features — single source of truth for the chips, schema, and AI derivation */
+export const FEATURE_OPTIONS = [
+  { id: 'balcony', label: 'Balcony' },
+  { id: 'parking', label: 'Parking' },
+  { id: 'garden', label: 'Garden' },
+  { id: 'elevator', label: 'Elevator' },
+  { id: 'storage', label: 'Storage/Cellar' },
+  { id: 'pool', label: 'Pool' },
+  { id: 'terrace', label: 'Terrace' },
+  { id: 'furnished', label: 'Furnished' },
+  { id: 'new-build', label: 'New Build' },
+  { id: 'renovated', label: 'Renovated' },
+  { id: 'city-view', label: 'City View' },
+] as const
+
+export type FeatureId = (typeof FEATURE_OPTIONS)[number]['id']
 
 /** Localized label for the "Highlights" section */
 export const HIGHLIGHTS_LABEL: Record<Language, string> = {

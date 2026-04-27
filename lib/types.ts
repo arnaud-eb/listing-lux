@@ -42,7 +42,7 @@ export interface Listing {
   title: string
   description: string
   highlights: Highlight[]
-  seo_keywords: string[]
+  hashtags: string[]
   prompt_version?: string
   model?: string
 }
@@ -51,7 +51,7 @@ export interface ListingUpdates {
   title?: string;
   description?: string;
   highlights?: string[];
-  seo_keywords?: string[];
+  hashtags?: string[];
 }
 
 export interface AgentProfile {

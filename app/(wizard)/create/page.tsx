@@ -6,13 +6,6 @@ import ConfirmDeleteDialog from "@/components/shared/ConfirmDeleteDialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import PhotoUploader from "@/components/create/PhotoUploader";
 import StepperInput from "@/components/create/StepperInput";
 import FeatureChips from "@/components/create/FeatureChips";
@@ -30,16 +23,6 @@ function blockNonNumeric(e: React.KeyboardEvent<HTMLInputElement>) {
   if (["e", "E", "+", "-"].includes(e.key)) e.preventDefault();
 }
 
-
-const PROPERTY_TYPES = [
-  { value: "apartment", label: "Apartment" },
-  { value: "house", label: "House" },
-  { value: "penthouse", label: "Penthouse" },
-  { value: "studio", label: "Studio" },
-  { value: "duplex", label: "Duplex" },
-  { value: "villa", label: "Villa" },
-];
-
 export default function CreatePage() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -56,6 +39,7 @@ export default function CreatePage() {
     canGenerate,
     handleAddPhotos,
     handleRemovePhoto,
+    handleUpdatePhotoRoomType,
     reset,
     toFormData,
     clearDraft,
@@ -146,6 +130,7 @@ export default function CreatePage() {
                 photos={photos}
                 onAddPhotos={handleAddPhotos}
                 onRemovePhoto={handleRemovePhoto}
+                onUpdateRoomType={handleUpdatePhotoRoomType}
               />
             </div>
 
@@ -157,26 +142,6 @@ export default function CreatePage() {
                 </h2>
 
                 <div className="flex flex-col gap-5">
-                  {/* Property type */}
-                  <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="property-type">Property Type</Label>
-                    <Select
-                      value={form.propertyType}
-                      onValueChange={(v) => updateField("propertyType", v)}
-                    >
-                      <SelectTrigger id="property-type">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {PROPERTY_TYPES.map((t) => (
-                          <SelectItem key={t.value} value={t.value}>
-                            {t.label}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
                   {/* Bedrooms & Bathrooms */}
                   <div className="grid grid-cols-2 gap-4">
                     <StepperInput
@@ -223,15 +188,17 @@ export default function CreatePage() {
 
                   {/* Price */}
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="price">
+                    <Label htmlFor="asking-eur">
                       Asking Price (€) <span className="text-red-400">*</span>
                     </Label>
                     <Input
-                      id="price"
+                      id="asking-eur"
                       type="text"
                       inputMode="numeric"
                       placeholder="e.g. 850.000"
                       autoComplete="off"
+                      data-lpignore="true"
+                      data-form-type="other"
                       value={formatNumber(form.price)}
                       onChange={(e) =>
                         updateField("price", parseFormattedNumber(e.target.value))

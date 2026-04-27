@@ -68,8 +68,14 @@
   --secondary-foreground: #0a1128;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: #0a1128;
-  --accent-foreground: oklch(1 0 0);
+  /* shadcn semantics: --accent is the subtle background applied on
+     hover/focus/active states across primitives (outline & ghost buttons,
+     badge links, dialog close button, select items). Set to a light gray
+     so those interactions read as soft highlights, not as a brand-color
+     flash. The brand navy lives in --color-navy-deep / --foreground and
+     is used directly where intended. */
+  --accent: oklch(0.96 0 0);
+  --accent-foreground: #0a1128;
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);

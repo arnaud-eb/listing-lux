@@ -51,7 +51,10 @@ export function stripEmojis(text: string): string {
       /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{FE00}-\u{FE0F}\u{200D}\u{20E3}\u{E0020}-\u{E007F}]/gu,
       "",
     )
-    .replace(/\s{2,}/g, " ")
+    .split("\n")
+    .map((line) => line.replace(/[^\S\n]+/g, " ").trim())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
     .trim();
 }
 
@@ -187,7 +190,7 @@ export function formatForSocialMedia(
   const title = listing.title ?? "";
   const description = listing.description ?? "";
   const highlights = highlightWithEmojis((listing.highlights ?? []) as Highlight[]);
-  const hashtags = generateHashtags(property, listing);
+  const hashtags = generateHashtags(listing);
 
   const language = (listing.language ?? "en") as Language;
   const labels = PROPERTY_DETAIL_LABELS[language] ?? PROPERTY_DETAIL_LABELS.en;
@@ -199,7 +202,7 @@ export function formatForSocialMedia(
     detailsLine,
     addressLine,
     description,
-    highlights.length > 0 ? `✨ HIGHLIGHTS:\n${highlights.join("\n")}` : "",
+    highlights.length > 0 ? `HIGHLIGHTS:\n${highlights.join("\n")}` : "",
     hashtags,
   ].filter(Boolean);
 
@@ -208,23 +211,17 @@ export function formatForSocialMedia(
 
 // --- Hashtags ---
 
-export function generateHashtags(
-  property: Property,
-  listing: Partial<Listing>,
-): string {
-  const tags = [
-    "#LuxembourgRealEstate",
-    `#${(property.neighborhood ?? "").replace(/\s/g, "")}`,
-    property.property_type === "apartment"
-      ? "#LuxuryApartment"
-      : "#LuxuryHouse",
-    "#ImmobilierLuxembourg",
-    "#Immobilien",
-  ];
-
-  const lang = listing.language;
-  if (lang === "fr") tags.push("#ImmobilierDeLuxe");
-  else if (lang === "de") tags.push("#ImmobilienLuxemburg");
-
-  return tags.join(" ");
+/**
+ * Format the listing's stored hashtags for social-media copy.
+ * Hashtags are curated server-side at generation time (market base + property-type +
+ * neighborhood + AI-generated listing-specific) and stored on the listing.
+ * The user can edit/remove any of them in the UI — we just render what's stored.
+ */
+export function generateHashtags(listing: Partial<Listing>): string {
+  const tags = listing.hashtags ?? [];
+  return tags
+    .map((t) => t?.trim())
+    .filter((t): t is string => !!t)
+    .map((t) => (t.startsWith("#") ? t : `#${t}`))
+    .join(" ");
 }

@@ -22,6 +22,14 @@ interface ConfirmDiscardDialogProps {
   onConfirm: () => void;
   /** Called when the user cancels (optional). */
   onCancel?: () => void;
+  /** Title text. Default: "Discard changes?" */
+  title?: string;
+  /** Description text. Default: a generic "Your edits will be lost." */
+  description?: string;
+  /** Confirm button label. Default: "Discard". */
+  confirmLabel?: string;
+  /** Cancel button label. Default: "Keep editing". */
+  cancelLabel?: string;
 }
 
 export default function ConfirmDiscardDialog({
@@ -30,6 +38,10 @@ export default function ConfirmDiscardDialog({
   onOpenChange,
   onConfirm,
   onCancel,
+  title = "Discard changes?",
+  description = "Your edits will be lost.",
+  confirmLabel = "Discard",
+  cancelLabel = "Keep editing",
 }: ConfirmDiscardDialogProps) {
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
@@ -39,24 +51,22 @@ export default function ConfirmDiscardDialog({
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle className="font-serif text-navy-deep">
-            Discard changes?
+            {title}
           </AlertDialogTitle>
-          <AlertDialogDescription>
-            Your edits to this listing will be lost.
-          </AlertDialogDescription>
+          <AlertDialogDescription>{description}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel
             className="rounded-lg shadow-none"
             onClick={onCancel}
           >
-            Keep editing
+            {cancelLabel}
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={onConfirm}
             className="rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
           >
-            Discard
+            {confirmLabel}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

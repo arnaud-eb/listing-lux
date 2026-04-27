@@ -51,6 +51,7 @@ function makeFileList(...files: File[]): FileList {
 describe("PhotoUploader", () => {
   const onAddPhotos = vi.fn();
   const onRemovePhoto = vi.fn();
+  const onUpdateRoomType = vi.fn();
 
   beforeEach(() => {
     vi.clearAllMocks();
@@ -62,6 +63,7 @@ describe("PhotoUploader", () => {
         photos={[]}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
     expect(
@@ -78,6 +80,7 @@ describe("PhotoUploader", () => {
         photos={photos}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
     expect(
@@ -94,6 +97,7 @@ describe("PhotoUploader", () => {
         photos={photos}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
     // The drop zone is hidden, so no files can be added through UI.
@@ -115,6 +119,7 @@ describe("PhotoUploader", () => {
         photos={[]}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
 
@@ -144,6 +149,7 @@ describe("PhotoUploader", () => {
         photos={[]}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
 
@@ -170,6 +176,7 @@ describe("PhotoUploader", () => {
         photos={photos}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
 
@@ -193,6 +200,7 @@ describe("PhotoUploader", () => {
         photos={photos}
         onAddPhotos={onAddPhotos}
         onRemovePhoto={onRemovePhoto}
+        onUpdateRoomType={onUpdateRoomType}
       />,
     );
     expect(screen.getByText(/AI Tip/)).toBeInTheDocument();

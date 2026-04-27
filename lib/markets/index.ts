@@ -39,4 +39,44 @@ export function estimatePrice(slug: string, sqm: number): number | null {
   return Math.round(neighborhood.pricePerSqm.median * sqm)
 }
 
+/**
+ * Build the curated base hashtag set for a listing: market base + property-type +
+ * neighborhood-derived. Returned normalized (always leading `#`, deduped).
+ */
+export function buildBaseHashtags(input: {
+  language: 'de' | 'fr' | 'en' | 'lu'
+  propertyType: string
+  neighborhood: string
+}): string[] {
+  const market = getActiveMarket()
+  const base = market.hashtags[input.language] ?? market.hashtags.en ?? []
+  const propertyTypeSet = market.propertyTypeHashtags[input.propertyType]
+  const byType = propertyTypeSet?.[input.language] ?? propertyTypeSet?.en ?? []
+
+  const neighborhoodSlug = input.neighborhood?.trim()
+  const neighborhood = neighborhoodSlug ? getNeighborhoodBySlug(neighborhoodSlug) : null
+  const neighborhoodTag = neighborhood
+    ? `#${neighborhood.name.replace(/[\s'-]/g, '')}`
+    : null
+
+  const all = [...base, ...byType, ...(neighborhoodTag ? [neighborhoodTag] : [])]
+  return dedupeHashtags(all)
+}
+
+/** Normalize & dedupe hashtags: ensure leading #, trim, drop empties, case-insensitive unique. */
+export function dedupeHashtags(tags: string[]): string[] {
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const raw of tags) {
+    const trimmed = raw?.trim()
+    if (!trimmed) continue
+    const withHash = trimmed.startsWith('#') ? trimmed : `#${trimmed}`
+    const key = withHash.toLowerCase()
+    if (seen.has(key)) continue
+    seen.add(key)
+    out.push(withHash)
+  }
+  return out
+}
+
 export type { Market, Neighborhood } from './types'

@@ -1,16 +1,31 @@
 import { saveAs } from "file-saver";
 import type { Language } from "./types";
 
+interface DownloadPDFOptions {
+  languages: Language[];
+  includeBranding: boolean;
+  /** User-picked photos (in click order). Empty array = no photos.
+   *  Omit entirely to let the server use the first 5 by default. */
+  selectedPhotos?: string[];
+  /** Override the downloaded filename. Defaults to server-suggested filename. */
+  filename?: string;
+}
+
 export async function downloadPDF(
   propertyId: string,
-  languages: Language[],
-  includeBranding: boolean,
-  filename?: string,
+  options: DownloadPDFOptions,
 ): Promise<void> {
+  const { languages, includeBranding, selectedPhotos, filename } = options;
+
   const res = await fetch("/api/pdf/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ propertyId, languages, includeBranding }),
+    body: JSON.stringify({
+      propertyId,
+      languages,
+      includeBranding,
+      ...(selectedPhotos ? { selectedPhotos } : {}),
+    }),
   });
 
   if (!res.ok) {

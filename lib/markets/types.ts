@@ -24,6 +24,8 @@ export interface AreaData {
   areaUnit: 'sqm' | 'sqft'
 }
 
+export type HashtagsByLanguage = Partial<Record<'de' | 'fr' | 'en' | 'lu', string[]>>
+
 export interface Market {
   id: string
   name: string
@@ -32,4 +34,8 @@ export interface Market {
   supportedLanguages: string[]
   propertyTypes: string[]
   features: string[]
+  /** Curated base hashtags, per language, to seed every listing's social-media output. */
+  hashtags: HashtagsByLanguage
+  /** Per-property-type hashtag additions, per language. Key is property_type (e.g. 'apartment', 'house'). */
+  propertyTypeHashtags: Record<string, HashtagsByLanguage>
 }

@@ -1,7 +1,12 @@
-import { useReducer, useCallback, useEffect, useRef } from "react";
+import { useReducer, useCallback, useEffect, useRef, useState } from "react";
 import type { ListingPhoto, PropertyFormData } from "@/lib/types";
-import { MIN_PHOTOS } from "@/lib/constants";
-import { getSignedUploadUrl, confirmUpload, analyzePhoto } from "./actions";
+import { MIN_PHOTOS, FEATURE_OPTIONS } from "@/lib/constants";
+import {
+  getSignedUploadUrl,
+  confirmUpload,
+  analyzePhoto,
+  derivePropertyAggregates,
+} from "./actions";
 
 const DRAFT_KEY = "listinglux-create-draft";
 
@@ -40,6 +45,11 @@ type FormAction =
       value: PropertyFormState[keyof PropertyFormState];
     }
   | { type: "SET_FEATURES"; features: Record<string, boolean> }
+  | {
+      type: "SET_AGGREGATES";
+      propertyType: string;
+      featureIds: string[];
+    }
   | { type: "ADD_PHOTO"; photo: ListingPhoto }
   | { type: "UPDATE_PHOTO"; id: string; updates: Partial<ListingPhoto> }
   | { type: "REMOVE_PHOTO"; id: string }
@@ -55,6 +65,19 @@ function formReducer(
       return { ...state, [action.key]: action.value };
     case "SET_FEATURES":
       return { ...state, features: action.features };
+    case "SET_AGGREGATES": {
+      // OR-merge: derived features add to whatever the user has already toggled,
+      // never clobber a user-set true.
+      const mergedFeatures = { ...state.features };
+      for (const id of action.featureIds) {
+        mergedFeatures[id] = true;
+      }
+      return {
+        ...state,
+        propertyType: action.propertyType,
+        features: mergedFeatures,
+      };
+    }
     case "ADD_PHOTO":
       return { ...state, photos: [...state.photos, action.photo] };
     case "UPDATE_PHOTO":
@@ -83,6 +106,8 @@ function formReducer(
 export function usePropertyForm() {
   const [state, dispatch] = useReducer(formReducer, INITIAL_STATE);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const hasDerivedRef = useRef(false);
+  const [pendingAggregates, setPendingAggregates] = useState(false);
 
   // --- Field updaters ---
   const updateField = useCallback(
@@ -119,6 +144,7 @@ export function usePropertyForm() {
   const canGenerate =
     readyPhotoCount >= MIN_PHOTOS &&
     inFlightPhotoCount === 0 &&
+    !pendingAggregates &&
     hasRequiredFields;
 
   // --- Draft persistence ---
@@ -149,10 +175,51 @@ export function usePropertyForm() {
           : [],
       };
       dispatch({ type: "RESTORE_DRAFT", state: restored });
+      // Skip derivation: a restored draft already has whatever propertyType /
+      // features the user (or last session's derivation) settled on.
+      if (restored.photos.length > 0) {
+        hasDerivedRef.current = true;
+      }
     } catch {
       // Ignore corrupt data
     }
   }, []);
+
+  // Derive property_type + features from photo analyses, once per session.
+  // Fires after the first time all photos finish analyzing and we have at least
+  // MIN_PHOTOS ready. Failure is silent — defaults stay in place.
+  useEffect(() => {
+    if (hasDerivedRef.current) return;
+    if (inFlightPhotoCount > 0) return;
+    if (readyPhotoCount < MIN_PHOTOS) return;
+
+    const analyses = state.photos
+      .map((p) => p.aiAnalysis)
+      .filter((a): a is NonNullable<typeof a> => a != null);
+
+    if (analyses.length === 0) {
+      hasDerivedRef.current = true;
+      return;
+    }
+
+    hasDerivedRef.current = true;
+    setPendingAggregates(true);
+
+    derivePropertyAggregates(analyses)
+      .then((result) => {
+        dispatch({
+          type: "SET_AGGREGATES",
+          propertyType: result.property_type,
+          featureIds: result.features,
+        });
+      })
+      .catch(() => {
+        // Silent failure — user can still submit with defaults.
+      })
+      .finally(() => {
+        setPendingAggregates(false);
+      });
+  }, [inFlightPhotoCount, readyPhotoCount, state.photos]);
 
   useEffect(() => {
     clearTimeout(debounceRef.current);
@@ -258,9 +325,50 @@ export function usePropertyForm() {
     dispatch({ type: "REMOVE_PHOTO", id });
   }, []);
 
+  const handleUpdatePhotoRoomType = useCallback(
+    (id: string, value: string) => {
+      const photo = state.photos.find((p) => p.id === id);
+      if (!photo?.aiAnalysis) return;
+
+      const oldType = photo.aiAnalysis.room_type;
+
+      dispatch({
+        type: "UPDATE_PHOTO",
+        id,
+        updates: { aiAnalysis: { ...photo.aiAnalysis, room_type: value } },
+      });
+
+      // Sync features when old/new room type maps to a feature ID.
+      // e.g. correcting "BALCONY" → "TERRACE" should toggle the chips accordingly.
+      const featureIdSet = new Set<string>(FEATURE_OPTIONS.map((f) => f.id));
+      const normalize = (t: string) => t.toLowerCase().replace(/\s+/g, "-");
+      const oldId = normalize(oldType);
+      const newId = normalize(value);
+
+      if (!featureIdSet.has(oldId) && !featureIdSet.has(newId)) return;
+
+      const features = { ...state.features };
+      if (featureIdSet.has(oldId)) {
+        const stillPresent = state.photos.some(
+          (p) =>
+            p.id !== id &&
+            normalize(p.aiAnalysis?.room_type ?? "") === oldId,
+        );
+        if (!stillPresent) features[oldId] = false;
+      }
+      if (featureIdSet.has(newId)) {
+        features[newId] = true;
+      }
+
+      dispatch({ type: "SET_FEATURES", features });
+    },
+    [state.photos, state.features],
+  );
+
   // --- Reset ---
   function reset() {
     sessionStorage.removeItem(DRAFT_KEY);
+    hasDerivedRef.current = false;
     dispatch({ type: "RESET" });
   }
 
@@ -301,6 +409,7 @@ export function usePropertyForm() {
     canGenerate,
     handleAddPhotos,
     handleRemovePhoto,
+    handleUpdatePhotoRoomType,
     reset,
     toFormData,
     clearDraft,

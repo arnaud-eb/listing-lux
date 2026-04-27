@@ -36,11 +36,13 @@ export default function ListingGenerator({
     initialGenerationDone,
     regenerate,
     updateField,
-  } = useListingGeneration(propertyId, initialListings);
+  } = useListingGeneration(propertyId, initialListings, property);
 
   const [isEditing, setIsEditing] = useState(false);
   const [discardDialogOpen, setDiscardDialogOpen] = useState(false);
-  const [discardSource, setDiscardSource] = useState<"tab" | "button">("button");
+  const [discardSource, setDiscardSource] = useState<"tab" | "button">(
+    "button",
+  );
   const pendingTabRef = useRef<Language | null>(null);
   const editableRef = useRef<EditableListingHandle>(null);
 
@@ -86,7 +88,7 @@ export default function ListingGenerator({
   const handleSave = useCallback(
     async (
       updates: Partial<
-        Pick<Listing, "title" | "description" | "highlights" | "seo_keywords">
+        Pick<Listing, "title" | "description" | "highlights" | "hashtags">
       >,
     ) => {
       if (Object.keys(updates).length === 0) {
@@ -97,7 +99,7 @@ export default function ListingGenerator({
       // Capture previous state for rollback
       const listing = state[activeTab].listing;
       const previousValues: Partial<
-        Pick<Listing, "title" | "description" | "highlights" | "seo_keywords">
+        Pick<Listing, "title" | "description" | "highlights" | "hashtags">
       > = {};
       for (const key of Object.keys(updates) as (keyof typeof updates)[]) {
         previousValues[key] = listing?.[key] as never;
@@ -146,9 +148,14 @@ export default function ListingGenerator({
                 className="uppercase font-semibold"
               >
                 {lang}
-                {(state[lang].status === "generating" ||
-                  state[lang].status === "queued") && (
-                  <span className="ml-1.5 inline-block w-1.5 h-1.5 bg-gold rounded-full animate-pulse motion-reduce:animate-none" />
+                {state[lang].status === "generating" && (
+                  <span className="relative flex size-2 ml-1.5 motion-reduce:hidden">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+                    <span className="relative inline-flex size-2 rounded-full bg-gold" />
+                  </span>
+                )}
+                {state[lang].status === "queued" && (
+                  <span className="ml-1.5 inline-block size-1.5 rounded-full bg-gold/40" />
                 )}
                 <span className="sr-only"> ({LANGUAGE_LABELS[lang]})</span>
               </TabsTrigger>
@@ -161,7 +168,7 @@ export default function ListingGenerator({
               variant="ghost"
               size="sm"
               onClick={() => setIsEditing(true)}
-              className="gap-1.5 rounded-lg text-gray-500 hover:text-navy-deep hover:bg-gray-100"
+              className="gap-1.5 rounded-lg text-gray-500"
             >
               <Pencil className="size-3.5" />
               Edit
@@ -181,7 +188,7 @@ export default function ListingGenerator({
                     handleDiscard();
                   }
                 }}
-                className="gap-1.5 rounded-lg text-gray-500 hover:text-navy-deep hover:bg-gray-100"
+                className="gap-1.5 rounded-lg text-gray-500"
               >
                 <X className="size-3.5" />
                 <span className="max-sm:hidden">Discard</span>
@@ -233,6 +240,7 @@ export default function ListingGenerator({
         onCancel={() => {
           pendingTabRef.current = null;
         }}
+        description="Your edits to this listing will be lost."
       />
     </div>
   );

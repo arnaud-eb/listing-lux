@@ -1,7 +1,8 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { createServiceClient } from "@/lib/supabase.server";
-import { getSessionId } from "@/lib/session";
+import { getOrCreateSession, getSessionId } from "@/lib/session";
 import { agentProfileSchema, type AgentProfileInput } from "@/lib/schemas/profile";
 import type { AgentProfile } from "@/lib/types";
 
@@ -29,10 +30,10 @@ export async function upsertAgentProfile(
     throw new Error(`Validation failed: ${messages}`);
   }
 
-  const sessionId = await getSessionId();
-  if (!sessionId) {
-    throw new Error("No session — please reload the page");
-  }
+  // Save also bootstraps the session for users who land on /profile directly
+  // (without first creating a property). Server Actions can set cookies, so
+  // this is safe to call here.
+  const sessionId = await getOrCreateSession();
 
   const supabase = createServiceClient();
   const { data, error } = await supabase
@@ -40,12 +41,19 @@ export async function upsertAgentProfile(
     .upsert(
       {
         session_id: sessionId,
-        full_name: parsed.data.full_name,
+        // full_name + email columns are NOT NULL DEFAULT '' (per migration
+        // 007). Coerce undefined → "" so a "Clear all" save actually wipes
+        // them — Supabase skips undefined fields in upserts (no SQL UPDATE
+        // is emitted), which would silently keep the previous values.
+        full_name: parsed.data.full_name || "",
+        email: parsed.data.email || "",
         agency_name: parsed.data.agency_name || null,
         phone: parsed.data.phone || null,
-        email: parsed.data.email,
         agency_address: parsed.data.agency_address || null,
         agency_website: parsed.data.agency_website || null,
+        // Persist logo_url here for first-time users whose profile row doesn't
+        // exist when uploadAgentLogo runs (its UPDATE would otherwise no-op).
+        logo_url: parsed.data.logo_url ?? null,
         updated_at: new Date().toISOString(),
       },
       { onConflict: "session_id" },
@@ -57,16 +65,20 @@ export async function upsertAgentProfile(
     throw new Error(`Failed to save profile: ${error?.message}`);
   }
 
+  // Invalidate the wizard layout's `hasProfile` cache so the "incomplete"
+  // dot next to the Profile nav link disappears immediately — including when
+  // the save is triggered from the PDF wizard dialog on a different route.
+  revalidatePath("/", "layout");
+
   return data as AgentProfile;
 }
 
 export async function uploadAgentLogo(
   formData: FormData,
 ): Promise<{ logoUrl: string }> {
-  const sessionId = await getSessionId();
-  if (!sessionId) {
-    throw new Error("No session — please reload the page");
-  }
+  // Same rationale as upsertAgentProfile — bootstrap the session if missing
+  // so logo upload works even when the user hasn't created a property yet.
+  const sessionId = await getOrCreateSession();
 
   const file = formData.get("logo") as File;
   if (!file || !(file instanceof File)) {

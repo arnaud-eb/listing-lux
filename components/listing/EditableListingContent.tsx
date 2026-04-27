@@ -8,7 +8,7 @@ import DynamicIcon from "@/components/shared/DynamicIcon";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { inferHighlightIcon } from "@/app/(wizard)/listing/[listingId]/infer-icon-action";
+import { inferHighlightIcon } from "@/app/(wizard)/listing/[listingId]/actions";
 
 // --- Stable-key item helpers ---
 
@@ -108,8 +108,8 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
   const [draftHighlights, setDraftHighlights] = useState<KeyedHighlight[]>(() =>
     toKeyedHighlights((listing.highlights ?? []) as Highlight[]),
   );
-  const [draftKeywords, setDraftKeywords] = useState<KeyedItem[]>(() =>
-    toKeyed(listing.seo_keywords ?? []),
+  const [draftHashtags, setDraftHashtags] = useState<KeyedItem[]>(() =>
+    toKeyed(listing.hashtags ?? []),
   );
 
   const isDirty = useCallback(() => {
@@ -122,10 +122,10 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
       draftDescription !== (listing.description ?? "") ||
       JSON.stringify(normalizeHighlights(fromKeyedHighlights(draftHighlights))) !==
         JSON.stringify(normalizeHighlights((listing.highlights ?? []) as Highlight[])) ||
-      JSON.stringify(fromKeyed(draftKeywords)) !==
-        JSON.stringify(listing.seo_keywords ?? [])
+      JSON.stringify(fromKeyed(draftHashtags)) !==
+        JSON.stringify(listing.hashtags ?? [])
     );
-  }, [draftTitle, draftDescription, draftHighlights, draftKeywords, listing]);
+  }, [draftTitle, draftDescription, draftHighlights, draftHashtags, listing]);
 
   const handleSave = useCallback(() => {
     if (!draftTitle.trim()) {
@@ -134,7 +134,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
     }
 
     const highlights = fromKeyedHighlights(draftHighlights);
-    const keywords = fromKeyed(draftKeywords);
+    const hashtags = fromKeyed(draftHashtags);
 
     const updates: ListingUpdates = {};
     if (draftTitle !== listing.title) updates.title = draftTitle;
@@ -142,11 +142,11 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
       updates.description = draftDescription;
     if (JSON.stringify(highlights) !== JSON.stringify(listing.highlights))
       updates.highlights = highlights.filter((h) => h.text);
-    if (JSON.stringify(keywords) !== JSON.stringify(listing.seo_keywords))
-      updates.seo_keywords = keywords.filter(Boolean);
+    if (JSON.stringify(hashtags) !== JSON.stringify(listing.hashtags))
+      updates.hashtags = hashtags.filter(Boolean);
 
     onSave(updates);
-  }, [draftTitle, draftDescription, draftHighlights, draftKeywords, listing, onSave]);
+  }, [draftTitle, draftDescription, draftHighlights, draftHashtags, listing, onSave]);
 
   useImperativeHandle(ref, () => ({ save: handleSave, isDirty }), [handleSave, isDirty]);
 
@@ -194,14 +194,14 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
     setDraftHighlights((prev) => prev.filter((item) => item.id !== id));
   };
 
-  const updateKeyword = (id: string, value: string) => {
-    setDraftKeywords((prev) =>
+  const updateHashtag = (id: string, value: string) => {
+    setDraftHashtags((prev) =>
       prev.map((item) => (item.id === id ? { ...item, value } : item)),
     );
   };
 
-  const removeKeyword = (id: string) => {
-    setDraftKeywords((prev) => prev.filter((item) => item.id !== id));
+  const removeHashtag = (id: string) => {
+    setDraftHashtags((prev) => prev.filter((item) => item.id !== id));
   };
 
   return (
@@ -263,23 +263,27 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
           </div>
         </div>
 
-        {/* SEO Keywords */}
+        {/* Hashtags */}
+        <div>
+          <h3 className="text-xs font-semibold text-navy-deep uppercase tracking-wider mb-3">
+            Hashtags
+          </h3>
         <div className="flex flex-wrap gap-2 relative">
-          {draftKeywords.map((item) => (
+          {draftHashtags.map((item) => (
             <span
               key={item.id}
               className="inline-flex items-center gap-1 text-2xs bg-gray-100 text-gray-600 rounded-full pl-2.5 pr-1 py-1"
             >
               <AutoSizeInput
                 value={item.value}
-                onChange={(v) => updateKeyword(item.id, v)}
+                onChange={(v) => updateHashtag(item.id, v)}
                 className="bg-transparent border-none shadow-none outline-none h-auto p-0 text-2xs"
               />
               <button
                 type="button"
-                onClick={() => removeKeyword(item.id)}
+                onClick={() => removeHashtag(item.id)}
                 className="size-5 flex items-center justify-center rounded-full text-gray-400 hover:text-red-500 hover:bg-gray-200 transition-colors cursor-pointer"
-                aria-label="Remove keyword"
+                aria-label="Remove hashtag"
               >
                 <X className="size-3" />
               </button>
@@ -288,15 +292,16 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
           <button
             type="button"
             onClick={() =>
-              setDraftKeywords((prev) => [
+              setDraftHashtags((prev) => [
                 ...prev,
-                { id: makeId(), value: "" },
+                { id: makeId(), value: "#" },
               ])
             }
             className="text-2xs text-gold hover:text-gold/80 rounded-full px-2.5 py-0.5 border border-dashed border-gold/40 transition-colors cursor-pointer"
           >
-            + Add keyword
+            + Add hashtag
           </button>
+        </div>
         </div>
       </div>
 

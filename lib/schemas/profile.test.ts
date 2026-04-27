@@ -1,20 +1,30 @@
 import { describe, it, expect } from "vitest";
-import { agentProfileSchema } from "./profile";
+import {
+  agentProfileSchema,
+  isValidEmail,
+  EMAIL_INVALID_MESSAGE,
+} from "./profile";
 
 describe("agentProfileSchema", () => {
-  const validProfile = {
-    full_name: "Arnaud Depierreux",
-    email: "arnaud@unicorn.lu",
-  };
-
-  it("validates minimal profile (name + email only)", () => {
-    const result = agentProfileSchema.safeParse(validProfile);
+  it("accepts an entirely empty profile (all fields optional)", () => {
+    const result = agentProfileSchema.safeParse({});
     expect(result.success).toBe(true);
   });
 
-  it("validates full profile with all optional fields", () => {
+  it("accepts only full_name", () => {
+    const result = agentProfileSchema.safeParse({ full_name: "Arnaud" });
+    expect(result.success).toBe(true);
+  });
+
+  it("accepts only email", () => {
+    const result = agentProfileSchema.safeParse({ email: "a@b.co" });
+    expect(result.success).toBe(true);
+  });
+
+  it("validates a full profile with every optional field set", () => {
     const result = agentProfileSchema.safeParse({
-      ...validProfile,
+      full_name: "Arnaud Depierreux",
+      email: "arnaud@unicorn.lu",
       agency_name: "Unicorn Real Estate",
       phone: "+352 661 308 700",
       agency_address: "1 Rue de Clausen, Luxembourg",
@@ -24,59 +34,57 @@ describe("agentProfileSchema", () => {
     expect(result.success).toBe(true);
   });
 
-  it("rejects empty name", () => {
-    const result = agentProfileSchema.safeParse({ ...validProfile, full_name: "" });
+  it("rejects malformed email when one is provided", () => {
+    const result = agentProfileSchema.safeParse({ email: "not-an-email" });
     expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0].message).toBe(EMAIL_INVALID_MESSAGE);
+    }
   });
 
-  it("rejects name shorter than 2 characters", () => {
-    const result = agentProfileSchema.safeParse({ ...validProfile, full_name: "A" });
-    expect(result.success).toBe(false);
-  });
-
-  it("rejects invalid email", () => {
-    const result = agentProfileSchema.safeParse({ ...validProfile, email: "not-an-email" });
-    expect(result.success).toBe(false);
-  });
-
-  it("rejects missing email", () => {
-    const result = agentProfileSchema.safeParse({ full_name: "Test User" });
-    expect(result.success).toBe(false);
-  });
-
-  it("accepts optional fields as undefined", () => {
-    const result = agentProfileSchema.safeParse({
-      ...validProfile,
-      agency_name: undefined,
-      phone: undefined,
-      agency_address: undefined,
-      agency_website: undefined,
-      logo_url: undefined,
-    });
+  it("accepts empty string for email (optional field cleared)", () => {
+    const result = agentProfileSchema.safeParse({ email: "" });
     expect(result.success).toBe(true);
   });
 
   it("accepts logo_url as null", () => {
-    const result = agentProfileSchema.safeParse({
-      ...validProfile,
-      logo_url: null,
-    });
+    const result = agentProfileSchema.safeParse({ logo_url: null });
     expect(result.success).toBe(true);
   });
 
   it("rejects invalid website URL", () => {
     const result = agentProfileSchema.safeParse({
-      ...validProfile,
       agency_website: "not-a-url",
     });
     expect(result.success).toBe(false);
   });
 
   it("accepts empty string for website (optional field cleared)", () => {
-    const result = agentProfileSchema.safeParse({
-      ...validProfile,
-      agency_website: "",
-    });
+    const result = agentProfileSchema.safeParse({ agency_website: "" });
     expect(result.success).toBe(true);
+  });
+});
+
+describe("isValidEmail", () => {
+  it("returns true for empty string (optional field)", () => {
+    expect(isValidEmail("")).toBe(true);
+  });
+
+  it("returns true for valid email", () => {
+    expect(isValidEmail("agent@agency.lu")).toBe(true);
+    expect(isValidEmail("a.b+c@sub.example.co.uk")).toBe(true);
+  });
+
+  it("returns false for missing @", () => {
+    expect(isValidEmail("agent.agency.lu")).toBe(false);
+  });
+
+  it("returns false for missing TLD", () => {
+    expect(isValidEmail("agent@agency")).toBe(false);
+  });
+
+  it("returns false for whitespace", () => {
+    expect(isValidEmail("agent @agency.lu")).toBe(false);
+    expect(isValidEmail("agent@agency .lu")).toBe(false);
   });
 });

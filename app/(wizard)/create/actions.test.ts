@@ -3,6 +3,15 @@ import { describe, it, expect, vi } from "vitest";
 const mockCookieSet = vi.fn();
 const mockCookieGet = vi.fn((): { value: string } | null => null);
 
+const mockGenerateObject = vi.fn();
+vi.mock("ai", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("ai")>();
+  return {
+    ...actual,
+    generateObject: (...args: unknown[]) => mockGenerateObject(...args),
+  };
+});
+
 // Mock next/headers before importing actions
 vi.mock("next/headers", () => ({
   cookies: vi.fn(async () => ({
@@ -47,7 +56,12 @@ vi.mock("@/lib/supabase.server", () => ({
   })),
 }));
 
-import { getSignedUploadUrl, saveProperty } from "./actions";
+import {
+  getSignedUploadUrl,
+  saveProperty,
+  derivePropertyAggregates,
+} from "./actions";
+import type { PhotoAnalysis } from "@/lib/schemas/photo-analysis";
 
 const VALID_URLS = [
   "https://example.com/photo1.jpg",
@@ -215,5 +229,50 @@ describe("saveProperty", () => {
       photo_urls: VALID_URLS,
     });
     expect(mockCookieSet).not.toHaveBeenCalled();
+  });
+});
+
+function makeAnalysis(overrides: Partial<PhotoAnalysis> = {}): PhotoAnalysis {
+  return {
+    room_type: "kitchen",
+    features: ["granite countertops"],
+    style: "modern",
+    condition: "immaculate",
+    selling_points: ["open plan"],
+    atmosphere: "bright",
+    ...overrides,
+  };
+}
+
+describe("derivePropertyAggregates", () => {
+  it("returns the LLM result for non-empty analyses", async () => {
+    mockGenerateObject.mockResolvedValueOnce({
+      object: { property_type: "villa", features: ["pool", "garden"] },
+    });
+
+    const result = await derivePropertyAggregates([
+      makeAnalysis({ room_type: "exterior" }),
+      makeAnalysis({ room_type: "kitchen" }),
+    ]);
+
+    expect(result).toEqual({
+      property_type: "villa",
+      features: ["pool", "garden"],
+    });
+    expect(mockGenerateObject).toHaveBeenCalledTimes(1);
+  });
+
+  it("returns defaults without calling the LLM when analyses is empty", async () => {
+    mockGenerateObject.mockClear();
+    const result = await derivePropertyAggregates([]);
+    expect(result).toEqual({ property_type: "apartment", features: [] });
+    expect(mockGenerateObject).not.toHaveBeenCalled();
+  });
+
+  it("propagates LLM errors so the caller can fall back", async () => {
+    mockGenerateObject.mockRejectedValueOnce(new Error("rate limit"));
+    await expect(
+      derivePropertyAggregates([makeAnalysis()]),
+    ).rejects.toThrow("rate limit");
   });
 });

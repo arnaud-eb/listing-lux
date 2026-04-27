@@ -11,12 +11,14 @@ interface PhotoUploaderProps {
   photos: ListingPhoto[];
   onAddPhotos: (files: File[]) => void;
   onRemovePhoto: (id: string) => void;
+  onUpdateRoomType: (id: string, value: string) => void;
 }
 
 export default function PhotoUploader({
   photos,
   onAddPhotos,
   onRemovePhoto,
+  onUpdateRoomType,
 }: PhotoUploaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -106,6 +108,7 @@ export default function PhotoUploader({
               key={photo.id}
               photo={photo}
               onRemove={onRemovePhoto}
+              onUpdateRoomType={onUpdateRoomType}
               isFirst={index === 0}
             />
           ))}

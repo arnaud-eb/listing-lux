@@ -146,3 +146,48 @@ describe("canGenerate / toFormData invariant", () => {
     expect(deriveCanGenerate(photos, VALID_FIELDS)).toBe(true);
   });
 });
+
+/**
+ * Mirror the SET_AGGREGATES reducer merge: derived feature ids OR-merge into
+ * the existing features map — they may add `true`, but never overwrite a value
+ * the user has already toggled.
+ */
+function mergeAggregates(
+  currentFeatures: Record<string, boolean>,
+  derivedIds: string[],
+): Record<string, boolean> {
+  const merged = { ...currentFeatures };
+  for (const id of derivedIds) {
+    merged[id] = true;
+  }
+  return merged;
+}
+
+describe("SET_AGGREGATES feature merge", () => {
+  it("adds derived features to an empty map", () => {
+    const merged = mergeAggregates({}, ["balcony", "garden"]);
+    expect(merged).toEqual({ balcony: true, garden: true });
+  });
+
+  it("preserves user-toggled features that the LLM didn't detect", () => {
+    const merged = mergeAggregates(
+      { parking: true, "city-view": true },
+      ["balcony"],
+    );
+    expect(merged).toEqual({
+      parking: true,
+      "city-view": true,
+      balcony: true,
+    });
+  });
+
+  it("does not flip a user-set true to false even if absent from derived list", () => {
+    const merged = mergeAggregates({ pool: true }, ["balcony", "garden"]);
+    expect(merged.pool).toBe(true);
+  });
+
+  it("does not introduce false entries — derivation only adds true", () => {
+    const merged = mergeAggregates({}, ["balcony"]);
+    expect(Object.values(merged).every((v) => v === true)).toBe(true);
+  });
+});

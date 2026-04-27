@@ -5,7 +5,6 @@ import { createClient } from "@/lib/supabase.server";
 import { verifyPropertyOwnership, UnauthorizedError } from "@/lib/auth";
 import { getNeighborhoodBySlug } from "@/lib/markets";
 import PhotoCarousel from "@/components/listing/PhotoCarousel";
-import PriceDisplay from "@/components/shared/PriceDisplay";
 import ListingPageClient from "./listing-page-client";
 import { propertySchema } from "@/lib/schemas/property";
 import type { Listing, Property } from "@/lib/types";
@@ -90,9 +89,6 @@ export default async function ListingPage({ params }: PageProps) {
     notFound();
   }
 
-  const neighborhood = getNeighborhoodBySlug(p.neighborhood);
-  const neighborhoodName = neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
-
   const property: Property = {
     id: p.id,
     bedrooms: p.bedrooms,
@@ -107,27 +103,6 @@ export default async function ListingPage({ params }: PageProps) {
     created_at: p.created_at,
   };
 
-  // Server-rendered header content — stays server via the slot pattern.
-  const header = (
-    <>
-      <h1 className="font-serif text-3xl font-bold text-navy-deep capitalize">
-        {p.property_type} in {neighborhoodName}
-      </h1>
-      <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
-        <span>{p.bedrooms} bed</span>
-        <span>·</span>
-        <span>{p.bathrooms} bath</span>
-        <span>·</span>
-        <span>{p.sqm} m²</span>
-        <span>·</span>
-        <PriceDisplay
-          amount={p.price}
-          className="font-semibold text-navy-deep"
-        />
-      </div>
-    </>
-  );
-
   const gallery = (
     <PhotoCarousel
       urls={p.photo_urls}
@@ -141,7 +116,6 @@ export default async function ListingPage({ params }: PageProps) {
         <ListingPageClient
           property={property}
           initialListings={existingListings}
-          header={header}
           gallery={gallery}
         />
       </div>

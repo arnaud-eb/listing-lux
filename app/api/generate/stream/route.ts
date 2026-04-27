@@ -1,7 +1,7 @@
 import { streamText, Output } from "ai";
 import { openai, LISTING_MODEL } from "@/lib/ai/client";
 import { createServiceClient } from "@/lib/supabase.server";
-import { getNeighborhoodBySlug } from "@/lib/markets";
+import { getNeighborhoodBySlug, buildBaseHashtags, dedupeHashtags } from "@/lib/markets";
 import { buildListingPrompt, PROMPT_VERSION } from "@/lib/ai/prompts";
 import { listingOutputSchema } from "@/lib/schemas/listing";
 import type { Language, PhotoAnalysis } from "@/lib/types";
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   } catch {
     return Response.json({ error: "Invalid JSON body" }, { status: 400 });
   }
-  const { propertyId, language, comment, currentListing } = body;
+  const { propertyId, language, comment, currentListing, preservedHashtags } = body;
 
   if (!propertyId || typeof propertyId !== "string") {
     return Response.json({ error: "propertyId is required" }, { status: 400 });
@@ -100,6 +100,23 @@ export async function POST(request: Request) {
 
       const object = parsed.data;
 
+      // On comment-guided regeneration, preserve the hashtags the user already has
+      // (base set + any AI/manual edits) — content feedback shouldn't touch them.
+      // On first generation, merge AI-specific tags with the curated base set.
+      const safePreserved = Array.isArray(preservedHashtags)
+        ? (preservedHashtags as string[]).filter((t) => typeof t === "string")
+        : null;
+      const finalHashtags = safePreserved && safePreserved.length > 0
+        ? safePreserved
+        : dedupeHashtags([
+            ...buildBaseHashtags({
+              language: lang,
+              propertyType: property.property_type,
+              neighborhood: property.neighborhood,
+            }),
+            ...object.hashtags,
+          ]);
+
       // Upsert listing into DB
       await supabase.from("listings").upsert(
         {
@@ -108,7 +125,7 @@ export async function POST(request: Request) {
           title: object.title,
           description: object.description,
           highlights: object.highlights,
-          seo_keywords: object.seo_keywords,
+          hashtags: finalHashtags,
           prompt_version: PROMPT_VERSION,
           model: LISTING_MODEL,
         },

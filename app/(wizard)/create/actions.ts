@@ -11,7 +11,12 @@ import {
 import { generateObject } from "ai";
 import { openai } from "@/lib/ai/client";
 import { propertyFormSchema } from "@/lib/schemas/property";
-import { photoAnalysisSchema } from "@/lib/schemas/photo-analysis";
+import { photoAnalysisSchema, type PhotoAnalysis } from "@/lib/schemas/photo-analysis";
+import {
+  propertyAggregatesSchema,
+  type PropertyAggregates,
+} from "@/lib/schemas/property-aggregates";
+import { PROPERTY_TYPES, FEATURE_OPTIONS } from "@/lib/constants";
 
 export async function getSignedUploadUrl(
   filename: string,
@@ -109,6 +114,47 @@ export async function analyzePhoto(photoUrl: string) {
   });
 
   return analysis;
+}
+
+export async function derivePropertyAggregates(
+  analyses: PhotoAnalysis[],
+): Promise<PropertyAggregates> {
+  if (!Array.isArray(analyses) || analyses.length === 0) {
+    return { property_type: "apartment", features: [] };
+  }
+
+  const summaries = analyses
+    .map(
+      (a, i) =>
+        `Photo ${i + 1}: ${a.room_type} — ${a.atmosphere}, ${a.style} style, ${a.condition}. Features: ${a.features.join(", ")}. Selling points: ${a.selling_points.join(", ")}.`,
+    )
+    .join("\n");
+
+  const propertyTypeList = PROPERTY_TYPES.map((t) => t.value).join(", ");
+  const featureList = FEATURE_OPTIONS.map((f) => `${f.id} (${f.label})`).join(
+    ", ",
+  );
+
+  const { object } = await generateObject({
+    model: openai("gpt-4.1-mini"),
+    schema: propertyAggregatesSchema,
+    messages: [
+      {
+        role: "system",
+        content:
+          "You determine the overall property type and visible amenities for a real estate listing based on photo summaries. " +
+          `Available property types: ${propertyTypeList}. ` +
+          `Available amenities (id and label): ${featureList}. ` +
+          "Pick the single best-fit property type. Only include amenities that are clearly evidenced by the photo summaries — do not guess or infer beyond what's described.",
+      },
+      {
+        role: "user",
+        content: `Photo summaries:\n${summaries}`,
+      },
+    ],
+  });
+
+  return object;
 }
 
 export async function saveProperty(

@@ -5,18 +5,10 @@ import {
   View,
   Image,
   Font,
-  Svg,
-  Path,
-  Circle,
-  Rect,
-  Line,
-  Polygon,
-  Polyline,
-  Ellipse,
   StyleSheet,
   renderToBuffer,
 } from "@react-pdf/renderer";
-import iconNodes from "lucide-static/icon-nodes.json";
+import codepoints from "lucide-static/font/codepoints.json";
 import type { Listing, Property, Highlight, AgentProfile, Language } from "./types";
 import { formatCurrency } from "./format";
 import {
@@ -43,6 +35,12 @@ Font.register({
   family: "Playfair Display",
   src: path.join(fontsDir, "PlayfairDisplay-Bold.ttf"),
   fontWeight: 700,
+});
+
+// Lucide icon font — renders icons as text glyphs, eliminating per-element SVG parsing.
+Font.register({
+  family: "Lucide",
+  src: path.join(fontsDir, "Lucide.ttf"),
 });
 
 // --- Styles ---
@@ -132,23 +130,55 @@ const styles = StyleSheet.create({
     color: GRAY_600,
     flex: 1,
   },
-  photoGrid: {
+  photoRow: {
     flexDirection: "row",
-    flexWrap: "wrap",
+    gap: 8,
+    marginBottom: 8,
+  },
+  photoRowLast: {
+    flexDirection: "row",
     gap: 8,
     marginBottom: 16,
   },
-  photo: {
+  // Single hero photo — used for 1-photo layout and as the top row when paired with a grid below.
+  photoHeroSingle: {
+    width: "100%",
+    height: 300,
+    objectFit: "cover",
+    borderRadius: 4,
+    marginBottom: 16,
+  },
+  photoHero: {
+    width: "100%",
+    height: 240,
+    objectFit: "cover",
+    borderRadius: 4,
+  },
+  // Two-up row — each photo takes half-width.
+  photoPair: {
+    flex: 1,
+    height: 180,
+    objectFit: "cover",
+    borderRadius: 4,
+  },
+  // Three-up row — each photo takes a third of the width.
+  photoTrio: {
+    flex: 1,
+    height: 120,
+    objectFit: "cover",
+    borderRadius: 4,
+  },
+  // 2x2 grid photos (used when 4 photos sit below the hero, i.e. total = 5).
+  photoQuad: {
     width: "48%",
     height: 140,
     objectFit: "cover",
     borderRadius: 4,
   },
-  photoSingle: {
-    width: "100%",
-    height: 200,
-    objectFit: "cover",
-    borderRadius: 4,
+  photoGridQuad: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
     marginBottom: 16,
   },
   footer: {
@@ -160,8 +190,13 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     flexDirection: "row",
     justifyContent: "space-between",
+    alignItems: "flex-start",
     fontSize: 8,
     color: GRAY_400,
+  },
+  footerLeft: {
+    flexDirection: "column",
+    gap: 2,
   },
   goldLine: {
     height: 2,
@@ -171,12 +206,11 @@ const styles = StyleSheet.create({
   },
 });
 
-// --- Lucide icon SVG renderer for PDF ---
+// --- Lucide icon renderer for PDF ---
+// Uses the Lucide icon font: each icon is a single Unicode glyph rendered as text.
+// Single source of truth (lucide-static), no per-element SVG parsing, future-proof.
 
-const ICON_NODES = iconNodes as Record<
-  string,
-  Array<[string, Record<string, string>]>
->;
+const CODEPOINTS = codepoints as Record<string, number>;
 
 function LucideIcon({
   name,
@@ -189,84 +223,26 @@ function LucideIcon({
 }) {
   // Fall back to sparkles when the AI-supplied icon name doesn't exist in Lucide.
   // Matches the website's DynamicIcon fallback behavior.
-  const nodes = ICON_NODES[name] ?? ICON_NODES.sparkles;
-  if (!nodes) return null;
-
-  const common = {
-    stroke: color,
-    strokeWidth: "2",
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-    fill: "none",
-  };
+  const code = CODEPOINTS[name] ?? CODEPOINTS.sparkles;
+  if (code === undefined) return null;
 
   return (
-    <Svg width={size} height={size} viewBox="0 0 24 24">
-      {nodes.map(([type, attrs], i) => {
-        switch (type) {
-          case "path":
-            return <Path key={i} d={attrs.d} {...common} />;
-          case "circle":
-            return (
-              <Circle
-                key={i}
-                cx={attrs.cx}
-                cy={attrs.cy}
-                r={attrs.r}
-                {...common}
-              />
-            );
-          case "rect":
-            return (
-              <Rect
-                key={i}
-                x={attrs.x}
-                y={attrs.y}
-                width={attrs.width}
-                height={attrs.height}
-                rx={attrs.rx}
-                ry={attrs.ry}
-                {...common}
-              />
-            );
-          case "line":
-            return (
-              <Line
-                key={i}
-                x1={attrs.x1}
-                y1={attrs.y1}
-                x2={attrs.x2}
-                y2={attrs.y2}
-                {...common}
-              />
-            );
-          case "polygon":
-            return <Polygon key={i} points={attrs.points} {...common} />;
-          case "polyline":
-            return <Polyline key={i} points={attrs.points} {...common} />;
-          case "ellipse":
-            return (
-              <Ellipse
-                key={i}
-                cx={attrs.cx}
-                cy={attrs.cy}
-                rx={attrs.rx}
-                ry={attrs.ry}
-                {...common}
-              />
-            );
-          default:
-            return null;
-        }
-      })}
-    </Svg>
+    <Text style={{ fontFamily: "Lucide", fontSize: size, color }}>
+      {String.fromCodePoint(code)}
+    </Text>
   );
 }
 
 // --- PDF Components ---
 
 function Header({ profile }: { profile?: AgentProfile | null }) {
-  if (!profile) return null;
+  // Suppress when none of the fields the header consumes are populated.
+  // Per-component guards (vs. one global hasAnyBranding) handle edge cases
+  // like "user filled only agency_address" cleanly — no empty Views, no
+  // empty Text nodes on the PDF.
+  // .trim() defensively — a stray space from an old save shouldn't render
+  // an empty header.
+  if (!profile?.logo_url?.trim() && !profile?.agency_name?.trim()) return null;
 
   return (
     <View style={styles.header}>
@@ -316,22 +292,72 @@ function DetailsBar({
 }
 
 function PhotoGrid({ urls }: { urls: string[] }) {
-  const photos = urls.slice(0, 6);
+  // Count-aware layout: photos fill the block proportionally, so fewer photos
+  // don't leave awkward empty grid cells and don't push text off the page.
+  const photos = urls.slice(0, 5);
   if (photos.length === 0) return null;
 
-  // First photo large, rest in grid
-  return (
-    <View>
-      <Image src={photos[0]} style={styles.photoSingle} />
-      {photos.length > 1 && (
-        <View style={styles.photoGrid}>
-          {photos.slice(1).map((url, i) => (
-            <Image key={i} src={url} style={styles.photo} />
-          ))}
+  switch (photos.length) {
+    case 1:
+      // Single hero image, taller so it fills the space.
+      return (
+        <View>
+          <Image src={photos[0]} style={styles.photoHeroSingle} />
         </View>
-      )}
-    </View>
-  );
+      );
+
+    case 2:
+      // Two side-by-side, equal width.
+      return (
+        <View style={styles.photoRowLast}>
+          <Image src={photos[0]} style={styles.photoPair} />
+          <Image src={photos[1]} style={styles.photoPair} />
+        </View>
+      );
+
+    case 3:
+      // Hero on top, two equal below.
+      return (
+        <View>
+          <View style={styles.photoRow}>
+            <Image src={photos[0]} style={styles.photoHero} />
+          </View>
+          <View style={styles.photoRowLast}>
+            <Image src={photos[1]} style={styles.photoPair} />
+            <Image src={photos[2]} style={styles.photoPair} />
+          </View>
+        </View>
+      );
+
+    case 4:
+      // Hero on top, three equal below.
+      return (
+        <View>
+          <View style={styles.photoRow}>
+            <Image src={photos[0]} style={styles.photoHero} />
+          </View>
+          <View style={styles.photoRowLast}>
+            <Image src={photos[1]} style={styles.photoTrio} />
+            <Image src={photos[2]} style={styles.photoTrio} />
+            <Image src={photos[3]} style={styles.photoTrio} />
+          </View>
+        </View>
+      );
+
+    case 5:
+    default:
+      // Hero + 2x2 grid (original 5-photo layout).
+      return (
+        <View>
+          <Image src={photos[0]} style={styles.photoHeroSingle} />
+          <View style={styles.photoGridQuad}>
+            {photos.slice(1).map((url, i) => (
+              <Image key={i} src={url} style={styles.photoQuad} />
+            ))}
+          </View>
+        </View>
+      );
+  }
 }
 
 function Description({ text }: { text: string }) {
@@ -347,11 +373,20 @@ function Description({ text }: { text: string }) {
   );
 }
 
-function Highlights({ items }: { items: Highlight[] }) {
+function HighlightsSection({
+  items,
+  title,
+}: {
+  items: Highlight[];
+  title: string;
+}) {
   if (!items || items.length === 0) return null;
 
+  // wrap={false} prevents the highlights list from splitting across pages,
+  // avoiding orphan items (e.g. a single bullet stranded on a mostly-empty page).
   return (
-    <View>
+    <View wrap={false}>
+      <Text style={styles.sectionTitle}>{title}</Text>
       {items.map((h, i) => {
         const highlight = typeof h === "string" ? { text: h, icon: "sparkles" } : h;
         return (
@@ -368,21 +403,38 @@ function Highlights({ items }: { items: Highlight[] }) {
 function Footer({ profile }: { profile?: AgentProfile | null }) {
   if (!profile) return null;
 
-  const contactParts = [
-    profile.full_name,
-    profile.agency_name,
-  ].filter(Boolean);
+  // .trim() filter so a whitespace-only field doesn't bleed " · " separators
+  // into the rendered footer.
+  const isPresent = (v: string | null | undefined): v is string =>
+    typeof v === "string" && v.trim() !== "";
+
+  const contactParts = [profile.full_name, profile.agency_name].filter(
+    isPresent,
+  );
 
   const detailParts = [
     profile.phone,
     profile.email,
     profile.agency_website,
-  ].filter(Boolean);
+  ].filter(isPresent);
+
+  // Same per-component reasoning as Header: don't render at all when
+  // there's nothing to populate either side.
+  const hasLeft = contactParts.length > 0 || Boolean(profile.agency_address);
+  const hasRight = detailParts.length > 0;
+  if (!hasLeft && !hasRight) return null;
 
   return (
     <View style={styles.footer} fixed>
-      <Text>{contactParts.join(" · ")}</Text>
-      <Text>{detailParts.join(" · ")}</Text>
+      <View style={styles.footerLeft}>
+        {contactParts.length > 0 && (
+          <Text>{contactParts.join(" · ")}</Text>
+        )}
+        {profile.agency_address && (
+          <Text>{profile.agency_address}</Text>
+        )}
+      </View>
+      {hasRight && <Text>{detailParts.join(" · ")}</Text>}
     </View>
   );
 }
@@ -413,8 +465,10 @@ function ListingPDF({ property, listings, profile }: ListingPDFProps) {
 
           <View style={styles.goldLine} />
 
-          <Text style={styles.sectionTitle}>{HIGHLIGHTS_LABEL[language]}</Text>
-          <Highlights items={listing.highlights} />
+          <HighlightsSection
+            items={listing.highlights}
+            title={HIGHLIGHTS_LABEL[language]}
+          />
 
           <Footer profile={profile} />
         </Page>
