@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 import {
   Select,
   SelectContent,
@@ -19,6 +20,7 @@ interface NeighborhoodSelectorProps {
 
 export default function NeighborhoodSelector({ value, onChange, sqm }: NeighborhoodSelectorProps) {
   const market = getActiveMarket()
+  const t = useTranslations('wizard.neighborhood')
 
   const neighborhoods = useMemo(
     () => market.areas.flatMap((a) => a.neighborhoods),
@@ -30,11 +32,11 @@ export default function NeighborhoodSelector({ value, onChange, sqm }: Neighborh
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-sm font-medium text-gray-700" htmlFor="neighborhood-select">
-        Neighborhood <span className="text-red-400">*</span>
+        {t('label')} <span className="text-red-400">*</span>
       </label>
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger id="neighborhood-select" className="w-full">
-          <SelectValue placeholder="Select neighborhood…" />
+          <SelectValue placeholder={t('placeholder')} />
         </SelectTrigger>
         <SelectContent>
           {neighborhoods.map((n) => (
@@ -46,9 +48,12 @@ export default function NeighborhoodSelector({ value, onChange, sqm }: Neighborh
       </Select>
       {estimate !== null && (
         <div className="flex items-center gap-2 mt-1" aria-live="polite">
-          <span className="text-xs text-gray-500">Estimated market value:</span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-gold/10 text-gold text-xs font-semibold" aria-label={`Estimated average price: ${formatCurrency(estimate)}`}>
-            Avg: {formatCurrency(estimate)}
+          <span className="text-xs text-gray-500">{t('estimatedValue')}</span>
+          <span
+            className="inline-flex items-center px-2 py-0.5 rounded-md bg-gold/10 text-gold text-xs font-semibold"
+            aria-label={t('ariaEstimate', { value: formatCurrency(estimate) })}
+          >
+            {t('averagePrefix')} {formatCurrency(estimate)}
           </span>
         </div>
       )}

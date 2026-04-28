@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Minus, Plus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -22,6 +23,8 @@ export default function StepperInput({
   label,
   id,
 }: StepperInputProps) {
+  const t = useTranslations('wizard.stepperInput')
+
   function decrement() {
     const next = Math.round((value - step) * 10) / 10
     if (next >= min) onChange(next)
@@ -44,7 +47,7 @@ export default function StepperInput({
           size="icon"
           onClick={decrement}
           disabled={value <= min}
-          aria-label={`Decrease ${label}`}
+          aria-label={t('ariaDecrease', { label })}
           className="w-11 h-11 rounded-l-md rounded-r-none border-gray-300 bg-white text-gray-600 shadow-none disabled:opacity-40"
         >
           <Minus className="size-4" />
@@ -63,7 +66,7 @@ export default function StepperInput({
           size="icon"
           onClick={increment}
           disabled={value >= max}
-          aria-label={`Increase ${label}`}
+          aria-label={t('ariaIncrease', { label })}
           className="w-11 h-11 rounded-r-md rounded-l-none border-gray-300 bg-white text-gray-600 shadow-none disabled:opacity-40"
         >
           <Plus className="size-4" />

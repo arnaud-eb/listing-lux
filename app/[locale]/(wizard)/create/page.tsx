@@ -1,7 +1,8 @@
 "use client";
 
 import { useTransition, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
 import ConfirmDeleteDialog from "@/components/shared/ConfirmDeleteDialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,6 +28,7 @@ export default function CreatePage() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false);
+  const t = useTranslations("wizard.create");
 
   const {
     form,
@@ -75,7 +77,7 @@ export default function CreatePage() {
       const firstError = Object.entries(fieldErrors)
         .map(([field, msgs]) => `${field}: ${(msgs as string[])[0]}`)
         .at(0);
-      toast.error(firstError ?? "Please check your input and try again.");
+      toast.error(firstError ?? t("validationError"));
       return;
     }
 
@@ -92,12 +94,9 @@ export default function CreatePage() {
         {/* Page title */}
         <div className="mb-8 relative">
           <h1 className="font-serif text-3xl font-bold text-navy-deep">
-            Create New Listing
+            {t("title")}
           </h1>
-          <p className="text-sm text-gray-500 mt-1">
-            Provide the property details and high-resolution images to generate
-            your luxury AI listing.
-          </p>
+          <p className="text-sm text-gray-500 mt-1">{t("subtitle")}</p>
           <Button
             type="button"
             variant="outline"
@@ -106,7 +105,7 @@ export default function CreatePage() {
             className="text-gray-400 hover:text-red-500 hover:bg-gray-50 border-gray-200 shadow-none mt-3 lg:absolute lg:right-0 lg:top-2"
           >
             <RotateCcw className="size-3" />
-            Start Over
+            {t("startOver")}
           </Button>
         </div>
 
@@ -117,9 +116,9 @@ export default function CreatePage() {
             reset();
             setResetConfirmOpen(false);
           }}
-          title="Start over?"
-          description="This will clear all the details and photos you've added. This action cannot be undone."
-          confirmLabel="Start Over"
+          title={t("startOverDialogTitle")}
+          description={t("startOverDialogDescription")}
+          confirmLabel={t("startOver")}
         />
 
         <form onSubmit={handleSubmit} noValidate>
@@ -138,7 +137,7 @@ export default function CreatePage() {
             <div className="flex flex-col gap-6">
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                 <h2 className="text-lg font-semibold text-navy-deep mb-6">
-                  Property Details
+                  {t("propertyDetails")}
                 </h2>
 
                 <div className="flex flex-col gap-5">
@@ -146,7 +145,7 @@ export default function CreatePage() {
                   <div className="grid grid-cols-2 gap-4">
                     <StepperInput
                       id="bedrooms"
-                      label="Bedrooms"
+                      label={t("bedroomsLabel")}
                       value={form.bedrooms}
                       onChange={(v) => updateField("bedrooms", v)}
                       min={0}
@@ -155,7 +154,7 @@ export default function CreatePage() {
                     />
                     <StepperInput
                       id="bathrooms"
-                      label="Bathrooms"
+                      label={t("bathroomsLabel")}
                       value={form.bathrooms}
                       onChange={(v) => updateField("bathrooms", v)}
                       min={0}
@@ -167,12 +166,13 @@ export default function CreatePage() {
                   {/* Size */}
                   <div className="flex flex-col gap-1.5">
                     <Label htmlFor="sqm">
-                      Size (m²) <span className="text-red-400">*</span>
+                      {t("sizeLabel")}{" "}
+                      <span className="text-red-400">*</span>
                     </Label>
                     <Input
                       id="sqm"
                       type="number"
-                      placeholder="e.g. 120"
+                      placeholder={t("sizePlaceholder")}
                       value={form.sqm}
                       onChange={(e) =>
                         updateField(
@@ -189,13 +189,14 @@ export default function CreatePage() {
                   {/* Price */}
                   <div className="flex flex-col gap-1.5">
                     <Label htmlFor="asking-eur">
-                      Asking Price (€) <span className="text-red-400">*</span>
+                      {t("priceLabel")}{" "}
+                      <span className="text-red-400">*</span>
                     </Label>
                     <Input
                       id="asking-eur"
                       type="text"
                       inputMode="numeric"
-                      placeholder="e.g. 850.000"
+                      placeholder={t("pricePlaceholder")}
                       autoComplete="off"
                       data-lpignore="true"
                       data-form-type="other"
@@ -216,15 +217,17 @@ export default function CreatePage() {
 
                   {/* Address (optional) */}
                   <div className="flex flex-col gap-1.5">
-                    <Label htmlFor="address">Property Address</Label>
+                    <Label htmlFor="address">{t("addressLabel")}</Label>
                     <Input
                       id="address"
                       type="text"
-                      placeholder="e.g. 12 Rue de Clausen, Luxembourg"
+                      placeholder={t("addressPlaceholder")}
                       value={form.address ?? ""}
                       onChange={(e) => updateField("address", e.target.value)}
                     />
-                    <p className="text-2xs text-gray-400">Optional — included in PDF and social media exports</p>
+                    <p className="text-2xs text-gray-400">
+                      {t("addressHelper")}
+                    </p>
                   </div>
 
                   {/* Features */}

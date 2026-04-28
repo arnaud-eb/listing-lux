@@ -1,4 +1,5 @@
 import { streamText, Output } from "ai";
+import { getTranslations } from "next-intl/server";
 import { openai, LISTING_MODEL } from "@/lib/ai/client";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getNeighborhoodBySlug, buildBaseHashtags, dedupeHashtags } from "@/lib/markets";
@@ -8,24 +9,36 @@ import type { Language, PhotoAnalysis } from "@/lib/types";
 import { MAX_COMMENT_LENGTH } from "@/lib/constants";
 import { getSessionIdFromCookie } from "@/lib/session";
 
+function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
+  const match = cookieHeader.match(/NEXT_LOCALE=(\w+)/);
+  return match?.[1] === "en" ? "en" : "fr";
+}
+
 const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en", "lu"]);
 
 export async function POST(request: Request) {
+  const cookieHeader = request.headers.get("cookie") ?? "";
+  const locale = readLocaleFromCookie(cookieHeader);
+  const t = await getTranslations({
+    locale,
+    namespace: "errors.generation",
+  });
+
   let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
-    return Response.json({ error: "Invalid JSON body" }, { status: 400 });
+    return Response.json({ error: t("invalidJson") }, { status: 400 });
   }
   const { propertyId, language, comment, currentListing, preservedHashtags } = body;
 
   if (!propertyId || typeof propertyId !== "string") {
-    return Response.json({ error: "propertyId is required" }, { status: 400 });
+    return Response.json({ error: t("propertyIdRequired") }, { status: 400 });
   }
 
   if (!language || !VALID_LANGUAGES.has(language as Language)) {
     return Response.json(
-      { error: "language must be one of: de, fr, en, lu" },
+      { error: t("languageInvalid") },
       { status: 400 },
     );
   }
@@ -41,15 +54,13 @@ export async function POST(request: Request) {
     .single();
 
   if (error || !property) {
-    return Response.json({ error: "Property not found" }, { status: 404 });
+    return Response.json({ error: t("propertyNotFound") }, { status: 404 });
   }
 
   // Verify session ownership
-  const sessionId = getSessionIdFromCookie(
-    request.headers.get("cookie") ?? "",
-  );
+  const sessionId = getSessionIdFromCookie(cookieHeader);
   if (!sessionId || property.session_id !== sessionId) {
-    return Response.json({ error: "Unauthorized" }, { status: 403 });
+    return Response.json({ error: t("unauthorized") }, { status: 403 });
   }
 
   // Build prompt

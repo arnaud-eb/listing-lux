@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 interface PhotoSelectorProps {
@@ -39,6 +40,7 @@ export default function PhotoSelector({
   hideFooter = false,
 }: PhotoSelectorProps) {
   const atMax = selected.length >= max;
+  const t = useTranslations("wizard.listing.photoSelector");
 
   return (
     <div className="flex flex-col gap-3">
@@ -59,8 +61,8 @@ export default function PhotoSelector({
               disabled={isDisabled}
               aria-label={
                 isSelected
-                  ? `Photo ${i + 1} selected as position ${position + 1} — click to remove`
-                  : `Select photo ${i + 1}`
+                  ? t("ariaSelectedAt", { n: i + 1, position: position + 1 })
+                  : t("ariaSelect", { n: i + 1 })
               }
               aria-pressed={isSelected}
               className={`group relative aspect-[16/10] overflow-hidden rounded-lg border-2 transition-all outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${
@@ -98,9 +100,8 @@ export default function PhotoSelector({
       {!hideFooter && (
         <div className="flex items-center justify-center gap-3 text-xs text-gray-400">
           <p aria-live="polite">
-            {selected.length} / {max} selected
-            {selected.length === 0 &&
-              " — click photos in the order you want them to appear"}
+            {t("selectedCounter", { count: selected.length, max })}
+            {selected.length === 0 && t("selectedPrompt")}
           </p>
           {selected.length > 0 && onClear && (
             <>
@@ -112,7 +113,7 @@ export default function PhotoSelector({
                 onClick={onClear}
                 className="text-gray-500 hover:text-navy-deep transition-colors cursor-pointer outline-none focus-visible:text-navy-deep focus-visible:underline underline-offset-4"
               >
-                Clear
+                {t("clear")}
               </button>
             </>
           )}

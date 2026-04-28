@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import {
   Dialog,
@@ -12,7 +13,7 @@ import {
 import ConfirmDiscardDialog from "@/components/shared/ConfirmDiscardDialog";
 import { LANGUAGES } from "@/lib/constants";
 import type { AgentProfile, Language, Property } from "@/lib/types";
-import { getAgentProfile } from "@/app/(wizard)/profile/actions";
+import { getAgentProfile } from "@/app/[locale]/(wizard)/profile/actions";
 import { downloadPDF } from "@/lib/pdf-client";
 import { useWizardSteps } from "./useWizardSteps";
 import BrandingStep from "./steps/BrandingStep";
@@ -51,6 +52,7 @@ export default function PdfExportWizard({
   // the Languages step's Add/Edit card.
   const [editingBranding, setEditingBranding] = useState(false);
   const wizard = useWizardSteps();
+  const t = useTranslations("wizard.listing.pdfWizard");
 
   // Branding step's dirty state, lifted so we can guard every discard path:
   // Cancel button, dialog X close, overlay click, Esc. All four routes
@@ -169,14 +171,14 @@ export default function PdfExportWizard({
         includeBranding: !!profile,
         selectedPhotos,
       });
-      toast.success("PDF downloaded!");
+      toast.success(t("toastDownloaded"));
       onOpenChange(false);
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "PDF generation failed");
+      toast.error(err instanceof Error ? err.message : t("toastFailed"));
     } finally {
       setIsDownloading(false);
     }
-  }, [property.id, selectedLanguages, profile, selectedPhotos, onOpenChange]);
+  }, [property.id, selectedLanguages, profile, selectedPhotos, onOpenChange, t]);
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -185,15 +187,15 @@ export default function PdfExportWizard({
           <>
             <DialogHeader>
               <DialogTitle className="font-serif text-navy-deep">
-                Export as PDF
+                {t("title")}
               </DialogTitle>
-              <DialogDescription>Loading...</DialogDescription>
+              <DialogDescription>{t("loading")}</DialogDescription>
             </DialogHeader>
             <div className="flex items-center justify-center py-12">
               <div
                 className="size-6 border-2 border-gold border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
                 role="status"
-                aria-label="Loading"
+                aria-label={t("ariaLoading")}
               />
             </div>
           </>
@@ -238,8 +240,8 @@ export default function PdfExportWizard({
         }}
         onConfirm={handleConfirmDiscard}
         onCancel={handleKeepEditing}
-        title="Discard branding changes?"
-        description="Your edits to the agent profile will be lost."
+        title={t("discardBrandingTitle")}
+        description={t("discardBrandingDescription")}
       />
     </Dialog>
   );

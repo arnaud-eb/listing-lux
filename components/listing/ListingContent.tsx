@@ -1,11 +1,12 @@
 "use client";
 
 import type { RefObject } from "react";
+import { useTranslations } from "next-intl";
 import type { Language, Listing, ListingUpdates } from "@/lib/types";
 import { LANGUAGE_LABELS, HIGHLIGHTS_LABEL } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import DynamicIcon from "@/components/shared/DynamicIcon";
-import type { GenerationStatus } from "@/app/(wizard)/listing/[listingId]/use-listing-generation";
+import type { GenerationStatus } from "@/app/[locale]/(wizard)/listing/[listingId]/use-listing-generation";
 import EditableListingContent, { type EditableListingHandle } from "./EditableListingContent";
 
 interface ListingContentProps {
@@ -31,6 +32,7 @@ export default function ListingContent({
   onSave,
   editableRef,
 }: ListingContentProps) {
+  const t = useTranslations("wizard.listing");
   return (
     <div className="min-h-100">
       {status === "queued" && (
@@ -38,28 +40,27 @@ export default function ListingContent({
           <div
             className="size-6 border-2 border-gray-200 border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
             role="status"
-            aria-label="Queued for generation"
+            aria-label={t("ariaQueued")}
           />
           <p className="text-sm">
-            Queued — will generate after{" "}
-            {currentlyGenerating
-              ? LANGUAGE_LABELS[currentlyGenerating]
-              : "current language"}
+            {t("queued", {
+              language: currentlyGenerating
+                ? LANGUAGE_LABELS[currentlyGenerating]
+                : t("queuedFallback"),
+            })}
           </p>
         </div>
       )}
 
       {status === "idle" && (
         <div className="flex items-center justify-center py-16">
-          <p className="text-sm text-gray-400 italic">
-            No content generated yet.
-          </p>
+          <p className="text-sm text-gray-400 italic">{t("noContent")}</p>
         </div>
       )}
 
       {status === "error" && (
         <div className="flex flex-col items-center justify-center py-16 gap-3">
-          <p className="text-sm text-red-500">{error || "Generation failed"}</p>
+          <p className="text-sm text-red-500">{error || t("generationFailed")}</p>
           {onRetry && (
             <Button
               variant="outline"
@@ -67,7 +68,7 @@ export default function ListingContent({
               onClick={onRetry}
               className="text-red-500 border-red-200 hover:bg-red-50"
             >
-              Retry
+              {t("retry")}
             </Button>
           )}
         </div>
@@ -95,10 +96,10 @@ export default function ListingContent({
                   <div
                     className="w-5 h-5 border-2 border-gold border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
                     role="status"
-                    aria-label="Generating listing"
+                    aria-label={t("ariaGenerating")}
                   />
                   <span className="text-sm">
-                    Preparing your {LANGUAGE_LABELS[language]} listing…
+                    {t("preparing", { language: LANGUAGE_LABELS[language] })}
                   </span>
                 </div>
               ) : null}
@@ -143,7 +144,7 @@ export default function ListingContent({
               {listing?.hashtags && listing.hashtags.length > 0 && (
                 <div>
                   <h3 className="text-xs font-semibold text-navy-deep uppercase tracking-wider mb-3">
-                    Hashtags
+                    {t("hashtags")}
                   </h3>
                   <div className="flex flex-wrap gap-1.5">
                   {listing.hashtags.filter(Boolean).map((tag, i) => (

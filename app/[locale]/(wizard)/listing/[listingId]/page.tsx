@@ -1,6 +1,7 @@
 import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { createClient } from "@/lib/supabase.server";
 import { verifyPropertyOwnership, UnauthorizedError } from "@/lib/auth";
 import { getNeighborhoodBySlug } from "@/lib/markets";
@@ -11,7 +12,7 @@ import type { Listing, Property } from "@/lib/types";
 import { z } from "zod";
 
 interface PageProps {
-  params: Promise<{ listingId: string }>;
+  params: Promise<{ listingId: string; locale: string }>;
 }
 
 const getProperty = cache(async (id: string) => {
@@ -50,21 +51,35 @@ const getExistingListings = cache(async function getExistingListings(propertyId:
   return data ?? [];
 });
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { listingId } = await params;
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { listingId, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
   const p = await getProperty(listingId);
 
   if (!p) {
-    return { title: "Listing Not Found — ListingLux AI" };
+    return { title: t("listingNotFoundTitle") };
   }
 
   const neighborhood = getNeighborhoodBySlug(p.neighborhood);
-  const neighborhoodName = neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
-  const typeName = p.property_type.charAt(0).toUpperCase() + p.property_type.slice(1);
+  const neighborhoodName =
+    neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
+  const typeName =
+    p.property_type.charAt(0).toUpperCase() + p.property_type.slice(1);
 
   return {
-    title: `${typeName} in ${neighborhoodName} — ListingLux AI`,
-    description: `${p.bedrooms} bed · ${p.bathrooms} bath · ${p.sqm} m² luxury ${p.property_type} in ${neighborhoodName}, Luxembourg`,
+    title: t("listingTitleTemplate", {
+      type: typeName,
+      neighborhood: neighborhoodName,
+    }),
+    description: t("listingDescriptionTemplate", {
+      bedrooms: p.bedrooms,
+      bathrooms: p.bathrooms,
+      sqm: p.sqm,
+      type: p.property_type,
+      neighborhood: neighborhoodName,
+    }),
     openGraph: {
       images: p.photo_urls[0] ? [{ url: p.photo_urls[0] }] : [],
     },

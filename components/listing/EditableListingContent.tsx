@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback, useImperativeHandle, forwardRef } from "react";
+import { useTranslations } from "next-intl";
 import type { Language, Listing, ListingUpdates, Highlight } from "@/lib/types";
 import { HIGHLIGHTS_LABEL } from "@/lib/constants";
 import { X, Plus } from "lucide-react";
@@ -8,7 +9,7 @@ import DynamicIcon from "@/components/shared/DynamicIcon";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { inferHighlightIcon } from "@/app/(wizard)/listing/[listingId]/actions";
+import { inferHighlightIcon } from "@/app/[locale]/(wizard)/listing/[listingId]/actions";
 
 // --- Stable-key item helpers ---
 
@@ -101,6 +102,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
   listing,
   onSave,
 }, ref) {
+  const t = useTranslations("wizard.listing");
   const [draftTitle, setDraftTitle] = useState(listing.title ?? "");
   const [draftDescription, setDraftDescription] = useState(
     listing.description ?? "",
@@ -129,7 +131,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
 
   const handleSave = useCallback(() => {
     if (!draftTitle.trim()) {
-      toast.error("Title is required");
+      toast.error(t("toastTitleRequired"));
       return;
     }
 
@@ -146,7 +148,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
       updates.hashtags = hashtags.filter(Boolean);
 
     onSave(updates);
-  }, [draftTitle, draftDescription, draftHighlights, draftHashtags, listing, onSave]);
+  }, [draftTitle, draftDescription, draftHighlights, draftHashtags, listing, onSave, t]);
 
   useImperativeHandle(ref, () => ({ save: handleSave, isDirty }), [handleSave, isDirty]);
 
@@ -241,7 +243,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
                   type="button"
                   onClick={() => removeHighlight(item.id)}
                   className="min-w-11 min-h-11 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors cursor-pointer"
-                  aria-label="Remove highlight"
+                  aria-label={t("ariaRemoveHighlight")}
                 >
                   <X className="size-4" />
                 </button>
@@ -258,7 +260,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
               className="flex items-center gap-2 text-sm text-gold hover:text-gold/80 transition-colors py-1 cursor-pointer"
             >
               <Plus className="size-4" />
-              Add highlight
+              {t("addHighlight")}
             </button>
           </div>
         </div>
@@ -266,7 +268,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
         {/* Hashtags */}
         <div>
           <h3 className="text-xs font-semibold text-navy-deep uppercase tracking-wider mb-3">
-            Hashtags
+            {t("hashtags")}
           </h3>
         <div className="flex flex-wrap gap-2 relative">
           {draftHashtags.map((item) => (
@@ -283,7 +285,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
                 type="button"
                 onClick={() => removeHashtag(item.id)}
                 className="size-5 flex items-center justify-center rounded-full text-gray-400 hover:text-red-500 hover:bg-gray-200 transition-colors cursor-pointer"
-                aria-label="Remove hashtag"
+                aria-label={t("ariaRemoveHashtag")}
               >
                 <X className="size-3" />
               </button>
@@ -299,7 +301,7 @@ const EditableListingContent = forwardRef<EditableListingHandle, EditableListing
             }
             className="text-2xs text-gold hover:text-gold/80 rounded-full px-2.5 py-0.5 border border-dashed border-gold/40 transition-colors cursor-pointer"
           >
-            + Add hashtag
+            {t("addHashtag")}
           </button>
         </div>
         </div>

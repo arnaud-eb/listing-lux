@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import { CloudUpload, PlusCircle, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import type { ListingPhoto } from "@/lib/types";
@@ -21,21 +22,20 @@ export default function PhotoUploader({
   onUpdateRoomType,
 }: PhotoUploaderProps) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const t = useTranslations("wizard.photoUploader");
 
   function handleFiles(files: FileList | null) {
     if (!files) return;
     const available = MAX_PHOTOS - photos.length;
     if (available <= 0) {
-      toast.error(`Maximum ${MAX_PHOTOS} photos allowed.`);
+      toast.error(t("toastMaxPhotos", { max: MAX_PHOTOS }));
       return;
     }
     const all = Array.from(files);
     const oversized = all.filter((f) => f.size > MAX_PHOTO_SIZE);
     const valid = all.filter((f) => f.size <= MAX_PHOTO_SIZE);
     if (oversized.length > 0) {
-      toast.error(
-        `${oversized.length} file${oversized.length > 1 ? "s" : ""} exceeded the 10 MB limit and ${oversized.length > 1 ? "were" : "was"} skipped.`,
-      );
+      toast.error(t("toastOversized", { count: oversized.length }));
     }
     const selected = valid.slice(0, available);
     if (selected.length > 0) onAddPhotos(selected);
@@ -59,10 +59,10 @@ export default function PhotoUploader({
       {/* Section header */}
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold text-navy-deep">
-          Property Gallery
+          {t("sectionTitle")}
         </h2>
         <span className="text-xs text-gold font-medium max-md:hidden">
-          Recommended: 10+ high-res photos
+          {t("recommendation")}
         </span>
       </div>
 
@@ -73,20 +73,18 @@ export default function PhotoUploader({
           onClick={() => inputRef.current?.click()}
           onDragOver={handleDragOver}
           onDrop={handleDrop}
-          aria-label="Upload property photos — drag and drop or press to browse"
+          aria-label={t("ariaLabelDropZone")}
           className="w-full border-2 border-dashed border-gold/30 rounded-xl bg-gold/5 p-12 max-md:p-6 flex flex-col items-center justify-center text-center group hover:border-gold focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 transition-colors cursor-pointer outline-none"
         >
           <div className="size-14 rounded-full bg-gold/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
             <CloudUpload className="text-gold size-6" />
           </div>
           <p className="text-base font-medium text-navy-deep">
-            Drag and drop images here
+            {t("dropZoneTitle")}
           </p>
-          <p className="text-slate-500 text-sm mt-1">
-            or click to browse your files (JPG, PNG, WebP up to 10MB)
-          </p>
+          <p className="text-slate-500 text-sm mt-1">{t("dropZoneSubtitle")}</p>
           <p className="text-xs text-slate-400 mt-2">
-            {photos.length}/{MAX_PHOTOS} uploaded
+            {t("uploadCounter", { current: photos.length, max: MAX_PHOTOS })}
           </p>
           <input
             ref={inputRef}
@@ -117,11 +115,11 @@ export default function PhotoUploader({
             <button
               type="button"
               onClick={() => inputRef.current?.click()}
-              aria-label="Add more photos"
+              aria-label={t("ariaLabelAddMore")}
               className="aspect-square rounded-lg border-2 border-gold/10 flex flex-col items-center justify-center text-gold/60 hover:text-gold hover:bg-gold/5 focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 transition-all cursor-pointer outline-none"
             >
               <PlusCircle className="size-6 mb-1" />
-              <span className="text-xs font-semibold">Add More</span>
+              <span className="text-xs font-semibold">{t("addMore")}</span>
             </button>
           )}
         </div>
@@ -134,12 +132,11 @@ export default function PhotoUploader({
             <Sparkles className="text-gold size-4" />
           </div>
           <div>
-            <p className="text-xs font-semibold text-navy-deep">AI Tip</p>
+            <p className="text-xs font-semibold text-navy-deep">
+              {t("aiTipTitle")}
+            </p>
             <p className="text-xs text-gray-500 mt-0.5">
-              Add {MIN_PHOTOS - photos.length} more photo
-              {MIN_PHOTOS - photos.length > 1 ? "s" : ""} to enable AI
-              generation. Our AI performs best with photos of the kitchen,
-              primary bedroom, and living area.
+              {t("aiTipBody", { count: MIN_PHOTOS - photos.length })}
             </p>
           </div>
         </div>

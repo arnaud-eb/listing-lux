@@ -1,5 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getSessionId } from "@/lib/session";
 import { getNeighborhoodBySlug } from "@/lib/markets";
@@ -8,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Bath, BedDouble, Maximize } from "lucide-react";
 import DeleteListingButton from "./DeleteListingButton";
 
-/** Shape returned by Supabase join: properties with nested listings */
 interface PropertyWithListings {
   id: string;
   bedrooms: number;
@@ -22,12 +23,19 @@ interface PropertyWithListings {
   listings: { title: string; language: string }[] | null;
 }
 
-export const metadata = {
-  title: "Your Listings — ListingLux AI",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  return { title: t("historyTitle") };
+}
 
 export default async function HistoryPage() {
   const sessionId = await getSessionId();
+  const t = await getTranslations("wizard.history");
 
   if (!sessionId) {
     return <EmptyState />;
@@ -35,7 +43,6 @@ export default async function HistoryPage() {
 
   const supabase = createServiceClient();
 
-  // Single query: fetch properties with their first listing title via join
   const { data: properties } = await supabase
     .from("properties")
     .select("*, listings(title, language)")
@@ -47,7 +54,6 @@ export default async function HistoryPage() {
     return <EmptyState />;
   }
 
-  // Extract first listing title per property from joined data
   const typedProperties = properties as unknown as PropertyWithListings[];
   const titleMap = new Map<string, string>();
   for (const property of typedProperties) {
@@ -63,11 +69,9 @@ export default async function HistoryPage() {
     <div className="container mx-auto px-6 py-8">
       <div className="mb-8">
         <h1 className="font-serif text-3xl font-bold text-navy-deep">
-          Your Listings
+          {t("title")}
         </h1>
-        <p className="text-sm text-gray-500 mt-1">
-          Properties you&apos;ve created
-        </p>
+        <p className="text-sm text-gray-500 mt-1">{t("subtitle")}</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -87,12 +91,11 @@ export default async function HistoryPage() {
             >
               <DeleteListingButton propertyId={property.id} title={title} />
               <Link href={`/listing/${property.id}`} className="block">
-                {/* Thumbnail */}
                 <div className="aspect-16/10 relative bg-gray-100 overflow-hidden">
                   {thumbnail ? (
                     <Image
                       src={thumbnail}
-                      alt={title ?? "Property photo"}
+                      alt={title ?? t("altPropertyPhoto")}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -104,7 +107,6 @@ export default async function HistoryPage() {
                   )}
                 </div>
 
-                {/* Card body */}
                 <div className="p-4">
                   {title && (
                     <h2 className="font-serif text-base font-semibold text-navy-deep line-clamp-1 mb-1">
@@ -149,21 +151,22 @@ export default async function HistoryPage() {
   );
 }
 
-function EmptyState() {
+async function EmptyState() {
+  const t = await getTranslations("wizard.history");
   return (
     <div className="container mx-auto px-6 py-8">
       <div className="flex flex-col items-center justify-center py-24 gap-4">
         <h2 className="font-serif text-2xl font-bold text-navy-deep">
-          No listings yet
+          {t("emptyTitle")}
         </h2>
         <p className="text-sm text-gray-500 text-center max-w-sm">
-          Create your first property listing to see it here.
+          {t("emptyBody")}
         </p>
         <Button
           asChild
           className="mt-2 bg-gold text-navy-deep hover:bg-gold/90 rounded-lg shadow-none"
         >
-          <Link href="/create">Create Listing</Link>
+          <Link href="/create">{t("createListing")}</Link>
         </Button>
       </div>
     </div>

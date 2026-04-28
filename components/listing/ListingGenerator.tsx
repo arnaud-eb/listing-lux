@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import ConfirmDiscardDialog from "@/components/shared/ConfirmDiscardDialog";
@@ -8,8 +9,8 @@ import { Pencil, Check, X } from "lucide-react";
 import { toast } from "sonner";
 import type { Language, Listing, Property } from "@/lib/types";
 import { LANGUAGES, LANGUAGE_LABELS } from "@/lib/constants";
-import { useListingGeneration } from "@/app/(wizard)/listing/[listingId]/use-listing-generation";
-import { updateListing } from "@/app/(wizard)/listing/[listingId]/actions";
+import { useListingGeneration } from "@/app/[locale]/(wizard)/listing/[listingId]/use-listing-generation";
+import { updateListing } from "@/app/[locale]/(wizard)/listing/[listingId]/actions";
 import ListingContent from "./ListingContent";
 import ListingBottomBar from "./ListingBottomBar";
 import type { EditableListingHandle } from "./EditableListingContent";
@@ -28,6 +29,7 @@ export default function ListingGenerator({
   property,
   onGeneratingChange,
 }: ListingGeneratorProps) {
+  const t = useTranslations("wizard.listing");
   const {
     state,
     activeTab,
@@ -112,17 +114,17 @@ export default function ListingGenerator({
       if (listing?.id) {
         try {
           await updateListing(listing.id, updates);
-          toast.success("Changes saved");
+          toast.success(t("toastChangesSaved"));
         } catch {
           // Rollback optimistic update
           updateField(activeTab, previousValues);
-          toast.error("Failed to save changes");
+          toast.error(t("toastSaveFailed"));
         }
       }
 
       setIsEditing(false);
     },
-    [activeTab, state, updateField],
+    [activeTab, state, updateField, t],
   );
 
   const handleDiscard = useCallback(() => {
@@ -171,7 +173,7 @@ export default function ListingGenerator({
               className="gap-1.5 rounded-lg text-gray-500"
             >
               <Pencil className="size-3.5" />
-              Edit
+              {t("edit")}
             </Button>
           )}
           {isEditing && (
@@ -191,7 +193,7 @@ export default function ListingGenerator({
                 className="gap-1.5 rounded-lg text-gray-500"
               >
                 <X className="size-3.5" />
-                <span className="max-sm:hidden">Discard</span>
+                <span className="max-sm:hidden">{t("discard")}</span>
               </Button>
               <Button
                 type="button"
@@ -200,7 +202,7 @@ export default function ListingGenerator({
                 className="gap-1.5 rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
               >
                 <Check className="size-3.5" />
-                <span className="max-sm:hidden">Save</span>
+                <span className="max-sm:hidden">{t("save")}</span>
               </Button>
             </div>
           )}
@@ -240,7 +242,7 @@ export default function ListingGenerator({
         onCancel={() => {
           pendingTabRef.current = null;
         }}
-        description="Your edits to this listing will be lost."
+        description={t("discardEditsDescription")}
       />
     </div>
   );

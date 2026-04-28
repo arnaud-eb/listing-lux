@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
@@ -36,8 +37,11 @@ export default function PhotoLightbox({
   onOpenChange,
   urls,
   initialIndex = 0,
-  alt = "Property photo",
+  alt,
 }: PhotoLightboxProps) {
+  const t = useTranslations("wizard.listing.lightbox");
+  const tCarousel = useTranslations("wizard.listing.photoCarousel");
+  const resolvedAlt = alt ?? tCarousel("altPrefix");
   const [index, setIndex] = useState(initialIndex);
 
   // Sync incoming initialIndex whenever the lightbox is (re-)opened with
@@ -77,10 +81,10 @@ export default function PhotoLightbox({
       <DialogContent className="max-w-5xl">
         <DialogHeader>
           <DialogTitle className="font-serif text-navy-deep">
-            All photos
+            {t("title")}
           </DialogTitle>
           <DialogDescription>
-            Photo {index + 1} of {urls.length}
+            {t("description", { current: index + 1, total: urls.length })}
           </DialogDescription>
         </DialogHeader>
 
@@ -89,7 +93,7 @@ export default function PhotoLightbox({
           <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-gray-100">
             <Image
               src={urls[index]}
-              alt={`${alt} ${index + 1}`}
+              alt={`${resolvedAlt} ${index + 1}`}
               fill
               className="object-contain"
               sizes="(max-width: 768px) 100vw, 75vw"
@@ -100,7 +104,7 @@ export default function PhotoLightbox({
                 <button
                   type="button"
                   onClick={goPrev}
-                  aria-label="Previous photo"
+                  aria-label={t("ariaPrev")}
                   className="absolute left-4 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center rounded-full bg-black/65 text-white hover:bg-black/80 shadow-lg transition-colors cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
                   <ChevronLeft className="size-6" />
@@ -108,7 +112,7 @@ export default function PhotoLightbox({
                 <button
                   type="button"
                   onClick={goNext}
-                  aria-label="Next photo"
+                  aria-label={t("ariaNext")}
                   className="absolute right-4 top-1/2 -translate-y-1/2 size-12 flex items-center justify-center rounded-full bg-black/65 text-white hover:bg-black/80 shadow-lg transition-colors cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
                 >
                   <ChevronRight className="size-6" />
@@ -125,7 +129,7 @@ export default function PhotoLightbox({
                   key={i}
                   type="button"
                   onClick={() => setIndex(i)}
-                  aria-label={`View photo ${i + 1}`}
+                  aria-label={t("ariaThumb", { n: i + 1 })}
                   aria-current={i === index ? "true" : undefined}
                   className={`relative aspect-4/3 overflow-hidden rounded-md border-2 transition-all outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 cursor-pointer ${
                     i === index

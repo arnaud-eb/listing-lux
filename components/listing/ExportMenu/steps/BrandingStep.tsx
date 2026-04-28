@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   DialogHeader,
   DialogTitle,
@@ -40,16 +41,15 @@ export default function BrandingStep({
 }: BrandingStepProps) {
   const [isPending, setIsPending] = useState(false);
   const [canSubmit, setCanSubmit] = useState(false);
+  const t = useTranslations("wizard.listing.pdfWizard.branding");
 
   return (
     <>
       <DialogHeader>
         <DialogTitle className="font-serif text-navy-deep">
-          {profile ? "Edit Your Branding" : "Set Up Your Branding"}
+          {profile ? t("titleEdit") : t("titleSetup")}
         </DialogTitle>
-        <DialogDescription>
-          Add your contact info to appear on the PDF. All fields are optional.
-        </DialogDescription>
+        <DialogDescription>{t("description")}</DialogDescription>
       </DialogHeader>
 
       <DialogScrollBody>
@@ -71,7 +71,7 @@ export default function BrandingStep({
           disabled={isPending}
           className="rounded-lg border-gray-300 shadow-none"
         >
-          Cancel
+          {t("cancel")}
         </Button>
         <Button
           type="submit"
@@ -83,10 +83,10 @@ export default function BrandingStep({
             <div
               className="size-4 border-2 border-navy-deep border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
               role="status"
-              aria-label="Saving"
+              aria-label={t("ariaSaving")}
             />
           )}
-          Save Changes
+          {t("saveChanges")}
         </Button>
       </DialogStickyFooter>
     </>

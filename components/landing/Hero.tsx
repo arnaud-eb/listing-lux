@@ -1,7 +1,10 @@
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Hero() {
+  const t = useTranslations("landing.hero");
+
   return (
     <section className="relative px-6 py-16 lg:px-20 lg:py-24 bg-navy-deep text-white overflow-hidden">
       {/* Radial gold glow */}
@@ -21,18 +24,16 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75 motion-reduce:animate-none" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
             </span>
-            Now supporting Luxembourgish
+            {t("badge")}
           </div>
 
           <h1 className="font-serif text-6xl font-bold leading-tight max-md:text-4xl">
-            Generate Property Listings in 4 Languages —{" "}
-            <span className="text-gold italic">In 5 Minutes</span>
+            {t("titlePrefix")}{" "}
+            <span className="text-gold italic">{t("titleAccent")}</span>
           </h1>
 
           <p className="text-lg text-slate-300 max-w-xl leading-relaxed">
-            Elevate your portfolio with professional real estate copy in German,
-            French, English, and Luxembourgish. Tailored for the high-end luxury
-            market with precision and speed.
+            {t("subtitle")}
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -40,13 +41,13 @@ export default function Hero() {
               href="/create"
               className="h-14 px-8 rounded-lg bg-gold text-navy-deep font-bold text-lg shadow-xl shadow-gold/20 hover:bg-gold/90 transition-all inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep outline-none"
             >
-              Try Demo Free
+              {t("ctaPrimary")}
             </Link>
             <Link
               href="/create"
               className="h-14 px-8 rounded-lg border border-slate-500 text-white font-bold text-lg hover:bg-white/10 transition-all inline-flex items-center justify-center focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep outline-none"
             >
-              Create Your Listing
+              {t("ctaSecondary")}
             </Link>
           </div>
         </div>
@@ -57,7 +58,7 @@ export default function Hero() {
           <div className="relative aspect-4/3 rounded-xl overflow-hidden shadow-2xl bg-slate-800">
             <Image
               src="/images/hero-villa.jpg"
-              alt="Luxury modern villa exterior with sunset lighting"
+              alt={t("imageAlt")}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getSessionIdFromCookie } from "@/lib/session";
 import { generateListingPDF } from "@/lib/pdf-generator";
@@ -6,23 +7,35 @@ import type { Language, Listing, Property } from "@/lib/types";
 
 const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en", "lu"]);
 
+function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
+  const match = cookieHeader.match(/NEXT_LOCALE=(\w+)/);
+  return match?.[1] === "en" ? "en" : "fr";
+}
+
 export async function POST(request: Request) {
+  const cookieHeader = request.headers.get("cookie") ?? "";
+  const locale = readLocaleFromCookie(cookieHeader);
+  const t = await getTranslations({
+    locale,
+    namespace: "errors.generation",
+  });
+
   let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
-    return Response.json({ error: "Invalid JSON body" }, { status: 400 });
+    return Response.json({ error: t("invalidJson") }, { status: 400 });
   }
 
   const { propertyId, languages, includeBranding, selectedPhotos } = body;
 
   if (!propertyId || typeof propertyId !== "string") {
-    return Response.json({ error: "propertyId is required" }, { status: 400 });
+    return Response.json({ error: t("propertyIdRequired") }, { status: 400 });
   }
 
   if (!Array.isArray(languages) || languages.length === 0) {
     return Response.json(
-      { error: "languages must be a non-empty array" },
+      { error: t("languagesArrayInvalid") },
       { status: 400 },
     );
   }
@@ -32,7 +45,7 @@ export async function POST(request: Request) {
   ) as Language[];
   if (validLanguages.length === 0) {
     return Response.json(
-      { error: "No valid languages provided" },
+      { error: t("noValidLanguages") },
       { status: 400 },
     );
   }
@@ -47,13 +60,13 @@ export async function POST(request: Request) {
     .single();
 
   if (propError || !property) {
-    return Response.json({ error: "Property not found" }, { status: 404 });
+    return Response.json({ error: t("propertyNotFound") }, { status: 404 });
   }
 
   // Verify session ownership
-  const sessionId = getSessionIdFromCookie(request.headers.get("cookie") ?? "");
+  const sessionId = getSessionIdFromCookie(cookieHeader);
   if (!sessionId || property.session_id !== sessionId) {
-    return Response.json({ error: "Unauthorized" }, { status: 403 });
+    return Response.json({ error: t("unauthorized") }, { status: 403 });
   }
 
   // Fetch listings for requested languages
@@ -65,7 +78,7 @@ export async function POST(request: Request) {
 
   if (listError || !listings || listings.length === 0) {
     return Response.json(
-      { error: "No listings found for the requested languages" },
+      { error: t("noListingsFound") },
       { status: 404 },
     );
   }
@@ -92,7 +105,7 @@ export async function POST(request: Request) {
 
   if (listingData.length === 0) {
     return Response.json(
-      { error: "No completed listings found" },
+      { error: t("noCompletedListings") },
       { status: 404 },
     );
   }
@@ -135,7 +148,7 @@ export async function POST(request: Request) {
     console.error("PDF generation failed:", err);
     return Response.json(
       {
-        error: "PDF generation failed",
+        error: t("pdfFailed"),
         details: err instanceof Error ? err.message : "Unknown error",
       },
       { status: 500 },

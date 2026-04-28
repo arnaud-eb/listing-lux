@@ -36,7 +36,7 @@ vi.mock("@/components/profile/PhoneInput", () => ({
 const upsertSpy = vi.fn();
 const getProfileSpy = vi.fn();
 
-vi.mock("@/app/(wizard)/profile/actions", () => ({
+vi.mock("@/app/[locale]/(wizard)/profile/actions", () => ({
   upsertAgentProfile: (input: unknown) => upsertSpy(input),
   uploadAgentLogo: vi.fn(),
   removeAgentLogo: vi.fn(),

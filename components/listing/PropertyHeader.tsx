@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { useTranslations } from "next-intl";
 import { Pencil, Check, X, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,7 +15,7 @@ import {
 import PriceDisplay from "@/components/shared/PriceDisplay";
 import { getActiveMarket, getNeighborhoodBySlug } from "@/lib/markets";
 import { formatNumber, parseFormattedNumber } from "@/lib/format";
-import { updateProperty } from "@/app/(wizard)/listing/[listingId]/actions";
+import { updateProperty } from "@/app/[locale]/(wizard)/listing/[listingId]/actions";
 import { toast } from "sonner";
 import type { Property } from "@/lib/types";
 
@@ -27,6 +28,7 @@ interface PropertyHeaderProps {
 export default function PropertyHeader({ property, onUpdate, onEditingChange }: PropertyHeaderProps) {
   const market = getActiveMarket();
   const neighborhoods = market.areas.flatMap((a) => a.neighborhoods);
+  const t = useTranslations("wizard.listing.propertyHeader");
 
   const [editing, setEditing] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -86,9 +88,9 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
         });
         setEditing(false);
         onEditingChange?.(false);
-        toast.success("Property details updated");
+        toast.success(t("toastUpdated"));
       } catch {
-        toast.error("Failed to update property details");
+        toast.error(t("toastFailed"));
       }
     });
   }
@@ -99,7 +101,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
         {/* Top action bar — mirrors listing generator edit mode */}
         <div className="flex items-center justify-between mb-3">
           <span className="text-sm font-medium text-gray-500">
-            Property details
+            {t("label")}
           </span>
           <div className="flex items-center gap-2">
             <Button
@@ -111,7 +113,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               className="gap-1.5 rounded-lg text-gray-500"
             >
               <X className="size-3.5" />
-              Discard
+              {t("discard")}
             </Button>
             <Button
               type="button"
@@ -121,7 +123,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               className="gap-1.5 rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
             >
               <Check className="size-3.5" />
-              {isPending ? "Saving…" : "Save"}
+              {isPending ? t("saving") : t("save")}
             </Button>
           </div>
         </div>
@@ -143,7 +145,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               ))}
             </SelectContent>
           </Select>
-          <span className="text-gray-400 text-sm">in</span>
+          <span className="text-gray-400 text-sm">{t("in")}</span>
           <Select
             value={draft.neighborhood}
             onValueChange={(v) => setDraft((d) => ({ ...d, neighborhood: v }))}
@@ -164,7 +166,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
         {/* Stats row: bed, bath, sqm, price */}
         <div className="flex flex-wrap items-end gap-x-3 gap-y-2 mt-3">
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">Bed</label>
+            <label className="text-xs text-gray-500">{t("bedShort")}</label>
             <Input
               type="text"
               inputMode="numeric"
@@ -180,7 +182,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">Bath</label>
+            <label className="text-xs text-gray-500">{t("bathShort")}</label>
             <Input
               type="text"
               inputMode="numeric"
@@ -196,7 +198,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">m²</label>
+            <label className="text-xs text-gray-500">{t("sqmShort")}</label>
             <Input
               type="text"
               inputMode="numeric"
@@ -212,7 +214,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500">Price (€)</label>
+            <label className="text-xs text-gray-500">{t("priceLabel")}</label>
             <Input
               type="text"
               inputMode="numeric"
@@ -234,11 +236,11 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
 
         {/* Address row */}
         <div className="flex flex-col gap-1 mt-3">
-          <label className="text-xs text-gray-500">Address (optional)</label>
+          <label className="text-xs text-gray-500">{t("addressLabel")}</label>
           <Input
             type="text"
             value={draft.address}
-            placeholder="e.g. 12 Rue de la Liberté, Luxembourg"
+            placeholder={t("addressPlaceholder")}
             className="h-9 shadow-none border-dashed border-gold bg-gold/5 max-w-sm"
             onChange={(e) =>
               setDraft((d) => ({ ...d, address: e.target.value }))
@@ -252,15 +254,17 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
   return (
     <>
       <h1 className="font-serif text-3xl font-bold text-navy-deep capitalize">
-        {property.property_type} in {neighborhoodName}
+        {property.property_type} {t("in")} {neighborhoodName}
       </h1>
       <div className="flex items-center gap-3 mt-2 text-sm text-gray-500">
         <span>
-          {property.bedrooms} {property.bedrooms === 1 ? "bed" : "beds"}
+          {property.bedrooms}{" "}
+          {property.bedrooms === 1 ? t("bedSingular") : t("bedPlural")}
         </span>
         <span>·</span>
         <span>
-          {property.bathrooms} {property.bathrooms === 1 ? "bath" : "baths"}
+          {property.bathrooms}{" "}
+          {property.bathrooms === 1 ? t("bathSingular") : t("bathPlural")}
         </span>
         <span>·</span>
         <span>{property.sqm} m²</span>
@@ -273,7 +277,7 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
           type="button"
           onClick={handleEdit}
           className="ml-1 text-gray-400 hover:text-navy-deep transition-colors cursor-pointer"
-          aria-label="Edit property details"
+          aria-label={t("ariaEdit")}
         >
           <Pencil className="size-3.5" />
         </button>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -38,11 +39,16 @@ export default function ConfirmDeleteDialog({
   onOpenChange,
   onConfirm,
   onCancel,
-  title = "Delete this listing?",
-  description = "This will remove the listing and all generated content from your account. This action cannot be undone.",
-  confirmLabel = "Delete",
-  cancelLabel = "Cancel",
+  title,
+  description,
+  confirmLabel,
+  cancelLabel,
 }: ConfirmDeleteDialogProps) {
+  const t = useTranslations("dialogs.confirmDelete");
+  const resolvedTitle = title ?? t("title");
+  const resolvedDescription = description ?? t("description");
+  const resolvedConfirm = confirmLabel ?? t("confirm");
+  const resolvedCancel = cancelLabel ?? t("cancel");
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       {trigger && (
@@ -51,22 +57,22 @@ export default function ConfirmDeleteDialog({
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle className="font-serif text-navy-deep">
-            {title}
+            {resolvedTitle}
           </AlertDialogTitle>
-          <AlertDialogDescription>{description}</AlertDialogDescription>
+          <AlertDialogDescription>{resolvedDescription}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel
             className="rounded-lg shadow-none"
             onClick={onCancel}
           >
-            {cancelLabel}
+            {resolvedCancel}
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={onConfirm}
             className="rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
           >
-            {confirmLabel}
+            {resolvedConfirm}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

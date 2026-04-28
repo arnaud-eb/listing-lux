@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MIN_PHOTOS } from "@/lib/constants";
@@ -17,6 +18,7 @@ export default function GenerateBar({
   hasRequiredFields,
   isLoading = false,
 }: GenerateBarProps) {
+  const t = useTranslations("wizard.generateBar");
   const canGenerate =
     readyPhotoCount >= MIN_PHOTOS &&
     inFlightPhotoCount === 0 &&
@@ -38,14 +40,14 @@ export default function GenerateBar({
             <span
               className="w-4 h-4 border-2 border-navy-deep border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
               role="status"
-              aria-label="Generating"
+              aria-label={t("ariaGenerating")}
             />
-            Generating…
+            {t("generating")}
           </span>
         ) : (
           <span className="flex items-center gap-2">
             <Sparkles className="size-4" />
-            Generate Listing
+            {t("generate")}
           </span>
         )}
       </Button>
@@ -54,10 +56,10 @@ export default function GenerateBar({
       {!canGenerate && !isLoading && (
         <p className="text-xs text-gray-400" role="status">
           {photosNeeded > 0
-            ? `${photosNeeded} more photo${photosNeeded > 1 ? "s" : ""} needed`
+            ? t("photosNeeded", { count: photosNeeded })
             : inFlightPhotoCount > 0
-              ? `Analyzing ${inFlightPhotoCount} photo${inFlightPhotoCount > 1 ? "s" : ""}`
-              : "Fill in all required fields to continue"}
+              ? t("analyzing", { count: inFlightPhotoCount })
+              : t("fillRequired")}
         </p>
       )}
     </div>

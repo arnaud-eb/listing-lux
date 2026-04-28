@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { FEATURE_OPTIONS } from '@/lib/constants'
@@ -10,14 +11,16 @@ interface FeatureChipsProps {
 }
 
 export default function FeatureChips({ features, onChange }: FeatureChipsProps) {
+  const t = useTranslations('wizard.features')
+
   function toggle(id: string) {
     onChange({ ...features, [id]: !features[id] })
   }
 
   return (
     <fieldset>
-      <legend className="text-sm font-medium text-gray-700 mb-2">Features</legend>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Property features">
+      <legend className="text-sm font-medium text-gray-700 mb-2">{t('legend')}</legend>
+      <div className="flex flex-wrap gap-2" role="group" aria-label={t('ariaGroupLabel')}>
         {FEATURE_OPTIONS.map((option) => {
           const checked = !!features[option.id]
           return (

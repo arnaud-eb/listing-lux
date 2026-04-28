@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-27T05:08:35.731Z",
+  "output": {
+    "title": "Exquisite 4-Bedroom Penthouse with Panoramic City Views in Prestigious Belair",
+    "description": "Offering a harmonious blend of sophisticated design and unparalleled comfort, this exquisite 220 m² penthouse epitomizes upscale living within Luxembourg’s most coveted residential enclave, Belair. Nestled amidst serene tree-lined streets and manicured gardens, the property provides an exclusive retreat that gracefully balances urban sophistication with tranquil greenery.\n\nStep into the luminous open-plan living area, accentuated by floor-to-ceiling windows that flood the space with natural light and frame expansive panoramic views of Luxembourg City. The refined oak parquet flooring and elegant wood-burning fireplace contribute to a warm yet contemporary ambiance, perfectly suited for both intimate gatherings and grand entertaining. Integrated smart-home lighting enhances the setting’s modern allure.\n\nThe sleek, minimalist kitchen is a chef’s dream, outfitted with top-tier Gaggenau appliances, a striking Carrara marble island, and a discreet integrated wine fridge. Matte black fixtures underscore the kitchen’s professional-grade quality, while the generous central island invites conviviality and culinary creativity.\n\nRetreat to the master suite, a sanctuary of serene refinement featuring a spacious walk-in closet, an ensuite bathroom, and private access to a tranquil terrace. Three additional bedrooms offer ample space, comfort, and privacy for family or guests. The expansive south-facing terrace beckons with composite decking, a contemporary outdoor lounge, and unobstructed 180-degree views of the city skyline, perfect for alfresco relaxation or entertaining beneath the sky.\n\nAdditional conveniences include secure parking, a storage room, and elevator access. Meticulously renovated with an emphasis on quality and detail, this penthouse presents a rare opportunity to reside within an exclusive, upscale neighborhood offering both privacy and proximity to the vibrant city center.",
+    "highlights": [
+      {
+        "text": "Expansive 220 m² penthouse with 4 bedrooms and 3 bathrooms",
+        "icon": "home"
+      },
+      {
+        "text": "Panoramic 180-degree city views from floor-to-ceiling windows",
+        "icon": "map-pin"
+      },
+      {
+        "text": "State-of-the-art Gaggenau kitchen with Carrara marble island",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "South-facing rooftop terrace with composite decking and lounge area",
+        "icon": "sun"
+      },
+      {
+        "text": "Private master suite with walk-in closet and terrace access",
+        "icon": "bed"
+      },
+      {
+        "text": "Integrated smart-home lighting and newly renovated interiors",
+        "icon": "zap"
+      },
+      {
+        "text": "Secure parking, storage space, and elevator service",
+        "icon": "car"
+      },
+      {
+        "text": "Located in prestigious, green, and family-friendly Belair neighborhood",
+        "icon": "trees"
+      }
+    ],
+    "hashtags": [
+      "ExclusiveLiving",
+      "PanoramicViews",
+      "GourmetKitchen",
+      "PrivateTerrace",
+      "BelairLuxury"
+    ]
+  }
+}

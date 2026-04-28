@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import PhotoLightbox from "./PhotoLightbox";
@@ -24,8 +25,10 @@ const DOT_INDICATOR_LIMIT = 8;
 
 export default function PhotoCarousel({
   urls,
-  alt = "Property photo",
+  alt,
 }: PhotoCarouselProps) {
+  const t = useTranslations("wizard.listing.photoCarousel");
+  const resolvedAlt = alt ?? t("altPrefix");
   const [activeIndex, setActiveIndex] = useState(0);
   const [mobileIndex, setMobileIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -117,7 +120,7 @@ export default function PhotoCarousel({
   if (urls.length === 0) {
     return (
       <div className="aspect-4/3 rounded-xl bg-gray-100 flex items-center justify-center text-gray-400">
-        No photos
+        {t("noPhotos")}
       </div>
     );
   }
@@ -137,7 +140,7 @@ export default function PhotoCarousel({
           >
             <Image
               src={url}
-              alt={`${alt} ${i + 1}`}
+              alt={`${resolvedAlt} ${i + 1}`}
               fill
               className="object-cover"
               sizes="85vw"
@@ -156,7 +159,7 @@ export default function PhotoCarousel({
           <div
             className="flex justify-center gap-0 pt-2 pb-1 lg:hidden"
             role="tablist"
-            aria-label="Photo navigation"
+            aria-label={t("ariaPhotoNav")}
           >
             {urls.map((_, i) => (
               <button
@@ -164,7 +167,7 @@ export default function PhotoCarousel({
                 type="button"
                 role="tab"
                 aria-selected={i === mobileIndex}
-                aria-label={`Photo ${i + 1}`}
+                aria-label={t("ariaPhotoLabel", { n: i + 1 })}
                 onClick={() => scrollToSlide(i)}
                 className="flex items-center justify-center min-w-11 min-h-11 cursor-pointer"
               >
@@ -181,7 +184,7 @@ export default function PhotoCarousel({
         ) : (
           <div
             className="flex justify-center pt-3 pb-1 lg:hidden"
-            aria-label="Photo navigation"
+            aria-label={t("ariaPhotoNav")}
           >
             <span
               className="text-2xs font-medium text-gray-500 tabular-nums"
@@ -199,11 +202,11 @@ export default function PhotoCarousel({
           type="button"
           onClick={() => openLightbox(activeIndex)}
           className="relative aspect-4/3 rounded-xl overflow-hidden bg-gray-100 cursor-zoom-in outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-          aria-label="Open photo gallery"
+          aria-label={t("ariaOpen")}
         >
           <Image
             src={urls[activeIndex]}
-            alt={`${alt} ${activeIndex + 1}`}
+            alt={`${resolvedAlt} ${activeIndex + 1}`}
             fill
             className="object-cover transition-opacity duration-200"
             sizes="50vw"
@@ -232,12 +235,12 @@ export default function PhotoCarousel({
                 className={`relative aspect-4/3 w-full rounded-md overflow-hidden p-0 border-2 ${
                   i === activeIndex ? "border-gold" : "border-transparent"
                 }`}
-                aria-label={`View photo ${i + 1}`}
+                aria-label={t("ariaViewPhoto", { n: i + 1 })}
                 aria-pressed={i === activeIndex}
               >
                 <Image
                   src={url}
-                  alt={`${alt} thumbnail ${i + 1}`}
+                  alt={t("ariaThumbnail", { alt: resolvedAlt, n: i + 1 })}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1280px) 12vw, 8vw"
@@ -251,7 +254,7 @@ export default function PhotoCarousel({
                 variant="ghost"
                 onClick={() => openLightbox(visibleThumbCount)}
                 className="relative aspect-4/3 w-full rounded-md overflow-hidden p-0 border-2 border-transparent group"
-                aria-label={`View all ${urls.length} photos`}
+                aria-label={t("ariaViewAll", { count: urls.length })}
               >
                 <Image
                   src={urls[visibleThumbCount]}
@@ -275,7 +278,7 @@ export default function PhotoCarousel({
         onOpenChange={setLightboxOpen}
         urls={urls}
         initialIndex={lightboxIndex}
-        alt={alt}
+        alt={resolvedAlt}
       />
     </>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -38,11 +39,16 @@ export default function ConfirmDiscardDialog({
   onOpenChange,
   onConfirm,
   onCancel,
-  title = "Discard changes?",
-  description = "Your edits will be lost.",
-  confirmLabel = "Discard",
-  cancelLabel = "Keep editing",
+  title,
+  description,
+  confirmLabel,
+  cancelLabel,
 }: ConfirmDiscardDialogProps) {
+  const t = useTranslations("dialogs.confirmDiscard");
+  const resolvedTitle = title ?? t("title");
+  const resolvedDescription = description ?? t("description");
+  const resolvedConfirm = confirmLabel ?? t("confirm");
+  const resolvedCancel = cancelLabel ?? t("cancel");
   return (
     <AlertDialog open={open} onOpenChange={onOpenChange}>
       {trigger && (
@@ -51,22 +57,22 @@ export default function ConfirmDiscardDialog({
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle className="font-serif text-navy-deep">
-            {title}
+            {resolvedTitle}
           </AlertDialogTitle>
-          <AlertDialogDescription>{description}</AlertDialogDescription>
+          <AlertDialogDescription>{resolvedDescription}</AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel
             className="rounded-lg shadow-none"
             onClick={onCancel}
           >
-            {cancelLabel}
+            {resolvedCancel}
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={onConfirm}
             className="rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
           >
-            {confirmLabel}
+            {resolvedConfirm}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

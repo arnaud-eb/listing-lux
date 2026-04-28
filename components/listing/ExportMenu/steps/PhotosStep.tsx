@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ArrowLeft } from "lucide-react";
 import {
   DialogHeader,
@@ -35,19 +36,19 @@ export default function PhotosStep({
   onContinue,
 }: PhotosStepProps) {
   const hasSelection = selectedPhotos.length > 0;
+  const t = useTranslations("wizard.listing.pdfWizard.photos");
 
   return (
     <>
       <DialogHeader>
         <div className="text-2xs text-gray-400 uppercase tracking-wider mb-1">
-          Step {stepIndex} of {totalSteps} · Photos
+          {t("stepLabel", { step: stepIndex, total: totalSteps })}
         </div>
         <DialogTitle className="font-serif text-navy-deep">
-          Select photos for the PDF
+          {t("title")}
         </DialogTitle>
         <DialogDescription>
-          Click up to {maxPhotos} photos in the order you want them to appear.
-          The first photo becomes the cover.
+          {t("description", { max: maxPhotos })}
         </DialogDescription>
       </DialogHeader>
 
@@ -76,11 +77,11 @@ export default function PhotosStep({
               className="gap-1.5 rounded-lg border-gray-300 shadow-none"
             >
               <ArrowLeft className="size-3.5" />
-              Back
+              {t("back")}
             </Button>
           ) : null}
           <p aria-live="polite" className="truncate text-xs text-gray-400">
-            {selectedPhotos.length} / {maxPhotos} selected
+            {t("selected", { count: selectedPhotos.length, max: maxPhotos })}
           </p>
           {hasSelection && (
             <button
@@ -88,7 +89,7 @@ export default function PhotosStep({
               onClick={onClearPhotos}
               className="text-xs text-gray-500 hover:text-navy-deep transition-colors cursor-pointer outline-none focus-visible:text-navy-deep focus-visible:underline underline-offset-4 shrink-0"
             >
-              Clear
+              {t("clear")}
             </button>
           )}
         </div>
@@ -97,7 +98,7 @@ export default function PhotosStep({
           onClick={onContinue}
           className="gap-1.5 rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none font-semibold shrink-0"
         >
-          Continue
+          {t("continue")}
         </Button>
       </DialogStickyFooter>
     </>

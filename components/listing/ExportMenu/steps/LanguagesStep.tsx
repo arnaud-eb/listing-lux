@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { ArrowLeft, FileDown, Loader2, UserPlus } from "lucide-react";
 import {
   DialogHeader,
@@ -38,17 +39,18 @@ export default function LanguagesStep({
   isDownloading,
 }: LanguagesStepProps) {
   const isEmpty = hasNoBranding(profile);
+  const t = useTranslations("wizard.listing.pdfWizard.languages");
 
   return (
     <>
       <DialogHeader>
         <div className="text-2xs text-gray-400 uppercase tracking-wider mb-1">
-          Step {stepIndex} of {totalSteps} · Languages
+          {t("stepLabel", { step: stepIndex, total: totalSteps })}
         </div>
         <DialogTitle className="font-serif text-navy-deep">
-          Select languages
+          {t("title")}
         </DialogTitle>
-        <DialogDescription>One page per selected language</DialogDescription>
+        <DialogDescription>{t("description")}</DialogDescription>
       </DialogHeader>
 
       <DialogScrollBody>
@@ -81,10 +83,10 @@ export default function LanguagesStep({
                 {isEmpty ? (
                   <>
                     <p className="text-sm font-semibold text-navy-deep">
-                      Add your branding
+                      {t("addBranding")}
                     </p>
                     <p className="text-2xs text-gray-500 uppercase tracking-wider">
-                      Optional · your logo and contact info on the PDF
+                      {t("addBrandingHint")}
                     </p>
                   </>
                 ) : (
@@ -106,7 +108,7 @@ export default function LanguagesStep({
               onClick={onEditBranding}
               className="text-sm font-medium text-gold hover:text-gold/80 transition-colors cursor-pointer shrink-0 ml-2"
             >
-              {isEmpty ? "Add" : "Edit"}
+              {isEmpty ? t("add") : t("edit")}
             </button>
           </div>
 
@@ -157,7 +159,7 @@ export default function LanguagesStep({
           className="gap-1.5 rounded-lg border-gray-300 shadow-none"
         >
           <ArrowLeft className="size-3.5" />
-          Back
+          {t("back")}
         </Button>
         <Button
           onClick={onDownload}
@@ -169,7 +171,7 @@ export default function LanguagesStep({
           ) : (
             <FileDown className="size-4" />
           )}
-          {isDownloading ? "Generating PDF..." : "Download PDF"}
+          {isDownloading ? t("generatingPdf") : t("downloadPdf")}
         </Button>
       </DialogStickyFooter>
     </>

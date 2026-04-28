@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,6 +40,8 @@ export default function ExportMenu({
   const isMobile = useIsMobile();
   const [menuOpen, setMenuOpen] = useState(false);
   const [pdfDialogOpen, setPdfDialogOpen] = useState(false);
+  const t = useTranslations("wizard.listing.exportMenu");
+  const tWizard = useTranslations("wizard.listing.pdfWizard");
 
   const hasCompleteListing = Boolean(listing?.title && listing?.description);
   const isDisabled = !hasCompleteListing || isEditing || isGenerating;
@@ -57,7 +60,7 @@ export default function ExportMenu({
     >
       <Download size={14} />
       <span className={hideTextOnMobile ? "max-sm:hidden" : undefined}>
-        Export
+        {t("export")}
       </span>
     </Button>
   );
@@ -75,7 +78,7 @@ export default function ExportMenu({
             showCloseButton={false}
           >
             <DialogHeader className="sr-only">
-              <DialogTitle>Export listing</DialogTitle>
+              <DialogTitle>{tWizard("title")}</DialogTitle>
             </DialogHeader>
             {hasCompleteListing && listing && property && (
               <CopyMenu

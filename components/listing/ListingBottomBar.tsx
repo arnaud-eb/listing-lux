@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -24,12 +25,12 @@ import type { Language, Listing, Property } from "@/lib/types";
 
 const ExportMenu = dynamic(() => import("./ExportMenu"), { ssr: false });
 
-const QUICK_SUGGESTIONS = [
-  "More concise",
-  "More detailed",
-  "Emphasize location",
-  "Luxury tone",
-];
+const SUGGESTION_KEYS = [
+  "suggestionConcise",
+  "suggestionDetailed",
+  "suggestionLocation",
+  "suggestionLuxury",
+] as const;
 
 interface ListingBottomBarProps {
   onRegenerate?: (comment?: string) => void;
@@ -51,6 +52,9 @@ export default function ListingBottomBar({
   const isMobile = useIsMobile();
   const [popoverOpen, setPopoverOpen] = useState(false);
   const [comment, setComment] = useState("");
+  const t = useTranslations("wizard.listing.bottomBar");
+
+  const QUICK_SUGGESTIONS = SUGGESTION_KEYS.map((k) => t(k));
 
   const handleConfirm = () => {
     onRegenerate?.(comment.trim() || undefined);
@@ -78,7 +82,7 @@ export default function ListingBottomBar({
       <RefreshCw
         className={`size-3.5 ${isGenerating ? "animate-spin" : ""}`}
       />
-      <span className="max-sm:hidden">Regenerate</span>
+      <span className="max-sm:hidden">{t("regenerate")}</span>
       {activeLanguage && (
         <span className="uppercase text-2xs font-bold bg-gold/10 text-gold rounded px-1.5 py-0.5">
           {activeLanguage}
@@ -95,8 +99,9 @@ export default function ListingBottomBar({
       <div className="flex items-center gap-2 max-md:hidden">
         <RefreshCw className="size-4 text-gold" />
         <span className="font-semibold text-sm text-navy-deep">
-          Regenerate{" "}
-          {activeLanguage ? LANGUAGE_LABELS[activeLanguage] : ""} listing
+          {t("regenerateTitle", {
+            language: activeLanguage ? LANGUAGE_LABELS[activeLanguage] : "",
+          })}
         </span>
       </div>
 
@@ -105,7 +110,7 @@ export default function ListingBottomBar({
           htmlFor="regen-comment"
           className="text-xs text-gray-500 mb-1.5 block"
         >
-          Guide the AI (optional)
+          {t("guideAi")}
         </label>
         <Textarea
           id="regen-comment"
@@ -117,7 +122,7 @@ export default function ListingBottomBar({
             const len = e.target.value.length;
             e.target.setSelectionRange(len, len);
           }}
-          placeholder="e.g., 'emphasize the garden view', 'make it shorter and more direct'"
+          placeholder={t("commentPlaceholder")}
           className="resize-none text-sm"
           rows={isMobile ? 4 : 3}
         />
@@ -178,7 +183,7 @@ export default function ListingBottomBar({
       </div>
 
       <p className="text-2xs text-gray-400 max-md:hidden">
-        Leave empty to regenerate without specific guidance.
+        {t("leaveEmptyHint")}
       </p>
 
       <div className="flex items-center justify-end gap-2">
@@ -189,7 +194,7 @@ export default function ListingBottomBar({
           onClick={handleCancel}
           className="rounded-lg shadow-none"
         >
-          Cancel
+          {t("cancel")}
         </Button>
         <Button
           type="button"
@@ -198,7 +203,7 @@ export default function ListingBottomBar({
           className="gap-1.5 rounded-lg bg-gold text-navy-deep hover:bg-gold/90 shadow-none"
         >
           <RefreshCw className="size-3" />
-          Regenerate
+          {t("regenerate")}
         </Button>
       </div>
     </div>
@@ -216,9 +221,11 @@ export default function ListingBottomBar({
                   <DialogHeader>
                     <DialogTitle className="font-serif text-navy-deep flex items-center gap-2">
                       <RefreshCw className="size-4 text-gold" />
-                      Regenerate{" "}
-                      {activeLanguage ? LANGUAGE_LABELS[activeLanguage] : ""}{" "}
-                      listing
+                      {t("regenerateTitle", {
+                        language: activeLanguage
+                          ? LANGUAGE_LABELS[activeLanguage]
+                          : "",
+                      })}
                     </DialogTitle>
                   </DialogHeader>
                   <div className="px-6 pb-6">{regenerateBody}</div>

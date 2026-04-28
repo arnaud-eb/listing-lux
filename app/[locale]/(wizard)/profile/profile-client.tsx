@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 import BrandingForm from "@/components/profile/BrandingForm";
 import { useBeforeUnload } from "@/lib/hooks/use-before-unload";
@@ -11,22 +12,20 @@ interface ProfileClientProps {
 }
 
 export default function ProfileClient({ profile }: ProfileClientProps) {
-  // Lifted from BrandingForm so the browser-level beforeunload guard
-  // activates only when there are unsaved edits. This is the catastrophic-
-  // loss case (tab close, refresh, external URL); App Router has no API
-  // for blocking internal Link navigation.
   const [isDirty, setIsDirty] = useState(false);
   useBeforeUnload(isDirty);
+  const t = useTranslations("wizard.profile");
+  const tBranding = useTranslations("wizard.branding");
 
   return (
     <BrandingForm
       profile={profile}
       alwaysExpanded
       showClearAll
-      submitLabel="Save Changes"
+      submitLabel={tBranding("saveChanges")}
       onDirtyChange={setIsDirty}
       onSuccess={() => {
-        toast.success("Profile saved");
+        toast.success(t("toastProfileSaved"));
       }}
     />
   );

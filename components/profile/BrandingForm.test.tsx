@@ -6,7 +6,7 @@ import type { AgentProfile } from "@/lib/types";
 
 // Stub the server actions — these tests focus on form behavior, not the
 // upsert path.
-vi.mock("@/app/(wizard)/profile/actions", () => ({
+vi.mock("@/app/[locale]/(wizard)/profile/actions", () => ({
   upsertAgentProfile: vi.fn(),
   uploadAgentLogo: vi.fn(),
   removeAgentLogo: vi.fn(),

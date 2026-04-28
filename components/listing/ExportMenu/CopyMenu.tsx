@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   Globe,
   Mail,
@@ -37,6 +38,8 @@ export default function CopyMenu({
   onPdfClick,
 }: CopyMenuProps) {
   const [copiedFormat, setCopiedFormat] = useState<CopyFormat | null>(null);
+  const t = useTranslations("wizard.listing.exportMenu");
+  const tCommon = useTranslations("common");
 
   const athomeResult = formatForAthome(listing);
   const immotopResult = formatForImmotop(listing);
@@ -48,9 +51,9 @@ export default function CopyMenu({
       setCopiedFormat(format);
       setTimeout(() => setCopiedFormat(null), 2000);
 
-      toast.success("Copied to clipboard!");
+      toast.success(t("toastCopied"));
     } catch {
-      toast.error("Failed to copy — try again");
+      toast.error(t("toastCopyFailed"));
     }
   }
 
@@ -58,12 +61,12 @@ export default function CopyMenu({
     <>
       <div className="p-4 pb-3">
         <p className="text-2xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-          Copy Listing
+          {t("copyListing")}
         </p>
         <div className="flex flex-col gap-1">
           <CopyRow
             icon={<Globe className="size-4" />}
-            label="Copy for Athome.lu"
+            label={t("copyAthome")}
             charCount={athomeResult.charCount}
             charLimit={ATHOME_CHAR_LIMIT}
             isOverLimit={athomeResult.isOverLimit}
@@ -73,7 +76,7 @@ export default function CopyMenu({
           />
           <CopyRow
             icon={<Globe className="size-4" />}
-            label="Copy for ImmoTop.lu"
+            label={t("copyImmotop")}
             charCount={immotopResult.charCount}
             charLimit={IMMOTOP_CHAR_LIMIT}
             isOverLimit={immotopResult.isOverLimit}
@@ -83,13 +86,13 @@ export default function CopyMenu({
           />
           <CopyRow
             icon={<Mail className="size-4" />}
-            label="Copy for Email"
+            label={t("copyEmail")}
             isCopied={copiedFormat === "email"}
             onClick={() => handleCopy("email")}
           />
           <CopyRow
             icon={<Share2 className="size-4" />}
-            label="Copy for Social Media"
+            label={t("copySocial")}
             isCopied={copiedFormat === "social"}
             onClick={() => handleCopy("social")}
           />
@@ -100,7 +103,7 @@ export default function CopyMenu({
 
       <div className="p-4 pt-3">
         <p className="text-2xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
-          Export
+          {t("exportSection")}
         </p>
         <div className="flex flex-col gap-1">
           <button
@@ -109,28 +112,28 @@ export default function CopyMenu({
             onClick={onPdfClick}
           >
             <FileDown className="size-4 shrink-0" />
-            <span>Download PDF</span>
+            <span>{t("downloadPdf")}</span>
           </button>
 
           <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-400">
             <Mail className="size-4 shrink-0" />
-            <span>Send via Email</span>
+            <span>{t("sendEmail")}</span>
             <Badge
               variant="outline"
               className="ml-auto text-2xs text-gold border-gold/30"
             >
-              Coming Soon
+              {tCommon("comingSoon")}
             </Badge>
           </div>
 
           <div className="flex items-center gap-3 px-3 py-2 text-sm text-gray-400">
             <Share2 className="size-4 shrink-0" />
-            <span>Post to Social Media</span>
+            <span>{t("postSocial")}</span>
             <Badge
               variant="outline"
               className="ml-auto text-2xs text-gold border-gold/30"
             >
-              Coming Soon
+              {tCommon("comingSoon")}
             </Badge>
           </div>
         </div>
@@ -160,12 +163,13 @@ function CopyRow({
   isCopied,
   onClick,
 }: CopyRowProps) {
+  const t = useTranslations("wizard.listing.exportMenu");
   return (
     <button
       type="button"
       onClick={onClick}
       className="flex items-center gap-3 w-full px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-colors cursor-pointer text-left group"
-      aria-label={`${label}${isCopied ? " — copied" : ""}`}
+      aria-label={isCopied ? t("ariaCopied", { label }) : label}
     >
       <span className="shrink-0 text-gray-500">{icon}</span>
       <span className="flex-1 min-w-0">
@@ -178,8 +182,11 @@ function CopyRow({
             aria-live="polite"
           >
             {isOverLimit
-              ? `Over by ${overBy} chars — try regenerating with 'more concise'`
-              : `${charCount.toLocaleString()} / ${charLimit.toLocaleString()} chars`}
+              ? t("overByChars", { count: overBy ?? 0 })
+              : t("charCount", {
+                  current: charCount.toLocaleString(),
+                  limit: charLimit.toLocaleString(),
+                })}
           </span>
         )}
       </span>

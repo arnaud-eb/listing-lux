@@ -1,39 +1,26 @@
+import { useTranslations } from "next-intl";
 import { Camera, ClipboardList, Sparkles, type LucideIcon } from "lucide-react";
 
-const STEPS: { number: string; title: string; description: string; icon: LucideIcon }[] = [
-  {
-    number: "01",
-    title: "Upload Images",
-    description:
-      "Drag and drop up to 10 property photos. Our AI analyzes each image to identify key features automatically.",
-    icon: Camera,
-  },
-  {
-    number: "02",
-    title: "Key Details",
-    description:
-      "Enter bedrooms, bathrooms, size, price, and select the neighborhood. Toggle feature chips for what applies.",
-    icon: ClipboardList,
-  },
-  {
-    number: "03",
-    title: "Generate & Localize",
-    description:
-      "Click Generate and receive polished listings in German, French, English, and Luxembourgish instantly.",
-    icon: Sparkles,
-  },
+const STEPS: {
+  number: string;
+  icon: LucideIcon;
+  key: "step1" | "step2" | "step3";
+}[] = [
+  { number: "01", icon: Camera, key: "step1" },
+  { number: "02", icon: ClipboardList, key: "step2" },
+  { number: "03", icon: Sparkles, key: "step3" },
 ];
 
 export default function HowItWorks() {
+  const t = useTranslations("landing.howItWorks");
+
   return (
     <section className="py-24 px-6 lg:px-20 bg-bg-light" id="how-it-works">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="font-serif text-4xl font-bold mb-4 max-md:text-3xl">
-          Three Steps to a Perfect Listing
+          {t("title")}
         </h2>
-        <p className="text-slate-600">
-          From photos to published listing in under 5 minutes
-        </p>
+        <p className="text-slate-600">{t("subtitle")}</p>
       </div>
 
       <div className="max-w-5xl mx-auto relative">
@@ -61,9 +48,11 @@ export default function HowItWorks() {
                 <p className="text-gold font-bold text-sm mb-2">
                   {step.number}
                 </p>
-                <h3 className="font-bold text-xl mb-3">{step.title}</h3>
+                <h3 className="font-bold text-xl mb-3">
+                  {t(`${step.key}.title`)}
+                </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  {step.description}
+                  {t(`${step.key}.description`)}
                 </p>
               </div>
             </div>

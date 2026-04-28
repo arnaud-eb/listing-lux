@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
+import { useTranslations } from "next-intl";
 import { Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import ConfirmDeleteDialog from "@/components/shared/ConfirmDeleteDialog";
@@ -23,29 +24,31 @@ export default function DeleteListingButton({
 }: DeleteListingButtonProps) {
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const t = useTranslations("wizard.history.deleteButton");
 
   function handleConfirm() {
     startTransition(async () => {
       try {
         await deleteProperty(propertyId);
-        toast.success("Listing deleted");
+        toast.success(t("toastSuccess"));
         setOpen(false);
         onDeleted?.();
       } catch (err) {
         toast.error(
-          err instanceof Error ? err.message : "Failed to delete listing",
+          err instanceof Error ? err.message : t("toastFailureDefault"),
         );
       }
     });
   }
 
-  // Card variant — small floating icon button on /history cards
   if (variant === "card") {
     return (
       <>
         <button
           type="button"
-          aria-label={title ? `Delete ${title}` : "Delete listing"}
+          aria-label={
+            title ? t("ariaLabelNamed", { title }) : t("ariaLabelGeneric")
+          }
           disabled={isPending}
           onClick={(e) => {
             e.preventDefault();
@@ -65,7 +68,6 @@ export default function DeleteListingButton({
     );
   }
 
-  // Header variant — used in /listing/[id] page header, mirrors /create "Start Over"
   return (
     <>
       <button
@@ -75,7 +77,7 @@ export default function DeleteListingButton({
         className="inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border border-gray-200 text-sm text-gray-400 hover:text-red-500 hover:bg-gray-50 shadow-none transition-colors cursor-pointer disabled:opacity-50 disabled:hover:text-gray-400 disabled:hover:bg-transparent"
       >
         <Trash2 className="size-3" />
-        Delete
+        {t("label")}
       </button>
       <ConfirmDeleteDialog
         open={open}

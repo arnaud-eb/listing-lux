@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronDown, Upload, Trash2, Loader2, Eraser } from "lucide-react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
@@ -12,7 +13,7 @@ import {
   upsertAgentProfile,
   uploadAgentLogo,
   removeAgentLogo,
-} from "@/app/(wizard)/profile/actions";
+} from "@/app/[locale]/(wizard)/profile/actions";
 import PhoneInput from "@/components/profile/PhoneInput";
 import { normalizeWebsite } from "@/lib/url";
 import {
@@ -21,63 +22,22 @@ import {
   isValidEmail,
 } from "@/lib/schemas/profile";
 
-/**
- * Stable id used by the wizard's sticky footer to associate an out-of-form
- * submit button via the native `form="…"` attribute. Exported so callers
- * can reuse it without hard-coding the string.
- */
 export const BRANDING_FORM_ID = "branding-form";
 
 interface BrandingFormProps {
   profile?: AgentProfile | null;
-  /** Called after successful save — Dialog dismisses, Page shows toast, etc. */
   onSuccess?: (profile: AgentProfile) => void;
-  /** Show "Skip" link for inline PDF flow */
   showSkip?: boolean;
   onSkip?: () => void;
-  /** When true, all fields are always expanded (profile page). When false, uses progressive disclosure (dialog). */
   alwaysExpanded?: boolean;
-  /** Custom submit button label */
   submitLabel?: string;
-  /**
-   * When true, the inline Save/Skip footer is omitted. The caller renders
-   * submit controls (typically inside a sticky dialog footer) and points
-   * them at this form via the native HTML `form="branding-form"` attribute.
-   * Default: false (profile page keeps its inline submit button).
-   */
   hideActions?: boolean;
-  /**
-   * Notified whenever the in-flight save state changes. Lets external submit
-   * controls (used with `hideActions`) reflect loading state and stay
-   * disabled while a save is pending.
-   */
   onPendingChange?: (pending: boolean) => void;
-  /**
-   * Notified whenever the form's submittability changes. Lets external submit
-   * controls disable themselves until at least one field has changed and any
-   * provided email is well-formatted.
-   */
   onValidityChange?: (canSubmit: boolean) => void;
-  /**
-   * Notified whenever the form transitions between clean and dirty.
-   * Consumers (profile page → useBeforeUnload, PDF wizard → discard guard)
-   * subscribe to know when unsaved changes exist.
-   */
   onDirtyChange?: (dirty: boolean) => void;
-  /**
-   * When true, render a "Clear all" button next to Save Changes that empties
-   * every field locally (the user must still click Save to persist). Used on
-   * /profile; not shown in the PDF wizard's branding step where it would be
-   * confusing.
-   */
   showClearAll?: boolean;
 }
 
-/**
- * Snapshot the seven editable string fields off a profile so we can compare
- * later for dirty-detection. Trims happen at compare time, not here, so the
- * snapshot reflects the saved state exactly.
- */
 function snapshotInitialValues(profile?: AgentProfile | null) {
   return {
     fullName: profile?.full_name ?? "",
@@ -96,19 +56,16 @@ export default function BrandingForm({
   showSkip,
   onSkip,
   alwaysExpanded = false,
-  submitLabel = "Save Profile",
+  submitLabel,
   hideActions = false,
   onPendingChange,
   onValidityChange,
   onDirtyChange,
   showClearAll = false,
 }: BrandingFormProps) {
-  // Snapshot of the saved values — the dirty-detection baseline. Lives in
-  // state (not a ref) so that updating it on profile change forces a
-  // re-render and the `isDirty` memo recomputes. With a ref, when the
-  // server returns the same content the user just typed, all setX setters
-  // see equal values (Object.is) and React skips the re-render — leaving
-  // isDirty stuck on its previous value (the dot would never clear).
+  const t = useTranslations("wizard.branding");
+  const resolvedSubmitLabel = submitLabel ?? t("saveProfile");
+
   const [initialValues, setInitialValues] = useState(() =>
     snapshotInitialValues(profile),
   );
@@ -131,9 +88,6 @@ export default function BrandingForm({
   const [clearConfirmOpen, setClearConfirmOpen] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Re-sync when the parent passes a different `profile` (e.g. after a
-  // successful save the parent may pass back the saved profile, or the
-  // /profile page may re-render with fresh server data after revalidate).
   useEffect(() => {
     const next = snapshotInitialValues(profile);
     setInitialValues(next);
@@ -198,25 +152,16 @@ export default function BrandingForm({
           agency_name: agencyName.trim() || undefined,
           phone: phone.trim() || undefined,
           agency_address: agencyAddress.trim() || undefined,
-          // Auto-prepend https:// if missing — users shouldn't have to type it.
           agency_website: normalizeWebsite(agencyWebsite),
-          // First-time users: profile row doesn't exist yet when uploadAgentLogo
-          // runs, so its UPDATE is a no-op. Pass the client-side logoUrl here
-          // so the profile is created with the logo on first save.
           logo_url: logoUrl || null,
         });
         onSuccess?.(saved);
       } catch (err) {
-        toast.error(err instanceof Error ? err.message : "Failed to save profile");
+        toast.error(err instanceof Error ? err.message : t("toastSaveFailed"));
       }
     });
   }
 
-  // Clear All targets PERSISTED data — show it only when the saved profile
-  // contains branding. Typing into a fresh first-time form isn't destructive
-  // (the user can just backspace), and the confirmation dialog's "Click
-  // Save Changes after to remove your branding from new PDFs" copy only
-  // makes sense when there's actual saved branding to remove.
   const hasSavedBranding = !hasNoBranding(profile);
 
   function handleClearAll() {
@@ -236,11 +181,11 @@ export default function BrandingForm({
     if (!file) return;
 
     if (!["image/jpeg", "image/png"].includes(file.type)) {
-      toast.error("Logo must be PNG or JPG");
+      toast.error(t("toastLogoTypeInvalid"));
       return;
     }
     if (file.size > 2 * 1024 * 1024) {
-      toast.error("Logo must be under 2MB");
+      toast.error(t("toastLogoTooLarge"));
       return;
     }
 
@@ -250,9 +195,9 @@ export default function BrandingForm({
       formData.append("logo", file);
       const { logoUrl: url } = await uploadAgentLogo(formData);
       setLogoUrl(url);
-      toast.success("Logo uploaded");
+      toast.success(t("toastLogoUploaded"));
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Upload failed");
+      toast.error(err instanceof Error ? err.message : t("toastUploadFailed"));
     } finally {
       setIsUploadingLogo(false);
       if (fileInputRef.current) fileInputRef.current.value = "";
@@ -264,9 +209,9 @@ export default function BrandingForm({
     try {
       await removeAgentLogo();
       setLogoUrl("");
-      toast.success("Logo removed");
+      toast.success(t("toastLogoRemoved"));
     } catch {
-      toast.error("Failed to remove logo");
+      toast.error(t("toastLogoRemoveFailed"));
     } finally {
       setIsUploadingLogo(false);
     }
@@ -280,17 +225,17 @@ export default function BrandingForm({
       className="flex flex-col gap-5"
     >
       <div className="flex flex-col gap-1.5">
-        <Label htmlFor="profile-name">Full Name</Label>
+        <Label htmlFor="profile-name">{t("fullName")}</Label>
         <Input
           id="profile-name"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
-          placeholder="e.g. Arnaud Depierreux"
+          placeholder={t("fullNamePlaceholder")}
         />
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <Label htmlFor="profile-email">Email</Label>
+        <Label htmlFor="profile-email">{t("email")}</Label>
         <Input
           id="profile-email"
           type="text"
@@ -301,7 +246,7 @@ export default function BrandingForm({
           onBlur={() => setEmailTouched(true)}
           aria-invalid={emailError ? true : undefined}
           aria-describedby={emailError ? "profile-email-error" : undefined}
-          placeholder="e.g. agent@agency.lu"
+          placeholder={t("emailPlaceholder")}
         />
         {emailError && (
           <p
@@ -315,16 +260,15 @@ export default function BrandingForm({
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <Label htmlFor="profile-agency">Agency Name</Label>
+        <Label htmlFor="profile-agency">{t("agencyName")}</Label>
         <Input
           id="profile-agency"
           value={agencyName}
           onChange={(e) => setAgencyName(e.target.value)}
-          placeholder="e.g. Unicorn Real Estate"
+          placeholder={t("agencyNamePlaceholder")}
         />
       </div>
 
-      {/* Collapsible "More details" section — collapsed by default in dialog, always open on profile page */}
       {!alwaysExpanded && (
         <button
           type="button"
@@ -334,49 +278,47 @@ export default function BrandingForm({
           <ChevronDown
             className={`size-4 transition-transform ${moreOpen ? "rotate-180" : ""}`}
           />
-          {moreOpen ? "Less details" : "More details (phone, address, logo)"}
+          {moreOpen ? t("moreDetailsClose") : t("moreDetailsOpen")}
         </button>
       )}
 
       {(alwaysExpanded || moreOpen) && (
         <div className="flex flex-col gap-5 animate-in fade-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="profile-phone">Phone</Label>
+            <Label htmlFor="profile-phone">{t("phone")}</Label>
             <PhoneInput id="profile-phone" value={phone} onChange={setPhone} />
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="profile-address">Agency Address</Label>
+            <Label htmlFor="profile-address">{t("agencyAddress")}</Label>
             <Input
               id="profile-address"
               value={agencyAddress}
               onChange={(e) => setAgencyAddress(e.target.value)}
-              placeholder="e.g. 1 Rue de Clausen, Luxembourg"
+              placeholder={t("agencyAddressPlaceholder")}
             />
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="profile-website">Agency Website</Label>
+            <Label htmlFor="profile-website">{t("agencyWebsite")}</Label>
             <Input
               id="profile-website"
               type="text"
               inputMode="url"
               value={agencyWebsite}
               onChange={(e) => setAgencyWebsite(e.target.value)}
-              placeholder="e.g. www.agency.lu"
+              placeholder={t("agencyWebsitePlaceholder")}
             />
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <Label>Agency Logo</Label>
+            <Label>{t("agencyLogo")}</Label>
             {logoUrl ? (
               <div className="flex items-start gap-4 max-sm:flex-col max-sm:items-stretch max-sm:gap-3">
-                {/* 128×128 chip with object-contain so landscape, square,
-                    and portrait logos all read correctly without cropping. */}
                 <div className="size-32 shrink-0 rounded-lg border border-gray-200 bg-gray-50 p-2 flex items-center justify-center">
                   <img
                     src={logoUrl}
-                    alt="Agency logo"
+                    alt={t("altAgencyLogo")}
                     className="max-w-full max-h-full w-auto h-auto object-contain"
                   />
                 </div>
@@ -390,7 +332,7 @@ export default function BrandingForm({
                     className="gap-1.5 rounded-lg border-gray-300 shadow-none"
                   >
                     <Upload className="size-3.5" />
-                    Replace
+                    {t("replace")}
                   </Button>
                   <Button
                     type="button"
@@ -401,7 +343,7 @@ export default function BrandingForm({
                     className="gap-1.5 rounded-lg border-gray-300 hover:text-red-600 shadow-none"
                   >
                     <Trash2 className="size-3.5" />
-                    Remove
+                    {t("remove")}
                   </Button>
                 </div>
               </div>
@@ -417,7 +359,7 @@ export default function BrandingForm({
                 ) : (
                   <Upload className="size-4" />
                 )}
-                {isUploadingLogo ? "Uploading..." : "Upload logo (PNG, JPG, max 2MB)"}
+                {isUploadingLogo ? t("uploading") : t("uploadCta")}
               </button>
             )}
             <input
@@ -426,14 +368,12 @@ export default function BrandingForm({
               accept="image/png,image/jpeg"
               onChange={handleLogoUpload}
               className="hidden"
-              aria-label="Upload agency logo"
+              aria-label={t("ariaUploadLogo")}
             />
           </div>
         </div>
       )}
 
-      {/* Actions — hidden when the caller renders its own submit controls
-          (e.g. wizard sticky footer using form="branding-form") */}
       {!hideActions && (
         <div className="flex items-center justify-between pt-2">
           {showSkip ? (
@@ -442,7 +382,7 @@ export default function BrandingForm({
               onClick={onSkip}
               className="text-sm text-gray-400 hover:text-gray-600 transition-colors cursor-pointer"
             >
-              Skip — Generate without branding
+              {t("skipLink")}
             </button>
           ) : showClearAll && hasSavedBranding ? (
             <Button
@@ -454,7 +394,7 @@ export default function BrandingForm({
               className="gap-1.5 rounded-lg border-gray-300 hover:text-red-600 shadow-none"
             >
               <Eraser className="size-3.5" />
-              Clear all
+              {t("clearAll")}
             </Button>
           ) : (
             <span />
@@ -468,10 +408,10 @@ export default function BrandingForm({
               <div
                 className="size-4 border-2 border-navy-deep border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
                 role="status"
-                aria-label="Saving"
+                aria-label={t("ariaSaving")}
               />
             )}
-            {submitLabel}
+            {resolvedSubmitLabel}
           </Button>
         </div>
       )}
@@ -480,10 +420,10 @@ export default function BrandingForm({
         open={clearConfirmOpen}
         onOpenChange={setClearConfirmOpen}
         onConfirm={handleClearAll}
-        title="Clear all branding fields?"
-        description="Every field will be emptied. Click Save Changes after to remove your branding from new PDFs."
-        confirmLabel="Clear all"
-        cancelLabel="Cancel"
+        title={t("clearDialogTitle")}
+        description={t("clearDialogDescription")}
+        confirmLabel={t("clearDialogConfirm")}
+        cancelLabel={t("clearDialogCancel")}
       />
     </form>
   );

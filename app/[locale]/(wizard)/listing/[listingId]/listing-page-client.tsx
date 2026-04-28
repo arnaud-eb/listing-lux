@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, useRouter } from "@/i18n/navigation";
 import { Plus } from "lucide-react";
-import DeleteListingButton from "@/app/(wizard)/history/DeleteListingButton";
+import DeleteListingButton from "@/app/[locale]/(wizard)/history/DeleteListingButton";
 import ListingGenerator from "@/components/listing/ListingGenerator";
 import PropertyHeader from "@/components/listing/PropertyHeader";
 import type { Listing, Property } from "@/lib/types";
@@ -25,6 +25,7 @@ export default function ListingPageClient({
   const [isGenerating, setIsGenerating] = useState(false);
   const [isEditingProperty, setIsEditingProperty] = useState(false);
   const [property, setProperty] = useState(initialProperty);
+  const t = useTranslations("wizard.listing");
 
   return (
     <>
@@ -40,7 +41,7 @@ export default function ListingPageClient({
             className="inline-flex items-center gap-1.5 h-9 px-3 rounded-lg border border-gray-200 text-sm text-gray-400 hover:bg-gray-50 shadow-none transition-colors"
           >
             <Plus className="size-3" />
-            New Listing
+            {t("newListing")}
           </Link>
           <DeleteListingButton
             propertyId={property.id}

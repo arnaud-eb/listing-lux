@@ -1,45 +1,53 @@
 import { test, expect } from '@playwright/test'
 
+// EN locale lives at /en — FR is the default and renders at /. Existing tests
+// asserted English copy, so they navigate to /en here. The i18n locale-switch
+// spec below covers the FR default + URL rewrite separately.
+
 test('landing page loads with all sections', async ({ page }) => {
-  await page.goto('/')
+  await page.goto('/en')
 
-  // Hero section
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-  await expect(page.getByText('Elevate Your Listings')).toBeVisible()
-
-  // Efficiency section
-  await expect(page.getByText('5 Minutes')).toBeVisible()
-
-  // How it works section
+  await expect(
+    page.getByRole('heading', { name: /Generate Property Listings/i }),
+  ).toBeVisible()
   await expect(page.getByText('Three Steps to a Perfect Listing')).toBeVisible()
-
-  // Pricing section
-  await expect(page.getByText('€199')).toBeVisible()
+  await expect(page.getByText('€99')).toBeVisible()
 })
 
-test('Try Demo CTA navigates to /demo', async ({ page }) => {
-  await page.goto('/')
-  await page.getByRole('link', { name: /try demo/i }).click()
-  await expect(page).toHaveURL('/demo')
+test('Create Listing CTA navigates to /en/create', async ({ page }) => {
+  await page.goto('/en')
+  await page.getByRole('link', { name: /create your listing/i }).first().click()
+  await expect(page).toHaveURL('/en/create')
 })
 
-test('Create Listing CTA navigates to /create', async ({ page }) => {
+test('default landing renders French copy', async ({ page }) => {
   await page.goto('/')
-  await page.getByRole('link', { name: /create listing/i }).first().click()
-  await expect(page).toHaveURL('/create')
+  await expect(
+    page.getByRole('heading', { name: /Générez des annonces/i }),
+  ).toBeVisible()
+  await expect(page.locator('html')).toHaveAttribute('lang', 'fr')
 })
 
-test('language badges are visible in hero', async ({ page }) => {
-  await page.goto('/')
-  await expect(page.getByText('DE')).toBeVisible()
-  await expect(page.getByText('FR')).toBeVisible()
-  await expect(page.getByText('EN')).toBeVisible()
-  await expect(page.getByText('LU')).toBeVisible()
+test('language switcher swaps locale and preserves path', async ({ page }) => {
+  await page.goto('/create')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(
+    'Créer une nouvelle annonce',
+  )
+
+  await page.getByRole('button', { name: /change language/i }).first().click()
+  await page.getByRole('button', { name: /^english$/i }).click()
+
+  await expect(page).toHaveURL(/\/en\/create$/)
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(
+    'Create New Listing',
+  )
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en')
 })
 
-test('pricing section has 3 plans', async ({ page }) => {
-  await page.goto('/')
-  await expect(page.getByText('€49')).toBeVisible()
-  await expect(page.getByText('€199')).toBeVisible()
-  await expect(page.getByText('€499')).toBeVisible()
+test('pricing section has 3 plans (EN)', async ({ page }) => {
+  await page.goto('/en')
+  await expect(page.getByText('€99')).toBeVisible()
+  await expect(page.getByText('€249')).toBeVisible()
+  await expect(page.getByText('Custom')).toBeVisible()
 })

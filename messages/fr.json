@@ -1,0 +1,477 @@
+{
+  "metadata": {
+    "rootTitle": "ListingLux AI — Annonces immobilières multilingues pour le Luxembourg",
+    "rootDescription": "Générez des descriptions immobilières professionnelles en allemand, français, anglais et luxembourgeois en quelques secondes.",
+    "historyTitle": "Vos annonces — ListingLux AI",
+    "profileTitle": "Votre profil — ListingLux AI",
+    "listingNotFoundTitle": "Annonce introuvable — ListingLux AI",
+    "listingTitleTemplate": "{type} à {neighborhood} — ListingLux AI",
+    "listingDescriptionTemplate": "{bedrooms} ch · {bathrooms} sdb · {sqm} m² {type} de luxe à {neighborhood}, Luxembourg"
+  },
+  "common": {
+    "skipToMain": "Aller au contenu principal",
+    "loading": "Chargement…",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "saving": "Enregistrement…",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "discard": "Annuler",
+    "back": "Retour",
+    "continue": "Continuer",
+    "comingSoon": "Bientôt disponible",
+    "optional": "Optionnel",
+    "navigationMenu": "Menu de navigation",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "changeLanguage": "Changer de langue"
+  },
+  "navigation": {
+    "links": {
+      "efficiency": "Efficacité",
+      "howItWorks": "Comment ça marche",
+      "pricing": "Tarifs",
+      "contact": "Contact"
+    },
+    "login": "Connexion",
+    "tryDemo": "Essayer la démo"
+  },
+  "wizardNav": {
+    "home": "Accueil",
+    "createListing": "Créer une annonce",
+    "yourListings": "Vos annonces",
+    "profile": "Profil",
+    "profileIncomplete": "Profil incomplet"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Désormais disponible en luxembourgeois",
+      "titlePrefix": "Générez des annonces immobilières en 4 langues —",
+      "titleAccent": "En 5 minutes",
+      "subtitle": "Valorisez votre portefeuille avec des textes immobiliers professionnels en allemand, français, anglais et luxembourgeois. Conçus pour le marché du luxe avec précision et rapidité.",
+      "ctaPrimary": "Essayer la démo",
+      "ctaSecondary": "Créer votre annonce",
+      "imageAlt": "Extérieur d'une villa moderne de luxe au coucher du soleil"
+    },
+    "efficiency": {
+      "title": "Ne passez plus des heures sur vos annonces",
+      "subtitle": "Découvrez la différence que fait l'IA dans votre quotidien",
+      "oldWay": {
+        "tag": "Avant",
+        "ariaLabel": "Approche traditionnelle de rédaction",
+        "heading": "Rédaction traditionnelle",
+        "point1": "2 heures de rédaction manuelle",
+        "point2": "Coûts de traduction externes",
+        "point3": "Ton luxueux inconstant",
+        "totalLabel": "Total :",
+        "totalValue": "120+ min"
+      },
+      "newWay": {
+        "tag": "Avec ListingLux",
+        "ariaLabel": "Approche ListingLux AI",
+        "heading": "ListingLux AI",
+        "point1": "Généré automatiquement en 5 minutes",
+        "point2": "Niveau natif en LU, FR, DE, EN",
+        "point3": "Ton professionnel digne de Sotheby's",
+        "totalLabel": "Total :",
+        "totalValue": "5 min"
+      }
+    },
+    "howItWorks": {
+      "title": "Trois étapes pour une annonce parfaite",
+      "subtitle": "Des photos à l'annonce publiée en moins de 5 minutes",
+      "step1": {
+        "title": "Téléverser les photos",
+        "description": "Glissez-déposez jusqu'à 10 photos du bien. Notre IA analyse chaque image pour identifier automatiquement les caractéristiques clés."
+      },
+      "step2": {
+        "title": "Détails essentiels",
+        "description": "Renseignez les chambres, salles de bain, superficie, prix et sélectionnez le quartier. Activez les options pertinentes."
+      },
+      "step3": {
+        "title": "Générer & traduire",
+        "description": "Cliquez sur Générer et recevez des annonces soignées en allemand, français, anglais et luxembourgeois instantanément."
+      }
+    },
+    "pricing": {
+      "title": "Tarification simple et transparente",
+      "subtitle": "Commencez gratuitement, évoluez à votre rythme. Annulable à tout moment.",
+      "mostPopular": "Le plus populaire",
+      "perMonth": "/mois",
+      "starter": {
+        "name": "Starter",
+        "description": "Idéal pour les agents indépendants",
+        "price": "99 €",
+        "feature1": "5 annonces par mois",
+        "feature2": "4 langues (DE, FR, EN, LU)",
+        "feature3": "Analyse photo standard",
+        "cta": "Commencer l'essai gratuit"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Pour les agents à fort volume",
+        "price": "249 €",
+        "feature1": "25 annonces par mois",
+        "feature2": "Tableau de bord multi-utilisateurs",
+        "feature3": "Analyse architecturale avancée",
+        "feature4": "Teasers pour réseaux sociaux",
+        "cta": "Choisir l'offre Elite"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Pour les agences avec de grandes équipes et des flux personnalisés.",
+        "price": "Sur devis",
+        "feature1": "Annonces illimitées",
+        "feature2": "Formation au ton de marque personnalisé",
+        "feature3": "Intégration API",
+        "feature4": "Responsable de compte dédié",
+        "cta": "Contacter les ventes"
+      }
+    },
+    "footer": {
+      "tagline": "Conçu pour les professionnels de l'immobilier au Luxembourg",
+      "company": "Société",
+      "aboutUs": "À propos",
+      "privacy": "Confidentialité",
+      "support": "Support",
+      "documentation": "Documentation",
+      "contact": "Contact",
+      "rightsReserved": "{year} ListingLux AI. Tous droits réservés.",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "demo": {
+    "icon": "🏡",
+    "title": "Démo bientôt disponible",
+    "description": "Nous préparons une démo pré-configurée avec des exemples d'annonces immobilières luxembourgeoises. En attendant, créez votre propre annonce.",
+    "backHome": "← Retour à l'accueil",
+    "createListing": "Créer une annonce"
+  },
+  "wizard": {
+    "create": {
+      "title": "Créer une nouvelle annonce",
+      "subtitle": "Renseignez les détails du bien et fournissez des images haute résolution pour générer votre annonce.",
+      "startOver": "Tout recommencer",
+      "startOverDialogTitle": "Tout recommencer ?",
+      "startOverDialogDescription": "Cela effacera tous les détails et photos que vous avez ajoutés. Cette action est irréversible.",
+      "propertyDetails": "Détails du bien",
+      "bedroomsLabel": "Chambres",
+      "bathroomsLabel": "Salles de bain",
+      "sizeLabel": "Superficie (m²)",
+      "sizePlaceholder": "ex. 120",
+      "priceLabel": "Prix demandé (€)",
+      "pricePlaceholder": "ex. 850.000",
+      "addressLabel": "Adresse du bien",
+      "addressPlaceholder": "ex. 12 Rue de Clausen, Luxembourg",
+      "addressHelper": "Optionnel — inclus dans les exports PDF et réseaux sociaux",
+      "validationError": "Veuillez vérifier vos informations et réessayer."
+    },
+    "photoUploader": {
+      "sectionTitle": "Galerie du bien",
+      "recommendation": "Recommandé : 10+ photos haute résolution",
+      "dropZoneTitle": "Glissez-déposez vos images ici",
+      "dropZoneSubtitle": "ou cliquez pour parcourir vos fichiers (JPG, PNG, WebP jusqu'à 10 Mo)",
+      "uploadCounter": "{current}/{max} téléversées",
+      "addMore": "Ajouter",
+      "ariaLabelDropZone": "Téléverser des photos du bien — glissez-déposez ou appuyez pour parcourir",
+      "ariaLabelAddMore": "Ajouter d'autres photos",
+      "aiTipTitle": "Astuce IA",
+      "aiTipBody": "Ajoutez {count, plural, one {# photo supplémentaire} other {# photos supplémentaires}} pour activer la génération IA. Notre IA donne le meilleur avec des photos de la cuisine, de la chambre principale et du salon.",
+      "toastMaxPhotos": "Maximum {max} photos autorisées.",
+      "toastOversized": "{count, plural, one {# fichier dépassait la limite de 10 Mo et a été ignoré.} other {# fichiers dépassaient la limite de 10 Mo et ont été ignorés.}}"
+    },
+    "photoThumbnail": {
+      "uploading": "Téléversement…",
+      "analyzing": "Analyse…",
+      "error": "Erreur",
+      "mainView": "Vue principale",
+      "ariaUploading": "Téléversement",
+      "ariaAnalyzing": "Analyse de la photo",
+      "ariaRemove": "Supprimer la photo",
+      "ariaEditRoomType": "Modifier le type de pièce (actuellement {value})",
+      "ariaRoomType": "Type de pièce"
+    },
+    "stepperInput": {
+      "ariaDecrease": "Diminuer {label}",
+      "ariaIncrease": "Augmenter {label}"
+    },
+    "generateBar": {
+      "generating": "Génération…",
+      "generate": "Générer l'annonce",
+      "ariaGenerating": "Génération en cours",
+      "photosNeeded": "{count, plural, one {# photo supplémentaire requise} other {# photos supplémentaires requises}}",
+      "analyzing": "{count, plural, one {Analyse de # photo} other {Analyse de # photos}}",
+      "fillRequired": "Remplissez tous les champs requis pour continuer"
+    },
+    "neighborhood": {
+      "label": "Quartier",
+      "placeholder": "Sélectionner un quartier…",
+      "estimatedValue": "Valeur de marché estimée :",
+      "averagePrefix": "Moy. :",
+      "ariaEstimate": "Prix moyen estimé : {value}"
+    },
+    "features": {
+      "legend": "Caractéristiques",
+      "ariaGroupLabel": "Caractéristiques du bien"
+    },
+    "history": {
+      "title": "Vos annonces",
+      "subtitle": "Les biens que vous avez créés",
+      "emptyTitle": "Aucune annonce pour le moment",
+      "emptyBody": "Créez votre première annonce pour la voir apparaître ici.",
+      "createListing": "Créer une annonce",
+      "altPropertyPhoto": "Photo du bien",
+      "deleteButton": {
+        "ariaLabelGeneric": "Supprimer l'annonce",
+        "ariaLabelNamed": "Supprimer {title}",
+        "label": "Supprimer",
+        "toastSuccess": "Annonce supprimée",
+        "toastFailureDefault": "Échec de la suppression de l'annonce"
+      }
+    },
+    "profile": {
+      "title": "Votre profil",
+      "subtitle": "Gérez votre image professionnelle pour les exports PDF",
+      "brandingHeading": "Informations de marque",
+      "socialMediaHeading": "Réseaux sociaux",
+      "socialMediaBody": "Connectez vos comptes Facebook et Instagram pour partager vos annonces directement depuis ListingLux AI.",
+      "toastProfileSaved": "Profil enregistré"
+    },
+    "branding": {
+      "fullName": "Nom complet",
+      "fullNamePlaceholder": "ex. Arnaud Depierreux",
+      "email": "E-mail",
+      "emailPlaceholder": "ex. agent@agence.lu",
+      "agencyName": "Nom de l'agence",
+      "agencyNamePlaceholder": "ex. Unicorn Real Estate",
+      "moreDetailsOpen": "Plus de détails (téléphone, adresse, logo)",
+      "moreDetailsClose": "Moins de détails",
+      "phone": "Téléphone",
+      "agencyAddress": "Adresse de l'agence",
+      "agencyAddressPlaceholder": "ex. 1 Rue de Clausen, Luxembourg",
+      "agencyWebsite": "Site web de l'agence",
+      "agencyWebsitePlaceholder": "ex. www.agence.lu",
+      "agencyLogo": "Logo de l'agence",
+      "altAgencyLogo": "Logo de l'agence",
+      "replace": "Remplacer",
+      "remove": "Supprimer",
+      "uploading": "Téléversement…",
+      "uploadCta": "Téléverser le logo (PNG, JPG, max 2 Mo)",
+      "ariaUploadLogo": "Téléverser le logo de l'agence",
+      "skipLink": "Passer — Générer sans branding",
+      "clearAll": "Tout effacer",
+      "saveProfile": "Enregistrer le profil",
+      "saveChanges": "Enregistrer",
+      "ariaSaving": "Enregistrement",
+      "clearDialogTitle": "Effacer toutes les informations de marque ?",
+      "clearDialogDescription": "Tous les champs seront vidés. Cliquez sur Enregistrer pour retirer votre branding des nouveaux PDF.",
+      "clearDialogConfirm": "Tout effacer",
+      "clearDialogCancel": "Annuler",
+      "toastLogoUploaded": "Logo téléversé",
+      "toastUploadFailed": "Échec du téléversement",
+      "toastLogoRemoved": "Logo supprimé",
+      "toastLogoRemoveFailed": "Impossible de supprimer le logo",
+      "toastSaveFailed": "Échec de l'enregistrement du profil",
+      "toastLogoTypeInvalid": "Le logo doit être au format PNG ou JPG",
+      "toastLogoTooLarge": "Le logo doit faire moins de 2 Mo"
+    },
+    "listing": {
+      "newListing": "Nouvelle annonce",
+      "ariaPropertyPhoto": "Photo du bien",
+      "altPrefix": "Photo du bien",
+      "edit": "Modifier",
+      "discard": "Annuler",
+      "save": "Enregistrer",
+      "saving": "Enregistrement…",
+      "queued": "En attente — sera générée après {language}",
+      "queuedFallback": "la langue actuelle",
+      "ariaQueued": "En attente de génération",
+      "noContent": "Aucun contenu généré pour le moment.",
+      "generationFailed": "La génération a échoué",
+      "retry": "Réessayer",
+      "preparing": "Préparation de votre annonce en {language}…",
+      "ariaGenerating": "Génération de l'annonce",
+      "hashtags": "Hashtags",
+      "addHighlight": "Ajouter un point fort",
+      "ariaRemoveHighlight": "Supprimer le point fort",
+      "addHashtag": "+ Ajouter un hashtag",
+      "ariaRemoveHashtag": "Supprimer le hashtag",
+      "toastTitleRequired": "Le titre est requis",
+      "toastChangesSaved": "Modifications enregistrées",
+      "toastSaveFailed": "Échec de l'enregistrement des modifications",
+      "discardEditsDescription": "Vos modifications de cette annonce seront perdues.",
+      "propertyHeader": {
+        "label": "Détails du bien",
+        "discard": "Annuler",
+        "save": "Enregistrer",
+        "saving": "Enregistrement…",
+        "in": "à",
+        "bedShort": "Ch.",
+        "bathShort": "Sdb",
+        "sqmShort": "m²",
+        "priceLabel": "Prix (€)",
+        "addressLabel": "Adresse (optionnelle)",
+        "addressPlaceholder": "ex. 12 Rue de la Liberté, Luxembourg",
+        "ariaEdit": "Modifier les détails du bien",
+        "bedSingular": "chambre",
+        "bedPlural": "chambres",
+        "bathSingular": "sdb",
+        "bathPlural": "sdb",
+        "toastUpdated": "Détails du bien mis à jour",
+        "toastFailed": "Échec de la mise à jour des détails du bien"
+      },
+      "bottomBar": {
+        "regenerate": "Régénérer",
+        "regenerateTitle": "Régénérer l'annonce {language}",
+        "guideAi": "Guider l'IA (optionnel)",
+        "commentPlaceholder": "ex. : « mettre la vue sur le jardin en avant », « plus court et plus direct »",
+        "leaveEmptyHint": "Laissez vide pour régénérer sans consigne particulière.",
+        "cancel": "Annuler",
+        "suggestionConcise": "Plus concis",
+        "suggestionDetailed": "Plus détaillé",
+        "suggestionLocation": "Mettre l'emplacement en avant",
+        "suggestionLuxury": "Ton luxueux"
+      },
+      "exportMenu": {
+        "export": "Exporter",
+        "copyListing": "Copier l'annonce",
+        "copyAthome": "Copier pour Athome.lu",
+        "copyImmotop": "Copier pour ImmoTop.lu",
+        "copyEmail": "Copier pour e-mail",
+        "copySocial": "Copier pour réseaux sociaux",
+        "exportSection": "Exporter",
+        "downloadPdf": "Télécharger le PDF",
+        "sendEmail": "Envoyer par e-mail",
+        "postSocial": "Publier sur les réseaux sociaux",
+        "ariaCopied": "{label} — copié",
+        "overByChars": "Dépassement de {count} caractères — essayez de régénérer avec « plus concis »",
+        "charCount": "{current} / {limit} caractères",
+        "toastCopied": "Copié dans le presse-papiers !",
+        "toastCopyFailed": "Échec de la copie — réessayez"
+      },
+      "pdfWizard": {
+        "title": "Exporter en PDF",
+        "loading": "Chargement…",
+        "ariaLoading": "Chargement",
+        "discardBrandingTitle": "Annuler les modifications du branding ?",
+        "discardBrandingDescription": "Vos modifications du profil agent seront perdues.",
+        "toastDownloaded": "PDF téléchargé !",
+        "toastFailed": "Échec de la génération du PDF",
+        "branding": {
+          "titleEdit": "Modifier votre branding",
+          "titleSetup": "Configurer votre branding",
+          "description": "Ajoutez vos coordonnées pour qu'elles apparaissent sur le PDF. Tous les champs sont optionnels.",
+          "cancel": "Annuler",
+          "saveChanges": "Enregistrer",
+          "ariaSaving": "Enregistrement"
+        },
+        "photos": {
+          "stepLabel": "Étape {step} sur {total} · Photos",
+          "title": "Sélectionner les photos pour le PDF",
+          "description": "Cliquez sur jusqu'à {max} photos dans l'ordre où vous voulez les voir apparaître. La première photo devient la couverture.",
+          "selected": "{count} / {max} sélectionnées",
+          "clear": "Effacer",
+          "back": "Retour",
+          "continue": "Continuer"
+        },
+        "languages": {
+          "stepLabel": "Étape {step} sur {total} · Langues",
+          "title": "Sélectionner les langues",
+          "description": "Une page par langue sélectionnée",
+          "addBranding": "Ajouter votre branding",
+          "addBrandingHint": "Optionnel · votre logo et coordonnées sur le PDF",
+          "add": "Ajouter",
+          "edit": "Modifier",
+          "back": "Retour",
+          "downloadPdf": "Télécharger le PDF",
+          "generatingPdf": "Génération du PDF…"
+        }
+      },
+      "photoSelector": {
+        "ariaSelectedAt": "Photo {n} sélectionnée en position {position} — cliquez pour retirer",
+        "ariaSelect": "Sélectionner la photo {n}",
+        "selectedCounter": "{count} / {max} sélectionnées",
+        "selectedPrompt": " — cliquez sur les photos dans l'ordre voulu",
+        "clear": "Effacer"
+      },
+      "photoCarousel": {
+        "noPhotos": "Aucune photo",
+        "altPrefix": "Photo du bien",
+        "ariaOpen": "Ouvrir la galerie photos",
+        "ariaPhotoNav": "Navigation des photos",
+        "ariaViewPhoto": "Voir la photo {n}",
+        "ariaThumbnail": "{alt} miniature {n}",
+        "ariaViewAll": "Voir les {count} photos",
+        "ariaPhotoLabel": "Photo {n}"
+      },
+      "lightbox": {
+        "title": "Toutes les photos",
+        "description": "Photo {current} sur {total}",
+        "ariaPrev": "Photo précédente",
+        "ariaNext": "Photo suivante",
+        "ariaThumb": "Voir la photo {n}"
+      }
+    },
+    "errors": {
+      "title": "Une erreur est survenue",
+      "fallbackBody": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+      "backHome": "Retour à l'accueil",
+      "tryAgain": "Réessayer",
+      "notFoundTitle": "Annonce introuvable",
+      "notFoundBody": "Cette annonce n'existe pas ou n'est plus disponible. Elle a peut-être été créée dans une autre session de navigateur.",
+      "notFoundCtaPrimary": "Créer une nouvelle annonce",
+      "notFoundCtaSecondary": "Vos annonces"
+    }
+  },
+  "dialogs": {
+    "confirmDelete": {
+      "title": "Supprimer cette annonce ?",
+      "description": "Cette action retirera l'annonce et tout le contenu généré de votre compte. Cette action est irréversible.",
+      "confirm": "Supprimer",
+      "cancel": "Annuler"
+    },
+    "confirmDiscard": {
+      "title": "Annuler les modifications ?",
+      "description": "Vos modifications seront perdues.",
+      "confirm": "Annuler",
+      "cancel": "Continuer la modification"
+    }
+  },
+  "errors": {
+    "generation": {
+      "invalidJson": "Corps JSON invalide",
+      "propertyIdRequired": "propertyId est requis",
+      "languageInvalid": "language doit être l'un de : de, fr, en, lu",
+      "propertyNotFound": "Bien introuvable",
+      "unauthorized": "Non autorisé",
+      "languagesArrayInvalid": "languages doit être un tableau non vide",
+      "noValidLanguages": "Aucune langue valide fournie",
+      "noListingsFound": "Aucune annonce trouvée pour les langues demandées",
+      "noCompletedListings": "Aucune annonce complète trouvée",
+      "pdfFailed": "La génération du PDF a échoué"
+    },
+    "actions": {
+      "validationFailed": "Validation échouée : {messages}",
+      "propertyIdRequired": "propertyId est requis",
+      "listingIdRequired": "listingId est requis",
+      "atLeastOneField": "Au moins un champ doit être fourni",
+      "propertyNotFound": "Bien introuvable",
+      "savePropertyFailed": "Échec de l'enregistrement du bien : {message}",
+      "updatePropertyFailed": "Échec de la mise à jour du bien : {message}",
+      "updateListingFailed": "Échec de la mise à jour de l'annonce : {message}",
+      "deleteListingFailed": "Échec de la suppression de l'annonce — introuvable ou non autorisé",
+      "saveProfileFailed": "Échec de l'enregistrement du profil : {message}",
+      "unauthorized": "Non autorisé",
+      "noFileProvided": "Aucun fichier fourni",
+      "logoTypeInvalid": "Le logo doit être au format PNG ou JPG",
+      "logoTooLarge": "Le logo doit faire moins de 2 Mo",
+      "uploadFailed": "Échec du téléversement : {message}",
+      "signedUrlFailed": "Échec de l'obtention de l'URL signée : {message}",
+      "invalidImageType": "Type de fichier invalide. Seules les images JPEG, PNG et WebP sont autorisées.",
+      "photoUrlRequired": "photoUrl est requis",
+      "photoUrlInvalid": "photoUrl doit être une URL valide"
+    }
+  }
+}
