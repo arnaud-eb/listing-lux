@@ -39,7 +39,7 @@ export default function FeatureChips({ features, onChange }: FeatureChipsProps) 
               }`}
             >
               {checked && <Check className="size-3.5 text-gold" aria-hidden="true" />}
-              {option.label}
+              {t(`options.${option.id}`)}
             </Button>
           )
         })}

@@ -218,7 +218,25 @@
     },
     "features": {
       "legend": "Features",
-      "ariaGroupLabel": "Property features"
+      "ariaGroupLabel": "Property features",
+      "options": {
+        "balcony": "Balcony",
+        "parking": "Parking",
+        "garden": "Garden",
+        "elevator": "Elevator",
+        "storage": "Storage/Cellar",
+        "pool": "Pool",
+        "terrace": "Terrace",
+        "furnished": "Furnished",
+        "new-build": "New Build",
+        "renovated": "Renovated",
+        "city-view": "City View"
+      }
+    },
+    "stepProgress": {
+      "stepLabel": "Step {current} of {total}",
+      "percentComplete": "{percent}% Complete",
+      "ariaLabel": "Step {current} of {total} — {percent}% complete"
     },
     "history": {
       "title": "Your Listings",

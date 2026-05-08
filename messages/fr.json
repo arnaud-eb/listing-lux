@@ -218,7 +218,25 @@
     },
     "features": {
       "legend": "Caractéristiques",
-      "ariaGroupLabel": "Caractéristiques du bien"
+      "ariaGroupLabel": "Caractéristiques du bien",
+      "options": {
+        "balcony": "Balcon",
+        "parking": "Parking",
+        "garden": "Jardin",
+        "elevator": "Ascenseur",
+        "storage": "Cave / rangement",
+        "pool": "Piscine",
+        "terrace": "Terrasse",
+        "furnished": "Meublé",
+        "new-build": "Construction neuve",
+        "renovated": "Rénové",
+        "city-view": "Vue sur la ville"
+      }
+    },
+    "stepProgress": {
+      "stepLabel": "Étape {current} sur {total}",
+      "percentComplete": "{percent} % complété",
+      "ariaLabel": "Étape {current} sur {total} — {percent} % complété"
     },
     "history": {
       "title": "Vos annonces",

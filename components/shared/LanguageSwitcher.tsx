@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { Button } from "@/components/ui/button";
 import {
   Popover,
   PopoverContent,
@@ -44,20 +45,21 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
         {routing.locales.map((code) => {
           const isActive = code === locale;
           return (
-            <button
+            <Button
               key={code}
               type="button"
+              variant="outline"
               onClick={() => switchTo(code)}
               disabled={isPending}
               aria-pressed={isActive}
-              className={`flex-1 py-2 rounded-lg border text-sm font-bold transition-colors disabled:opacity-50 ${
+              className={`flex-1 rounded-lg shadow-none font-bold ${
                 isActive
-                  ? "border-gold bg-gold/10 text-gold"
+                  ? "border-gold bg-gold/10 text-gold hover:bg-gold/15 hover:text-gold"
                   : "border-gray-200 text-navy-deep hover:border-gold hover:text-gold"
               }`}
             >
               {LOCALE_LABELS[code].short}
-            </button>
+            </Button>
           );
         })}
       </div>
@@ -66,31 +68,38 @@ export default function LanguageSwitcher({ variant = "desktop" }: LanguageSwitch
 
   return (
     <Popover>
-      <PopoverTrigger
-        className="p-2 text-navy-deep hover:text-gold transition-colors flex items-center gap-1.5 text-sm font-bold rounded-md outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
-        aria-label={t("changeLanguage")}
-      >
-        <Globe className="size-4" />
-        <span>{LOCALE_LABELS[locale].short}</span>
+      <PopoverTrigger asChild>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          aria-label={t("changeLanguage")}
+          className="text-navy-deep hover:text-gold font-bold"
+        >
+          <Globe className="size-4" />
+          {LOCALE_LABELS[locale].short}
+        </Button>
       </PopoverTrigger>
       <PopoverContent align="end" className="w-44 p-1">
         {routing.locales.map((code) => {
           const isActive = code === locale;
           return (
-            <button
+            <Button
               key={code}
               type="button"
+              variant="ghost"
+              size="sm"
               onClick={() => switchTo(code)}
               disabled={isPending}
-              className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-sm transition-colors cursor-pointer disabled:opacity-50 ${
+              className={`w-full justify-between font-normal ${
                 isActive
                   ? "text-gold font-semibold"
-                  : "text-navy-deep hover:bg-gold/5 hover:text-gold"
+                  : "text-navy-deep hover:text-gold"
               }`}
             >
               <span>{LOCALE_LABELS[code].long}</span>
               {isActive && <Check className="size-4 text-gold" />}
-            </button>
+            </Button>
           );
         })}
       </PopoverContent>

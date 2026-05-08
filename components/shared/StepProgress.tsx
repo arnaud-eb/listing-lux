@@ -1,8 +1,13 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 interface StepProgressProps {
   currentStep: 1 | 2;
 }
 
 export default function StepProgress({ currentStep }: StepProgressProps) {
+  const t = useTranslations("wizard.stepProgress");
   const percentage = currentStep === 1 ? 50 : 100;
 
   return (
@@ -10,10 +15,10 @@ export default function StepProgress({ currentStep }: StepProgressProps) {
       {/* Text row */}
       <div className="flex items-baseline justify-between mb-2">
         <span className="text-xs font-semibold uppercase tracking-wider text-gold">
-          Step {currentStep} of 2
+          {t("stepLabel", { current: currentStep, total: 2 })}
         </span>
         <span className="text-xs text-gray-400">
-          {percentage}% Complete
+          {t("percentComplete", { percent: percentage })}
         </span>
       </div>
       {/* Progress bar */}
@@ -23,7 +28,11 @@ export default function StepProgress({ currentStep }: StepProgressProps) {
         aria-valuenow={percentage}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label={`Step ${currentStep} of 2 — ${percentage}% complete`}
+        aria-label={t("ariaLabel", {
+          current: currentStep,
+          total: 2,
+          percent: percentage,
+        })}
       >
         <div
           className="h-full bg-gold rounded-full transition-all duration-700 ease-out motion-reduce:transition-none"
