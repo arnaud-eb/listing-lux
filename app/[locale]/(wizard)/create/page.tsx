@@ -7,6 +7,13 @@ import ConfirmDeleteDialog from "@/components/shared/ConfirmDeleteDialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import PhotoUploader from "@/components/create/PhotoUploader";
 import StepperInput from "@/components/create/StepperInput";
 import FeatureChips from "@/components/create/FeatureChips";
@@ -15,6 +22,7 @@ import GenerateBar from "@/components/create/GenerateBar";
 import { saveProperty } from "./actions";
 import { usePropertyForm } from "./use-property-form";
 import { propertyFormSchema } from "@/lib/schemas/property";
+import { CPE_CLASSES, type CpeClass } from "@/lib/constants";
 import { RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 import { formatNumber, parseFormattedNumber } from "@/lib/format";
@@ -228,6 +236,61 @@ export default function CreatePage() {
                     <p className="text-2xs text-gray-400">
                       {t("addressHelper")}
                     </p>
+                  </div>
+
+                  {/* Energy passport (CPE) — optional. Pre-fills from a CPE certificate
+                      photo if one was uploaded; agent can override. Required by LU law
+                      (RGD du 30 nov. 2007) when present in the ad copy. Radix Select
+                      treats `value=""` as a console warning, so we pass `undefined`
+                      for the unselected sentinel and let the placeholder render. */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="cpe-class">{t("cpeClassLabel")}</Label>
+                      <Select
+                        value={form.cpeClass || undefined}
+                        onValueChange={(v) =>
+                          updateField("cpeClass", v as CpeClass)
+                        }
+                      >
+                        <SelectTrigger id="cpe-class" className="h-10">
+                          <SelectValue placeholder={t("cpeClassPlaceholder")} />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {CPE_CLASSES.map((cls) => (
+                            <SelectItem key={cls} value={cls}>
+                              {cls}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                      <Label htmlFor="thermal-class">
+                        {t("thermalClassLabel")}
+                      </Label>
+                      <Select
+                        value={form.thermalInsulationClass || undefined}
+                        onValueChange={(v) =>
+                          updateField(
+                            "thermalInsulationClass",
+                            v as CpeClass,
+                          )
+                        }
+                      >
+                        <SelectTrigger id="thermal-class" className="h-10">
+                          <SelectValue
+                            placeholder={t("thermalClassPlaceholder")}
+                          />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {CPE_CLASSES.map((cls) => (
+                            <SelectItem key={cls} value={cls}>
+                              {cls}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
                   </div>
 
                   {/* Features */}

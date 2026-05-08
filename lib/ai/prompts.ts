@@ -12,6 +12,8 @@ interface PropertyData {
   neighborhood: string;
   property_type: string;
   features: Record<string, boolean>;
+  cpe_class?: string | null;
+  thermal_insulation_class?: string | null;
 }
 
 const SYSTEM_PROMPTS: Record<Language, string> = {
@@ -41,7 +43,7 @@ Fair Housing (verpflichtend):
 
 Die Beschreibung soll 3-5 Absätze umfassen (maximal ca. 2000 Zeichen), getrennt durch doppelte Zeilenumbrüche.
 
-Energieausweis (Pflicht): Wenn die Eingabedaten keine Energieklasse enthalten, schließe in der Beschreibung den Hinweis "Energieausweis: Klasse wird nachgereicht" ein. Erfinde NIEMALS eine Energieklasse (kein "Klasse A", kein "A++").
+Energieausweis: Wenn die Eingabedaten eine Energieklasse ('cpe_class') enthalten, kannst du sie kurz erwähnen. Wenn KEINE Energieklasse in den Eingabedaten steht, erwähne sie GAR NICHT — die Pflichtangabe wird im strukturierten Feld auf der Portalansicht gerendert, nicht im Beschreibungstext. Erfinde NIEMALS eine Energieklasse (kein "Klasse A", kein "A++").
 
 Highlights sollen prägnante Stichpunkte sein (5-8 Punkte). Wähle für jeden Highlight einen GÜLTIGEN lucide-react Icon-Namen aus dieser Liste: 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (für Kamin), 'sun' (für Süd-Ausrichtung/Tageslicht), 'trees' (für Garten/Begrünung), 'mountain' (für Aussicht), 'map-pin' (für Lage), 'car' (für Parkplatz/Garage), 'arrow-up' (für Lift/Etagen), 'archive' (für Stauraum/Keller), 'square' (für Fläche/Quadratmeter), 'school' (nur wenn eine Schule in den Eingabedaten genannt ist), 'train' (nur wenn eine ÖV-Verbindung belegt ist), 'shield' (für Sicherheit), 'zap' (für Smart-Home/Strom), 'door-open', 'globe' (für internationale Lage). Erfinde KEINE Icon-Namen — verwende nur die obige Liste.
 
@@ -73,7 +75,7 @@ Fair Housing (impératif) :
 
 La description doit comprendre 3 à 5 paragraphes (maximum environ 2000 caractères), séparés par des doubles sauts de ligne.
 
-Certificat de performance énergétique (obligatoire) : si les données d'entrée ne contiennent pas de classe énergétique, intégrez dans la description la mention "Classe énergétique : à communiquer". N'inventez JAMAIS une classe (pas de "Classe A", pas de "A+").
+Certificat de performance énergétique : si les données d'entrée comportent une classe énergétique ('cpe_class'), vous pouvez la mentionner brièvement. Si AUCUNE classe n'est fournie, ne la mentionnez PAS dans la description — la mention obligatoire est rendue dans le champ structuré du portail, pas dans le texte. N'inventez JAMAIS une classe (pas de "Classe A", pas de "A+").
 
 Les points forts doivent être des phrases concises (5-8 points). Pour chaque point fort, choisissez un nom d'icône lucide-react VALIDE dans cette liste : 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (pour cheminée), 'sun' (pour orientation sud/luminosité), 'trees' (pour jardin/verdure), 'mountain' (pour vue), 'map-pin' (pour emplacement), 'car' (pour parking/garage), 'arrow-up' (pour ascenseur/étages), 'archive' (pour rangement/cave), 'square' (pour surface/m²), 'school' (uniquement si une école est citée dans l'entrée), 'train' (uniquement si une liaison de transport est étayée), 'shield' (pour sécurité), 'zap' (pour domotique/électricité), 'door-open', 'globe' (pour situation internationale). N'inventez PAS de nom d'icône — utilisez uniquement la liste ci-dessus.
 
@@ -105,7 +107,7 @@ Fair Housing (mandatory):
 
 The description should contain 3-5 paragraphs (approximately 2000 characters max), separated by double line breaks.
 
-Energy passport (mandatory): if the input data does not include an energy class, include the line "Energy passport: class to be confirmed" in the description. NEVER invent an energy class (no "Class A", no "A++").
+Energy passport: if the input data includes an energy class ('cpe_class'), you MAY mention it briefly. If NO class is supplied, do NOT mention it in the description — the mandatory disclosure is rendered as a structured field on the portal, not in the prose. NEVER invent an energy class (no "Class A", no "A++").
 
 Highlights should be concise bullet phrases (5-8 points). For each highlight, pick a VALID lucide-react icon name from this list: 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (for fireplace), 'sun' (for south-facing/daylight), 'trees' (for garden/greenery), 'mountain' (for view), 'map-pin' (for location), 'car' (for parking/garage), 'arrow-up' (for elevator/floors), 'archive' (for storage/cellar), 'square' (for area/sqm), 'school' (only if a school is named in the inputs), 'train' (only if a transit link is supported), 'shield' (for security), 'zap' (for smart-home/electrical), 'door-open', 'globe' (for international setting). Do NOT invent icon names — use only the list above.
 
@@ -206,6 +208,8 @@ Bedrooms: ${property.bedrooms}
 Bathrooms: ${property.bathrooms}
 Size: ${property.sqm} m²
 ${activeFeatures.length > 0 ? `Features: ${activeFeatures.join(", ")}` : ""}
+${property.cpe_class ? `Energy class (CPE): ${property.cpe_class}` : ""}
+${property.thermal_insulation_class ? `Thermal insulation class: ${property.thermal_insulation_class}` : ""}
 
 ${neighborhoodContext}
 

@@ -80,10 +80,10 @@ Updated for `PROMPT_VERSION 1.5` (audit §5.P0.7): the price is no longer render
 
 ### 6. `compliance_cpe` — does the output handle the energy class correctly?
 
-Luxembourg's energy passport (CPE / Energiepass) must be disclosed in real estate ads. The audit treats invented CPE classes as a hard error.
+Updated for `PROMPT_VERSION 1.5` (audit §5.P0.8): the v1.4 placeholder requirement was a defensive workaround when no schema field existed. Migration 011 added `cpe_class` and `thermal_insulation_class` columns and the wizard now exposes both as form fields (with photo-extraction pre-fill). Luxembourg portals — athome.lu, immotop.lu — render CPE as a structured field, never in description prose. The rubric anchor now mirrors that UX. Inventing a class remains a hard error.
 
-- **5** — Either uses a CPE class supplied in the fixture (rare — most fixtures omit it), OR explicitly surfaces a placeholder appropriate to the language ("Classe énergétique : à communiquer", "Energieausweis: Klasse wird nachgereicht", "Energy passport: class to be confirmed"). Never invents a class.
-- **3** — Omits CPE entirely without flagging it. Acceptable for now since the field doesn't exist on the form yet, but flagged because the next version of the prompt should require the placeholder.
+- **5** — Either uses a CPE class supplied in the property data accurately, OR omits CPE from the description entirely (default case when no class is supplied — the structured field handles disclosure). Never invents a class.
+- **3** — Mentions CPE in vague non-committal terms when no class was supplied (e.g. "energy passport on request") — soft but not invention.
 - **1** — **Invents** an energy class ("Classe A++", "Energieklasse A") not present in the inputs. This is illegal advertising in LU and a hard production blocker.
 
 ### 7. `seo_signal` — are hashtags and the title well-shaped for discovery?

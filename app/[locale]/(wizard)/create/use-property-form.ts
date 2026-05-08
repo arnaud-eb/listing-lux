@@ -1,5 +1,6 @@
 import { useReducer, useCallback, useEffect, useRef, useState } from "react";
 import type { ListingPhoto, PropertyFormData } from "@/lib/types";
+import type { CpeClass } from "@/lib/constants";
 import { MIN_PHOTOS, FEATURE_OPTIONS } from "@/lib/constants";
 import {
   getSignedUploadUrl,
@@ -22,6 +23,9 @@ interface PropertyFormState {
   features: Record<string, boolean>;
   photos: ListingPhoto[];
   address: string;
+  /** "" sentinel = unselected. The Select renders "" as the placeholder. */
+  cpeClass: CpeClass | "";
+  thermalInsulationClass: CpeClass | "";
 }
 
 const INITIAL_STATE: PropertyFormState = {
@@ -34,6 +38,8 @@ const INITIAL_STATE: PropertyFormState = {
   features: {},
   photos: [],
   address: "",
+  cpeClass: "",
+  thermalInsulationClass: "",
 };
 
 // --- Actions ---
@@ -49,6 +55,8 @@ type FormAction =
       type: "SET_AGGREGATES";
       propertyType: string;
       featureIds: string[];
+      cpeClass: CpeClass | null;
+      thermalInsulationClass: CpeClass | null;
     }
   | { type: "ADD_PHOTO"; photo: ListingPhoto }
   | { type: "UPDATE_PHOTO"; id: string; updates: Partial<ListingPhoto> }
@@ -72,10 +80,18 @@ function formReducer(
       for (const id of action.featureIds) {
         mergedFeatures[id] = true;
       }
+      // Pre-fill CPE classes from the certificate-photo extraction, but only when
+      // the user hasn't already typed a value in the form. The agent can override.
       return {
         ...state,
         propertyType: action.propertyType,
         features: mergedFeatures,
+        cpeClass:
+          state.cpeClass !== "" ? state.cpeClass : action.cpeClass ?? "",
+        thermalInsulationClass:
+          state.thermalInsulationClass !== ""
+            ? state.thermalInsulationClass
+            : action.thermalInsulationClass ?? "",
       };
     }
     case "ADD_PHOTO":
@@ -162,6 +178,9 @@ export function usePropertyForm() {
         propertyType: d.propertyType ?? INITIAL_STATE.propertyType,
         features: d.features ?? INITIAL_STATE.features,
         address: d.address ?? INITIAL_STATE.address,
+        cpeClass: d.cpeClass ?? INITIAL_STATE.cpeClass,
+        thermalInsulationClass:
+          d.thermalInsulationClass ?? INITIAL_STATE.thermalInsulationClass,
         photos: d.photos?.length
           ? d.photos.map((p: Record<string, unknown>) => ({
               ...p,
@@ -211,6 +230,8 @@ export function usePropertyForm() {
           type: "SET_AGGREGATES",
           propertyType: result.property_type,
           featureIds: result.features,
+          cpeClass: result.cpe_class ?? null,
+          thermalInsulationClass: result.thermal_insulation_class ?? null,
         });
       })
       .catch(() => {
@@ -390,6 +411,10 @@ export function usePropertyForm() {
         .filter((p) => p.aiAnalysis)
         .map((p) => p.aiAnalysis!),
       ...(state.address ? { address: state.address } : {}),
+      ...(state.cpeClass ? { cpe_class: state.cpeClass } : {}),
+      ...(state.thermalInsulationClass
+        ? { thermal_insulation_class: state.thermalInsulationClass }
+        : {}),
     };
   }
 

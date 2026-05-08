@@ -1,4 +1,5 @@
 import type { PhotoAnalysis } from '@/lib/schemas/photo-analysis'
+import type { CpeClass } from '@/lib/constants'
 
 export type Language = 'de' | 'fr' | 'en'
 
@@ -76,4 +77,6 @@ export interface PropertyFormData {
   photo_urls: string[]
   photo_analyses?: PhotoAnalysis[]
   address?: string
+  cpe_class?: CpeClass | null
+  thermal_insulation_class?: CpeClass | null
 }

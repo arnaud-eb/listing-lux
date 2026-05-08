@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { CPE_CLASSES } from "@/lib/constants";
 
 export type PhotoAnalysis = z.infer<typeof photoAnalysisSchema>;
 
@@ -27,4 +28,24 @@ export const photoAnalysisSchema = z.object({
   atmosphere: z
     .string()
     .describe("Overall atmosphere: bright, cozy, spacious, etc."),
+  /**
+   * Luxembourg energy passport class extracted from a CPE certificate photo.
+   * Null when the photo is a regular property photo (no CPE document visible).
+   * Populated only when the agent uploads a CPE certificate scan/PDF render.
+   */
+  cpe_class: z
+    .enum(CPE_CLASSES)
+    .nullable()
+    .optional()
+    .describe(
+      "Energy performance class from a CPE certificate photo (A++, A+, A, B, C, D, E, F, G, H, I). Set ONLY when the photo IS a CPE certificate or visibly contains the energy class label; otherwise null. Never guess from interior photos.",
+    ),
+  /** Thermal insulation class from the same CPE certificate. Same null rules as cpe_class. */
+  thermal_insulation_class: z
+    .enum(CPE_CLASSES)
+    .nullable()
+    .optional()
+    .describe(
+      "Thermal insulation class from the CPE certificate, paired with cpe_class. Same value range. Set ONLY when visibly present on a CPE certificate photo; otherwise null.",
+    ),
 });

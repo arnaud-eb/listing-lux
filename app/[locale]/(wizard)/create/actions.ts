@@ -95,7 +95,9 @@ export async function analyzePhoto(photoUrl: string) {
         content:
           "You are a luxury real estate photographer analyzing a single property photo. " +
           "Identify the room type, key features, architectural style, condition, top selling points, and overall atmosphere. " +
-          "Be specific and use language that appeals to high-end property buyers.",
+          "Be specific and use language that appeals to high-end property buyers. " +
+          "If — and only if — the photo IS a Luxembourg CPE / Energiepass certificate (or otherwise visibly displays the 'Classe énergétique' / 'Energieklasse' / 'Energy class' label with a letter A++..I), set `cpe_class` and `thermal_insulation_class` to the values shown. " +
+          "Do NOT guess these classes from interior photos, exterior photos, kitchen renovations, etc. — leave both null in that case. Inventing a class is a regulatory issue under Luxembourg's RGD du 30 nov. 2007.",
       },
       {
         role: "user",
@@ -119,8 +121,24 @@ export async function analyzePhoto(photoUrl: string) {
 export async function derivePropertyAggregates(
   analyses: PhotoAnalysis[],
 ): Promise<PropertyAggregates> {
+  // Read the CPE classes extracted by `analyzePhoto` directly from the photo analyses
+  // — if the agent uploaded a CPE certificate, the vision step set these. We pick the
+  // first non-null occurrence; the agent can override in the form. We do NOT ask the
+  // aggregator LLM to infer them, since "infer from interior photos" would be exactly
+  // the hallucination the rubric §6 anchor 1 forbids.
+  const cpeClass =
+    analyses.find((a) => a.cpe_class != null)?.cpe_class ?? null;
+  const thermalClass =
+    analyses.find((a) => a.thermal_insulation_class != null)
+      ?.thermal_insulation_class ?? null;
+
   if (!Array.isArray(analyses) || analyses.length === 0) {
-    return { property_type: "apartment", features: [] };
+    return {
+      property_type: "apartment",
+      features: [],
+      cpe_class: cpeClass,
+      thermal_insulation_class: thermalClass,
+    };
   }
 
   const summaries = analyses
@@ -145,7 +163,8 @@ export async function derivePropertyAggregates(
           "You determine the overall property type and visible amenities for a real estate listing based on photo summaries. " +
           `Available property types: ${propertyTypeList}. ` +
           `Available amenities (id and label): ${featureList}. ` +
-          "Pick the single best-fit property type. Only include amenities that are clearly evidenced by the photo summaries — do not guess or infer beyond what's described.",
+          "Pick the single best-fit property type. Only include amenities that are clearly evidenced by the photo summaries — do not guess or infer beyond what's described. " +
+          "Leave cpe_class and thermal_insulation_class as null — they are filled separately from CPE certificate photo analyses, never inferred from interior photos.",
       },
       {
         role: "user",
@@ -154,7 +173,13 @@ export async function derivePropertyAggregates(
     ],
   });
 
-  return object;
+  // Override whatever the LLM wrote for the energy classes with the values read directly
+  // from the CPE certificate photo (if any). The aggregator should never produce these.
+  return {
+    ...object,
+    cpe_class: cpeClass,
+    thermal_insulation_class: thermalClass,
+  };
 }
 
 export async function saveProperty(
@@ -186,6 +211,10 @@ export async function saveProperty(
       photo_analyses: formData.photo_analyses ?? [],
       session_id: sessionId,
       ...(formData.address ? { address: formData.address } : {}),
+      ...(formData.cpe_class ? { cpe_class: formData.cpe_class } : {}),
+      ...(formData.thermal_insulation_class
+        ? { thermal_insulation_class: formData.thermal_insulation_class }
+        : {}),
     })
     .select("id")
     .single();

@@ -245,19 +245,24 @@ function makeAnalysis(overrides: Partial<PhotoAnalysis> = {}): PhotoAnalysis {
 }
 
 describe("derivePropertyAggregates", () => {
-  it("returns the LLM result for non-empty analyses", async () => {
+  it("returns the LLM result for non-empty analyses, with CPE classes overridden by certificate-photo extraction", async () => {
     mockGenerateObject.mockResolvedValueOnce({
       object: { property_type: "villa", features: ["pool", "garden"] },
     });
 
     const result = await derivePropertyAggregates([
-      makeAnalysis({ room_type: "exterior" }),
+      makeAnalysis({ room_type: "exterior", cpe_class: "B", thermal_insulation_class: "C" }),
       makeAnalysis({ room_type: "kitchen" }),
     ]);
 
+    // CPE comes from the photo-level analysis (the agent uploaded a CPE certificate),
+    // never from the aggregator LLM — see lib/schemas/photo-analysis.ts and the
+    // matching guard in derivePropertyAggregates.
     expect(result).toEqual({
       property_type: "villa",
       features: ["pool", "garden"],
+      cpe_class: "B",
+      thermal_insulation_class: "C",
     });
     expect(mockGenerateObject).toHaveBeenCalledTimes(1);
   });
@@ -265,7 +270,12 @@ describe("derivePropertyAggregates", () => {
   it("returns defaults without calling the LLM when analyses is empty", async () => {
     mockGenerateObject.mockClear();
     const result = await derivePropertyAggregates([]);
-    expect(result).toEqual({ property_type: "apartment", features: [] });
+    expect(result).toEqual({
+      property_type: "apartment",
+      features: [],
+      cpe_class: null,
+      thermal_insulation_class: null,
+    });
     expect(mockGenerateObject).not.toHaveBeenCalled();
   });
 
