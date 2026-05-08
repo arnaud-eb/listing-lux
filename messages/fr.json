@@ -1,7 +1,7 @@
 {
   "metadata": {
     "rootTitle": "ListingLux AI — Annonces immobilières multilingues pour le Luxembourg",
-    "rootDescription": "Générez des descriptions immobilières professionnelles en allemand, français, anglais et luxembourgeois en quelques secondes.",
+    "rootDescription": "Générez des descriptions immobilières professionnelles en allemand, français et anglais en quelques secondes.",
     "historyTitle": "Vos annonces — ListingLux AI",
     "profileTitle": "Votre profil — ListingLux AI",
     "listingNotFoundTitle": "Annonce introuvable — ListingLux AI",
@@ -46,10 +46,10 @@
   },
   "landing": {
     "hero": {
-      "badge": "Désormais disponible en luxembourgeois",
-      "titlePrefix": "Générez des annonces immobilières en 4 langues —",
+      "badge": "Conçu pour le Luxembourg",
+      "titlePrefix": "Générez des annonces immobilières en 3 langues —",
       "titleAccent": "En 5 minutes",
-      "subtitle": "Valorisez votre portefeuille avec des textes immobiliers professionnels en allemand, français, anglais et luxembourgeois. Conçus pour le marché du luxe avec précision et rapidité.",
+      "subtitle": "Valorisez votre portefeuille avec des textes immobiliers professionnels en allemand, français et anglais. Conçus pour le marché du luxe avec précision et rapidité.",
       "ctaPrimary": "Essayer la démo",
       "ctaSecondary": "Créer votre annonce",
       "imageAlt": "Extérieur d'une villa moderne de luxe au coucher du soleil"
@@ -72,7 +72,7 @@
         "ariaLabel": "Approche ListingLux AI",
         "heading": "ListingLux AI",
         "point1": "Généré automatiquement en 5 minutes",
-        "point2": "Niveau natif en LU, FR, DE, EN",
+        "point2": "Niveau natif en FR, DE, EN",
         "point3": "Ton professionnel digne de Sotheby's",
         "totalLabel": "Total :",
         "totalValue": "5 min"
@@ -91,7 +91,7 @@
       },
       "step3": {
         "title": "Générer & traduire",
-        "description": "Cliquez sur Générer et recevez des annonces soignées en allemand, français, anglais et luxembourgeois instantanément."
+        "description": "Cliquez sur Générer et recevez des annonces soignées en allemand, français et anglais instantanément."
       }
     },
     "pricing": {
@@ -104,7 +104,7 @@
         "description": "Idéal pour les agents indépendants",
         "price": "99 €",
         "feature1": "5 annonces par mois",
-        "feature2": "4 langues (DE, FR, EN, LU)",
+        "feature2": "3 langues (DE, FR, EN)",
         "feature3": "Analyse photo standard",
         "cta": "Commencer l'essai gratuit"
       },
@@ -443,7 +443,7 @@
     "generation": {
       "invalidJson": "Corps JSON invalide",
       "propertyIdRequired": "propertyId est requis",
-      "languageInvalid": "language doit être l'un de : de, fr, en, lu",
+      "languageInvalid": "language doit être l'un de : de, fr, en",
       "propertyNotFound": "Bien introuvable",
       "unauthorized": "Non autorisé",
       "languagesArrayInvalid": "languages doit être un tableau non vide",

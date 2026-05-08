@@ -1,6 +1,6 @@
 import type { PhotoAnalysis } from '@/lib/schemas/photo-analysis'
 
-export type Language = 'de' | 'fr' | 'en' | 'lu'
+export type Language = 'de' | 'fr' | 'en'
 
 export type PhotoStatus = 'uploading' | 'processing' | 'ready' | 'error'
 

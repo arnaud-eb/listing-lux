@@ -1,7 +1,7 @@
 {
   "metadata": {
     "rootTitle": "ListingLux AI — Multilingual Property Listings for Luxembourg",
-    "rootDescription": "Generate professional property descriptions in German, French, English, and Luxembourgish in seconds.",
+    "rootDescription": "Generate professional property descriptions in German, French, and English in seconds.",
     "historyTitle": "Your Listings — ListingLux AI",
     "profileTitle": "Your Profile — ListingLux AI",
     "listingNotFoundTitle": "Listing Not Found — ListingLux AI",
@@ -46,10 +46,10 @@
   },
   "landing": {
     "hero": {
-      "badge": "Now supporting Luxembourgish",
-      "titlePrefix": "Generate Property Listings in 4 Languages —",
+      "badge": "Built for Luxembourg",
+      "titlePrefix": "Generate Property Listings in 3 Languages —",
       "titleAccent": "In 5 Minutes",
-      "subtitle": "Elevate your portfolio with professional real estate copy in German, French, English, and Luxembourgish. Tailored for the high-end luxury market with precision and speed.",
+      "subtitle": "Elevate your portfolio with professional real estate copy in German, French, and English. Tailored for the high-end luxury market with precision and speed.",
       "ctaPrimary": "Try Demo Free",
       "ctaSecondary": "Create Your Listing",
       "imageAlt": "Luxury modern villa exterior with sunset lighting"
@@ -72,7 +72,7 @@
         "ariaLabel": "ListingLux AI approach",
         "heading": "ListingLux AI",
         "point1": "Auto-generated in 5 minutes",
-        "point2": "Native-level LU, FR, DE, EN",
+        "point2": "Native-level FR, DE, EN",
         "point3": "Professional Sotheby's tone",
         "totalLabel": "Total:",
         "totalValue": "5 mins"
@@ -91,7 +91,7 @@
       },
       "step3": {
         "title": "Generate & Localize",
-        "description": "Click Generate and receive polished listings in German, French, English, and Luxembourgish instantly."
+        "description": "Click Generate and receive polished listings in German, French, and English instantly."
       }
     },
     "pricing": {
@@ -104,7 +104,7 @@
         "description": "Perfect for independent agents",
         "price": "€99",
         "feature1": "5 Listings per month",
-        "feature2": "4 Languages (DE, FR, EN, LU)",
+        "feature2": "3 Languages (DE, FR, EN)",
         "feature3": "Standard Photo Analysis",
         "cta": "Start Free Trial"
       },
@@ -443,7 +443,7 @@
     "generation": {
       "invalidJson": "Invalid JSON body",
       "propertyIdRequired": "propertyId is required",
-      "languageInvalid": "language must be one of: de, fr, en, lu",
+      "languageInvalid": "language must be one of: de, fr, en",
       "propertyNotFound": "Property not found",
       "unauthorized": "Unauthorized",
       "languagesArrayInvalid": "languages must be a non-empty array",

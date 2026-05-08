@@ -7,11 +7,12 @@ describe('luxembourgMarket data integrity', () => {
     expect(luxembourgMarket.countryCode).toBe('LU')
   })
 
-  it('has all 4 supported languages', () => {
+  it('has 3 supported languages (LU dropped post-audit)', () => {
     expect(luxembourgMarket.supportedLanguages).toEqual(
-      expect.arrayContaining(['de', 'fr', 'en', 'lu'])
+      expect.arrayContaining(['de', 'fr', 'en'])
     )
-    expect(luxembourgMarket.supportedLanguages.length).toBe(4)
+    expect(luxembourgMarket.supportedLanguages).not.toContain('lu')
+    expect(luxembourgMarket.supportedLanguages.length).toBe(3)
   })
 
   it('all neighborhoods have valid price ranges', () => {

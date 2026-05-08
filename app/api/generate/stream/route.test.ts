@@ -432,7 +432,7 @@ describe("/api/generate/stream", () => {
       return { toTextStreamResponse: () => new Response("ok") };
     });
 
-    await POST(makeRequest({ propertyId: "abc-123", language: "lu" }));
+    await POST(makeRequest({ propertyId: "abc-123", language: "de" }));
 
     // Valid JSON but missing required fields
     await capturedOnFinish!({ text: JSON.stringify({ title: "Test" }) });

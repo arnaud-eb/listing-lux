@@ -48,14 +48,6 @@ function formatPropertyTypeSegment(propertyType: string): string {
  * - Neighborhood: title-cased property neighborhood
  * - PropertyType: capitalized property type
  * - LANG: appended in uppercase only when exactly one language is exported
- *
- * Examples:
- *   profile=Unicorn Real Estate, property in Kirchberg apartment, all 4 langs
- *     → "UnicornRealEstate-Kirchberg-Apartment.pdf"
- *   single FR export
- *     → "UnicornRealEstate-Kirchberg-Apartment-FR.pdf"
- *   no profile, cloche-d-or villa, single DE export
- *     → "ListingLux-Cloche-D-Or-Villa-DE.pdf"
  */
 export function buildPdfFilename(
   property: Pick<Property, "neighborhood" | "property_type">,

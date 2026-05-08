@@ -135,16 +135,13 @@ describe("buildPdfFilename", () => {
       expect(buildPdfFilename(property, null, ["en"])).toBe(
         "ListingLux-Kirchberg-Apartment-EN.pdf",
       );
-      expect(buildPdfFilename(property, null, ["lu"])).toBe(
-        "ListingLux-Kirchberg-Apartment-LU.pdf",
-      );
     });
 
     it("does not append language suffix when multiple languages are selected", () => {
       expect(buildPdfFilename(property, null, ["de", "fr"])).toBe(
         "ListingLux-Kirchberg-Apartment.pdf",
       );
-      expect(buildPdfFilename(property, null, ["de", "fr", "en", "lu"])).toBe(
+      expect(buildPdfFilename(property, null, ["de", "fr", "en"])).toBe(
         "ListingLux-Kirchberg-Apartment.pdf",
       );
     });

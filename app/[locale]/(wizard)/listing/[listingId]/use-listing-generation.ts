@@ -28,7 +28,6 @@ function initState(initialListings: Listing[]): GenerationState {
     de: { status: "idle", listing: null },
     fr: { status: "idle", listing: null },
     en: { status: "idle", listing: null },
-    lu: { status: "idle", listing: null },
   };
 
   for (const listing of initialListings) {

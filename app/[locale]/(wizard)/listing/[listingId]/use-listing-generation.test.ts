@@ -50,7 +50,7 @@ const makeListing = (lang: string) => ({
 });
 
 describe("useListingGeneration", () => {
-  it("fires success toast after all 4 languages complete via onFinish chain", async () => {
+  it("fires success toast after all 3 languages complete via onFinish chain", async () => {
     const { result } = renderHook(() =>
       useListingGeneration("prop-1", [], mockProperty),
     );
@@ -63,23 +63,23 @@ describe("useListingGeneration", () => {
     });
 
     // Simulate SDK completing each language — onFinish chains to next
-    const languages = ["de", "fr", "en", "lu"];
+    const languages = ["de", "fr", "en"];
     for (const lang of languages) {
       act(() => {
         capturedOnFinish?.({ object: makeListing(lang) });
       });
     }
 
-    // After all 4, toast should fire
+    // After all 3, toast should fire
     expect(toast.success).toHaveBeenCalledWith("All listings generated");
     expect(toast.success).toHaveBeenCalledTimes(1);
 
-    // submit called 4 times total (1 initial + 3 chained)
-    expect(capturedSubmit).toHaveBeenCalledTimes(4);
+    // submit called 3 times total (1 initial + 2 chained)
+    expect(capturedSubmit).toHaveBeenCalledTimes(3);
   });
 
   it("does not fire toast when initialized with existing listings", () => {
-    const existing: Listing[] = (["de", "fr", "en", "lu"] as const).map(
+    const existing: Listing[] = (["de", "fr", "en"] as const).map(
       (lang) => ({
         id: `id-${lang}`,
         property_id: "prop-1",
@@ -99,7 +99,7 @@ describe("useListingGeneration", () => {
   });
 
   it("does not fire toast on single language regeneration", () => {
-    const existing: Listing[] = (["de", "fr", "en", "lu"] as const).map(
+    const existing: Listing[] = (["de", "fr", "en"] as const).map(
       (lang) => ({
         id: `id-${lang}`,
         property_id: "prop-1",
@@ -141,8 +141,8 @@ describe("useListingGeneration", () => {
       useListingGeneration("prop-1", [], mockProperty),
     );
 
-    // Complete all 4 languages
-    for (const lang of ["de", "fr", "en", "lu"]) {
+    // Complete all 3 languages
+    for (const lang of ["de", "fr", "en"]) {
       act(() => {
         capturedOnFinish?.({ object: makeListing(lang) });
       });
@@ -150,9 +150,9 @@ describe("useListingGeneration", () => {
 
     // Should fire the batch toast only
     expect(toast.success).toHaveBeenCalledWith("All listings generated");
-    // The first 3 languages chain to the next, so totalInQueueRef === 4
-    // and completedCount only equals totalInQueueRef on the last one.
-    // Per-language toasts only fire when totalInQueueRef === 0 (single regen).
+    // The first languages chain to the next, so completedCount only equals
+    // totalInQueueRef on the last one. Per-language toasts only fire when
+    // totalInQueueRef === 0 (single regen).
     expect(toast.success).not.toHaveBeenCalledWith(
       expect.stringContaining("listing regenerated"),
     );
@@ -160,7 +160,7 @@ describe("useListingGeneration", () => {
   });
 
   it("regenerating different languages fires correct per-language labels", () => {
-    const existing: Listing[] = (["de", "fr", "en", "lu"] as const).map(
+    const existing: Listing[] = (["de", "fr", "en"] as const).map(
       (lang) => ({
         id: `id-${lang}`,
         property_id: "prop-1",

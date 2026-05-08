@@ -4,7 +4,7 @@ export const luxembourgMarket: Market = {
   id: 'lu',
   name: 'Luxembourg',
   countryCode: 'LU',
-  supportedLanguages: ['de', 'fr', 'en', 'lu'],
+  supportedLanguages: ['de', 'fr', 'en'],
   propertyTypes: ['apartment', 'house', 'penthouse', 'studio', 'duplex', 'villa'],
   features: [
     'balcony',
@@ -53,52 +53,37 @@ export const luxembourgMarket: Market = {
       '#Makler',
       '#Luxemburg',
     ],
-    lu: [
-      '#ImmobilienLuxemburg',
-      '#Immobilien',
-      '#Luxusimmobilien',
-      '#Makler',
-      '#Eigenheim',
-      '#Letzebuerg',
-      '#Luxemburg',
-    ],
   },
   propertyTypeHashtags: {
     apartment: {
       en: ['#LuxuryApartment'],
       fr: ['#AppartementDeLuxe', '#Appartement'],
       de: ['#Luxuswohnung', '#Wohnung'],
-      lu: ['#Luxuswohnung', '#Wohnung'],
     },
     house: {
       en: ['#LuxuryHouse'],
       fr: ['#MaisonDeLuxe', '#Maison'],
       de: ['#Luxushaus', '#Haus'],
-      lu: ['#Luxushaus', '#Haus'],
     },
     penthouse: {
       en: ['#Penthouse', '#LuxuryPenthouse'],
       fr: ['#Penthouse'],
       de: ['#Penthouse'],
-      lu: ['#Penthouse'],
     },
     studio: {
       en: ['#Studio'],
       fr: ['#Studio'],
       de: ['#Studio'],
-      lu: ['#Studio'],
     },
     duplex: {
       en: ['#Duplex'],
       fr: ['#Duplex'],
       de: ['#Duplex'],
-      lu: ['#Duplex'],
     },
     villa: {
       en: ['#LuxuryVilla', '#Villa'],
       fr: ['#Villa'],
       de: ['#Villa'],
-      lu: ['#Villa'],
     },
   },
   areas: [

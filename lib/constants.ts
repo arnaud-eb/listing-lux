@@ -1,14 +1,20 @@
 import type { Language } from './types'
 
-/** Ordered list of supported languages (used for tabs, badges, generation) */
-export const LANGUAGES: Language[] = ['fr', 'en', 'de', 'lu'] as const
+/**
+ * Ordered list of supported AI-generation languages (used for tabs, badges, generation).
+ *
+ * Lëtzebuergesch was dropped after the 2026-04 audit (§5.P0.6): gpt-4.1-mini's LU output
+ * scored native_quality 2.25 vs EN 4.18 and market_fit 2.50 vs FR 4.18 — a model-level
+ * ceiling, not a prompt issue. Re-introduce post-MVP only with a different model for the
+ * LU branch (Portuguese is the recommended next addition; ~16% of LU residents).
+ */
+export const LANGUAGES: Language[] = ['fr', 'en', 'de'] as const
 
 /** Human-readable labels for each language */
 export const LANGUAGE_LABELS: Record<Language, string> = {
   de: 'Deutsch',
   fr: 'Français',
   en: 'English',
-  lu: 'Lëtzebuergesch',
 }
 
 /** Supabase storage bucket for property photos */
@@ -103,7 +109,6 @@ export const HIGHLIGHTS_LABEL: Record<Language, string> = {
   de: "Highlights",
   fr: "Points forts",
   en: "Highlights",
-  lu: "Highlights",
 }
 
 /** Localized "Description" section label */
@@ -111,7 +116,6 @@ export const DESCRIPTION_LABEL: Record<Language, string> = {
   de: "Beschreibung",
   fr: "Description",
   en: "Description",
-  lu: "Beschreiwung",
 }
 
 /**
@@ -130,9 +134,5 @@ export const PROPERTY_DETAIL_LABELS: Record<Language, { bedroom: (n: number) => 
   en: {
     bedroom: (n) => (n === 1 ? "bedroom" : "bedrooms"),
     bathroom: (n) => (n === 1 ? "bathroom" : "bathrooms"),
-  },
-  lu: {
-    bedroom: (n) => (n === 1 ? "Schlofzëmmer" : "Schlofzëmmeren"),
-    bathroom: (n) => (n === 1 ? "Buedzëmmer" : "Buedzëmmeren"),
   },
 }

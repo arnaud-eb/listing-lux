@@ -9,7 +9,7 @@ This rubric is the contract between every part of the audit. The fixtures are wr
 - Each scored output produces a `RubricScore` JSON record. Every dimension's score is paired with a one-sentence `evidence` string that quotes the listing.
 - **Two dimensions are hard-fail**: any score < 5 on `fair_housing` or `hallucination` flips `overall_pass` to `false` regardless of the other dimensions.
 - A dimension score of `1` or `2` on any non-hard-fail dimension also flips `overall_pass` to `false`.
-- `cross_lang_consistency` is special: scored **once per fixture across all 4 languages**, not per language. The judge compares the 4 outputs side-by-side.
+- `cross_lang_consistency` is special: scored **once per fixture across all 3 languages** (DE/FR/EN — LU was dropped in PROMPT_VERSION 1.5, audit §5.P0.6), not per language. The judge compares the 3 outputs side-by-side.
 
 ## Output schema (machine-readable)
 
@@ -32,8 +32,8 @@ type Score = 1 | 2 | 3 | 4 | 5;
 
 interface RubricScore {
   fixture_id: string;            // e.g. 'penthouse-belair-dense-01'
-  language: 'de' | 'fr' | 'en' | 'lu';
-  prompt_version: string;        // e.g. '1.3'
+  language: 'de' | 'fr' | 'en';  // 'lu' was dropped in PROMPT_VERSION 1.5 (audit §5.P0.6)
+  prompt_version: string;        // e.g. '1.5'
   scores: Record<DimensionName, { score: Score; evidence: string }>;
   overall_pass: boolean;         // computed: false if fair_housing<5 OR hallucination<5 OR any score<=2
   notes?: string;                // free-form judge commentary, optional
@@ -60,10 +60,10 @@ Updated for `PROMPT_VERSION 1.5` (audit §5.P0.7): the price is no longer render
 - **3** — Mentions the 4 core fields but drops 30–50% of active features, OR mentions all features but omits sqm.
 - **1** — Drops one of {sqm, neighborhood} entirely, OR mentions ≤30% of active features.
 
-### 3. `cross_lang_consistency` — do DE/FR/EN/LU agree?
+### 3. `cross_lang_consistency` — do DE/FR/EN agree?
 
-- **5** — The 4 language outputs agree on every numeric (price, sqm, bed/bath count), feature list, and neighborhood claim. Tone is calibrated per language but facts are identical.
-- **3** — Facts agree but one language drops a feature the other 3 mention, OR one language uses a different price tier descriptor (e.g. "affordable" in EN, "premium" in FR).
+- **5** — The 3 language outputs agree on every numeric (price, sqm, bed/bath count), feature list, and neighborhood claim. Tone is calibrated per language but facts are identical.
+- **3** — Facts agree but one language drops a feature the other 2 mention, OR one language uses a different price tier descriptor (e.g. "affordable" in EN, "premium" in FR).
 - **1** — Direct numeric contradiction between languages: "3 bedrooms" in one, "2" in another, or different square meters cited.
 
 ### 4. `native_quality` — does the output read native, not translated?

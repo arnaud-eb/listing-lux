@@ -14,7 +14,7 @@ function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
   return match?.[1] === "en" ? "en" : "fr";
 }
 
-const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en", "lu"]);
+const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en"]);
 
 export async function POST(request: Request) {
   const cookieHeader = request.headers.get("cookie") ?? "";

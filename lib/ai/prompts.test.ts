@@ -21,6 +21,7 @@ const mockNeighborhood: Neighborhood = {
   },
 };
 
+
 const mockProperty = {
   bedrooms: 3,
   bathrooms: 2,
@@ -116,14 +117,6 @@ describe("buildListingPrompt", () => {
       mockNeighborhood,
     );
     expect(fr).toContain("rédacteur immobilier expérimenté");
-
-    const { system: lu } = buildListingPrompt(
-      "lu",
-      mockProperty,
-      mockAnalyses,
-      mockNeighborhood,
-    );
-    expect(lu).toContain("Lëtzebuerger");
   });
 
   it("includes photo analyses in user prompt", () => {

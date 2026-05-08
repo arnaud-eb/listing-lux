@@ -44,7 +44,7 @@ export function estimatePrice(slug: string, sqm: number): number | null {
  * neighborhood-derived. Returned normalized (always leading `#`, deduped).
  */
 export function buildBaseHashtags(input: {
-  language: 'de' | 'fr' | 'en' | 'lu'
+  language: 'de' | 'fr' | 'en'
   propertyType: string
   neighborhood: string
 }): string[] {

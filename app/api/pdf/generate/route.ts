@@ -5,7 +5,7 @@ import { generateListingPDF } from "@/lib/pdf-generator";
 import { buildPdfFilename } from "@/lib/pdf-filename";
 import type { Language, Listing, Property } from "@/lib/types";
 
-const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en", "lu"]);
+const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en"]);
 
 function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
   const match = cookieHeader.match(/NEXT_LOCALE=(\w+)/);

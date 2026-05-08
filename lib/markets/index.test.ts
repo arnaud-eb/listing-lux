@@ -59,7 +59,7 @@ describe('getActiveMarket', () => {
     expect(market.supportedLanguages).toContain('de')
     expect(market.supportedLanguages).toContain('fr')
     expect(market.supportedLanguages).toContain('en')
-    expect(market.supportedLanguages).toContain('lu')
+    expect(market.supportedLanguages).not.toContain('lu')
   })
 
   it('returns market with areas', () => {
