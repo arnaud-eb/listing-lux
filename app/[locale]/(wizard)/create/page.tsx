@@ -310,18 +310,34 @@ function ClearableClassSelect({
   value,
   onChange,
 }: ClearableClassSelectProps) {
+  // Radix Select v1 (radix-ui ^1.4.3) doesn't reliably reset the rendered value
+  // when a controlled `value` transitions from a string to `undefined`. Forcing a
+  // remount by bumping `resetKey` is the canonical workaround. See:
+  // https://github.com/radix-ui/primitives/issues/1569
+  const [resetKey, setResetKey] = useState(0);
+
+  function handleClear() {
+    onChange("");
+    setResetKey((k) => k + 1);
+  }
+
   return (
     <div className="flex flex-col gap-1.5">
       <Label htmlFor={id}>{label}</Label>
+      {/* `relative` + the X being absolutely positioned must wrap the trigger
+          so `right-*` measures from the trigger's right edge. The trigger gets
+          `w-full` so the column-width drop zone matches the absolute frame. */}
       <div className="relative">
         <Select
+          key={resetKey}
           value={value || undefined}
           onValueChange={(v) => onChange(v as CpeClass)}
         >
           <SelectTrigger
             id={id}
-            // Reserve right-side space when clear is visible (X + chevron).
-            className={value ? "h-10 pr-14" : "h-10"}
+            // `w-full` overrides shadcn's default `w-fit`. Reserve right-side
+            // space when the clear button is visible (X + chevron).
+            className={value ? "h-10 w-full pr-14" : "h-10 w-full"}
           >
             <SelectValue placeholder={placeholder} />
           </SelectTrigger>
@@ -340,7 +356,7 @@ function ClearableClassSelect({
             // Radix Select listens on pointerDown — stop here so clearing
             // doesn't simultaneously open the dropdown.
             onPointerDown={(e) => e.stopPropagation()}
-            onClick={() => onChange("")}
+            onClick={handleClear}
             className="absolute right-8 top-1/2 -translate-y-1/2 size-6 inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-700 hover:bg-gray-100 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             <X className="size-3.5" aria-hidden="true" />
