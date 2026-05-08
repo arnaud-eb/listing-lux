@@ -167,9 +167,11 @@
       "addressPlaceholder": "ex. 12 Rue de Clausen, Luxembourg",
       "addressHelper": "Optionnel — inclus dans les exports PDF et réseaux sociaux",
       "cpeClassLabel": "Classe énergétique (CPE)",
-      "cpeClassPlaceholder": "Optionnel — choisir une classe",
+      "cpeClassPlaceholder": "Optionnel",
+      "cpeClassClear": "Effacer la classe énergétique",
       "thermalClassLabel": "Classe d'isolation thermique",
-      "thermalClassPlaceholder": "Optionnel — choisir une classe",
+      "thermalClassPlaceholder": "Optionnel",
+      "thermalClassClear": "Effacer la classe d'isolation thermique",
       "validationError": "Veuillez vérifier vos informations et réessayer."
     },
     "photoUploader": {

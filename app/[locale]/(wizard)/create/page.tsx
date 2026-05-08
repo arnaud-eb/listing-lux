@@ -23,7 +23,7 @@ import { saveProperty } from "./actions";
 import { usePropertyForm } from "./use-property-form";
 import { propertyFormSchema } from "@/lib/schemas/property";
 import { CPE_CLASSES, type CpeClass } from "@/lib/constants";
-import { RotateCcw } from "lucide-react";
+import { RotateCcw, X } from "lucide-react";
 import { toast } from "sonner";
 import { formatNumber, parseFormattedNumber } from "@/lib/format";
 
@@ -239,58 +239,31 @@ export default function CreatePage() {
                   </div>
 
                   {/* Energy passport (CPE) — optional. Pre-fills from a CPE certificate
-                      photo if one was uploaded; agent can override. Required by LU law
-                      (RGD du 30 nov. 2007) when present in the ad copy. Radix Select
-                      treats `value=""` as a console warning, so we pass `undefined`
-                      for the unselected sentinel and let the placeholder render. */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="cpe-class">{t("cpeClassLabel")}</Label>
-                      <Select
-                        value={form.cpeClass || undefined}
-                        onValueChange={(v) =>
-                          updateField("cpeClass", v as CpeClass)
-                        }
-                      >
-                        <SelectTrigger id="cpe-class" className="h-10">
-                          <SelectValue placeholder={t("cpeClassPlaceholder")} />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {CPE_CLASSES.map((cls) => (
-                            <SelectItem key={cls} value={cls}>
-                              {cls}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="flex flex-col gap-1.5">
-                      <Label htmlFor="thermal-class">
-                        {t("thermalClassLabel")}
-                      </Label>
-                      <Select
-                        value={form.thermalInsulationClass || undefined}
-                        onValueChange={(v) =>
-                          updateField(
-                            "thermalInsulationClass",
-                            v as CpeClass,
-                          )
-                        }
-                      >
-                        <SelectTrigger id="thermal-class" className="h-10">
-                          <SelectValue
-                            placeholder={t("thermalClassPlaceholder")}
-                          />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {CPE_CLASSES.map((cls) => (
-                            <SelectItem key={cls} value={cls}>
-                              {cls}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
+                      photo if one was uploaded; agent can override. Stacks on mobile —
+                      the labels "Thermal insulation class" / "Classe d'isolation thermique"
+                      are too long for a 360px-wide column and the placeholders bleed
+                      across each other. Each Select gets a trailing X (clear) when a
+                      value is selected, since Radix Select disallows a `<SelectItem
+                      value="">` for "no selection". */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <ClearableClassSelect
+                      id="cpe-class"
+                      label={t("cpeClassLabel")}
+                      placeholder={t("cpeClassPlaceholder")}
+                      value={form.cpeClass}
+                      onChange={(v) => updateField("cpeClass", v)}
+                      clearLabel={t("cpeClassClear")}
+                    />
+                    <ClearableClassSelect
+                      id="thermal-class"
+                      label={t("thermalClassLabel")}
+                      placeholder={t("thermalClassPlaceholder")}
+                      value={form.thermalInsulationClass}
+                      onChange={(v) =>
+                        updateField("thermalInsulationClass", v)
+                      }
+                      clearLabel={t("thermalClassClear")}
+                    />
                   </div>
 
                   {/* Features */}
@@ -311,6 +284,68 @@ export default function CreatePage() {
             </div>
           </div>
         </form>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Optional CPE-class Select with an inline X button to clear the value. Sits inside
+ * the SelectTrigger area; its `pointerDown` is stopped so Radix Select doesn't open.
+ */
+interface ClearableClassSelectProps {
+  id: string;
+  label: string;
+  placeholder: string;
+  clearLabel: string;
+  value: CpeClass | "";
+  onChange: (next: CpeClass | "") => void;
+}
+
+function ClearableClassSelect({
+  id,
+  label,
+  placeholder,
+  clearLabel,
+  value,
+  onChange,
+}: ClearableClassSelectProps) {
+  return (
+    <div className="flex flex-col gap-1.5">
+      <Label htmlFor={id}>{label}</Label>
+      <div className="relative">
+        <Select
+          value={value || undefined}
+          onValueChange={(v) => onChange(v as CpeClass)}
+        >
+          <SelectTrigger
+            id={id}
+            // Reserve right-side space when clear is visible (X + chevron).
+            className={value ? "h-10 pr-14" : "h-10"}
+          >
+            <SelectValue placeholder={placeholder} />
+          </SelectTrigger>
+          <SelectContent>
+            {CPE_CLASSES.map((cls) => (
+              <SelectItem key={cls} value={cls}>
+                {cls}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+        {value && (
+          <button
+            type="button"
+            aria-label={clearLabel}
+            // Radix Select listens on pointerDown — stop here so clearing
+            // doesn't simultaneously open the dropdown.
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={() => onChange("")}
+            className="absolute right-8 top-1/2 -translate-y-1/2 size-6 inline-flex items-center justify-center rounded-md text-gray-400 hover:text-gray-700 hover:bg-gray-100 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          >
+            <X className="size-3.5" aria-hidden="true" />
+          </button>
+        )}
       </div>
     </div>
   );
