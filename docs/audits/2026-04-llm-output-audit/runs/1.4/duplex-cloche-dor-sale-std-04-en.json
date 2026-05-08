@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:37.977Z",
+  "output": {
+    "title": "Modern Bright Duplex with Three Bedrooms and Panoramic City Views in Cloche d'Or",
+    "description": "This newly built duplex apartment offers approximately 180 square meters of contemporary living space in the developing Cloche d'Or district. Characterised by its double-volume ceiling in the living room, the interior benefits from abundant natural light through panoramic glazing, creating an expansive and airy atmosphere that connects seamlessly to the surrounding cityscape.\n\nThe open-plan kitchen features Siemens appliances, quartz worktops, and soft-close cabinetry, designed to facilitate a sociable flow between the cooking and living areas. An internal staircase links the two levels of the apartment, where three bedrooms are arranged, including an upper-floor master suite with fitted wardrobes and direct access to a private terrace.\n\nThe wraparound terrace, finished with wooden decking and positioned to capture the evening sun, overlooks the nearby shopping centre and urban surroundings. Additional conveniences include private parking, elevator access, and dedicated storage space. Energy passport: class to be confirmed.\n\nSituated in the heart of Luxembourg's newest business district, this property offers proximity to office buildings, parks, and retail amenities, combining modern residential living with the vibrancy of an emerging urban environment.",
+    "highlights": [
+      {
+        "text": "180 m² of contemporary duplex living space",
+        "icon": "square"
+      },
+      {
+        "text": "Double-height living room with panoramic city views",
+        "icon": "home"
+      },
+      {
+        "text": "Open-plan kitchen with Siemens appliances and quartz countertops",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Three bedrooms including upper-floor master with private terrace access",
+        "icon": "bed"
+      },
+      {
+        "text": "Wraparound wooden deck terrace with evening sun exposure",
+        "icon": "sun"
+      },
+      {
+        "text": "Private parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access within the building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Storage room available",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernDuplex",
+      "CityViews",
+      "OpenPlanLiving",
+      "SiemensKitchen",
+      "ClocheDor"
+    ]
+  }
+}

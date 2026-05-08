@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'3-Zëmmer Appartement' matches but 'ënnerierdesch Waasserheizung' (underground water heating) misrepresents underfloor heating."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "Omits explicit 145 m², price of €1,650,000, and number of bathrooms in body text."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "'gefierertrichten', 'modernëscht', 'parkärem Iwwersiicht' are awkward/non-idiomatic Luxembourgish constructions."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "'ënnerierdesch Waasserheizung' is not standard Luxembourgish luxury real estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/Energieklass mentioned in the Luxembourgish listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title is 11 words including 'Kirchberg' and 'Neubau'; 5 CamelCase hashtags provided."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'prachtvoll luxuriéis' and 'technescht Meeschterwierk' verge on hyperbole."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'perfekt fir Expater a Geschäftsleit eignet' targets expat/business demographic."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Avoids the Philharmonie/MUDAM/schools specifics, staying closer to inputs, though 'am Zentrum vum Businessdistrikt' is an interpretive claim."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN, DE, FR all reference 145 m², 3 bedrooms, Bulthaup, balcony, parking; LU omits explicit 145 m² and introduces 'ënnerierdesch Waasserheizung' instead of underfloor heating, creating a minor feature inconsistency."
+    }
+  },
+  "overall_pass": false
+}

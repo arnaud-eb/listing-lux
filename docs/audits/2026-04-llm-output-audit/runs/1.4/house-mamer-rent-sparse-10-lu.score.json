@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Title says \"Renovéierten ... Maisonette\" but input has renovated=false and property_type=house, not maisonette."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Includes beds/baths/sqm and features but omits price and Mamer."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "\"hölzerne Fräsheet\", \"Stockagehütt\", \"fir jidderee mat engem Optrag derbäi\" — awkward and partly nonsensical Luxembourgish."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "\"Stockagehütt\" and \"hëlzerno Fence\" mix languages and don't match LU listing register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Energiepass: Klass gëtt nogeräicht.\" placeholder."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title misleadingly claims \"Renovéierten\" and \"Maisonette\"; only 3 hashtags including a typo \"PrivatGart\"."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"reservéiert, funktionell Aart\" — restrained, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 1,
+      "evidence": "\"Renovéierten ... Maisonette\" invents both renovation status and a different property type contrary to inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE agree on 130 m², 3 bed, 1 bath, row house, not renovated; LU contradicts with \"Renovéierten\" and \"Maisonette\"."
+    }
+  },
+  "overall_pass": false
+}

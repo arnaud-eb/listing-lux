@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:26:44.814Z",
+  "output": {
+    "title": "Exclusivo ático histórico con vistas panorámicas al valle de Alzette",
+    "description": "Este excepcional ático ubicado en el emblemático barrio del Grund, declarado Patrimonio de la Humanidad por la UNESCO, combina a la perfección el encanto histórico con una renovación contemporánea de alta calidad.\n\nEl salón destaca por sus muros de piedra vista y su techo abovedado que enmarcan una vista inigualable del valle de Alzette. Suelos de roble de lamas anchas aportan calidez a los espacios, mientras que la amplia iluminación natural realza la atmósfera acogedora y elegante.\n\nLa cocina, diseñada con mobiliario de madera maciza y equipada con electrodomésticos profesionales de acero inoxidable, ofrece un ambiente funcional y sofisticado. Los dormitorios, que incluyen un rincón de lectura junto a la ventana de buhardilla con vigas expuestas, garantizan confort y tranquilidad.\n\nLa terraza privada, pavimentada en piedra y rematada con una barandilla de hierro forjado, invita a disfrutar de vistas privilegiadas de este entorno ribereño con gran valor histórico y turístico. La propiedad dispone además de ascensor, plaza de aparcamiento y espacio de almacenamiento.\n\nCabe destacar que la residencia perteneció anteriormente a un reconocido político, lo que añade un plus de exclusividad y valor histórico a esta magnífica vivienda en el corazón del Grund.",
+    "highlights": [
+      {
+        "text": "Vistas panorámicas al valle de Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Muros de piedra vista originales",
+        "icon": "shield"
+      },
+      {
+        "text": "Terraza privada con vistas exclusivas",
+        "icon": "sun"
+      },
+      {
+        "text": "Reforma de alto nivel preservando el carácter histórico",
+        "icon": "zap"
+      },
+      {
+        "text": "Ubicación en zona Patrimonio de la Humanidad UNESCO",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Cocina equipada con electrodomésticos profesionales",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Dormitorios con rincones acogedores y detalles arquitectónicos",
+        "icon": "sofa"
+      },
+      {
+        "text": "Plaza de aparcamiento y ascensor para máxima comodidad",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "HistoricElegance",
+      "UNESCOHeritage",
+      "AlzetteView",
+      "RenovationExcellence",
+      "RiversideLiving"
+    ]
+  }
+}

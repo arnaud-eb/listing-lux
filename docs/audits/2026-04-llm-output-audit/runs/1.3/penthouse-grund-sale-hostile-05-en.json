@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:26:37.772Z",
+  "output": {
+    "title": "Elegant Penthouse with Stunning Alzette Valley Views in Historic Grund",
+    "description": "Nestled in the picturesque Alzette valley below the iconic fortress, this exceptional penthouse epitomizes refined living within the UNESCO-listed surroundings of Grund. Boasting 175 square meters of meticulously renovated space, the residence masterfully blends historic charm with contemporary elegance.\n\nThe living room captivates with its vaulted ceiling and exposed stone walls, beautifully framing sweeping views of the valley. Wide-plank oak flooring and tasteful design elements create a warm, inviting atmosphere bathed in natural light. Adjoining the living area, the bespoke kitchen features solid wood cabinetry, a stainless steel professional range, and marble countertops, offering a perfect balance of style and functionality.\n\nThree spacious bedrooms provide tranquil retreats, highlighted by dormer windows and original exposed beams, with serene valley vistas visible from the cozy reading nook. Two luxurious bathrooms complement the living spaces, enhanced by top-tier finishes. Step out onto the exclusive stone-paved terrace with wrought-iron railing to enjoy intimate alfresco moments overlooking the historic riverside and vibrant dining scene below.\n\nAdditional amenities include secure parking, private storage, and elevator access, ensuring modern comforts within this heritage setting. This penthouse presents a rare opportunity to experience quintessential Luxembourgish lifestyle where history meets sophistication.",
+    "highlights": [
+      {
+        "text": "Panoramic Alzette valley views",
+        "icon": "mountain"
+      },
+      {
+        "text": "Exposed historic stonework and vaulted ceilings",
+        "icon": "architecture"
+      },
+      {
+        "text": "Private stone-paved terrace with wrought-iron railing",
+        "icon": "sun"
+      },
+      {
+        "text": "Bespoke solid wood kitchen cabinetry with professional range",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Three charming bedrooms with dormer windows and exposed beams",
+        "icon": "home"
+      },
+      {
+        "text": "Dedicated parking space and private storage",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access within a historic building",
+        "icon": "lift"
+      },
+      {
+        "text": "Located within UNESCO World Heritage site surroundings",
+        "icon": "shield"
+      }
+    ],
+    "hashtags": [
+      "HistoricPenthouse",
+      "AlzetteValleyView",
+      "UNESCOHeritageLiving",
+      "RiversideCharm",
+      "LuxuryRenovation"
+    ]
+  }
+}

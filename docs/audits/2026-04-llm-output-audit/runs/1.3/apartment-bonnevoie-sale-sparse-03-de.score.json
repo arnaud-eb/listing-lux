@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'52 m² Wohnfläche' and 1-Zimmer match; storage referenced as 'Abstellraum'."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Sqm, bedrooms, neighborhood, storage covered; price omitted."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Diese attraktive 1-Zimmer-Wohnung besticht durch ihren durchdachten Grundriss' reads idiomatically."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Standard terms 'Wohnfläche', 'Abstellraum', 'Hauptbahnhof' fit market but copy is generic."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No Energieklasse or CPE mention."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Charmante 1-Zimmer-Wohnung mit südlichem Lichteinfall im pulsierenden Bonnevoie' is 9 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'pulsierenden Bonnevoie' and 'einzigartiges Wohnerlebnis' are mildly hyperbolic for entry-tier."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'ideal für junge Berufstätige oder Singles' targets demographics by age and family status."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'unmittelbarer Nähe des Hauptbahnhofs' and 'beliebten Bonnevoie-Marktes' are not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE omit price entirely while LU introduces a fabricated '€9.300 pro m²'; FR/EN explicitly target 'jeunes professionnels'/'young professionals' while DE says 'junge Berufstätige oder Singles' and LU does not — feature mentions broadly align but numeric/audience treatment diverges."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Same demographic and location-fabrication issues."
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:44.522Z",
+  "output": {
+    "title": "Moderne Duplex-Wunneng mat 3 Schlofzëmmer a Panoramaviws am Cloche d'Or Quartier",
+    "description": "Hei fannt Dir eng no nei gebaut Duplex-Wunneng mat 180 m² Wunnfläch am opstrebende Cloche d'Or Quartier. Den oppene Concept vum Liewensraum mat sengem duebelen Héichtsraum ënnersträicht d'Luucht an d'Volumen vun dësem modernen Appartement. Grouss Panoramafenster bidden eng Vue op den niwwege Park, deen eng roueg Atmosphär am Geschäfts- a Geschäfterzentrum kreéiert.\n\nD'Kichen ass mam Siemens Equipement ausgestatt a bitt e quartz Arbeitsplang an Soft-Close Kaaf. Si ass op de Wunnraum opzemaachen, wat eng sozial Atmosphär erméiglecht. Eng intern Trepp verbënnt d'Zëmmer iwwer zwou Stäck. Uewen fannt Dir dräi gutt geplangte Schlofzëmmeren, dorënner d'Master-Suite mat engem direkten Ausgang op eng ëmgeriicht Terrasse mat Holzdecking. Dës Terrass bitt Owes Sonn a Vue op dat noosten Ekippement vum Quartier.\n\nD'Wunneng verfüügt och iwwer Parkpossibilitéiten, e Lift am Gebai an zousätzleche Stockraum. Déi aktuell Energieklass vum Appartement gëtt nach nogeräicht. Déi modern Architektur passt sech dem neie Businesszentrum Cloche d'Or un, deen bekannt ass fir seng nei Entwécklungen a presentabel Infrastruktur.\n\nDen Cloche d'Or Quartier ass bekannt fir seng zentral Lag an engem Geschäftshub, mat engem groussen Heelpräis- a Service Offer an natierlecher Nopeschkeet zu moderner Urbanistik an Dieren zu Verkéiersverbindungen. Dës Wunneng ass eng Méiglechkeet fir eng qualitatvoll Stadwunnegkeet an dësem Quartier ze erfannen mat enger Vue mat direkt Bezuch zou hiren Ëmgéigend.",
+    "highlights": [
+      {
+        "text": "180 m² Wunnfläch am Duplex-Stil",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlofzëmmeren, 2 Buedzëmmeren",
+        "icon": "bed"
+      },
+      {
+        "text": "Panoramavenster mat Vue op Park a Geschäftsberäich",
+        "icon": "mountain"
+      },
+      {
+        "text": "Fully equipéiert Kichen mat Siemens Apparater",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ëmgeriicht Terrasse mat Holzdecke mat Owes-Sonne",
+        "icon": "sun"
+      },
+      {
+        "text": "Lift am Gebai an dobäigepackte Parking",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Zousätzleche Stockraum disponibel",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "DuplexDesign",
+      "ParkView",
+      "ClocheDOr",
+      "CityTerrace"
+    ]
+  }
+}

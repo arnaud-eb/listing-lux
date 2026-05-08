@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:30.749Z",
+  "output": {
+    "title": "Reiheneinfamilienhaus mit 3 Schlafzimmern und eigenem Garten",
+    "description": "Dieses gepflegte Reihenhaus aus den 1980er-Jahren bietet auf einer Wohnfläche von circa 130 m² ein überschaubares Raumangebot für vielfältige Nutzungsmöglichkeiten. Die Fassade präsentiert sich neutral und zurückhaltend, eingebettet in ein ruhiges Wohngebiet. Ein kleiner Vorgarten empfängt Besucher freundlich, während der private Garten im Hinterhof Ruhe und Grünflächen für Entspannung bereithält.\n\nDas Wohn- und Esszimmer ist mit einem beigen Teppichboden ausgestattet und zeigt sich in einem ausgestattetem Zustand, der Modernisierungsmöglichkeiten offenlässt. Große Terrassentüren schaffen eine Verbindung zum Garten und sorgen für Tageslicht. Die vorhandene Raumnische ist für einen TV-Platz vorgesehen.\n\nDie Immobilie umfasst insgesamt drei Schlafräume und ein Badezimmer, die übersichtlich und funktional gestaltet sind. Der Garten ist eingezäunt, mit Rasenfläche und einem Holzschuppen, der weiteren Stauraum bietet. Ein zugehöriger Parkplatz ergänzt das Angebot und unterstützt den urbanen Wohnkomfort.\n\nDer Energieausweis für dieses Objekt wird derzeit erstellt und wird bei Besichtigung vorgelegt. Die Lage des Hauses ist in einem ruhig gebliebenen Wohnviertel, dessen nähere Umgebung hier nicht näher beschrieben wird.\n\nInsgesamt bietet das Objekt eine solide Grundlage für individuelle Wohnkonzepte in einem gewachsenen Wohnumfeld.",
+    "highlights": [
+      {
+        "text": "130 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Privater Garten mit Holzschuppen",
+        "icon": "trees"
+      },
+      {
+        "text": "Eigenständiger Parkplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Baujahr 1980er Jahre",
+        "icon": "home"
+      },
+      {
+        "text": "Terrassentüren mit Gartenblick",
+        "icon": "sun"
+      },
+      {
+        "text": "Separater Stauraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Reiheneinhaus",
+      "Privatgarten",
+      "ParkplatzInklusive",
+      "Ruhezone",
+      "Bestandsimmobilie"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'attraktiven Prix vu ronn €9.300 pro m²' — this price-per-sqm figure is fabricated; actual is 485000/52 ≈ 9326, but the absolute price 485,000€ is not stated."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 52 m², storage, neighborhood; absolute price omitted, only computed €/m²."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "'südlech belëft' and 'rouege Wonsch fir eenzegaarteg Wunnqualitéit' read awkwardly; 'Entwécklungsmaterial' is unusual."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "'luxuriésem Laminat' and 'exklusiv Méiglechkeet' don't match Lux entry-tier corpus."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/energy class mentioned."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Hashtags 'SouthFacing FunctionalLayout TraditionalCharm CentralLiving StorageIncluded' are in English, not Luxembourgish."
+    },
+    "tone_discipline": {
+      "score": 1,
+      "evidence": "'Elegant', 'luxuriésem Laminat', 'exklusiv Méiglechkeet', 'eenzegaarteg Wunnqualitéit', 'begeeschtertste Residenzen' overclaim heavily for entry-tier."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "No explicit demographic targeting found in the LU body."
+    },
+    "hallucination": {
+      "score": 1,
+      "evidence": "'Prix vu ronn €9.300 pro m²' is a fabricated figure not provided in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE omit price entirely while LU introduces a fabricated '€9.300 pro m²'; FR/EN explicitly target 'jeunes professionnels'/'young professionals' while DE says 'junge Berufstätige oder Singles' and LU does not — feature mentions broadly align but numeric/audience treatment diverges."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Invented price/m², luxury overclaim, English hashtags."
+}

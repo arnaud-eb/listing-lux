@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'duplex d'exception de 180 m²' and '3 chambres' match; however text says 'Deux autres chambres bien agencées' with 'deux salles de bains' which matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 180 m², 3 chambres, deux salles de bains, parking, ascenseur, cave, terrasse, neighborhood; omits price."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Idiomatic French: 'la chambre principale assure un havre de paix avec un accès direct à une terrasse privative en bois'."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "'parquet chêne contrecollé', 'plan de travail en quartz', 'ascenseur', 'cave' match LU FR luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of classe énergétique/CPE."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 11 words with neighborhood and 'duplex moderne'; 5 CamelCase hashtags but in English."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'Splendide duplex' and 'havre de paix' are mild hyperbole, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; refers only to 'mode de vie urbain'."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'cave' is reasonable rendering of 'storage'; 'centre commercial' supported by photo analysis."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 180 m², 3 bedrooms, Cloche d'Or, parking, lift, terrace; only FR explicitly mentions 2 bathrooms while others omit it, minor inconsistency."
+    }
+  },
+  "overall_pass": false
+}

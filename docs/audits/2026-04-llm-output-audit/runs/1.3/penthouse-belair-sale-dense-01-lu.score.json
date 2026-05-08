@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Parkingplaz am Haus' (parking inside the building) is more specific than the input which just says parking=true."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions '220 m²', '4 Schlofkummer', 'Belair', 'Lift', 'Parkplaz', 'Lagerraum', 'Terrass', 'Kamin', 'Eichenparkett', 'Gaggenau', 'Carrara'."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "'Am Séil vum Penthouse', 'loftich loungemediescht Wunnberäich', 'Friemen a roueg wunnend' — multiple ungrammatical or invented Luxembourgish phrases."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Schlofkummer', 'Lift', 'Parkplaz' are correct LU terms but 'loungemediescht' and 'Kamäch' are not standard."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No Energieklass / CPE mentioned in the Luxembourgish text."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exklusivt 4-Schlofkummer Penthouse mat Panoramabléck zu Belair' is 7 words (slightly short) with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'luxuriéis Penthouse am héchste Standard', 'faszinéierend Vue', 'aussergewéinlecher Geleeënheet' — moderate hyperbole."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'familjefrëndlech ... Wunngefill' explicitly targets families."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'Parkingplaz am Haus' specifies indoor parking which input doesn't confirm."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 220 m², 4 bedrooms, Belair, Gaggenau, Carrara, 180° terrace; minor divergence: EN adds 'elegant villas' and DE/FR call elevator 'private' while LU specifies indoor parking."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Native LU quality is weakest; family-targeting language present."
+}

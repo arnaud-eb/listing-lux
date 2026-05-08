@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:53:11.954Z",
+  "output": {
+    "title": "Appartement neuf 3 chambres avec balcon et vue sur Kirchberg",
+    "description": "Situé dans le quartier contemporain de Kirchberg, cet appartement neuf de 145 m² offre un cadre de vie lumineux et fonctionnel. Le séjour bénéficie d'une double hauteur sous plafond et d'une exposition sud, avec un parquet en bois massif qui souligne l'élégance de l’espace. L'agencement ouvert favorise la circulation naturelle entre le salon et la salle à manger, favorisant un environnement convivial.\n\nLa cuisine intégrée est équipée de mobilier Bulthaup de fabrication allemande, incluant un plan de travail en pierre et une plaque à induction, complétée par un îlot central et un espace snack. Ce choix de matériaux et équipements souligne une conception minimaliste et fonctionnelle.\n\nL’appartement comprend trois chambres, dont une suite parentale avec salle de bains attenante. Cette dernière est agencée d’une douche à l’italienne avec effet pluie et d’une double vasque sur meuble haut de gamme. Le chauffage au sol complète ce confort sanitaire, accompagné d’un second sanitaire moderne.\n\nUn balcon avec garde-corps en verre s’ouvre sur une vue dégagée sur le parc de Kirchberg, offrant un espace extérieur calme et propice à la détente. L’immeuble récent est desservi par un ascenseur accessible, avec un emplacement de parking privatif et une cave pour le rangement.\n\nLa localisation dans le quartier européen de Kirchberg positionne ce bien à proximité des institutions européennes, de la Philharmonie et du MUDAM, ainsi que des écoles internationales et commerces. Classe énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "145 m² habitables avec 3 chambres et 2 salles de bains",
+        "icon": "square"
+      },
+      {
+        "text": "Balcon avec vue dégagée sur le parc de Kirchberg",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine Bulthaup équipée avec îlot central et plan de travail pierre",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Double hauteur sous plafond et grandes fenêtres sud",
+        "icon": "home"
+      },
+      {
+        "text": "Salle de bains avec douche à l’italienne et chauffage au sol",
+        "icon": "bath"
+      },
+      {
+        "text": "Parking privatif inclus dans l’immeuble récent",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur desservant les étages",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cave privative pour rangement sécurisé",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "BalconyView",
+      "BulthaupKitchen",
+      "DoubleHeightCeiling",
+      "KirchbergLocation",
+      "NewBuild"
+    ]
+  }
+}

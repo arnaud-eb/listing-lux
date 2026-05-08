@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'52 m² apartment', 'south-facing window', 'full-size tub' all match inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Bedrooms count not stated in body (only title), price 485000 and bathroom count omitted."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'This 52 m² apartment offers a practical living space' reads natively."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'more affordable pricing compared to other central areas' is unusual for luxury listings but Bonnevoie is entry-tier."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energy passport: class to be confirmed.' surfaces placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'South-Facing One-Bedroom Apartment with Storage in Bonnevoie' is 9 words with neighborhood; 5 hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'practical living space' is measured; 'lively and multicultural district' mild."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'lively and multicultural district known for its diverse dining options' refers to neighborhood, not occupant demographics."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'diverse dining options and popular market' and 'close to convenient transit connections including the central station' and 'more affordable pricing compared to other central areas' are not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE/LU all agree on 52 m², 1 bedroom, south-facing, storage, full tub; only minor variation — DE/FR mention central station, EN mentions 'central station', LU does not, but no numeric mismatch."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Penthouse mit 220 m² Wohnfläche' and '4 Schlafzimmern' align with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds, baths, sqm, neighborhood and most features ('Aufzug und Parkplatz', 'Stauraum') but omits price."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Das Eichenparkett sowie ein Holzfeuer-Kamin prägen das noble Ambiente' reads natively, though 'Holzfeuer-Kamin' is slightly awkward."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'gehobenen Wohnviertel Belair' and 'repräsentativen Eingangsbereich' fit luxury market vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht' explicitly surfaces a CPE placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exklusives Penthouse mit 4 Schlafzimmern und Panoramablick in Belair' is well-shaped; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'Exklusives Penthouse' and 'noble Ambiente' lean toward hyperbolic luxury language."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; describes 'grüne, ruhige Wohnlage' neutrally."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'repräsentativen Eingangsbereich' is not in inputs (photo_analyses don't mention an entrance area), and 'teilweise überdachte Terrasse' is not stated in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN/LU all agree on 220 m², 4 bedrooms, 3 baths (FR/EN/DE explicit; LU mentions 3), Gaggenau, Carrara, 180° south terrace; minor divergence is FR omitting CPE while DE/EN/LU include placeholder."
+    }
+  },
+  "overall_pass": false
+}

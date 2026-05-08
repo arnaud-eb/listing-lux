@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'un ascenseur privé dessert directement le logement' — input only states elevator=true, not that it's private."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions '220 m²', '4 chambres', 'Belair', 'ascenseur', 'parking', 'cave', 'terrasse', 'cheminée', 'parquet en chêne', 'Gaggenau', 'marbre de Carrare'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'synonyme de raffinement et de quiétude' reads natively in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'suite parentale avec dressing, salle de bains privative' uses standard LU/FR luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/classe énergétique mentioned anywhere in the French text."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Splendide Penthouse de 4 Chambres avec Terrasse Panoramique à Belair' is 10 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'Splendide', 'd'exception', 'vue exceptionnelle', 'bien rare' — multiple superlatives, though no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'pour accueillir famille et convives' and 'quartier familial' explicitly target families."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'ascenseur privé' is not supported by inputs (elevator is shared building feature, not stated as private)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 220 m², 4 bedrooms, Belair, Gaggenau, Carrara, 180° terrace; minor divergence: EN adds 'elegant villas' and DE/FR call elevator 'private' while LU specifies indoor parking."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Family references and 'private elevator' invention are the main issues."
+}

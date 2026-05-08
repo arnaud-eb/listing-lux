@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Auf ca. 195 m² Wohnfläche' matches; calls it 'Einfamilienhaus' though photo says 'semi-detached house' — minor mismatch."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "Highlights list 4 Schlafzimmer and 2 Bäder but price, Bertrange, and CPE absent; also missing some features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Die großzügigen Fliesenböden und der einladende Kamin schaffen ein angenehmes Ambiente' reads natively."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'Einfamilienhaus' which contradicts semi-detached; otherwise standard German real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No Energieklasse/CPE mentioned."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Elegantes Einfamilienhaus mit großzügigem Garten und Terrasse in familienfreundlicher Lage' is 11 words, no neighborhood; only 4 hashtags and one is English ('FamilyLiving')."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'besticht durch seine zeitlose Backsteinfassade' is moderate; no exclamations."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'familienfreundlicher Lage', 'für anspruchsvolle Familien', 'Familienkomfort', 'FamilyLiving' repeatedly target families."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'Einfamilienhaus' contradicts semi-detached input; 'ruhige, etablierte Wohngegend Luxemburgs' generic but unsubstantiated."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE/LU agree on 195 m², 4 bedrooms, 2 baths, but DE calls it Einfamilienhaus while FR/EN/LU say semi-detached, and LU mentions 'nordleeschtung' contradicting south-facing in all others."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Calls it Einfamilienhaus instead of Doppelhaushälfte; family targeting throughout."
+}

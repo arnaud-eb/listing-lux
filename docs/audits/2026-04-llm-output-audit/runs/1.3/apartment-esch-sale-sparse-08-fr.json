@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:28:07.176Z",
+  "output": {
+    "title": "Appartement élégant avec balcon, idéalement situé à Esch-sur-Alzette",
+    "description": "Situé au cœur d'Esch-sur-Alzette, deuxième ville dynamique du Luxembourg, ce superbe appartement de 78 m² allie confort et praticité. Composé de deux chambres lumineuses et d'une salle de bain soigneusement aménagée, il offre un cadre de vie agréable et fonctionnel.\n\nLe séjour baigné de lumière naturelle s’ouvre sur un balcon intimiste, parfait pour profiter des beaux jours et contempler le pouls vibrant du quartier. La cuisine en L, dotée d’un agencement optimisé, se complète d’un espace repas cosy, invitant à des moments conviviaux autour d’un bon repas.\n\nL’appartement bénéficie également d’une place de parking privative et d’un accès facilité grâce à un ascenseur moderne. Vous profiterez ici d’un lieu de vie à la fois calme et connecté, proche de l’université et du nouveau pôle culturel et économique de Belval, qui dynamisent ce quartier en pleine croissance.\n\nIdéal pour des acquéreurs recherchant un investissement pérenne ou un premier achat dans un secteur abordable et en plein essor, cet appartement conjugue praticité, confort et un style de vie cosmopolite unique.",
+    "highlights": [
+      {
+        "text": "Balcon privé accessible depuis le séjour, espace extérieur agréable",
+        "icon": "sun"
+      },
+      {
+        "text": "Deux chambres confortables aux volumes optimisés",
+        "icon": "home"
+      },
+      {
+        "text": "Cuisine en L équipée pour un coin repas convivial",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Place de parking incluse, un atout rare en centre-ville",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur facilitant l’accès à l’appartement",
+        "icon": "zap"
+      },
+      {
+        "text": "Emplacement stratégique proche de l'université et de Belval",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Quartier culturellement riche et en plein développement",
+        "icon": "trees"
+      },
+      {
+        "text": "Prix attractif dans un marché résidentiel en croissance",
+        "icon": "shield"
+      }
+    ],
+    "hashtags": [
+      "BalconPrivatif",
+      "ProximitéUniversité",
+      "BelvalDynamique",
+      "InvestissementEfficace",
+      "VieUrbaine"
+    ]
+  }
+}

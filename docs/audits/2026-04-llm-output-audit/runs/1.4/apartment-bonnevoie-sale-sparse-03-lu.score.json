@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'52 m²', '1-Schlofzëmmer', 'Dusch- an Badewanne-Mix' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Bedrooms, bathrooms, sqm, storage all listed in highlights; price omitted."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'D'Immobilie spillt sech an engem dynamësche Kontext of' reads awkward; 'bestuet mat wäisse Kücheschränken' uses German loanword oddly."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht' acceptable; some phrases like 'Galeriesdispositioun' are non-idiomatic."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' surfaces placeholder."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Hell a pracktësch 1-Schlofzëmmer Appartement mat Stau an zentrale Bonnevoie Lage' is 11 words but only 3 hashtags and not in LU language."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'bitt eng gutt Struktur an eng funktionell Dispositioun' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'Quartier mat ville Kulturen' refers to neighborhood character only."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'villzäiteg Offre vun Aktivitéiten a Geschäfter' is mildly speculative but not specific; no invented numbers or transit lines."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE/LU all agree on 52 m², 1 bedroom, south-facing, storage, full tub; only minor variation — DE/FR mention central station, EN mentions 'central station', LU does not, but no numeric mismatch."
+    }
+  },
+  "overall_pass": false
+}

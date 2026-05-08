@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'78 m² groussen Appartement... mat zwou Schlofzëmmeren an engem eenzelen Buedzëmmer' matches inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes price: 'D'Wunneng gëtt zu engem Präis vu 425.000 € ugebueden' plus all key features."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Awkward phrasings like 'no enger himmlecher a gutt zougänglecher Eenheet sichen' and 'de Concours zu de Verschäerfung vum Komfort ënnersträicht' read unnaturally."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht' is reasonable, but 'himmlecher Eenheet' is off-register for LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' is a valid placeholder."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Only 4 hashtags 'ZweetStadLiving BalkonWohnung ParkingInklusive PrakteschLayout' — acceptable count, CamelCase ok."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'no enger himmlecher... Eenheet' ('heavenly unit') is mild hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'Esch-sur-Alzette als zweeter Stad am Land' is supported by notes; no Belval mention here. Generic 'kulturellen Offer' is acceptable."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/LU describe 'parking' generically while DE upgrades to 'Tiefgaragenstellplatz'; LU includes the €425,000 price while FR/DE/EN omit it."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Some awkward Luxembourgish phrasing."
+}

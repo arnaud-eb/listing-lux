@@ -1,0 +1,47 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:55.073Z",
+  "output": {
+    "title": "Penthouse rénové avec terrasse et vue sur la vallée de l'Alzette",
+    "description": "Cet appartement situé dans le quartier historique du Grund offre une surface habitable de 175 m², distribuée sur un vaste séjour avec voûte apparente et murs en pierre d'origine. La lumière naturelle valorise les planchers en chêne large et crée une atmosphère chaleureuse.\n\nLa cuisine, équipée de mobilier en bois massif et d'appareils en acier inoxydable, comprend un plan de travail en marbre ainsi qu'une cuisinière professionnelle. Trois chambres à coucher bénéficient de finitions soignées, dont un espace de lecture sous une fenêtre de toit avec vue sur la vallée.\n\nLa terrasse privative, pavée en pierre et bordée d'une balustrade en fer forgé, donne sur la vallée de l'Alzette, inscrite au patrimoine mondial de l'UNESCO. L'immeuble comprend un ascenseur, un emplacement de parking et un espace de rangement. La classe énergétique est à communiquer.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 175 m²",
+        "icon": "square"
+      },
+      {
+        "text": "3 chambres à coucher rénovées",
+        "icon": "bed"
+      },
+      {
+        "text": "2 salles de bains modernes",
+        "icon": "bath"
+      },
+      {
+        "text": "Terrasse privée avec vue sur la vallée de l'Alzette",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascenseur dans l'immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Emplacement de parking inclus",
+        "icon": "car"
+      },
+      {
+        "text": "Espace de rangement disponible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ValleeAlzette",
+      "TerrazaPrivada",
+      "RénovationSoignée",
+      "PatrimoineUNESCO"
+    ]
+  }
+}

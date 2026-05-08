@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Title says 'zentraler Lag' (central location) and body says 'am Häerz vun der Gemeng' — Mamer not stated and 'central' is unsupported."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "'dräi schënne Schlofkummeren an engem propperen Bad' covers beds/bath, '130 m²' present, but no price and no Mamer."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "'engem sécheren Holzläffel als Lagerplaz' (Holzläffel = wooden spoon) is a clearly wrong word; 'schnellewäertege Beräich' is also nonsensical."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "Mixed odd compounds like 'Zousazparkplang' and 'schnellewäertege Beräich' do not match LU real-estate corpus."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No Energieklass / CPE mentioned in the Luxembourgish text."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Charmant Familljenhaus mat privatem Gaart an zentraler Lag' falsely claims central location and lacks Mamer; hashtags are English."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'Dëst Paradäis am Gaart' (paradise) is hyperbolic for an entry-tier rental."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'ideal fir Famillje oder Leit, déi eng präsenz an engem rouegen... Quartier sichen' explicitly targets families."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'am Häerz vun der Gemeng' and 'zentraler Lag' invent a central location not in inputs; Mamer is absent but a different location ('central') is fabricated."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR title says 'à Luxembourg', LU says 'zentraler Lag' / 'am Häerz vun der Gemeng', EN and DE omit neighborhood entirely — none agree on location; only FR mentions price (2 900 €/mois)."
+    }
+  },
+  "overall_pass": false,
+  "notes": "HARD-FAIL fair_housing (family targeting); also fabricates 'central' location and contains lexical errors."
+}

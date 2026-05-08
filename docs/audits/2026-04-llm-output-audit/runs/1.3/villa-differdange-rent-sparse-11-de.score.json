@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'anspruchsvolle Käufer' frames the listing as a sale, contradicting the 3400 € rental input; bedroom count not stated."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "Mentions '200 m²' and the double garage but omits bedrooms/bathrooms count, price, and Differdange neighborhood."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'besticht durch ihre zeitlose Architektur und das gepflegte Erscheinungsbild' reads as natural German real-estate prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'Einfamilienvilla', 'Natursteinfassade', 'Doppelgarage' fits the LU/DE luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No energy class / CPE is mentioned in the listing."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title has 11 words but no neighborhood; hashtags 'KlassischeVilla PrivaterGarten Doppelgarage NatursteinArchitektur TerrassenIdylle' are 5 and clean."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'exquisites Domizil' and 'Rückzugsort für Liebhaber' lean hyperbolic but no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'prädestiniert das Objekt als ein exquisites Domizil für Familien und Genießer' targets a family demographic."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'Große, sonnige Terrasse' and 'Panoramablick ins Grün' embellish; 'Keller- und Abstellräume im Keller' invents a basement not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE, EN, FR, LU all converge on 200 m², four bedrooms, two bathrooms, double garage and stone fireplace; only LU explicitly cites the 3.400 € price while others omit it, a minor mismatch."
+    }
+  },
+  "overall_pass": false
+}

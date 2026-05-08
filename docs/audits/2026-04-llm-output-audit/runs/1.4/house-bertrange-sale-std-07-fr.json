@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:55:46.957Z",
+  "output": {
+    "title": "Maison mitoyenne 4 chambres avec jardin orienté sud et parking privé",
+    "description": "Cette maison mitoyenne construite dans les années 1990 présente une façade en brique classique et un entretien soigné. Sa surface habitable de 195 m² se déploie sur plusieurs niveaux, offrant des espaces confortables et fonctionnels adaptés à une diversité de configurations.\n\nLe séjour, ouvert sur la salle à manger, associe un revêtement en carrelage et un foyer donnant une atmosphère accueillante. Les doubles portes permettent un accès direct au jardin, favorisant une circulation fluide entre intérieur et extérieur.\n\nLa cuisine, conçue dans un style traditionnel avec des éléments en bois et crédence en carrelage, inclut un coin petit-déjeuner et un équipement indépendant. Elle offre une disposition pensée pour un usage quotidien pratique.\n\nÀ l'extérieur, le jardin orienté sud accueille une pelouse et une terrasse, espaces lumineux parfaitement exposés et privatisés. L'entrée comprend un cheminement avec un parking privé, complété d'un espace de rangement attenant.\n\nClasse énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres spacieuses",
+        "icon": "bed"
+      },
+      {
+        "text": "Deux salles de bains fonctionnelles",
+        "icon": "bath"
+      },
+      {
+        "text": "Jardin privatif orienté sud avec terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Chemin privatif et parking",
+        "icon": "car"
+      },
+      {
+        "text": "Cheminée dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine traditionnelle avec coin petit-déjeuner",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Espace de rangement disponible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "MaisonMitoyenne",
+      "JardinSud",
+      "Cheminée",
+      "ParkingPrivé",
+      "CuisineTraditionnelle"
+    ]
+  }
+}

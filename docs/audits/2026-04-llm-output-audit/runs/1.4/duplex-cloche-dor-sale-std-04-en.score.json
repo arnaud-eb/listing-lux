@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'approximately 180 square meters', 'three bedrooms', matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions sqm, beds, neighborhood, parking, elevator, storage, terrace; price not stated."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Fluent English: 'creating an expansive and airy atmosphere that connects seamlessly to the surrounding cityscape'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Energy passport: class to be confirmed' and 'wraparound terrace', appropriate luxury phrasing."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energy passport: class to be confirmed.' surfaces placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Modern Bright Duplex with Three Bedrooms and Panoramic City Views in Cloche d'Or' is well-formed; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No 'breathtaking' or '!'; restrained tone."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All concrete claims like 'overlooks the nearby shopping centre' and 'evening sun' are supported by photo_analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 180 m², 3 bedrooms, 2 bathrooms, Cloche d'Or, parking, lift, storage, terrace; minor flooring discrepancy between FR ('chêne massif') and DE ('Eichenparkett')/EN."
+    }
+  },
+  "overall_pass": true
+}

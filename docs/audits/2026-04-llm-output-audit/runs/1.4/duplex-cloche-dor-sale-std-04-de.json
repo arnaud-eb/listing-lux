@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:24.039Z",
+  "output": {
+    "title": "Moderne 3-Zimmer-Duplexwohnung mit Terrasse und Stadtblick in Cloche d'Or",
+    "description": "Diese repräsentative Duplexwohnung mit 180 m² Wohnfläche befindet sich in einem Neubau im Geschäftsviertel Cloche d'Or, einem der modernsten Stadtteile Luxemburgs. Die helle, lichtdurchflutete Raumgestaltung mit doppelhoher Decke im Wohnzimmer vermittelt ein großzügiges Raumgefühl. Große Panoramafenster eröffnen einen Blick auf den angrenzenden Park und das umliegende Geschäftsviertel.\n\nDie offene Küche ist mit Siemens-Geräten und einer hochwertigen Quarz-Arbeitsplatte ausgestattet und schließt direkt an den Wohn- und Essbereich an. Diese Gestaltung fördert eine fließende Raumnutzung und urbanen Komfort. Die interne Treppe verbindet die beiden Etagen der Wohnung.\n\nIm oberen Geschoss liegen die drei Schlafräume, darunter ein Hauptschlafzimmer mit Zugang zur privaten, umlaufenden Terrasse mit Holzdeck und Blick auf das Einkaufszentrum. Die Wohnung verfügt zudem über zwei moderne Bäder, einen Abstellraum und einen zugehörigen Parkplatz.\n\nZur Wohnanlage gehört ein Aufzug, der barrierefreien Zugang zu allen Ebenen ermöglicht. Die gesamte Wohnung wurde mit edlem Eichenparkett ausgestattet. Die offene Terrasse genießt nach Süden ausgerichtet den Abendsonnenschein und erweitert den Wohnraum nach außen.\n\nEnergieausweis: Klasse wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "Doppelgeschossiges Wohnzimmer mit Panoramafenstern und Blick auf Park",
+        "icon": "home"
+      },
+      {
+        "text": "Offene Küche mit Siemens-Einbaugeräten und Quarz-Arbeitsfläche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Umlaufende Holzterrasse mit Aussicht auf das Einkaufszentrum",
+        "icon": "sun"
+      },
+      {
+        "text": "3 Schlafzimmer, Hauptschlafzimmer mit Terrassenzugang und Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "2 moderne Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Privater Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Abstellraum zur zusätzlichen Lagerung",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModerneArchitektur",
+      "DuplexWohnung",
+      "Terrassenwohnung",
+      "SiemensKüche",
+      "Parkblick"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-lu-only-09",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'éischte Stack' (first floor) is invented — input doesn't specify a floor, but otherwise facts (95 m², 2 bedrooms, balcony north-facing, elevator, storage) match."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 95 m², 2 bedrooms, 1 bathroom, balcony, elevator, storage, furnished, renovated, induction, dishwasher — but omits the monthly rent of €2400 and the address."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Has awkward/invented phrasing like 'lichtduerchfloss', 'entwéckelte Holzparkett', 'Ännerung vum Dagbuedem', 'Mobilliarioun', 'komplette Geriichter' that read translated rather than native."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses some standard terms ('Wunnfläch', 'Schlofzëmmeren', 'Buedzëmmer', 'Elevator') but also non-idiomatic constructions like 'Appartementsgebai' and 'nohaltege Quartier' that don't match LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' surfaces a CPE placeholder rather than inventing a class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovéiert 2-Zëmmeren Wunnengen mat Balkon am Limpertsberg' is 7 words including neighborhood and adjective; 4 hashtags 'RenovéiertAppartement LimpertsbergLiewen SkandinaveschenDesign Balkon' but 'Balkon' isn't CamelCase."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbolic terms like 'breathtaking' or 'must-see'; phrasing such as 'rafinéiert renovéiert' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics, family status, religion, age, gender, or origin."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'éischte Stack' floor is not in inputs, and 'universitär Atmosphär, kulturell Offeren a schéi Parks' plus 'nohaltege Quartier' invent neighborhood attributes not provided."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only LU was generated, so no cross-language inconsistency is possible."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Rent price of €2400/month is omitted entirely — the prompt didn't differentiate sale vs rent, surfacing the gap noted in the fixture."
+}

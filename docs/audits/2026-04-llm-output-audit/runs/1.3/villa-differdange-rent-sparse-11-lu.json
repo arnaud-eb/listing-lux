@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:29:24.825Z",
+  "output": {
+    "title": "Elegant 4-Schlofkummer Villa mat Privatem Gaart an Duebelen Garage",
+    "description": "Dës charmant Villa aus den 1970er Jore representéiert eng aussergewéinlech Geleeënheet fir eng familiefrëndlech a roueg Wunnlag an enger etabléierter Residenzgebitt zu Lëtzebuerg. Mat engem mëllen architektoneschen Stil, deen e traditiounsräiche Steebfassad mat engem schéine Liewensraum verbënnt, gëtt dëst Haus hir Authentizitéit erhalen an déi rezent Ënnerhalt definitiv geséchert.\n\nOp ronn 200 m² funktionell entwéckelten Raum sinn véier geräumeg Schlofkummer an zwee praktesch Buedzëmmer disponibel, déi e komfortabelt an agespaarten Ëmfeld fir eng grouss Famill oder Gäscht bidden. De Wunnzëmmer betount seng Gemittlechkeet duerch hohl Holzpaneele an eng originell Steenkamin entwéckelt fir roueg Avenë Mëttes- an Owendstonnen mat Ausbléck op de gréngen, privatem Gaart.\n\nD'Villenplaz profitéiert vun engem grousse, natierleche privatem Gaart mat alen Beem, eng schéin Patio an eng gréng Plaz fir Späicheren an Entspanung ënner der oppener Loft. D'Objekt gëtt komplettéiert duerch e prakteschen Duebelen Garage mat direkter Accès op d'Villenstëmmung an als Pluspunkten zousätzlech privat Gaartgrondstéck an Erhuelungsraum.\n\nDës einzigarteg Geleeënheet ass optimal fir Visiten, déi eng balanceéiert Kombinatioun vu klasseschem Charme, funktionellem Design an enger roueger Ëmgéigend sichen. D'Präisserfuerderung vun 3.400 € ënnersträicht d'Qualitéit an d'Exklusivitéit dëser luxuriéiser Immobilie am Häerz vun enger begeeschterter Gemeng.",
+    "highlights": [
+      {
+        "text": "Vier komfortabel Schlofkummer",
+        "icon": "home"
+      },
+      {
+        "text": "Zwee modern Buedzëmmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Duebelen Garage fir méi Sécherheet",
+        "icon": "car"
+      },
+      {
+        "text": "Privater Gaart mat reife Beem a Patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Gemittleche Wunnzëmmer mat originellem Steenkamin",
+        "icon": "fireplace"
+      },
+      {
+        "text": "Späicherräumlichkeiten verfügbar",
+        "icon": "archive"
+      },
+      {
+        "text": "Schéin Terrassë bekannt fir Entspanung",
+        "icon": "sun"
+      }
+    ],
+    "hashtags": [
+      "LuxusVilla",
+      "PrivaterGaart",
+      "TraditionellCharme",
+      "DuebelenGarage",
+      "ExklusivWunnen"
+    ]
+  }
+}

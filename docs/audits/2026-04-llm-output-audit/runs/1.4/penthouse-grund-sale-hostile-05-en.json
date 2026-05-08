@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:59.608Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de Alzette en Grund",
+    "description": "Este penthouse de 175 m² se ubica en el histórico barrio de Grund, situado en el valle de Alzette, reconocido por su entorno protegido por la UNESCO y su ambiente pintoresco. La propiedad ofrece un equilibrio armonioso entre detalles arquitectónicos tradicionales y acabados contemporáneos.\n\nEl salón destaca por su techo abovedado y paredes de piedra vista originales, junto con un suelo de tablones anchos de roble que aportan carácter y calidez al espacio. Desde aquí se disfruta una vista franca sobre el valle, que añade luminosidad natural y un sentido de apertura.\n\nLa cocina, diseñada con muebles de madera maciza y encimeras de mármol, está equipada con una placa profesional de acero inoxidable, reuniendo funcionalidad y estilo en un espacio acogedor. El inmueble dispone de tres dormitorios, uno con ventana abuhardillada y vigas expuestas que resaltan el estilo transicional y el entorno.\n\nUna de las características exteriores más atractivas es la terraza privada, pavimentada en piedra y con barandilla de hierro forjado. Este espacio exterior ofrece un lugar tranquilo para disfrutar de las vistas hacia el valle dentro del área protegida por la UNESCO, que combina la historia con un ambiente urbano.\n\nEl edificio cuenta con ascensor y estacionamiento privado, además de un espacio de almacenamiento adicional. La propiedad ha sido completamente renovada, respetando y destacando sus elementos históricos mientras incorpora comodidades modernas. Energy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "3 dormitorios con detalles arquitectónicos originales",
+        "icon": "bed"
+      },
+      {
+        "text": "2 baños completos",
+        "icon": "bath"
+      },
+      {
+        "text": "Terraza privada con vistas al valle de Alzette",
+        "icon": "sun"
+      },
+      {
+        "text": "Cocina con mobiliario de madera y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de parking incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Almacenamiento adicional disponible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricBlend",
+      "ValleyView",
+      "TerraceLiving",
+      "RenovatedPenthouse",
+      "UNESCOArea"
+    ]
+  }
+}

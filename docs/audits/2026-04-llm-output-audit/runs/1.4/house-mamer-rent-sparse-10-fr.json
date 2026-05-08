@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:33.904Z",
+  "output": {
+    "title": "Maison mitoyenne 3 chambres avec jardin privatif et parking",
+    "description": "Située dans un quartier résidentiel calme, cette maison mitoyenne des années 1980 propose une superficie d'environ 130 m². Elle présente une façade neutre et un petit jardin à l'avant qui ouvre sur un jardin privatif à l'arrière, offrant un espace extérieur protégé et paisible.\n\nL'intérieur se compose d'un séjour avec vue sur le jardin, éclairé naturellement par des portes-fenêtres donnant accès direct à l'extérieur. Le style actuel est conservateur et nécessite une modernisation, avec une moquette beige au sol et un coin télévision aménagé dans une alcôve.\n\nLa maison comporte trois chambres et une salle de bain complète. Un espace de rangement est disponible, particulièrement apprécié pour son utilité au quotidien. Un emplacement de parking est inclus, facilitant le stationnement dans le voisinage.\n\nL'ensemble est entretenu avec soin, notamment dans le jardin où une pelouse simple et une clôture en bois définissent l'espace. Un petit abri de jardin complète les commodités extérieures, renforçant le potentiel fonctionnel du lieu.\n\nClasse énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Maison mitoyenne des années 1980",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d’environ 130 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres à coucher",
+        "icon": "bed"
+      },
+      {
+        "text": "Jardin privatif avec abri de rangement",
+        "icon": "trees"
+      },
+      {
+        "text": "Emplacement de parking disponible",
+        "icon": "car"
+      },
+      {
+        "text": "Séjour avec accès au jardin",
+        "icon": "home"
+      },
+      {
+        "text": "Espace de rangement intégré",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "MaisonMitoyenne",
+      "JardinPrivatif",
+      "ParkingInclu",
+      "Surface130m2",
+      "Années1980"
+    ]
+  }
+}

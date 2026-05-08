@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'cette charmante maison mitoyenne de 195 m²' matches inputs; price not mentioned but no contradiction."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 195 m², 4 chambres, 2 salles de bains, but omits price (1,350,000€), neighborhood name (Bertrange), and CPE."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'le séjour dévoile un espace lumineux et chaleureux grâce à son agencement ouvert' reads naturally in French."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'maison mitoyenne', 'séjour', 'jardin exposé sud' which fit corpus, but generic 'quartier résidentiel prisé du Luxembourg' lacks specificity."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of classe énergétique or CPE anywhere in the text."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Élégante maison familiale avec jardin exposé sud et terrasse privée' is 10 words but lacks neighborhood; 5 hashtags CamelCase no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Uses 'charmante', 'raffinement' but avoids exclamation marks and 'breathtaking'-class hyperbole."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'idéal pour une famille recherchant un environnement intime' and 'idéale pour une famille souhaitant s'établir' explicitly target families."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'Située dans un quartier résidentiel prisé du Luxembourg' invents prestige; neighborhood Bertrange not named, but 'années 1990' came from photo analysis."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE/LU agree on 195 m², 4 bedrooms, 2 baths, but DE calls it Einfamilienhaus while FR/EN/LU say semi-detached, and LU mentions 'nordleeschtung' contradicting south-facing in all others."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Family targeting is a fair-housing concern."
+}

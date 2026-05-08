@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Spanning 195 m² of well-appointed living space, the property boasts four spacious bedrooms and two full bathrooms' aligns with inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "195 m², 4 bedrooms, 2 bathrooms cited but price (€1,350,000) and neighborhood (Bertrange) absent."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'The inviting living room serves as the heart of the home' reads as native English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'semi-detached residence', 'south-facing rear garden' fit corpus; 'discerning families' is generic luxury filler."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/energy class mentioned anywhere."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Elegant 4-Bedroom Semi-Detached Family Home with South-Facing Garden' is 10 words but no neighborhood; 5 hashtags CamelCase."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'exquisite opportunity for discerning families', 'exceptional offering where charm, functionality, and quality craftsmanship unite' borders on hyperbole."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'exquisite opportunity for discerning families seeking comfort' and 'FamilyFocused' hashtag explicitly target family demographic."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'tranquil and established Luxembourg neighborhood' is unsupported but mild; 'from the 1990s' supported by photo style."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE/LU agree on 195 m², 4 bedrooms, 2 baths, but DE calls it Einfamilienhaus while FR/EN/LU say semi-detached, and LU mentions 'nordleeschtung' contradicting south-facing in all others."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FamilyFocused hashtag is a hard-fail trigger."
+}

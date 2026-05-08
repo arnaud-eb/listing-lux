@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'2-Zëmmer-Wunneng um 78 m²', 'Lift', 'Parkplaz', 'Balkon' match inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions beds, sqm, balcony, parking, elevator but omits price €425,000."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Awkward constructions like 'wuelwollegeompt Ëmwelt' and 'duerchdesch forcéiert a lieweg Stadliewen am 2. Stad' read as machine-generated."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses standard terms 'Wunneng', 'Schlofzëmmeren', 'Parkplaz' but some phrasing ('60er Wunnraum') is unclear."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of Energieklass/CPE in the Luxembourgish text."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Stilvoll Wunneng mat 2 Zëmmeren a Balkon an Esch-sur-Alzette' is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Tone mostly restrained; 'charmant an zentral ze liewen' is mild."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'passt perfekt fir jonk Paare, berufstätëgt Singles oder Investisseuren' targets age/family status — fair-housing violation."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'60er Wunnraum mat natierlechen, neitrale Faarwen' — '60er' (60s era?) is not supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR, LU, DE, EN all agree on 78 m², 2 bedrooms, balcony, parking, elevator; minor variation: only LU adds '60er Wunnraum'."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Fair-housing fail due to 'jonk Paare' demographic targeting."
+}

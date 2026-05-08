@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'secure parking, elevator access, and ample storage' aligns with input features."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers '220 m²', 'four bedrooms', 'Belair', 'elevator', 'parking', 'storage', 'terrace', 'fireplace', 'oak parquet', 'Gaggenau', 'Carrara marble'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'creating an ideal setting for both relaxation and entertaining' reads as native English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'master suite ... walk-in closet, exquisite ensuite bathroom' uses standard luxury terminology."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No energy class / CPE referenced anywhere in the English text."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exquisite 4-Bedroom Penthouse with Panoramic City Views in Belair' is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 2,
+      "evidence": "'Discover unparalleled luxury', 'masterpiece of minimalist design', 'rare opportunity to embrace an exclusive lifestyle' — strong hyperbole."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'family-friendly' and 'upscale residential enclave' explicitly target families."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'featuring elegant villas' is not supported by any input — neighborhood description invents architecture."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 220 m², 4 bedrooms, Belair, Gaggenau, Carrara, 180° terrace; minor divergence: EN adds 'elegant villas' and DE/FR call elevator 'private' while LU specifies indoor parking."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Family-friendly mention is the fair-housing risk; 'elegant villas' is unsupported."
+}

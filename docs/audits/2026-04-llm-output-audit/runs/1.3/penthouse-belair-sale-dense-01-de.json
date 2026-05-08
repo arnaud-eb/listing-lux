@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:24:07.533Z",
+  "output": {
+    "title": "Exklusives Penthouse mit Panorama-Stadtblick und luxuriösen Ausstattungen in Belair",
+    "description": "Dieses exquisite Penthouse besticht durch seine großzügige Wohnfläche von 220 m² und vereint urbanen Luxus mit einer ruhigen, grünen Umgebung im begehrten Stadtviertel Belair. Die elegant renovierten Räumlichkeiten überzeugen durch einen offenen Grundriss, bodentiefe Fenster und edles Eichenparkett, welches für warme Wohnatmosphäre sorgt. Ein moderner Kamin ergänzt das komfortable Raumgefühl und schafft einladende Momente in stilvollem Ambiente.\n\nDie hochmoderne Küche ist mit Gaggenau-Geräten ausgestattet und bietet eine großzügige Carrara-Marmor-Insel samt integriertem Weinkühlschrank – ideal für anspruchsvolle Kochkultur und stilvolles Entertainment. Die klaren Linien und die matte schwarze Armaturen unterstreichen den minimalistischen Charakter der luxuriösen Ausstattung.\n\nVier geschmackvoll eingerichtete Schlafzimmer bieten mit ihren exquisiten Details wie begehbaren Kleiderschränken und privaten Terrassenzugängen höchsten Wohnkomfort. Das Hauptschlafzimmer beeindruckt mit einem eigenen Zugang zur großzügigen Terrasse und einem en-suite Badezimmer und schafft so eine private Wohlfühloase.\n\nDie weitläufige, südlich ausgerichtete Terrasse mit moderner Glasbalustrade und hochwertigem Verbundholzbelag offeriert einen unvergleichlichen 180-Grad-Blick auf die pulsierende Stadt Luxemburg. Hier verbinden sich stilvolle Outdoor-Loungemöbel mit bester Privatsphäre für unvergessliche Momente unter freiem Himmel.\n\nAbgerundet wird dieses exklusive Wohnangebot durch einen privaten Aufzug, einen Stellplatz, geräumigen Stauraum sowie modernste Smart-Home-Lichtinstallationen. Dieses penthouse residence in Belair bietet eine außergewöhnliche Symbiose aus luxuriösem Lebensstil, prestigeträchtiger Lage und urbaner Ruhe in einem der exklusivsten Quartiere Luxemburgs.",
+    "highlights": [
+      {
+        "text": "Großzügige 220 m² Wohnfläche mit 4 Schlafzimmern",
+        "icon": "home"
+      },
+      {
+        "text": "Panoramablick über die Stadt Luxemburg von der Terrasse",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Luxuriös renoviert mit edlem Eichenparkett und Kamin",
+        "icon": "fireplace"
+      },
+      {
+        "text": "Modern ausgestattete Designküche mit Gaggenau-Geräten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlich ausgerichtete Terrasse mit 180° Glasbalustrade",
+        "icon": "sun"
+      },
+      {
+        "text": "Privater Aufzug und gesicherte Parkmöglichkeiten",
+        "icon": "elevator"
+      },
+      {
+        "text": "Smart-Home-Beleuchtung für optimale Wohnatmosphäre",
+        "icon": "zap"
+      },
+      {
+        "text": "Begehbare Kleiderschränke und en-suite Badezimmer in Schlafzimmern",
+        "icon": "bath"
+      }
+    ],
+    "hashtags": [
+      "UrbanLuxury",
+      "PanoramaTerrace",
+      "DesignKitchen",
+      "ExclusiveLiving",
+      "BelairElegance"
+    ]
+  }
+}

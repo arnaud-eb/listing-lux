@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'environ 200 m²', 'Quatre chambres et deux salles de bains', 'double garage' match; 'terrain privatif clôturé' adds an unverified detail."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions sqm, beds, baths, garage, garden, terrace, storage; omits Differdange and rental price 3400."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'développe environ 200 m² de surface habitable' is idiomatic French real-estate phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'villa indépendante', 'surface habitable', 'jardin privatif', 'Classe énergétique' match French LU corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Classe énergétique : à communiquer.' is a proper placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa individuelle de 4 chambres avec jardin et garage double' is well-formed; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'séjour chaleureux' and 'cadre extérieur apaisant' are mild and acceptable."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No mention of family status, age, or other protected attributes."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'terrain privatif clôturé' (fenced) is not supported by inputs/photo analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages (LU, DE, EN, FR) agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, fireplace, terrace; FR adds 'clôturé' and DE adds 'Außenstellplätze' as minor extras."
+    }
+  },
+  "overall_pass": false
+}

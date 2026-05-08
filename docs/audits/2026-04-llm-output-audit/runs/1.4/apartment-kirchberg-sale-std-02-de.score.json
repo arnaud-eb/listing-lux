@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"auf 145 m² eine durchdachte Raumaufteilung mit drei Schlafzimmern und zwei Bädern\" matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers all key features though city-view not explicitly mentioned beyond Parkblick: \"Balkon mit Parkblick\"."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"Doppelhöhe der Decke\" is slightly awkward German for double-height ceiling but otherwise fluent."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"hochwertige Bulthaup-Einbauten\" and \"begehbarer Regendusche\" fit luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Energieausweis: Klasse wird nachgereicht.\" placeholder surfaced."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "5 CamelCase hashtags including neighborhood: \"Neubauwohnung Parkblick BulthaupKüche ModerneArchitektur KirchbergLiving\"."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"ein hoher Wohnkomfort gewährleistet\" is restrained, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "\"EU-Institutionen, Philharmonie und MUDAM\" supported by neighborhood metadata."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE/EN/LU agree on numerics, but FR introduces \"suite parentale\" and \"parquet en bois massif\" not present in other languages or inputs; LU title's \"Parkplaz\" is ambiguous vs. EN/DE/FR's clear park view."
+    }
+  },
+  "overall_pass": true
+}

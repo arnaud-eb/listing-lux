@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'180 m²', 'Trois chambres', 'Deux salles de bain' match; 'parquet en chêne massif' slightly differs from input 'engineered oak flooring'."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, parking, ascenseur, rangement, terrasse, neighborhood; no price."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natural: 'favorisant circulation et convivialité', 'orientation favorable au soleil couchant'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard FR luxury terms 'duplex neuf', 'double hauteur sous plafond', 'Classe énergétique'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Classe énergétique : à communiquer.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title in range; 5 hashtags 'DuplexModerne TerrasseEnVille VueSurParc CuisineEquipée ClocheDOr'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamations or hyperbole; 'élégante et contemporaine' is acceptable."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'parquet en chêne massif' contradicts input which states 'engineered oak flooring' (not solid massif)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 180 m², 3 bedrooms, 2 bathrooms, Cloche d'Or, parking, lift, storage, terrace; minor flooring discrepancy between FR ('chêne massif') and DE ('Eichenparkett')/EN."
+    }
+  },
+  "overall_pass": false
+}

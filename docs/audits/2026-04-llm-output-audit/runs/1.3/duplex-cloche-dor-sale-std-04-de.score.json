@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'180 m²', new-build, terrace, parking, elevator, storage all match inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions sqm, neighborhood, terrace, parking, elevator, storage but omits price and explicit bedroom/bathroom count (no '3 Schlafzimmer' stated)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as fluent German: 'Die elegante, offene Küche integriert hochwertige Siemens-Geräte'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Neubau-Residenz', 'Aufzug', 'Privatstellplatz' typical of LU/DE luxury listings."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/Energieklasse mentioned anywhere."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title good with neighborhood, but hashtags 'ModernLiving UrbanOasis PanoramicViews' are English/generic, not market-specific."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "Phrases like 'faszinierenden Blick' and 'seltene Gelegenheit' edge into hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'Immobilie für anspruchsvolle Käufer mit Blick für Qualität' references buyer taste, not protected class."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'Hochwertiges Eichenparkett' is supported by 'engineered oak flooring' in photo analysis; nothing invented."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 180 m², 3 bedrooms, Cloche d'Or, parking, lift, terrace; only FR explicitly mentions 2 bathrooms while others omit it, minor inconsistency."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:31.283Z",
+  "output": {
+    "title": "Duplex spacieux 3 chambres avec terrasse et vue sur la ville à Cloche d'Or",
+    "description": "Situé dans le quartier en pleine expansion de la Cloche d'Or, ce duplex neuf offre une surface habitable de 180 m² bénéficiant d'une double hauteur sous plafond dans le séjour. L'espace de vie lumineux comprend un salon avec de grandes baies vitrées, un escalier intérieur moderne et un parquet en chêne massif, procurant une atmosphère élégante et contemporaine. La vue dégagée donne sur le parc aménagé voisin, contribuant à un cadre urbain agréable.\n\nLa cuisine ouverte, équipée d'appareils Siemens et d'un plan de travail en quartz, s'intègre parfaitement à la pièce à vivre, favorisant circulation et convivialité. Deux salles de bain complètes accompagnent ce bien, dont une au niveau supérieur où se situe également la chambre principale pourvue de placards intégrés et d'un accès direct à une terrasse privative.\n\nCette terrasse de plain-pied en bois de qualité, conçue en enfilade, offre une orientation favorable au soleil couchant et une vue dégagée sur le centre commercial tout proche. La présence d'un ascenseur facilite l'accès au bien, complété par une place de parking et un espace de rangement privatif pour plus de confort.\n\nLa Cloche d'Or est reconnue pour son environnement mêlant parcs, infrastructures modernes et centres commerciaux qui contribuent à un cadre de vie urbain dynamique. Classe énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Duplex neuf avec double hauteur sous plafond",
+        "icon": "home"
+      },
+      {
+        "text": "Cuisine ouverte équipée Siemens, plan de travail quartz",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse en bois avec vue sur centre commercial",
+        "icon": "sun"
+      },
+      {
+        "text": "Trois chambres, dont une avec accès direct terrasse",
+        "icon": "bed"
+      },
+      {
+        "text": "Deux salles de bain modernes et fonctionnelles",
+        "icon": "bath"
+      },
+      {
+        "text": "Place de parking privative incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur accessible",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Rangements privatifs disponibles",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "DuplexModerne",
+      "TerrasseEnVille",
+      "VueSurParc",
+      "CuisineEquipée",
+      "ClocheDOr"
+    ]
+  }
+}

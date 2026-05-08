@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'appartement de 78 m² offrant un agencement fonctionnel comprenant deux chambres et une salle de bain' matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 78 m², 2 chambres, balcon, parking, ascenseur but omits the price (€425,000): 'Situé à Esch-sur-Alzette, cette résidence...'"
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Le séjour bénéficie d'une belle luminosité et d'un accès direct au balcon' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'place de parking privative', 'classe énergétique', 'desservi par un ascenseur' use standard LU FR vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'La classe énergétique est à communiquer.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement 2 chambres avec balcon et parking à Esch-sur-Alzette' is fine, but only 5 hashtags without CamelCase consistency: 'Balcon ParkingInclus CuisineAmenagee EschAlzette Ascenseur' (Balcon, Ascenseur are single words)."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Ce bien constitue une proposition intéressante' is restrained; no exclamation marks or hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to demographics or family status anywhere."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'proximité avec le site universitaire et la zone de Belval' introduces named places (university, Belval) not in the inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/LU describe 'parking' generically while DE upgrades to 'Tiefgaragenstellplatz'; LU includes the €425,000 price while FR/DE/EN omit it."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Belval/university references are not in inputs."
+}

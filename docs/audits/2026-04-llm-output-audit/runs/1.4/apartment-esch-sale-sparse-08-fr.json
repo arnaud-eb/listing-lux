@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:10.028Z",
+  "output": {
+    "title": "Appartement 2 chambres avec balcon et parking à Esch-sur-Alzette",
+    "description": "Situé à Esch-sur-Alzette, cette résidence propose un appartement de 78 m² offrant un agencement fonctionnel comprenant deux chambres et une salle de bain. Le séjour bénéficie d'une belle luminosité et d'un accès direct au balcon, apportant un espace extérieur appréciable.\n\nLa cuisine, en configuration en L, est équipée de rangements blancs et offre suffisamment de place pour un coin repas, pratique au quotidien. Le sol en revêtement stratifié et les murs aux teintes beige clair créent une ambiance neutre et soignée.\n\nL’appartement est complété par une place de parking privative et se trouve dans un immeuble desservi par un ascenseur, garantissant un confort d’accès. Ce logement est situé dans un quartier en développement, connu pour sa dynamique culturelle et sa proximité avec le site universitaire et la zone de Belval.\n\nLa classe énergétique est à communiquer. Ce bien constitue une proposition intéressante dans un secteur où les prix restent abordables tout en bénéficiant des installations d'une ville en pleine expansion.",
+    "highlights": [
+      {
+        "text": "Surface de 78 m² bien distribuée",
+        "icon": "square"
+      },
+      {
+        "text": "Deux chambres confortables",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcon accessible depuis le séjour",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine en L avec coin repas",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur dans l’immeuble",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "Balcon",
+      "ParkingInclus",
+      "CuisineAmenagee",
+      "EschAlzette",
+      "Ascenseur"
+    ]
+  }
+}

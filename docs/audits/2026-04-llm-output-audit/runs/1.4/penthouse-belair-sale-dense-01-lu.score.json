@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Most facts correct, but 'engem heftigholz-Kamäin' and the master terrace described as 'éischt klasséiert' are confused phrasings."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Sqm, beds, neighborhood mentioned but bathrooms only briefly noted ('dräi Buedzëmmeren'), and price missing; some features muddled."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Phrases like 'eng ample Raumoptioun' and 'Terrass ass souwuel wéi d'éischt klasséiert' read as awkward, machine-like Luxembourgish."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "'wunnenge Belair Quartier' and 'oplest privat Terrassenzougank' are unidiomatic and don't match LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht' surfaces the CPE placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exzellent renovéiert Penthouse mat 4 Schlofzëmmeren an Terrass zu Belair' includes neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'exzeptionellt Penthouse' and 'Exzellent renovéiert' (in title) push into hyperbole territory."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references in the LU text."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'engem geréngem Späicherberäich' near master bedroom is not in inputs (storage was a general feature, not bedroom-adjacent)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN/LU all agree on 220 m², 4 bedrooms, 3 baths (FR/EN/DE explicit; LU mentions 3), Gaggenau, Carrara, 180° south terrace; minor divergence is FR omitting CPE while DE/EN/LU include placeholder."
+    }
+  },
+  "overall_pass": false
+}

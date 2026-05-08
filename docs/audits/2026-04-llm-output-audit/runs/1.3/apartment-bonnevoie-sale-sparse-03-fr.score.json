@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'à deux pas de la gare centrale' is not in inputs but consistent; '52 m²' and '1 chambre' match."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 52 m², 1 chambre, Bonnevoie, storage, but omits price (485 000 €) and bathroom count is implied."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Découvrez ce charmant appartement... parfaitement agencé pour offrir confort et fonctionnalité' reads natively in French."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses standard terms like 'pied-à-terre' and 'parquet stratifié' but 'InvestissementIntelligent' feels generic."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of CPE or energy class anywhere in the French listing."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement lumineux 1 chambre idéalement situé à Bonnevoie' is 8 words and includes neighborhood; 5 hashtags but 'Lumineux' is generic."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "Phrases like 'un atout rare très recherché' and 'accessibilité urbaine remarquable' lean promotional for an entry-tier flat."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'Bonnevoie séduit les jeunes professionnels' targets a demographic group by age/status."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'à deux pas de la gare centrale', 'célèbre marché local', 'parquet stratifié de qualité' — none of these specifics are in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE omit price entirely while LU introduces a fabricated '€9.300 pro m²'; FR/EN explicitly target 'jeunes professionnels'/'young professionals' while DE says 'junge Berufstätige oder Singles' and LU does not — feature mentions broadly align but numeric/audience treatment diverges."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Demographic targeting and unsupported location/market claims."
+}

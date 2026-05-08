@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:24:50.652Z",
+  "output": {
+    "title": "Appartement d'Exception 3 Chambres avec Vue Panoramique sur Kirchberg",
+    "description": "Situé au cœur du prestigieux quartier européen de Kirchberg, cet appartement neuf de 145 m² conjugue élégance contemporaine et fonctionnalité optimale. Son architecture moderne, caractéristique de ce secteur dynamique, offre un cadre de vie privilégié alliant confort et raffinement.\n\nL’espace de vie lumineux dévoile un salon à double hauteur sous plafond, agrémenté de larges baies vitrées orientées plein sud, inondant la pièce de lumière naturelle. Le parquet en bois massif souligne la qualité des finitions tandis que l’agencement ouvert vers la salle à manger accentue la sensation d’espace raffiné.\n\nLa cuisine minimaliste, équipée de mobilier Bulthaup haut de gamme et d’un îlot central en pierre naturelle, répond aux exigences des amateurs de gastronomie moderne. Cet espace fonctionnel comprend également un bar pour des moments conviviaux.\n\nBalcon privatif avec garde-corps en verre, il dévoile une vue apaisante sur le parc verdoyant de Kirchberg, idéale pour savourer un café matinal en toute sérénité. Le bien comprend par ailleurs deux salles de bains spacieuses avec douche à l’italienne à effet pluie et chauffage au sol, ainsi que de multiples rangements intégrés.\n\nUn emplacement stratégique au sein du quartier des institutions européennes, à proximité immédiate de la Philharmonie et du MUDAM, et des meilleures écoles internationales, fait de ce bien une adresse prisée des expatriés et professionnels en quête d’un cadre de vie urbain d’exception.",
+    "highlights": [
+      {
+        "text": "Appartement neuf et moderne de 145 m² dans quartier d’affaires prisé",
+        "icon": "building"
+      },
+      {
+        "text": "Luminosité exceptionnelle grâce aux grandes fenêtres orientées sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine Bulthaup haut de gamme avec îlot central et derniers équipements",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balcon privé avec vue dégagée sur parc et cadre apaisant",
+        "icon": "trees"
+      },
+      {
+        "text": "Deux salles de bains spa avec douche pluie et chauffage au sol",
+        "icon": "bath"
+      },
+      {
+        "text": "Place de parking sécurisée et ascenseur privatif inclus",
+        "icon": "car"
+      },
+      {
+        "text": "Proximité immédiate des institutions européennes et écoles internationales",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Rangements optimisés pour un espace de vie épuré et fonctionnel",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "KirchbergLiving",
+      "ModernElegance",
+      "ExpatLifestyle",
+      "ParkViewBalcony",
+      "BulthaupKitchen"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'Halb-Duebelt-Residenz' is invented terminology; '195 m²' correct, but 'nordleeschtung' contradicts south-facing claim elsewhere."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "4 Schlofkummeren, 2 Biedzëmmeren mentioned, but price, Bertrange, CPE all missing."
+    },
+    "native_quality": {
+      "score": 1,
+      "evidence": "'eng attraktiv nordleeschtung Äntwert', 'de lieseg opgeriichte Opdeeler am oppene Living rauc', 'miessbar Iessen' are nonsensical/non-native Luxembourgish."
+    },
+    "market_fit": {
+      "score": 1,
+      "evidence": "'Halb-Duebelt-Residenz', 'Härenhaff', 'Breakfast-Nook' are not standard Luxembourg real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE mentioned."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Elegant Vente Haus mat 4 Schlofkummeren an exzellenter Südlager zu Lëtzebuerg' mixes French 'Vente'; 5 hashtags but mostly English."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'onvergläichlecher Immobilie' (incomparable) is hyperbolic."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'familjefrëndlech', 'fir eng gesellen Famill', 'familjefrëndlech ambiance', 'FamilyLivingLux' repeatedly target families."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'aristokrateschen Ziegel-Façade' invents aristocratic claim; 'nordleeschtung' invents northern orientation contradicting south-facing input."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE/LU agree on 195 m², 4 bedrooms, 2 baths, but DE calls it Einfamilienhaus while FR/EN/LU say semi-detached, and LU mentions 'nordleeschtung' contradicting south-facing in all others."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Severely degraded Luxembourgish with invented terms and internal contradictions."
+}

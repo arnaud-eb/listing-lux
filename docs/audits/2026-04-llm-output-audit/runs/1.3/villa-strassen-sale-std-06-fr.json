@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:27:04.341Z",
+  "output": {
+    "title": "Villa familiale rénovée de 5 chambres avec jardin mature à Strassen",
+    "description": "Située au cœur de Strassen, cette villa individuelle de 280 m² offre un cadre de vie paisible et familial, à proximité immédiate des écoles réputées et des axes autoroutiers. Son architecture traditionnelle luxembourgeoise, parfaitement entretenue, s’intègre harmonieusement dans un quartier résidentiel villageois prisé, conciliant la quiétude de la banlieue et la proximité de la ville.\n\nEntièrement rénovée avec soin, la maison se compose d’un lumineux séjour agrémenté d’une cheminée chaleureuse et d’un accès direct à un jardin privé soigneusement aménagé. La haute hauteur sous plafond et le parquet massif confèrent élégance et caractère aux espaces de vie, invitant à la convivialité et au confort.\n\nLa cuisine indépendante, pensée pour les moments en famille et entre amis, combine fonctionnalité et esthétique avec son plan de travail en granit, un îlot central convivial et des fonctionnalités haut de gamme telles que le double four encastré. Cinq chambres généreuses, dont une suite parentale offrant une vue apaisante sur le jardin, disposent de rangements intégrés pour optimiser chaque espace.\n\nLe jardin exposé sud-ouest, agrémenté d’arbres matures et d’une terrasse en pierre, garantit un cadre intime et ensoleillé, idéal pour les loisirs et la détente en plein air. Des prestations complémentaires telles qu’un garage, un parking extérieur et une cave de rangement renforcent le caractère fonctionnel et complet de ce bien d’exception.\n\nCette propriété conjugue parfaitement charme traditionnel, prestations modernisées et emplacement stratégique, constituant ainsi une opportunité rare pour les familles en quête d’un havre de paix proche de toutes commodités.",
+    "highlights": [
+      {
+        "text": "Villa individuelle au style traditionnel luxembourgeois",
+        "icon": "home"
+      },
+      {
+        "text": "Jardin mature et intime avec exposition sud-ouest",
+        "icon": "trees"
+      },
+      {
+        "text": "Séjour lumineux avec cheminée et parquet massif",
+        "icon": "fireplace"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central convivial",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Cinq chambres spacieuses avec rangements intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Quartier familial avec écoles renommées à proximité",
+        "icon": "school"
+      },
+      {
+        "text": "Bon accès autoroutier facilitant les déplacements",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Garage et stationnement extérieur sécurisés",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "VillaFamiliale",
+      "JardinPrivatif",
+      "CharmeTraditionnel",
+      "EspaceEtLumiere",
+      "QuartierCalme"
+    ]
+  }
+}

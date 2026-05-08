@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-lu-only-09",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'Béid Schlafzëmmeren sinn mat Qualitéitsmeubelen equipéiert' contradicts inputs since only one bedroom photo was analyzed, and 'edle Parkettbuedem' contradicts the input 'engineered wood flooring'."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 95 m², €2,400, Limpertsberg, balcony, elevator, storage, furnished, renovated, induction cooktop, dishwasher, but omits the 1 bathroom and frames as somewhat generic with '2 komfortabel Schlofzëmmeren'."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Phrases like 'Déi hell an driwwer ausgestralte Wunnzëmmer', 'staarke modernen Apparater ausgeriicht', and 'belaf sech op €2,400 am Mount, entsprécht engem attraktiven Präis fir dës Premiumpräctik' read awkwardly and non-native."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "Uses odd coinages like 'Premiumpräctik' and 'duerchschaaltem Induktiounscooktop' which are not standard Luxembourg real-estate vocabulary (athome.lu typically uses 'Wunnfläch', 'voll equipéiert Kichen')."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE energy class is mentioned anywhere in the listing, silently omitted."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Elegant 2-Zëmmeren Appartement mam Balkon am Limpertsberg' has 7 words including neighborhood and adjective; 5 hashtags 'LimpertsbergLiving ScandinavianDesign UniversityQuarter FullyRenovated UrbanBalcony' are CamelCase and unique."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "Uses hyperbolic terms 'exzellent', 'wonnerbar Geleeënheet', 'aussergewéinlech Wunngeleeënheet' though no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 3,
+      "evidence": "References 'dynamescher Universitéits- a Kulturliewen' and 'UniversityQuarter' hashtag, which subtly target student/academic demographic."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'2 komfortabel Schlofzëmmeren mat Dämmblannen' implies both bedrooms have blackout blinds though only one bedroom was analyzed; 'edle Parkettbuedem' invents parquet vs the input 'engineered wood flooring'; framing rent as 'attraktiven Präis fir dës Premiumpräctik' is not supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only LU was provided, so no cross-language inconsistency is possible."
+    }
+  },
+  "overall_pass": false,
+  "notes": "LU-only fixture; rent framing is mostly handled ('€2,400 am Mount') but copy still leans toward sale-style superlatives."
+}

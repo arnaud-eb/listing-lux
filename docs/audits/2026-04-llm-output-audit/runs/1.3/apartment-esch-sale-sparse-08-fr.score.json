@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'78 m²', 'deux chambres', 'une salle de bain', 'place de parking', 'ascenseur' all match inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 78 m², 2 chambres, balcon, parking, ascenseur but omits the price (€425,000)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Le séjour baigné de lumière naturelle s'ouvre sur un balcon intimiste' reads naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'place de parking privative', 'séjour', 'acquéreurs' aligns with LU FR listing corpus."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of CPE/classe énergétique anywhere in the listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement élégant avec balcon, idéalement situé à Esch-sur-Alzette' is 9 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "Uses 'superbe appartement' and 'style de vie cosmopolite unique' which leans hyperbolic for an entry-tier Esch flat."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting language present in the French version."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'proche de l'université et du nouveau pôle culturel et économique de Belval' invents proximity claims not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR, LU, DE, EN all agree on 78 m², 2 bedrooms, balcony, parking, elevator; minor variation: only LU adds '60er Wunnraum'."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Belval/university proximity is not provided in inputs."
+}

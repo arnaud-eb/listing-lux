@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:29:39.356Z",
+  "output": {
+    "title": "Élégant studio rénové et meublé au cœur de Clausen",
+    "description": "Situé dans le secteur pittoresque de Clausen, ce studio de 38 m² allie à merveille le charme historique et le confort contemporain. Bénéficiant de poutres apparentes et d’un parquet en bois, l’espace de vie entièrement meublé invite à une atmosphère chaleureuse et accueillante, parfaite pour un usage professionnel ou résidentiel.\n\nLa kitchenette compacte, conçue avec des matériaux modernes et fonctionnels, optimise chaque centimètre carré tout en offrant tout le nécessaire pour un quotidien agréable. La salle d’eau, récemment rénovée, se distingue par ses finitions soignées et son design contemporain, procurant un véritable havre de paix.\n\nLa majestueuse façade en pierre du bâtiment historique préserve l’authenticité de cet environnement d’exception niché dans la vallée de Clausen, à proximité immédiate du centre-ville. Le cadre, à la fois calme et chargé d’histoire, confère à ce logement une singularité difficile à trouver.\n\nLes précédents locataires, notamment Madame Lefèvre et Monsieur Dubois, ont grandement apprécié la qualité du bien et son emplacement privilégié. En outre, cet appartement bénéficie d’un rendement locatif garanti de 8 % annuellement, un atout rare qui séduira les investisseurs exigeants.",
+    "highlights": [
+      {
+        "text": "Studio entièrement meublé et rénové",
+        "icon": "sofa"
+      },
+      {
+        "text": "Charme authentique avec poutres apparentes",
+        "icon": "trees"
+      },
+      {
+        "text": "Cuisine moderne et fonctionnelle",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle d’eau contemporaine rénovée",
+        "icon": "bath"
+      },
+      {
+        "text": "Bâtiment historique en pierre d’exception",
+        "icon": "shield"
+      },
+      {
+        "text": "Emplacement calme au cœur de la vallée de Clausen",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Rendement locatif garanti de 8 % par an",
+        "icon": "zap"
+      }
+    ],
+    "hashtags": [
+      "StudioRénové",
+      "CharmeHistorique",
+      "RendementGaranti",
+      "ClausenValley",
+      "InvestissementLuxe"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:55:12.378Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Terrasse in Strassen",
+    "description": "Diese gepflegte Villa mit einer Wohnfläche von 280 m² erstreckt sich über zwei Etagen und präsentiert sich in einem traditionellen luxemburgischen Baustil mit weiß verputzter Fassade und einem klassisch geneigten Schieferdach. Das objekt liegt ruhig in einer gewachsenen Wohnsiedlung und ist von einem etablierteren Garten mit reifem Baumbestand umgeben, der Privatsphäre bietet und südwestlich ausgerichtet ist.\n\nIm Inneren überzeugt die Immobilie durch hohe Decken und parkettierte Böden in den Wohnräumen. Der Wohnbereich umfasst einen Kamin und große Terrassentüren, die direkten Zugang zur Terrasse und zum Garten ermöglichen. Die Küche wurde mit einer zentralen Kochinsel, einer Arbeitsfläche aus Granit und vielseitigen Einbaumöbeln im Shaker-Stil ausgestattet. Ein Doppelbackofen und großzügiger Stauraum ergänzen die Ausstattung.\n\nDie fünf Schlafzimmer bieten durchweg ruhige Ausblicke in den Garten und verfügen über eingebaute Schränke. Die drei Badezimmer sind funktionell angelegt und ergänzen das Raumangebot. Zur Immobilie gehören weiterhin ein Autoabstellplatz und zusätzliche Lagerflächen, die Komfort und Stauraum gewährleisten.\n\nStrassen befindet sich westlich der Stadt Luxemburg und zeichnet sich durch seinen dörflichen Charme bei gleichzeitig guter Anbindung an die Autobahn aus. Die Gemeinde bietet eine Infrastruktur mit renommierten Schulen und verbindet ruhiges Wohnen mit Nähe zur Innenstadt. \n\nEnergieausweis: Klasse wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "Wohnebene von 280 m² in villaartigem Stil",
+        "icon": "home"
+      },
+      {
+        "text": "Fünf Schlafzimmer mit Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "Drei funktionale Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Wohnzimmer mit Holzofen und Gartenanschluss",
+        "icon": "flame"
+      },
+      {
+        "text": "Renovierte Küche mit Granitarbeitsfläche und Doppelbackofen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südwestlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Parkplatz am Objekt",
+        "icon": "car"
+      },
+      {
+        "text": "Zusätzlicher Stauraum vorhanden",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "VillaStrassen",
+      "RenovierteImmobilie",
+      "Gartenzugang",
+      "Luxuswohnen",
+      "RuhigeLage"
+    ]
+  }
+}

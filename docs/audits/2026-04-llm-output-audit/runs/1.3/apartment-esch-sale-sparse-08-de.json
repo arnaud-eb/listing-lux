@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:27:58.954Z",
+  "output": {
+    "title": "Charmante 2-Zimmer-Wohnung mit Balkon und Parkplatz in Esch-sur-Alzette",
+    "description": "Diese ansprechend geschnittene 2-Zimmer-Wohnung mit einer großzügigen Wohnfläche von 78 m² befindet sich im dynamischen Herzen von Esch-sur-Alzette und bietet hohen Wohnkomfort zu einem attraktiven Preis-Leistungs-Verhältnis. Durch ihre geschickte Raumaufteilung präsentiert sich das helle Wohnzimmer mit Zugang zu einem gemütlichen Balkon, der als erweiterter Wohnraum im Freien zum Entspannen einlädt.\n\nDie offen gestaltete Küche überzeugt mit einer funktionalen L-Form und hochwertigen weißen Einbauten sowie einem integrierten Essbereich, der Platz für gesellige Mahlzeiten bietet. Ein gepflegtes Badezimmer sowie zwei behagliche Schlafzimmer runden das Angebot ab und schaffen optimale Bedingungen für urbanes Wohnen.\n\nZur Wohnung gehört ein Parkplatz, der insbesondere in dieser wachstumsstarken und multikulturellen Stadt von großem Wert ist. Der Aufzug sorgt für komfortablen Zugang, während die zentrale Lage in unmittelbarer Nähe zur Universität und dem aufstrebenden Belval-Viertel das Mehr an Lebensqualität und urbane Vielfalt verspricht.\n\nEsch-sur-Alzette besticht durch eine lebendige Kulturszene sowie attraktive Einkaufsmöglichkeiten und verbindet urbanen Flair mit erschwinglichen Immobilienpreisen. Diese Wohnung ist eine hervorragende Investition für Käufer, die das wachsende Potenzial dieser aufstrebenden Stadt nutzen möchten.",
+    "highlights": [
+      {
+        "text": "Zentral gelegen in Luxemburgs zweitgrößter Stadt",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Großzügiger Balkon mit Zugang vom Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "Moderne, praktische L-förmige Küche mit Essbereich",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Bequemer Aufzug bis zur Wohnungsebene",
+        "icon": "zap"
+      },
+      {
+        "text": "Eigener Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Zwei gemütliche Schlafzimmer für individuelle Nutzung",
+        "icon": "sofa"
+      },
+      {
+        "text": "Helle Räume mit hochwertigem Laminatboden",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "UrbanLiving",
+      "Investitionschance",
+      "BelvalProximity",
+      "Kulturszene",
+      "BalkonGenuss"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:20.065Z",
+  "output": {
+    "title": "Charmant 2-Zëmmeren Appartement mat Balkon a Parking zu Esch-sur-Alzette",
+    "description": "Dësen 78 m² groussen Appartement zu Esch-sur-Alzette bitt eng praktesch a gutt geplangte Wunnfläch mat zwou Schlofzëmmeren an engem eenzelen Buedzëmmer. D'Wunnengeet ass hell a neutral an engem einfach gepflegten Stil gehalen, mat beige Mauerfaarwen a Laminatebuedem, déi eng agreabel Atmosphär schafen. Aus dem Wunnzëmmer gëtt d'Zougang zum Balkon gewäert, deen zousätzlech frësch Loft an eng Plaz fir kleng Outdoor-Momenter ubitt.\n\nD'Kichen ass funktionell a l-förmeg designéiert, mat wäisse Schranksaache a genuch Plaz fir eng kleng Essegplaz, wat d'Zesummesëtz vun Kachen a Moolszäit erliewbar mécht. Déi gutt gespaart Plaz an de fein ausgesichte Buedzëmmer ergänzt d'Layout an garantéiert gutt Notzung vum Haiserëtz.\n\nD'Appartement läit an engem Gebai mat Lift, wat de Concours zu de Verschäerfung vum Komfort ënnersträicht. Eng Parkplaz gehéiert doriwwer eraus zur Immobilie, wat all Dag parkéieren am Quartier erliichtert. Esch-sur-Alzette als zweeter Stad am Land ënnersträicht d'Plaz als eng lieweg an opstrebend Regioun mat ville kulturellen Offer a bezuelbarem Wunnraum.\n\nD'Wunneng gëtt zu engem Präis vu 425.000 € ugebueden, wat am Kader vun de Präisser am Quartier läit, an eng equilibréiert Optioun fir déi, déi no enger himmlecher a gutt zougänglecher Eenheet sichen. Energiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "78 m² gutt geplangten Wunnraum",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlofzëmmeren an 1 Buedzëmmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Balkon mat Accès vum Wunnzëmmer",
+        "icon": "sun"
+      },
+      {
+        "text": "L-förmeg Kichen mat Essegplaz",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parkplaz am Präis abegraff",
+        "icon": "car"
+      },
+      {
+        "text": "Gebai mat Lift",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Neutral an einfach stylesch Ausgrüstung",
+        "icon": "sofa"
+      },
+      {
+        "text": "Lieweg Quartier zu Esch-sur-Alzette",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "ZweetStadLiving",
+      "BalkonWohnung",
+      "ParkingInklusive",
+      "PrakteschLayout"
+    ]
+  }
+}

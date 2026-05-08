@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:28:48.172Z",
+  "output": {
+    "title": "Charming 3-Bedroom Row House with Private Garden and Parking",
+    "description": "Nestled in a tranquil residential enclave, this well-maintained 1980s row house offers an exceptional opportunity for discerning buyers seeking a harmonious blend of privacy and potential. Spanning 130 square meters, the residence features three spacious bedrooms and a singular bathroom, providing ample space for comfortable living.\n\nThe inviting living room presents picturesque views of the private rear garden through expansive patio doors, inviting natural light to permeate the space. While the interior reflects a lived-in character with classic finishes, it represents an ideal canvas for tasteful modernization tailored to your personal style.\n\nStep outside to discover a modest yet meticulously cared-for garden, complete with a verdant lawn, secure wood fencing, and a handy storage shed, perfect for gardening tools or outdoor essentials. Complementing this sanctuary is an allocated parking space, ensuring convenience and peace of mind in this sought-after neighborhood.\n\nThis property is a rare find offering a serene garden setting within a quiet community, paired with the practical benefits of storage and parking. It is ideally suited for buyers eager to craft a bespoke home environment reflecting their tastes and lifestyle aspirations.",
+    "highlights": [
+      {
+        "text": "Private rear garden with lawn and fencing",
+        "icon": "trees"
+      },
+      {
+        "text": "Well-maintained 1980s row house in quiet neighborhood",
+        "icon": "home"
+      },
+      {
+        "text": "Spacious living room with garden views and patio doors",
+        "icon": "sun"
+      },
+      {
+        "text": "Three comfortable bedrooms with potential for modernization",
+        "icon": "bed"
+      },
+      {
+        "text": "Single bathroom with functional layout",
+        "icon": "bath"
+      },
+      {
+        "text": "Convenient allocated parking space",
+        "icon": "car"
+      },
+      {
+        "text": "Dedicated outdoor storage shed",
+        "icon": "storage"
+      }
+    ],
+    "hashtags": [
+      "PrivateGarden",
+      "ClassicRowHouse",
+      "QuietLiving",
+      "ModernizationOpportunity",
+      "ParkingIncluded"
+    ]
+  }
+}

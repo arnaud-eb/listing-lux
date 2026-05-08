@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:01.411Z",
+  "output": {
+    "title": "Semi-detached Villa mat 4 Zëmmeren, gaart a Parkplaz zu Lëtzebuerg",
+    "description": "Dëst Ënnerdaach an engem etabléierten, residentielle Quartier aus der 1990er Joren bitt eng Wunnfläch vun 195 m² op zwou Stäck. D'Haus ass semi-detached mat enger Ziegel-Fassad an engem klengen, gepflegte Gaart virun der Immobilie souwéi engem privaten Driveway fir einfach Parkméiglechkeeten.\n\nDen Openthalt besteet aus engem gutt erhalen, liichte Raum mat Fliesenbuedem a Kach waren oppen Uerdnung an op d'Deenzeraged waart. E Kamin an duebel Dieren zum Gaart ënnersträichen d'Charme an d'Prakteschkeet vum Liewensraum.\n\nD'Kichen ass traditionell mat Holzmööbel an engem Flies-Sprëtz geschützt, ausgestatt mat engem fräi steienden Kachgéigestand an engem klengen Frühstücksberäich. Dëst ergänzt d'funktional Layout fir eng praktesch an behaglech Kachzëmmer.\n\nDen Gaart am Hënnergrond ass südlech ausgeriicht, mat engem Duebelplang aus Rasen an enger Patiozone déi Schutz fir roueg Deeg bitt. Am Ganzen liwwert dës Wunneng eng gutt Geleeënheet fir eng lieweg a praktesch Heem am ëmmerbewäerte résidentielle Segment.\n\nEnergiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "Semi-detached Architektur mat Ziegel-Fassad",
+        "icon": "home"
+      },
+      {
+        "text": "4 Schlofzëmmeren an 2 Buedzëmmeren",
+        "icon": "bed"
+      },
+      {
+        "text": "Südlech ausgeriicht Gaart mat Patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Privater Driveway fir Parkplaz",
+        "icon": "car"
+      },
+      {
+        "text": "Kamin am Openthalt",
+        "icon": "flame"
+      },
+      {
+        "text": "Traditionell Kichen mat Frühstücksberäich",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Liewe- a Iesseberäich mat Duebeldeiere zum Gaart",
+        "icon": "sofa"
+      },
+      {
+        "text": "Laminéierter Fliesenbuedem am Wunnraum",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "SemiDetachedVilla",
+      "SouthFacingGarden",
+      "PrivateDriveway",
+      "FunctionalKitchen",
+      "CozyLivingRoom"
+    ]
+  }
+}

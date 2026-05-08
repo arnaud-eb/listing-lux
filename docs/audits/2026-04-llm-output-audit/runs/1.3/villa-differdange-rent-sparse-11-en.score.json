@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Four bedrooms and two bathrooms' and 'Spanning 200 square meters' match inputs; price not contradicted because not stated."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Bedrooms, bathrooms and sqm covered, but price (3400 €) and Differdange neighborhood are omitted."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Nestled in an established residential enclave, this distinguished villa from the 1970s' is fluent native English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Terms like 'detached villa', 'stone facade', 'alfresco dining' fit luxury listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/energy class mention anywhere in the English text."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Charming 1970s Villa with Private Garden and Double Garage' is 9 words but contains no neighborhood; hashtags clean."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Tone restrained: 'inviting sanctuary' and 'tranquil garden oasis' are mild, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 3,
+      "evidence": "'thoughtfully arranged to balance privacy and family needs' references family demographic."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'additional parking' is supported by 'parking: true'; only minor embellishment with 'expansive windows' not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE, EN, FR, LU all converge on 200 m², four bedrooms, two bathrooms, double garage and stone fireplace; only LU explicitly cites the 3.400 € price while others omit it, a minor mismatch."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:24:35.164Z",
+  "output": {
+    "title": "Exklusivt 4-Schlofkummer Penthouse mat Panoramabléck zu Belair",
+    "description": "Dëst luxuriéis Penthouse am héchste Standard läit am beléifte Quartier Belair, bekannt fir seng gréng, familjefrëndlech an exklusiv Wunngefill. D'Wunnfläch vun 220 m² ass perfekt ausgeschafft fir eng harmonesch Mëschung aus Komfort a stilvoller Eleganz.\n\nAm Séil vum Penthouse läit en déifgräifend renovéiert a loftigen Loungeberäich mat Buedem-bis-Deckfensteren, déi eng héich Quantitéit natierlecher Liicht erakréien an eng faszinéierend Vue iwwer d'Stad erméiglechen. Den Eichenparkett an d'Holz-Kamin ënnersträichen d'Wäerm a Eleganz vum Raum, zesumme mat engem integréierten smart-Home Beliichtungssystem.\n\nD'Kichen ass en Highlight fir Gourmets a Gaschter, ausgestatt mat héichqualitativen Gaggenau-Geräter, enger Carrara Marmorinsel an engem integréierte Wiindschaf. Den Design ass minimalistesch, mat matte schwaarze Mixed-Ausrüstung, déi Funktionalitéit mat moderner Eleganz verbënnt.\n\nDéi véier Schlofkummer sinn grouss a liicht, dee meescht markant ass d'Master-Suite mat engem privatem Terrassenzougang an engem luxuriéise Bad mat begehbarem Kleederschaf. Den Terrasselounge bitt eng ongestéiert 180-Grad Vue souwéi eng Südorientéierung, mat engem modernen Kompositdeck an Glasbalustrade, déi zum Entspanung an zefridden Erfarungen dobäi invitéieren.\n\nD'Penthouse bitt zousätzlech eng praktesch Parkingplaz am Haus, en Lift fir maximal Komfort an e generéis Lagerraum. Dës Kombinatioun vu Qualitéitsmaterialien, ausgeblidder Funktionalitéit an exzellenter Lag mécht dës Immobilie zu enger aussergewéinlecher Geleeënheet am Belair Quartier.",
+    "highlights": [
+      {
+        "text": "Loftich loungemediescht Wunnberäich mat Panoramavue",
+        "icon": "sun"
+      },
+      {
+        "text": "Exklusiv, privat Terrass mat 180-Grad Stadbléck",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Topmodern Kichen mat Gaggenau Apparater a Carrara Marmorinsel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Master-Suite mat eegener Terrass a begehbarem Kleederschaf",
+        "icon": "bed"
+      },
+      {
+        "text": "Modern Renovatioun mat smart-Home Beliichtungssystem",
+        "icon": "zap"
+      },
+      {
+        "text": "Parkplaz an Accès zum Lift integréiert",
+        "icon": "car"
+      },
+      {
+        "text": "Qualitativ Héichwäerteg finishen mat Eichenparkett a Kamäch",
+        "icon": "fire"
+      },
+      {
+        "text": "Friemen a roueg wunnend gréng an upscale Quartier Belair",
+        "icon": "trees"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLuxus",
+      "PanoramaVue",
+      "ModerneKichen",
+      "BelairLiving",
+      "PrivatTerrass"
+    ]
+  }
+}

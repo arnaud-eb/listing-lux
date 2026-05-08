@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:55:19.832Z",
+  "output": {
+    "title": "Villa rénovée avec 5 chambres et jardin mature orienté sud-ouest à Strassen",
+    "description": "Située dans un quartier résidentiel calme de Strassen, cette villa indépendante offre une surface habitable de 280 m² distribués sur deux niveaux. La façade en enduit blanc et le toit en ardoise soulignent son style traditionnel luxembourgeois. Le terrain comprend un jardin établi avec des arbres matures, exposé sud-ouest, apportant lumière naturelle et confidentialité.\n\nLes espaces de vie intérieurs ont été rénovés avec soin. Le séjour présente un parquet en chêne, une cheminée à bois encastrée et de grandes portes-fenêtres donnant directement sur la terrasse et le jardin. Cela crée un environnement chaleureux et ouvert, favorisant la connexion entre intérieur et extérieur.\n\nLa cuisine contemporaine est équipée de meubles de style shaker avec un plan de travail en granit, un îlot central avec assise intégrée et un four double, adaptés à une organisation conviviale et fonctionnelle. Cinq chambres, dont une principale avec vue dégagée sur le jardin et des rangements intégrés, complètent le bien.\n\nTrois salles de bains desservent les chambres, optimisant le confort d’usage. Le parking sur place et le local de stockage ajoutent des commodités pratiques, renforçant l’attrait résidentiel de cette propriété. Le secteur de Strassen combine un cadre villageois avec des accès rapides vers la capitale, desservi par les infrastructures autoroutières à proximité.\n\nClasse énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Villa indépendante avec 280 m² habitables",
+        "icon": "home"
+      },
+      {
+        "text": "Cinq chambres spacieuses",
+        "icon": "bed"
+      },
+      {
+        "text": "Trois salles de bains rénovées",
+        "icon": "bath"
+      },
+      {
+        "text": "Cheminée à bois dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central et four double",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin établi avec exposition sud-ouest",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking et espace de rangement",
+        "icon": "car"
+      },
+      {
+        "text": "Quartier résidentiel calme à Strassen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "VillaRénovée",
+      "JardinMature",
+      "CheminéeBois",
+      "CuisineÎlot",
+      "QuartierRésidentiel"
+    ]
+  }
+}

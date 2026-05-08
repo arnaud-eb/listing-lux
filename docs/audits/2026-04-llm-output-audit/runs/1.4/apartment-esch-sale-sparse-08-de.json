@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:05.319Z",
+  "output": {
+    "title": "Helles 2-Zimmer Appartement mit Balkon und Tiefgaragenstellplatz in Esch-sur-Alzette",
+    "description": "Das 78 m² große Appartement befindet sich in einem gepflegten Mehrfamilienhaus mit Aufzug in Esch-sur-Alzette. Die Wohnung zeichnet sich durch einen gut geschnittenen Grundriss mit zwei Schlafzimmern und einem modernen Badezimmer aus. Das Wohn- und Esszimmer verfügt über einen Zugang zum Balkon, der einen erweiterten Wohnbereich im Freien ermöglicht.\n\nDie Küche ist funktional in L-Form gestaltet und bietet ausreichend Platz für einen kleinen Essbereich. Helle, neutrale Farben und Laminatböden prägen die Ausstattung und schaffen eine helle, freundliche Atmosphäre. Das Badezimmer ist zweckmäßig eingerichtet und in einem guten Zustand.\n\nZum Objekt gehört ein Tiefgaragenstellplatz, der bequemen und sicheren Parkraum garantiert. Die Wohnung liegt in der Stadt Esch-sur-Alzette, Luxemburgs zweitgrößter Stadt, die durch ihre wachsende Kulturszene und die Nähe zur Universität sowie zum Stadtteil Belval geprägt ist. Es handelt sich um eine Gegend mit erschwinglichen Immobilienpreisen, die eine solide urbane Infrastruktur bietet.\n\nDer Aufzug im Haus erleichtert den Zugang zu der Wohnung. Die Ausrichtung bietet angenehmes Tageslicht, insbesondere im Wohnbereich. Energieausweis: Klasse wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "78 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Balkon mit Zugang vom Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "Tiefgaragenstellplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Lage in Esch-sur-Alzette, wachsender Standort",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "BalkonWohnung",
+      "Tiefgarage",
+      "EschSurAlzette",
+      "Aufzug",
+      "Stadtwohnung"
+    ]
+  }
+}

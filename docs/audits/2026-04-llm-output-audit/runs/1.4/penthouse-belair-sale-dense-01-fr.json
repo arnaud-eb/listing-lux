@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:52:52.546Z",
+  "output": {
+    "title": "Penthouse rénové 220 m² avec terrasse panoramique et parking en Belair",
+    "description": "Ce penthouse de 220 m² récemment rénové offre un agencement lumineux et contemporain dans le quartier résidentiel prisé de Belair. L’espace de vie principal se distingue par ses grandes baies vitrées du sol au plafond, un parquet en chêne massif, ainsi qu’une cheminée à foyer ouvert en bois, qui accentuent une atmosphère chaleureuse et accueillante. La vue dégagée sur la ville souligne la qualité de l’ensoleillement et la luminosité naturelle tout au long de la journée.\n\nLa cuisine ouverte présente des équipements haut de gamme de la marque Gaggenau intégrés de manière élégante, complétés par un îlot central en marbre de Carrare, idéal pour la préparation et le partage des repas. L’aménagement contemporain s’accompagne de dispositifs modernes et fonctionnels, notamment un réfrigérateur à vin intégré, dans un souci de confort et de convivialité.\n\nLa partie nuit comprend quatre chambres spacieuses, dont une suite parentale avec un dressing attenant, une salle de bains privative, et un accès direct à une terrasse privative. Les trois salles de bains, aux finitions soignées, renforcent le confort et la fonctionnalité du logement.\n\nUne vaste terrasse accessible depuis le séjour offre une exposition sud avec une orientation optimisée pour profiter d’une lumière naturelle abondante. Le design contemporain de l’espace extérieur intègre un salon d’extérieur ainsi qu’un garde-corps en verre, mettant en valeur une vue panoramique à 180 degrés sur la ville.\n\nDisposant d’un parking privé, d’un ascenseur desservant directement l’appartement, et d’espaces de rangement supplémentaires, ce penthouse conjugue qualité de vie urbaine et prestations soignées dans un environnement résidentiel calme et verdoyant.",
+    "highlights": [
+      {
+        "text": "Surface généreuse de 220 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres dont suite parentale avec dressing",
+        "icon": "bed"
+      },
+      {
+        "text": "Trois salles de bains modernes",
+        "icon": "bath"
+      },
+      {
+        "text": "Terrasse sud avec vue panoramique 180° sur la ville",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine équipée Gaggenau avec îlot en marbre Carrara",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Cheminée à bois dans le salon lumineux",
+        "icon": "flame"
+      },
+      {
+        "text": "Parking privé et ascenseur",
+        "icon": "car"
+      },
+      {
+        "text": "Espaces de rangement complémentaires",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "PenthouseContemporain",
+      "TerrassePanoramique",
+      "CuisineGaggenau",
+      "VueVilleLuxembourg",
+      "BelairResidence"
+    ]
+  }
+}

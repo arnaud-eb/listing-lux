@@ -1,0 +1,44 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:57.338Z",
+  "output": {
+    "title": "Großzügige 4-Zimmer-Villa mit Doppelgarage und privatem Garten",
+    "description": "Diese freistehende Villa aus den 1970er Jahren bietet ca. 200 m² Wohnfläche auf einem gepflegten Grundstück und wurde sorgfältig instand gehalten. Die charakteristische Steinfassade und der klassische Baustil fügen sich harmonisch in ein etabliertes Wohnumfeld ein. Die Immobilie verfügt über eine geräumige Doppelgarage sowie zusätzliche Außenstellplätze.\n\nIm Inneren präsentiert sich das Wohnzimmer mit original erhaltenem Holzvertäfelungen und einem Stein-Kamin, der für behagliche Atmosphäre sorgt. Große Fenster bieten einen direkten Blick auf den Garten und sorgen für Tageslicht in den Wohnräumen. Die Ausstattung hat den Charme der Bauzeit bewahrt und befindet sich in gepflegtem Zustand.\n\nDer private Garten ist naturbelassen angelegt und beherbergt einen großzügigen Rasenbereich mit etablierten, ausgewachsenen Bäumen. Eine Terrasse ergänzt den Außenbereich und lädt zum Verweilen im Freien ein. Weiterhin stehen praktische Stauraummöglichkeiten zur Verfügung, was den Wohnkomfort erhöht.\n\nDie Villa eignet sich als ruhiges Wohnhaus in einem bestehenden, gewachsenen Wohngebiet. Ein Energieausweis liegt noch nicht vor und wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit 200 m² Wohnfläche",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Doppelgarage und Parkplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Originaler Stein-Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Großer, gepflegter Garten mit Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Praktischer Stauraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SteinVilla",
+      "Doppelgarage",
+      "GartenTerrasse",
+      "1970erStil",
+      "Privatgrundstück"
+    ]
+  }
+}

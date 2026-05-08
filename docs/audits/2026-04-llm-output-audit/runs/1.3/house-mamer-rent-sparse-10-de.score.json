@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'Wohnfläche von 130 m² bietet das Objekt großzügigen Raum... auf drei Schlafzimmern und einem Badezimmer' matches inputs but price and Mamer are missing."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "No price (2900/Monat) and no neighborhood Mamer mentioned in DE; bedrooms/bathroom/sqm covered."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Das helle Wohnzimmer verfügt über großzügige Terrassentüren' reads idiomatically."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Wohnfläche', 'Stellplatz', 'Reihenhaus' are standard German real-estate terms."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No Energieklasse / CPE referenced in the German text."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Charmantes Reihenhaus mit privatem Garten und Stellplatz in ruhiger Wohnlage' lacks Mamer; hashtags 'PrivateGarden FamilyHome GardenRetreat ClassicResidential InvestmentOpportunity' are English not German and include 'FamilyHome' which is fair-housing risky."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'ein Zuhause mit Zukunft' is mildly promotional but no exclamation or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'ideal für Familien oder Paare, die Wert auf eine harmonische und entspannte Atmosphäre legen' explicitly targets families and couples — fair-housing violation."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "No fabricated places or numbers; Mamer omitted rather than invented."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR title says 'à Luxembourg', LU says 'zentraler Lag' / 'am Häerz vun der Gemeng', EN and DE omit neighborhood entirely — none agree on location; only FR mentions price (2 900 €/mois)."
+    }
+  },
+  "overall_pass": false,
+  "notes": "HARD-FAIL on fair_housing: explicit family/couple targeting plus #FamilyHome hashtag."
+}

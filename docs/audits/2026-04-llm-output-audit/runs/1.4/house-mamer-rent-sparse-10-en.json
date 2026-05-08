@@ -1,0 +1,43 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:46.939Z",
+  "output": {
+    "title": "Comfortable 3-Bedroom Row House with Private Garden and Parking",
+    "description": "This 130 m² row house, built in the 1980s, offers a practical living space with three bedrooms and one bathroom. The exterior showcases a neutral facade typical of its era, complemented by a small front yard and a private rear garden that provides outdoor space for leisure or gardening.\n\nInside, the living room features a dated but functional interior with beige carpeting and patio doors that open to the garden, allowing natural light and a pleasant garden outlook. The space includes a built-in alcove originally designed for a tube TV, reflecting the property's character while offering potential for modernization.\n\nThe private rear garden is modest but well-maintained, enclosed by a wood fence and including a small shed that serves as valuable storage. This outdoor area enhances the property's usability and privacy.\n\nAdditional amenities include available parking and dedicated storage spaces, which contribute to the house's practicality in a residential setting.\n\nEnergy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "130 square meters living area",
+        "icon": "square"
+      },
+      {
+        "text": "3 bedrooms and 1 bathroom",
+        "icon": "bed"
+      },
+      {
+        "text": "Private rear garden with lawn",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking available",
+        "icon": "car"
+      },
+      {
+        "text": "Storage shed in garden",
+        "icon": "archive"
+      },
+      {
+        "text": "1980s well-maintained row house",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "RowHouseLiving",
+      "PrivateGarden",
+      "FunctionalSpace",
+      "EstablishedNeighborhood"
+    ]
+  }
+}

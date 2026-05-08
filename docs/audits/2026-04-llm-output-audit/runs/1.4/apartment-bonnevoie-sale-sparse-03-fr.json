@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:09.988Z",
+  "output": {
+    "title": "Appartement lumineux d'une chambre avec espace de rangement à Bonnevoie",
+    "description": "Situé dans le quartier dynamique de Bonnevoie, cet appartement de 52 m² offre un cadre de vie pratique et lumineux. L’espace principal, orienté plein sud, bénéficie d’une belle luminosité naturelle grâce à une grande fenêtre, mettant en valeur le parquet stratifié et les murs blancs qui apportent une atmosphère claire et neutre.\n\nLa cuisine, aménagée de manière fonctionnelle avec un agencement en couloir, présente des façades blanches classiques et un revêtement en carreaux de céramique au sol. Bien que le style soit traditionnel, cette configuration optimise l’espace disponible.\n\nLa salle de bains, composée d’un meuble vasque unique et d’une baignoire avec douche intégrée, est entièrement carrelée de blanc. Ce volume est compact mais répond parfaitement aux besoins quotidiens.\n\nUn espace de rangement complète ce bien, offrant une solution pratique pour l’organisation. Ce logement se situe dans un secteur multiculturel et vivant, réputé pour son marché local et sa proximité avec la gare centrale, renforçant la connectivité vers le centre-ville et au-delà.\n\nClasse énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Appartement de 52 m² bien agencé",
+        "icon": "square"
+      },
+      {
+        "text": "Orientation sud assurant luminosité naturelle",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine fonctionnelle en couloir",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains avec baignoire complète",
+        "icon": "bath"
+      },
+      {
+        "text": "Espace de rangement dédié",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier multiculturel et animé",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Proximité de la gare centrale",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "AppartementBonnevoie",
+      "LuminositéSud",
+      "EspaceDeRangement",
+      "CuisineFonctionnelle",
+      "QuartierDynamique"
+    ]
+  }
+}

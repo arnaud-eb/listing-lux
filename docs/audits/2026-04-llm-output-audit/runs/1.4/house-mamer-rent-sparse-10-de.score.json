@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"drei Schlafräume und ein Badezimmer\" and \"circa 130 m²\" match input."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions beds/baths/sqm/features but omits price and neighborhood Mamer."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "\"in einem ausgestattetem Zustand\" is grammatically off and awkward; \"unterstützt den urbanen Wohnkomfort\" is clumsy."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "\"Reiheneinfamilienhaus\" and \"Energieausweis\" are appropriate, but phrasing like \"urbanen Wohnkomfort\" mismatches a quiet entry-tier rental."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Der Energieausweis für dieses Objekt wird derzeit erstellt\" — placeholder, not invented."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title lacks neighborhood; hashtag \"Reiheneinhaus\" is misspelled (missing 'familien' or just typo)."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"bietet eine solide Grundlage\" — measured, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "No fabricated locations; \"deren nähere Umgebung hier nicht näher beschrieben wird\" explicitly avoids invention."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE agree on 130 m², 3 bed, 1 bath, row house, not renovated; LU contradicts with \"Renovéierten\" and \"Maisonette\"."
+    }
+  },
+  "overall_pass": false
+}

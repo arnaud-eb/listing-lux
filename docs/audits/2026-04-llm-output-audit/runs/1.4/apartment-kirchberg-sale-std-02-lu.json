@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:53:24.896Z",
+  "output": {
+    "title": "Nei 3-Schlofzëmmer Appartement mat Balkong a Parkplaz am Kirchberg",
+    "description": "Dëst zeitgenësses Neibau-Appartement bitt eng Fläch vun 145 m² an engem vun de moderne Quartieren vun der Stad. Den oppenen Iwwergank vum Wunnraum op den Iessberäich ënnersträicht d'Gefill vun Rumm an Liicht, ënnersträicht vun enger duebel Héicht décker Plafong an Ingeniéis-Holzpafflécker souwéi südlecher Ausriichtung fir vill natierlecht Liicht. De stilvollen Apel an d'Urban Ambient schaffen zesummen fir eng agreabel a roueg Atmosphär am Häerz vum Kirchberg-Géigend.\n\nD'Kichen ass mat héichwäerteger Bulthaup-Eenheet ausgestatt, mat engem Induktiouns-Kochen a steinernem Aarbechtsbänk, déi eng minimalistesch an funktionell Ambiance kreéieren. Den zentrale Kicheninsel bitt zousätzlech Plaz fir d'Virbereedung an engem informellen Iessen. De Balkong spannt eng roueg Vue iwwer de Park am Kirchberg, mat enger Glasbalustrad a Flossbuedem, deen dës Plaz zu engem gemittlechen Ënnercorn fir Kaffi oder Entspanung mécht.\n\nDe Bad ass mat enger Spa-Ambiance ausgestatt, mat engem Duschberäich mat Reen-Kapp, duebelen Handwäscher a Porzellanfliesen, woubäi eng Wärmebuedeminstallatioun eng agreabel Temperatur gëtt. Weider Komfortelementer kënnen de privaten Parkéin, den Lift am Gebai an e verschlossene Souraum fir Extra Späicherplaz och enthalen.\n\nD'Plaz läit am Geschäftsquartier Kirchberg, bekannt fir seng modern Architektur an d'Nähe zu europeesche Institutiounen. Dëst beräichert d'Umfeld mat enker Verbindung zu Servicer a fräien Zäiten. Energiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "145 m² Wunnfläch mat 3 Schlofzëmmeren a 2 Buedzëmmeren",
+        "icon": "square"
+      },
+      {
+        "text": "Südlech ausgeriichten, hell Wunnraum mat duebel Héicht Plafong",
+        "icon": "sun"
+      },
+      {
+        "text": "Kichen mat Bulthaup-Eenheeten an Induktiounskachbunn",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balkong mat Vue op de Park am Kirchberg",
+        "icon": "trees"
+      },
+      {
+        "text": "Buedzëmmeren mat Reendusch an Wärmebuedem",
+        "icon": "bath"
+      },
+      {
+        "text": "Privat Parkplaz an Lift am Gebai",
+        "icon": "car"
+      },
+      {
+        "text": "Neibau mat staark isoléiertem Architekturstil",
+        "icon": "building-2"
+      },
+      {
+        "text": "Späicherraum fir Zousatzopbewehrung",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "KirchbergLiving",
+      "ModernDesign",
+      "BulthaupKichen",
+      "ParkVue",
+      "NewBuild"
+    ]
+  }
+}

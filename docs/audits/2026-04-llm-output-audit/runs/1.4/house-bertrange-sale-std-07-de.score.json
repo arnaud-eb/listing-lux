@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Title says 'Vollmöbliertes Einfamilienhaus' but inputs say furnished:false and house is semi-detached, not Einfamilienhaus; also 'Zusätzlichen Stauraum finden Sie in einem separaten Kellerbereich' invents a Keller."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "195 m², 4 Schlafzimmer, 2 Badezimmer, Garten, Stellplatz mentioned; price and Bertrange omitted."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'einem Ziegelstein-Fassade' has wrong gender ('einer' would be correct), and 'gibt weiteren Komfort in dieser Wohnlage' is awkward."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'Wohnfläche', 'Energieausweis', but 'halb freistehend' is unusual; LU corpus prefers 'Doppelhaushälfte'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Ein Energieausweis wird nachgereicht.' is a proper placeholder."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Vollmöbliertes Einfamilienhaus mit Garten und Terrasse in ruhiger Lage' contradicts inputs (not furnished, not single-family); 5 hashtags acceptable."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'attraktive Sonneneinstrahlung' is mild marketing but no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'komfortablen Wohnraum für verschiedene Bedürfnisse' is neutral."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'Vollmöbliertes' contradicts furnished:false and 'Zusätzlichen Stauraum finden Sie in einem separaten Kellerbereich' invents a basement not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR and EN agree on semi-detached + 195m² + 4/2; DE contradicts with 'Vollmöbliertes Einfamilienhaus' and invents a Keller; LU calls it a 'Villa' on 'zwou Stäck'."
+    }
+  },
+  "overall_pass": false
+}

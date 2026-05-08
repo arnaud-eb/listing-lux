@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-lu-only-09",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:28:31.697Z",
+  "output": {
+    "title": "Elegant 2-Zëmmeren Appartement mam Balkon am Limpertsberg",
+    "description": "Dëst exzellent renovéiert Appartement am charmanten Quartier Limpertsberg verbënnt modernen Design mat komfortabeler Praktikabilitéit. Op 95 m² bitt dëst Heem eng wonnerbar Geleeënheet fir déi, déi héichwäerteg Wunnkomfort a cultural Atmosphäre sichen. Déi hell an driwwer ausgestralte Wunnzëmmer ass no skandinavescher Architectur ausgestatt, mat engem Designer-Canapé an engem edle Parkettbuedem, wat eng agreabel an invitéierend Ambiance erschaf.\n\nDéi funktionell a gutt equipéiert Kichen ass mat staarke modernen Apparater ausgeriicht, déi Är Kachen erliichteren. Mat engem Induktioun-Kachplack, engem Geschierwuermaschinn an engem klengen Essberäich ass alles prett fir direkt an Ärer nei Wunneng ze starten. Béid Schlafzëmmeren sinn mat Qualitéitsmeubelen equipéiert, inklusiv engem Queensize Bett an Dämmblannen, sou datt Äre Schlof komfortabel a roueg ass.\n\nDe Balkon bitt e klore Plaz fir frësch Loft an ass ideal fir kuerz Pausen dobaussen, wärend de Lift an den extra Lagerraum den Alldag vereinfachen. Dëst Appartement ass komplett möbliert a renovéiert, eng perfekt Optioun fir een direkt e großzügéiert a stilvollen Heem am begehrten Limpertsberg mat senger dynamescher Universitéits- a Kulturliewen. Eng wonnerbar Kombinatioun vu Komfort, Design a Lag fir héichwäerteg Wunner.\n\nDëst ganz Appartement belaf sech op €2,400 am Mount, entsprécht engem attraktiven Präis fir dës Premiumpräctik am héiche Quartier Limpertsberg. Eng exklusiv Offert fir dës aussergewéinlech Wunngeleeënheet déi eng Rei vu ville Virdeeler ubitt.",
+    "highlights": [
+      {
+        "text": "95 m² renovéiert an dekoréiert Appartement",
+        "icon": "home"
+      },
+      {
+        "text": "2 komfortabel Schlofzëmmeren mat Dämmblannen",
+        "icon": "bed"
+      },
+      {
+        "text": "Modern ausgeriicht Kichen mat duerchschaaltem Induktiounscooktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Private Balkon fir frësch Loft",
+        "icon": "sun"
+      },
+      {
+        "text": "Lift am Gebai fir bequemen Zougang",
+        "icon": "stairs"
+      },
+      {
+        "text": "Extra Lagerraum fir praktesch Ablage",
+        "icon": "archive"
+      },
+      {
+        "text": "Voll möbliert, prett fir direkt ze wunnen",
+        "icon": "sofa"
+      }
+    ],
+    "hashtags": [
+      "LimpertsbergLiving",
+      "ScandinavianDesign",
+      "UniversityQuarter",
+      "FullyRenovated",
+      "UrbanBalcony"
+    ]
+  }
+}

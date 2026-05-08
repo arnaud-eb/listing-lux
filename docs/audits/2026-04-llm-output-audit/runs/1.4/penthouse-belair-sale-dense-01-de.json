@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:52:45.543Z",
+  "output": {
+    "title": "Exklusives Penthouse mit 4 Schlafzimmern und Panoramablick in Belair",
+    "description": "Dieses Penthouse mit 220 m² Wohnfläche befindet sich im gehobenen Wohnviertel Belair und verbindet großzügiges Raumangebot mit zeitgemäßem Wohnkomfort. Die Renovierung erfolgte mit hochwertiger Ausstattung und bietet einen repräsentativen Eingangsbereich, einen offenen Wohn- und Essbereich mit bodentiefen Fenstern, die einen ungestörten Blick über die Stadt ermöglichen. Das Eichenparkett sowie ein Holzfeuer-Kamin prägen das noble Ambiente.\n\nDie Küche präsentiert sich in modernem, minimalistischem Design und ist mit Gaggenau-Geräten, einer zentralen Carrara-Marmor-Insel und einem integrierten Weinkühlschrank ausgestattet, was ein professionelles Kochumfeld schafft. Drei Badezimmer und vier Schlafzimmer bieten ausreichend Privatsphäre. Das Hauptschlafzimmer verfügt über einen begehbaren Kleiderschrank, ein eigenes Badezimmer und direkten Zugang zur privaten Terrasse.\n\nDie teilweise überdachte Terrasse besticht durch eine Süd-Ausrichtung und ermöglicht weitreichende 180-Grad-Blicke auf Luxemburg-Stadt. Die hochwertige Composite-Boden-Dielenfläche und die Glasbrüstung unterstreichen die zeitgemäße Gestaltung. Die Immobilie ist mit einem Aufzug erreichbar und verfügt über einen Parkplatz sowie zusätzlichen Stauraum.\n\nDas Stadtviertel Belair zeichnet sich durch seine grüne, ruhige Wohnlage mit eleganten Villen und gepflegten Straßen aus, wobei das Stadtzentrum bequem erreichbar ist. Diese Lage bietet eine gelungene Synthese aus urbanem Komfort und Wohnqualität in exklusiver Umgebung.\n\nEnergieausweis: Klasse wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "220 m² Wohnfläche mit 4 Schlafzimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Renoviert mit hochwertiger Ausstattung",
+        "icon": "home"
+      },
+      {
+        "text": "Panoramablick auf Luxemburg-Stadt",
+        "icon": "mountain"
+      },
+      {
+        "text": "Moderne Küche mit Gaggenau-Geräten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Große Terrasse mit Süd-Ausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Eichenparkett und Kamin im Wohnbereich",
+        "icon": "flame"
+      },
+      {
+        "text": "Aufzug und Parkplatz vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Stauraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLiving",
+      "CityViewLux",
+      "ModernRenovation",
+      "BelairResidence",
+      "LuxuryTerrace"
+    ]
+  }
+}

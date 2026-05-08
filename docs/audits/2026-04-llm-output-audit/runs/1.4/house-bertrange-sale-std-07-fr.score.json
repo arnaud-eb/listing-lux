@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Surface habitable de 195 m²' and 'Quatre chambres' and 'Deux salles de bains' match inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 195 m², 4 chambres, 2 salles de bains, garden, parking, terrace, but omits price (1,350,000 €) and neighborhood Bertrange entirely."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'associe un revêtement en carrelage et un foyer donnant une atmosphère accueillante' reads natural French though slightly stiff."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Maison mitoyenne', 'Classe énergétique', 'jardin orienté sud' typical of athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Classe énergétique : à communiquer.' surfaces a placeholder rather than inventing a class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison mitoyenne 4 chambres avec jardin orienté sud et parking privé' is 11 words but lacks neighborhood; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbole like 'magnifique' or 'à voir absolument'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'adaptés à une diversité de configurations' is neutral, no demographic targeting."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All claims (brick facade, fireplace, south-facing garden, breakfast nook) tie to photo_analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR and EN agree on semi-detached + 195m² + 4/2; DE contradicts with 'Vollmöbliertes Einfamilienhaus' and invents a Keller; LU calls it a 'Villa' on 'zwou Stäck'."
+    }
+  },
+  "overall_pass": false
+}

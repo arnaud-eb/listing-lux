@@ -1,0 +1,49 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 1,
+      "evidence": "'Prospective investors benefit from a guaranteed rental yield of 8% annually' fabricates yield."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "Omits 38 sqm, €1750 price, bedroom/bathroom counts entirely."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Nestled in the atmospheric Clausen valley, this exquisitely renovated studio' reads as native English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Generic luxury phrasing 'one of the city's most coveted neighborhoods' rather than LU-specific."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/energy class mentioned."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Hashtag 'GuaranteedYield' propagates fabricated claim; title acceptable."
+    },
+    "tone_discipline": {
+      "score": 2,
+      "evidence": "'exquisitely renovated' and 'vibrant city center' lean hyperbolic."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting language present."
+    },
+    "hallucination": {
+      "score": 1,
+      "evidence": "'guaranteed rental yield of 8% annually' is invented and not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/DE/LU all invent different tenant names (Lefèvre/Dubois vs Schmitz/Meyer vs Müller/Schroeder); EN omits names — inconsistent fabrications across languages, though all four agree on the fabricated 8% yield."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Yield fabrication; otherwise no tenant names here."
+}

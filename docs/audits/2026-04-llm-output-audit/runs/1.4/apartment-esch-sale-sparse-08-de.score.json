@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'Tiefgaragenstellplatz' is invented — input says only 'parking: true', not underground/garage; also 'modernen Badezimmer' is unsupported."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 78 m², 2 BR, 1 BA, balcony, parking, elevator but omits the €425,000 price."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Das Wohn- und Esszimmer verfügt über einen Zugang zum Balkon' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht' and 'gut geschnittenen Grundriss' match DE real estate corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht.' is an acceptable placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helles 2-Zimmer Appartement mit Balkon und Tiefgaragenstellplatz in Esch-sur-Alzette' has neighborhood and adjective; 5 CamelCase tags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "No exclamation marks; 'Helles' is mild and supported by photo analysis."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'Tiefgaragenstellplatz' (underground garage) is invented from generic 'parking: true', and 'Nähe zur Universität sowie zum Stadtteil Belval' adds Belval/university not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/LU describe 'parking' generically while DE upgrades to 'Tiefgaragenstellplatz'; LU includes the €425,000 price while FR/DE/EN omit it."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Multiple unsupported specifics: Tiefgarage, modernes Badezimmer, Belval, Universität."
+}

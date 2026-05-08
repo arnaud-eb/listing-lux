@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:27:12.587Z",
+  "output": {
+    "title": "Elegant 5-Bedroom Villa with Mature Garden and Terrace in Family-Friendly Strassen",
+    "description": "Discover refined suburban living in this beautifully renovated 280 m² detached villa nestled in the sought-after residential enclave of Strassen. Exemplifying traditional Luxembourgish charm, the residence features a luminous white plaster facade beneath a classic pitched slate roof, set within a mature, well-established garden that offers both privacy and tranquility. This home is ideally positioned within a family-oriented neighborhood renowned for excellent schools and seamless motorway access, perfectly balancing village character with proximity to the city.\n\nStep inside to an inviting living room adorned with warm parquet flooring and crowned by high ceilings, where a wood-burning fireplace creates an intimate ambience for family gatherings. Expansive patio doors open directly onto the garden, inviting natural light and effortless indoor-outdoor living. The sociable kitchen combines shaker cabinetry and sleek granite worktops with a central island, complete with casual seating and a double oven, catering to culinary enthusiasts and convivial dining alike.\n\nThe villa accommodates five generously sized bedrooms, each thoughtfully designed in a transitional style and featuring garden views that enhance the sense of calm and restfulness. The master suite impresses with fitted wardrobes and tranquil vistas, offering a perfect retreat. The garden itself is a private sanctuary flourishing with mature trees and a south-west facing stone-paved terrace, ideal for al fresco entertaining or peaceful relaxation amidst natural beauty.\n\nAdditional amenities include ample storage space and private parking facilities, further enhancing the convenience and functionality of this exceptional property. This villa harmoniously combines traditional architectural elements with contemporary comfort, presenting a unique opportunity for discerning families seeking a serene yet connected lifestyle in Strassen.",
+    "highlights": [
+      {
+        "text": "Spacious 280 m² renovated detached villa",
+        "icon": "home"
+      },
+      {
+        "text": "Mature, private garden with south-west exposure",
+        "icon": "trees"
+      },
+      {
+        "text": "Warm living room with fireplace and garden access",
+        "icon": "fire"
+      },
+      {
+        "text": "Sociable kitchen with central island and double oven",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Five generous bedrooms with fitted wardrobes",
+        "icon": "bed"
+      },
+      {
+        "text": "Stone-paved terrace ideal for outdoor entertaining",
+        "icon": "sun"
+      },
+      {
+        "text": "Private parking and ample storage spaces",
+        "icon": "car"
+      },
+      {
+        "text": "Family-friendly neighborhood with excellent schools",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SuburbanElegance",
+      "FamilyLiving",
+      "GardenRetreat",
+      "RenovatedVilla",
+      "StrassenLiving"
+    ]
+  }
+}

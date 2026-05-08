@@ -1,0 +1,47 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:55:36.748Z",
+  "output": {
+    "title": "Renovéiert 5-Schlofzëmmer Villa mat Gaart a Parking zu Strassen",
+    "description": "Dës charmant fräistehend Villa zu Strassen bitt 280 m² Wunnfläch op zwou Stäck an engem etabléierte Quartier am Alzettetal. Den traditionelle Lëtzebuerger Residenz-Charme gëtt am Äusseberäich duerch eng wäiss Putzfassad an e gescheitelt Schiefdach ervirgehuewen, begleet vun engem reife Gaart mat adulte Beem.\n\nAm banneschten offeréiert d'Wunnzëmmer eng agreabel Atmosphär dank héijen Daachhéichten, engem Holz-Kamin an direkten Accès op den Gaart iwwert Patio-Dieren. De Parkettbuedem ënnersträicht déi gemittlech a familiär Ambiance. D'Kichen ass komplett renovéiert, mat schéiner Shaker-Molerei, Granitarbechtsfläch an engem zentralen Insel mat Sëtzplazen, ergänzt duerch en Duebeluewen.\n\nFënnef duerchschnëttlech grouss Schlofzëmmeren an dräi Buedzëmmeren erméiglechen flexibel Raumnotzung. De Principal-Schlofzëmmer huet eng Usiicht op de Gaart an ubitt agebaute Kleederschafë fir praktesch Lagerung. Den Gaart ass natierlech gestalt mat enger Nuance vu Laurent-Bewaachung a steingepaveierte Patio, orientéiert südwestlech, fir propper Sonneliicht am Nomëtten an Owend.\n\nD'Demande ëmfaasst weiderhin eng Parkplaz an en Zousaz vum geräumte Lagerraum. Déi renovéiert Haltung an déi privat USalitéite schaffen eng Roufe fir déi, déi eng Qualitéitresidenz an engem suburbanen Ëmfeld mat zougänglechen Infrastrukturen sichen. Energiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "280 m² Wunnfläch op zwou Stäck",
+        "icon": "square"
+      },
+      {
+        "text": "Fënnef Schlofzëmmeren an dräi Buedzëmmeren",
+        "icon": "bed"
+      },
+      {
+        "text": "Renovéiert Kichen mat Duebeluewen a Granitarbechtsplang",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Privaten etabléierte Gaart mat südwestlecher Ausriichtung",
+        "icon": "trees"
+      },
+      {
+        "text": "Wunnzëmmer mat Holz-Kamin a Patio-Dieren op de Gaart",
+        "icon": "flame"
+      },
+      {
+        "text": "Parkplaz direkt bei der Villa",
+        "icon": "car"
+      },
+      {
+        "text": "Zousatz Lagerraum verfügbar",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "RenovéiertVilla",
+      "SuburbanLiving",
+      "GaartLiewen",
+      "LuxembourgTraditioun"
+    ]
+  }
+}

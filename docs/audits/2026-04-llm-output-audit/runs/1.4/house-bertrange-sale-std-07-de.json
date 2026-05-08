@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:55:41.720Z",
+  "output": {
+    "title": "Vollmöbliertes Einfamilienhaus mit Garten und Terrasse in ruhiger Lage",
+    "description": "Dieses 1990er-Jahre Einfamilienhaus mit 195 m² Wohnfläche bietet eine solide Bauweise mit einem Ziegelstein-Fassade und einem gepflegten Erscheinungsbild. Das Haus ist halb freistehend und verfügt über einen kleinen Vorgarten sowie eine private Einfahrt. Die südlich ausgerichtete Gartenfläche ermöglicht eine attraktive Sonneneinstrahlung und ist über eine Terrasse zugänglich, die zu ruhigen Stunden im Freien einlädt.\n\nIm Wohnbereich empfängt Sie ein offener, einladender Raum mit gefliesten Bodenbelägen und einem Kamin, der dem Raum eine warme Atmosphäre verleiht. Große Doppelflügeltüren verbinden den Wohn- und Essbereich mit dem Garten und schaffen somit eine attraktive Innen-Außen-Verbindung. Die Küche ist mit Holzschränken und einer gefliesten Spritzschutzfläche ausgestattet und bietet einen Frühstücksbereich, ideal für den täglichen Gebrauch.\n\nDas Haus umfasst vier Schlafzimmer und zwei Badezimmer, die komfortablen Wohnraum für verschiedene Bedürfnisse bieten. Zusätzlichen Stauraum finden Sie in einem separaten Kellerbereich. Ein privater Stellplatz auf dem Grundstück gibt weiteren Komfort in dieser Wohnlage.\n\nDie Wohnlage hält keine spezifischen Angaben zum Umfeld bereit, gewährleistet jedoch eine ruhige Umgebung in einem etablierten Wohngebiet. Ein Energieausweis wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "195 m² Wohnfläche in einem halb freistehenden Haus",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Privater Stellplatz auf dem Grundstück",
+        "icon": "car"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "fire"
+      },
+      {
+        "text": "Küche mit Frühstücksplatz und Holzfronten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Zusätzlicher Stauraum im Keller",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Suedgarten",
+      "Halbfreistehend",
+      "Kaminofen",
+      "Fruehstuecksplatz",
+      "Privatstellplatz"
+    ]
+  }
+}

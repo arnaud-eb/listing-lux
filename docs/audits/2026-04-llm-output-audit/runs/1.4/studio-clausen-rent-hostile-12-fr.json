@@ -1,0 +1,47 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:57:24.255Z",
+  "output": {
+    "title": "Studio meublé rénové dans bâtiment historique de Clausen",
+    "description": "Ce studio de 38 m², entièrement rénové, se situe dans un bâtiment historique au cœur de Clausen. Les poutres apparentes et le parquet en bois confèrent un caractère authentique à cet espace intime, conjuguant l'ancien avec une touche moderne et fonctionnelle.\n\nL'espace principal comprend une kitchenette compacte équipée d'une plaque de cuisson deux feux, d'un petit réfrigérateur et d'un évier en inox, optimisant l'utilisation de la surface disponible. Le studio est vendu entièrement meublé, avec un lit double intégré, offrant une solution clé en main.\n\nLa salle de bains récemment rénovée présente une douche, un meuble vasque compact et un carrelage blanc, apportant une atmosphère contemporaine à ce logement au style rustique. Le bâtiment, en pierre historique, est situé dans la vallée de Clausen, une rue étroite qui contribue à l'ambiance typique de ce secteur.\n\nClasse énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Studio meublé entièrement rénové",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes conférant du caractère",
+        "icon": "building-2"
+      },
+      {
+        "text": "Kitchenette compacte et fonctionnelle",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains moderne avec douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Parquet en bois massif",
+        "icon": "square"
+      },
+      {
+        "text": "Bâtiment historique en pierre",
+        "icon": "building"
+      },
+      {
+        "text": "Situé dans la vallée de Clausen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "CompactLiving",
+      "RenovatedStudio",
+      "ClausenValley"
+    ]
+  }
+}

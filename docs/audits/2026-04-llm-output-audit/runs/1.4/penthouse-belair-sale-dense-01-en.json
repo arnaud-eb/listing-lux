@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:52:56.573Z",
+  "output": {
+    "title": "Spacious 4-Bedroom Penthouse with Panoramic City Views in Belair",
+    "description": "This recently renovated 220 m² penthouse offers an elegant residence in the upscale Belair neighborhood. The open-plan living room is bright and airy, featuring floor-to-ceiling windows that frame panoramic views of Luxembourg City. Oak parquet flooring and a wood-burning fireplace add warmth and texture to the contemporary interior, complemented by integrated smart-home lighting.\n\nThe kitchen is designed with a minimalist approach and equipped with high-end Gaggenau appliances. A Carrara marble island with matte black fixtures and an integrated wine fridge provides a professional-grade environment suited for both everyday cooking and entertaining.\n\nFour well-appointed bedrooms include a master suite with a walk-in closet, ensuite bathroom, and direct access to a private terrace. In addition to the master terrace, an expansive south-facing terrace with composite decking and a glass balustrade overlooks the city with a 180-degree view, offering generous outdoor living space.\n\nAdditional amenities include an elevator servicing the unit, secure parking, and private storage. Situated in Belair, an exclusive and green residential neighborhood known for its quiet streets and proximity to the city center, this penthouse combines urban convenience with a tranquil setting.\n\nEnergy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "220 m² recently renovated penthouse",
+        "icon": "home"
+      },
+      {
+        "text": "Four bedrooms including master with walk-in closet and ensuite",
+        "icon": "bed"
+      },
+      {
+        "text": "Three bathrooms",
+        "icon": "bath"
+      },
+      {
+        "text": "South-facing 180° city-view terrace",
+        "icon": "sun"
+      },
+      {
+        "text": "Gaggenau kitchen appliances with Carrara marble island",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Wood-burning fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Parking and private storage included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "CityViewPenthouse",
+      "BelairResidence",
+      "ContemporaryDesign",
+      "SpaciousLiving",
+      "SmartHome"
+    ]
+  }
+}

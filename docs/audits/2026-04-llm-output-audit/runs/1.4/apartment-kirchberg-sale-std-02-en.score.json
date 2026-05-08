@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"This newly built apartment of 145 m²\" and \"Three bedrooms and two bathrooms\" match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 145 m², three bedrooms, two bathrooms, Kirchberg, balcony, parking, elevator, storage, new-build, city/park view."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"adding an outdoor extension ideal for quiet moments\" reads naturally though slightly stiff."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"Bulthaup cabinetry\", \"walk-in rain shower\", \"engineered wood flooring\" align with luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Energy passport: class to be confirmed.\" surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title is fine but only 4 hashtags and \"Kirchberg\" duplicates a generic market tag: \"ModernLiving ParkView BulthaupKitchen Kirchberg\"."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; e.g., \"tailored to meet high standards of functionality and style.\""
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; price/audience-neutral throughout."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "\"EU quarter, Philharmonie, and MUDAM\" are supported by neighborhood metadata; numerics match inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE/EN/LU agree on numerics, but FR introduces \"suite parentale\" and \"parquet en bois massif\" not present in other languages or inputs; LU title's \"Parkplaz\" is ambiguous vs. EN/DE/FR's clear park view."
+    }
+  },
+  "overall_pass": true
+}

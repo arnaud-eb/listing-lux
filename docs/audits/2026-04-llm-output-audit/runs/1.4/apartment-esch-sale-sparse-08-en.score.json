@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This 78 m² apartment in Esch-sur-Alzette comprises two bedrooms and one bathroom' is correct."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds/baths, balcony, parking, elevator, neighborhood but omits price €425,000."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'opening onto a modest balcony that extends the living area outdoors' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Energy passport: class to be confirmed.' aligns with LU corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energy passport: class to be confirmed.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title fits; 5 CamelCase hashtags 'CityLiving BalconyAccess EschSurAlzette FunctionalLayout ElevatorApartment'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'offering a practical living space' — restrained, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'near university and Belval' in highlights introduces unsupported named places not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/LU describe 'parking' generically while DE upgrades to 'Tiefgaragenstellplatz'; LU includes the €425,000 price while FR/DE/EN omit it."
+    }
+  },
+  "overall_pass": false,
+  "notes": "University/Belval references are not in inputs."
+}

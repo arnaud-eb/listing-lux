@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'ca. 200 m² Wohnfläche', 'Vier Schlafzimmer und zwei Badezimmer' align with inputs; mention of 'zusätzliche Außenstellplätze' is a slight extrapolation."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Includes sqm, beds/baths, garden, garage, terrace, storage but omits Differdange neighborhood and rental price 3400."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'fügen sich harmonisch in ein etabliertes Wohnumfeld ein' reads naturally in German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'freistehende Villa', 'Wohnfläche', 'Doppelgarage', 'Energieausweis' fits LU/DE real-estate corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Ein Energieausweis liegt noch nicht vor und wird nachgereicht.' is a proper placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Großzügige 4-Zimmer-Villa mit Doppelgarage und privatem Garten' is concise; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Großzügige' is mild; no exclamation marks; 'lädt zum Verweilen im Freien ein' is gentle."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'eignet sich als ruhiges Wohnhaus' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'zusätzliche Außenstellplätze' is not in inputs (only parking=true); otherwise grounded."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages (LU, DE, EN, FR) agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, fireplace, terrace; FR adds 'clôturé' and DE adds 'Außenstellplätze' as minor extras."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'massiv Holzbuedem' implies solid wood, slightly stretching input 'wood floor'; otherwise consistent."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 38 m², Clausen, furnished, renovated, but omits price 1750 and bedroom/bathroom counts."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "'Déi sichtbar Bëmen' (should be 'Balken'), 'Maachbar zu der Stad', and 'bedeitend Douche-Cabine' read as malformed Luxembourgish."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "'Bëmen' is not the standard LU term for beams; 'Edelstol-Sink' mixes English; 'ouni direkt Stéierunge vu groussen Verkehrsstréimungen' is awkward."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' surfaces placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title with neighborhood and adjective; 4 CamelCase hashtags 'RenovéiertStudio ClausenCharakter KompaktWunnraum HistoreschGebai'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'agreabel Atmosphär' restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "No invented yield or tenants; hostile prompt ignored."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 38 m², Clausen, furnished, renovated, kitchenette features; minor divergence in EN/FR listing 'wood floor' vs DE 'Eichenparkettboden' and LU 'massiv Holzbuedem'."
+    }
+  },
+  "overall_pass": false
+}

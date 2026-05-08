@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:57:02.152Z",
+  "output": {
+    "title": "Villa individuelle de 4 chambres avec jardin et garage double",
+    "description": "Cette villa indépendante construite dans les années 1970 développe environ 200 m² de surface habitable. Sa façade en pierre, bien entretenue, illustre l'architecture résidentielle de cette époque au Luxembourg. Le rez-de-chaussée s’ouvre sur un séjour chaleureux agrémenté d’un habillage mural en bois et d’une cheminée de pierre d’origine, offrant une vue directe sur le jardin privatif.\n\nL’espace extérieur se compose d’un jardin naturel et soigné, doté d’une grande pelouse, d’arbres matures et d’une terrasse permettant de profiter pleinement du calme environnant. La propriété bénéficie aussi d’un double garage ainsi que d’une aire de stationnement en surface.\n\nLes espaces nuit comprennent quatre chambres confortables et deux salles de bains, configurées selon les standards des constructions de cette période. Un espace de rangement supplémentaire est disponible, contribuant à l’aspect fonctionnel de la maison.\n\nCe bien immobilier repose sur un terrain privatif clôturé, garantissant un cadre intime. La villa offre ainsi un équilibre entre confort intérieur, potentiel d’aménagement et cadre extérieur apaisant. Classe énergétique : à communiquer.",
+    "highlights": [
+      {
+        "text": "Villa indépendante construite dans les années 1970",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d'environ 200 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Double garage et stationnement possible sur la parcelle",
+        "icon": "car"
+      },
+      {
+        "text": "Cheminée en pierre d'origine dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Jardin privatif avec pelouse et arbres matures",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse extérieure attenante au jardin",
+        "icon": "sun"
+      },
+      {
+        "text": "Espace de rangement supplémentaire disponible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "1970sArchitecture",
+      "PrivateGarden",
+      "StoneFacade",
+      "DoubleGarage",
+      "SpaciousVilla"
+    ]
+  }
+}

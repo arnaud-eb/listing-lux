@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'privaten Aufzug' is not supported; input only specifies elevator=true."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers '220 m²', '4 Schlafzimmern', 'Belair', 'Aufzug', 'Stellplatz', 'Stauraum', 'Terrasse', 'Kamin', 'Eichenparkett', 'Gaggenau', 'Carrara-Marmor'."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'Dieses penthouse residence in Belair' is awkward English-German code-mixing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'begehbaren Kleiderschränken', 'en-suite Badezimmer', 'Stellplatz' match LU German luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of Energieklasse / CPE in the German output."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exklusives Penthouse mit Panorama-Stadtblick und luxuriösen Ausstattungen in Belair' is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 2,
+      "evidence": "'exquisite', 'unvergleichlichen', 'unvergessliche Momente', 'außergewöhnliche Symbiose', 'prestigeträchtiger Lage' — heavy hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; references stay on property features and 'Quartier'."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'privaten Aufzug' is invented from a generic elevator feature."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 220 m², 4 bedrooms, Belair, Gaggenau, Carrara, 180° terrace; minor divergence: EN adds 'elegant villas' and DE/FR call elevator 'private' while LU specifies indoor parking."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Strong feature coverage but tone runs purple and 'private elevator' is invented."
+}

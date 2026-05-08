@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'78 m² apartment', 'two tranquil bedrooms', 'well-appointed bathroom', 'secure parking', 'elevator access' match."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Beds, baths, sqm, balcony, parking, elevator covered, but price €425,000 is missing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Nestled in the dynamic heart of Esch-sur-Alzette' reads idiomatically."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Phrases like 'refined', 'sophisticated home', 'Affordable luxury' over-luxurize an entry-tier flat."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No energy class/CPE reference in the English listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Bright 2-Bedroom Apartment with Balcony and Parking in Vibrant Esch-sur-Alzette' is 11 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 2,
+      "evidence": "'exceptional blend', 'refined', 'picturesque neighborhood views', 'Affordable luxury' is hyperbolic for entry-tier."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'ideal for professionals or small families seeking an affordable yet sophisticated home' targets family status — hard fail."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'close to the prestigious University of Luxembourg and the vibrant Belval district' and 'picturesque neighborhood views' are not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR, LU, DE, EN all agree on 78 m², 2 bedrooms, balcony, parking, elevator; minor variation: only LU adds '60er Wunnraum'."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Fair-housing hard fail: 'professionals or small families'."
+}

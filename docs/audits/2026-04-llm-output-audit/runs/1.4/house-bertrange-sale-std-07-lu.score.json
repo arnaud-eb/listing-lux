@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Title says 'Villa' though property is a semi-detached house; '195 m² op zwou Stäck' invents a two-storey count not in inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "195 m², 4 Schlofzëmmeren, 2 Buedzëmmeren, Gaart, Parkplaz mentioned; price and Bertrange omitted."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "'Kach waren oppen Uerdnung an op d'Deenzeraged waart' is incoherent Luxembourgish; 'Ënnerdaach' misused for a house."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "Mixes English 'Semi-detached Villa', 'Driveway', 'Patio' with Luxembourgish; not aligned with athome.lu LU vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Semi-detached Villa mat 4 Zëmmeren, gaart a Parkplaz zu Lëtzebuerg' has 'zu Lëtzebuerg' as vague location, mixes English; hashtags are mostly English not CamelCase Luxembourgish."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'ënnersträichen d'Charme' is mild but no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'eng lieweg a praktesch Heem' is neutral."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'op zwou Stäck' invents two storeys, 'Villa' is unsupported, and 'Laminéierter Fliesenbuedem' contradicts tile flooring."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR and EN agree on semi-detached + 195m² + 4/2; DE contradicts with 'Vollmöbliertes Einfamilienhaus' and invents a Keller; LU calls it a 'Villa' on 'zwou Stäck'."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:53:06.936Z",
+  "output": {
+    "title": "Moderne 3-Zimmer-Neubauwohnung mit Balkon und Parkblick in Kirchberg",
+    "description": "Diese zeitgemäße Neubauwohnung im Herzen des Geschäftsviertels Kirchberg bietet auf 145 m² eine durchdachte Raumaufteilung mit drei Schlafzimmern und zwei Bädern. Die zentrale Gestaltung schafft eine offene und helle Atmosphäre, insbesondere im großzügigen Wohnbereich mit Doppelhöhe der Decke und südlich ausgerichteten Fenstern, die für reichlich Tageslicht sorgen.\n\nDie Küche überzeugt durch hochwertige Bulthaup-Einbauten, eine Induktionskochplatte sowie eine Steinarbeitsplatte mit integriertem Frühstücksbar. Funktionalität und ästhetische Klarheit prägen diesen Bereich, der sich harmonisch an den Wohn- und Essbereich anschließt.\n\nDer Balkon mit Glasgeländer und gefliester Fläche bietet einen ruhigen Ausblick auf den Park von Kirchberg und lädt zum Verweilen im Freien ein. Zwei moderne Badezimmer mit hochwertiger Ausstattung wie begehbarer Regendusche, Doppelwaschtisch und Fußbodenheizung ergänzen das Raumangebot komfortabel.\n\nZur Wohnung gehören ein Parkplatz sowie ein Aufzug und ein separater Lagerraum, womit ein hoher Wohnkomfort gewährleistet ist. Die Lage in Kirchberg ermöglicht Nähe zu EU-Institutionen, Philharmonie und MUDAM sowie eine Anbindung an internationale Schulen und moderne Infrastruktur.\n\nEnergieausweis: Klasse wird nachgereicht.",
+    "highlights": [
+      {
+        "text": "145 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlafzimmer, 2 Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Balkon mit Parkblick",
+        "icon": "sun"
+      },
+      {
+        "text": "Hochwertige Bulthaup-Küche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Privater Parkplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Lagerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Neubauwohnung",
+      "Parkblick",
+      "BulthaupKüche",
+      "ModerneArchitektur",
+      "KirchbergLiving"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Adds unsupported 'am Alzettetal' — Strassen is not in the Alzette valley, contradicting geographic reality."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 280 m², five bedrooms, three bathrooms, garden, parking, storage, fireplace; price absent."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Awkward/erroneous phrasing like 'eng Nuance vu Laurent-Bewaachung' and 'D'Demande ëmfaasst' suggest broken Luxembourgish."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'Wunnfläch', 'Schlofzëmmeren' but garbled neologisms reduce corpus alignment."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' uses placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovéiert 5-Schlofzëmmer Villa mat Gaart a Parking zu Strassen' is well-shaped; 4 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "No exclamation marks; 'charmant' is mildly promotional but acceptable."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; 'familiär Ambiance' refers to atmosphere, not occupants."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'am Alzettetal' invents a geographic location not supported by inputs (Strassen is not in the Alzette valley); also 'Laurent-Bewaachung' is unsupported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR/LU all agree on 280 m², 5 bedrooms, 3 bathrooms, SW exposure, parking; LU adds unsupported 'Alzettetal' location and FR adds unsupported 'chêne', minor divergences."
+    }
+  },
+  "overall_pass": false
+}

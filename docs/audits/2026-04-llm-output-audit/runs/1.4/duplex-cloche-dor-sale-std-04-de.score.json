@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'180 m² Wohnfläche', 'drei Schlafräume', 'zwei moderne Bäder' all align with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/baths/sqm, neighborhood, parking, lift, storage, terrace, but no price mention."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natural German: 'vermittelt ein großzügiges Raumgefühl', 'fördert eine fließende Raumnutzung'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard luxury vocabulary 'repräsentative Duplexwohnung', 'Eichenparkett', 'Energieausweis'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title within range; 5 CamelCase hashtags 'ModerneArchitektur DuplexWohnung Terrassenwohnung SiemensKüche Parkblick'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'repräsentative' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'nach Süden ausgerichtet den Abendsonnenschein' invents a southern orientation; only 'evening sun exposure' was in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 180 m², 3 bedrooms, 2 bathrooms, Cloche d'Or, parking, lift, storage, terrace; minor flooring discrepancy between FR ('chêne massif') and DE ('Eichenparkett')/EN."
+    }
+  },
+  "overall_pass": false
+}

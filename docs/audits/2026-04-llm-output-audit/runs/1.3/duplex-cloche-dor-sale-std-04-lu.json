@@ -1,0 +1,44 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:26:12.702Z",
+  "output": {
+    "title": "Elegant Duplex mat 3 Schlofkummeren an exklusive Terrass mit Déift Vue am Cloche d'Or",
+    "description": "Dësen exklusive Duplex-Wohnung am neie Cloche d'Or Quartier verbënnt modern Architektur mat engem luxuriéise Liewensstil. Op 180 m² erweidert sech eng hell, opfälleg Wunnfläch mat engem duebel-Volumen Ceiling, enger bannenzeger Trapp an engem panorameschen Vue op de frëschen Park vum Quartier, déi de Raum mat natierlechem Liicht dûsegt.\n\nD'Kichen ass mat héichwäertege Siemens-Apparater ausgestatt a bidd eng opfälleg, sozial Duergank zu der Iess- an der lieweger Raumfläch, mat engem quartz Wäschbord an elegant ënnerbauter Käschte mat Séisseschlëffer. Déi ideal Aren fir Gourmets a Gastfrëndlechkeet.\n\nOben am Haus fannt Dir 3 roueg a privat Schlofkummeren, dorënner d'Master-Suite mat zougänglecher Terrass, mat integréierte Späicher- an Garderobeschëffer. Dës Plaz garantéiert eng Harmonie tëscht Komfort a Privatsphär.\n\nDéi wäit opgebaut Terrass vum Duplex ass am modernen Stil mat Holzdeck ausgestatt a weist eng ëmfaassend Vue op d'Geschäftszentrum vum Cloche d'Or. D'Abendsonn gëtt hei vun der optimaler Plaz aus genoss.\n\nD'Immobilie ass deel vun engem neie Bauprojet am liewege Geschäftshub Cloche d'Or, mat exzellenter Infrastruktur, Parkplaze mat engem privaten Parking, Lift an engem sécheren Stoqual. Eng perfekt Kombinatioun vu Stadliewen an elegantem Komfort, ideal fir déi déi héich Qualitéit a Praktikitéit sichen.",
+    "highlights": [
+      {
+        "text": "Duebel-Volumen Hängend Wunnzëmmer mat panoramesche ParkVue",
+        "icon": "sun"
+      },
+      {
+        "text": "Modern opmaachend Kichen mat héichwäertege Siemens Apparater",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Master-Suite mat Privater Terrass Zougang",
+        "icon": "door"
+      },
+      {
+        "text": "Ëmfassen Terrass mat Abendsonn a Vue op Geschäfterzentrum",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Privé Parking an Lift am Gebai",
+        "icon": "car"
+      },
+      {
+        "text": "Stauraim a praktesch bannenzeg Trapp fir stilvoll Verbindung",
+        "icon": "stairs"
+      }
+    ],
+    "hashtags": [
+      "ClocheDOrStyle",
+      "PanoramaTerrass",
+      "DuebelVolumen",
+      "SiemensKichen",
+      "LuxusDuplex"
+    ]
+  }
+}

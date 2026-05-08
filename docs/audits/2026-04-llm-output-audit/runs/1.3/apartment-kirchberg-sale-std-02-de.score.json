@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'großzügige Raumgestaltung auf 145 m²' and 'drei Schlafzimmer' match input."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 145 m² and 3 bedrooms but omits price of €1,650,000."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'Doppelhoh-Decke' is a typo/awkward construction, and 'Doppelhoch-Decke' is not idiomatic German for double-height ceiling."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'EU-Viertel Kirchberg' and 'Bulthaup-Einbauten' but some phrasing feels translated."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE or Energieklasse mentioned anywhere."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exklusives 3-Zimmer Apartment mit Parkblick im Herzen von Kirchberg' is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Meisterwerk moderner Funktionalität' is slightly hyperbolic but no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'exzellente Investition für anspruchsvolle Berufstätige und Expats' targets specific demographic group."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'kulturelle Highlights wie die Philharmonie und das MUDAM sowie exzellente internationale Schulen' — landmarks and schools not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN, DE, FR all reference 145 m², 3 bedrooms, Bulthaup, balcony, parking; LU omits explicit 145 m² and introduces 'ënnerierdesch Waasserheizung' instead of underfloor heating, creating a minor feature inconsistency."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'parquet en chêne' specifies oak wood not in inputs (only 'parquet flooring'), a minor invention."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 280 m², 5 chambres, 3 salles de bains, jardin, terrasse, parking, cheminée; price absent."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as fluent French: 'favorisant la connexion entre intérieur et extérieur'."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "Standard LU francophone vocabulary: 'surface habitable', 'classe énergétique', 'villa indépendante'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Classe énergétique : à communiquer.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa rénovée avec 5 chambres et jardin mature orienté sud-ouest à Strassen' is 12 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained tone: 'optimisant le confort d'usage'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; neutral 'quartier résidentiel calme'."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'parquet en chêne' specifies oak wood not stated in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR/LU all agree on 280 m², 5 bedrooms, 3 bathrooms, SW exposure, parking; LU adds unsupported 'Alzettetal' location and FR adds unsupported 'chêne', minor divergences."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Eichenparkettboden' is invented — input only says 'wood floor', not specifically oak."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Lists 38 m², Clausen, furnished, renovated, but omits price 1750 and bathroom/bedroom counts."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'einzeln gelegenen Zimmer' and 'Clausen-Talsenke' are awkward/unidiomatic German constructions."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Doppelschlafplatz' is non-standard; typical listings say 'Doppelbett'; 'Energieausweis' is correct LU/DE term."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Ein Energieausweis für das Objekt wird derzeit erstellt.' surfaces placeholder rather than inventing class."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title fine but only 4 hashtags and 'ClausenLocation' is generic-feeling."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbolic adjectives; 'ruhige und einladende Atmosphäre' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references in the German text."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'Eichenparkettboden' (oak parquet) is not in inputs which only specify 'wood floor'."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 38 m², Clausen, furnished, renovated, kitchenette features; minor divergence in EN/FR listing 'wood floor' vs DE 'Eichenparkettboden' and LU 'massiv Holzbuedem'."
+    }
+  },
+  "overall_pass": false
+}

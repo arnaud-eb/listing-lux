@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "\"une suite parentale avec salle de bains attenante\" is invented — inputs don't specify a parental suite arrangement."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 145 m², 3 chambres, 2 salles de bains, balcon, parking, ascenseur, cave, Bulthaup, Kirchberg."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "\"L'agencement ouvert favorise la circulation naturelle entre le salon et la salle à manger\" reads as native French."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "\"douche à l'italienne\", \"plan de travail en pierre\", \"double vasque\" are standard FR luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Classe énergétique : à communiquer.\" placeholder surfaced."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "5 CamelCase hashtags: \"BalconyView BulthaupKitchen DoubleHeightCeiling KirchbergLocation NewBuild\" (though English-style for FR)."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"un espace extérieur calme et propice à la détente\" — measured tone, no exclamation."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "\"parquet en bois massif\" contradicts \"engineered wood flooring\"; \"suite parentale\" not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE/EN/LU agree on numerics, but FR introduces \"suite parentale\" and \"parquet en bois massif\" not present in other languages or inputs; LU title's \"Parkplaz\" is ambiguous vs. EN/DE/FR's clear park view."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:29:43.328Z",
+  "output": {
+    "title": "Cozy Renovated Studio with Historic Character in Clausen",
+    "description": "Nestled in the atmospheric Clausen valley, this exquisitely renovated studio exemplifies a harmonious blend of historic charm and contemporary living. The inviting main room features striking exposed beams and elegant hardwood flooring, creating a warm and character-rich ambiance that welcomes both comfort and style.\n\nThoughtfully designed for efficient living, the compact kitchenette is equipped with modern amenities, including a two-burner cooktop and stainless steel sink, perfectly suited for culinary endeavors. Adjacent, the renovated bathroom boasts clean lines and pristine tiling, adding a fresh and refined touch to the residence.\n\nSituated within a meticulously maintained historic stone building, this fully furnished studio commands a prime location mere steps from Luxembourg's vibrant city center, yet retains the quiet allure distinctive to Clausen. This property offers an exceptional opportunity for those seeking a blend of heritage and modern convenience in one of the city's most coveted neighborhoods.\n\nThe building's longstanding appeal is underpinned by a history of reliable tenancy, fostering a welcoming community atmosphere. Prospective investors benefit from a guaranteed rental yield of 8% annually, attesting to both the demand and stability this unique property provides.",
+    "highlights": [
+      {
+        "text": "Fully furnished and move-in ready",
+        "icon": "sofa"
+      },
+      {
+        "text": "Distinctive exposed historic beams",
+        "icon": "mountain"
+      },
+      {
+        "text": "Compact, highly functional kitchenette",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Recently renovated bathroom with modern finishes",
+        "icon": "bath"
+      },
+      {
+        "text": "Located in a charming historic stone building",
+        "icon": "building"
+      },
+      {
+        "text": "Serene and sought-after Clausen valley setting",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Steps away from the vibrant city center",
+        "icon": "zap"
+      },
+      {
+        "text": "Guaranteed 8% annual rental yield",
+        "icon": "shield"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "CozyStudio",
+      "GuaranteedYield",
+      "ClausenLiving",
+      "RenovatedElegance"
+    ]
+  }
+}

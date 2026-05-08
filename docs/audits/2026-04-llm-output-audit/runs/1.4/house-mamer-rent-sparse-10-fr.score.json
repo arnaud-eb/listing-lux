@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"trois chambres et une salle de bain\" and \"environ 130 m²\" align with inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions beds/baths/sqm and features but omits price (€2900) and neighborhood Mamer entirely."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"Située dans un quartier résidentiel calme, cette maison mitoyenne des années 1980\" reads naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate vocabulary like \"jardin privatif\", \"emplacement de parking\", \"portes-fenêtres\"."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Classe énergétique : à communiquer.\" surfaces a placeholder rather than inventing."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title \"Maison mitoyenne 3 chambres avec jardin privatif et parking\" lacks neighborhood; 5 hashtags but \"Surface130m2\" and \"Années1980\" are awkward."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; \"L'ensemble est entretenu avec soin\" is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references in the text."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "No invented places or amenities; Mamer is wisely not mentioned."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE agree on 130 m², 3 bed, 1 bath, row house, not renovated; LU contradicts with \"Renovéierten\" and \"Maisonette\"."
+    }
+  },
+  "overall_pass": false
+}

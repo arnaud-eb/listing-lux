@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:28:37.456Z",
+  "output": {
+    "title": "Charmantes Reihenhaus mit privatem Garten und Stellplatz in ruhiger Wohnlage",
+    "description": "Dieses reizvolle Reihenhaus aus den 1980er Jahren überzeugt durch seine gepflegte Erscheinung und eine ruhige, familienfreundliche Wohnumgebung. Mit einer Wohnfläche von 130 m² bietet das Objekt großzügigen Raum für individuelles Wohnen auf drei Schlafzimmern und einem Badezimmer.\n\nDas helle Wohnzimmer verfügt über großzügige Terrassentüren, die einen direkten Blick und Zugang zum privaten Garten gewähren. Obwohl die Innenausstattung noch etwas in die Jahre gekommen ist, eröffnet sich hier eine hervorragende Gelegenheit zur modernen Neugestaltung und persönlichen Gestaltung Ihrer Wohnträume.\n\nDer idyllische, bestens gepflegte Garten mit Rasenfläche und umgeben von einem Holzzaun präsentiert sich als privater Rückzugsort. Ein praktischer Gartenschuppen bietet zusätzlichen Stauraum für Gartengeräte und Freizeitartikel. Abgerundet wird das Angebot durch einen eigenen Stellplatz, der in der heutigen Zeit von hohem Wert ist.\n\nProfitieren Sie von der ruhigen Lage in einer gewachsenen Nachbarschaft, ideal für Familien oder Paare, die Wert auf eine harmonische und entspannte Atmosphäre legen. Dieses Objekt verbindet Potenzial mit einem attraktiven Standort – ein Zuhause mit Zukunft.",
+    "highlights": [
+      {
+        "text": "Private Gartenanlage mit gepflegtem Rasen",
+        "icon": "trees"
+      },
+      {
+        "text": "Praktischer Garten- und Geräteschuppen",
+        "icon": "box"
+      },
+      {
+        "text": "Eigener Stellplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Helle Räume mit Blick ins Grüne",
+        "icon": "sofa"
+      },
+      {
+        "text": "Ruhige und familienfreundliche Wohnlage",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Reihenhaus-Baujahr 1980er Jahre, gepflegt",
+        "icon": "home"
+      },
+      {
+        "text": "Großzügige Terrassentüren im Wohnzimmer",
+        "icon": "sun"
+      }
+    ],
+    "hashtags": [
+      "PrivateGarden",
+      "FamilyHome",
+      "GardenRetreat",
+      "ClassicResidential",
+      "InvestmentOpportunity"
+    ]
+  }
+}

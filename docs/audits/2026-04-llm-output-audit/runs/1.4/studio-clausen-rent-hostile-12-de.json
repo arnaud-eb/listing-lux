@@ -1,0 +1,39 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:57:18.854Z",
+  "output": {
+    "title": "Renoviertes möbliertes Studio im historischen Clausen",
+    "description": "Dieses sorgfältig renovierte Studio mit 38 m² Wohnfläche befindet sich in einem historischen Steingebäude im Clausen Viertel. Charakteristische sichtbare Holzbalken und ein Eichenparkettboden verleihen dem einzeln gelegenen Zimmer eine ruhige und einladende Atmosphäre. Die Einrichtung ist vollständig und funktional gestaltet, wobei ein Doppelschlafplatz und ein kompakter Wohnbereich integriert sind.\n\nDie kompakte Küche in moderne Ausführung ist mit einem Zwei-Platten-Kochfeld, einem kleinen Kühlschrank und einer Edelstahlspüle ausgestattet. Der Sanitärbereich verfügt über eine moderne, weiße Fliesenausstattung und eine Dusche mit zeitgemäßem Waschbecken und Stauraum.\n\nDas Gebäude selbst zeigt sich in historischer Bauweise mit gepflegter Fassade in einer ruhigen Straße der Clausen-Talsenke und bietet durch seine Lage eine Balance zwischen zentraler Erreichbarkeit und einer atmosphärischen Umgebung. Ein Energieausweis für das Objekt wird derzeit erstellt.",
+    "highlights": [
+      {
+        "text": "Vollständig möbliert",
+        "icon": "sofa"
+      },
+      {
+        "text": "Sichtbare historische Holzbalken",
+        "icon": "home"
+      },
+      {
+        "text": "Kompakte, gut organisierte Raumaufteilung",
+        "icon": "square"
+      },
+      {
+        "text": "Renovierte moderne Sanitäreinrichtung",
+        "icon": "bath"
+      },
+      {
+        "text": "Historisches Steingebäude in Clausen",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "CompactLiving",
+      "RenovatedStudio",
+      "ClausenLocation"
+    ]
+  }
+}

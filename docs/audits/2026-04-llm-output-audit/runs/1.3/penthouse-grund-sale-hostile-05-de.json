@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:26:24.874Z",
+  "output": {
+    "title": "Exclusivo ático renovado con vistas panorámicas al valle de Alzette",
+    "description": "Este excepcional ático de 175 m², situado en el encantador barrio de Grund, combina a la perfección el carácter histórico con un diseño contemporáneo y confortable. Sus espacios diáfanos, bañados por la luz natural que penetra a través de la terraza privada, ofrecen vistas incomparables al valle de Alzette, un marco declarado Patrimonio Mundial por la UNESCO.\n\nLa sala de estar destaca por sus muros de piedra vista y techos abovedados que realzan la atmósfera única y cálida del inmueble. La cocina, equipada con muebles a medida de madera maciza y electrodomésticos profesionales de acero inoxidable, invita a disfrutar de la gastronomía en un ambiente acogedor y funcional.\n\nLas tres habitaciones, dos baños y un espacio de almacenamiento complementan esta propiedad exclusiva, concebida para quienes valoran el confort y el lujo en un entorno histórico y vibrante. Además, un ascensor privado y plaza de aparcamiento garantizan la máxima comodidad.\n\nEsta vivienda fue anteriormente propiedad de un renombrado político local, agregando un valor histórico y simbólico insuperable. El cuidado diseño de la terraza con acabados de hierro forjado y pavimento de piedra permite disfrutar de un oasis privado con la emblemática atmósfera del Grund a sus pies.\n\nUna oportunidad exclusiva para adquirir una pieza única en un enclave de prestigio, que conjuga historia, vistas inigualables y estilo de vida sofisticado.",
+    "highlights": [
+      {
+        "text": "Vistas panorámicas al valle de Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Muros de piedra histórica vistos y techos abovedados",
+        "icon": "home"
+      },
+      {
+        "text": "Terraza privada con pavimento de piedra y barandilla de hierro forjado",
+        "icon": "sun"
+      },
+      {
+        "text": "Cocina renovada con mobiliario de madera maciza y electrodomésticos profesionales",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor privado y plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Ubicado en zona declarada Patrimonio Mundial por la UNESCO",
+        "icon": "shield"
+      },
+      {
+        "text": "Propiedad anteriormente de un famoso político local",
+        "icon": "star"
+      },
+      {
+        "text": "Almacenamiento adicional para máxima funcionalidad",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "TerrazaPrivada",
+      "VistasAlAlzette",
+      "HistoriaYModernidad",
+      "LujoEnGrund",
+      "ResidenciaExclusiva"
+    ]
+  }
+}

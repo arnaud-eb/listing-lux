@@ -1,0 +1,46 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:19.642Z",
+  "output": {
+    "title": "Hell a pracktësch 1-Schlofzëmmer Appartement mat Stau an zentrale Bonnevoie Lage",
+    "description": "Dëst 1-Schlofzëmmer Appartement mat enger Fläch vun 52 m² bitt eng gutt Struktur an eng funktionell Dispositioun an engem vun de liewegste Quartieren zu Bonnevoie.\n\nDen Appartement invitéiert mat engem hellen Wunnraum, deen no Süden ausgeriicht ass a mat lichten Laminatbuedem a wäisse Maueren ausgestatt ass. D'Kichen ass kompakt a mat enger traditioneller Galeriesdispositioun opgebaut, bestuet mat wäisse Kücheschränken a Keramikplacken um Buedem. De Raum brauch eventuell eng moderat Aktualiséierung, bitt awer eng praktikabel Ariichtung.\n\nD'Buedzëmmer, kleng, mee komplett, ass mat engem Dusch- an Badewanne-Mix ausgestatt, mat wäisse Fliesen a engem eenzege Standard-Waschtisch. Zousätzlech gouf en adequaten Stauplatz zur Verfügung gestallt.\n\nBonnevoie ass e Quartier mat ville Kulturen, deen zentral an engem beräich vu Lëtzebuerg läit, wou eng villzäiteg Offre vun Aktivitéiten a Geschäfter ze fannen ass. D’Immobilie spillt sech an engem dynamësche Kontext of, deen eng zougänglech a praktesch Liewensqualitéit ubitt.\n\nEnergiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "1 Schlofzëmmer an 1 Buedzëmmer",
+        "icon": "bed"
+      },
+      {
+        "text": "52 m² hell Wunnfläch",
+        "icon": "square"
+      },
+      {
+        "text": "Südlech ausgeriicht Wunnraum mat natierlechem Liicht",
+        "icon": "sun"
+      },
+      {
+        "text": "Funktionell traditionell Küchenlayout",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Buedzëmmer mat Dusch- an Tubekombinatioun",
+        "icon": "bath"
+      },
+      {
+        "text": "Zousätzleche Stauraum verfügbar",
+        "icon": "archive"
+      },
+      {
+        "text": "Zentral am liichten a multi-kulturellen Bonnevoie",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "CentralBonnevoie",
+      "FunctionalLiving",
+      "BrightApartment"
+    ]
+  }
+}

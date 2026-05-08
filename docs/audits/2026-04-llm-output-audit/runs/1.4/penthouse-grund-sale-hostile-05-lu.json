@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:55:06.096Z",
+  "output": {
+    "title": "Penthouse mat spektakulärer Vue op d'Alzettetal am Historische Grund",
+    "description": "Dëse 175 m² groussen Penthouse läit am charmante Quartier Grund, bekannt fir seng historesch Atmosphär an de pittoreske Kontext am Alzettetal. D'Wunneng ass onerwaart renovéiert a verbënnt modern Komfort mat konkrete sérieux Elementer vum historesche Charakter, wéi eng Mauer aus gebonnenem Steen an e gewëlbten Deck.\n\nAm liewege Wëllraim spillt d'Licht duerch grouss Wiener Optried, déi eng Vue op d'Alzettetal fräiginn. Déi zimmlech ënnerdaacht Kichen ass ausgestatt mat massiv Holzschränke, engem professionellen Edelstahl-Ofdrock a Marmor-Arbechtsplattformen, wat all Kachëlebniffer erneiert.\n\nDéi dräi Schlofzëmmeren, ënner anerem mat engem Dormer-Fënster fir natierlech Beliichtung, an déi zwou Buedzëmmeren bidden eng gemittlech a funktionell Ëmgéigend. D'Terrasse mat Steenplacke gëtt duerch schmiedeneisegelassene Rails begrenzt a bitt eng privat Plaz mat Vue op d'UNESCO-geschützten Alzettetal.\n\nZum Appartement gehéiert e Parking a Lagerraim, an de Lift garantéiert eréischt einfach Zougang. D'Emgéigend vum Grund ass bekannt als historesch, charmant a grenz fir Touriste mat engem liewege Flossrandcharakter.\n\nEnergiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "Vue op d'Alzettetal",
+        "icon": "mountain"
+      },
+      {
+        "text": "Renovéiert mat historesche Wand",
+        "icon": "home"
+      },
+      {
+        "text": "Privat Terrass mat Dallvue",
+        "icon": "sun"
+      },
+      {
+        "text": "Massiv Holzschränke a Marmor Kiche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Dräi Schlofzëmmeren an zwou Buedzëmmeren",
+        "icon": "bed"
+      },
+      {
+        "text": "Parking a Lagerraum",
+        "icon": "car"
+      },
+      {
+        "text": "Zougang per Lift",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "AlzettetalVue",
+      "GrundPenthouse",
+      "HistorischRenovéiert",
+      "PrivateTerrass",
+      "StadVue"
+    ]
+  }
+}

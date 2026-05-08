@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'78 m²', '2-Zimmer', 'Parkplatz', 'Aufzug', 'Balkon' all consistent with inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Includes beds/sqm/balcony/parking/elevator but no price €425,000 mentioned."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Diese ansprechend geschnittene 2-Zimmer-Wohnung mit einer großzügigen Wohnfläche von 78 m²' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard German immo vocabulary like 'Wohnfläche', 'Raumaufteilung', 'Einbauten'."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/Energieklasse mentioned in the German listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Charmante 2-Zimmer-Wohnung mit Balkon und Parkplatz in Esch-sur-Alzette' is 9 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'hervorragende Investition' and 'großzügigen Wohnfläche von 78 m²' (78m² is not großzügig) overstate."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting in the German text."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'unmittelbarer Nähe zur Universität und dem aufstrebenden Belval-Viertel' and 'attraktive Einkaufsmöglichkeiten' are not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR, LU, DE, EN all agree on 78 m², 2 bedrooms, balcony, parking, elevator; minor variation: only LU adds '60er Wunnraum'."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Belval/university proximity invented; 78m² called großzügig."
+}

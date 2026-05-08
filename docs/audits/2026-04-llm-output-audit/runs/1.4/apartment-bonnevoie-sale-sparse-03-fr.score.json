@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'parquet stratifié' is laminate (correct), 52 m², orientation sud, baignoire — all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², Bonnevoie, 1 chambre implicit via title, storage, but price (485000) and bathroom count not stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'cet appartement de 52 m² offre un cadre de vie pratique et lumineux' reads naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Classe énergétique : à communiquer' and 'quartier dynamique' align with LU FR market vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Classe énergétique : à communiquer.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement lumineux d'une chambre avec espace de rangement à Bonnevoie' is 10 words with neighborhood; 5 hashtags CamelCase."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'cadre de vie pratique et lumineux' is restrained; 'belle luminosité' is mild but acceptable."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'secteur multiculturel et vivant' references neighborhood character, not occupant demographics."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'réputé pour son marché local et sa proximité avec la gare centrale' adds 'marché local' and central station proximity not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE/LU all agree on 52 m², 1 bedroom, south-facing, storage, full tub; only minor variation — DE/FR mention central station, EN mentions 'central station', LU does not, but no numeric mismatch."
+    }
+  },
+  "overall_pass": false
+}

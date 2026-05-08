@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'penthouse de 220 m² récemment rénové' and 'quatre chambres' match inputs (220 sqm, renovated, 4 beds)."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions beds/baths/sqm/neighborhood and most features ('Parking privé et ascenseur', 'Espaces de rangement') but omits price."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'agencement lumineux et contemporain dans le quartier résidentiel prisé de Belair' reads naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard luxury vocabulary like 'suite parentale avec dressing' and 'îlot central en marbre de Carrare'."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of CPE or energy class anywhere in the French listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Penthouse rénové 220 m² avec terrasse panoramique et parking en Belair' is well-shaped; 5 CamelCase hashtags like 'PenthouseContemporain TerrassePanoramique'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'quartier résidentiel prisé' and 'prestations soignées' avoid hyperbole, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'conjugue qualité de vie urbaine et prestations soignées' stays neutral."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All specifics ('vue panoramique à 180 degrés', 'marbre de Carrare', 'Gaggenau') are supported by photo_analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN/LU all agree on 220 m², 4 bedrooms, 3 baths (FR/EN/DE explicit; LU mentions 3), Gaggenau, Carrara, 180° south terrace; minor divergence is FR omitting CPE while DE/EN/LU include placeholder."
+    }
+  },
+  "overall_pass": true
+}

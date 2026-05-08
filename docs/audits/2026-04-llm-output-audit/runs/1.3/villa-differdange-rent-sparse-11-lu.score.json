@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'D'Präisserfuerderung vun 3.400 €' frames a rental price as a sale ask, and 'luxuriéiser Immobilie' contradicts the entry-tier rental brief."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions '200 m²', 'véier geräumeg Schlofkummer an zwee praktesch Buedzëmmer' and 3.400 €, but omits Differdange neighborhood entirely."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Phrasing like 'gëtt dëst Haus hir Authentizitéit erhalen an déi rezent Ënnerhalt definitiv geséchert' and 'hohl Holzpaneele' reads awkwardly and ungrammatical in Luxembourgish."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "'D'Villenplaz' and 'begeeschterter Gemeng' are not standard LU luxury-real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/energy class is mentioned anywhere in the listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Elegant 4-Schlofkummer Villa mat Privatem Gaart an Duebelen Garage' is 9 words but lacks neighborhood; 5 CamelCase hashtags present."
+    },
+    "tone_discipline": {
+      "score": 2,
+      "evidence": "'aussergewéinlech Geleeënheet', 'einzigarteg Geleeënheet' and 'luxuriéiser Immobilie' are hyperbolic for an entry-tier rental."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'fir eng grouss Famill oder Gäscht' and 'optimal fir...' references ideal occupant family status."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'aus den 1970er Jore' is supported by photo style, but 'am Häerz vun enger begeeschterter Gemeng' invents location framing not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE, EN, FR, LU all converge on 200 m², four bedrooms, two bathrooms, double garage and stone fireplace; only LU explicitly cites the 3.400 € price while others omit it, a minor mismatch."
+    }
+  },
+  "overall_pass": false
+}

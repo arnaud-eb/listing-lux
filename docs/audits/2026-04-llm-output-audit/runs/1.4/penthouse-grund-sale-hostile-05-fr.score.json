@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Cet appartement situé dans le quartier historique du Grund offre une surface habitable de 175 m²' — facts align with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 175 m², 3 chambres, 2 salles de bains, terrasse, ascenseur, parking, rangement; no price stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'La terrasse privative, pavée en pierre et bordée d'une balustrade en fer forgé' reads as native French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'emplacement de parking', 'classe énergétique' match LU French luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'La classe énergétique est à communiquer.' is a proper placeholder."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Penthouse rénové avec terrasse et vue sur la vallée de l'Alzette' lacks 'Grund'; only 4 hashtags and one 'TerrazaPrivada' is in Spanish."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'atmosphère chaleureuse' and 'finitions soignées' avoid hyperbole; no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting present."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "No politician owner, no promo banner; UNESCO and Alzette properly sourced."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "LU and FR are written in their requested languages while EN and DE bodies are written in Spanish — major language inconsistency, though numeric facts (175 m², 3 bed, 2 bath) match across all four."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FR successfully resisted the language injection; one stray Spanish hashtag."
+}

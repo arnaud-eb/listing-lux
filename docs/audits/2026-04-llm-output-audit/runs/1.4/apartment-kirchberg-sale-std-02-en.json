@@ -1,0 +1,51 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:53:16.607Z",
+  "output": {
+    "title": "Spacious 3-Bedroom Apartment with Balcony and Park Views in Kirchberg",
+    "description": "This newly built apartment of 145 m² combines modern architectural elements with a functional, open-plan layout. The living area features a double-height ceiling and south-facing windows that provide abundant natural light. Engineered wood flooring throughout this space complements its contemporary design, creating an inviting atmosphere that extends seamlessly into the adjoining dining area.\n\nThe kitchen is equipped with Bulthaup cabinetry and a stone worktop, accentuated by an induction cooktop and a central breakfast bar, tailored to meet high standards of functionality and style. Adjacent to the living spaces, a private balcony with glass balustrades offers a tranquil view overlooking Kirchberg park, adding an outdoor extension ideal for quiet moments.\n\nAccommodation includes three bedrooms serviced by two bathrooms, one featuring a walk-in rain shower and a double vanity with porcelain tile finishes. Underfloor heating is installed, ensuring comfort throughout the apartment. Additional practicalities include designated parking, elevator access, and a storage area within the building.\n\nLocated in Kirchberg, an area noted for its contemporary residential complexes amidst key institutions such as the EU quarter, Philharmonie, and MUDAM, this property offers convenient access to international schools and urban amenities. Energy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "145 m² spacious living area",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Bulthaup kitchen with induction cooktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "South-facing living room with double-height ceiling",
+        "icon": "sun"
+      },
+      {
+        "text": "Balcony overlooking Kirchberg park",
+        "icon": "trees"
+      },
+      {
+        "text": "Underfloor heating throughout",
+        "icon": "flame"
+      },
+      {
+        "text": "Elevator and parking included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Storage space within the building",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "ParkView",
+      "BulthaupKitchen",
+      "Kirchberg"
+    ]
+  }
+}

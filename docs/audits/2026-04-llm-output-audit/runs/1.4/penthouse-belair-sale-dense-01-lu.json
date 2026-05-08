@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:53:02.930Z",
+  "output": {
+    "title": "Exzellent renovéiert Penthouse mat 4 Schlofzëmmeren an Terrass zu Belair",
+    "description": "Dëst exzeptionellt Penthouse am Belair Quartier bitt eng ample Raumoptioun mat 220 m² Wunnfläch, déi héich Qualitéit a souwuel Komfort wéi och modernen Design zesummebréngt. Mat véier schéin proportionéierte Schlofzëmmeren an dräi Buedzëmmeren entwéckelt dëst neierweckte Heem eng hell an iwwerdënt Atmosphär dank gréissere Buedem-an-Decken-Fënsteren, déi super Ausbléck iwwer d'Stad erlaben.\n\nAm Zentrum vum Wunnfläch läit e freemen an opene Plang Wunnzëmmer mat engem hëlt modern Ausgesinn. D'Buedemplacke si mat Eichenparkett ausgestatt, mat engem heftigholz-Kamäin an engem integréierte Smart-Home-Beleuchtungssystem, wat Komfort an Stil ënnersträicht. D'Kichen ass an engem minimalistëschen Design, mat exklusiven Gaggenau Apparat an engem Carrara Marmor Zentruminsel mat enger integréierter Wäifruer.\n\nDe Master-Schlofzëmmer profitéiert vun engem privatem Terrassenzougang an engem geréngem Späicherberäich wéi och engem praktesche Walk-in Schaf, duerno verbonnen mat engem ensuite Buedzëmmer. D'Terrass ass souwuel wéi d'éischt klasséiert a bitt eng 180-Grad Vue iwwer d'Stad mat enger südlecher Ausriichtung, ausgestattet mat Composite-Dësch an enger Glassbalustrad, déi e Roum fir Entspanung an Zesummeliewen ubitt.\n\nD'Penthouse ass zousätzlech ausgestatt mat engem Liftzougang, engem private Parking, an engem Extrarumm als Lagerplaz, wat praktesch Aspekte vum Stadswunnkomfort ënnersträicht. Déi ganz Immobilie ass renovéiert a reflektéiert eng héich Norma vun technescher Ausrüstung a Materialwahl trei dem elegante Charakter vun dëser beléifter Résidenz.\n\nEnergiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "220 m² Wunnfläch an 4 Schlofzëmmeren",
+        "icon": "square"
+      },
+      {
+        "text": "Moderniséiert an renovéiert Appartement mat Smart-Home Beleuchtung",
+        "icon": "zap"
+      },
+      {
+        "text": "Kichen mat Gaggenau Apparat an Carrara Marmor Insel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrass mat 180° Stad Vue a südlecher Ausriichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Eichenparkett, Kamäin an oplest privat Terrassenzougank am Master-Schlofzëmmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Liftzougang, privaten Parking an zousätzlech Lagerraum",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Liewensqualitéit am wunnenge Belair Quartier mat vill Gréngs",
+        "icon": "trees"
+      },
+      {
+        "text": "Panoramesch Vue iwwer d’Stad Lëtzebuerg",
+        "icon": "mountain"
+      }
+    ],
+    "hashtags": [
+      "BelairLiving",
+      "CityView",
+      "ModernPenthouse",
+      "RenovatedHome",
+      "LuxResidential"
+    ]
+  }
+}

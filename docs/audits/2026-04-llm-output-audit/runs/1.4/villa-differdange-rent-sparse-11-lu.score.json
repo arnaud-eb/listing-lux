@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'200 m² Fläch mat 4 Schlofzëmmeren' matches inputs; no contradictions but 'Eegen Terrasse mat Ausbléck op de Gaart' is consistent with terrace=true."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 200 m², 4 bedrooms, 2 bathrooms, garden, garage, terrace, storage, but omits price (3400) and bathrooms only mentioned in description, not Differdange neighborhood name."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Awkward phrasing like 'dobbelten Drockgarage', 'Dëbblet Garage fir Paken', 'Gréisser Gaart mat Patiosaach' read as machine-translated."
+    },
+    "market_fit": {
+      "score": 2,
+      "evidence": "'Drockgarage', 'Patiosaach', 'Rasemanner' are not standard Luxembourgish real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energiepass: Klass gëtt nogeräicht.' surfaces a placeholder rather than inventing a class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Gedéngte 4-Schlofzëmmer Villa mat Gaart a Double-Garage an etabléierter Géigend' is appropriate length; 5 CamelCase hashtags 'VintageVilla EtabléiertStil PrivateGaart DëbbletGarage Steenchemin'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbolic words like 'breathtaking'; phrases such as 'charméiert' are restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics; 'Déi etabléiert Plaz bitt eng roueg Ëmfeld' is neutral."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All facts (200 m², stone fireplace, double garage, mature trees, patio) are grounded in inputs/photo analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages (LU, DE, EN, FR) agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, fireplace, terrace; FR adds 'clôturé' and DE adds 'Außenstellplätze' as minor extras."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Luxembourgish vocabulary feels invented in places."
+}

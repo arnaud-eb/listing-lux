@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Title says \"Parkplaz\" (parking space) but description says \"Vue op de Park\"; slight mismatch in title vs. description."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 145 m², 3 Schlofzëmmeren, 2 Buedzëmmeren, Balkong, Lift, Parkplaz, Späicherraum."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "\"Ingeniéis-Holzpafflécker\" and \"De stilvollen Apel an d'Urban Ambient\" are awkward, partly invented Luxembourgish."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "\"Bulthaup-Eenheet\" and \"Reendusch\" attempt to fit market vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "\"Energiepass: Klass gëtt nogeräicht.\" placeholder surfaced."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "5 hashtags CamelCase: \"KirchbergLiving ModernDesign BulthaupKichen ParkVue NewBuild\"."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"eng agreabel a roueg Atmosphär\" — restrained, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "\"staark isoléiertem Architekturstil\" in highlights is not supported by inputs (no insulation data provided)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE/EN/LU agree on numerics, but FR introduces \"suite parentale\" and \"parquet en bois massif\" not present in other languages or inputs; LU title's \"Parkplaz\" is ambiguous vs. EN/DE/FR's clear park view."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Title \"Parkplaz\" is ambiguous — could mean parking space rather than park view."
+}

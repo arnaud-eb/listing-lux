@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'52 m² one-bedroom apartment' matches inputs; storage and bathroom features align."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Covers sqm, bedrooms, neighborhood, storage; price (€485,000) is not mentioned."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Nestled in the heart of Bonnevoie, this charming 52 m² one-bedroom apartment' reads naturally."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'discerning buyers seeking an affordable yet vibrant urban lifestyle' is generic luxury-lite phrasing."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE/energy class reference anywhere."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Bright South-Facing 1-Bedroom Apartment in Lively Bonnevoie Neighborhood' is 10 words with neighborhood + adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 2,
+      "evidence": "'exceptional opportunity', 'unparalleled access', 'culinary haven', 'immense potential' overclaim for an entry-tier flat."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'making it ideal for young professionals seeking a vibrant community' targets by age/status."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'bustling Bonnevoie market', 'efficient connections to the nearby station', 'unparalleled access to central Luxembourg City' are not supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR/EN/DE omit price entirely while LU introduces a fabricated '€9.300 pro m²'; FR/EN explicitly target 'jeunes professionnels'/'young professionals' while DE says 'junge Berufstätige oder Singles' and LU does not — feature mentions broadly align but numeric/audience treatment diverges."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Hyperbolic and unsupported neighborhood claims."
+}

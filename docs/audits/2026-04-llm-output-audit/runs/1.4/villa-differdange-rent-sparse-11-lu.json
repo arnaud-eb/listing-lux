@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:57:14.670Z",
+  "output": {
+    "title": "Gedéngte 4-Schlofzëmmer Villa mat Gaart a Double-Garage an etabléierter Géigend",
+    "description": "Dës gedéngt Wunnvilla aus den 1970er Joren bitt eng Fläch vun 200 m² a besteet aus véier Schlofzëmmeren an zwou Buedzëmmeren. D'Gebai ass aus Steen gebaut a weist déi charakteristesch Architekturstil vun der Zäit, mat engem dobbelten Drockgarage an engem gréisseren Virausgrond.\n\nAm bannenzege Raum charméiert de Wunnzëmmer mat holzvertäfelter Bannegestaltung an enger authentischer Steenchemin, déi eng gezellig Atmosphär schaaft. Grous Fensteren bidden direkten Ausbléck op de private Gaart, deen mat engem groussen, natuerräichen Plaz mat reife Beem ausgestatt ass.\n\nBegeeschtert gëtt och vum Gaart, deen mat engem opgehuewene Patio mat engem groussen Rasemanner genossbar ass. Déi etabléiert Plaz bitt eng roueg Ëmfeld ënnerdréckt an hält Privatsphär garantéiert.\n\nWeiderhi steet ee prakteschen Dépôtraum zur Verfügung, wat d'Organisatioun am Haus festegt. D'Immobilie läit an enger etabléierter Wunngegend ouni spezifesch Detailer iwwer lokal Infrastruktur.\n\nEnergiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "200 m² Fläch mat 4 Schlofzëmmeren",
+        "icon": "square"
+      },
+      {
+        "text": "Dëst Gebai aus den 1970er Joren",
+        "icon": "building-2"
+      },
+      {
+        "text": "Original Steenchemin am Wunnzëmmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Dëbblet Garage fir Paken",
+        "icon": "car"
+      },
+      {
+        "text": "Gréisser Gaart mat Patiosaach",
+        "icon": "trees"
+      },
+      {
+        "text": "Prakteschen Dépôtraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Eegen Terrasse mat Ausbléck op de Gaart",
+        "icon": "sun"
+      }
+    ],
+    "hashtags": [
+      "VintageVilla",
+      "EtabléiertStil",
+      "PrivateGaart",
+      "DëbbletGarage",
+      "Steenchemin"
+    ]
+  }
+}

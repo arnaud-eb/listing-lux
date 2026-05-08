@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'180 m² Wunnfläch', '3 Schlofzëmmeren, 2 Buedzëmmeren' match inputs; minor odd phrasing 'Geschäfts- a Geschäfterzentrum' but no factual contradiction."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 180 m², 3 bedrooms, 2 bathrooms, Cloche d'Or, parking, lift, storage, terrace, but omits the price of 2,100,000 €."
+    },
+    "native_quality": {
+      "score": 2,
+      "evidence": "Awkward constructions like 'Geschäfts- a Geschäfterzentrum', 'eng ëmgeriicht Terrasse', 'qualitatvoll Stadwunnegkeet ze erfannen' read non-native."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'Duplex-Wunneng', 'Panoramaviws', 'Master-Suite' but mixes English ('Fully equipéiert') and odd terms like 'Heelpräis'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Déi aktuell Energieklass vum Appartement gëtt nach nogeräicht.' surfaces a placeholder rather than inventing a class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Moderne Duplex-Wunneng mat 3 Schlofzëmmer a Panoramaviws am Cloche d'Or Quartier' is within range; 5 CamelCase hashtags 'ModernLiving DuplexDesign ParkView ClocheDOr CityTerrace'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbolic terms like 'breathtaking' or 'must-see' present."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographic groups, family status or occupants."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'Vue op den niwwege Park' and 'Geschäfts- a Geschäfterzentrum' are supported, but 'presentabel Infrastruktur' and 'Dieren zu Verkéiersverbindungen' are vague yet not specific transit claims."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All four languages agree on 180 m², 3 bedrooms, 2 bathrooms, Cloche d'Or, parking, lift, storage, terrace; minor flooring discrepancy between FR ('chêne massif') and DE ('Eichenparkett')/EN."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Luxembourgish reads partly machine-translated."
+}

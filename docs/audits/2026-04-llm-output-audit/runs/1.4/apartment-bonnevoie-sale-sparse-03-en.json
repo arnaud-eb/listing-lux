@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:15.240Z",
+  "output": {
+    "title": "South-Facing One-Bedroom Apartment with Storage in Bonnevoie",
+    "description": "This 52 m² apartment offers a practical living space in the central neighborhood of Bonnevoie. The living room features a bright south-facing window that provides ample natural light, complemented by laminate flooring and neutral white walls, creating a clean and welcoming atmosphere.\n\nThe kitchen is arranged in a compact galley layout with white cabinetry and ceramic tile flooring. Though traditional in style, it presents a functional space suitable for everyday meal preparation.\n\nThe bathroom is well-maintained and includes a full-size tub with a shower, finished with white tiles and equipped with a single vanity. This unit also includes a dedicated storage area, an advantageous feature in the urban setting.\n\nLocated in a lively and multicultural district known for its diverse dining options and popular market, this apartment is close to convenient transit connections including the central station. Bonnevoie offers a vibrant environment with more affordable pricing compared to other central areas.\n\nEnergy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "Bright south-facing living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact functional kitchen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Full-size bathtub with shower combo",
+        "icon": "bath"
+      },
+      {
+        "text": "Laminate flooring in living area",
+        "icon": "square"
+      },
+      {
+        "text": "Dedicated storage space",
+        "icon": "archive"
+      },
+      {
+        "text": "Located in Bonnevoie neighborhood",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SouthFacing",
+      "CompactLiving",
+      "Bonnevoie",
+      "UrbanStorage",
+      "FunctionalKitchen"
+    ]
+  }
+}

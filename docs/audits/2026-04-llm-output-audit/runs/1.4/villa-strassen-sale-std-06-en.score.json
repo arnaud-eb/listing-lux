@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'280 m² of living space', 'five bedrooms and three bathrooms' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/baths/sqm/neighborhood and most features; price not mentioned."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as native English: 'facilitating indoor-outdoor living'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard luxury phrasing 'detached villa', 'energy passport'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energy passport: class to be confirmed.' surfaces a placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovated 5-Bedroom Villa with Mature Garden and Parking in Strassen' is 11 words with neighborhood; 5 CamelCase hashtags, no generic duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbole; e.g. 'designed for both functionality and sociable gatherings'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; 'quiet suburban setting' is neutral."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All claims (SW exposure, slate roof, double oven) supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR/LU all agree on 280 m², 5 bedrooms, 3 bathrooms, SW exposure, parking; LU adds unsupported 'Alzettetal' location and FR adds unsupported 'chêne', minor divergences."
+    }
+  },
+  "overall_pass": true
+}

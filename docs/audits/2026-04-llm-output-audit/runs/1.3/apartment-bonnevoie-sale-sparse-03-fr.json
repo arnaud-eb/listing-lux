@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:25:24.868Z",
+  "output": {
+    "title": "Appartement lumineux 1 chambre idéalement situé à Bonnevoie",
+    "description": "Découvrez ce charmant appartement d'une surface de 52 m², parfaitement agencé pour offrir confort et fonctionnalité au cœur du quartier dynamique de Bonnevoie. Cet espace de vie lumineux bénéficie d'une orientation sud, baignant le salon d'une lumière naturelle apaisante accentuée par un parquet stratifié de qualité et des murs blancs immaculés, créant une atmosphère claire et accueillante.\n\nLa cuisine, bien que traditionnelle, présente un agencement en couloir pratique et fonctionnel, équipée de placards blancs et d’un carrelage en céramique facile d'entretien, idéale pour y exprimer votre créativité culinaire au quotidien. La salle de bains complète se compose d'une baignoire-douche, d’un carrelage blanc et d’un meuble vasque simple, alliant commodité et sobriété.\n\nL'appartement inclut également un espace de rangement privatif, un atout rare très recherché, offrant une solution optimale pour organiser vos effets personnels. Implanté dans le quartier multiculturel de Bonnevoie, à deux pas de la gare centrale, ce bien bénéficie d’un emplacement central vivant, proche du célèbre marché local et d’une variété d’options gastronomiques.\n\nCe pied-à-terre ou premier achat représente une opportunité intéressante dans un secteur où les prix restent abordables tout en profitant d’une accessibilité urbaine remarquable. Bonnevoie séduit les jeunes professionnels à la recherche d’un cadre de vie chaleureux, animé et bien desservi.\n",
+    "highlights": [
+      {
+        "text": "Appartement lumineux avec orientation sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Espace de rangement privatif inclus",
+        "icon": "shield"
+      },
+      {
+        "text": "Salon spacieux avec parquet stratifié",
+        "icon": "sofa"
+      },
+      {
+        "text": "Cuisine fonctionnelle à agencement optimisé",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains équipée d’une baignoire-douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Proximité immédiate de la gare centrale",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Quartier multiculturel et vivant",
+        "icon": "trees"
+      },
+      {
+        "text": "Marché local et scene gastronomique dynamique",
+        "icon": "zap"
+      }
+    ],
+    "hashtags": [
+      "BonnevoieChic",
+      "Lumineux",
+      "RangementInclus",
+      "VieUrbaine",
+      "InvestissementIntelligent"
+    ]
+  }
+}

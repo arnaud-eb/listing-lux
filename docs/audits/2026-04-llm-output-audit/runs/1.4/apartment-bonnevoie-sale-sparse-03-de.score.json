@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'52 m² großes Apartment', 'südseitigen Ausrichtung', 'vollständige Badewanne mit Duschmöglichkeit' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Highlights list '1 Schlafzimmer', '1 Badezimmer', '52 m² Wohnfläche'; price omitted."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Dieses 52 m² große Apartment befindet sich in einem lebhaften Abschnitt von Bonnevoie' reads native German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht' is appropriate LU/DE phrasing."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht.' surfaces placeholder."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helles 1-Zimmer Apartment mit Süd-Ausrichtung in Bonnevoie' is 8 words with neighborhood; 5 hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'bietet eine helle Wohnatmosphäre' is measured; no exclamation marks or hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'internationale Vielfalt' references area character, not occupant demographic."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'Nähe zum Hauptbahnhof' is plausible for Bonnevoie but not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE/LU all agree on 52 m², 1 bedroom, south-facing, storage, full tub; only minor variation — DE/FR mention central station, EN mentions 'central station', LU does not, but no numeric mismatch."
+    }
+  },
+  "overall_pass": false
+}

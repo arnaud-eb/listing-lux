@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:13.849Z",
+  "output": {
+    "title": "Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette",
+    "description": "This 78 m² apartment in Esch-sur-Alzette comprises two bedrooms and one bathroom, offering a practical living space within a well-maintained building with elevator access. The living room presents a neutral palette with beige walls and laminate flooring, opening onto a modest balcony that extends the living area outdoors.\n\nThe kitchen is arranged in an L-shaped layout featuring white cabinetry and accommodates a small dining table, providing a functional space for everyday meals. Both the living room and kitchen benefit from the apartment's simple and light interior.\n\nA parking space is included with the property, adding convenience for residents. Located in Luxembourg's second-largest city, the apartment offers access to a growing and culturally dynamic area that includes the local university and the Belval district.\n\nEnergy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "78 m² of living space",
+        "icon": "square"
+      },
+      {
+        "text": "Two bedrooms and one bathroom",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcony accessible from living room",
+        "icon": "sun"
+      },
+      {
+        "text": "L-shaped kitchen with dining area",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Elevator in building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Includes parking space",
+        "icon": "car"
+      },
+      {
+        "text": "Located in Esch-sur-Alzette, near university and Belval",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "CityLiving",
+      "BalconyAccess",
+      "EschSurAlzette",
+      "FunctionalLayout",
+      "ElevatorApartment"
+    ]
+  }
+}

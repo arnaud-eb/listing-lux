@@ -1,0 +1,44 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:28:58.032Z",
+  "output": {
+    "title": "Charmant Familljenhaus mat privatem Gaart an zentraler Lag",
+    "description": "Dës attraktiv Familljenhaus aus den 1980er Joer läit an enger roueger, wonnerbar gepflegter Résidence am Häerz vun der Gemeng. Mat engem neutralen, klassesche Fassadestil an engem klenge virun Gaart gëtt dës Reihenaus ënnersträicht d'Liewensqualitéit an eng familiär Atmosphär am schnellewäertege Beräich.\n\nOp 130 m² bitt d'Immo funktionell Wunnraim mat dräi schënne Schlofkummeren an engem propperen Bad, déi eng exzellent Ausgangsplaz fir individuell Renovatioun sinn. De liewensfroen Wunnzëmmer mat Beige Teppich, Plaz fir traditionell Fernseh an direkte Patio-Dieren op de Gaart erméiglecht eng komfortabel, hell Ambiance mat schéinem Bléck an d'Gréng.\n\nBesonnesch punktéiert d'Wunneng duerch hire private Réckgaart mat engem gepflegte Gréngefeld, engem sécheren Holzläffel als Lagerplaz an engem Zousazparkplang fir bequem Parkéierung. Dëst Paradäis am Gaart bitt fräi Plaz fir Relaxatioun oder frëndschaftlech Versammlungen an deem entspannten Ëmfeld.\n\nDës exklusiv Méiglechkeet ass ideal fir Famillje oder Leit, déi eng präsenz an engem rouegen, awer gutt verbonne Quartier sichen, mat Potenzial fir hir eege exklusiv Stëmm an dësem bestoendenen Heem ze setzen. Kontaktéiert eis fir eng Visite – eng permanent Wunnadress mat engem agreablen Liewensstil erwaart Iech hei.",
+    "highlights": [
+      {
+        "text": "Roueg an zentrals Lag an etabléierter Résidence",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Privater a gutt gepflegte Réckgaart mat Lager",
+        "icon": "trees"
+      },
+      {
+        "text": "Drei praktesch Schlofkummeren a klassescht Wunnzëmmer",
+        "icon": "sofa"
+      },
+      {
+        "text": "Parkplazen fir Är privat Gefierer",
+        "icon": "car"
+      },
+      {
+        "text": "Zousätzlech Lagerraum am Gaart (Schäin)",
+        "icon": "storage"
+      },
+      {
+        "text": "Gemittlech Patio Dieren mat direkt Zougang zum Gaart",
+        "icon": "sun"
+      }
+    ],
+    "hashtags": [
+      "PrivateGarden",
+      "FamilyLiving",
+      "ClassicResidence",
+      "QuietLocation",
+      "StorageShed"
+    ]
+  }
+}

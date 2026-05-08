@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.4",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Wohnfläche von 280 m²' and 'fünf Schlafzimmer' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 280 m², 5 bedrooms, 3 bathrooms, garden, terrace, parking, storage, fireplace, kitchen — but price (1,950,000 €) is not stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads naturally in German, e.g. 'Die Küche wurde mit einer zentralen Kochinsel...ausgestattet'; minor lowercase typo 'Das objekt'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU real-estate vocabulary like 'Energieausweis', 'Wohnfläche', 'Parkettböden'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "'Energieausweis: Klasse wird nachgereicht.' surfaces a placeholder rather than inventing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Terrasse in Strassen' is 9 words with neighborhood and adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrasing like 'gepflegte Villa' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; 'Wohnsiedlung' and neutral descriptors only."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All facts (280 m², SW exposure, slate roof, fireplace) are supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR/LU all agree on 280 m², 5 bedrooms, 3 bathrooms, SW exposure, parking; LU adds unsupported 'Alzettetal' location and FR adds unsupported 'chêne', minor divergences."
+    }
+  },
+  "overall_pass": true
+}

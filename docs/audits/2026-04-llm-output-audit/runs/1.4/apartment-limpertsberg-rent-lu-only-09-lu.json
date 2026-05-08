@@ -1,0 +1,47 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-lu-only-09",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:26.436Z",
+  "output": {
+    "title": "Renovéiert 2-Zëmmeren Wunnengen mat Balkon am Limpertsberg",
+    "description": "Dës renovéiert 2-Zëmmeren Wunnengen am éischte Stack bitt eng Fläch vun 95 m² an ass komplett mobiléiert. Den Openthalt ass lichtduerchfloss an ass am modernen skandinavesche Stil ausgestatt, mat engem entwéckelte Holzparkett, dee eng waarm Atmosphär schaaft. Déi geschmackvoll Mobilliarioun an d'Décor entwéckelen eng agreabel Ambiance, fir direkt ze wunnen.\n\nD'Kichen ass funktionell an huet eng modern Optik mat komplette Geriichter. Si ass mat engem Induktioun-Kachfeld, enger Geschirrspüler an engem klenge Iessberäich ausgestatt, déi all Komfort fir d'Zoubereedung vu Mëttegiessen ubidden. D'Schlofzëmmer bitt eng roueg Plaz mat engem Queensize Bett, engem Schaf an Verdunklungsblindungen, déi d'Privatsphär an eng gutt Ruheméiglechkeet ënnersträichen.\n\nDe Balkon ass no un der Stad, no zum Norden ausgeriicht an ass mat engem Flieseplang ofgeschloss. Hie bitt frësch Loft an eng Ännerung vum Dagbuedem an enger urbaner Ëmgéigend. D'Wunnengen läit am Quartier Limpertsberg, bekannt fir seng universitär Atmosphär, kulturell Offeren a schéi Parks. Den Appartementsgebai huet en Elevator an en Depotraum, wat weider Komfort ubitt.\n\nD'Immobilie ass rafinéiert renovéiert an ass präzis fir eng perséinlech Liewensqualitéit entwéckelt. D'Lag am nohaltege Quartier Limpertsberg erméiglecht den Zougang zu villen kulturellen Aktivitéiten an natierleche Gréngraim. Energiepass: Klass gëtt nogeräicht.",
+    "highlights": [
+      {
+        "text": "95 m² Wunnfläch",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlofzëmmeren, 1 Buedzëmmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Renovéiert an mobiléiert Appartement",
+        "icon": "home"
+      },
+      {
+        "text": "Balkon no Norden ausgeriicht",
+        "icon": "sun"
+      },
+      {
+        "text": "Elevator am Gebai",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Depotraum verfügbar",
+        "icon": "archive"
+      },
+      {
+        "text": "Funktionell modern Kichen mat Induktioun",
+        "icon": "cooking-pot"
+      }
+    ],
+    "hashtags": [
+      "RenovéiertAppartement",
+      "LimpertsbergLiewen",
+      "SkandinaveschenDesign",
+      "Balkon"
+    ]
+  }
+}

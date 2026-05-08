@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:54:49.016Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas al valle de la Alzette en Grund",
+    "description": "Este penthouse de 175 m² combina elementos históricos con una renovación contemporánea, ubicado en el pintoresco barrio de Grund, en el valle de la Alzette. La vivienda presenta una sala de estar con techo abovedado y pared de piedra vista que aportan carácter, además de grandes ventanales que permiten disfrutar de vistas despejadas al valle.\n\nLa cocina, que integra mobiliario de madera maciza y encimera de mármol, está equipada con una placa profesional de acero inoxidable. Tres dormitorios ofrecen ambientes acogedores, con suelos de madera natural y detalles como vigas vistas y ventanas abuhardilladas que aportan atmósfera.\n\nComplementa la propiedad una terraza privada pavimentada en piedra y con barandilla de hierro forjado, que domina el paisaje del valle en un entorno declarado Patrimonio de la Humanidad por la UNESCO. El edificio cuenta con ascensor, plaza de aparcamiento y espacio de almacenamiento. Energía: clase será comunicada próximamente.",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "3 dormitorios con vigas vistas",
+        "icon": "bed"
+      },
+      {
+        "text": "2 baños completos",
+        "icon": "bath"
+      },
+      {
+        "text": "Terraza privada con vistas al valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Espacio de almacenamiento disponible",
+        "icon": "archive"
+      },
+      {
+        "text": "Vistas panorámicas al valle de la Alzette desde el salón",
+        "icon": "mountain"
+      }
+    ],
+    "hashtags": [
+      "GrundHistoric",
+      "ValleAlzette",
+      "TerrazaPrivada",
+      "Rehabilitación",
+      "VistasPanorámicas"
+    ]
+  }
+}

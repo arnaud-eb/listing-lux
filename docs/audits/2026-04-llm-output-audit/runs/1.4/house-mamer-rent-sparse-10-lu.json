@@ -1,0 +1,42 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "lu",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:56:52.734Z",
+  "output": {
+    "title": "Renovéierten 3-Zëmmeren Maisonette mat Gaart an Parking",
+    "description": "Dës Reihaus aus den 1980er Joren bitt eng Fläch vu ronn 130 m², déi sech gutt afänkt fir eng Ëmgestaltung no individuelle Virléiften. D'Frontfassad ass neutral gehale ginn an engem rouegen rezidentiellen Quartier agebonnen.\n\nAm Wunnberäich fënnt een e eenzegen, praktesch geschniddene Raum mat alen, awer gesond Bestoenheeten. D'Liicht kënnt duerch d'Patio-Dieren an, déi op de privaten Gaart ginn, deen eng gréng Ümfeld mat enger einfacher Rasenfläch an engem hölzerne Fräsheet besteet. Eng enk Stockagehütt ergänzt d'Plaz fir praktesch Opbewahrung.\n\nMat dräi Schlofzëmmeren an engem Buedzëmmer gëtt abwechslungsräiche Wunnraum fir verschidde Bedierfnesser gebueden. D'Immo ass ausgestatt mat enger Parkméiglechkeet fir Ären Komfort. Energiepass: Klass gëtt nogeräicht.\n\nD'Immobilie ass fir jidderee mat engem Optrag derbäi, déi roueg a villäicht natierlech Atmosphär vun engem klassesche Wunnquartier ze genéissen. De private Gaart gouf ëmfaassend erhalen an ass e klore Benefit dës Immobilie, wat op eng reservéiert, funktionell Aart ofschléisst.",
+    "highlights": [
+      {
+        "text": "Drei Schlofkëmmeren",
+        "icon": "bed"
+      },
+      {
+        "text": "Een Buedzëmmer",
+        "icon": "bath"
+      },
+      {
+        "text": "130 m² Wunnfläch",
+        "icon": "square"
+      },
+      {
+        "text": "Gaart mat Rasen an hëlzerno Fence",
+        "icon": "trees"
+      },
+      {
+        "text": "Privat Stockagehütt am Gaart",
+        "icon": "archive"
+      },
+      {
+        "text": "Parking-Plaz abegraff",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "Renovatiounspotenzial",
+      "PrivatGart",
+      "Reihaus"
+    ]
+  }
+}

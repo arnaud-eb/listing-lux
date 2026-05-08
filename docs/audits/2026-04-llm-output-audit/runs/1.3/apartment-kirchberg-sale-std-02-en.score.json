@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Two meticulously appointed bathrooms' matches input; all features align with inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions '145 m² three-bedroom apartment' and neighborhood, but omits the price of €1,650,000."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'epitomizes modern urban living within Luxembourg's renowned EU quarter' reads naturally in English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate luxury vocabulary like 'Bulthaup cabinetry', 'spa-inspired ensuite', 'Philharmonie and MUDAM'."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No mention of CPE or energy class anywhere in the listing."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Contemporary 3-Bedroom Apartment with Panoramic Kirchberg Park Views' is 9 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "Uses 'exquisite' and 'exceptional appeal' which border on hyperbole, though no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'exceptional appeal to expatriates and professionals' references occupant demographics/national origin."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'landmarks such as the Philharmonie and MUDAM, and close to reputable international schools' — these specific landmarks and schools are not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN, DE, FR all reference 145 m², 3 bedrooms, Bulthaup, balcony, parking; LU omits explicit 145 m² and introduces 'ënnerierdesch Waasserheizung' instead of underfloor heating, creating a minor feature inconsistency."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Fair housing concern with 'expatriates' targeting and unsupported landmark claims."
+}

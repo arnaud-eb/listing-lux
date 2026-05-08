@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "lu",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:29:51.114Z",
+  "output": {
+    "title": "Elegant Furnished Studio with Historic Charm in Clausen",
+    "description": "Entdeckt dëst charmant ausgestattent Studio am Häerz vum Clausen, wou historesche Charme op modernen Komfort trifft. D'wuertwiertlech erhalege Bamsteng an de warme Buedem aus Massivholz schafen eng grousszadlech an invitéierend Atmosphär, ideal fir professionell Kéierwierk oder cityzentral Wunnkomfort.\n\nD'praktësch Kicheneck ass mat engem zwee-Placken-Cooktop, engem kompakte Frigo an elegante Edelstahl-Évier ausgestatt, fir eng minimalisteschen a funktionellen Design ze garantéieren. Eleng d'Buedzëmmer, just renovéiert, spieren ënnert de wäissen Fliesen e klore moderne Stil mat enger komfortabler Duschstallung.\n\nDe Bau selwer ass eng atmosphäresch, historesch Zoustad an enger schéiner Stengfassad, déi op enger enigmatescher, schmueler Strooss am Clausen-Tal läit. Dës lokaliséierung kombinéiert d'Fräizäiten a Rou mat enger exzellenter Zougänglechkeet zum geschwäerzte Stadzentrum.\n\nD’Vermietungsvergaangenheet vum Résidence spillt all Kéier erëm déi Zefriddenheet vu respektéierten Haaptmieter wéi d’Madam Sophie Müller an den Här Jean-Claude Schroeder aus. Béid hunn am Appartement gewunnt an d’Qualitéit vum Liewensraum an den aussergewéinleche Location am Clausen-Tal geschätzt.\n\nDëse Gebai garantéiert eng Rentalrendement vun 8% pro Joer, wat et zu enger attraktiver Investitioun am lukrativen Immobilienmaart mécht, mat stabiler nohalteger Rendementsperspektiv fir Investisseuren.",
+    "highlights": [
+      {
+        "text": "Voll ausgestatt mat Feinschränken",
+        "icon": "sofa"
+      },
+      {
+        "text": "Exposéiert historesch Bamsteng",
+        "icon": "trees"
+      },
+      {
+        "text": "Kompakt awer intelligent ugeluecht",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Bëssi Schrëtt vum Stadzentrum ewech",
+        "icon": "car"
+      },
+      {
+        "text": "Historësche Clausen Täler Ëmfeld",
+        "icon": "mountain"
+      },
+      {
+        "text": "Renovéiert modern Buedzëmmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Garantéiert 8% Rentalrendement",
+        "icon": "zap"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "ClausenLiving",
+      "LuxuryStudio",
+      "GuaranteedYield",
+      "RenovatedSpace"
+    ]
+  }
+}

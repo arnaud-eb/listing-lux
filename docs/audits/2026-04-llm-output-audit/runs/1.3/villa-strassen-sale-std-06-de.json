@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:26:54.767Z",
+  "output": {
+    "title": "Exquisite 5-Zimmer-Villa mit großzügigem Garten und erstklassiger Lage in Strassen",
+    "description": "Diese elegante, zweigeschossige Villa im traditionellen luxemburgischen Stil wurde umfassend renoviert und überzeugt durch ihr lichtdurchflutetes, familienfreundliches Ambiente auf 280 m² Wohnfläche. Das großzügige Wohnzimmer empfängt Sie mit hohen Decken, einem behaglichen Holzofen und direktem Zugang zur gepflegten Gartenanlage – ideal für gesellige Stunden und entspannte Tage im Grünen.\n\nDie hochwertige Küche präsentiert sich in warmem Shaker-Design mit granitverkleideten Arbeitsflächen, einem zentralen Inselblock mit Sitzgelegenheit sowie modernen Doppelöfen. Hier verbindet sich Ästhetik mit Funktionalität für kulinarische Höhepunkte und gemeinsame Momente.\n\nDas Anwesen bietet fünf großzügige Schlafzimmer mit dezentem Luxus, viel Stauraum und beruhigenden Ausblicken auf den idyllischen Garten. Die drei stilvoll gestalteten Badezimmer erfüllen höchste Ansprüche an Komfort und Design.\n\nDer etablierte Garten in südwestlicher Ausrichtung begeistert mit reifem Baumbestand, einer gepflegten Rasenfläche und einem gemütlichen, steinernen Patio, der Privatsphäre und Ruhe garantiert. Ergänzt wird das Ensemble durch zusätzliche Annehmlichkeiten wie eine praktische Garage und einen separaten Abstellraum.\n\nDie Lage in Strassen besticht durch ihren dörflichen Charakter in unmittelbarer Stadtnähe, exzellente Schulen und eine hervorragende Autobahnanbindung – ein idealer Lebensmittelpunkt für anspruchsvolle Familien, die Komfort und Lebensqualität schätzen.",
+    "highlights": [
+      {
+        "text": "Geräumige 5 Schlafzimmer mit Gartenblick",
+        "icon": "home"
+      },
+      {
+        "text": "Renoviertes Wohn- und Esszimmer mit Kamin",
+        "icon": "fire"
+      },
+      {
+        "text": "Hochwertige Küche mit zentraler Insel und Doppelofen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Privater, sonniger Garten mit reifem Baumbestand",
+        "icon": "trees"
+      },
+      {
+        "text": "Südwestlich ausgerichtete Terrasse für sonnige Stunden",
+        "icon": "sun"
+      },
+      {
+        "text": "Abstellraum und Parkmöglichkeiten inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Ruhige, familienfreundliche Wohnlage nahe guter Schulen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "FamilienOase",
+      "TraditionellerLuxus",
+      "Gartenparadies",
+      "RenovierteVilla",
+      "StrassenLeben"
+    ]
+  }
+}

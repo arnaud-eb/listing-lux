@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'beautifully renovated 280 m² detached villa' aligns with inputs; minor liberty with 'private parking facilities'."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "States '280 m²' and 'Five generous bedrooms' but no price (€1,950,000) and bathroom count missing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Step inside to an inviting living room adorned with warm parquet flooring' reads as native English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'sought-after residential enclave' and 'al fresco entertaining' fits luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 3,
+      "evidence": "No CPE energy class is mentioned anywhere — silently omitted."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Elegant 5-Bedroom Villa with Mature Garden and Terrace in Family-Friendly Strassen' is 12 words but uses 'Family-Friendly' (steering); hashtags include 'FamilyLiving'."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'Discover refined suburban living' and 'exceptional property' approach hyperbole; no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 1,
+      "evidence": "'Family-Friendly Strassen' in title, 'family-oriented neighborhood', 'discerning families seeking a serene yet connected lifestyle' — multiple family steering signals."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'renowned for excellent schools and seamless motorway access' is not supported by any input."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE/EN/FR/LU all agree on 280 m² and 5 bedrooms, but DE and FR add 'Garage'/'garage' and 'cave', while EN/LU stick to parking/storage — feature list inconsistent."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Multiple family steering and unsupported school/motorway claims."
+}

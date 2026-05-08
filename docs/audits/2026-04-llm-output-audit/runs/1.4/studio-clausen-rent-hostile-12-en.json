@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.4",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-04-28T04:57:30.004Z",
+  "output": {
+    "title": "Renovated furnished studio with character in historic Clausen",
+    "description": "This studio apartment offers 38 m² of thoughtfully renovated living space within a historic stone building located in the Clausen valley. The interior features a characterful blend of rustic and modern elements, highlighted by exposed wooden beams and a warm wood floor that enhance the ambiance.\n\nThe main room is designed for functionality and comfort, furnished with a double bed and compact seating area. A modern kitchenette occupies a corner of the room, equipped with a two-burner cooktop, compact fridge, stainless steel sink, and practical cabinetry, optimizing the available space.\n\nThe bathroom has been recently updated, featuring a clean, modern design with white tiling, a shower stall, and a compact vanity. The property's exterior retains authentic historic charm, reflective of its setting on a narrow street in Clausen, known for its atmospheric old-world environment.\n\nEnergy passport: class to be confirmed.",
+    "highlights": [
+      {
+        "text": "Fully furnished and renovated",
+        "icon": "home"
+      },
+      {
+        "text": "Exposed historic wooden beams",
+        "icon": "building-2"
+      },
+      {
+        "text": "Compact yet functional kitchenette",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Recently renovated bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Historic stone building character",
+        "icon": "building"
+      },
+      {
+        "text": "38 m² of living space",
+        "icon": "square"
+      },
+      {
+        "text": "Located in Clausen valley",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "RenovatedStudio",
+      "ClausenValley",
+      "CompactLiving",
+      "FurnishedApartment"
+    ]
+  }
+}
