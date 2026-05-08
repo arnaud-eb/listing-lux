@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Diese 52 m² große Apartmentwohnung' and 'Ein separater Kellerraum' align with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, 1-Zimmer (title), south orientation, kitchen, bathroom with tub, cellar, Bonnevoie."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'überzeugt durch eine durchdachte Grundrissgestaltung' reads natively, though 'Apartmentwohnung' is slightly redundant."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'gewachsenen Wohnviertel', 'Anbindung an den Hauptbahnhof', 'Kellerraum' fit LU/DE listing register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced — correctly omitted."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helles 1-Zimmer-Apartment mit Süd-Ausrichtung und separatem Keller in Bonnevoie' is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'Sie ist als kompakte, praktische Kochzeile ausgeführt' — sober, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'urbane Atmosphäre mit multikulturellem Umfeld' describes area not occupants."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'vielfältige gastronomische Szene sowie einen belebten Markt' — market and dining not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/EN/DE all agree on 52 m², 1 bedroom, south-facing window, galley kitchen, shower-tub combo, cellar, Bonnevoie central location."
+    }
+  },
+  "overall_pass": false
+}

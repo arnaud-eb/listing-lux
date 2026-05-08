@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:52.821Z",
+  "output": {
+    "title": "Duplex lumineux de 180 m² avec terrasse panoramique au cœur de Cloche d'Or",
+    "description": "Ce duplex récent de 180 m² s'inscrit dans un immeuble neuf du quartier dynamique de Cloche d'Or, reconnu pour ses infrastructures modernes et son accès direct à un vaste centre commercial et plusieurs parcs. Conçu avec un souci d'espace et de luminosité, il propose un séjour à double hauteur baigné de lumière naturelle grâce à de larges baies vitrées offrant une vue dégagée sur le nouveau parc environnant.\n\nLa cuisine ouverte sur le séjour se distingue par ses équipements Siemens intégrés, un plan de travail en quartz et des éléments à ouverture douce, favorisant une continuité fluide avec l'espace repas. Le parquet en chêne contrecollé met en valeur l'élégance contemporaine de cet espace de vie convivial.\n\nLe niveau supérieur comprend trois chambres, dont une suite parentale dotée d'un accès direct à une terrasse enveloppante en bois, exposée au soleil couchant et offrant une vue dégagée sur le centre commercial. Cette terrasse permet de prolonger la surface habitable en extérieur.\n\nDeux salles de bains complètent ce logement, par ailleurs desservi par un ascenseur. Une cave privative ainsi qu'une place de parking en sous-sol renforcent le confort et la fonctionnalité de cette propriété idéalement située au sein d'un quartier en pleine expansion.",
+    "highlights": [
+      {
+        "text": "Appartement duplex de 180 m² avec double hauteur sous plafond",
+        "icon": "square"
+      },
+      {
+        "text": "Cuisine ouverte équipée Siemens et plan quartz",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Trois chambres dont une suite principale avec terrasse privée",
+        "icon": "bed"
+      },
+      {
+        "text": "Terrasse enveloppante exposée au soleil couchant",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascenseur desservant l'appartement",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking en sous-sol",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privative",
+        "icon": "archive"
+      },
+      {
+        "text": "Vue dégagée sur parc et centre commercial",
+        "icon": "trees"
+      }
+    ],
+    "hashtags": [
+      "DuplexDesign",
+      "TerrassePanoramique",
+      "CuisineEquipee",
+      "ClocheDor",
+      "VueVille"
+    ]
+  }
+}

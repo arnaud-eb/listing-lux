@@ -90,16 +90,16 @@ const RUBRIC_SYSTEM_PROMPT = `You are a strict, evidence-based reviewer of AI-ge
 
 For each language provided, score 9 dimensions on a 1-5 integer scale:
 - factual_fidelity: does the output contradict its inputs?
-- completeness: does the output use the input data? (mentions beds/baths/sqm/price/neighborhood + 80% of active features?)
+- completeness: does the output use the input data? (mentions beds/baths/sqm/neighborhood + 80% of active features + 2-3 strongest photo-derived selling points). Price is NOT required in the description prose: portals show it as a structured field, so PROMPT_VERSION 1.5 intentionally drops "Price: €X" from the user prompt. Do NOT penalize for omitting price.
 - native_quality: does the output read native, not translated?
 - market_fit: does the vocabulary match the Luxembourg luxury corpus (athome.lu, immotop.lu, Engel & Völkers Luxembourg)?
-- compliance_cpe: how does the output handle the LU energy class (CPE)? Score 5 if a class supplied is used or a placeholder is surfaced; score 1 if a class is invented; score 3 if CPE is silently omitted.
+- compliance_cpe: how does the output handle the LU energy class (CPE)? Score 5 if a class supplied in the inputs is used accurately, OR if no class is supplied and the description omits CPE entirely (this is the new default — the structured field handles legal disclosure on the portal, not the prose). Score 3 if the description vaguely gestures at CPE ("energy passport on request") without inventing. Score 1 if the description INVENTS a class ("Class A++") not in inputs — that is illegal advertising in LU. The v1.4 placeholder requirement ("class to be confirmed") was dropped in 1.5; do NOT score down for omitting it.
 - seo_signal: are the title and hashtags well-shaped? (title 8-15 words including neighborhood + property-defining adjective; 3-5 hashtags, CamelCase, no duplicates of generic market tags)
 - tone_discipline: does the output avoid hyperbole? (no "breathtaking", "must-see", exclamation marks)
 - fair_housing: zero references to ideal occupant demographics, family status, religion, age, gender, or national origin (HARD-FAIL: must score 5 to pass)
 - hallucination: every concrete number, named place, distance, transit line, school, amenity must be supported by inputs (HARD-FAIL: must score 5 to pass)
 
-Then score cross_lang_consistency ONCE for the fixture (judging facts and feature mentions across all languages provided): score 5 if all languages agree on numerics and feature lists; score 1 if there's a numeric mismatch.
+Then score cross_lang_consistency ONCE for the fixture (judging facts and feature mentions across all languages provided): score 5 if all languages agree on numerics and feature lists; score 1 if there's a numeric mismatch. Note: from PROMPT_VERSION 1.5, Lëtzebuergesch was dropped — fixtures now ship 1-3 languages (DE/FR/EN), not 4.
 
 Each score MUST include a one-sentence \`evidence\` field that quotes a specific span from the listing it scores. Do not paraphrase. For cross_lang_consistency, evidence should name the languages that agreed/disagreed.
 

@@ -1,0 +1,51 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:30:23.494Z",
+  "output": {
+    "title": "Penthouse rénové avec terrasse et vue panoramique sur la vallée de l'Alzette",
+    "description": "Ce penthouse bénéficie d'une situation privilégiée dans le quartier historique du Grund, inscrit au patrimoine mondial de l'UNESCO. S'étendant sur 175 m², il offre un équilibre entre charme ancien et confort contemporain. La rénovation a su préserver les murs en pierre apparente ainsi que les poutres d'origine, tout en intégrant des équipements modernes.\n\nLe séjour, baigné de lumière naturelle grâce à ses larges fenêtres, présente un plafond voûté caractéristique et un parquet en chêne massif. La cuisine attenante est équipée d'un mobilier en bois massif sur mesure et d'une gamme professionnelle en acier inoxydable, associée à un plan de travail en marbre.\n\nL'espace nuit comprend trois chambres dotées de boiseries apparentes et de fenêtres en lucarne, invitant à la détente avec une vue sur la vallée de l'Alzette. Deux salles de bains complètent cet ensemble, fonctionnel et élégant.\n\nLa terrasse en pierre, agrémentée d'une rampe en fer forgé, offre un espace extérieur privé avec une vue dégagée sur la vallée et les environs du Grund, promouvant une atmosphère reposante au cœur de la ville.\n\nUn ascenseur dessert l'appartement et un parking privé ainsi qu'une cave complètent les prestations de ce penthouse. La situation unique sur les rives de l'Alzette donne accès à un cadre urbain marqué par l'histoire, la gastronomie et l'animation culturelle propre au Grund.",
+    "highlights": [
+      {
+        "text": "Vue dégagée sur la vallée de l'Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Murs en pierre apparente et poutres d'origine",
+        "icon": "home"
+      },
+      {
+        "text": "Terrasse privée en pierre avec rampe en fer forgé",
+        "icon": "trees"
+      },
+      {
+        "text": "Cuisine équipée avec mobilier bois massif et plan marbre",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "3 chambres avec fenêtres en lucarne",
+        "icon": "bed"
+      },
+      {
+        "text": "2 salles de bains rénovées",
+        "icon": "bath"
+      },
+      {
+        "text": "Parking privé et cave",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur desservant l'appartement",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "PenthouseGrund",
+      "TerrazaPrivada",
+      "VistasAlzette",
+      "InterioresConHistoria"
+    ]
+  }
+}

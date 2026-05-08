@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'280 m² of living space', 'five bedrooms and three bathrooms', 'south-west exposure' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions beds/baths/sqm/Strassen, plus parking, cellar, terrace, garden, fireplace, island, double oven, SW exposure, fitted wardrobes."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'creating a seamless connection between interior and exterior spaces' reads as natural English prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'detached villa', 'shaker cabinetry', 'granite worktop' aligns with LU EN luxury portal vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented in description."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovated 5-Bedroom Villa with Garden and Parking in Strassen' is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'maintaining a village character' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to families, demographics, or ideal occupants."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'proximity to good schools and motorway access' — neither schools nor motorway access is in the inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², 5 beds, 3 baths, SW garden, parking, cellar, terrace; however FR uniquely calls the fireplace 'poêle à bois' (wood stove) while DE/EN say 'Kamin'/'wood-burning fireplace', a minor feature mismatch."
+    }
+  },
+  "overall_pass": false
+}

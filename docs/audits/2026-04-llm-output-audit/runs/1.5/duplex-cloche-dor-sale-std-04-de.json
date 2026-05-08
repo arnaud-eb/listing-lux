@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:45.799Z",
+  "output": {
+    "title": "Hochwertiger Duplex mit 3 Zimmern und Terrasse in Cloche d’Or",
+    "description": "Dieser großzügige Duplex mit 180 m² Wohnfläche befindet sich in einem Neubau im modernen Stadtteil Cloche d’Or. Das lichtdurchflutete Wohn- und Esszimmer besticht durch eine offene Gestaltung mit einer beeindruckenden doppelten Raumhöhe und Panoramaverglasung, die einen weiten Blick in den angrenzenden Park ermöglichen. Die Verbindung mit dem oberen Geschoss erfolgt über eine interne Treppe und der hochwertige Eichenparkettboden unterstreicht die zeitgemäße, elegante Atmosphäre.\n\nDie offene Küche ist mit namenhaften Siemens-Geräten ausgestattet und verfügt über eine Arbeitsplatte aus Quarz sowie Soft-Close-Schränke, was ein ergonomisches und funktionales Kocherlebnis garantiert. Die Einheit gliedert sich auf zwei Ebenen und bietet im Obergeschoss drei ruhig gelegene Schlafzimmer mit Einbauschränken, wobei das Hauptschlafzimmer direkten Zugang zu einer privaten Terrasse mit Holzdeck bietet.\n\nDie großzügige, umlaufende Terrasse ist nach Südwesten ausgerichtet und ermöglicht angenehme Sonnenstunden am Abend mit Blick auf das Einkaufszentrum. Zur Ausstattung gehören zudem ein Kellerraum, ein Stellplatz sowie ein Aufzug, der barrierefreien Zugang zum Wohnbereich sichert.\n\nDer Stadtteil Cloche d’Or zeichnet sich durch eine moderne Infrastruktur mit renommierten Bürogebäuden, Parks und einem umfangreichen Einkaufszentrum aus, was eine urbane und komfortable Wohnlage nahe verschiedener Annehmlichkeiten garantiert.",
+    "highlights": [
+      {
+        "text": "180 m² Wohnfläche in Neubau-Duplex",
+        "icon": "home"
+      },
+      {
+        "text": "Doppelte Raumhöhe im Wohnbereich mit Panoramaverglasung",
+        "icon": "square"
+      },
+      {
+        "text": "Moderne Einbauküche mit Siemens-Geräten und Quarzarbeitsplatte",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Drei Schlafzimmer mit Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "Umlaufende Terrasse mit Holzdeck und Abendsonne",
+        "icon": "sun"
+      },
+      {
+        "text": "Aufzug im Gebäude für barrierefreien Zugang",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Eigener Kellerraum für zusätzliche Lagerfläche",
+        "icon": "archive"
+      },
+      {
+        "text": "Zugeordneter Pkw-Stellplatz",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "NewBuildDuplex",
+      "DoubleHeightLiving",
+      "SiemensKitchen",
+      "TerraceViews",
+      "ClocheDorLiving"
+    ]
+  }
+}

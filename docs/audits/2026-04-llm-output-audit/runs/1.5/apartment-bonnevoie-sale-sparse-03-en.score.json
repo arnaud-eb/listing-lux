@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This 52 m² apartment' and 'separate cellar' match inputs accurately."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, bedroom (in title), south-facing, galley kitchen, shower-tub, cellar, neighborhood; bathroom count not stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'accommodating essential requirements efficiently' is slightly stilted but generally natural."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'known for its affordability compared to other central localities' is more generic real-estate prose than luxury LU corpus, though appropriate for entry-tier."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned — correctly omitted."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Bright 1-Bedroom Apartment with South-Facing Living Area in Bonnevoie' (10 words) good; 5 CamelCase hashtags including Bonnevoie."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'straightforward and functional living environment' — appropriately restrained for entry-tier."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'multicultural neighborhood with a lively market' refers to area character, not occupants."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'a lively market and diverse dining options' — the market and dining scene are not in inputs, mild unsupported claim."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/EN/DE all agree on 52 m², 1 bedroom, south-facing window, galley kitchen, shower-tub combo, cellar, Bonnevoie central location."
+    }
+  },
+  "overall_pass": false
+}

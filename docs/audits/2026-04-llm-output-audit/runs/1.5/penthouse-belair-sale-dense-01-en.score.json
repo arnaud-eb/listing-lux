@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m² penthouse', 'four bedrooms and three bathrooms', 'Belair neighborhood' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 'oak parquet flooring', 'wood-burning fireplace', 'Gaggenau appliances', 'Carrara marble island', 'integrated wine fridge', 'walk-in closet', 'composite decking', 'elevator', 'parking', 'cellar', 'smart-home lighting'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'a refined living experience in the upscale Belair neighborhood' reads as fluent native English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'upscale Belair neighborhood' and 'master suite' fit luxury vocabulary, though 'TerraceLife' hashtag is generic."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE mention; correct per v1.5 default when no class is provided."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Renovated 4-Bedroom Penthouse with Panoramic City Views in Belair' is 10 words including neighborhood; 5 CamelCase hashtags 'CityView RenovatedPenthouse BelairLiving GaggenauKitchen TerraceLife'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'tranquil setting' and 'refined living experience' avoid hyperbole; no exclamations or 'must-see'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "Mentions only 'elegant villas and quiet tree-lined streets', no occupant demographics."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'south-facing terraces' (plural) and 'outdoor lounge areas' (plural) slightly inflate — inputs describe one terrace with one outdoor lounge area."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, Gaggenau, Carrara marble, 180-degree south-facing terrace, elevator, parking, cellar."
+    }
+  },
+  "overall_pass": false
+}

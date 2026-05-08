@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "\"Es handelt sich um ein Doppelhaus\" — title says \"Einfamilienhaus\" while body says Doppelhaus; minor internal inconsistency, but inputs say semi-detached so Doppelhaus is correct."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 195 m², 4 beds, 2 baths, garden, terrace, parking, cellar, fireplace — but omits Bertrange neighborhood entirely: \"die ruhige Lage des Wohnhauses\"."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"Im Erdgeschoss befindet sich der offen gestaltete Wohn- und Essbereich mit Fliesenboden\" reads idiomatically."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"Doppelhaus mit Backsteinfassade\" and \"südlich ausgerichteter Garten\" fit LU/DE real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title \"Gepflegtes Einfamilienhaus mit 4 Schlafzimmern und sonnigem Garten\" calls it Einfamilienhaus while body says Doppelhaus, and lacks neighborhood."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"bietet die Immobilie eine solide Wohnlösung\" — measured, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "\"die Bedürfnisse eines Haushalts mit mehreren Personen abdecken\" — borderline neutral mention of household composition, acceptable but leans toward family targeting."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "\"1990er Jahre Einfamilienhaus\" extrapolated from photo style tag; no invented Bertrange specifics."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE all agree on 195 m², 4 beds, 2 baths, but DE title labels it \"Einfamilienhaus\" while FR/EN and DE body call it semi-detached/Doppelhaus — typology mismatch."
+    }
+  },
+  "overall_pass": false
+}

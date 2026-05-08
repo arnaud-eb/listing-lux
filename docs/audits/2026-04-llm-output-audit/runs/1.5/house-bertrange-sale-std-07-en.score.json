@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"195 m² semi-detached house\" and \"Four bedrooms and two bathrooms\" match inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Covers most features but omits Bertrange neighborhood entirely: \"situated in an established neighborhood typical of Luxembourg's 1990s housing developments\"."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "\"accommodating varied residential needs\" and \"facilitating functional family meal preparation\" read stiff and corporate."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "\"freestanding range\" is more US-English than LU luxury corpus; otherwise generic."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented in the description."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title \"Traditional Semi-Detached 4-Bedroom House with Garden and Parking\" — 9 words, no neighborhood; 5 well-formed hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"The property balances practical features with classic residential design\" — no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "\"accommodating varied residential needs\" — neutral, no demographic targeting."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "\"constructed in the 1990s\" derives from photo style tag; no Bertrange-specific invented amenities."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE all agree on 195 m², 4 beds, 2 baths, but DE title labels it \"Einfamilienhaus\" while FR/EN and DE body call it semi-detached/Doppelhaus — typology mismatch."
+    }
+  },
+  "overall_pass": false
+}

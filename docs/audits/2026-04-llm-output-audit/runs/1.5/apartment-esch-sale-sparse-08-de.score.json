@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Nähe zur Universität Belval' is unsupported by inputs but consistent with Esch context."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "'Diese 78 m² große Eigentumswohnung', 'zwei Schlafzimmer und ein Badezimmer', balcony, parking, elevator all included."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Der Wohnbereich ist hell und neutral gestaltet' reads as natural German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Eigentumswohnung', 'Aufzug im Gebäude', 'Parkplatz inklusive' match LU German listing register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned; correctly omitted as none supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helle 2-Zimmer-Wohnung mit Balkon und Parkplatz in Esch-sur-Alzette' is well-shaped; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'modernen Wohnkomfort' is mild; the apartment isn't described as new/renovated, slight overreach."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting present."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'Tageslicht durch große Fenster' (large windows) is not in photo analysis; 'Universität Belval' invented and 'modernen Wohnkomfort' contradicts neutral well-maintained input."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/DE/EN all agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and Belval/university framing."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Invented 'large windows' and 'modern living comfort' beyond input."
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'D'une surface habitable d'environ 200 m², la maison comprend quatre chambres à coucher et deux salles de bains' matches inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Includes sqm, beds, baths, garden, terrace, garage, cellar, fireplace, but omits Differdange ('sans données spécifiques disponibles quant à son contexte immédiat')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Le séjour, orné d'un habillage lambrissé et d'une cheminée en pierre d'origine' reads natively in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'villa indépendante', 'surface habitable', 'jardin privatif', 'cheminée en pierre d'origine' match LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; energy class omitted as none supplied."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Villa traditionnelle avec jardin privé, garage double et vaste terrasse' is 11 words but lacks Differdange neighborhood."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'propices aux moments de détente en plein air' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting in the prose."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All concrete details ('200 m²', 'quatre chambres', 'cheminée en pierre d'origine', 'double garage') are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE, EN and FR all agree on 200 m², 4 bedrooms, 2 bathrooms, 1970s build, double garage, stone fireplace, mature garden, terrace, and cellar."
+    }
+  },
+  "overall_pass": true
+}

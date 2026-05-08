@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:30:42.671Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Terrasse in ruhiger Wohnlage in Strassen",
+    "description": "Diese zweigeschossige, freistehende Villa besticht durch ihre klassische Architektur mit weißem Putzfassade und einem Schieferdach. Die Wohnfläche von ca. 280 m² bietet fünf gut proportionierte Schlafzimmer und drei Badezimmer, die alle im Zuge der Renovierung modernisiert wurden.\n\nIm Herzstück des Hauses befindet sich ein großzügiges Wohnzimmer mit hohen Decken, Parkettboden und einem Kamin, der für ein behagliches Ambiente sorgt. Große Terrassentüren eröffnen den direkten Zugang zum Garten, der mit reifem Gehölz und einer naturbelassenen Bepflanzung gestaltet ist. Die weitläufige Terrasse und der sonnig ausgerichtete Garten (Südwest), mit Steinplattenbelag sowie Rasenfläche, schaffen einen ruhigen und privaten Außenbereich.\n\nDie Küche präsentiert sich mit charmanten Shaker-Schränken, einer Granitarbeitsplatte sowie einem zentralen Kücheninsel mit Sitzmöglichkeiten. Hochwertige Einbaugeräte, darunter ein Doppelbackofen, ergänzen die Ausstattung und ermöglichen eine angenehme Arbeitsfläche.\n\nDie Schlafzimmer sind geräumig und verfügen über Einbauschränke. Vom Hauptschlafzimmer aus bieten sich Ausblicke in den gepflegten Garten. Ein separater Kellerraum im Gebäude gehört zur Immobilie und bietet zusätzlichen Stauraum.\n\nDas Objekt liegt in Strassen, einer Gemeinde westlich von Luxemburg-Stadt, die durch ihre ruhige, dörfliche Atmosphäre und gute Verkehrsanbindung besticht. Zahlreiche Schulen sind in der Umgebung vorhanden, sodass sowohl urbaner Komfort als auch naturnahe Wohnqualität gegeben sind.",
+    "highlights": [
+      {
+        "text": "5 Schlafzimmer und 3 Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Renoviertes Wohnzimmer mit Kamin und Parkett",
+        "icon": "sofa"
+      },
+      {
+        "text": "Küche mit Doppelbackofen und Insel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südwestlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Separater Kellerraum für zusätzlichen Stauraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Privater Parkplatz auf dem Grundstück",
+        "icon": "car"
+      },
+      {
+        "text": "Ruhige, traditionelle Wohnlage in Strassen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "RenovierteVilla",
+      "GroßzügigerGarten",
+      "KaminWohnzimmer",
+      "SüdwestTerrasse",
+      "ModerneKüche"
+    ]
+  }
+}

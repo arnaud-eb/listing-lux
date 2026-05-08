@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'richtet sich das Objekt an Käufer' contradicts the rental nature (price 3400 monthly suggests rent, per diversity_tags 'rent')."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions '200 m² Wohnfläche', 'Vier Schlafzimmer und zwei Badezimmer', garden, terrace, cellar, garage but omits the Differdange neighborhood entirely ('ohne nähere Angaben zur Nachbarschaft zu machen')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Diese freistehende Villa aus den 1970er Jahren bietet auf etwa 200 m² Wohnfläche eine solide und gut erhaltene Bausubstanz' reads natively in German."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Vocabulary like 'freistehende Villa', 'Wohnfläche', 'Doppelgarage' fits, but 'richtet sich an Käufer' is wrong for a rental listing."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class is invented; description omits energy class entirely as no class was supplied in inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Helle 4-Zimmer-Villa mit Garten, Terrasse und Doppelgarage in ruhiger Lage' is 12 words but lacks the neighborhood Differdange; hashtag 'TerrassenWohnung' is wrong (it's a villa, not apartment)."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrases like 'solide und gut erhaltene Bausubstanz' are restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'richtet sich das Objekt an Käufer, die Wert auf Beständigkeit und Raum im Grünen legen' references preferences, not protected classes."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All concrete elements ('200 m²', 'Vier Schlafzimmer und zwei Badezimmer', 'steinerner Kamin', 'Doppelgarage') are supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE, EN and FR all agree on 200 m², 4 bedrooms, 2 bathrooms, 1970s build, double garage, stone fireplace, mature garden, terrace, and cellar."
+    }
+  },
+  "overall_pass": true,
+  "notes": "Treats the rental as a sale ('Käufer'), and omits Differdange."
+}

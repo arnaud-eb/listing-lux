@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'proche de l'université et du site de Belval' — Belval/university not in inputs but plausibly tied to Esch; minor stretch."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "'cet appartement de 78 m² propose un agencement fonctionnel avec deux chambres et une salle de bain complète' covers core; mentions balcony, parking, elevator."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'favorisant ainsi une circulation fluide' reads naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'place de parking privative', 'ascenseur dans l'immeuble' match LU listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned; no class supplied in inputs — correctly omitted."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement lumineux avec 2 chambres et balcon à Esch-sur-Alzette' is fine; hashtag 'AppartementLuminuex' is misspelled (should be Lumineux)."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'belle luminosité naturelle' is mild; no exclamation marks or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'cadre urbain en mutation, propice à diverses activités' is neutral."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'proche de l'université et du site de Belval' invents proximity to university/Belval not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/DE/EN all agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and Belval/university framing."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Belval/university unsupported; hashtag typo."
+}

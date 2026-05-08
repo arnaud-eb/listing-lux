@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:32.756Z",
+  "output": {
+    "title": "Appartement lumineux 1 chambre avec cave dans quartier central de Bonnevoie",
+    "description": "Situé dans le quartier central et dynamique de Bonnevoie, cet appartement d'environ 52 m² offre un agencement fonctionnel et lumineux. L'espace de vie principal est orienté plein sud, bénéficiant d'une belle luminosité naturelle grâce à une large fenêtre. Le sol en stratifié clair et les murs blancs accentuent la clarté et la sobriété de la pièce.\n\nLa cuisine fermée en configuration en couloir conserve un style classique avec des meubles blancs et un sol en carreaux céramiques. Bien que simple, elle propose un plan de travail fonctionnel adapté à un usage quotidien.\n\nLa salle de bain dispose d'une baignoire-douche, d'un meuble vasque et de murs carrelés blancs, garantissant un entretien facile dans un espace confortable malgré sa surface modeste.\n\nCe logement comprend également une cave privative, offrant un espace de rangement à part. L'emplacement dans Bonnevoie profite d'une connexion aisée à la gare centrale de Luxembourg, ainsi que d'un contexte vivant et multiculturel, marqué notamment par la présence du marché de Bonnevoie à proximité.",
+    "highlights": [
+      {
+        "text": "Appartement 1 chambre d'environ 52 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Séjour lumineux orienté sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine fonctionnelle en couloir",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bain avec baignoire",
+        "icon": "bath"
+      },
+      {
+        "text": "Cave privative incluse",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier central de Bonnevoie",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Proximité de la gare centrale",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "AppartementLumieux",
+      "BonnevoieCentral",
+      "CuisineFonctionnelle",
+      "EspaceRangement",
+      "ProximiteGare"
+    ]
+  }
+}

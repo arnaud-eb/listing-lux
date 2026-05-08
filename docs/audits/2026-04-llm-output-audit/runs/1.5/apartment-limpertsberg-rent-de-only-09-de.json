@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:45.523Z",
+  "output": {
+    "title": "Modernisierte 2-Zimmer-Wohnung mit Balkon und Aufzug im begehrten Limpertsberg",
+    "description": "Diese 95 m² große Wohnung befindet sich in einem gepflegten Mehrparteienhaus im beliebten Stadtteil Limpertsberg. Sie wurde vollständig renoviert und präsentiert sich mit einem hellen, skandinavisch inspirierten Wohnraum, der dank großer Fensterflächen reichlich Tageslicht erhält. Die Ausstattung umfasst ein geschmackvolles Designer-Sofa und einen hochwertigen Fußboden aus Holzwerkstoff.\n\nDie Küche ist modern und funktional gestaltet und verfügt über eine Induktionskochplatte, einen Geschirrspüler sowie einen integrierten Essbereich, der zum täglichen Gebrauch einlädt. Die Wohnung wird komplett möbliert übergeben und ist sofort bezugsfertig.\n\nDas Schlafzimmer überzeugt durch seine ruhige Atmosphäre und ist mit einem Queensize-Bett, einem Schrank sowie lichtdichten Vorhängen ausgestattet. Der kleine, nordseitig ausgerichtete Balkon bietet eine Möglichkeit für frische Luft.\n\nEin Kellerraum steht zur zusätzlichen Nutzung zur Verfügung. Der Aufzug erleichtert den Zugang zur Wohnung.\n\nLimpertsberg zeichnet sich durch seine Nähe zur Universität, kulturelle Einrichtungen wie das Théâtre du Centaure und den Park Edmond Klein aus. Die Infrastruktur mit Cafés und lokalen Geschäften sowie die lebendige Umgebung unterstreichen die Attraktivität dieses Stadtteils.",
+    "highlights": [
+      {
+        "text": "95 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Balkon mit Nordausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Moderne Einbauküche mit Induktionskochfeld",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Voll möbliert und renoviert",
+        "icon": "sofa"
+      },
+      {
+        "text": "Aufzug im Gebäude vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Renoviert",
+      "Limpertsberg",
+      "Balkon",
+      "Aufzug",
+      "Möbliert"
+    ]
+  }
+}

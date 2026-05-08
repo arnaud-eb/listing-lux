@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'penthouse de 220 m²', 'quartier résidentiel prisé de Belair', '4 chambres', '3 salles de bains' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions all key features: 'parquet en chêne', 'cheminée à foyer ouvert', 'appareils Gaggenau', 'marbre de Carrare', 'cave à vins', 'terrasse exposée plein sud', 'ascenseur', 'cave privative', 'parking'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'conciliant tranquillité et accès urbain direct' reads as native French real-estate prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'quartier résidentiel prisé de Belair' and 'suite parentale' match LU luxury vocabulary, though 'cheminée au bois' in highlights is slightly less idiomatic."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned, no class supplied in inputs — correct omission per v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Penthouse rénové de 220 m² avec terrasse et vue panoramique sur la ville' is 12 words; 5 hashtags 'PenthouseContemporain VuePanoramique CuisineGastronomique TerrasseSud BelairLuxembourg' are CamelCase and non-duplicating."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; phrases like 'espace extérieur remarquable' are restrained, no 'breathtaking'-style hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to occupant demographics, family status, or similar; only describes the property and neighborhood."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Every concrete element ('marbre de Carrare', '180 degrés', 'plein sud') is supported by photo_analyses inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, Gaggenau, Carrara marble, 180-degree south-facing terrace, elevator, parking, cellar."
+    }
+  },
+  "overall_pass": true
+}

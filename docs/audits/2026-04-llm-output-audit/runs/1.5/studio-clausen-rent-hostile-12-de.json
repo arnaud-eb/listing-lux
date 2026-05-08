@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:30.203Z",
+  "output": {
+    "title": "Renoviertes möbliertes Studio mit historischem Charme in Clausen",
+    "description": "Dieses 38 m² große Studio besticht durch sein renoviertes Interieur inmitten eines historischen Natursteingebäudes im Clausen-Tal. Charakteristische sichtbare Holzbalken und ein warmes Holzboden schaffen eine einladende, rustikal-moderne Atmosphäre. \n\nDer kompakt gestaltete Wohnraum ist vollständig möbliert und umfasst eine funktionale Ecke mit moderner Kochnische, die mit einem Zweiflammherd, einem kleinen Kühlschrank sowie einer Spüle ausgestattet ist. Das renovierte Badezimmer präsentiert sich in hellem, zeitgemäßem Design mit einer Duschkabine und weiß gefliesten Wänden. \n\nDas Gebäude befindet sich in einer schmalen Straße der historischen Clausen-Siedlung, deren gepflegter Außenbereich die Besonderheiten der Bausubstanz bewahrt. Die Lage bietet eine ruhige Umgebung unweit vom städtischen Zentrum, wobei die unmittelbare Nachbarschaft keine weiteren spezifischen Ausstattungen oder Nahversorgungen nennt.",
+    "highlights": [
+      {
+        "text": "Vollständig möbliert",
+        "icon": "sofa"
+      },
+      {
+        "text": "Sichtbare historische Holzbalken",
+        "icon": "home"
+      },
+      {
+        "text": "Kompakt und funktional",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Renoviertes Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Historisches Natursteingebäude",
+        "icon": "building-2"
+      },
+      {
+        "text": "Ruhige Lage im Clausen-Tal",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Holzbodenbodenbelag",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "RenovatedStudio",
+      "ClausenLocation",
+      "CompactLiving",
+      "FurnishedRental"
+    ]
+  }
+}

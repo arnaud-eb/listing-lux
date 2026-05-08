@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:03.026Z",
+  "output": {
+    "title": "Renovated 5-Bedroom Villa with Garden and Parking in Strassen",
+    "description": "This detached villa, offering 280 m² of living space, is situated in a quiet residential area of Strassen. The property features a traditional Luxembourg style with a white plaster facade and pitched slate roof, complemented by an established mature garden that enhances the home’s privacy and tranquility.\n\nInside, the living room is designed with warm, transitional styling and benefits from high ceilings, parquet flooring, and a wood-burning fireplace. Patio doors provide direct access to the garden, creating a seamless connection between interior and exterior spaces. The renovated kitchen includes shaker cabinetry, a granite worktop, a central island with seating, and a double oven, offering ample space for cooking and socialising.\n\nThe home comprises five bedrooms and three bathrooms, with the master bedroom overlooking the garden and featuring fitted wardrobes for storage. Additional amenities include a cellar for storage, parking facilities, and a terrace. The garden enjoys a south-west exposure and is laid out with lawn, mature trees, and a stone-paved patio, contributing to a naturalistic, peaceful outdoor environment.\n\nLocated in Strassen, the villa benefits from its proximity to good schools and motorway access, while maintaining a village character despite being near the city. This combination provides a balance of accessibility and residential calm.",
+    "highlights": [
+      {
+        "text": "280 m² living space in detached villa",
+        "icon": "home"
+      },
+      {
+        "text": "Five bedrooms and three bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Renovated kitchen with central island and double oven",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Wood-burning fireplace in spacious living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Established mature garden with south-west exposure",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking available on the property",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar providing separate storage space",
+        "icon": "archive"
+      },
+      {
+        "text": "Terrace connecting indoor and outdoor spaces",
+        "icon": "door-open"
+      }
+    ],
+    "hashtags": [
+      "DetachedVilla",
+      "SouthWestGarden",
+      "RenovatedKitchen",
+      "MatureGarden",
+      "ResidentialStrassen"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:20.530Z",
+  "output": {
+    "title": "Villa traditionnelle avec jardin privé, garage double et vaste terrasse",
+    "description": "Cette villa indépendante, construite dans les années 1970, présente une façade en pierre caractéristique de l'architecture résidentielle de son époque. Elle s'implante sur un terrain privatif agrémenté d'une pelouse accueillante et d'arbres matures, offrant une atmosphère tranquille et naturelle.\n\nD'une surface habitable d'environ 200 m², la maison comprend quatre chambres à coucher et deux salles de bains. Le séjour, orné d'un habillage lambrissé et d'une cheminée en pierre d'origine, bénéficie d'une luminosité naturelle grâce à son ouverture sur le jardin. Ce cadre chaleureux met en valeur les éléments traditionnels tout en assurant une ambiance conviviale.\n\nL'espace extérieur s'organise autour d'une large terrasse et d'un jardin soigné, propices aux moments de détente en plein air. Un double garage et une cave complètent ce bien, ajoutant des facilités pratiques au sein de la propriété.\n\nCe type d'habitation s'intègre dans un environnement résidentiel calme, sans données spécifiques disponibles quant à son contexte immédiat. L'ensemble offre ainsi une combinaison intéressante entre confort intérieur et cadre extérieur soigné.",
+    "highlights": [
+      {
+        "text": "Villa construite dans les années 1970",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d'environ 200 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres à coucher",
+        "icon": "bed"
+      },
+      {
+        "text": "Double garage intégré",
+        "icon": "car"
+      },
+      {
+        "text": "Cheminée en pierre d'origine dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Jardin privatif avec arbres matures",
+        "icon": "trees"
+      },
+      {
+        "text": "Large terrasse attenante au jardin",
+        "icon": "sun"
+      },
+      {
+        "text": "Cave intégrée à la propriété",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "VillaTraditionnelle",
+      "JardinPrivatif",
+      "CheminéePierre",
+      "DoubleGarage",
+      "TerrasseSpacieuse"
+    ]
+  }
+}

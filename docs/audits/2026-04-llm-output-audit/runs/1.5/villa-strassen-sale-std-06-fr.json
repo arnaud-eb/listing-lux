@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:30:49.741Z",
+  "output": {
+    "title": "Villa rénovée 5 chambres avec jardin mature et terrasses à Strassen",
+    "description": "Cette villa individuelle de 280 m² habitables se situe dans le quartier résidentiel de Strassen, à l’ouest de Luxembourg-ville. Construite dans un style traditionnel luxembourgeois, elle déploie une façade blanche soignée et un toit en ardoise à deux pans. L’implantation en retrait et le jardin paysagé mature apportent une atmosphère sereine, tout en bénéficiant d’un bon accès aux axes autoroutiers.\n\nLa réception offre un espace généreux, agrémenté d’un parquet en chêne et d’un poêle à bois, qui invite à la convivialité. L’accès direct à la terrasse en pierre et au jardin orienté sud-ouest souligne l’intégration harmonieuse entre intérieur et extérieur. La cuisine rénovée, équipée d’un îlot central avec coin repas et d’un double four encastré, présente un agencement fonctionnel avec plans de travail en granite et rangements en bois style shaker.\n\nLe niveau nuit comprend cinq chambres dont une suite principale avec vue dégagée sur le jardin, dotée de rangements intégrés. Trois salles de bains offrent un confort apprécié, dans un esprit clair et intemporel. Une cave complète l’ensemble, tandis que le stationnement est assuré par une aire dédiée sur la propriété. La rénovation récente confère à cette résidence un équilibre entre authenticité et modernité, au sein d’un environnement résidentiel avec écoles renommées à proximité.",
+    "highlights": [
+      {
+        "text": "Villa individuelle de 280 m² rénovée",
+        "icon": "home"
+      },
+      {
+        "text": "Cinq chambres avec rangements intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Trois salles de bains fonctionnelles",
+        "icon": "bath"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central et double four",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Poêle à bois et parquet en chêne",
+        "icon": "flame"
+      },
+      {
+        "text": "Jardin résidentiel mature exposé sud-ouest",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse en pierre avec accès direct depuis le séjour",
+        "icon": "door-open"
+      },
+      {
+        "text": "Parking privatif et cave",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "VillaRénovée",
+      "JardinMature",
+      "CuisineÎlot",
+      "PoêleBois",
+      "TerrasseSudOuest"
+    ]
+  }
+}

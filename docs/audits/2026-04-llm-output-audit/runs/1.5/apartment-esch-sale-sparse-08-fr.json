@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:35.469Z",
+  "output": {
+    "title": "Appartement lumineux avec 2 chambres et balcon à Esch-sur-Alzette",
+    "description": "Situé dans la deuxième ville du Luxembourg, cet appartement de 78 m² propose un agencement fonctionnel avec deux chambres et une salle de bain complète. L'espace de vie principal bénéficie d'une belle luminosité naturelle grâce à ses murs beiges et son accès direct au balcon, offrant un prolongement agréable vers l'extérieur.\n\nLa cuisine en L associe praticité et sobriété avec ses meubles blancs et un espace suffisant pour un coin repas compact. Elle s'intègre harmonieusement à la pièce de vie, favorisant ainsi une circulation fluide.\n\nLe balcon, accessible depuis le salon, présente une surface modeste avec un sol carrelé et une rambarde sécurisée, idéal pour profiter de l'air libre. L'appartement est complété par une place de parking privative et un ascenseur dans l'immeuble, facilitant l'accès et le stationnement.\n\nImplanté à Esch-sur-Alzette, proche de l'université et du site de Belval, il bénéficie d'un quartier en plein développement, marqué par une offre immobilière abordable et une dynamique culturelle accrue. Ce contexte apporte un cadre urbain en mutation, propice à diverses activités et services.",
+    "highlights": [
+      {
+        "text": "Appartement de 78 m² avec 2 chambres",
+        "icon": "square"
+      },
+      {
+        "text": "Balcon accessible depuis le séjour",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine fonctionnelle en L avec espace repas",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Place de parking privée incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur dans l'immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Quartier en développement avec scène culturelle",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "BalconConfort",
+      "CuisineEquipee",
+      "ParkingPrivatif",
+      "EschAlzette",
+      "AppartementLuminuex"
+    ]
+  }
+}

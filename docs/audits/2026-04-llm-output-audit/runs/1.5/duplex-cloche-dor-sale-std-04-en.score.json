@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Three bedrooms including upper-floor master with terrace access' and '180 m² duplex' match inputs accurately."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes 180 m², three bedrooms, 'two bathrooms, elevator access, parking, and a cellar', terrace, new-build, neighborhood."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'The kitchen is designed with sociability in mind, fully open to the dining and living spaces' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'engineered oak flooring', 'wraparound terrace', 'showcase district' aligns with LU EN luxury phrasing."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class as none supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Spacious 3-Bedroom Duplex with Terrace and Park Views in Cloche d'Or' (12 words); hashtags 'UrbanLiving ParkView NewBuildDuplex OpenPlanKitchen TerraceLife' are CamelCase and 5 distinct."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'creating an airy and bright atmosphere' avoids hyperbole, no exclamation marks or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'private retreat with fitted wardrobes' is neutral, no demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All claims trace to inputs; 'views over the shopping center' and 'evening sun exposure' come from photo analysis."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE, EN, FR all agree on 180 m² and three bedrooms, but DE adds 'nach Südwesten ausgerichtet' and extends fitted wardrobes to all bedrooms, while EN and FR correctly limit fitted wardrobes to the master; FR specifies 'sous-sol' parking not in EN/DE."
+    }
+  },
+  "overall_pass": true
+}

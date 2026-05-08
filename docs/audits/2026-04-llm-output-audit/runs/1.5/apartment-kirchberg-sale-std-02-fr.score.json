@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "\"parquet en bois massif stratifié\" contradicts itself (massif vs stratifié) and adds detail beyond \"engineered wood flooring\"."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes 145 m², trois chambres, deux salles de bains, balcon, cave, parking, ascenseur, Bulthaup, îlot, douche à l'italienne."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French — \"un prolongement naturel de l'espace de vie intérieur\" is idiomatic."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "\"douche à l'italienne\", \"suite parentale\", \"institutions européennes\", \"Philharmonie et le MUDAM\" align with LU FR luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned, consistent with v1.5 default when no class supplied."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title \"Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg\" is 12 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamations; \"élégance discrète\" stays restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; \"écoles internationales\" frames area, not buyer."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "\"emplacement de parking en sous-sol\" and \"sous-sol sécurisé\" invent that parking is underground/secure — input only states parking:true."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, Bulthaup, elevator, cellar, parking; minor divergences are flooring type (DE Eichenparkett, FR bois massif stratifié, EN engineered wood) and FR adding 'sous-sol' for parking."
+    }
+  },
+  "overall_pass": false
+}

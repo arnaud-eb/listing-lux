@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"S'étendant sur 175 m²\", \"trois chambres\", \"Deux salles de bains\", \"parking privé ainsi qu'une cave\", \"ascenseur\" all align with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes sqm, beds, baths, neighborhood, terrace, parking, cellar, elevator, plus photo highlights: \"murs en pierre apparente\", \"plafond voûté\", \"parquet en chêne massif\", \"vue sur la vallée de l'Alzette\"."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as fluent native French: \"Le séjour, baigné de lumière naturelle grâce à ses larges fenêtres, présente un plafond voûté caractéristique\"."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU FR luxury idiom: \"quartier historique du Grund\", \"prestations de ce penthouse\", \"plan de travail en marbre\"."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No energy class invented; description ends with cultural context \"l'animation culturelle propre au Grund\" without mentioning CPE."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title \"Penthouse rénové avec terrasse et vue panoramique sur la vallée de l'Alzette\" is well-shaped in FR, but hashtags mix Spanish (\"TerrazaPrivada\", \"VistasAlzette\", \"InterioresConHistoria\") and only 4 are present."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; \"vue panoramique\" and \"atmosphère reposante au cœur de la ville\" stay measured, no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupants, families, religion, age, or origin."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "\"inscrit au patrimoine mondial de l'UNESCO\" supported by photo analysis (\"UNESCO-zone setting\"); no politician/promo injected."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "All three versions agree on numerics (175 m², 3 beds, 2 baths, terrace, elevator, parking, cellar), but EN and DE slots are written in Spanish instead of the requested languages, breaking the multilingual contract."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FR is the only correctly-languaged output. Hashtags partially leaked into Spanish."
+}

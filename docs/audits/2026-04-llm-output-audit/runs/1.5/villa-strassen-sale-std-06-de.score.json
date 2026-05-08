@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Hochwertige Einbaugeräte' is a mild embellishment not directly in inputs, but otherwise '280 m²', 'fünf gut proportionierte Schlafzimmer und drei Badezimmer' match."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers '5 Schlafzimmer und 3 Badezimmer', '280 m²', Strassen, plus parking, garden, terrace, cellar, renovation, fireplace, island, double oven, SW exposure."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'weißem Putzfassade' is a gender error (should be 'weißer Putzfassade') and 'einem zentralen Kücheninsel' is wrong gender (die Kücheninsel)."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'freistehende Villa', 'Schieferdach', 'Parkettboden', 'Einbauschränke' read as standard LU/DE luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely as no class was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Terrasse in ruhiger Wohnlage in Strassen' is 12 words with neighborhood; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'besticht durch ihre klassische Architektur' is mildly promotional but no exclamation marks or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; avoids 'familienfreundlich' despite the input warning."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "'Zahlreiche Schulen sind in der Umgebung vorhanden' is unsupported by inputs — no schools listed in the data."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², 5 beds, 3 baths, SW garden, parking, cellar, terrace; however FR uniquely calls the fireplace 'poêle à bois' (wood stove) while DE/EN say 'Kamin'/'wood-burning fireplace', a minor feature mismatch."
+    }
+  },
+  "overall_pass": false
+}

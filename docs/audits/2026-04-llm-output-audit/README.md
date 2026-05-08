@@ -269,7 +269,35 @@ Of the 10 overall passes, half are EN, three are DE, two are FR — zero LU pass
 - Multi-region (BE) market expansion — `localities` table is designed for it but no BE seed in this audit
 - Vision-step audit — separate exercise
 
-## 7. Re-audit triggers
+## 7. Re-audit: PROMPT_VERSION 1.4 → 1.5
+
+After landing audit §5 P0.6 / P0.7 / P0.8 / P0.9 (drop Lëtzebuergesch; drop price from description prose; CPE structured field + photo extraction; storage→cellar/basement/attic split), the audit was re-run to confirm the targeted lift. Same fixtures, judge, and rubric as the 1.3→1.4 run; rubric anchors §2 (`completeness`) and §6 (`compliance_cpe`) updated to match the new prompt contract; `cross_lang_consistency` now scored across 3 languages (DE/FR/EN) instead of 4.
+
+**Fixture count:** same 12 fixtures; total outputs **45 (4 langs × 11 fixtures + 1 LU-only) → 34 (3 langs × 11 fixtures + 1 DE-only)**.
+
+| Dimension | v1.4 avg | v1.5 avg | Δ | Notes |
+|---|---|---|---|---|
+| `completeness` | 3.64 | 4.18 | **+0.53** | P0.7: dropping price from prose + rubric anchor narrowed to {beds, baths, sqm, neighborhood} |
+| `cross_lang_consistency` | 3.31 | 4.21 | **+0.89** | P0.6: LU was the dragger (per §3.6); removed |
+| `native_quality` | 3.51 | 3.97 | +0.46 | also P0.6: LU's 2.25 mean no longer in the average |
+| `factual_fidelity` | 4.20 | 4.53 | +0.33 | P0.9 storage split + cellar guard |
+| `market_fit` | 3.38 | 3.71 | +0.33 | downstream of P0.6 |
+| `tone_discipline` | 4.51 | 4.71 | +0.19 | |
+| `hallucination` | 3.91 | 4.00 | +0.09 | crosses the 4.0 target — first re-audit to do so |
+| `compliance_cpe` | 4.96 | 5.00 | +0.04 | P0.8: structured field + "no class → omit" anchor |
+| `seo_signal` | 3.64 | 3.68 | +0.03 | flat |
+| `fair_housing` | 5.00 | 4.97 | −0.03 | one DE output (Bertrange) scored 4 on a borderline "Haushalt mit mehreren Personen" phrase; below the −0.5 regression threshold |
+| **Pass rate** | **22.2%** | **35.3%** | +13.1pp | |
+
+**No regressions beyond the −0.5 threshold.** The lift on the three predicted dimensions (`completeness`, `cross_lang_consistency`, `factual_fidelity`) materialized in line with the audit recommendations.
+
+**Single fair_housing flag (DE Bertrange):** judge evidence was *"die Bedürfnisse eines Haushalts mit mehreren Personen abdecken"* — household-composition phrasing leaning toward family targeting. Prompt's DE Fair Housing list could grow to forbid "Haushalt mit X Personen" / "household of X" phrasing in a future tightening; not a regression on the existing rules.
+
+**API spend:** ~$8 (generate gpt-4.1-mini × 34 + judge claude-opus-4-7 × 12).
+
+Per-output records: [`scores-1.5.json`](./scores-1.5.json) and [`runs/1.5/`](./runs/1.5/).
+
+## 8. Re-audit triggers
 
 This audit must be re-run when any of the following changes:
 - `PROMPT_VERSION` is bumped in `lib/ai/prompts.ts`
@@ -290,5 +318,5 @@ A bump that drops any dimension's average by more than 0.5 points blocks merge p
 - [`appendix-e-neighborhood-design.md`](./appendix-e-neighborhood-design.md) — `localities` table design + migration spec
 - [`appendix-f-prompt-edits.md`](./appendix-f-prompt-edits.md) — the 10 v1.3 → v1.4 prompt edits as diffs
 - [`inter-rater-sample.md`](./inter-rater-sample.md) — 6 stratified outputs for user blind scoring (judge validation)
-- [`scores-1.3.json`](./scores-1.3.json), [`scores-1.4.json`](./scores-1.4.json) — full RubricScore records
-- [`runs/1.3/`](./runs/1.3/), [`runs/1.4/`](./runs/1.4/) — per-output JSON + companion `.score.json` files
+- [`scores-1.3.json`](./scores-1.3.json), [`scores-1.4.json`](./scores-1.4.json), [`scores-1.5.json`](./scores-1.5.json) — full RubricScore records
+- [`runs/1.3/`](./runs/1.3/), [`runs/1.4/`](./runs/1.4/), [`runs/1.5/`](./runs/1.5/) — per-output JSON + companion `.score.json` files

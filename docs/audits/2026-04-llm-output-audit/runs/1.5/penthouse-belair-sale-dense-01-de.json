@@ -1,0 +1,51 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:28:44.091Z",
+  "output": {
+    "title": "Exklusives Penthouse mit 4 Schlafzimmern und Panoramablick in Belair",
+    "description": "Dieses großzügige Penthouse mit einer Wohnfläche von 220 m² präsentiert sich nach umfassender Renovierung in einem zeitgemäßen Stil. Die Raumgestaltung ist offen und lichtdurchflutet, unterstützt durch bodentiefe Fenster, die einen weitläufigen Blick über die Stadt ermöglichen. Das Eichenparkett und der Kamin im Wohnbereich schaffen ein harmonisches Ambiente.\n\nDie moderne Küche ist mit Geräten von Gaggenau ausgestattet und verfügt über eine zentral platzierte Insel aus Carrara-Marmor sowie einen integrierten Weinkühler. Diese Ausstattung erfüllt professionelle Ansprüche und bietet zugleich Raum für geselliges Beisammensein.\n\nZu den Schlafräumen zählen vier Zimmer, darunter ein Hauptschlafzimmer mit begehbarem Kleiderschrank, eigenem Bad und Zugang zu einer privaten Terrasse. Die drei Badezimmer sind modern gestaltet und funktional aufgeteilt.\n\nDie Terrasse erstreckt sich mit einer südlichen Ausrichtung und einer 180-Grad-Sicht über Luxemburg Stadt, ausgestattet mit Composite-Dielen und einer Glasgeländer-Umfassung. Ein Aufzug erschließt die Etage barrierefrei, ein separater Kellerraum ist ebenfalls vorhanden.\n\nIm Gebäude sind zudem Parkmöglichkeiten für Bewohner vorhanden. Die Lage im Stadtteil Belair verbindet eine grüne Umgebung mit der Nähe zum urbanen Zentrum Luxemburgs.",
+    "highlights": [
+      {
+        "text": "220 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "4 Schlafzimmer, 3 Bäder",
+        "icon": "bed"
+      },
+      {
+        "text": "Panoramablick über Luxemburg Stadt",
+        "icon": "mountain"
+      },
+      {
+        "text": "Moderne Küche mit Gaggenau Geräten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Großzügige südlich ausgerichtete Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Kamin im Wohnbereich",
+        "icon": "flame"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum vorhanden",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLiving",
+      "CityViewLuxembourg",
+      "BelairResidence",
+      "ModernRenovation"
+    ]
+  }
+}

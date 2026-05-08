@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:04.772Z",
+  "output": {
+    "title": "130 m² 3-Bedroom Row House with Private Garden and Parking",
+    "description": "This 130 m² row house, built in the 1980s and well-maintained, offers a quiet residential setting with a neutral facade and a small front yard. The accommodation extends across multiple levels and includes three bedrooms and one bathroom.\n\nThe living room presents garden views through patio doors and features a dated interior with beige carpeting and an alcove suitable for a tube TV, indicating potential for modernization to suit personal tastes.\n\nThe property includes a private rear garden with a lawn area, enclosed by a wood fence, along with a small storage shed. Additional benefits include a dedicated parking space and a cellar for extra storage.\n\nSituated in a residential locality characterized by similar 1980s housing, this home provides a balanced indoor and outdoor living environment with practical storage and parking facilities.",
+    "highlights": [
+      {
+        "text": "130 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "3 bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "1 bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Private rear garden with lawn",
+        "icon": "trees"
+      },
+      {
+        "text": "Dedicated parking space",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Built in the 1980s, well-maintained",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "RowHouse",
+      "PrivateGarden",
+      "ParkingIncluded",
+      "StorageCellar",
+      "1980sArchitecture"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"Cette maison mitoyenne de 130 m²... trois chambres et une salle de bains\" matches inputs exactly."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "\"emplacement de parking et d'une cave\" plus jardin privatif and 130 m²/3 chambres/1 SDB covered, but Mamer neighborhood is never named."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"De larges portes-fenêtres s'ouvrent sur le jardin arrière, apportant lumière naturelle\" reads naturally in French."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "\"maison mitoyenne\" and \"emplacement de parking\" are correct LU terms, but the prose is generic and lacks luxury-corpus polish (\"sans détails supplémentaires sur les services ou commodités à proximité\")."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no class supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "\"Maison mitoyenne des années 1980 avec jardin privatif et parking\" is 10 words but lacks neighborhood (Mamer not in registry); 5 CamelCase hashtags \"Maison1980 JardinPrivatif ParkingInclus RésidentielCalme EspaceExtérieur\"."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"Cette propriété constitue une opportunité dans un environnement résidentiel apaisé\" — no hyperbole, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "\"adaptés à une occupation confortable\" — no demographic or family references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "No invented places, transit, or schools; \"sans détails supplémentaires sur les services ou commodités à proximité\" explicitly avoids fabrication."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/EN/DE all agree: 130 m², 3 bedrooms, 1 bathroom, private rear garden, parking, cellar, 1980s row house, no neighborhood claim."
+    }
+  },
+  "overall_pass": true,
+  "notes": "Sensible handling of sparse input; correctly avoided inventing Mamer specifics."
+}

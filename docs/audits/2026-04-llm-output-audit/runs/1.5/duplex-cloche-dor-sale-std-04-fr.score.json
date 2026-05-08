@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'duplex récent de 180 m²' and 'trois chambres, dont une suite parentale' align with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 180 m², trois chambres, 'Deux salles de bains', ascenseur, cave, parking, terrasse, neighborhood."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'Conçu avec un souci d'espace et de luminosité' and 'parquet en chêne contrecollé' read natively."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "'suite parentale', 'cave privative', 'place de parking en sous-sol', 'plan de travail en quartz' match LU FR portal vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; energy passport not mentioned, consistent with no class supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Duplex lumineux de 180 m² avec terrasse panoramique au cœur de Cloche d'Or' (~13 words); 5 CamelCase hashtags 'DuplexDesign TerrassePanoramique CuisineEquipee ClocheDor VueVille'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'idéalement située' is mild promotional language but no exclamation or 'incontournable'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'quartier en pleine expansion' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'place de parking en sous-sol' specifies underground location not in inputs (inputs say only 'parking: true')."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE, EN, FR all agree on 180 m² and three bedrooms, but DE adds 'nach Südwesten ausgerichtet' and extends fitted wardrobes to all bedrooms, while EN and FR correctly limit fitted wardrobes to the master; FR specifies 'sous-sol' parking not in EN/DE."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Minor invention of underground parking location."
+}

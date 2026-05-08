@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'cet appartement d'environ 52 m²' and '1 chambre' match inputs; cellar mentioned correctly."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52m², 1 chambre, cave, Bonnevoie, south-facing, galley kitchen, tub — but bathroom count not explicit and 'baignoire-douche' covers tub."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'cuisine fermée en configuration en couloir' is slightly awkward but reads natively otherwise."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'cave privative', 'séjour lumineux orienté sud', 'gare centrale' align with athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned and none in inputs — correctly omitted from prose."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement lumineux 1 chambre avec cave dans quartier central de Bonnevoie' is 11 words and good; hashtag 'AppartementLumieux' has a typo (should be 'Lumineux')."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'Bien que simple, elle propose un plan de travail fonctionnel' — restrained, no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'contexte vivant et multiculturel' references the area's character, not occupant demographics."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "'présence du marché de Bonnevoie à proximité' — the Bonnevoie market is plausible local knowledge but not in inputs; minor unsupported specific."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/EN/DE all agree on 52 m², 1 bedroom, south-facing window, galley kitchen, shower-tub combo, cellar, Bonnevoie central location."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Hashtag typo 'Lumieux'."
+}

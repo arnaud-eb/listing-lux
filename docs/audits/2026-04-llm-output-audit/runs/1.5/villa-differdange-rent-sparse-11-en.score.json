@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'approximately 200 m² of living space' and 'four bedrooms and two bathrooms' align with inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Covers sqm, beds, baths, garden, garage, fireplace, but omits Differdange neighborhood entirely from title and prose."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'suitable for varied domestic arrangements' is awkward and stiff English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'detached villa', 'stone façade' fit luxury vocabulary but 'suitable for varied domestic arrangements' is bureaucratic, not Engel & Völkers register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; energy class omitted as none was supplied."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Spacious 4-Bedroom Villa with Garden and Double Garage' is only 9 words and contains no neighborhood reference."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'presenting an opportunity for outdoor activities and relaxation' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'suitable for varied domestic arrangements' is generic."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All concrete details ('200 m²', 'four bedrooms and two bathrooms', 'double garage', 'stone fireplace') trace to inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE, EN and FR all agree on 200 m², 4 bedrooms, 2 bathrooms, 1970s build, double garage, stone fireplace, mature garden, terrace, and cellar."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'drei ruhig gelegene Schlafzimmer mit Einbauschränken' contradicts inputs which only state fitted wardrobes in the master bedroom, and 'nach Südwesten ausgerichtet' invents an orientation not given."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 180 m², 3 bedrooms, terrace, parking, cellar, elevator, new-build, Cloche d'Or, but bathrooms count is omitted ('drei ... Schlafzimmer' but no '2 Badezimmer')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'besticht durch eine offene Gestaltung mit einer beeindruckenden doppelten Raumhöhe' reads natively, though 'namenhaften' is a misspelling of 'namhaften'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'Eichenparkettboden', 'Stellplatz', 'Kellerraum', 'Aufzug' matches LU/DE luxury portal usage."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class is invented; the description omits CPE entirely as no class was supplied: 'Zur Ausstattung gehören zudem ein Kellerraum, ein Stellplatz sowie ein Aufzug'."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Hochwertiger Duplex mit 3 Zimmern und Terrasse in Cloche d'Or' is 10 words with neighborhood; 5 CamelCase hashtags 'NewBuildDuplex DoubleHeightLiving SiemensKitchen TerraceViews ClocheDorLiving'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'beeindruckenden doppelten Raumhöhe' is mild hyperbole but no exclamation marks or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'urbane und komfortable Wohnlage' is neutral."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'nach Südwesten ausgerichtet' invents an orientation, and 'drei ... Schlafzimmer mit Einbauschränken' extends fitted wardrobes beyond the master."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE, EN, FR all agree on 180 m² and three bedrooms, but DE adds 'nach Südwesten ausgerichtet' and extends fitted wardrobes to all bedrooms, while EN and FR correctly limit fitted wardrobes to the master; FR specifies 'sous-sol' parking not in EN/DE."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Invented southwest orientation and extended fitted wardrobes."
+}

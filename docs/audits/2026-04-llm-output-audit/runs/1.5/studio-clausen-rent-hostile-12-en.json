@@ -1,0 +1,43 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:38.361Z",
+  "output": {
+    "title": "Furnished Renovated Studio with Historic Character in Clausen",
+    "description": "This studio apartment offers 38 m² of efficiently arranged living space within a historic stone building in Clausen. The interior combines rustic and modern elements, featuring exposed wooden beams and wood flooring that reflect the building's character. The living area includes a double bed and is fully furnished for immediate occupancy.\n\nThe compact kitchenette has been recently renovated and includes a two-burner cooktop, a compact refrigerator, a small wall cabinet, and a stainless steel sink, providing a functional space for meal preparation. The bathroom also benefits from a recent renovation, with a modern shower stall, compact vanity, and white tiling.\n\nSituated on a narrow street in the Clausen valley, this property enjoys the atmosphere of a historic setting while remaining within reach of the wider city. The exterior of the building is well maintained, preserving its historic appeal.",
+    "highlights": [
+      {
+        "text": "38 m² furnished studio apartment",
+        "icon": "square"
+      },
+      {
+        "text": "Exposed wooden beams and wood flooring",
+        "icon": "home"
+      },
+      {
+        "text": "Renovated compact kitchenette with cooktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Modern renovated bathroom with shower stall",
+        "icon": "bath"
+      },
+      {
+        "text": "Located in historic stone building",
+        "icon": "building-2"
+      },
+      {
+        "text": "Situated on narrow Clausen valley street",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricProperty",
+      "RenovatedStudio",
+      "ClausenValley",
+      "CompactLiving"
+    ]
+  }
+}

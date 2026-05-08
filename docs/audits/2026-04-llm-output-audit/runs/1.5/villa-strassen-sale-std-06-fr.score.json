@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'parquet en chêne' invents oak species (input only says 'parquet flooring'); 'poêle à bois' (wood stove) contradicts input 'fireplace' / 'wood-burning fireplace'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 'villa individuelle de 280 m²', 'cinq chambres', 'trois salles de bains', Strassen, jardin, terrasse, cave, parking, îlot, double four, SW."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'agencement fonctionnel avec plans de travail en granite' reads as native French real-estate prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'villa individuelle', 'suite principale', 'cave', 'stationnement' match LU FR portal lexicon."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class as no class was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa rénovée 5 chambres avec jardin mature et terrasses à Strassen' is 11 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'invite à la convivialité' and 'équilibre entre authenticité et modernité' are mildly marketing but no exclamation or 'à couper le souffle'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering language present."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'écoles renommées à proximité' invents reputation of schools, and 'bon accès aux axes autoroutiers' invents motorway proximity not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², 5 beds, 3 baths, SW garden, parking, cellar, terrace; however FR uniquely calls the fireplace 'poêle à bois' (wood stove) while DE/EN say 'Kamin'/'wood-burning fireplace', a minor feature mismatch."
+    }
+  },
+  "overall_pass": false
+}

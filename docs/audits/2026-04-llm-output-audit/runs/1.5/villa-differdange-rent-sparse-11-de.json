@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:10.918Z",
+  "output": {
+    "title": "Helle 4-Zimmer-Villa mit Garten, Terrasse und Doppelgarage in ruhiger Lage",
+    "description": "Diese freistehende Villa aus den 1970er Jahren bietet auf etwa 200 m² Wohnfläche eine solide und gut erhaltene Bausubstanz in einem etablierten Wohnumfeld. Die Fassade aus Stein in Kombination mit dem Vorgarten vermittelt einen gepflegten Eindruck. Dank der großzügigen Grundstücksfläche sind Privatsphäre und Freiraum gewährleistet.\n\nDas Wohnhaus umfasst vier Schlafzimmer und zwei Bäder, welche eine klare und funktionale Raumaufteilung ermöglichen. Im Wohnzimmer dominiert ein original erhaltener steinerner Kamin, der gemeinsam mit der Holzvertäfelung eine warme, traditionelle Atmosphäre erzeugt und einen schönen Ausblick in den Garten bietet.\n\nDer private Garten ist naturbelassen gestaltet und mit einem großen Rasen sowie ausgewachsenen Bäumen versehen. Direkt an das Haus grenzt eine Terrasse, die sich für entspannte Stunden im Freien anbietet. Ergänzend steht eine separate Doppelgarage sowie ein Kellerraum zur Verfügung, die praktische Stell- und Abstellflächen bieten.\n\nDie Villa vereint klassische Elemente mit beständigem Wohnkomfort und liegt in einem ruhigen Umfeld, ohne nähere Angaben zur Nachbarschaft zu machen. Aufgrund ihrer Ausstattung und Grundstücksgröße richtet sich das Objekt an Käufer, die Wert auf Beständigkeit und Raum im Grünen legen.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit ca. 200 m² Wohnfläche",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Original steinerner Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Großer privater Garten mit reifem Baumbestand",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse zum Haus hin ausgerichtet",
+        "icon": "sun"
+      },
+      {
+        "text": "Separate Doppelgarage für zwei Fahrzeuge",
+        "icon": "car"
+      },
+      {
+        "text": "Kellerraum als Abstellfläche vorhanden",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SteinVilla",
+      "Doppelgarage",
+      "PrivaterGarten",
+      "1970erBaujahr",
+      "TerrassenWohnung"
+    ]
+  }
+}

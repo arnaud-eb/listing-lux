@@ -1,0 +1,43 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:34.217Z",
+  "output": {
+    "title": "Studio rénové et meublé avec charme dans le quartier historique de Clausen",
+    "description": "Ce studio soigneusement rénové de 38 m² allie le caractère historique à un confort moderne dans un cadre authentique. Les poutres apparentes et le parquet massif soulignent le charme rustique contemporain de la pièce principale, qui est entièrement meublée pour une occupation immédiate.\n\nLa kitchenette compacte et fonctionnelle dispose d’un plan de travail optimisé avec une plaque de cuisson deux feux, un réfrigérateur intégré et un évier en inox. La salle de bains rénovée présente un confort moderne avec une cabine de douche et des revêtements en carrelage blanc.\n\nSitué dans un bâtiment en pierre au cœur de la rue étroite de Clausen, cet appartement bénéficie de l’atmosphère particulière de la vallée de Clausen, offrant une immersion dans un secteur dynamique tout en préservant une ambiance paisible et soignée.",
+    "highlights": [
+      {
+        "text": "Studio entièrement meublé",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes caractéristiques",
+        "icon": "building-2"
+      },
+      {
+        "text": "Agencement optimisé et compact",
+        "icon": "square"
+      },
+      {
+        "text": "Salle de bains rénovée récemment",
+        "icon": "bath"
+      },
+      {
+        "text": "Bâtiment en pierre historique",
+        "icon": "building"
+      },
+      {
+        "text": "Emplacement au cœur de la vallée de Clausen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "RusticModern",
+      "RenovatedStudio",
+      "ClausenLiving",
+      "CompactComfort"
+    ]
+  }
+}

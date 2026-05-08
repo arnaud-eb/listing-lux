@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m²', '4 Schlafzimmern', '3 Bäder', 'Belair' all consistent with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions most features but the smart-home lighting and wood-burning specificity ('Kamin im Wohnbereich' is generic — does not specify wood-burning) are slightly underused."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'präsentiert sich nach umfassender Renovierung in einem zeitgemäßen Stil' reads as native German property prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Hauptschlafzimmer mit begehbarem Kleiderschrank' fits LU/DE luxury vocabulary; 'Glasgeländer-Umfassung' is slightly awkward."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with v1.5 default when no class supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exklusives Penthouse mit 4 Schlafzimmern und Panoramablick in Belair' is 9 words; only 4 hashtags 'PenthouseLiving CityViewLuxembourg BelairResidence ModernRenovation' (within 3-5 range)."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Exklusives Penthouse' in title borders on hyperbole but is acceptable; no exclamation marks or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; describes only property and 'grüne Umgebung'."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "All concrete claims ('Gaggenau', 'Carrara-Marmor', '180-Grad-Sicht') are supported by photo_analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, Gaggenau, Carrara marble, 180-degree south-facing terrace, elevator, parking, cellar."
+    }
+  },
+  "overall_pass": true
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:30:07.642Z",
+  "output": {
+    "title": "Spacious 3-Bedroom Duplex with Terrace and Park Views in Cloche d'Or",
+    "description": "This 180 m² duplex apartment offers a contemporary living experience in the heart of Luxembourg's Cloche d'Or district. The living area features a double-volume ceiling, creating an airy and bright atmosphere enhanced by panoramic glazing that looks out onto the adjacent new park. Engineered oak flooring underlines the modern finishes throughout this newly built residence.\n\nThe kitchen is designed with sociability in mind, fully open to the dining and living spaces. It is equipped with Siemens appliances, quartz worktops, and soft-close cabinets, supporting both functionality and style. The open floor plan encourages seamless interaction across the main living areas.\n\nOn the upper floor, the master bedroom provides a private retreat with fitted wardrobes and direct access to a wraparound terrace with wood decking. This outdoor space enjoys views over the shopping center and benefits from evening sun exposure, extending living space for relaxation or entertaining.\n\nAdditional features include two bathrooms, elevator access, parking, and a cellar for storage. The apartment is situated within a modern development that integrates residential comfort with proximity to Cloche d'Or's business district, shopping amenities, and parklands. This location offers convenient urban living within Luxembourg's latest showcase district.",
+    "highlights": [
+      {
+        "text": "180 m² duplex with double-volume living room",
+        "icon": "square"
+      },
+      {
+        "text": "Siemens-equipped open-plan kitchen with quartz worktops",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Three bedrooms including upper-floor master with terrace access",
+        "icon": "bed"
+      },
+      {
+        "text": "Wraparound terrace with wood decking and city views",
+        "icon": "sun"
+      },
+      {
+        "text": "Elevator access and parking included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cellar providing additional storage space",
+        "icon": "archive"
+      },
+      {
+        "text": "Views overlooking new park and shopping center",
+        "icon": "trees"
+      },
+      {
+        "text": "New-build residence in modern Cloche d'Or district",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "UrbanLiving",
+      "ParkView",
+      "NewBuildDuplex",
+      "OpenPlanKitchen",
+      "TerraceLife"
+    ]
+  }
+}

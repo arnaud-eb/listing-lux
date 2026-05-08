@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "\"Eichenparkett\" invents oak — input said only \"engineered wood flooring\"; otherwise faithful."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 145 m², 3 Schlafzimmer, 2 Badezimmer, Balkon, Keller, Stellplatz, Aufzug, Bulthaup, Kochinsel, Regendusche."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Mostly natural German; \"setzen eine gemütliche und hochwertige Akzentuierung\" is awkward phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"Geschäftsviertel Kirchberg, unweit der Europäischen Institutionen, Philharmonie und des MUDAM\" fits LU corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with v1.5 default when class is absent."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title \"Moderner 3-Zimmer-Neubau mit Balkon und Parkblick im Geschäftsviertel Kirchberg\" is 10 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; \"besticht durch eine zweigeschossige Deckenhöhe\" is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; \"internationalen Schulen\" describes neighborhood amenities."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "\"Eichenparkett\" (oak parquet) and \"weißen Porzellanfliesen\" (white) add specifics not in inputs (engineered wood, porcelain tile without color)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, Bulthaup, elevator, cellar, parking; minor divergences are flooring type (DE Eichenparkett, FR bois massif stratifié, EN engineered wood) and FR adding 'sous-sol' for parking."
+    }
+  },
+  "overall_pass": false
+}

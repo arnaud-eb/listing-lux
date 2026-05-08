@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:12.467Z",
+  "output": {
+    "title": "Maison semi-mitoyenne de 195 m² avec jardin et parking privé",
+    "description": "Cette maison semi-mitoyenne construite dans les années 1990 combine fonctionnalité et confort sur une surface habitable d'environ 195 m². Sa façade en briques et son jardin orienté plein sud garantissent lumière et intimité. L'entrée donne accès à un séjour lumineux avec cheminée, ouvert sur une salle à manger conviviale, offrant un espace de vie fluide et accessible au jardin.\n\nLa cuisine traditionnelle équipée de meubles en bois et d'un espace petit-déjeuner favorise une utilisation agréable et pratique au quotidien. Quatre chambres bien agencées et deux salles de bains complètent le logement, apportant des espaces distincts pour la vie privée.\n\nÀ l'extérieur, le jardin orienté sud est agrémenté d'une terrasse et d'une pelouse simple à entretenir. Un parking privé et une cave viennent compléter ce bien apprécié pour son entretien soigné et son aménagement fonctionnel dans un secteur résidentiel calme.",
+    "highlights": [
+      {
+        "text": "Surface habitable d'environ 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Séjour avec cheminée et accès direct au jardin",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine équipée avec coin petit-déjeuner",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin et terrasse orientés plein sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking privé accessible",
+        "icon": "car"
+      },
+      {
+        "text": "Cave indépendante disponible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SemiMitoyenne",
+      "JardinSud",
+      "Cheminée",
+      "CuisineTraditionnelle",
+      "ParkingPrivé"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:37.563Z",
+  "output": {
+    "title": "Bright 1-Bedroom Apartment with South-Facing Living Area in Bonnevoie",
+    "description": "This 52 m² apartment offers a straightforward and functional living environment in the heart of Bonnevoie. The living room receives ample natural light through a south-facing window and features laminate flooring paired with white walls, creating a neutral and inviting atmosphere. Adjacent to the living space is a compact kitchen with a traditional galley layout, white cabinetry, and ceramic tile flooring, providing practical usability for daily cooking needs.\n\nThe bathroom is properly maintained and includes a full-size shower-tub combination with white tile and a single vanity unit, accommodating essential requirements efficiently. Additional storage is available with a separate cellar, located in the building’s basement, enhancing practicality.\n\nSituated in Bonnevoie, this apartment benefits from a multicultural neighborhood with a lively market and diverse dining options. The area is known for its affordability compared to other central localities and maintains convenient connections to the central station, supporting accessibility throughout the city.",
+    "highlights": [
+      {
+        "text": "52 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "South-facing living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Functional galley kitchen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Full-size shower-tub combo",
+        "icon": "bath"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Laminate flooring in living area",
+        "icon": "home"
+      },
+      {
+        "text": "Located in Bonnevoie neighborhood",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SouthFacing",
+      "CompactLiving",
+      "FunctionalLayout",
+      "Bonnevoie",
+      "CityAccess"
+    ]
+  }
+}

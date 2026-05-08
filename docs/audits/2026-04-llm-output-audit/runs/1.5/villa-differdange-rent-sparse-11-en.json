@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:32:25.152Z",
+  "output": {
+    "title": "Spacious 4-Bedroom Villa with Garden and Double Garage",
+    "description": "This detached villa, constructed in the 1970s, offers approximately 200 m² of living space within a well-maintained residential setting. The stone façade complements the traditional architectural style, and the property includes private grounds featuring a front lawn and a sizable garden.\n\nInside, the living room retains original features such as wood paneling and a stone fireplace, providing a warm and inviting atmosphere with views over the garden area. The accommodation comprises four bedrooms and two bathrooms, suitable for varied domestic arrangements.\n\nOutdoor amenities include a mature private garden with a large lawn, mature trees, and a patio area, presenting an opportunity for outdoor activities and relaxation. Additional functional features include a terrace, cellar storage, and parking facilities with a double garage.\n\nThe property’s design and setting reflect its established residential character, offering a balanced combination of indoor and outdoor living spaces.",
+    "highlights": [
+      {
+        "text": "200 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Original stone fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Mature private garden with patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Double garage parking",
+        "icon": "car"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Terrace area for outdoor use",
+        "icon": "door-open"
+      }
+    ],
+    "hashtags": [
+      "TraditionalArchitecture",
+      "DoubleGarage",
+      "MatureGarden",
+      "OriginalFeatures",
+      "PrivateTerrace"
+    ]
+  }
+}

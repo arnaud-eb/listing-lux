@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:30:16.871Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vista al valle de la Alzette",
+    "description": "Este penthouse de 175 m² se sitúa en el histórico barrio de Grund, ubicado en el pintoresco valle de la Alzette, una zona reconocida por su ambiente característico y su proximidad a áreas declaradas Patrimonio de la Humanidad por la UNESCO.\n\nLa propiedad ha sido completamente renovada, integrando muros de piedra original y techos abovedados junto con acabados contemporáneos que aportan luminosidad y calidez. La amplia sala de estar ofrece vistas directas al valle, realzadas por un suelo de amplias tablas de roble y una atmósfera que combina lo histórico con lo actual.\n\nLa cocina se presenta equipada con mobiliario de madera maciza y electrodomésticos de acero inoxidable, incluidos un rango profesional y encimeras de mármol, que aportan funcionalidad y estilo. Tres dormitorios, entre ellos un espacio con ventana abuhardillada y vigas expuestas, brindan vistas adicionales del entorno.\n\nUna terraza privada con pavimento de piedra y barandillas de hierro forjado completa esta oferta, proporcionando un espacio exterior exclusivo para disfrutar del paisaje y la histórica ubicación.\n\nEl edificio dispone de ascensor, plaza de aparcamiento y un sótano independiente para almacenamiento.\n\n",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "3 dormitorios con vistas al valle",
+        "icon": "bed"
+      },
+      {
+        "text": "2 baños renovados",
+        "icon": "bath"
+      },
+      {
+        "text": "Terraza privada con vistas panorámicas",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Sótano independiente",
+        "icon": "archive"
+      },
+      {
+        "text": "Ubicación en el barrio histórico de Grund",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "PenthouseGrund",
+      "ValleAlzette",
+      "TerrazaPrivada",
+      "RenovaciónHistórica",
+      "VistasPanorámicas"
+    ]
+  }
+}

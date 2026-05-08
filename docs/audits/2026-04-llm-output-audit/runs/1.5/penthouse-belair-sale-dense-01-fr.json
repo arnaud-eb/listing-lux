@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:28:52.384Z",
+  "output": {
+    "title": "Penthouse rénové de 220 m² avec terrasse et vue panoramique sur la ville",
+    "description": "Ce penthouse de 220 m², récemment rénové, est situé dans le quartier résidentiel prisé de Belair. Il offre un cadre de vie alliant confort urbain et luminosité naturelle grâce à ses baies vitrées du sol au plafond qui illuminent un séjour spacieux et contemporain. Le parquet en chêne et la cheminée à foyer ouvert viennent souligner l'élégance des espaces de vie ouverts.\n\nLa cuisine design est équipée d’appareils Gaggenau haut de gamme et complétée par un îlot central en marbre de Carrare, intégrant également une cave à vins. Cet agencement est adapté à la gastronomie et à la convivialité.\n\nLa suite parentale dispose d’un dressing, d’une salle de bains attenante, ainsi que d’un accès direct à une terrasse privative, offrant un prolongement extérieur avec vue dégagée. Les trois autres chambres bénéficient également d’espaces généreux et fonctionnels.\n\nL’appartement est complété par trois salles de bains, une cave privative et bénéficie d’un ascenseur desservant directement les niveaux habités. La vaste terrasse exposée plein sud, avec son revêtement en composite et sa balustrade en verre, offre une vue panoramique à 180 degrés sur la ville de Luxembourg, ajoutant un espace extérieur remarquable.\n\nSitué à Belair, quartier calme et verdoyant réputé pour ses villas et son environnement soigné, ce bien se trouve à proximité immédiate du centre-ville, conciliant tranquillité et accès urbain direct.",
+    "highlights": [
+      {
+        "text": "Surface généreuse de 220 m² répartie sur un penthouse rénové",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres dont suite parentale avec terrasse privée",
+        "icon": "bed"
+      },
+      {
+        "text": "Trois salles de bains aux finitions contemporaines",
+        "icon": "bath"
+      },
+      {
+        "text": "Cuisine équipée Gaggenau avec îlot central en marbre de Carrare",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse sud avec vue panoramique à 180° sur la ville",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée au bois dans un séjour baigné de lumière naturelle",
+        "icon": "flame"
+      },
+      {
+        "text": "Ascenseur desservant directement le penthouse",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking privative et cave incluse",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "PenthouseContemporain",
+      "VuePanoramique",
+      "CuisineGastronomique",
+      "TerrasseSud",
+      "BelairLuxembourg"
+    ]
+  }
+}

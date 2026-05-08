@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'lichtdichten Vorhängen' — inputs specify 'blackout blinds' (Rollos/Jalousien), not curtains; minor factual drift."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions '95 m²', '2 Schlafzimmer', '1 Badezimmer', 'Limpertsberg', balcony, elevator, cellar, furnished, renovated, induction; omits explicit rental framing but covers nearly all features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Diese 95 m² große Wohnung befindet sich in einem gepflegten Mehrparteienhaus' reads as natural German prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU/DE real-estate vocabulary like 'Mehrparteienhaus', 'bezugsfertig', 'Wohnfläche' fits the corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely as no class was supplied — 'Ein Kellerraum steht zur zusätzlichen Nutzung zur Verfügung.'"
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Modernisierte 2-Zimmer-Wohnung mit Balkon und Aufzug im begehrten Limpertsberg' fits length; hashtags 'Renoviert Limpertsberg Balkon Aufzug Möbliert' are space-separated, not CamelCase with # markers."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'im beliebten Stadtteil Limpertsberg' and 'begehrten Limpertsberg' are mild marketing, no exclamation marks or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'Nähe zur Universität' is a factual location amenity, not occupant targeting."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "'Théâtre du Centaure und den Park Edmond Klein' and 'Nähe zur Universität' are named places not present in inputs — concrete invented landmarks."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only DE provided, so trivially consistent."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Hallucinated named cultural venues and a park ('Théâtre du Centaure', 'Park Edmond Klein') trigger hard-fail on hallucination. Also no rent framing despite monthly price."
+}

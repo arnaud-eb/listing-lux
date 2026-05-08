@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"This 130 m² row house... three bedrooms and one bathroom\" matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 130 m², 3 bed/1 bath, garden, parking, cellar; neighborhood Mamer is not mentioned."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"indicating potential for modernization to suit personal tastes\" reads natural English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "\"row house\" and \"dedicated parking space\" fit; \"residential locality characterized by similar 1980s housing\" is somewhat clunky and not luxury-corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No energy class mentioned or invented."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title \"130 m² 3-Bedroom Row House with Private Garden and Parking\" is ~11 words, missing neighborhood; hashtags \"RowHouse PrivateGarden ParkingIncluded StorageCellar 1980sArchitecture\" CamelCase, 5, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"provides a balanced indoor and outdoor living environment\" — no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references anywhere in the text."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "\"residential locality characterized by similar 1980s housing\" — no invented landmarks or transit."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/EN/DE all agree: 130 m², 3 bedrooms, 1 bathroom, private rear garden, parking, cellar, 1980s row house, no neighborhood claim."
+    }
+  },
+  "overall_pass": true
+}

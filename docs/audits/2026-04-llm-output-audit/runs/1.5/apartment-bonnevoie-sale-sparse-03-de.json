@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:26.563Z",
+  "output": {
+    "title": "Helles 1-Zimmer-Apartment mit Süd-Ausrichtung und separatem Keller in Bonnevoie",
+    "description": "Diese 52 m² große Apartmentwohnung befindet sich in einem gewachsenen Wohnviertel und überzeugt durch eine durchdachte Grundrissgestaltung. Der Wohnraum ist mit einem hellen Laminatboden ausgestattet und verfügt über ein Fenster mit Süd-Ausrichtung, das den Raum mit natürlichem Licht versorgt.\n\nDie Küche präsentiert sich in einem funktionalen, klassischen Stil mit weißen Küchenfronten und keramischen Bodenfliesen. Sie ist als kompakte, praktische Kochzeile ausgeführt, was eine effiziente Nutzung des Raumes zulässt.\n\nDas Badezimmer ist übersichtlich gestaltet und bietet eine Kombination aus Dusche und Badewanne. Die weiße Kachelverkleidung und ein einzelnes Waschbecken komplettieren die Ausstattung. Ein separater Kellerraum ist der Wohnung zugeordnet und bietet zusätzlichen Stauraum.\n\nDas Stadtviertel Bonnevoie zeichnet sich durch seine zentrale Lage mit guter Anbindung an den Hauptbahnhof aus. Es verfügt über eine vielfältige gastronomische Szene sowie einen belebten Markt. Die Lage bietet eine urbane Atmosphäre mit multikulturellem Umfeld und erschwinglicherem Preissegment für die Region.",
+    "highlights": [
+      {
+        "text": "52 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "Südlich ausgerichtetes Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "Funktionale Küche mit klassischer Ausstattung",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Badezimmer mit Badewanne und Dusche",
+        "icon": "bath"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Zentrale Lage in Bonnevoie",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Gute Anbindung an den Hauptbahnhof",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "SuedAusrichtung",
+      "KompakteKueche",
+      "Stadtwohnung",
+      "Bonnevoie",
+      "SeparaterKeller"
+    ]
+  }
+}

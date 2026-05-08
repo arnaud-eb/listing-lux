@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"Wohnfläche von etwa 130 m² und bietet drei Schlafzimmer sowie ein Badezimmer\" matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 130 m², 3 Schlafzimmer, 1 Bad, Garten, Keller, Parkplatz; Mamer neighborhood absent."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"Große Terrassentüren schaffen den Bezug zum privaten Garten\" reads naturally."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"Reiheneinfamilienhaus\", \"PKW-Stellplatz\", \"Kellerraum\" are appropriate LU/DE terms."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE/Energieklasse mentioned or invented."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title \"Reiheneinfamilienhaus mit 3 Schlafzimmern und privatem Garten\" is only 7 words and lacks neighborhood; hashtags fine but title borderline short."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"bietet eine zurückhaltende Wohnatmosphäre\" — no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "\"ohne weitere spezifische Nachbarschaftsinformationen\" — explicitly avoids inventing details."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/EN/DE all agree: 130 m², 3 bedrooms, 1 bathroom, private rear garden, parking, cellar, 1980s row house, no neighborhood claim."
+    }
+  },
+  "overall_pass": true
+}

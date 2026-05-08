@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"Quatre chambres bien agencées et deux salles de bains\" matches inputs (4 bed, 2 bath, 195 m²)."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/baths/sqm, garden, parking, cellar, terrace, fireplace, breakfast nook, but omits Bertrange neighborhood name in prose: \"un secteur résidentiel calme\"."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"combine fonctionnalité et confort sur une surface habitable d'environ 195 m²\" reads naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"maison semi-mitoyenne\" and \"jardin orienté plein sud\" align with athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely as no class was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title \"Maison semi-mitoyenne de 195 m² avec jardin et parking privé\" lacks neighborhood (Bertrange); 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"bien apprécié pour son entretien soigné\" — restrained, no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "\"des espaces distincts pour la vie privée\" — no demographic targeting."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "\"construite dans les années 1990\" extrapolates from photo-analysis style label \"1990s Luxembourg residential\" — borderline, treated as supported, but no Bertrange-specific invented claims."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN/DE all agree on 195 m², 4 beds, 2 baths, but DE title labels it \"Einfamilienhaus\" while FR/EN and DE body call it semi-detached/Doppelhaus — typology mismatch."
+    }
+  },
+  "overall_pass": false
+}

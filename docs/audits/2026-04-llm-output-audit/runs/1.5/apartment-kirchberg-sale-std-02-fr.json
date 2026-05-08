@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:14.946Z",
+  "output": {
+    "title": "Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg",
+    "description": "Situé dans le quartier moderne de Kirchberg, cet appartement neuf de 145 m² offre un cadre de vie lumineux et contemporain. Le séjour, doté d’une double hauteur sous plafond et d’un parquet en bois massif stratifié, est orienté plein sud et bénéficie d’un apport naturel abondant grâce à ses grandes fenêtres. L’espace ouvert favorise fluidité et convivialité, s’ouvrant sur la salle à manger et la cuisine attenante.\n\nLa cuisine contemporaine est équipée de meubles Bulthaup allemands, d’un plan de travail en pierre et d’une plaque à induction, complétée par un îlot central avec bar pour les repas informels. Les matériaux et aménagements choisis soulignent la fonctionnalité et l’élégance discrète de la pièce.\n\nLe balcon équipé d’une balustrade en verre offre une vue dégagée sur le parc de Kirchberg. Ce lieu extérieur orienté pour profiter de la tranquillité environnante constitue un prolongement naturel de l’espace de vie intérieur.\n\nLes deux salles de bains, dont une suite parentale, se distinguent par un carrelage en porcelaine, un chauffage au sol et une douche à l’italienne avec pomme de pluie pour un confort quotidien. L’appartement comprend également une cave et bénéficie d’un emplacement de parking en sous-sol.\n\nL’ensemble est desservi par un ascenseur et s’intègre dans un immeuble récent situé dans un quartier dynamique reconnu pour ses institutions européennes, ses équipements culturels comme la Philharmonie et le MUDAM ainsi que ses écoles internationales.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 145 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres et deux salles de bains modernes",
+        "icon": "bed"
+      },
+      {
+        "text": "Cuisine équipée Bulthaup avec îlot central",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balcon calme avec vue sur le parc de Kirchberg",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking inclus dans le sous-sol sécurisé",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur desservant l’étage",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cave privative attenante",
+        "icon": "archive"
+      },
+      {
+        "text": "Orientation sud avec lumière naturelle abondante",
+        "icon": "sun"
+      }
+    ],
+    "hashtags": [
+      "BalconVueParc",
+      "CuisineBulthaup",
+      "DoubleHauteur",
+      "Ascenseur",
+      "ParkingSouterrain"
+    ]
+  }
+}

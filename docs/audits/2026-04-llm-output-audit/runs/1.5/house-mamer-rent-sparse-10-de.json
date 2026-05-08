@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:54.320Z",
+  "output": {
+    "title": "Reiheneinfamilienhaus mit 3 Schlafzimmern und privatem Garten",
+    "description": "Dieses 1980er-Jahre Reiheneinfamilienhaus umfasst eine Wohnfläche von etwa 130 m² und bietet drei Schlafzimmer sowie ein Badezimmer. Die Fassade des Hauses präsentiert sich in neutralem Farbton und wird von einem kleinen Vorgarten abgerundet. Das Erscheinungsbild des Gebäudes ist gepflegt und vermittelt einen ruhigen, wohnlichen Charakter.\n\nIm Inneren zeigt sich das Wohnzimmer mit einem beige gehaltenen Teppichboden und einem Bereich für einen Röhrenfernseher. Große Terrassentüren schaffen den Bezug zum privaten Garten und sorgen für Tageslicht im Raum. Das Interieur ist funktional und entspricht einem älteren Ausstattungsstand, der Raum für individuelle Modernisierungen lässt.\n\nDer rückwärtige Garten bietet eine Rasenfläche, die von einem Holzzaun eingefriedet ist, sowie einen kleinen Geräteschuppen. Diese Außenanlage ist privat und gut instand gehalten. Zur Immobilie gehört zudem ein Kellerraum sowie ein zugehöriger PKW-Parkplatz.\n\nDas Haus steht in einem ruhigen Wohngebiet und ist Teil einer Reihenhauszeile. Die Umgebung zeichnet sich durch eine vergleichbare Bauweise aus und bietet eine zurückhaltende Wohnatmosphäre ohne weitere spezifische Nachbarschaftsinformationen.",
+    "highlights": [
+      {
+        "text": "Reiheneinfamilienhaus aus den 1980er Jahren",
+        "icon": "building-2"
+      },
+      {
+        "text": "Wohnfläche ca. 130 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Drei Schlafzimmer und ein Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Privater, gepflegter Garten mit Rasenfläche",
+        "icon": "trees"
+      },
+      {
+        "text": "Separater Kellerraum vorhanden",
+        "icon": "archive"
+      },
+      {
+        "text": "PKW-Stellplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Terrassentüren mit Gartenzugang",
+        "icon": "door-open"
+      }
+    ],
+    "hashtags": [
+      "Reiheneinfamilienhaus",
+      "PrivaterGarten",
+      "DreiSchlafzimmer",
+      "Kellerraum",
+      "Parkplatz"
+    ]
+  }
+}

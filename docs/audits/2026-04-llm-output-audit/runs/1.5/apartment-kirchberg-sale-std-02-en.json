@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:29:21.647Z",
+  "output": {
+    "title": "Contemporary 3-Bedroom Apartment with Balcony and City Views in Kirchberg",
+    "description": "This newly constructed apartment of 145 m² presents a modern living environment in Luxembourg's Kirchberg district. The open-plan living room benefits from double-height ceilings and south-facing windows, providing abundant natural light throughout the day. Engineered wood flooring enhances the contemporary atmosphere, seamlessly connecting to the dining area for versatile living arrangements.\n\nThe kitchen is fitted with Bulthaup cabinetry paired with an induction cooktop and a central island with a stone worktop and breakfast bar, combining minimalist design with high functionality. Adjacent to the kitchen, the private balcony features a glass balustrade and tile flooring, offering tranquil views over Kirchberg park, ideal for morning coffee or quiet relaxation.\n\nThe apartment comprises three bedrooms and two bathrooms, including a spa-like ensuite equipped with a walk-in rain shower, double vanity, underfloor heating, and porcelain tiles. Additional amenities include an elevator, cellar storage, and reserved parking, supporting convenience and practicality.\n\nSituated in the heart of Kirchberg, the residence is positioned within Luxembourg's business district known for modern architecture and proximity to cultural landmarks such as the Philharmonie and MUDAM. This location provides access to international schools and key EU institutions, characteristic of the district's urban setting.",
+    "highlights": [
+      {
+        "text": "145 m² of newly built living space",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcony overlooking Kirchberg park",
+        "icon": "trees"
+      },
+      {
+        "text": "Bulthaup kitchen with central island",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Spa-style ensuite with walk-in rain shower",
+        "icon": "bath"
+      },
+      {
+        "text": "Elevator access within the building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Reserved parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Separate cellar storage room",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "BulthaupKitchen",
+      "KirchbergViews",
+      "ModernApartment",
+      "ParkFacing",
+      "NewBuildLiving"
+    ]
+  }
+}

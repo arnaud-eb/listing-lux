@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:39.710Z",
+  "output": {
+    "title": "Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette",
+    "description": "This 78 m² apartment in Esch-sur-Alzette offers a functional layout with two bedrooms and a single bathroom, arranged to maximize space and comfort. The living room benefits from natural light through balcony access, featuring neutral beige walls and laminate flooring that complement various interior styles.\n\nAdjacent to the living room, the compact kitchen is designed in an L-shape with white cabinetry, providing space for essential appliances and a small dining area suitable for informal meals. The practical configuration supports ease of movement and meal preparation.\n\nA small tiled balcony extends outdoor living possibilities, offering a modest yet private area for relaxation. The apartment includes a parking space, ensuring convenient vehicle access. An elevator serves the building, enhancing accessibility.\n\nSituated in Luxembourg's second-largest city, Esch-sur-Alzette is known for its evolving urban character, enriched by the presence of the university and the Belval development. The area features a cultural scene and offers comparatively affordable property prices within Luxembourg's residential market.",
+    "highlights": [
+      {
+        "text": "78 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "Two bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "One bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Balcony accessible from living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact L-shape kitchen with dining area",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator in building",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "CompactLiving",
+      "BalconyAccess",
+      "EschSurAlzette",
+      "ParkingIncluded",
+      "FunctionalLayout"
+    ]
+  }
+}

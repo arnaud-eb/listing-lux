@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.5",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-08T05:31:24.052Z",
+  "output": {
+    "title": "Traditional Semi-Detached 4-Bedroom House with Garden and Parking",
+    "description": "This 195 m² semi-detached house, constructed in the 1990s, presents a well-maintained facade with traditional brickwork and a small front garden. The property includes a private driveway, providing convenient parking space. The south-facing rear garden offers a tranquil outdoor area featuring a lawn and a private patio, enhancing natural light and usability throughout the day.\n\nInside, the living room is arranged in an open-plan format connecting seamlessly to the dining area. It features tile flooring and a fireplace, contributing to an inviting atmosphere. Double doors provide direct access to the garden, integrating indoor and outdoor living spaces.\n\nThe kitchen showcases a traditional design with wood cabinetry and a tiled splashback. It includes a freestanding range and a breakfast nook, facilitating functional family meal preparation and casual dining. The layout supports versatile daily use.\n\nAdditional interior amenities comprise four bedrooms and two bathrooms, accommodating varied residential needs. A cellar offers separate storage space beneath the building, complementing the living areas.\n\nThe property balances practical features with classic residential design, situated in an established neighborhood typical of Luxembourg’s 1990s housing developments.",
+    "highlights": [
+      {
+        "text": "195 m² semi-detached house built in the 1990s",
+        "icon": "home"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Living room with fireplace and garden access",
+        "icon": "sofa"
+      },
+      {
+        "text": "Traditional kitchen with breakfast nook",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "South-facing garden with private patio",
+        "icon": "sun"
+      },
+      {
+        "text": "Private driveway parking",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "TraditionalArchitecture",
+      "OpenPlanLiving",
+      "SouthFacingGarden",
+      "FamilySized",
+      "PrivateParking"
+    ]
+  }
+}
