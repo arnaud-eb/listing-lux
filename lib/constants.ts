@@ -51,8 +51,19 @@ export const PROPERTY_TYPES = [
   { value: 'penthouse', label: 'Penthouse' },
   { value: 'studio', label: 'Studio' },
   { value: 'duplex', label: 'Duplex' },
+  { value: 'triplex', label: 'Triplex' },
+  { value: 'loft', label: 'Loft' },
+  { value: 'attic', label: 'Attic apartment' },
   { value: 'villa', label: 'Villa' },
 ] as const
+
+/** Luxembourg energy passport (CPE) classes. Per RGD 30 Nov 2007 (Guichet.lu). */
+export const CPE_CLASSES = ['A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'] as const
+export type CpeClass = (typeof CPE_CLASSES)[number]
+
+/** Listing transaction type. Drives copy register, CTA vocabulary, and legal disclosures. */
+export const LISTING_KINDS = ['sale', 'rent'] as const
+export type ListingKind = (typeof LISTING_KINDS)[number]
 
 export type PropertyTypeValue = (typeof PROPERTY_TYPES)[number]['value']
 
