@@ -14,7 +14,7 @@ import { propertyFormSchema } from "@/lib/schemas/property";
 import { photoAnalysisSchema, type PhotoAnalysis } from "@/lib/schemas/photo-analysis";
 import {
   propertyAggregatesSchema,
-  type PropertyAggregates,
+  type DerivedAggregates,
 } from "@/lib/schemas/property-aggregates";
 import { PROPERTY_TYPES, FEATURE_OPTIONS } from "@/lib/constants";
 
@@ -120,19 +120,20 @@ export async function analyzePhoto(photoUrl: string) {
 
 export async function derivePropertyAggregates(
   analyses: PhotoAnalysis[],
-): Promise<PropertyAggregates> {
+): Promise<DerivedAggregates> {
   // Read the CPE classes extracted by `analyzePhoto` directly from the photo analyses
   // — if the agent uploaded a CPE certificate, the vision step set these. We pick the
-  // first non-null occurrence; the agent can override in the form. We do NOT ask the
-  // aggregator LLM to infer them, since "infer from interior photos" would be exactly
-  // the hallucination the rubric §6 anchor 1 forbids.
+  // first non-null occurrence; the agent can override in the form. The aggregator LLM
+  // does NOT see these fields (they're not in propertyAggregatesSchema) — letting the
+  // LLM emit a class would risk inferring it from build year or materials, which the
+  // rubric §6 anchor 1 forbids.
   const cpeClass =
     analyses.find((a) => a.cpe_class != null)?.cpe_class ?? null;
   const thermalClass =
     analyses.find((a) => a.thermal_insulation_class != null)
       ?.thermal_insulation_class ?? null;
 
-  if (!Array.isArray(analyses) || analyses.length === 0) {
+  if (analyses.length === 0) {
     return {
       property_type: "apartment",
       features: [],
@@ -163,8 +164,7 @@ export async function derivePropertyAggregates(
           "You determine the overall property type and visible amenities for a real estate listing based on photo summaries. " +
           `Available property types: ${propertyTypeList}. ` +
           `Available amenities (id and label): ${featureList}. ` +
-          "Pick the single best-fit property type. Only include amenities that are clearly evidenced by the photo summaries — do not guess or infer beyond what's described. " +
-          "Leave cpe_class and thermal_insulation_class as null — they are filled separately from CPE certificate photo analyses, never inferred from interior photos.",
+          "Pick the single best-fit property type. Only include amenities that are clearly evidenced by the photo summaries — do not guess or infer beyond what's described.",
       },
       {
         role: "user",
@@ -173,8 +173,6 @@ export async function derivePropertyAggregates(
     ],
   });
 
-  // Override whatever the LLM wrote for the energy classes with the values read directly
-  // from the CPE certificate photo (if any). The aggregator should never produce these.
   return {
     ...object,
     cpe_class: cpeClass,

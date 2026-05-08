@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PROPERTY_TYPES, FEATURE_OPTIONS, CPE_CLASSES } from "@/lib/constants";
+import { PROPERTY_TYPES, FEATURE_OPTIONS, type CpeClass } from "@/lib/constants";
 
 const propertyTypeValues = PROPERTY_TYPES.map((t) => t.value) as [
   string,
@@ -8,6 +8,13 @@ const propertyTypeValues = PROPERTY_TYPES.map((t) => t.value) as [
 
 const featureIds = FEATURE_OPTIONS.map((f) => f.id) as [string, ...string[]];
 
+/**
+ * What the LLM emits. Kept lean — `cpe_class` and `thermal_insulation_class` are NOT
+ * part of this schema because OpenAI's strict structured-output mode rejects optional
+ * fields, and a `.nullable()` field would force the LLM to emit a class for properties
+ * with no CPE certificate (the rubric §6 anchor 1 forbids this). The CPE values are
+ * read separately from `PhotoAnalysis[].cpe_class` in `derivePropertyAggregates`.
+ */
 export const propertyAggregatesSchema = z.object({
   property_type: z
     .enum(propertyTypeValues)
@@ -19,25 +26,12 @@ export const propertyAggregatesSchema = z.object({
     .describe(
       "Visible amenities. Only include items that are clearly evidenced by the photos — do not guess.",
     ),
-  /**
-   * The energy passport class extracted across the photo set. Set ONLY when one of the
-   * photos is a CPE certificate that displays the class. Null otherwise — never inferred
-   * from build year, materials, or other indirect signals.
-   */
-  cpe_class: z
-    .enum(CPE_CLASSES)
-    .nullable()
-    .optional()
-    .describe(
-      "Energy performance class read off a CPE certificate photo, if present. Null otherwise.",
-    ),
-  thermal_insulation_class: z
-    .enum(CPE_CLASSES)
-    .nullable()
-    .optional()
-    .describe(
-      "Thermal insulation class read off the same CPE certificate, if present. Null otherwise.",
-    ),
 });
 
 export type PropertyAggregates = z.infer<typeof propertyAggregatesSchema>;
+
+/** What `derivePropertyAggregates` returns: schema fields + post-aggregation CPE reads. */
+export interface DerivedAggregates extends PropertyAggregates {
+  cpe_class: CpeClass | null;
+  thermal_insulation_class: CpeClass | null;
+}

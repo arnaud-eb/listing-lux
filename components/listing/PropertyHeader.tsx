@@ -253,8 +253,13 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
 
   return (
     <>
-      <h1 className="font-serif text-3xl font-bold text-navy-deep capitalize">
-        {property.property_type} {t("in")} {neighborhoodName}
+      <h1 className="font-serif text-3xl font-bold text-navy-deep">
+        {/* Capitalize only the first word — the property_type id is lowercase ("apartment"),
+            but `t("in")` resolves to a connector ("in", "à") that must stay lowercase.
+            Using CSS `capitalize` here breaks FR ("Apartment À Belair"). */}
+        {property.property_type.charAt(0).toUpperCase() +
+          property.property_type.slice(1)}{" "}
+        {t("in")} {neighborhoodName}
       </h1>
       <div className="flex items-center gap-3 mt-2 text-sm text-gray-500">
         <span>

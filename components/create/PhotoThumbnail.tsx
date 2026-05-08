@@ -23,11 +23,14 @@ export default memo(function PhotoThumbnail({
 
   return (
     <div className="relative aspect-square rounded-lg overflow-hidden bg-slate-200 group">
-      {/* Prefer local blob (instant, in-memory) — fall back to remote for restored drafts */}
+      {/* Prefer local blob (instant, in-memory) — fall back to remote for restored drafts.
+          The image is decorative inside the thumbnail: status (uploading/analyzing/error)
+          is announced by the overlay's `aria-label`/`role`, the room-type pill carries the
+          per-photo label, and the surrounding remove-button has its own aria-label. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={photo.localPreviewUrl || photo.publicUrl || ""}
-        alt={t("ariaRemove")}
+        alt=""
         className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105"
         draggable={false}
       />

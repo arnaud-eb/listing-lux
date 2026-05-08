@@ -44,11 +44,20 @@ export function useListingGeneration(
   propertyId: string,
   initialListings: Listing[],
   property: Pick<Property, "property_type" | "neighborhood">,
+  /**
+   * Preferred starting language for the tab and the generation queue. Pass the user's
+   * site locale (`fr` / `en`) when available; falls back to `de` otherwise (the first
+   * language in LANGUAGES). The active tab does NOT auto-advance during generation —
+   * once set, it stays put while other languages stream in the background.
+   */
+  preferredLanguage?: Language,
 ) {
   const [state, setState] = useState<GenerationState>(() =>
     initState(initialListings),
   );
-  const [activeTab, setActiveTab] = useState<Language>("de");
+  const [activeTab, setActiveTab] = useState<Language>(
+    preferredLanguage ?? "de",
+  );
   const [initialGenerationDone, setInitialGenerationDone] = useState(
     initialListings.length > 0,
   );
@@ -58,7 +67,7 @@ export function useListingGeneration(
   stateRef.current = state;
 
   // Track which language is currently being generated
-  const currentLangRef = useRef<Language>("de");
+  const currentLangRef = useRef<Language>(preferredLanguage ?? "de");
   // Track the generation queue for sequential generation
   const queueRef = useRef<Language[]>([]);
   const completedCountRef = useRef(0);
