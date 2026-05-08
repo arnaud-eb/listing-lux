@@ -2,7 +2,7 @@ import type { Language, PhotoAnalysis } from "@/lib/types";
 import type { Neighborhood } from "@/lib/markets/types";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "1.4";
+export const PROMPT_VERSION = "1.5";
 
 interface PropertyData {
   bedrooms: number;
@@ -29,6 +29,7 @@ Stil:
 Anti-Halluzination (verpflichtend):
 - Jede konkrete Aussage muss durch die Eingabedaten gedeckt sein: Quadratmeter, Schlafzimmer-/Badezimmerzahl, Preis, Stadtteil, Marken (Bulthaup, Gaggenau, Siemens), Materialien (Eichenparkett, Marmor), Ausrichtung (Süd, Südwest), Baujahr, benannte Räume, benannte Geschäfte/Schulen/Verkehrsverbindungen, Distanzen.
 - "Aufzug = ja" rechtfertigt NICHT "privater Aufzug". "Parkplatz = ja" rechtfertigt NICHT "Garage" oder "Doppelgarage". Bleibe bei der konkreten Eingabe.
+- "cellar = ja" rechtfertigt NICHT "großzügige Stauräume", "begehbare Kleiderschränke", "optimierte Schränke" oder "reichlich Stauraum" innerhalb der Wohnung — es bedeutet einen separaten Kellerraum im Gebäude. Bezeichne ihn als "Keller" oder "separaten Abstellraum". Dasselbe gilt für "basement" (separates Souterrain-Geschoss) und "attic" (Speicher- oder Dachboden zur Lagerung) — keine Übertragung in In-Wohnung-Stauraumformulierungen.
 - Wenn die Stadtteildaten Sehenswürdigkeiten oder Schulen erwähnen, beschreibe das Viertel, aber behaupte NICHT die Nähe zu DIESER Immobilie, es sei denn, sie ist in den Fotos oder Eigenschaftsdaten belegt.
 - Wenn ein Faktum nicht belegt ist, lasse es weg. Es ist besser, kürzer zu sein als zu erfinden.
 
@@ -60,6 +61,7 @@ Style :
 Anti-hallucination (impératif) :
 - Toute affirmation concrète doit être étayée par les données d'entrée : m², nombre de chambres et de salles de bains, prix, quartier, marques (Bulthaup, Gaggenau, Siemens), matériaux (parquet chêne, marbre), orientation (sud, sud-ouest), année de construction, pièces nommées, commerces/écoles/lignes de transport nommés, distances.
 - "Ascenseur = oui" ne justifie PAS "ascenseur privé". "Parking = oui" ne justifie PAS "garage" ni "garage double". Restez sur l'entrée concrète.
+- "cellar = oui" ne justifie PAS "rangements optimisés", "dressings intégrés", "placards sur mesure" ni "rangements abondants" à l'intérieur du logement — cela désigne une cave séparée dans l'immeuble. Mentionnez-la comme "cave" ou "rangement séparé". Idem pour "basement" (sous-sol distinct) et "attic" (combles ou grenier de rangement) — pas de glissement vers du rangement intra-logement.
 - Si les données de quartier mentionnent des lieux ou des écoles, décrivez le quartier mais n'affirmez PAS la proximité par rapport à CE bien sauf si elle figure dans les photos ou les données du bien.
 - Si un fait n'est pas étayé, omettez-le. Mieux vaut un texte plus court qu'inventé.
 
@@ -91,6 +93,7 @@ Style:
 Anti-hallucination (mandatory):
 - Every concrete claim must be supported by the input data: sqm, bedroom/bathroom count, price, neighborhood, brands (Bulthaup, Gaggenau, Siemens), materials (oak parquet, marble), orientation (south, south-west), year built, named rooms, named shops/schools/transit lines, distances.
 - "elevator = yes" does NOT license "private elevator". "parking = yes" does NOT license "garage" or "double garage". Stick to the concrete input.
+- "cellar = yes" does NOT license "integrated wardrobes", "walk-in closets", "optimized storage", or "abundant storage" inside the unit — it means a separate storage room in the building basement. Reference it as "cellar" or "separate storage room". Same for "basement = yes" (a distinct sub-grade floor) and "attic = yes" (loft or unfinished attic for storage) — no spillover into in-unit storage phrasing.
 - If the neighborhood data names landmarks or schools, describe the area but do NOT assert the proximity to THIS property unless it is in the photo data or the property data.
 - If a fact is unsupported, omit it. A shorter listing is better than an invented one.
 
@@ -123,6 +126,7 @@ Stil:
 Anti-Halluzinatioun (obligatoresch):
 - All konkret Aussoo muss vun den Inputdaten gedeckt sinn: m², Zuel vu Schlofzëmmeren a Buedzëmmeren, Präis, Quartier, Marken (Bulthaup, Gaggenau, Siemens), Materialien (Eichenparkett, Marmor), Ausriichtung (Süd, Südwest), Baujoer, genannte Raim, genannte Geschäfter/Schoulen/Transportlinnen, Distanzen.
 - "Lift = jo" justifizéiert NET "private Lift". "Parkplaz = jo" justifizéiert NET "Garage" oder "Duebelegarage". Bleif bei der konkreter Input.
+- "cellar = jo" justifizéiert NET "vill Plaz fir d'Saachen", "begehbare Klederschränken", "optiméiert Schränken" oder "räichlech Stockraim" an der Wunneng — et bedeit e separaten Keller am Gebai. Schreif "Keller" oder "separaten Stockraum". Selwecht fir "basement = jo" (separat Souterrain) an "attic = jo" (Späicher- oder Daachbuedem fir d'Lagerung) — keng Iwwerdroung op In-Wunneng-Stockraim.
 - Wann d'Quartiersdaten Sehenswürdegkeeten oder Schoulen ernimmen, beschreif de Quartier, awer behaapt NET d'Proximitéit zu DËSER Immobilie, ausser se ass an de Fotoen oder an den Eegenschaftsdaten belegt.
 - Wann e Fakt net belegt ass, loosst en ewech. Eng méi kuerz Annonce ass besser wéi eng erfonnt.
 
@@ -234,7 +238,6 @@ Property type: ${property.property_type}
 Bedrooms: ${property.bedrooms}
 Bathrooms: ${property.bathrooms}
 Size: ${property.sqm} m²
-Price: €${property.price.toLocaleString()}
 ${activeFeatures.length > 0 ? `Features: ${activeFeatures.join(", ")}` : ""}
 
 ${neighborhoodContext}

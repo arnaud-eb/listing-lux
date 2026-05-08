@@ -53,7 +53,9 @@ describe("buildListingPrompt", () => {
     expect(system).toContain("experienced real estate copywriter");
     expect(user).toContain("apartment");
     expect(user).toContain("120 m²");
-    expect(user).toContain("950,000");
+    // Price is intentionally NOT rendered in the user prompt — see audit P0.7.
+    // Tier calibration comes from the neighborhood's pricePerSqm block.
+    expect(user).not.toContain("950,000");
   });
 
   it("includes property features in user prompt", () => {
@@ -200,7 +202,7 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 1.4", () => {
-    expect(PROMPT_VERSION).toBe("1.4");
+  it("has version 1.5", () => {
+    expect(PROMPT_VERSION).toBe("1.5");
   });
 });

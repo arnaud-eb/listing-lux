@@ -67,13 +67,27 @@ export type ListingKind = (typeof LISTING_KINDS)[number]
 
 export type PropertyTypeValue = (typeof PROPERTY_TYPES)[number]['value']
 
-/** Selectable features — single source of truth for the chips, schema, and AI derivation */
+/**
+ * Selectable features — single source of truth for the chips, schema, and AI derivation.
+ *
+ * Storage split (audit P0.9, 2026-04): the ambiguous `storage` boolean was replaced with three
+ * narrower flags so the model can't expand it into in-unit signals it never asserts ("ample storage",
+ * "integrated wardrobes"):
+ *   - `cellar`  → small storage room (FR `cave`, DE `Keller`); the LU-canonical case for apartments
+ *   - `basement` → full sub-grade floor (houses with finished or usable basement, beyond a `cave`)
+ *   - `attic`   → storage or unfinished attic (distinct from the `attic` PROPERTY_TYPES entry which
+ *                 describes the whole unit, not a feature)
+ *
+ * Migration `012_split_storage_feature.sql` backfills `features.storage = true` → `features.cellar = true`.
+ */
 export const FEATURE_OPTIONS = [
   { id: 'balcony', label: 'Balcony' },
   { id: 'parking', label: 'Parking' },
   { id: 'garden', label: 'Garden' },
   { id: 'elevator', label: 'Elevator' },
-  { id: 'storage', label: 'Storage/Cellar' },
+  { id: 'cellar', label: 'Cellar / Storage room' },
+  { id: 'basement', label: 'Basement' },
+  { id: 'attic', label: 'Attic' },
   { id: 'pool', label: 'Pool' },
   { id: 'terrace', label: 'Terrace' },
   { id: 'furnished', label: 'Furnished' },

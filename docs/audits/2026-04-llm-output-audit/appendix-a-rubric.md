@@ -54,9 +54,11 @@ Each dimension below gives anchors at scores 5, 3, and 1. Scores 4 and 2 are int
 
 ### 2. `completeness` — does the output use the input data?
 
-- **5** — Output mentions all 5 of {beds, baths, sqm, price-range, neighborhood} AND ≥80% of features marked `true` in the fixture AND surfaces the 2–3 strongest signals from `photo_analyses[*].selling_points`.
-- **3** — Mentions the 5 core fields but drops 30–50% of active features, OR mentions all features but omits price/sqm.
-- **1** — Drops one of {sqm, price, neighborhood} entirely, OR mentions ≤30% of active features.
+Updated for `PROMPT_VERSION 1.5` (audit §5.P0.7): the price is no longer rendered in the user-prompt body — portals show it as a structured field, not in description prose — so completeness no longer requires the model to mention it.
+
+- **5** — Output mentions all 4 of {beds, baths, sqm, neighborhood} AND ≥80% of features marked `true` in the fixture AND surfaces the 2–3 strongest signals from `photo_analyses[*].selling_points`.
+- **3** — Mentions the 4 core fields but drops 30–50% of active features, OR mentions all features but omits sqm.
+- **1** — Drops one of {sqm, neighborhood} entirely, OR mentions ≤30% of active features.
 
 ### 3. `cross_lang_consistency` — do DE/FR/EN/LU agree?
 
