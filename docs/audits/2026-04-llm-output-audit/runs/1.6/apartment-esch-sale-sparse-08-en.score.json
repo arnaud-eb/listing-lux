@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'78 m² apartment features two bedrooms and one bathroom' matches inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 78 m², two bedrooms, one bathroom, balcony, parking, elevator, L-shaped kitchen, laminate, beige walls."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'designed with a simple and neutral aesthetic' and 'designated parking' reads as native English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'functional urban residence with essential amenities' is somewhat generic and slightly off the LU luxury register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied; description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette' is 9 words with neighborhood; 5 CamelCase hashtags 'BalconyAccess CompactLiving EschSurAlzette ParkingIncluded Elevator'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'modest balcony' and 'functional urban residence' are restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'residents can enjoy outdoor space' is neutral, no demographics."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'near the university and the Belval district' (not in inputs); other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 78 m², 2 bedrooms, balcony, parking, elevator; DE adds 'Tiefgaragenstellplatz' (parking type) and 'Badewannen-Duschbereich' which FR/EN do not assert — minor non-contradictory additions."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Only Belval/university unsupported."
+}

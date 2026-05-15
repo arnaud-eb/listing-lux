@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:08:11.996Z",
+  "output": {
+    "title": "Penthouse rénové de 4 chambres avec terrasse et vue panoramique sur la ville",
+    "description": "Situé dans l'un des quartiers résidentiels les plus prisés de Luxembourg, ce penthouse de 220 m² offre un cadre de vie alliant confort urbain et cadre verdoyant. L'appartement a fait l'objet d'une rénovation complète, mettant en avant un style contemporain et des finitions de qualité.\n\nL'espace de vie principal se compose d'un salon lumineux et aéré, bénéficiant de grandes fenêtres du sol au plafond orientées sud, assurant une luminosité naturelle optimale et une vue panoramique sur la ville. Ce séjour s'ouvre sur une cheminée à bois et un parquet en chêne clair, soulignant l'élégance des matériaux utilisés. La cuisine attenante, en plan ouvert, est équipée d'appareils Gaggenau professionnels, d'un îlot central en marbre de Carrare et d'un réfrigérateur à vin intégré, offrant un ensemble fonctionnel et esthétique.\n\nLa zone nuit comprend quatre chambres, dont une suite parentale avec dressing, salle de bains privative et accès direct à une terrasse privée. L'appartement dispose par ailleurs de deux autres salles de bains, toutes pourvues d'équipements modernes et de finitions soignées.\n\nL'extérieur se singularise par une terrasse généreuse avec une exposition sud, réalisée en bois composite avec une balustrade en verre, aménagée en salon d'extérieur pour profiter pleinement de la vue dégagée à 180 degrés sur la ville. Cet ensemble bénéficie également d'un ascenseur desservant directement le logement, d'un emplacement de parking et d'une cave annexée. Le cadre verdoyant du quartier Belair complète ce tableau, en offrant une ambiance paisible au sein d'un secteur résidentiel haut de gamme.",
+    "highlights": [
+      {
+        "text": "220 m² de surface habitable rénovée en style contemporain",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres avec suite parentale et terrasse privée",
+        "icon": "bed"
+      },
+      {
+        "text": "Cuisine équipée d'appareils Gaggenau et îlot en marbre de Carrare",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse sud avec vue panoramique sur la ville à 180°",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée à bois dans le séjour lumineux",
+        "icon": "flame"
+      },
+      {
+        "text": "Parquet en chêne clair et grandes fenêtres panoramiques",
+        "icon": "home"
+      },
+      {
+        "text": "Ascenseur privatif, parking et cave inclus",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Quartier résidentiel calme et verdoyant de Belair",
+        "icon": "trees"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLuxembourg",
+      "TerrassePanoramique",
+      "CuisineGaggenau",
+      "VueVille",
+      "QuartierBelair"
+    ]
+  }
+}

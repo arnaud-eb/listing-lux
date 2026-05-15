@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All facts align: '180 m²', '3-Schlafzimmer', 'Zwei Bäder', 'Siemens-Geräten', 'Quartz-Arbeitsplatte', 'umlaufende ... Terrasse'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, bedrooms, bathrooms, neighborhood, all active features (parking, elevator, cellar, terrace, new-build, city-view) and photo points: 'Doppelhöhen-Wohnbereich', 'Siemens-Geräten', 'umlaufenden Holzdeck-Terrasse'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Generally fluid German, though 'teilweise sonnige Abendstunden bietet' is slightly awkward phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU-appropriate vocabulary like 'Neubau-Duplexwohnung', 'Eichenparkett', 'Aufzug', though 'XXL-Terrasse' is informal."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented and no CPE mentioned; inputs had no class, so omission is correct."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Modernes 3-Schlafzimmer-Duplex mit XXL-Terrasse und Parkblick in Cloche d'Or' is ~11 words with neighborhood; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, but 'XXL-Terrasse' and 'elegant' lean slightly promotional; no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; focuses on property: 'Diese neu erbaute Duplexwohnung erstreckt sich großzügig über 180 m²'."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '180 m²' (property.sqm), '3-Schlafzimmer' (bedrooms=3), 'Zwei Bäder' (bathrooms=2), 'Siemens-Geräten' (photo), 'Quartz-Arbeitsplatte' (photo), 'Eichenparkett' (engineered oak flooring), 'umlaufende ... Terrasse' (wraparound), 'Cloche d'Or' (neighborhood), 'Einkaufszentrum' (view over shopping center), 'Park' (view onto the new park)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "Numeric agreement (180 m², 3 bedrooms) across DE/EN/FR; FR adds 'orientation sud' for the terrace which DE/EN do not state, a minor non-contradictory detail; FR also omits explicit two-bathroom mention while DE ('Zwei Bäder') and EN ('Two bathrooms') include it — minor disagreement."
+    }
+  },
+  "overall_pass": true
+}

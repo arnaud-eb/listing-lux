@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:00.414Z",
+  "output": {
+    "title": "Maison mitoyenne avec jardin privatif et parking dans quartier résidentiel calme",
+    "description": "Cette maison mitoyenne construite dans les années 1980 offre une surface habitable d'environ 130 m². Elle s'inscrit dans un environnement résidentiel paisible, avec une façade neutre et un petit jardin avant qui apporte un accueil chaleureux.\n\nÀ l'intérieur, le salon présente une ambiance conviviale avec une vue dégagée sur le jardin arrière accessible par des portes-fenêtres. L'espace de vie conserve un style daté nécessitant une mise à jour, avec une moquette beige et une niche adaptée pour un téléviseur.\n\nLe logement comprend trois chambres ainsi qu'une salle de bains équipée. La maison est complétée par une cave offrant un espace de rangement supplémentaire.\n\nLe jardin privatif, simple et bien entretenu, est clôturé par une clôture en bois. Il dispose également d'un abri de jardin, utile pour le stockage d'outils ou d'équipements extérieurs. Le stationnement est assuré par un emplacement privé, facilitant l'accès.\n\nCette propriété présente un potentiel intéressant pour un projet de rénovation dans un cadre résidentiel calme.",
+    "highlights": [
+      {
+        "text": "Maison mitoyenne des années 1980",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d'environ 130 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres et une salle de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Salon avec vue sur jardin et accès terrasse",
+        "icon": "sofa"
+      },
+      {
+        "text": "Jardin privatif avec pelouse et abri",
+        "icon": "trees"
+      },
+      {
+        "text": "Cave séparée pour rangement",
+        "icon": "archive"
+      },
+      {
+        "text": "Emplacement de parking privé",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "MaisonMitoyenne",
+      "JardinPrivatif",
+      "ParkingPrivé",
+      "RénovationPotentielle",
+      "CadreRésidentiel"
+    ]
+  }
+}

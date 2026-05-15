@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:18.284Z",
+  "output": {
+    "title": "Helle 2-Zimmer-Wohnung mit Balkon und Stellplatz in Esch-sur-Alzette",
+    "description": "Diese gut geschnittene 2-Zimmer-Wohnung in Esch-sur-Alzette bietet auf ca. 78 m² Wohnfläche ein funktionales Wohnkonzept mit Balkonzugang vom Wohnzimmer. Das helle Wohn- und Esszimmer ist mit einem strapazierfähigen Laminatboden ausgestattet und verfügt über beige Wandflächen, die eine neutrale Gestaltung ermöglichen.\n\nDie kompakte Küche kommt im L-Format mit weißen Schrankfronten und bietet ausreichend Platz für einen kleinen Essbereich. Das Badezimmer ist funktional gestaltet und ergänzt die Wohnfläche mit einem Badewannen-Duschbereich.\n\nDer Balkon verfügt über einen gefliesten Boden und ein schlicht ausgeführtes Geländer, das angenehmen Außenraum für frische Luft und kleine Pflanzen bietet. Zur Wohnung gehört zudem ein Tiefgaragenstellplatz, welcher Zugang mit dem Aufzug ermöglicht und einen praktischen Komfort bietet.\n\nDas Gebäude liegt in Esch-sur-Alzette, Luxemburgs zweitgrößter Stadt im Alzettetal, die sich durch eine vielfältige Kulturszene und ein wachsendes urbanes Umfeld auszeichnet. Die Nähe zur Universität und zum Entwicklungsgebiet Belval prägen das Stadtbild und die Dynamik des Quartiers.\n\nDie gute Anbindung und infrastrukturelle Entwicklung machen das Objekt zu einem zeitgemäßen Wohnangebot in einer aufstrebenden Stadtregion.",
+    "highlights": [
+      {
+        "text": "78 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Balkon mit Zugang vom Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "Tiefgaragenstellplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "Balkonwohnung",
+      "EschSurAlzette",
+      "KomfortabelWohnen",
+      "Stadtentwicklung",
+      "Lichtdurchflutet"
+    ]
+  }
+}

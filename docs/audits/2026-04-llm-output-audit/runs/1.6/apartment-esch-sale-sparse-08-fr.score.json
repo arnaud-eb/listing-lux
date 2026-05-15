@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'cet appartement de 78 m²' and '2 chambres', 'parking', 'ascenseur', 'balcon' all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 78 m², 2 chambres, balcon, parking, ascenseur, cuisine en L; bathroom count not explicit ('La salle de bain complète')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'optimisant ainsi l'espace' and 'cadre de vie confortable avec des prestations fonctionnelles' read as idiomatic French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'prestations fonctionnelles', 'emplacement de parking privé', 'bien agencé' fits LU FR listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement lumineux 2 chambres avec balcon et parking à Esch-sur-Alzette' is 11 words with neighborhood; 5 CamelCase-ish hashtags but 'Balcon' and 'Ascenseur' are not CamelCase compounds."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Uses 'lumineux' and 'en plein essor' but no exclamation marks or 'must-see'-type hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to demographics; 'idéal pour profiter d'un espace extérieur privatif' refers to the balcony only."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'proximité de l'université' and 'site de Belval' (neighborhood landmarks not in inputs); 'emplacement de parking privé' (parking=true but 'privé' not specified, borderline)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 78 m², 2 bedrooms, balcony, parking, elevator; DE adds 'Tiefgaragenstellplatz' (parking type) and 'Badewannen-Duschbereich' which FR/EN do not assert — minor non-contradictory additions."
+    }
+  },
+  "overall_pass": false,
+  "notes": "University/Belval proximity not in inputs."
+}

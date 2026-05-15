@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:43:08.587Z",
+  "output": {
+    "title": "Geräumige 4-Zimmer-Villa mit Garten und Doppelgarage in ruhiger Lage",
+    "description": "Diese freistehende Villa aus den 1970er Jahren präsentiert sich in gepflegtem Zustand mit einer klassisch steinverkleideten Fassade und einem großzügigen Grundstück. Das Anwesen bietet eine Wohnfläche von etwa 200 m², verteilt auf vier Schlafzimmer und zwei Badezimmer, ideal für vielfältige Wohnbedürfnisse.\n\nDer Wohnbereich besticht durch seinen warmen, traditionellen Charakter mit Holzvertäfelungen und einem original erhaltenen Kamin aus Stein, der eine behagliche Atmosphäre schafft. Große Fensterfronten erlauben den Blick in den liebevoll angelegten Garten und sorgen für viel Tageslicht.\n\nDer Außenbereich umfasst eine ruhige, naturnahe Gartenanlage mit ausgewachsenen Bäumen, einer großen Rasenfläche sowie einer Terrasse, die zum Entspannen im Freien einlädt. Ergänzt wird das Angebot durch einen separaten Kellerraum sowie eine Doppelgarage, die ausreichend Platz für Fahrzeuge und zusätzlichen Stauraum bietet.\n\nDie Immobilie befindet sich in einer gewachsenen Wohngegend, die durch ihre Ruhe und den privaten Charakter besticht. Aufgrund fehlender spezifischer Angaben zur Umgebung wird auf detaillierte Aussagen zur Nachbarschaft verzichtet.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit 200 m² Wohnfläche",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Originaler Stein-Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Großer Garten mit ausgewachsenen Bäumen",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse für den Außenbereich",
+        "icon": "sun"
+      },
+      {
+        "text": "Doppelgarage auf eigenem Grundstück",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum vorhanden",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ClassicVilla",
+      "SteinFassade",
+      "GartenLifestyle",
+      "Doppelgarage",
+      "TraditionellesWohnen"
+    ]
+  }
+}

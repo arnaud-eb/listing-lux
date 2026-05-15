@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'automatisierter Stellplatz' adds a 'automated' qualifier not in inputs ('parking: true'); 'Aufzug, der barrierefreie Zugang ermöglicht' also adds barrier-free claim not stated."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 220 m², 4 Schlafzimmer, Belair, terrace, elevator, parking, cellar, Gaggenau, Carrara; but does not explicitly mention the 3 bathrooms count ('Zwei weitere Bäder' implies 3 total)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Idiomatic German: 'bodentiefe Fenster', 'begehbaren Kleiderschrank', 'gehobenen und grünen Stadtteil'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Eichenparkett', 'Kochinsel', 'Stellplatz', 'Kellerraum' — appropriate Luxembourg luxury German vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced, consistent with absent input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Luxuriöses Penthouse mit 4 Schlafzimmern und großzügiger Terrasse in Belair' (10 words); 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "Uses 'Luxuriöses' in title and 'exklusive', 'besticht durch', 'attraktive Verbindung' — multiple promotional adjectives."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references in the listing."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'automatisierter Stellplatz' (automated not in inputs) and 'Aufzug, der barrierefreie Zugang ermöglicht' (barrier-free not in inputs). Other claims (Gaggenau, Carrara, 180°, südlich, 220 m²) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 220 m², 4 bedrooms, Belair, terrace, parking, elevator, cellar; minor non-contradictory additions (DE adds 'automatisierter Stellplatz', EN adds 'tree-lined streets'); FR and EN explicitly cite 3 bathrooms while DE only implies via 'Zwei weitere Bäder' plus master ensuite."
+    }
+  },
+  "overall_pass": false
+}

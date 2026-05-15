@@ -2,13 +2,13 @@ import type { Language, PhotoAnalysis } from "@/lib/types";
 import type { Neighborhood } from "@/lib/markets/types";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "1.5";
+export const PROMPT_VERSION = "1.6";
 
 interface PropertyData {
   bedrooms: number;
   bathrooms: number;
-  sqm: number;
-  price: number;
+  sqm: number | null;
+  price: number | null;
   neighborhood: string;
   property_type: string;
   features: Record<string, boolean>;
@@ -142,8 +142,14 @@ function buildNeighborhoodContext(
 
   const kw = neighborhood.keywords?.[language];
   if (kw && kw.length > 0) {
+    // v1.7 architectural fix (audit §7.2): landmark/keyword facts about the
+    // neighborhood are area-facts, NOT proximity-from-this-property facts. The
+    // model historically conflated the two ("Kirchberg has the Philharmonie"
+    // became "this apartment is near the Philharmonie"). The label below
+    // explicitly separates the two and forbids proximity language; the system
+    // prompt's anti-hallucination block reinforces with concrete examples.
     parts.push(
-      `Local keywords (use sparingly, only if they describe the LOCATION not the audience): ${kw.join(", ")}`,
+      `Area facts (these belong to the NEIGHBORHOOD, not to THIS property): ${kw.join(", ")}. Allowed: describing what the neighborhood contains ("Kirchberg is home to the Philharmonie", "Limpertsberg has the Parc Edmond Klein"). Forbidden: any proximity or distance claim from this property to these facts ("near the Philharmonie", "walking distance to MUDAM", "minutes from the Parc Edmond Klein"). Proximity requires explicit distance data in the property inputs, which is NOT supplied here.`,
     );
   }
 
@@ -206,7 +212,7 @@ IMPORTANT scope rule:
 Property type: ${property.property_type}
 Bedrooms: ${property.bedrooms}
 Bathrooms: ${property.bathrooms}
-Size: ${property.sqm} m²
+${property.sqm != null ? `Size: ${property.sqm} m²` : "Size: not provided — do not quote any square-metre figure and do not invent one."}
 ${activeFeatures.length > 0 ? `Features: ${activeFeatures.join(", ")}` : ""}
 ${property.cpe_class ? `Energy class (CPE): ${property.cpe_class}` : ""}
 ${property.thermal_insulation_class ? `Thermal insulation class: ${property.thermal_insulation_class}` : ""}

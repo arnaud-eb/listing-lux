@@ -1,0 +1,47 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:23.857Z",
+  "output": {
+    "title": "Renoviertes möbliertes Studio mit historischem Flair in Clausen",
+    "description": "Dieses Studio im historischen Zentrum von Clausen wurde umfassend renoviert und verbindet charaktervolle Details mit moderner Ausstattung. Das Wohnambiente wird durch freiliegende Holzbalken und den Holzfußboden geprägt und bietet auf 38 m² eine kompakte, möblierte Einheit.\n\nDie funktionale Kochnische ist modern gestaltet und mit einem Zweiflammen-Herd sowie einem Kühlschrank ausgestattet. Das Badezimmer überzeugt mit einer zeitgemäßen Duschkabine und weiß gefliesten Wänden, die den gepflegten Eindruck unterstreichen.\n\nDas Gebäude zeigt seine historische Bausubstanz in der schmucken, steinernen Fassade und liegt in der engen, ruhigen Gasse des Clausen-Tals. Diese Lage ermöglicht eine ruhige Umgebung bei gleichzeitiger Nähe zum Stadtzentrum.\n\nDas Studio ist renoviert, möbliert und somit bezugsfertig, ideal für Personen, die Wert auf einen authentischen Wohnraum mit Charakter legen.",
+    "highlights": [
+      {
+        "text": "Renoviertes, möbliertes Studio",
+        "icon": "home"
+      },
+      {
+        "text": "Freiliegende Holzbalken",
+        "icon": "building-2"
+      },
+      {
+        "text": "Funktionale Kochnische",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Modernes Badezimmer mit Dusche",
+        "icon": "bath"
+      },
+      {
+        "text": "Historische Steinfassade",
+        "icon": "building"
+      },
+      {
+        "text": "Ruhige Lage im Clausen-Tal",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Holzboden als Bodenbelag",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharacter",
+      "RenovatedStudio",
+      "CozyLiving",
+      "ClausenSetting"
+    ]
+  }
+}

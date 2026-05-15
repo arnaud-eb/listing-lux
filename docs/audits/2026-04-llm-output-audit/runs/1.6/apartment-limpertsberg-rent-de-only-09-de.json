@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:35.574Z",
+  "output": {
+    "title": "Renovierte 2-Zimmer-Wohnung mit Balkon und Einbauküche im Limpertsberg",
+    "description": "Diese 95 m² große Wohnung befindet sich in einem gepflegten Gebäude im begehrten Stadtteil Limpertsberg. Die Einheit wurde umfassend renoviert und präsentiert sich in skandinavisch inspiriertem Stil mit warmem, hellem Ambiente durch große Fensterflächen und einheitlich verlegtes Parkett.\n\nDer großzügige Wohnbereich ist vollständig möbliert und bietet mit seinem Designer-Sofa und der geschmackvollen Einrichtung einen offenen, einladenden Raum zum Verweilen. Die angrenzende Küche ist mit hochwertigen Siemens-Geräten ausgestattet, darunter ein Induktionskochfeld und ein Geschirrspüler, und verfügt über eine platzsparende Essecke.\n\nDas zweite Zimmer eignet sich als Schlafzimmer und ist mit einem Queensize-Bett, einem geräumigen Kleiderschrank sowie lichtdichten Jalousien ausgestattet, die für einen ungestörten Schlaf sorgen. Die Wohnung verfügt über ein Tageslichtbad mit modernen Sanitärobjekten.\n\nDer kleine Balkon mit Nordausrichtung bietet Platz für frische Luft im urbanen Umfeld. Ein Aufzug erleichtert den Zugang zur Wohnung. Zur Wohnung gehört ein separater Kellerraum für zusätzlichen Stauraum. Die Lage im kulturell geprägten Viertel Limpertsberg ermöglicht eine gute Anbindung an die Universität sowie diverse kulturelle Einrichtungen und Grünanlagen.",
+    "highlights": [
+      {
+        "text": "95 m² Wohnfläche in renoviertem Zustand",
+        "icon": "square"
+      },
+      {
+        "text": "2 möblierte Zimmer mit skandinavischem Design",
+        "icon": "bed"
+      },
+      {
+        "text": "Moderne Einbauküche mit Siemens Geräten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balkon mit Nordausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Aufzug im Gebäude vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum inklusive",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Renoviert",
+      "Limpertsberg",
+      "Balkon",
+      "SkandinavischesDesign",
+      "ModerneKüche"
+    ]
+  }
+}

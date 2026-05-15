@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:35.352Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Garage in Strassen",
+    "description": "Diese 280 m² große Villa in Strassen präsentiert sich als zweigeschossiges, freistehendes Wohnhaus mit traditioneller weiß verputzter Fassade und Schieferdach. Die Immobilie wurde umfassend renoviert und überzeugt mit einem etablierten, reifen Garten in südwestlicher Ausrichtung, der Privatsphäre durch ausgewachsene Bäume bietet.\n\nDas Wohnambiente ist durch hohe Decken und ein Parkettfußboden geprägt. Das Wohnzimmer verfügt über einen Kamin und Gartenzugang über eine Terrasse mit großzügigen Glasflächen. Die Küche ist mit Shaker-Fronten, einer Granitarbeitsplatte, einem zentralen Kochinsel mit Sitzmöglichkeit sowie einem Doppelbackofen ausgestattet und bietet somit reichlich Arbeitsfläche.\n\nDie Schlafbereiche verteilen sich auf fünf Zimmer, wobei das geräumige Hauptschlafzimmer Einblick in den Garten gewährt und mit Einbauschränken ausgestattet ist. Drei Badezimmer ergänzen das Raumangebot. Ein separater Kellerraum erweitert den Stauraum. Zur Immobilie gehören Stellplätze für Fahrzeuge unmittelbar am Haus.\n\nStrassen zeichnet sich durch seine ruhige, vorstädtische Lage mit dörflichem Charakter aus und bietet eine gute Anbindung an das Autobahnnetz sowie Zugang zu Schulen. Die Nähe zur Stadt Luxemburg ermöglicht eine Kombination aus naturnahem Wohnen und städtischer Infrastruktur.",
+    "highlights": [
+      {
+        "text": "280 m² Wohnfläche auf zwei Ebenen",
+        "icon": "square"
+      },
+      {
+        "text": "Fünf Schlafzimmer, drei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Renovierte Küche mit Granitarbeitsplatte und Doppelbackofen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Etablierter Garten mit Südwest-Ausrichtung",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse mit Gartenzugang",
+        "icon": "sun"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Parkplätze am Haus",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "RenovierteVilla",
+      "GartenWohnung",
+      "KaminWohnzimmer",
+      "FamilienHaus",
+      "StrassenWohnlage"
+    ]
+  }
+}

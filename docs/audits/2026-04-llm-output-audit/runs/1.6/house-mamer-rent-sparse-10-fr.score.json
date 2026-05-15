@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Title says 'Maison individuelle' but body says 'maison mitoyenne' — contradicts itself; input is row house so 'individuelle' is wrong."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 130 m², 3 chambres, 1 salle de bains, jardin, parking, cave, but omits Mamer neighborhood entirely and doesn't mention rental nature."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'Le style intérieure' has a gender agreement error (should be 'intérieur'); otherwise reads natively."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Standard FR real-estate vocabulary like 'surface habitable', 'jardin privatif', 'emplacement de parking' fits the corpus but is generic, not luxury-tier."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits any CPE reference — correct per v1.5 default."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Maison individuelle des années 1980 avec jardin privé et parking' is 10 words but contradicts the body (mitoyenne); 5 hashtags CamelCase no dupes — acceptable."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamations; phrases like 'simple mais entretenu' are measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; speaks only of 'environnement résidentiel préservé'."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. 'années 1980' (photo style), '130 m²' (input), 'trois chambres' (input), 'moquette beige' (photo), 'portes-fenêtres' (photo patio doors), 'clôtures en bois' (photo wood fence), 'cave' (input), 'parking' (input) — all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement (130 m², 3 beds, 1 bath) holds across FR/EN/DE, but listing-kind disagreement: DE says 'eignet sich für Käufer' (sale) while FR/EN are neutral; FR title also calls it 'Maison individuelle' while EN/DE correctly call it row/Reihenhaus."
+    }
+  },
+  "overall_pass": true,
+  "notes": "Title/body contradiction (individuelle vs mitoyenne) is the main flaw."
+}

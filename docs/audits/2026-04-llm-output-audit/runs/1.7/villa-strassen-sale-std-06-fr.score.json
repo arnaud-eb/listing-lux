@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'surface habitable généreuse de 280 m²', 'cinq chambres', implicit suite principale match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/sqm/Strassen, garden, terrace, fireplace, kitchen, cellar, parking, but omits the bathroom count ('trois salles de bain' is missing)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Idiomatic French ('villa indépendante et rénovée', 'cadre verdoyant'); 'parquet en bois' is mildly redundant but acceptable."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU/FR luxury terms 'villa indépendante', 'suite principale', 'prestations', 'exposition sud-ouest'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs; prose omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa rénovée avec 5 chambres, jardin arboré et terrasse à Strassen' is 11 words with neighborhood + adjective; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'cadre de vie paisible' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'proche des commodités' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'séjour lumineux' — brightness not stated in photo analysis (the living-room atmosphere is 'warm, family-friendly', not specifically bright); 'sur deux niveaux' is supported by 'two-storey detached'; 'cave équipée' slightly overstates the input 'cellar' (no equipment mentioned). Counting 'lumineux' as 1 unsupported concrete claim."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², villa, Strassen, renovated, garden/terrace/parking/cellar/fireplace. FR omits the bathroom count ('trois salles de bain') that DE and EN both state — minor non-contradictory omission."
+    }
+  },
+  "overall_pass": false
+}

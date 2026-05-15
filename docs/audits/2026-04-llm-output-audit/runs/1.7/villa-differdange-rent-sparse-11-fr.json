@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:14.167Z",
+  "output": {
+    "title": "Villa individuelle de 200 m² avec jardin mature et double garage",
+    "description": "Cette villa indépendante, édifiée dans les années 1970, présente une façade en pierre et s'inscrit dans un style résidentiel typique de cette époque au Luxembourg. Elle bénéficie d'un terrain privatif bien entretenu, avec une surface habitable d'environ 200 m².\n\nL’espace intérieur comprend un séjour chaleureux agrémenté de boiseries et d’une cheminée en pierre d'origine qui offre une atmosphère traditionnelle. Les ouvertures sur le jardin apportent une belle luminosité et une vue dégagée sur les espaces verts.\n\nLa villa comporte quatre chambres ainsi que deux salles de bains, offrant une répartition fonctionnelle des espaces nuit et jour. Une terrasse attenante et un vaste jardin naturel avec pelouse et arbres matures complètent l’ensemble, favorisant des moments de détente en plein air.\n\nUn double garage ainsi qu’une cave viennent renforcer le confort de ce bien, proposant des solutions de stationnement et de stockage adaptées. L’ensemble repose dans un secteur résidentiel calme, caractérisé par un bâti établi et entretenu.",
+    "highlights": [
+      {
+        "text": "Villa indépendante avec façade en pierre",
+        "icon": "home"
+      },
+      {
+        "text": "Surface habitable d'environ 200 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Cheminée en pierre originelle dans le salon",
+        "icon": "flame"
+      },
+      {
+        "text": "Jardin mature aménagé avec pelouse et arbres",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse attenante au jardin",
+        "icon": "sun"
+      },
+      {
+        "text": "Double garage privatif",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée accessible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Villa1970s",
+      "CheminéePierre",
+      "JardinMature",
+      "DoubleGarage",
+      "TerrassePrivative"
+    ]
+  }
+}

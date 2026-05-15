@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This detached villa, constructed in the 1970s, offers approximately 200 m² of living space configured into four bedrooms and two bathrooms' — all consistent with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 200 m², four bedrooms, two bathrooms, garden, terrace, double garage, cellar, fireplace; omits Differdange and rental status."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'a terrace extends the living area outdoors, enhancing opportunities for relaxation and entertainment' reads naturally."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'detached villa', 'double garage', 'private grounds' fit Luxembourg English luxury listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or fabricated, consistent with null input."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Well-Maintained 1970s Detached Villa with Garden and Double Garage' is 10 words but lacks neighborhood; 5 hashtags CamelCase, valid."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'a tranquil naturalistic environment' is mildly evocative but no 'breathtaking' or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'appropriate for those seeking established homes with outdoor space' refers to preferences, not demographics."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'accessible from the front of the property' (garage location not in photo analysis beyond 'double garage')."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE, EN, FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar, stone fireplace, 1970s; no listing-kind disagreement (none mention rent, but consistent)."
+    }
+  },
+  "overall_pass": false
+}

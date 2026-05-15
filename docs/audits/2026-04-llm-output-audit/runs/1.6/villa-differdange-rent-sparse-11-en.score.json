@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'approximately 200 square meters... four bedrooms and two bathrooms' matches inputs."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "Omits Differdange neighborhood entirely and omits rental price context; title says only 'Detached 4-Bedroom Villa with Garden, Terrace, and Double Garage'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'Outdoor living is enhanced by a terrace adjoining the property, overlooking a peaceful garden'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Generic luxury English ('detached villa', 'private grounds') but lacks any Luxembourg market anchor."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE invented; CPE omitted entirely, appropriate since no class supplied."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Detached 4-Bedroom Villa with Garden, Terrace, and Double Garage' is 10 words but lacks neighborhood; 5 CamelCase hashtags present."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained: 'offering both solidity and charm' — no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'suitable for various lifestyle arrangements' is neutral."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All claims (200 m², stone facade, 1970s, fireplace, wood paneling, double garage, terrace, mature trees, patio, cellar) are supported by photo_analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, terrace, double garage, cellar, fireplace; FR adds a non-contradictory but unsupported detail 'répartis sur plusieurs niveaux' not in DE/EN."
+    }
+  },
+  "overall_pass": false
+}

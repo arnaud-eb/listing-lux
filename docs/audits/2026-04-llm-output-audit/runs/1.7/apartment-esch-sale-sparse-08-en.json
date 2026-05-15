@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:38.339Z",
+  "output": {
+    "title": "Well-Maintained 2-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette",
+    "description": "This 78 m² apartment offers an efficient and comfortable layout within a building equipped with an elevator. The living room benefits from natural light through balcony access, providing a modest outdoor area with tiled flooring and railing suitable for relaxation or small gatherings.\n\nThe compact kitchen is arranged in an L-shape with white cabinetry and includes sufficient space for a small dining table, maintaining a neutral palette consistent with the living area’s laminate flooring and beige walls. The apartment includes two bedrooms and one bathroom, all maintained in good condition.\n\nSituated in Esch-sur-Alzette, Luxembourg's second-largest city, the area is known for its growing cultural scene and the presence of the university and Belval district. The apartment comes with one dedicated parking space, adding convenience in an urban context.\n\nElevator access facilitates movement within the multi-storey building, complementing the practical amenities of this residence. The overall condition is well-kept, offering a straightforward and functional living environment within a dynamic neighborhood.",
+    "highlights": [
+      {
+        "text": "Two bedrooms and one bathroom",
+        "icon": "bed"
+      },
+      {
+        "text": "78 m² comfortable living space",
+        "icon": "square"
+      },
+      {
+        "text": "Balcony accessible from living room",
+        "icon": "door-open"
+      },
+      {
+        "text": "Compact L-shaped kitchen with dining area",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator in the building",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "CityLiving",
+      "BalconyAccess",
+      "CompactKitchen",
+      "ParkingIncluded",
+      "ElevatorBuilding"
+    ]
+  }
+}

@@ -4,46 +4,45 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 4,
-      "evidence": "'richtet sich das Objekt an Käufer' contradicts the rental nature (price 3400 monthly suggests rent, per diversity_tags 'rent')."
+      "score": 2,
+      "evidence": "'richtet sich das Objekt an Käufer' — the listing is a RENTAL (price 3400/month) but the DE text frames it as a sale to 'Käufer' (buyers)."
     },
     "completeness": {
       "score": 3,
-      "evidence": "Mentions '200 m² Wohnfläche', 'Vier Schlafzimmer und zwei Badezimmer', garden, terrace, cellar, garage but omits the Differdange neighborhood entirely ('ohne nähere Angaben zur Nachbarschaft zu machen')."
+      "evidence": "Mentions 200 m², four bedrooms, two bathrooms, garden, terrace, garage, cellar, but omits the Differdange neighborhood entirely ('ohne nähere Angaben zur Nachbarschaft')."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'Diese freistehende Villa aus den 1970er Jahren bietet auf etwa 200 m² Wohnfläche eine solide und gut erhaltene Bausubstanz' reads natively in German."
+      "evidence": "'Terrasse zum Haus hin ausgerichtet' reads slightly awkward but overall fluent German prose."
     },
     "market_fit": {
       "score": 3,
-      "evidence": "Vocabulary like 'freistehende Villa', 'Wohnfläche', 'Doppelgarage' fits, but 'richtet sich an Käufer' is wrong for a rental listing."
+      "evidence": "Uses standard terms like 'freistehende Villa' and 'Wohnfläche', though phrasing like 'TerrassenWohnung' hashtag is inconsistent with a villa."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class is invented; description omits energy class entirely as no class was supplied in inputs."
+      "evidence": "No CPE class supplied in inputs and description omits CPE entirely, matching v1.5 default."
     },
     "seo_signal": {
       "score": 3,
-      "evidence": "Title 'Helle 4-Zimmer-Villa mit Garten, Terrasse und Doppelgarage in ruhiger Lage' is 12 words but lacks the neighborhood Differdange; hashtag 'TerrassenWohnung' is wrong (it's a villa, not apartment)."
+      "evidence": "Title 'Helle 4-Zimmer-Villa mit Garten, Terrasse und Doppelgarage in ruhiger Lage' lacks the Differdange neighborhood name; hashtag 'TerrassenWohnung' contradicts the property type."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "No hyperbole or exclamation marks; phrases like 'solide und gut erhaltene Bausubstanz' are restrained."
+      "score": 4,
+      "evidence": "Avoids exclamation marks and overt hyperbole; 'Helle' in title is unsupported by photo data but mild."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic targeting; 'richtet sich das Objekt an Käufer, die Wert auf Beständigkeit und Raum im Grünen legen' references preferences, not protected classes."
+      "evidence": "No references to demographics; 'Käufer, die Wert auf Beständigkeit und Raum im Grünen legen' refers to preferences, not protected attributes."
     },
     "hallucination": {
-      "score": 5,
-      "evidence": "All concrete elements ('200 m²', 'Vier Schlafzimmer und zwei Badezimmer', 'steinerner Kamin', 'Doppelgarage') are supported by inputs."
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Helle' (bright) in the title is not supported by any photo analysis; all other concrete claims (200 m², 4 bed/2 bath, stone façade, fireplace, double garage, mature trees, terrace, cellar, 1970s) are supported by inputs."
     },
     "cross_lang_consistency": {
-      "score": 5,
-      "evidence": "DE, EN and FR all agree on 200 m², 4 bedrooms, 2 bathrooms, 1970s build, double garage, stone fireplace, mature garden, terrace, and cellar."
+      "score": 4,
+      "evidence": "DE, EN, FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar, 1970s. Minor disagreement: DE frames it as a sale ('richtet sich das Objekt an Käufer') while EN and FR are neutral on sale-vs-rent — a listing-kind framing slip but not a contradictory numeric/feature claim."
     }
   },
-  "overall_pass": true,
-  "notes": "Treats the rental as a sale ('Käufer'), and omits Differdange."
+  "overall_pass": false
 }

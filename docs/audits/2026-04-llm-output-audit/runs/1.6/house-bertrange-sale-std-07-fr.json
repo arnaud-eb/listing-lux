@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:04.411Z",
+  "output": {
+    "title": "Maison semi-mitoyenne avec jardin sud et parking dans quartier résidentiel",
+    "description": "Cette maison semi-mitoyenne construite dans les années 1990 offre une surface habitable d'environ 195 m² répartie sur plusieurs niveaux. Elle bénéficie d'une façade en brique et d'un jardin orienté au sud, agrémenté d'une terrasse privative, invitant à profiter d'un espace extérieur lumineux et calme. Un parking privé accessible par une allée complète les installations extérieures.\n\nÀ l'intérieur, le séjour lumineux présente un plan ouvert sur la salle à manger, avec un revêtement en carrelage et une cheminée fonctionnelle. Les doubles portes-fenêtres ouvrent directement vers le jardin, favorisant une circulation fluide entre les espaces de vie et l'extérieur.\n\nLa cuisine, aménagée dans un style traditionnel chaleureux avec des meubles en bois, comprend un coin petit-déjeuner et un plan de travail pratique. Elle est équipée d’éléments fonctionnels adaptés à un usage quotidien.\n\nL’habitation comprend quatre chambres et deux salles de bains, aménagées avec soin. Un espace de rangement indépendant est disponible dans la cave. La maison est située dans un cadre résidentiel calme et bien entretenu, offrant un équilibre entre confort et fonctionnalité.",
+    "highlights": [
+      {
+        "text": "Surface habitable d'environ 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Jardin privé orienté sud avec terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking privé avec allée",
+        "icon": "car"
+      },
+      {
+        "text": "Séjour avec cheminée et accès au jardin",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine aménagée avec coin petit-déjeuner",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Cave indépendante pour rangement",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SemiDetached",
+      "SouthFacingGarden",
+      "FamilyLiving",
+      "TraditionalKitchen",
+      "PrivateParking"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:47.212Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Terrasse in ruhiger Wohnlage von Strassen",
+    "description": "Diese freistehende Villa bietet auf 280 m² Wohnfläche ein ausgewogenes Raumkonzept mit fünf Schlafzimmern und drei Badezimmern. Das Gebäude wurde umfassend renoviert und verbindet traditionelle Elemente wie einen Schiefer-Dachstuhl mit modernem Wohnkomfort. Die Fassade in hellem Putz betont die klare Architektur und passt sich harmonisch in die ruhige, etablierte Nachbarschaft ein.\n\nDer Wohnbereich präsentiert sich mit hohen Decken, Parkettboden und einem Kamin, der an kalten Tagen für angenehme Wärme sorgt. Große Fenstertüren schaffen den Zugang zur Terrasse und dem privaten Garten, der mit seinem natürlichen Baumbestand und der Südwest-Ausrichtung zur entspannten Außennutzung einlädt. Die angrenzende Terrasse ist mit sorgfältig verlegtem Naturstein gepflastert und bildet eine Verbindung zwischen Wohnraum und Garten.\n\nDie Küche ist mit maßgefertigten Shaker-Schränken und einer großzügigen Granit-Arbeitsplatte ausgestattet. Ein Mittelblock mit Sitzgelegenheiten und ein Doppelbackofen ermöglichen komfortables Kochen und gemeinsames Verweilen. Fünf Schlafräume bieten vielfältige Nutzungsmöglichkeiten, wobei der Hauptschlafbereich mit Einbauschränken und Blick in den Garten ausgestattet ist.\n\nZur Ausstattung gehören außerdem ein Kellerraum als separate Abstellfläche sowie Parkmöglichkeiten auf eigenem Grundstück. Die Lage in Strassen zeichnet sich durch eine ruhige, dörfliche Atmosphäre bei gleichzeitig guter Anbindung aus. Die Gemeinde verfügt über mehrere Schulen und eine verkehrsgünstige Anbindung an das Autobahnnetz, was eine Vernetzung mit der Stadt Luxemburg unterstützt.",
+    "highlights": [
+      {
+        "text": "Renovierte Villa mit klarer Architektur",
+        "icon": "home"
+      },
+      {
+        "text": "5 Schlafzimmer und 3 Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Offener Wohnbereich mit Kamin und hoher Decke",
+        "icon": "sofa"
+      },
+      {
+        "text": "Großzügige Küche mit Granit-Arbeitsfläche und Doppelbackofen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Privater Garten mit Südwest-Ausrichtung und Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Eigenes Parken auf Grundstück",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum für zusätzlichen Stauraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "RenovatedVilla",
+      "PrivateGarden",
+      "SpaciousLiving",
+      "StrassenLocation",
+      "GraniteKitchen"
+    ]
+  }
+}

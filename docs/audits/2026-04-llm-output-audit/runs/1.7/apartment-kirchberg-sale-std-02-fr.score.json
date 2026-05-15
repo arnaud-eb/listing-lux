@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m²', 'trois chambres et deux salles de bains', 'ascenseur', 'cave', 'place de parking' all consistent with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes sqm, beds, baths, Kirchberg, balcony, parking, elevator, cellar, new-build, Bulthaup, double hauteur, douche italienne, chauffage au sol."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively; 'douche à l’italienne', 'suite parentale', 'garde-corps vitré' are idiomatic; 'environnement tertiaire en pleine expansion' is a touch jargon-heavy."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "'suite parentale', 'douche à l’italienne', 'double vasque sur meuble suspendu', 'cave de rangement' match athome.lu French luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied; French prose omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg' is 12 words with neighborhood; 5 CamelCase hashtags 'NeufKirchberg VueSurParc EspaceEtLumiere CuisineBulthaup AppartementContemporain'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'spacieux appartement' and 'confort optimal' edge slightly toward sales prose without being hyperbolic."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'parquet stratifié' contradicts/specifies vs photo 'engineered wood' (stratifié = laminate, different material); 'Philharmonie et le musée MUDAM' not in inputs (notes only say 'EU institutions and international schools'). 'bonne desserte en transports en commun' is also unsupported but generic."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, elevator, cellar, new-build, sale. Minor: EN mentions 'city views' in title while DE/FR foreground 'Parkblick/vue sur parc' — non-contradictory framing difference."
+    }
+  },
+  "overall_pass": false
+}

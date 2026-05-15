@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'approximately 195 m²', 'four bedrooms and two bathrooms' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, garden, parking, cellar, fireplace, kitchen but omits Bertrange: 'Situated in an established residential area'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads natively: 'promoting a smooth transition between indoor and outdoor living spaces'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'semi-detached house', 'cellar', 'driveway' fits LU English market, though generic without neighborhood anchor."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, consistent with null inputs."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Four-Bedroom Semi-Detached House with South-Facing Garden and Parking' is 10 words but lacks neighborhood; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'notable example of a well-maintained family home' is mildly promotional; no exclamations."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "'notable example of a well-maintained family home' references family — a mild demographic gesture."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. Claims '195 m²', '1990s' (1990s Luxembourg residential), 'brick facade', 'south-facing', 'fireplace', 'four bedrooms and two bathrooms', 'cellar', 'tile flooring', 'wood cabinetry', 'tile splashback', 'freestanding range', 'breakfast nook' — all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR 'maison semi-mitoyenne' and EN 'semi-detached house' agree, but DE 'freistehendes Wohnhaus'/'FreistehendesHaus' asserts detached — a listing-kind/feature contradiction on structural typology; numerics (195 m², 4 beds, 2 baths) agree across all three."
+    }
+  },
+  "overall_pass": false
+}

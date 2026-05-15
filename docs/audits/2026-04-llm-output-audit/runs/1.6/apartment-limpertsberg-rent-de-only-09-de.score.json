@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Invents 'Siemens-Geräten' brand not in inputs, and describes a 'Tageslichtbad mit modernen Sanitärobjekten' though no bathroom photo was analyzed; also frames as 2-Zimmer but lists '2 möblierte Zimmer' which conflates bedrooms with rooms."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm ('95 m²'), bedrooms implicitly, neighborhood, balcony, elevator, cellar, furnished, renovated, kitchen equipment — but omits the second bedroom/bathroom count clarity and never frames as a rental."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as native German with idiomatic phrasing like 'einen offenen, einladenden Raum zum Verweilen' and 'lichtdichten Jalousien'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate LU/DE real-estate register ('Wohnfläche', 'Einbauküche', 'Kellerraum', 'gepflegten Gebäude') consistent with athome.lu DE listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely, matching the v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 2-Zimmer-Wohnung mit Balkon und Einbauküche im Limpertsberg' is 10 words with neighborhood + adjective; 5 hashtags CamelCase, though 'Renoviert' is a single word and 'Limpertsberg' is generic-locale."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; restrained phrasing like 'bietet Platz für frische Luft im urbanen Umfeld'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or protected categories; neutral phrasing throughout."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Siemens-Geräten' (brand not in inputs), 'Tageslichtbad mit modernen Sanitärobjekten' (no bathroom photo analyzed), 'gute Anbindung an die Universität sowie diverse kulturelle Einrichtungen und Grünanlagen' (no neighborhood data supplied). 'Parkett' is also a specific finish vs the input's 'engineered wood flooring' — borderline supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only one language (DE) was generated, so cross-language consistency is trivially satisfied."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Rental framing is entirely missing — the listing reads as a sale description though price is monthly rent. This is the gap the fixture was designed to expose."
+}

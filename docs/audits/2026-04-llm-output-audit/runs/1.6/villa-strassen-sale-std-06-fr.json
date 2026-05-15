@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:44.425Z",
+  "output": {
+    "title": "Villa rénovée avec 5 chambres, jardin mature et garage à Strassen",
+    "description": "Cette villa individuelle de 280 m² située dans un quartier résidentiel calme de Strassen offre un cadre de vie confortable et fonctionnel. Répartie sur deux niveaux, elle comprend cinq chambres spacieuses ainsi que trois salles de bains, répondant ainsi aux exigences d'une habitation familiale de belle envergure.\n\nLe séjour, lumineux et chaleureux, est agrémenté d'une cheminée en fonctionnement et de portes-fenêtres donnant directement sur un jardin privatif. Le parquet en chêne et les hauts plafonds renforcent l'atmosphère accueillante et élégante de cette pièce centrale. La cuisine attenante, rénovée dans un style contemporain avec des éléments shaker et un plan de travail en granit, dispose d'un îlot central avec coin repas ainsi que d'un double four encastré.\n\nÀ l'extérieur, le jardin de style naturel bénéficie d'une exposition sud-ouest, favorisant un ensoleillement optimal en fin de journée. Une terrasse en pierre complète cet espace extérieur établi autour d'arbres matures, assurant une certaine intimité. La cave, installée au sous-sol, offre un espace de rangement supplémentaire apprécié.\n\nLa propriété inclut un emplacement de stationnement privatif. La rénovation récente a été menée avec soin, mettant en valeur les éléments traditionnels tels que les façades blanchies à la chaux et la toiture en ardoise, tout en intégrant des prestations modernes.\n\nStrassen, commune à l'ouest de Luxembourg-ville, présente un caractère résidentiel et villageois avec un bon accès autoroutier et des écoles reconnues à proximité, offrant un cadre pratique tout en restant paisible.",
+    "highlights": [
+      {
+        "text": "Villa individuelle de 280 m² avec 5 chambres",
+        "icon": "home"
+      },
+      {
+        "text": "Séjour avec cheminée et accès direct au jardin",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central et double four",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin mature exposé sud-ouest avec terrasse en pierre",
+        "icon": "trees"
+      },
+      {
+        "text": "Emplacement de stationnement privé",
+        "icon": "car"
+      },
+      {
+        "text": "Cave pour rangement complémentaire",
+        "icon": "archive"
+      },
+      {
+        "text": "Rénovation récente valorisant les matériaux traditionnels",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "VillaRenovee",
+      "JardinMature",
+      "CuisineContemporaine",
+      "CharmeLuxembourgeois",
+      "EspaceEtLuminosite"
+    ]
+  }
+}

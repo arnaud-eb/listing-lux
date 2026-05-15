@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:18.256Z",
+  "output": {
+    "title": "Four-Bedroom Semi-Detached House with Parking and South-Facing Garden",
+    "description": "This well-maintained semi-detached house, constructed in the 1990s, offers 195 m² of living space designed to accommodate a range of residential needs. The brick facade and small front garden contribute to the established and tidy residential ambiance of the property. A private driveway provides convenient parking for residents.\n\nThe living room features an open-plan layout that transitions smoothly into the dining area, with tile flooring and a functional fireplace. Double doors open directly onto the south-facing rear garden, enhancing natural light and accessibility.\n\nThe kitchen is finished in a traditional style, equipped with warm wood cabinetry and a tile splashback. It includes a freestanding cooking range and a breakfast nook, creating a practical and inviting space.\n\nThe rear garden features a south-facing lawn and a private patio, offering an outdoor area suited to various activities or leisure. Additional storage needs are met with a separate cellar on the premises.\n\nOverall, this property presents a comfortably sized residential option within its setting, combining indoor and outdoor living with practical features including parking and storage.",
+    "highlights": [
+      {
+        "text": "Four bedrooms providing ample sleeping space",
+        "icon": "bed"
+      },
+      {
+        "text": "Two bathrooms for convenience",
+        "icon": "bath"
+      },
+      {
+        "text": "Private driveway parking",
+        "icon": "car"
+      },
+      {
+        "text": "South-facing garden enhancing daylight",
+        "icon": "sun"
+      },
+      {
+        "text": "Separate cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Brick facade characteristic of 1990s Luxembourg houses",
+        "icon": "building-2"
+      },
+      {
+        "text": "Open-plan living and dining area with fireplace",
+        "icon": "sofa"
+      },
+      {
+        "text": "Kitchen with breakfast nook and freestanding range",
+        "icon": "cooking-pot"
+      }
+    ],
+    "hashtags": [
+      "SemiDetachedHouse",
+      "SouthFacingGarden",
+      "PrivateParking",
+      "OpenPlanLiving",
+      "ExtraStorage"
+    ]
+  }
+}

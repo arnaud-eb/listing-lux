@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Calls property 'freistehendes Wohnhaus' (detached) but photo analysis says 'semi-detached house'; contradicts input."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 195 m², 4 beds, 2 baths, garden, terrace, cellar, fireplace, kitchen, parking but omits Bertrange and mislabels the property type."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as natural German: 'Bodentiefe doppelte Türen verbinden das Wohnzimmer direkt mit dem angrenzenden Garten'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'Einfamilienhaus'/'freistehendes Wohnhaus' which is inaccurate for a semi-detached; other vocabulary ('Keller', 'Einfahrt') fits LU market."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE invented or mentioned; consistent with null input."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Geräumiges Einfamilienhaus mit vier Schlafzimmern und südlich ausgerichtetem Garten' is 10 words but property-type adjective ('Einfamilienhaus') is wrong; 5 hashtags CamelCase including 'FreistehendesHaus' which is factually incorrect."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamations; sober phrasing 'Angaben zu weiteren Infrastrukturmerkmalen oder dem Mikrostandort liegen nicht vor'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting in DE text."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'freistehendes Wohnhaus' / hashtag 'FreistehendesHaus' contradicts input 'semi-detached house' — fabricated property type. Other concrete claims (195 m², 1990er, Ziegelstein, südlich, Kamin, Fliesen, Holzfronten, Frühstücksbereich, Keller) all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR 'maison semi-mitoyenne' and EN 'semi-detached house' agree, but DE 'freistehendes Wohnhaus'/'FreistehendesHaus' asserts detached — a listing-kind/feature contradiction on structural typology; numerics (195 m², 4 beds, 2 baths) agree across all three."
+    }
+  },
+  "overall_pass": false
+}

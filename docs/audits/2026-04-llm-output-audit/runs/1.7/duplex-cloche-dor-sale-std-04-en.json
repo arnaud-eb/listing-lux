@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:23.880Z",
+  "output": {
+    "title": "Spacious 3-Bedroom Duplex with Terrace and City Views in Cloche d'Or",
+    "description": "This newly built duplex apartment offers 180 m² of well-planned living space across two levels in the Cloche d'Or district. The expansive living room features a double-height ceiling and panoramic glazing, accentuating the volume and natural light while providing views of the adjacent new park. Engineered oak flooring enhances the modern aesthetic throughout.\n\nThe open-plan kitchen is equipped with fully integrated Siemens appliances and a quartz worktop, seamlessly connecting to the dining and living areas for a sociable atmosphere. Soft-close cabinetry adds to the sleek, contemporary design.\n\nThe upper level houses three bedrooms, including a master bedroom with fitted wardrobes and direct access to a wraparound terrace finished with wood decking. This outdoor space offers views over the nearby shopping center and benefits from evening sun exposure.\n\nAdditional conveniences include an elevator serving the building, a dedicated parking space, and a separate cellar room for storage. Located in Cloche d'Or, a district known for its modern office developments, shopping facilities, and parks, the setting reflects a contemporary urban environment with diverse amenities.",
+    "highlights": [
+      {
+        "text": "180 m² duplex with double-height living area",
+        "icon": "home"
+      },
+      {
+        "text": "Three bedrooms including upper-floor master",
+        "icon": "bed"
+      },
+      {
+        "text": "Two bathrooms with modern fittings",
+        "icon": "bath"
+      },
+      {
+        "text": "Open-plan kitchen with Siemens appliances",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Wraparound terrace with city and park views",
+        "icon": "sun"
+      },
+      {
+        "text": "Dedicated parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access in building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "DuplexDesign",
+      "SiemensKitchen",
+      "CityViews",
+      "ClocheDOr"
+    ]
+  }
+}

@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'280 m² of living space', 'five bedrooms and three bathrooms', 'south-west exposure' all match inputs."
+      "evidence": "'280 m² of living space', 'five bedrooms and three bathrooms', and renovated features all match inputs."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Mentions beds/baths/sqm/Strassen, plus parking, cellar, terrace, garden, fireplace, island, double oven, SW exposure, fitted wardrobes."
+      "evidence": "Covers beds/baths/sqm/Strassen plus parking, cellar, terrace, garden SW exposure, fireplace, island and double oven."
     },
     "native_quality": {
       "score": 5,
-      "evidence": "'creating a seamless connection between interior and exterior spaces' reads as natural English prose."
+      "evidence": "Reads as natural English: 'creating a seamless connection between interior and exterior spaces'."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'detached villa', 'shaker cabinetry', 'granite worktop' aligns with LU EN luxury portal vocabulary."
+      "evidence": "'detached villa', 'parquet flooring', 'shaker cabinetry', 'granite worktop' fit the LU English luxury register; 'parking facilities' is slightly generic."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class mentioned or invented in description."
+      "evidence": "No CPE class invented; description omits energy class entirely as is appropriate when none supplied."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Renovated 5-Bedroom Villa with Garden and Parking in Strassen' is 10 words; 5 CamelCase hashtags."
+      "evidence": "Title 'Renovated 5-Bedroom Villa with Garden and Parking in Strassen' is 10 words with neighborhood; 5 CamelCase hashtags."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "No hyperbole; 'maintaining a village character' is restrained."
+      "evidence": "Restrained — 'quiet residential area', 'naturalistic, peaceful outdoor environment'; no hyperbole or exclamation marks."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No reference to families, demographics, or ideal occupants."
+      "evidence": "No demographic steering; uses neutral 'residential calm' rather than 'perfect for families'."
     },
     "hallucination": {
-      "score": 3,
-      "evidence": "'proximity to good schools and motorway access' — neither schools nor motorway access is in the inputs."
+      "score": 4,
+      "evidence": "Unsupported: 1. 'proximity to good schools' — no schools are named in inputs but 'good schools' is a qualitative claim attached to no named target; 'motorway access' is also unsupported as a stated proximity. Counting 'good schools' as the single concrete unsupported claim. All numerics (280 m², 5/3) and named features (SW exposure, shaker, granite, double oven, parquet) are supported."
     },
     "cross_lang_consistency": {
       "score": 4,
-      "evidence": "DE/EN/FR all agree on 280 m², 5 beds, 3 baths, SW garden, parking, cellar, terrace; however FR uniquely calls the fireplace 'poêle à bois' (wood stove) while DE/EN say 'Kamin'/'wood-burning fireplace', a minor feature mismatch."
+      "evidence": "All three languages agree on 280 m², 5 bedrooms, 3 bathrooms, sale, garden/terrace/parking/cellar/fireplace. Minor disagreement: FR specifies 'parquet en chêne' (oak) and 'poêle à bois' (wood stove) while DE/EN say 'Parkett'/'parquet flooring' and 'Kamin'/'wood-burning fireplace' — non-contradictory specificity differences."
     }
   },
   "overall_pass": false

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'maison mitoyenne' matches semi-detached input; 195 m², 4 chambres, 2 salles de bains all correct; minor stretch 'répartie sur plusieurs niveaux' not explicitly supported but reasonable."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 195 m², 4 chambres, 2 salles de bains, Bertrange context via residential 1990s, plus all active features (parking, garden, terrasse, cave) and photo selling points (south-facing, fireplace, breakfast nook)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'créant une fluidité entre les espaces de vie et l'extérieur' — natural French syntax, though some phrasing ('intégrant des éléments fonctionnels tels que le parking privatif') is slightly mechanical."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU/FR luxury vocabulary: 'surface habitable', 'séjour ouvert sur la salle à manger', 'cave', 'prestations' align with athome.lu corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented and none in inputs; prose omits energy class entirely, consistent with v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison mitoyenne quatre chambres avec jardin orienté sud et parking privé' = 12 words but lacks neighborhood (Bertrange). 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; restrained adjectives like 'soigné', 'calme et verdoyant'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to occupant demographics; 'adapté à une habitation de ce type' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'répartie sur plusieurs niveaux' (multi-level not in inputs). Brick facade, 1990s, fireplace, south-facing, breakfast nook, 195 m², 4 bed/2 bath, parking, cellar, garden all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement (195 m², 4 bed, 2 bath) holds across FR/EN/DE. However listing-kind/property-type disagreement: FR 'maison mitoyenne' and EN 'semi-detached house' agree with input, but DE 'freistehende Einfamilienhaus' asserts freestanding — a feature-list/type disagreement on the same property."
+    }
+  },
+  "overall_pass": false
+}

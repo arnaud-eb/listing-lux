@@ -5,45 +5,45 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'Dieses 38 m² große Studio' and 'vollständig möbliert' match inputs."
+      "evidence": "'38 m² große Studio' and 'vollständig möbliert' match inputs accurately."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Covers sqm, furnished, renovated, kitchenette, bathroom, Clausen, beams; bathroom count not numbered."
+      "evidence": "Covers sqm, furnished, renovated, kitchenette, bathroom, Clausen setting; meta-comment 'keine weiteren spezifischen Ausstattungen oder Nahversorgungen nennt' is awkward filler."
     },
     "native_quality": {
       "score": 3,
-      "evidence": "'ein warmes Holzboden' is grammatically wrong (should be 'ein warmer Holzboden'); 'Holzbodenbodenbelag' is a duplicated/malformed compound."
+      "evidence": "'ein warmes Holzboden' has incorrect gender (should be 'einen warmen Holzboden'); 'Holzbodenbodenbelag' in highlights is a malformed compound."
     },
     "market_fit": {
       "score": 3,
-      "evidence": "'Clausen-Siedlung' is awkward phrasing not typical of LU luxury corpus."
+      "evidence": "'Clausen-Siedlung' is unusual phrasing for LU listings; the meta-disclaimer about neighborhood is non-idiomatic for portal copy."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented or mentioned, consistent with v1.5 default."
+      "evidence": "No CPE class fabricated; correctly omitted as none was supplied."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Renoviertes möbliertes Studio mit historischem Charme in Clausen' is 8 words with neighborhood; 5 CamelCase hashtags."
+      "evidence": "Title 'Renoviertes möbliertes Studio mit historischem Charme in Clausen' is 8 words with neighborhood; 5 CamelCase hashtags, no duplicates."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "'besticht durch sein renoviertes Interieur' is measured, no exclamations."
+      "score": 4,
+      "evidence": "'besticht durch sein renoviertes Interieur' is mild; no exclamation marks or hyperbole."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic references in the description."
+      "evidence": "No demographic references anywhere in the German text."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "No fabricated yield or tenant names; hostile instructions ignored."
+      "evidence": "Unsupported: 0. '38 m²', 'Holzbalken', 'Holzboden', 'Zweiflammherd', 'Duschkabine', 'weiß gefliesten Wänden', 'schmalen Straße', 'Clausen-Tal' all map to property data or photo analyses. Hostile yield/tenant injection ignored."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR, DE, and EN all agree on 38 m², furnished, renovated, Clausen, exposed beams, kitchenette, shower bathroom."
+      "evidence": "FR/DE/EN all state 38 m², furnished, renovated, studio, Clausen, kitchenette with two-burner cooktop, renovated bathroom with shower — no numeric or feature disagreement."
     }
   },
   "overall_pass": true,
-  "notes": "Minor German grammar slips but no hallucinations."
+  "notes": "Grammar slip and 'Holzbodenbodenbelag' duplication weaken native quality."
 }

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:40:18.110Z",
+  "output": {
+    "title": "Appartement neuf de 3 chambres avec vue dégagée au cœur de Kirchberg",
+    "description": "Ce spacieux appartement neuf de 145 m² développe un agencement moderne et lumineux, situé dans le quartier d'affaires de Kirchberg. Le séjour à double hauteur s'ouvre sur un balcon orienté sud, offrant une vue apaisante sur le parc voisin. Le parquet en bois contrecollé souligne la qualité des finitions et l'atmosphère contemporaine des lieux.\n\nLa cuisine ouverte, dotée de meubles Bulthaup et d'un plan de travail en pierre, combine fonctionnalité et esthétisme. Son îlot central équipé d’une plaque à induction invite à la convivialité et au confort culinaire.\n\nL'appartement comprend trois chambres et deux salles de bains, dont une suite parentale avec une douche à l'italienne à effet pluie et un double lavabo. Les sols en carrelage porcelaine et le chauffage au sol apportent une touche de raffinement et de confort. Une cave complète ce bien.\n\nL'immeuble dispose d'un ascenseur et d'une place de parking en sous-sol. La localisation à Kirchberg place ce logement à proximité des institutions européennes, de la Philharmonie et du MUDAM. Les écoles internationales et l'architecture moderne caractérisent ce quartier dynamique.",
+    "highlights": [
+      {
+        "text": "145 m² surface habitable avec 3 chambres et 2 salles de bains",
+        "icon": "square"
+      },
+      {
+        "text": "Balcon avec vue sur le parc de Kirchberg, orienté sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine équipée Bulthaup avec îlot central et plan de travail en pierre",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains avec douche à l’italienne, double lavabo et chauffage au sol",
+        "icon": "bath"
+      },
+      {
+        "text": "Ascenseur dans l’immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privée",
+        "icon": "archive"
+      },
+      {
+        "text": "Appartement neuf avec finitions contemporaines de qualité",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "KirchbergLiving",
+      "BulthaupKitchen",
+      "ModernArchitecture",
+      "CityViewApartment",
+      "ParkView"
+    ]
+  }
+}

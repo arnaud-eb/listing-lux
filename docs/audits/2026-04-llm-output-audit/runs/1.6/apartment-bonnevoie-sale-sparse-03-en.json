@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:40:45.684Z",
+  "output": {
+    "title": "Bright 1-Bedroom Apartment with South-Facing Living Room in Bonnevoie",
+    "description": "This 52 m² apartment offers a well-maintained living space situated in the vibrant Bonnevoie neighborhood. The south-facing living room receives ample natural light through a single window, creating a bright and welcoming atmosphere enhanced by laminate flooring and neutral white walls.\n\nThe compact kitchen features a practical galley layout with traditional white cabinetry and ceramic tile flooring, providing a functional space suitable for daily meal preparation. Adjoining the living areas, the kitchen's straightforward design accommodates essential cooking needs.\n\nThe bathroom includes a full-size shower-tub combination, complemented by white tiled walls and a single vanity unit, maintaining a clean and functional environment. Additional storage needs are served by a separate cellar, located within the building's basement.\n\nSituated near Luxembourg's central station, Bonnevoie is known for its multicultural ambiance and lively market, offering a variety of dining options and convenient access to public transit connections. The apartment benefits from the neighborhood's central location with competitive pricing relative to nearby areas.\n\nOverall, this property presents a practical and comfortable living solution with well-defined spaces and access to the amenities of a dynamic urban setting.",
+    "highlights": [
+      {
+        "text": "52 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "South-facing living room with laminate flooring",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact galley kitchen with traditional cabinetry",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Bathroom with shower-tub combination",
+        "icon": "bath"
+      },
+      {
+        "text": "Separate cellar in building basement",
+        "icon": "archive"
+      },
+      {
+        "text": "Located in Bonnevoie near central station",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SouthFacing",
+      "CompactKitchen",
+      "BonnevoieLiving",
+      "UrbanApartment",
+      "CellarStorage"
+    ]
+  }
+}

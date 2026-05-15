@@ -1,0 +1,47 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:40:39.750Z",
+  "output": {
+    "title": "Appartement 1 chambre lumineux orienté sud avec cave à Bonnevoie",
+    "description": "Cet appartement de 52 m² offre un espace de vie clair et agréable grâce à une pièce principale orientée plein sud, bénéficiant d'une excellente luminosité naturelle. La pièce à vivre présente un sol stratifié sobre et des murs blancs contribuant à une ambiance lumineuse et neutre, facile à personnaliser.\n\nLa cuisine disposée en couloir, bien que traditionnelle, conserve un agencement fonctionnel avec des éléments blancs et un sol en carrelage céramique, facilitant l'entretien. Elle propose un espace compact destiné à la préparation des repas.\n\nLa salle de bains, bien entretenue, est équipée d'une baignoire-douche intégrée ainsi que d'un meuble vasque blanc, dans un style simple et pratique. Elle offre une solution complète dans un espace maîtrisé.\n\nL'appartement comprend également une cave privative, permettant un espace de rangement extérieur au logement.\n\nSitué à Bonnevoie, ce bien se trouve dans un quartier dynamique et multiculturel, reconnu pour son marché local et son offre gastronomique variée. Le secteur bénéficie d'une bonne desserte vers la gare centrale, renforçant son accès rapide aux transports.",
+    "highlights": [
+      {
+        "text": "Appartement lumineux avec orientation sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Une chambre confortable",
+        "icon": "bed"
+      },
+      {
+        "text": "Salle de bains équipée d'une baignoire-douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Cuisine fonctionnelle en configuration couloir",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Cave privative incluse",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier multiculturel avec marché vivant",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Bonne connexion à la gare centrale",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "LuminositéSud",
+      "CuisineFonctionnelle",
+      "BonnevoieMarket",
+      "CavePrivative"
+    ]
+  }
+}

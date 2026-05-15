@@ -1,0 +1,44 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:54.504Z",
+  "output": {
+    "title": "Reihenhaus mit privatem Garten und Pkw-Stellplatz auf 130 m² Wohnfläche",
+    "description": "Dieses Reihenhaus aus den 1980er Jahren präsentiert sich in gepflegtem Zustand und fügt sich mit seiner neutralen Fassade harmonisch in ein ruhiges Wohngebiet ein. Die Wohnfläche von 130 m² verteilt sich auf drei Schlafzimmer und ein Badezimmer, was vielfältige Nutzungsoptionen ermöglicht.\n\nDer Wohnbereich verfügt über Patio-Türen, die den Blick und Zugang zum privaten, hinteren Garten freigeben. Der Raum zeigt einen eher traditionellen Stil mit Teppichboden und einer Nische für einen Röhrenfernseher, die eine modernisierende Anpassung erfahren kann.\n\nDer Garten ist überschaubar und funktional angelegt, mit Rasenfläche, Holzzaun und einem kleinen Geräteschuppen zur Unterbringung von Gartengeräten oder anderen Utensilien. Ein separater Kellerraum ergänzt den Stauraumangebot dieser Immobilie.\n\nZur Immobilie gehört ein privater Pkw-Stellplatz, der direkt am Haus gelegen ist und den Komfort im Wohnalltag erhöht. Die Immobilie eignet sich für Personen, die eine ruhige Wohnlage in einem Wohngebiet mit typischer Bebauung der 1980er Jahre suchen.",
+    "highlights": [
+      {
+        "text": "Reihenhaus in ruhigem Wohngebiet der 1980er Jahre",
+        "icon": "building-2"
+      },
+      {
+        "text": "Drei Schlafzimmer auf 130 m² Wohnfläche",
+        "icon": "bed"
+      },
+      {
+        "text": "Privater Garten mit Rasen und Holzsicherheitzaun",
+        "icon": "trees"
+      },
+      {
+        "text": "Separater Kellerraum für zusätzliche Lagerfläche",
+        "icon": "archive"
+      },
+      {
+        "text": "Eigener Pkw-Stellplatz vorhanden",
+        "icon": "car"
+      },
+      {
+        "text": "Wohnzimmer mit Zugang zum Garten",
+        "icon": "sofa"
+      }
+    ],
+    "hashtags": [
+      "Reihenhaus",
+      "Privatgarten",
+      "Stellplatz",
+      "Dachgeschoss",
+      "1980erBau"
+    ]
+  }
+}

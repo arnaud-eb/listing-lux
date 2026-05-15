@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "Faithful: '180 m²', 'three bedrooms', 'Two bathrooms', 'Siemens appliances', 'quartz worktop', 'wraparound terrace'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, baths, neighborhood, plus parking, elevator, cellar, terrace, new-build, city-view; photo points covered: 'double-height ceiling', 'panoramic glazing', 'wraparound terrace finished with wood decking'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads natively: 'seamlessly connecting to the dining and living areas for a sociable atmosphere'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary fits luxury market: 'engineered oak flooring', 'fully integrated Siemens appliances', 'wraparound terrace'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "CPE omitted entirely, consistent with no class supplied in inputs."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Spacious 3-Bedroom Duplex with Terrace and City Views in Cloche d'Or' ~11 words with neighborhood; 5 CamelCase hashtags including 'ClocheDOr'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained, no hyperbole or exclamation marks: 'reflects a contemporary urban environment with diverse amenities'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references whatsoever."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All claims supported: '180 m²' (sqm), 'three bedrooms', 'Two bathrooms', 'double-height ceiling' (photo), 'panoramic glazing' (photo), 'engineered oak flooring' (photo), 'Siemens appliances' (photo), 'quartz worktop' (photo), 'wraparound terrace ... wood decking' (photo), 'evening sun exposure' (photo), 'shopping center' (photo), 'Cloche d'Or' (neighborhood)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "Numeric agreement (180 m², 3 bedrooms) across DE/EN/FR; FR adds 'orientation sud' for the terrace which DE/EN do not state, a minor non-contradictory detail; FR also omits explicit two-bathroom mention while DE ('Zwei Bäder') and EN ('Two bathrooms') include it — minor disagreement."
+    }
+  },
+  "overall_pass": true
+}

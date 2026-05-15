@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:43:33.565Z",
+  "output": {
+    "title": "Studio meublé rénové avec charme dans le quartier historique de Clausen",
+    "description": "Ce studio de 38 m² a été soigneusement rénové en préservant le cachet ancien, notamment avec ses poutres apparentes qui accentuent son caractère. Le parquet en bois confère une atmosphère chaleureuse à l’espace de vie, aménagé avec un lit double et une kitchenette fonctionnelle intégrée.\n\nLa kitchenette compacte comprend un plan de cuisson deux feux, un petit réfrigérateur et un évier en inox, réunissant praticité et modernité dans un espace optimisé. La salle de bains, récemment rénovée, est équipée d’une douche à l’italienne et de carreaux blancs apportant luminosité et simplicité.\n\nSitué dans un immeuble en pierre avec une façade entretenue, ce logement bénéficie du cadre typique de la vallée de Clausen, connu pour son ambiance historique. La localisation offre un équilibre entre proximité du centre-ville et cadre calme au sein d’une rue étroite à caractère ancien.",
+    "highlights": [
+      {
+        "text": "Studio meublé et rénové",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes caractéristiques",
+        "icon": "building-2"
+      },
+      {
+        "text": "Kitchenette fonctionnelle et moderne",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains rénovée avec douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Parquet en bois chaleureux",
+        "icon": "square"
+      },
+      {
+        "text": "Immeuble en pierre historique",
+        "icon": "building"
+      },
+      {
+        "text": "Cadre typique de la vallée de Clausen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "CharmeHistorique",
+      "StudioRénové",
+      "ClausenValley",
+      "AmbianceRustique",
+      "CompactFonctionnel"
+    ]
+  }
+}

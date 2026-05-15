@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:08:30.428Z",
+  "output": {
+    "title": "Moderne 3-Zimmer Neubauwohnung mit Balkon und Parkblick in Kirchberg",
+    "description": "Diese Neubauwohnung bietet auf 145 m² eine durchdachte Raumaufteilung mit drei separaten Schlafzimmern und zwei Badezimmern. Der Wohnbereich zeichnet sich durch eine offene Architektur mit doppelhoher Decke und südlich ausgerichteten Fensterfronten aus, die für eine helle und freundliche Atmosphäre sorgen. Das Eichen-Mehrschichtparkett unterstreicht die moderne Gestaltung des Raumes.\n\nDie Küche ist mit hochwertigen Bulthaup-Möbeln ausgestattet und verfügt über eine induktive Kochfläche, eine zentrale Kochinsel mit Frühstücksbar sowie eine Arbeitsplatte aus Naturstein. Diese Ausstattung ermöglicht eine funktionale und ansprechende Kulinarikzone.\n\nDer Balkon ist nach Süden ausgerichtet und bietet mit einer Glasbrüstung und Fliesenboden einen ruhigen Rückzugsort mit Blick auf den Park von Kirchberg. Die Lage in diesem Viertel vereint administrative, kulturelle und schulische Einrichtungen sowie moderne Wohngebäude.\n\nZwei zeitgemäß ausgestattete Bäder verfügen jeweils über eine begehbare Regendusche, Doppelwaschtische und eine Fußbodenheizung, ergänzt durch Porzellanfliesen. Ein Kellerraum ist ebenfalls vorhanden.\n\nZur Immobilie gehören ein Stellplatz und der Zugang zum Aufzug, der alle Etagen bedient. Die Ausrichtung, Materialien und Ausstattung unterstreichen den qualitativen Neubau-Charakter in einem strukturierten urbanen Umfeld.",
+    "highlights": [
+      {
+        "text": "145 m² moderne Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "Drei Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Bulthaup-Küche mit Stein-Arbeitsplatte",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlicher Balkon mit Parkblick",
+        "icon": "sun"
+      },
+      {
+        "text": "Fußbodenheizung in Bädern",
+        "icon": "flame"
+      },
+      {
+        "text": "Stellplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "KirchbergView",
+      "BulthaupKitchen",
+      "NewBuildApartment",
+      "CityBalcony"
+    ]
+  }
+}

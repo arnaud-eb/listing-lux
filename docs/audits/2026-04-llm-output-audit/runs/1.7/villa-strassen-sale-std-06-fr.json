@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:54.089Z",
+  "output": {
+    "title": "Villa rénovée avec 5 chambres, jardin arboré et terrasse à Strassen",
+    "description": "Cette villa indépendante et rénovée offre une surface habitable généreuse de 280 m² répartie sur deux niveaux. Elle comprend cinq chambres aux volumes confortables, dont une suite principale avec vue dégagée sur le jardin. Le séjour lumineux bénéficie d’un parquet en bois, de hauts plafonds et d’une cheminée fonctionnelle, ainsi que d’un accès direct par portes-fenêtres à la terrasse et au jardin.\n\nLa cuisine aménagée dans un style shaker associe fonctionnalité et convivialité avec un plan de travail en granit et un îlot central doté d’une zone repas intégrée. Les équipements incluent un four double, adaptés à une utilisation quotidienne et à la réception.\n\nLe jardin naturel présente une exposition sud-ouest et comprend une pelouse entretenue, une terrasse en pierre et une végétation mature qui assure intimité et cadre verdoyant. Un espace parking ainsi qu’une cave complètent les prestations de ce bien.\n\nSituée à Strassen, commune résidentielle caractérisée par son accès autoroutier efficace et son ambiance villageoise, cette maison bénéficie d’un environnement calme et proche des commodités. L’emplacement favorise un cadre de vie paisible tout en restant connecté à la ville.",
+    "highlights": [
+      {
+        "text": "Villa indépendante rénovée de 280 m²",
+        "icon": "home"
+      },
+      {
+        "text": "Cinq chambres spacieuses avec rangements intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Séjour avec cheminée et parquet en bois",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central et four double",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin planté avec exposition sud-ouest",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse en pierre attenante au jardin",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking privatif et cave équipée",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "VillaRénovée",
+      "JardinArboré",
+      "CuisineAménagée",
+      "Cheminée",
+      "EspacesBienDistribués"
+    ]
+  }
+}

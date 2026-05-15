@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'Diese 52 m² große Apartmentwohnung' and 'Ein separater Kellerraum' align with inputs."
+      "evidence": "'52 m²', 'Süd-Ausrichtung', 'separater Kellerraum' all match inputs."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Covers sqm, 1-Zimmer (title), south orientation, kitchen, bathroom with tub, cellar, Bonnevoie."
+      "evidence": "Sqm, 1-Zimmer in title, south-facing, galley kitchen, bath with tub+shower, cellar, neighborhood all covered."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'überzeugt durch eine durchdachte Grundrissgestaltung' reads natively, though 'Apartmentwohnung' is slightly redundant."
+      "evidence": "'Apartmentwohnung' is slightly redundant but reads naturally otherwise; 'gewachsenen Wohnviertel' is idiomatic German."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'gewachsenen Wohnviertel', 'Anbindung an den Hauptbahnhof', 'Kellerraum' fit LU/DE listing register."
+      "evidence": "'Kellerraum', 'Hauptbahnhof', 'Stadtviertel Bonnevoie' fit LU German listing vocabulary."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented or referenced — correctly omitted."
+      "evidence": "No CPE class invented; omitted entirely matching v1.5 default."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Helles 1-Zimmer-Apartment mit Süd-Ausrichtung und separatem Keller in Bonnevoie' is 10 words; 5 CamelCase hashtags."
+      "evidence": "Title 'Helles 1-Zimmer-Apartment mit Süd-Ausrichtung und separatem Keller in Bonnevoie' is ~10 words with neighborhood; 5 hashtags CamelCase, no duplicates."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "'Sie ist als kompakte, praktische Kochzeile ausgeführt' — sober, no hyperbole."
+      "score": 4,
+      "evidence": "'überzeugt durch eine durchdachte Grundrissgestaltung' is mildly promotional but no hyperbole or exclamations."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "'urbane Atmosphäre mit multikulturellem Umfeld' describes area not occupants."
+      "evidence": "'multikulturellem Umfeld' refers to neighborhood, not occupants."
     },
     "hallucination": {
-      "score": 4,
-      "evidence": "'vielfältige gastronomische Szene sowie einen belebten Markt' — market and dining not in inputs."
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'vielfältige gastronomische Szene' and 'belebten Markt' are specific neighborhood amenity claims not provided in inputs. Sqm, orientation, kitchen, cellar, Hauptbahnhof supported."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/EN/DE all agree on 52 m², 1 bedroom, south-facing window, galley kitchen, shower-tub combo, cellar, Bonnevoie central location."
+      "evidence": "DE/FR/EN all agree on 52 m², 1 bedroom, cellar, south-facing living room, galley kitchen, shower-tub bath, Bonnevoie/central station proximity; no numeric or feature contradictions."
     }
   },
   "overall_pass": false

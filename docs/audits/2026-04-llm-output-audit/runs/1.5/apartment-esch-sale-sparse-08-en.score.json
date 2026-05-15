@@ -4,46 +4,46 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 4,
-      "evidence": "'enriched by the presence of the university and the Belval development' — not in inputs but plausible context."
+      "score": 5,
+      "evidence": "'This 78 m² apartment ... with two bedrooms and a single bathroom' matches inputs exactly."
     },
     "completeness": {
       "score": 5,
-      "evidence": "'78 m² apartment...two bedrooms and a single bathroom', balcony, parking, elevator all covered."
+      "evidence": "Mentions 78m², two bedrooms, one bathroom, balcony, parking, elevator, Esch-sur-Alzette, L-shape kitchen, laminate flooring, beige walls."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'arranged to maximize space and comfort' reads as native English."
+      "evidence": "'arranged to maximize space and comfort' reads native; 'evolving urban character' is slightly stiff."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'Esch-sur-Alzette', 'parking space included', 'elevator serves the building' fits LU English listings."
+      "evidence": "'parking space included', 'elevator in building' are standard portal English; vocabulary fits entry-tier."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE invented; correctly omitted as none supplied."
+      "evidence": "No CPE class supplied and prose omits CPE — correct v1.5 default."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette' is 9 words, well-shaped; 5 CamelCase hashtags."
+      "evidence": "Title 'Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette' is 10 words and well-shaped; hashtags CamelCase and non-duplicate."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "'a modest yet private area for relaxation' — restrained, no hyperbole or exclamation marks."
+      "evidence": "No 'breathtaking', 'must-see', or exclamation marks; 'modest yet private' is appropriately restrained for entry-tier."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No occupant or demographic references."
+      "evidence": "No demographic, family, or occupant references."
     },
     "hallucination": {
       "score": 3,
-      "evidence": "'enriched by the presence of the university and the Belval development' is unsupported by the inputs."
+      "evidence": "Unsupported: 2 — 'the presence of the university and the Belval development' (no neighborhood data in inputs) and 'cultural scene' (not in inputs). Sqm, beds, baths, balcony, parking, elevator, L-shape kitchen, white cabinetry, beige walls, laminate, tiled balcony all supported."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/DE/EN all agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and Belval/university framing."
+      "evidence": "All three agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, Esch-sur-Alzette, and sale framing; no numeric or feature-list disagreement."
     }
   },
   "overall_pass": false,
-  "notes": "University/Belval reference unsupported across all three languages."
+  "notes": "Same Belval/university invention as FR/DE; otherwise the cleanest of the three."
 }

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:07:58.642Z",
+  "output": {
+    "title": "Luxuriöses Penthouse mit 4 Schlafzimmern und großzügiger Terrasse in Belair",
+    "description": "Dieses exklusive Penthouse bietet auf etwa 220 m² Wohnfläche einen klar strukturierten, offenen Grundriss mit modernen Ausstattungsmerkmalen und hochwertiger Renovierung. Der zentral gelegene Wohnbereich besticht durch bodentiefe Fenster, die für natürliche Helligkeit sorgen, sowie Eichenparkett und einen Holz-Kamin. Die offene Raumgestaltung schafft eine attraktive Verbindung zwischen Wohnraum und den Panoramablicken auf die Stadt.\n\nDie Küche wurde mit Gaggenau-Geräten und einer aus Carrara-Marmor gefertigten Kochinsel ausgestattet und präsentiert sich in einem minimalistischen Design mit mattschwarzen Armaturen. Ein integrierter Weinkühlschrank ergänzt die Ausstattung und stellt professionelle Funktionalität sicher.\n\nDie vier Schlafzimmer umfassen ein Hauptschlafzimmer mit eigenem Bad en suite, Zugang zu einer privaten Terrasse und einem begehbaren Kleiderschrank. Zwei weitere Bäder bieten zusätzlichen Komfort. Die großzügige Außenterrasse mit südlicher Ausrichtung verfügt über eine moderne Glasbrüstung und eine Lounge-Ecke, von wo aus sich ein freier 180-Grad-Blick über das Stadtgebiet eröffnet.\n\nZur Immobilie gehören ein automatisierter Stellplatz, ein Aufzug, der barrierefreie Zugang ermöglicht, sowie ein separater Kellerraum. Die Lage im gehobenen und grünen Stadtteil Belair verbindet ruhige Wohnqualität mit der Nähe zum Zentrum von Luxemburg.",
+    "highlights": [
+      {
+        "text": "Penthouse mit 4 Schlafzimmern",
+        "icon": "home"
+      },
+      {
+        "text": "220 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "Renoviert mit hochwertiger Ausstattung",
+        "icon": "building-2"
+      },
+      {
+        "text": "Moderne Küche mit Gaggenau Geräten und Carrara-Marmor",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Großzügige Terrasse mit 180° Stadtblick und Südausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Wohnzimmer mit Holz-Kamin und bodentiefen Fenstern",
+        "icon": "flame"
+      },
+      {
+        "text": "Privater Kellerraum vorhanden",
+        "icon": "archive"
+      },
+      {
+        "text": "Stellplatz und Aufzug im Gebäude",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLiving",
+      "CityView",
+      "BelairResidence",
+      "ModernLiving",
+      "TerrassenWohnung"
+    ]
+  }
+}

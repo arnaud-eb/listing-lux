@@ -5,31 +5,31 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "\"This 130 m² row house... three bedrooms and one bathroom\" matches inputs."
+      "evidence": "'130 m² row house', '3-Bedroom', 'one bathroom', 'private rear garden', 'parking space', 'cellar' all match inputs."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Covers 130 m², 3 bed/1 bath, garden, parking, cellar; neighborhood Mamer is not mentioned."
+      "evidence": "All features captured but no mention of Mamer: 'a residential locality characterized by similar 1980s housing'."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "\"indicating potential for modernization to suit personal tastes\" reads natural English."
+      "evidence": "Reads natively: 'indicating potential for modernization to suit personal tastes' is idiomatic."
     },
     "market_fit": {
-      "score": 3,
-      "evidence": "\"row house\" and \"dedicated parking space\" fit; \"residential locality characterized by similar 1980s housing\" is somewhat clunky and not luxury-corpus."
+      "score": 4,
+      "evidence": "Standard LU English terms used: 'row house', 'cellar', 'dedicated parking space'."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No energy class mentioned or invented."
+      "evidence": "No CPE class invented; appropriately omitted when not in inputs."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title \"130 m² 3-Bedroom Row House with Private Garden and Parking\" is ~11 words, missing neighborhood; hashtags \"RowHouse PrivateGarden ParkingIncluded StorageCellar 1980sArchitecture\" CamelCase, 5, no duplicates."
+      "evidence": "Title '130 m² 3-Bedroom Row House with Private Garden and Parking' is 11 words but lacks Mamer; hashtags are CamelCase and distinct."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "\"provides a balanced indoor and outdoor living environment\" — no hyperbole."
+      "evidence": "No hyperbole: 'a balanced indoor and outdoor living environment' is restrained."
     },
     "fair_housing": {
       "score": 5,
@@ -37,11 +37,11 @@
     },
     "hallucination": {
       "score": 5,
-      "evidence": "\"residential locality characterized by similar 1980s housing\" — no invented landmarks or transit."
+      "evidence": "Unsupported: 0. Supported: '130 m²' (sqm=130), '3 bedrooms' (bedrooms=3), '1980s' (style), 'beige carpeting' ('beige carpet'), 'wood fence' (photo), 'small storage shed' ('small shed')."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/EN/DE all agree: 130 m², 3 bedrooms, 1 bathroom, private rear garden, parking, cellar, 1980s row house, no neighborhood claim."
+      "evidence": "FR/EN/DE all agree on 130 m², 3 bedrooms, 1 bathroom, garden/parking/cellar present, rental house, 1980s build."
     }
   },
   "overall_pass": true

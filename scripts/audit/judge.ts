@@ -97,11 +97,28 @@ For each language provided, score 9 dimensions on a 1-5 integer scale:
 - seo_signal: are the title and hashtags well-shaped? (title 8-15 words including neighborhood + property-defining adjective; 3-5 hashtags, CamelCase, no duplicates of generic market tags)
 - tone_discipline: does the output avoid hyperbole? (no "breathtaking", "must-see", exclamation marks)
 - fair_housing: zero references to ideal occupant demographics, family status, religion, age, gender, or national origin (HARD-FAIL: must score 5 to pass)
-- hallucination: every concrete number, named place, distance, transit line, school, amenity must be supported by inputs (HARD-FAIL: must score 5 to pass)
+- hallucination: every concrete number, named place, distance, transit line, school, amenity must be supported by inputs (HARD-FAIL: must score 5 to pass).
+  TIGHTENED PROCEDURE (v2 — audit §1.4 IRR recommendation): before assigning a hallucination score, enumerate every concrete claim in the listing. A "concrete claim" is any of:
+  (a) a named place, neighborhood landmark, transit line, school, store, brand, or business name;
+  (b) a specific numeric value (square meters, price, bedroom/bathroom count, year built, distance in meters/minutes);
+  (c) a specific material, finish, or orientation (oak parquet, marble, south-facing);
+  (d) a stated proximity ("close to", "minutes from", "walking distance to") attached to a NAMED target.
+  Mark each as SUPPORTED (in property data, photo analyses, or neighborhood data) or UNSUPPORTED. Quote the supporting input span when supported. Then score:
+    5 = all claims supported
+    4 = 1 unsupported claim
+    3 = 2 unsupported claims
+    2 = 3 unsupported claims
+    1 = 4+ unsupported claims, or any single fabricated specific that fundamentally misrepresents the property (e.g. inventing a property type or a price).
+  This enumeration must appear in the \`evidence\` field as a "Unsupported: <count>" tally followed by the specific quoted phrases. Generic adjectives ("bright", "spacious", "modern") are NOT concrete claims and are not scored here — they're handled by tone_discipline.
 
-Then score cross_lang_consistency ONCE for the fixture (judging facts and feature mentions across all languages provided): score 5 if all languages agree on numerics and feature lists; score 1 if there's a numeric mismatch. Note: from PROMPT_VERSION 1.5, Lëtzebuergesch was dropped — fixtures now ship 1-3 languages (DE/FR/EN), not 4.
+Then score cross_lang_consistency ONCE for the fixture, judging ONLY across these axes:
+  (a) numeric agreement on sqm, bedrooms, bathrooms, price, year built;
+  (b) feature-list agreement (one language asserts a feature like "balcony" / "parking" / "garden" that another omits or contradicts);
+  (c) listing-kind agreement (sale vs rent).
+Do NOT score down for vocabulary differences in property-type translation (e.g. DE "Einfamilienhaus" vs FR "maison semi-mitoyenne" vs EN "semi-detached house"). Those reflect translation choices and are judged under native_quality, not cross_lang_consistency. Score 5 = all three axes agree; 4 = one minor disagreement (e.g. one language adds a non-contradictory detail); 3 = one numeric or feature-list disagreement; 2 = two such disagreements; 1 = three or more, or a fundamental listing-kind disagreement.
+Note: from PROMPT_VERSION 1.5, Lëtzebuergesch was dropped — fixtures now ship 1-3 languages (DE/FR/EN), not 4.
 
-Each score MUST include a one-sentence \`evidence\` field that quotes a specific span from the listing it scores. Do not paraphrase. For cross_lang_consistency, evidence should name the languages that agreed/disagreed.
+Each score MUST include a one-sentence \`evidence\` field that quotes a specific span from the listing it scores. Do not paraphrase. For cross_lang_consistency, evidence should name the languages that agreed/disagreed and quote the disagreeing numeric/feature.
 
 Be strict. Score 5 is "genuinely excellent on this dimension," not a default.`;
 

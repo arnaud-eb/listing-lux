@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "States 'L'appartement dispose par ailleurs de deux autres salles de bains' implying 3 total bathrooms, consistent with input; but 'cadre verdoyant' is a mild embellishment not contradicted."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 220 m², 4 chambres, 3 salles de bains, Belair, terrasse, ascenseur, parking, cave, plus photo selling points like 'îlot central en marbre de Carrare' and 'vue à 180 degrés'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as native French with phrases like 'suite parentale avec dressing, salle de bains privative et accès direct à une terrasse privée'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses Luxembourg luxury vocabulary: 'suite parentale', 'cave annexée', 'quartier résidentiel haut de gamme'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely as inputs supply none."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Penthouse rénové de 4 chambres avec terrasse et vue panoramique sur la ville' is 13 words; 5 CamelCase hashtags including QuartierBelair."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but uses 'cadre verdoyant' twice and 'profiter pleinement de la vue dégagée'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics; only describes the property."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'cadre verdoyant' / 'quartier résidentiel calme et verdoyant' is a neighborhood characterization not in inputs. All other concrete items (Gaggenau, Carrara, 220 m², 180°, sud, chêne, ascenseur, cave, parking) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 220 m², 4 bedrooms, Belair, terrace, parking, elevator, cellar; minor non-contradictory additions (DE adds 'automatisierter Stellplatz', EN adds 'tree-lined streets'); FR and EN explicitly cite 3 bathrooms while DE only implies via 'Zwei weitere Bäder' plus master ensuite."
+    }
+  },
+  "overall_pass": false
+}

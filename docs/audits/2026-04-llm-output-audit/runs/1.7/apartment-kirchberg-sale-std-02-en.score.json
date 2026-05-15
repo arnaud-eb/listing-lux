@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m² of well-distributed living space', 'Three bedrooms', 'two bathrooms', 'elevator, parking space, and a cellar' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, neighborhood, balcony, parking, elevator, cellar, new-build, city-view (via park view), plus Bulthaup, double-height ceiling, underfloor heating."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively though slightly clinical: 'reflecting a progressive urban context' is a bit corporate."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Bulthaup cabinetry', 'walk-in rain shower', 'ensuite' align with luxury portal vocabulary; 'progressive urban context' is less idiomatic."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs; description omits CPE entirely, matching v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Spacious 3-Bedroom Apartment with Balcony and City Views in Kirchberg' is 11 words with neighborhood; 5 CamelCase hashtags 'ModernArchitecture ParkView BulthaupKitchen DoubleHeightCeiling UnderfloorHeating'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; uses restrained adjectives like 'tranquil setting' and 'generous living space'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or occupant type."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Philharmonie, and MUDAM' are plausible Kirchberg landmarks but not in property/photo inputs (notes only mention 'EU institutions and international schools'). 'south-facing windows', 'park view', 'Bulthaup', 'engineered wood', 'underfloor heating' all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, elevator, cellar, new-build, sale. Minor: EN mentions 'city views' in title while DE/FR foreground 'Parkblick/vue sur parc' — non-contradictory framing difference."
+    }
+  },
+  "overall_pass": false
+}

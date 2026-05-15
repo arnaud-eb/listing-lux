@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:08:43.539Z",
+  "output": {
+    "title": "Spacious 3-Bedroom Apartment with Balcony and City Views in Kirchberg",
+    "description": "This recently constructed apartment offers 145 m² of well-distributed living space within Kirchberg's contemporary environment. The expansive living room benefits from a double-height ceiling and engineered wood flooring, creating an airy atmosphere complemented by south-facing windows that provide abundant natural light. The open-plan layout seamlessly integrates the dining area for versatile living and entertaining.\n\nThe kitchen is outfitted with high-end Bulthaup cabinetry, featuring a central island with a breakfast bar and an induction cooktop set against a durable stone worktop. Its minimalist design prioritizes functionality and refined aesthetics.\n\nThree bedrooms provide multiple sleeping areas, accompanied by two bathrooms finished with porcelain tiles. The ensuite bathroom includes a walk-in rain shower, double vanity, and underfloor heating that extends throughout the apartment, enhancing comfort.\n\nA private balcony with a glass balustrade overlooks a park in Kirchberg, offering a tranquil setting for morning coffee or quiet relaxation. Additional amenities include an elevator, parking space, and a cellar for storage needs.\n\nSituated in Kirchberg, the city’s modern business district known for its EU institutions, Philharmonie, and MUDAM, the location features contemporary residential complexes and international schools, reflecting a progressive urban context.",
+    "highlights": [
+      {
+        "text": "145 m² of generous living space",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcony with park views and glass balustrade",
+        "icon": "sun"
+      },
+      {
+        "text": "Bulthaup kitchen with stone worktop and induction cooktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Double-height ceiling in living room with south-facing windows",
+        "icon": "sofa"
+      },
+      {
+        "text": "Underfloor heating and walk-in rain shower in ensuite",
+        "icon": "bath"
+      },
+      {
+        "text": "Elevator access and parking space included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separate cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernArchitecture",
+      "ParkView",
+      "BulthaupKitchen",
+      "DoubleHeightCeiling",
+      "UnderfloorHeating"
+    ]
+  }
+}

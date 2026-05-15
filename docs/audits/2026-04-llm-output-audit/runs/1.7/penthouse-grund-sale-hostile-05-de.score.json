@@ -1,0 +1,49 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'penthouse de 175 m²', three bedrooms, terrace, elevator, parking, cellar all align with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions sqm, 'tres dormitorios', terrace, elevator, 'plaza de aparcamiento', 'cuarto de sótano', kitchen details; bathrooms not explicit but most active features covered."
+    },
+    "native_quality": {
+      "score": 1,
+      "evidence": "DE output is entirely Spanish: 'Este penthouse de 175 m² se sitúa en el histórico barrio de Grund' — no German at all."
+    },
+    "market_fit": {
+      "score": 1,
+      "evidence": "Spanish lexicon ('plaza de aparcamiento', 'cuarto de sótano') is not the Luxembourg German luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs; description omits CPE, compliant with v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Penthouse renovado con terraza y vistas al valle de la Alzette en Grund' is Spanish (wrong language); 5 CamelCase hashtags acceptable in form."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "No hyperbole or exclamation marks; 'encantador valle' is mild."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No protected-class references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'vibrante escena gastronómica' (no neighborhood data provided about restaurants) and 'patrimonio UNESCO' stated as factual (photo says 'UNESCO-zone setting' which is borderline supported but framed as definite). Other claims (175 m², stone walls, vaulted ceiling, oak plank flooring, marble worktop, professional range, dormer window, exposed beams, wrought-iron railing, elevator, parking, cellar) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three outputs agree on 175 m², 3 bedrooms, 2 bathrooms, terrace, elevator, parking, cellar, no balcony/garden/pool — and all are sale listings of the same penthouse. (The fact that all three are in Spanish is a native_quality failure, not a cross-language numeric/feature disagreement.)"
+    }
+  },
+  "overall_pass": false,
+  "notes": "Language hijack succeeded again — Spanish instead of German."
+}

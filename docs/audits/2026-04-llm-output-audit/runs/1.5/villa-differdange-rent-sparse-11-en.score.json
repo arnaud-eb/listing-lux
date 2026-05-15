@@ -4,45 +4,45 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 5,
-      "evidence": "'approximately 200 m² of living space' and 'four bedrooms and two bathrooms' align with inputs."
+      "score": 4,
+      "evidence": "'parking facilities with a double garage' and other features match inputs; does not misframe as sale, but omits rental nature."
     },
     "completeness": {
       "score": 3,
-      "evidence": "Covers sqm, beds, baths, garden, garage, fireplace, but omits Differdange neighborhood entirely from title and prose."
+      "evidence": "Covers 200 m², four bedrooms, two bathrooms, garden, terrace, garage, cellar; but does not name Differdange and title omits neighborhood."
     },
     "native_quality": {
       "score": 3,
-      "evidence": "'suitable for varied domestic arrangements' is awkward and stiff English."
+      "evidence": "'suitable for varied domestic arrangements' is stiff and unnatural English."
     },
     "market_fit": {
       "score": 3,
-      "evidence": "'detached villa', 'stone façade' fit luxury vocabulary but 'suitable for varied domestic arrangements' is bureaucratic, not Engel & Völkers register."
+      "evidence": "Vocabulary like 'detached villa', 'private grounds' fits, but 'varied domestic arrangements' is not typical luxury-market English."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; energy class omitted as none was supplied."
+      "evidence": "No CPE supplied and description omits CPE entirely, per v1.5 default."
     },
     "seo_signal": {
-      "score": 2,
-      "evidence": "Title 'Spacious 4-Bedroom Villa with Garden and Double Garage' is only 9 words and contains no neighborhood reference."
+      "score": 3,
+      "evidence": "Title 'Spacious 4-Bedroom Villa with Garden and Double Garage' is 9 words but missing the Differdange neighborhood."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "No hyperbole; 'presenting an opportunity for outdoor activities and relaxation' is measured."
+      "score": 4,
+      "evidence": "'Spacious' is mild; no exclamation marks or 'breathtaking'; restrained tone overall."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic references; 'suitable for varied domestic arrangements' is generic."
+      "evidence": "'suitable for varied domestic arrangements' is neutral and does not reference protected demographics."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "All concrete details ('200 m²', 'four bedrooms and two bathrooms', 'double garage', 'stone fireplace') trace to inputs."
+      "evidence": "Unsupported: 0 — every concrete claim (200 m², 4 bed/2 bath, stone façade, 1970s, wood paneling, stone fireplace, mature trees, patio, double garage, cellar, terrace) is supported by photo_analyses or property data."
     },
     "cross_lang_consistency": {
-      "score": 5,
-      "evidence": "DE, EN and FR all agree on 200 m², 4 bedrooms, 2 bathrooms, 1970s build, double garage, stone fireplace, mature garden, terrace, and cellar."
+      "score": 4,
+      "evidence": "DE, EN, FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar, 1970s. Minor disagreement: DE frames it as a sale ('richtet sich das Objekt an Käufer') while EN and FR are neutral on sale-vs-rent — a listing-kind framing slip but not a contradictory numeric/feature claim."
     }
   },
-  "overall_pass": false
+  "overall_pass": true
 }

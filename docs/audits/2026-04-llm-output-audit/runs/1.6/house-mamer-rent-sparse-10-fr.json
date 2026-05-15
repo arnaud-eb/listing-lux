@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:49.490Z",
+  "output": {
+    "title": "Maison individuelle des années 1980 avec jardin privé et parking",
+    "description": "Cette maison mitoyenne, édifiée dans les années 1980, bénéficie d'une façade neutre bien entretenue et s'inscrit dans un cadre résidentiel calme. L'habitation s'étend sur une surface de 130 m², offrant un aménagement fonctionnel comprenant trois chambres et une salle de bains.\n\nLe séjour, bien agencé, est doté d'une moquette beige et de portes-fenêtres donnant accès au jardin arrière, permettant une belle luminosité naturelle et une vue dégagée sur l'espace extérieur. Le style intérieure, quoique daté, présente un potentiel d'aménagement selon les préférences.\n\nÀ l'arrière, un jardin privatif soigné accueille une pelouse bordée de clôtures en bois et un petit dépôt de rangement. Ce cadre extérieur simple mais entretenu constitue un espace propice aux activités extérieures et au repos.\n\nLe bien est complété par un emplacement de parking ainsi qu'une cave, apportant des solutions pratiques de stationnement et de stockage. Cette maison représente une opportunité dans un environnement résidentiel préservé.",
+    "highlights": [
+      {
+        "text": "Maison mitoyenne des années 1980",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable de 130 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres à coucher",
+        "icon": "bed"
+      },
+      {
+        "text": "Salle de bains fonctionnelle",
+        "icon": "bath"
+      },
+      {
+        "text": "Jardin privatif soigné avec abri de rangement",
+        "icon": "trees"
+      },
+      {
+        "text": "Emplacement de parking inclus",
+        "icon": "car"
+      },
+      {
+        "text": "Cave attenante",
+        "icon": "archive"
+      },
+      {
+        "text": "Séjour lumineux avec accès direct au jardin",
+        "icon": "sun"
+      }
+    ],
+    "hashtags": [
+      "Maison1980",
+      "JardinPrivatif",
+      "ParkingInclus",
+      "Surface130m2",
+      "PotentielRénovation"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:12.002Z",
+  "output": {
+    "title": "Modernes 3-Schlafzimmer-Duplex mit XXL-Terrasse und Parkblick in Cloche d'Or",
+    "description": "Diese neu erbaute Duplexwohnung erstreckt sich großzügig über 180 m² und verbindet urbanen Komfort mit anspruchsvoller Architektur. Das Herzstück bildet der lichtdurchflutete Doppelhöhen-Wohnbereich mit Panoramaverglasung, die einen direkten Blick über den neu angelegten Park freigibt. Eine interne Treppe verbindet elegant beide Etagen, die mit hochwertigem Mehrschicht-Eichenparkett ausgestattet sind.\n\nDie offene Küche ist mit modernen Siemens-Geräten und einer Quartz-Arbeitsplatte ausgestattet, was perfekte Voraussetzungen für kulinarische Aktivitäten im offenen Wohn- und Essbereich schafft. Sanft schließende Schränke runden das zeitgemäße Design ab.\n\nIm Obergeschoss befinden sich drei Schlafzimmer, darunter ein ruhiger Masterbereich mit direktem Zugang zur umlaufenden Holzdeck-Terrasse, die teilweise sonnige Abendstunden bietet und weite Blicke über das Einkaufszentrum im Quartier ermöglicht. Zwei Bäder ergänzen die Wohnfläche.\n\nZu den Annehmlichkeiten gehören ein Aufzug, ein privater Kellerraum sowie ein Parkplatz. Die Lage in Cloche d'Or bietet moderne urbane Infrastruktur mit Geschäftsviertel, Einkaufszentrum und Grünanlagen in der Umgebung.",
+    "highlights": [
+      {
+        "text": "180 m² Wohnfläche in hochwertiger Neubau-Duplexwohnung",
+        "icon": "square"
+      },
+      {
+        "text": "Doppelhohe Glasfront mit Blick auf den Park",
+        "icon": "sun"
+      },
+      {
+        "text": "Offene Küche mit Siemens-Einbaugeräten und Quartz-Arbeitsplatte",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Drei Schlafzimmer, Master mit Zugang zur Terrasse",
+        "icon": "bed"
+      },
+      {
+        "text": "Große umlaufende Terrasse mit Holzdeck und Abendsonne",
+        "icon": "sun"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum vorhanden",
+        "icon": "archive"
+      },
+      {
+        "text": "Privater Parkplatz inklusive",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "UrbanDuplex",
+      "ParkView",
+      "TerraceLife",
+      "SiemensKitchen"
+    ]
+  }
+}

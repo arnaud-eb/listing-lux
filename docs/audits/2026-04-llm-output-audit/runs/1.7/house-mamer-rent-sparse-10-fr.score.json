@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Highlight says 'Salon avec vue sur jardin et accès terrasse' but terrace=false in inputs; only patio doors to garden are mentioned."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 130 m², 3 chambres, 1 salle de bains, jardin, parking, cave; omits Mamer neighborhood and rent context."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Cette maison mitoyenne construite dans les années 1980 offre une surface habitable d'environ 130 m²' reads naturally in FR."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Standard terms like 'maison mitoyenne', 'jardin privatif', 'cave' fit LU corpus, though tone is more entry-tier than luxury."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned; inputs had cpe_class: null."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Maison mitoyenne avec jardin privatif et parking dans quartier résidentiel calme' is 12 words but omits Mamer; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'présente un potentiel intéressant pour un projet de rénovation' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references in the prose."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'accès terrasse' (no terrace in inputs) and 'salle de bains équipée' (not in inputs). Other claims (130 m², 3 chambres, 1980s, cave, jardin, parking, abri, clôture bois) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE agree on 130 m², 3 bedrooms, 1 bathroom, 1980s, garden, parking, cellar, shed. Minor disagreement: FR highlight adds 'accès terrasse' which EN and DE do not assert."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Avoided fabricating Mamer landmarks. Slight slip with 'terrasse'."
+}

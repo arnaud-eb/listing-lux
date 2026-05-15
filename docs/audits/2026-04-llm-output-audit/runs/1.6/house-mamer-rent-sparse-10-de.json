@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:44.194Z",
+  "output": {
+    "title": "Reiheneinfamilienhaus mit 3 Schlafzimmern und privatem Garten",
+    "description": "Dieses Reiheneinfamilienhaus aus den 1980er-Jahren bietet auf etwa 130 m² Wohnfläche eine praktische Raumaufteilung mit drei Schlafzimmern und einem Badezimmer. Die Fassade präsentiert sich neutral und in einem gepflegten Zustand, geprägt durch einen kleinen Vorgarten, der der Immobilie eine freundliche Atmosphäre verleiht.\n\nDer Wohnbereich überzeugt durch einen Ausblick auf den privaten, ruhig gelegenen Garten und verfügt über Patio-Türen, die den Zugang zum Außenbereich ermöglichen. Die Innenausstattung ist etwas betagt und bietet Raum für eine individuelle Modernisierung. Der beige Teppichboden und die vorhandene Nische für ein Röhrenfernsehgerät weisen auf den ursprünglichen Stil des Hauses hin.\n\nDer Garten ist einfach gestaltet, umfasst eine Rasenfläche mit Sichtschutz durch eine Holzeinfriedung und verfügt über ein kleines Gartenhaus, das zusätzlichen Stauraum bietet. Das Grundstück wird ergänzt durch einen Kellerraum sowie einen privaten Stellplatz für Fahrzeuge.\n\nDiese Immobilie ist Teil eines ruhigen Wohngebiets und zeichnet sich durch ihre gepflegte Substanz und die praktische Nutzung der Außenflächen aus. Sie eignet sich für Käufer, die Wert auf einen eigenen Garten und eine solide Bausubstanz in einem gewachsenen Umfeld legen.",
+    "highlights": [
+      {
+        "text": "Reiheneinfamilienhaus aus den 1980er-Jahren",
+        "icon": "home"
+      },
+      {
+        "text": "130 m² Wohnfläche mit 3 Schlafzimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Privater, eingezäunter Garten mit Gartenhaus",
+        "icon": "trees"
+      },
+      {
+        "text": "Kellerraum als zusätzlicher Abstellbereich",
+        "icon": "archive"
+      },
+      {
+        "text": "Eigener Stellplatz am Haus",
+        "icon": "car"
+      },
+      {
+        "text": "Großer Wohnbereich mit Zugang zum Garten",
+        "icon": "sofa"
+      },
+      {
+        "text": "Ruhige Wohnlage",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Reiheneinfamilienhaus",
+      "PrivaterGarten",
+      "Dachgeschoss",
+      "Kellerraum",
+      "Stellplatz"
+    ]
+  }
+}

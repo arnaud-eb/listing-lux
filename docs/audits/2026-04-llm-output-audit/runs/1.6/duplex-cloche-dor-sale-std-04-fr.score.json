@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'duplex neuf de 180 m²', 'Trois chambres', 'Deux salles de bains', cave/parking/ascenseur all match."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, neighborhood, parking, cellar, elevator, terrace, new-build, oak, Siemens, quartz, double height, park view."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'baigné de lumière naturelle grâce à une double hauteur sous plafond' is idiomatic; minor: 'Des placards intégrés' after 'fitted wardrobes' is fine but 'meubles à fermeture douce' is slightly awkward versus 'tiroirs à fermeture douce'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'parquet en chêne massif', 'plan de travail en quartz', 'terrasse enveloppante', 'cave privative' match LU/FR luxury portal idiom."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied; description omits CPE entirely per v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 12 words and well-formed; however hashtag 'ParkingsPrivatif' is a grammatical/spelling error (should be 'ParkingPrivatif' or 'ParkingPrivatif'), and 'CuisineEquipée' contains an accent which is unusual for hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'atmosphère de sérénité' restrained; no banned hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No occupant-demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'parquet en chêne massif' upgrades the input 'engineered oak flooring' (chêne massif = solid oak, not engineered). Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 180 m², 3 bedrooms, 2 bathrooms, duplex, sale, parking, cellar, elevator, wraparound terrace; minor: FR specifies 'chêne massif' while DE/EN say engineered/Eichenparkett — a finish-detail disagreement but not numeric or feature-list."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FR introduces 'chêne massif' upgrade vs engineered oak; hashtag typo."
+}

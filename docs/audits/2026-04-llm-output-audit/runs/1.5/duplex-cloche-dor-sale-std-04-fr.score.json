@@ -4,46 +4,45 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 5,
-      "evidence": "'duplex récent de 180 m²' and 'trois chambres, dont une suite parentale' align with inputs."
+      "score": 4,
+      "evidence": "Mostly aligned, but 'place de parking en sous-sol' assumes underground parking which is not specified in inputs (only that parking exists)."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Mentions 180 m², trois chambres, 'Deux salles de bains', ascenseur, cave, parking, terrasse, neighborhood."
+      "evidence": "Covers 180m², 3 chambres, 2 salles de bains, Cloche d'Or, terrasse, ascenseur, cave, parking, cuisine Siemens, double hauteur."
     },
     "native_quality": {
       "score": 5,
-      "evidence": "'Conçu avec un souci d'espace et de luminosité' and 'parquet en chêne contrecollé' read natively."
+      "evidence": "Reads natively in French: 'séjour à double hauteur baigné de lumière naturelle grâce à de larges baies vitrées'."
     },
     "market_fit": {
       "score": 5,
-      "evidence": "'suite parentale', 'cave privative', 'place de parking en sous-sol', 'plan de travail en quartz' match LU FR portal vocabulary."
+      "evidence": "Strong LU FR luxury vocabulary: 'suite parentale', 'cave privative', 'place de parking en sous-sol', 'parquet en chêne contrecollé'."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; energy passport not mentioned, consistent with no class supplied."
+      "evidence": "No CPE class supplied and description omits CPE entirely, consistent with v1.5 default."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Duplex lumineux de 180 m² avec terrasse panoramique au cœur de Cloche d'Or' (~13 words); 5 CamelCase hashtags 'DuplexDesign TerrassePanoramique CuisineEquipee ClocheDor VueVille'."
+      "evidence": "Title 'Duplex lumineux de 180 m² avec terrasse panoramique au cœur de Cloche d'Or' is 13 words with neighborhood; 5 CamelCase hashtags."
     },
     "tone_discipline": {
       "score": 4,
-      "evidence": "'idéalement située' is mild promotional language but no exclamation or 'incontournable'."
+      "evidence": "Mostly restrained; 'idéalement située' and 'terrasse panoramique' edge toward mild hyperbole."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic references; 'quartier en pleine expansion' is neutral."
+      "evidence": "No references to demographics or occupant identity."
     },
     "hallucination": {
-      "score": 4,
-      "evidence": "'place de parking en sous-sol' specifies underground location not in inputs (inputs say only 'parking: true')."
+      "score": 3,
+      "evidence": "Unsupported: 2. 'place de parking en sous-sol' (underground location not in inputs), 'plusieurs parcs' (inputs mention 'new park' singular)."
     },
     "cross_lang_consistency": {
-      "score": 3,
-      "evidence": "DE, EN, FR all agree on 180 m² and three bedrooms, but DE adds 'nach Südwesten ausgerichtet' and extends fitted wardrobes to all bedrooms, while EN and FR correctly limit fitted wardrobes to the master; FR specifies 'sous-sol' parking not in EN/DE."
+      "score": 4,
+      "evidence": "All three agree on 180m², 3 bedrooms, 2 bathrooms (EN/FR explicit, DE implicit), and sale of duplex. Minor: FR specifies 'parking en sous-sol' while DE/EN say only 'Stellplatz'/'parking' — non-contradictory addition."
     }
   },
-  "overall_pass": false,
-  "notes": "Minor invention of underground parking location."
+  "overall_pass": false
 }

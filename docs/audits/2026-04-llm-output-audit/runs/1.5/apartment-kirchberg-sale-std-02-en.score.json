@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "\"This newly constructed apartment of 145 m²\" with \"three bedrooms and two bathrooms\" matches inputs exactly."
+      "evidence": "'145 m² of newly built living space' and 'Three bedrooms and two bathrooms' match inputs exactly."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Covers beds/baths/sqm/Kirchberg, plus balcony, parking, elevator, cellar, new-build, city-view, and photo selling points like \"Bulthaup cabinetry\" and \"spa-like ensuite\"."
+      "evidence": "Covers sqm, beds/baths, neighborhood, balcony, parking, elevator, cellar, new-build, plus photo-derived Bulthaup kitchen and double-height ceilings."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "\"supporting convenience and practicality\" reads slightly stiff but overall fluent native English."
+      "evidence": "Reads naturally in English, e.g. 'spa-like ensuite equipped with a walk-in rain shower'; some slightly stiff phrasing like 'supporting convenience and practicality'."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "\"Luxembourg's Kirchberg district\" with \"Philharmonie and MUDAM\" and \"EU institutions\" matches LU luxury corpus."
+      "evidence": "Uses LU-appropriate references like 'Philharmonie and MUDAM' and 'EU institutions', aligned with Kirchberg luxury corpus."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely, matching v1.5 default."
+      "evidence": "No CPE class supplied in inputs; description omits CPE entirely, consistent with v1.5 default."
     },
     "seo_signal": {
-      "score": 5,
-      "evidence": "Title \"Contemporary 3-Bedroom Apartment with Balcony and City Views in Kirchberg\" is 11 words; 5 CamelCase hashtags like \"BulthaupKitchen KirchbergViews\"."
+      "score": 4,
+      "evidence": "Title 'Contemporary 3-Bedroom Apartment with Balcony and City Views in Kirchberg' is 11 words; 5 CamelCase hashtags like 'BulthaupKitchen KirchbergViews'."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "No exclamation marks or hyperbole; phrases like \"supporting convenience and practicality\" remain restrained."
+      "evidence": "No hyperbole or exclamation marks; restrained phrasing like 'tranquil views over Kirchberg park'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No reference to occupant demographics; \"access to international schools and key EU institutions\" describes the area, not the buyer."
+      "evidence": "No demographic targeting; references only physical features and location."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "\"Philharmonie and MUDAM\" are real Kirchberg landmarks; all numerics (145 m², three bedrooms) match inputs."
+      "evidence": "Unsupported: 0. 'Philharmonie and MUDAM', 'EU institutions', 'international schools' fall under Kirchberg neighborhood metadata noted in fixture; all numerics (145 m², 3 bed, 2 bath) match inputs; 'Kirchberg park' supported by balcony photo 'view over Kirchberg park'."
     },
     "cross_lang_consistency": {
       "score": 4,
-      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, Bulthaup, elevator, cellar, parking; minor divergences are flooring type (DE Eichenparkett, FR bois massif stratifié, EN engineered wood) and FR adding 'sous-sol' for parking."
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale, balcony, parking, elevator, cellar. Minor non-contradictory addition: FR specifies 'parking en sous-sol' while EN/DE just say parking."
     }
   },
   "overall_pass": true

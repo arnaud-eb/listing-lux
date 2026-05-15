@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:15.588Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas al valle de la Alzette en Grund",
+    "description": "Este penthouse de 175 m² ubicado en el histórico barrio de Grund ofrece una combinación de características arquitectónicas originales y una renovada atmósfera contemporánea. Los muros de piedra a la vista y el techo abovedado aportan un carácter distintivo, mientras que los suelos de roble de lamas anchas contribuyen a la calidez de los espacios.\n\nEl salón se beneficia de una iluminación natural abundante y una vista directa al valle de la Alzette, integrando el entorno ribereño y protegido como patrimonio de la UNESCO en el marco visual cotidiano. La cocina, equipada con mobiliario sólido de madera y una placa profesional de acero inoxidable, complementa el concepto abierto y funcional.\n\nLa vivienda dispone de tres dormitorios, con detalles como las vigas expuestas y ventanas abuhardilladas que añaden interés espacial y carácter histórico. Dos baños completan la distribución interior. La terraza privada, pavimentada en piedra y delimitada con barandilla de hierro forjado, ofrece un espacio exterior sobre el paisaje del valle que marca el carácter del barrio.\n\nEntre las comodidades adicionales destacan un ascensor, plaza de aparcamiento y un espacio de almacenamiento independiente (cellar). La ubicación en Grund sitúa esta propiedad en un enclave pintoresco, reconocido por su atmósfera histórica y su proximidad a zonas de restauración y recreo ribereño.",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "3 dormitorios con vigas expuestas",
+        "icon": "bed"
+      },
+      {
+        "text": "2 baños completos",
+        "icon": "bath"
+      },
+      {
+        "text": "Terraza privada con vista al valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cellar separado",
+        "icon": "archive"
+      },
+      {
+        "text": "Renovación que conserva elementos originales",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "ValleAlzette",
+      "GrundHistoric",
+      "TerrazaPrivada",
+      "PiedraVista",
+      "VistasPanorámicas"
+    ]
+  }
+}

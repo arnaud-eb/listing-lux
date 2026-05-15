@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:18.887Z",
+  "output": {
+    "title": "Duplex neuf de 180 m² avec terrasse panoramique et parking à Cloche d'Or",
+    "description": "Ce duplex neuf développe une surface habitable de 180 m² agencée sur deux niveaux. Le séjour lumineux se distingue par un plafond double hauteur agrémenté de grandes baies vitrées offrant une vue dégagée sur le parc urbain. Le sol est en parquet stratifié chêne, conférant une atmosphère contemporaine et chaleureuse.\n\nLa cuisine ouverte sur le séjour est équipée d'appareils Siemens intégrés et d’un plan de travail en quartz, idéale pour les réceptions et le quotidien. À l'étage supérieur, trois chambres bénéficient d'un cadre paisible. La chambre principale donne sur une terrasse privative accessible par porte-fenêtre et dispose de rangements intégrés.\n\nLa terrasse enveloppante à l'étage supérieur propose un espace de détente outdoor avec un parquet en bois, s'orientant vers le sud pour profiter du soleil en fin de journée. L’appartement est complété par un ascenseur desservant directement l’étage, un emplacement de parking intérieur ainsi qu’une cave privée.\n\nSitué dans le quartier récent de Cloche d'Or, cet ensemble reflète un mode de vie résolument urbain, au cœur d'un secteur moderne mêlant espaces de bureaux, commerces et parcs aménagés. Ce duplex s’insère dans un environnement en pleine transformation, dédié à une qualité de vie confortable.\n\nL’ensemble des prestations indique une construction récente conforme aux standards actuels en matière de confort et de fonctionnalité.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 180 m² en duplex contemporain",
+        "icon": "square"
+      },
+      {
+        "text": "Séjour double hauteur avec grandes baies vitrées",
+        "icon": "home"
+      },
+      {
+        "text": "Cuisine ouverte équipée d’appareils Siemens",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Trois chambres dont une avec terrasse privative",
+        "icon": "bed"
+      },
+      {
+        "text": "Terrasse enveloppante exposée sud avec parquet bois",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascenseur desservant directement l’étage",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking intérieure incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Cellier/ cave privée accessible",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "DuplexModerne",
+      "TerrassePanoramique",
+      "ClocheDor",
+      "CuisineEquipée",
+      "EspacesLumieux"
+    ]
+  }
+}

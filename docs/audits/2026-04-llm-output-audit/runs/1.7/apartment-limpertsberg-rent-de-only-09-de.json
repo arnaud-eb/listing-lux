@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:45.904Z",
+  "output": {
+    "title": "Helles 2-Zimmer Apartment mit Balkon und Einbauküche in Limpertsberg",
+    "description": "Das Apartment verfügt über eine Wohnfläche von 95 m² und wurde kürzlich renoviert. Die Räume sind mit Mehrschichtparkett ausgelegt und weisen eine skandinavisch inspirierte, zeitgenössische Gestaltung auf. Der Wohnbereich ist mit einem Designer-Sofa möbliert und profitiert von reichlich natürlichem Licht.\n\nDie großzügig ausgestattete Küche ist funktional gestaltet und beinhaltet alle wesentlichen Elektrogeräte wie Induktionskochfeld und Geschirrspüler. Ein kompakter Essbereich ist ebenfalls integriert. Das Apartment wird voll möbliert übergeben und ist somit bezugsfertig.\n\nDas Schlafzimmer ist ruhig und privat gehalten, ausgestattet mit einem Queensize-Bett, Kleiderschrank und Verdunkelungsrollos. Der Balkon ist nordseitig ausgerichtet, mit pflegeleichten Fliesen versehen und eignet sich für Frischluftpausen.\n\nZum Apartment gehört ein separater Kellerraum. Das Gebäude verfügt über einen Aufzug und liegt im begehrten Viertel Limpertsberg, das für seine Universität, seine kulturellen Einrichtungen und den Parc Edmond Klein bekannt ist.\n\nDie Anbindung an lokale Infrastruktur und Nahversorgung ist gegeben, was den Standort zusätzlich unterstreicht.",
+    "highlights": [
+      {
+        "text": "95 m² renovierte Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "Zwei Schlafzimmer, ein Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Voll möbliert und bezugsfertig",
+        "icon": "sofa"
+      },
+      {
+        "text": "Moderne Einbauküche mit Induktionskochfeld",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balkon mit Nordausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Lage im Kultur- und Universitätsviertel Limpertsberg",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "RenoviertesApartment",
+      "LimpertsbergLiving",
+      "MöblierteWohnung",
+      "BalkonMitAussicht",
+      "KulturViertel"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:11.395Z",
+  "output": {
+    "title": "Four-Bedroom Semi-Detached House with South-Facing Garden and Parking",
+    "description": "This semi-detached house offers approximately 195 m² of living space with a well-planned layout consisting of four bedrooms and two bathrooms. Constructed in the 1990s and maintained to a high standard, the residence features a brick facade complemented by a small front garden and a private driveway enhancing convenience and privacy.\n\nThe interior presents a comfortable living room with tile flooring and a functional fireplace, seamlessly opening onto the dining area. Double doors lead directly to the garden, promoting a smooth transition between indoor and outdoor living spaces. The kitchen is equipped with traditional wood cabinetry, a tile splashback, a freestanding range, and a dedicated breakfast nook, providing a practical environment for daily meals.\n\nThe garden benefits from a south-facing orientation, allowing for ample daylight throughout the day. It includes a lawn area and a private patio, offering an outdoor setting for relaxation or entertaining. Additional amenities comprise a cellar for storage and designated parking, adding to the functionality of the property.\n\nSituated in an established residential area, this house reflects typical 1990s Luxembourg architecture and offers a quiet setting, with all essential residential features in place. The combination of spacious interior, outdoor living options, and practical facilities makes this property a notable example of a well-maintained family home.",
+    "highlights": [
+      {
+        "text": "195 m² living area",
+        "icon": "square"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "South-facing garden with private patio",
+        "icon": "sun"
+      },
+      {
+        "text": "Fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Private driveway and parking space",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar included",
+        "icon": "archive"
+      },
+      {
+        "text": "Traditional kitchen with breakfast nook",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Semi-detached house with brick facade",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "SouthFacingGarden",
+      "SemiDetachedHouse",
+      "ParkingIncluded",
+      "SpaciousLiving",
+      "1990sArchitecture"
+    ]
+  }
+}

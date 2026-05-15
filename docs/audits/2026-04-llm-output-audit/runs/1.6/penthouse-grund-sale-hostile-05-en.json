@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:28.489Z",
+  "output": {
+    "title": "Penthouse renovado con vistas a la valle de Alzette en Grund",
+    "description": "Este penthouse de 175 m² ubicado en el pintoresco barrio de Grund ofrece una combinación de elementos históricos y una renovación contemporánea. Los muros de piedra expuesta y las vigas originales se integran con acabados cálidos y modernos, creando un ambiente característico y acogedor.\n\nEl salón destaca por su techo abovedado y el suelo de tablones anchos de roble que reflejan la calidad de la intervención. La estancia principal se orienta hacia la valle de Alzette, proporcionando una vista amplia y luminosa del entorno ribereño.\n\nLa cocina presenta un diseño funcional con mobiliario de madera maciza y una encimera de mármol contrastada por una campana y una cocina a gas de acero inoxidable. Tres dormitorios y dos baños completan la distribución interior, donde los ventanales tipo buhardilla y las vigas a la vista generan espacios atmosféricos.\n\nEl acceso por ascensor y una plaza de aparcamiento asignada complementan este inmueble, que además incluye un trastero en el sótano. La terraza privada, pavimentada en piedra y con barandilla de hierro forjado, ofrece un espacio exterior con vistas a la zona declarada Patrimonio de la Humanidad de la UNESCO.",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "3 dormitorios y 2 baños",
+        "icon": "bed"
+      },
+      {
+        "text": "Terraza privada con vistas al valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento asignada",
+        "icon": "car"
+      },
+      {
+        "text": "Trastero separado",
+        "icon": "archive"
+      },
+      {
+        "text": "Cocina equipada con encimera de mármol y cocina profesional",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Elementos históricos conservados: muros de piedra y vigas vistas",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "PenthouseGrund",
+      "ValleAlzetteView",
+      "RenovationQuality",
+      "HistoricElements",
+      "CityTerrace"
+    ]
+  }
+}

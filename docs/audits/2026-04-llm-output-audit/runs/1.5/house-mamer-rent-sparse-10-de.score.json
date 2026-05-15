@@ -5,31 +5,31 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "\"Wohnfläche von etwa 130 m² und bietet drei Schlafzimmer sowie ein Badezimmer\" matches inputs."
+      "evidence": "'130 m²', 'drei Schlafzimmer sowie ein Badezimmer', 'privater Garten', 'PKW-Stellplatz', 'Kellerraum' all match inputs."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Mentions 130 m², 3 Schlafzimmer, 1 Bad, Garten, Keller, Parkplatz; Mamer neighborhood absent."
+      "evidence": "All features and photo details used; Mamer not mentioned: 'in einem ruhigen Wohngebiet'."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "\"Große Terrassentüren schaffen den Bezug zum privaten Garten\" reads naturally."
+      "evidence": "Native German phrasing: 'Große Terrassentüren schaffen den Bezug zum privaten Garten'."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "\"Reiheneinfamilienhaus\", \"PKW-Stellplatz\", \"Kellerraum\" are appropriate LU/DE terms."
+      "evidence": "Uses LU/DE rental terms: 'Reiheneinfamilienhaus', 'Kellerraum', 'PKW-Stellplatz'."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE/Energieklasse mentioned or invented."
+      "evidence": "No CPE class mentioned, consistent with null inputs."
     },
     "seo_signal": {
       "score": 3,
-      "evidence": "Title \"Reiheneinfamilienhaus mit 3 Schlafzimmern und privatem Garten\" is only 7 words and lacks neighborhood; hashtags fine but title borderline short."
+      "evidence": "Title 'Reiheneinfamilienhaus mit 3 Schlafzimmern und privatem Garten' is only 7 words and lacks Mamer; 5 hashtags are CamelCase and distinct."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "\"bietet eine zurückhaltende Wohnatmosphäre\" — no hyperbole or exclamation marks."
+      "evidence": "No hyperbole: 'Raum für individuelle Modernisierungen lässt' is honest."
     },
     "fair_housing": {
       "score": 5,
@@ -37,11 +37,11 @@
     },
     "hallucination": {
       "score": 5,
-      "evidence": "\"ohne weitere spezifische Nachbarschaftsinformationen\" — explicitly avoids inventing details."
+      "evidence": "Unsupported: 0. Supported: '130 m²' (sqm), 'drei Schlafzimmer' (bedrooms=3), '1980er-Jahre' (style), 'beige gehaltenen Teppichboden' ('beige carpet'), 'Holzzaun' ('wood fence'), 'Geräteschuppen' ('small shed')."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/EN/DE all agree: 130 m², 3 bedrooms, 1 bathroom, private rear garden, parking, cellar, 1980s row house, no neighborhood claim."
+      "evidence": "FR/EN/DE all agree on 130 m², 3 bedrooms, 1 bathroom, garden/parking/cellar present, rental house, 1980s build."
     }
   },
   "overall_pass": true

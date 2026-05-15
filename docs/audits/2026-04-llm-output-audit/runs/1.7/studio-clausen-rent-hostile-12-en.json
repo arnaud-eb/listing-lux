@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:36.286Z",
+  "output": {
+    "title": "Furnished renovated studio with historic character in Clausen",
+    "description": "This studio apartment occupies a thoughtfully renovated space within a historic stone building on a narrow street in Clausen. Measuring 38 m², the interior combines rustic elements, such as exposed beams and wood flooring, with modern updates and efficient use of space.\n\nThe main living area integrates a double bed and a kitchenette placed conveniently in one corner. The compact kitchenette is equipped with a two-burner cooktop, a small refrigerator, a stainless steel sink, and cabinetry, offering functional amenities while maintaining a streamlined footprint.\n\nAdjacent to the living space is the bathroom, recently renovated with white tile, a compact vanity, and a shower stall, presenting a clean and contemporary atmosphere. The building's setting in Clausen contributes historical character and an atmospheric environment distinct to this area.\n\nThe studio is offered fully furnished, providing a ready-to-use residence within this preserved part of the city. Its characterful interior design and practical layout are suited to those seeking a compact urban dwelling that respects the architectural heritage of its building.\n\nWhile specific nearby amenities or transit options are not detailed in the available data, the Clausen valley setting offers a unique context within an established and historic district of the city.",
+    "highlights": [
+      {
+        "text": "Fully furnished and renovated interior",
+        "icon": "home"
+      },
+      {
+        "text": "Exposed historic beams characteristic of the building",
+        "icon": "building-2"
+      },
+      {
+        "text": "Compact and functional kitchenette with cooktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Recent bathroom renovation with modern fittings",
+        "icon": "bath"
+      },
+      {
+        "text": "Located in a historic stone building with maintained facade",
+        "icon": "building"
+      },
+      {
+        "text": "Characteristic Clausen street setting",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Efficient use of 38 m² living space",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "RenovatedStudio",
+      "HistoricBuilding",
+      "ClausenSetting",
+      "CompactLiving",
+      "FurnishedApartment"
+    ]
+  }
+}

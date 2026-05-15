@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:04.233Z",
+  "output": {
+    "title": "Three-Bedroom 1980s Row House with Garden and Parking",
+    "description": "This 130 m² row house, constructed in the 1980s, offers three bedrooms and one bathroom set within a quiet residential area. The exterior presents a well-maintained neutral facade with a small front yard, reflecting the characteristic style of its era. \n\nInside, the living room features a beige carpet and an alcove for a tube television, with patio doors leading to the garden. While the interior retains a dated style, the garden-facing view contributes natural light and a pleasant outlook over the private rear garden.\n\nThe modest garden space includes a maintained lawn enclosed by a wooden fence and a small storage shed, providing private outdoor amenity. Additional practical features include onsite parking and a cellar, supplying extra storage capacity beneath the building.\n\nThe property is set in an established residential setting without specific local amenities documented. Its straightforward configuration and outdoor space align with the style and function typical of homes from its construction period.",
+    "highlights": [
+      {
+        "text": "130 m² living area",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Single bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Private rear garden with lawn and storage shed",
+        "icon": "trees"
+      },
+      {
+        "text": "Onsite parking space",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "1980s row house style in quiet neighborhood",
+        "icon": "building-2"
+      },
+      {
+        "text": "Living room with patio doors providing garden view",
+        "icon": "sofa"
+      }
+    ],
+    "hashtags": [
+      "RowHouse",
+      "1980sArchitecture",
+      "PrivateGarden",
+      "CellarStorage",
+      "OnsiteParking"
+    ]
+  }
+}

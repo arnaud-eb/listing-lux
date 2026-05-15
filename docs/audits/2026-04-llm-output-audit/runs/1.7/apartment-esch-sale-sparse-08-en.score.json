@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'78 m² apartment', 'two bedrooms and one bathroom', 'one dedicated parking space' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 78 m², 2 bed / 1 bath, balcony, L-shaped kitchen, parking, elevator, Esch-sur-Alzette."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'efficient and comfortable layout' and 'maintaining a neutral palette' read natively in English real-estate copy."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Generic English real-estate vocabulary ('dedicated parking space', 'multi-storey building'); less specifically aligned with LU portal style than the FR/DE versions."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; energy class correctly omitted from prose."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 13 words but neighborhood-only adjective is 'Well-Maintained'; hashtags 'CityLiving BalconyAccess CompactKitchen ParkingIncluded ElevatorBuilding' lack a neighborhood tag like EschSurAlzette."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'straightforward and functional living environment' avoids hyperbole; no exclamation marks or banned terms."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or protected-class references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'the university' and 'Belval district' are named places/institutions not present in the inputs for this property."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and sale context in Esch-sur-Alzette; no numeric or feature-list disagreements."
+    }
+  },
+  "overall_pass": false,
+  "notes": "EN omits neighborhood hashtag and uses generic city-living tags."
+}

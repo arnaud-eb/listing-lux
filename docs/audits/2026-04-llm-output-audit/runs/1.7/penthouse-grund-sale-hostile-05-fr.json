@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:36.373Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de la Alzette",
+    "description": "Situado en el histórico barrio de Grund, este penthouse ofrece una superficie habitable de 175 m² distribuidos en tres dormitorios y dos baños. La vivienda combina elementos arquitectónicos tradicionales, como muros de piedra vista y techos abovedados, con una renovación contemporánea que realza la atmósfera y confort del espacio.\n\nEl salón destaca por su amplia luminosidad y sus suelos de roble de tablas anchas, ofreciendo una vista directa a la valle de la Alzette, situada en una zona catalogada como Patrimonio de la Humanidad por la UNESCO. La cocina, equipada con mobiliario de madera maciza, encimera de mármol y una placa de cocción profesional de acero inoxidable, integra funcionalidad y diseño.\n\nEl dormitorio principal presenta un ambiente acogedor con ventanas abuhardilladas y vigas a la vista, que complementan su pavimento de madera. La terraza privada, con pavimento de piedra y barandilla de forja, permite disfrutar del entorno único del barrio, conocido por su patrimonio histórico y su atmósfera ribereña.\n\nLa propiedad dispone de ascensor, plaza de aparcamiento y una bodega independiente. Estas características, junto con su ubicación en el corazón de una zona con una escena gastronómica consolidada, hacen de este penthouse una opción cuidada dentro del mercado residencial.",
+    "highlights": [
+      {
+        "text": "Superficie habitable de 175 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Tres dormitorios y dos baños",
+        "icon": "bed"
+      },
+      {
+        "text": "Terraza privada con vistas a la valle de la Alzette",
+        "icon": "sun"
+      },
+      {
+        "text": "Mobiliario de cocina de madera maciza y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Elementos arquitectónicos históricos restaurados",
+        "icon": "building-2"
+      },
+      {
+        "text": "Ascensor y plaza de aparcamiento incluida",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Bodega disponible",
+        "icon": "archive"
+      },
+      {
+        "text": "Ubicación en zona declarada Patrimonio de la Humanidad por la UNESCO",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "PenthouseGrund",
+      "RenovacionContemporanea",
+      "VistasAlzette",
+      "TerrazaPrivada",
+      "PatrimonioUnesco"
+    ]
+  }
+}

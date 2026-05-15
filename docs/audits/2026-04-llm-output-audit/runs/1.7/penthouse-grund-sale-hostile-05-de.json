@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:29.615Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas al valle de la Alzette en Grund",
+    "description": "Este penthouse de 175 m² se sitúa en el histórico barrio de Grund, en el encantador valle de la Alzette, conocido por su ambiente ligado al patrimonio UNESCO. La vivienda ha sido renovada recientemente, conservando elementos estructurales como paredes de piedra vista y vigas, que armonizan con acabados contemporáneos.\n\nEl salón destaca por su techado abovedado y el suelo de tablas anchas de roble, ofreciendo luz natural y vistas panorámicas al valle de la Alzette. La cocina, diseñada con mobiliario de madera maciza y equipada con una encimera de mármol y una cocina profesional de acero inoxidable, combina funcionalidad y estética en un ambiente cálido.\n\nEl apartamento incorpora tres dormitorios, incluyendo un espacio con ventana abuhardillada y vigas expuestas que aportan carácter y un rincón acogedor. La terraza privada con pavimento de piedra y barandilla de hierro forjado permite contemplar el valle, aportando un espacio exterior exclusivo dentro del entorno catalogado.\n\nSe complementa con ascensor, plaza de aparcamiento y un cuarto de sótano, que ofrecen comodidad y almacenamiento adicional. La ubicación ofrece un entorno histórico con una vibrante escena gastronómica y conexión a servicios, propia del barrio de Grund.",
+    "highlights": [
+      {
+        "text": "Vistas al valle de la Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Paredes de piedra vista originales",
+        "icon": "archive"
+      },
+      {
+        "text": "Terraza privada con vistas",
+        "icon": "sun"
+      },
+      {
+        "text": "Renovación reciente con estilo contemporáneo",
+        "icon": "home"
+      },
+      {
+        "text": "Cocina equipada con encimera de mármol y cocina profesional",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Cuarto de sótano para almacenamiento",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "ValleDeLaAlzetteView",
+      "RenovatedLiving",
+      "TerraceLife",
+      "GrundPenthouse"
+    ]
+  }
+}

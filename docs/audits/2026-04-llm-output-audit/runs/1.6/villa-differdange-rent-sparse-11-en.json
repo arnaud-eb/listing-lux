@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:43:24.380Z",
+  "output": {
+    "title": "Detached 4-Bedroom Villa with Garden, Terrace, and Double Garage",
+    "description": "This detached villa offers approximately 200 square meters of living space distributed over a well-maintained layout dating back to the 1970s. The exterior showcases a stone facade characteristic of residential architecture from that period, offering both solidity and charm, complemented by private grounds including a front lawn and a mature garden.\n\nInside, the living room retains original features such as a stone fireplace and wood paneling, providing a warm and inviting atmosphere with views onto the garden. The layout comprises four bedrooms and two bathrooms, suitable for various lifestyle arrangements.\n\nOutdoor living is enhanced by a terrace adjoining the property, overlooking a peaceful garden with mature trees, a large lawn, and a patio area. Additional amenities include a double garage providing secure parking and a cellar for storage. The villa's setting reflects an established residential area with mature landscaping and private spaces.",
+    "highlights": [
+      {
+        "text": "200 m² detached villa with stone facade",
+        "icon": "home"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Original stone fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Mature private garden with lawn and patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrace overlooking garden",
+        "icon": "sun"
+      },
+      {
+        "text": "Double garage parking",
+        "icon": "car"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "StoneFacade",
+      "GardenTerrace",
+      "DoubleGarage",
+      "OriginalFeatures",
+      "EstablishedResidence"
+    ]
+  }
+}

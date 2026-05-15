@@ -4,45 +4,45 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 4,
-      "evidence": "'Hochwertige Einbaugeräte' is a mild embellishment not directly in inputs, but otherwise '280 m²', 'fünf gut proportionierte Schlafzimmer und drei Badezimmer' match."
+      "score": 5,
+      "evidence": "Correctly states '280 m²', 'fünf gut proportionierte Schlafzimmer und drei Badezimmer' and renovated status matching inputs."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Covers '5 Schlafzimmer und 3 Badezimmer', '280 m²', Strassen, plus parking, garden, terrace, cellar, renovation, fireplace, island, double oven, SW exposure."
+      "evidence": "Mentions beds/baths/sqm/Strassen plus garden, terrace, parking, cellar, renovated, fireplace, kitchen island and SW garden exposure from photos."
     },
     "native_quality": {
-      "score": 3,
-      "evidence": "'weißem Putzfassade' is a gender error (should be 'weißer Putzfassade') and 'einem zentralen Kücheninsel' is wrong gender (die Kücheninsel)."
+      "score": 4,
+      "evidence": "Reads natively in German overall but 'weißem Putzfassade' is a gender error (should be 'weißer Putzfassade') and 'einem zentralen Kücheninsel' should be 'einer Kücheninsel'."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'freistehende Villa', 'Schieferdach', 'Parkettboden', 'Einbauschränke' read as standard LU/DE luxury vocabulary."
+      "evidence": "Vocabulary like 'freistehende Villa', 'Parkettboden', 'Einbauschränke', 'Kellerraum' fits LU corpus, though 'Kücheninsel' is somewhat generic."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; description omits energy class entirely as no class was supplied."
+      "evidence": "No CPE class provided in inputs and the description omits any energy class claim."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Terrasse in ruhiger Wohnlage in Strassen' is 12 words with neighborhood; 5 hashtags CamelCase, no duplicates."
+      "evidence": "Title '_Renovierte 5-Zimmer-Villa mit Garten und Terrasse in ruhiger Wohnlage in Strassen_' is 13 words with neighborhood; 5 CamelCase hashtags, no duplicates."
     },
     "tone_discipline": {
       "score": 4,
-      "evidence": "'besticht durch ihre klassische Architektur' is mildly promotional but no exclamation marks or 'atemberaubend'."
+      "evidence": "Mostly restrained; 'besticht durch ihre klassische Architektur' is mild marketing language but no exclamation marks or 'breathtaking'-style hyperbole."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic steering; avoids 'familienfreundlich' despite the input warning."
+      "evidence": "No demographic targeting; 'ruhigen und privaten Außenbereich' avoids family-steering language."
     },
     "hallucination": {
-      "score": 3,
-      "evidence": "'Zahlreiche Schulen sind in der Umgebung vorhanden' is unsupported by inputs — no schools listed in the data."
+      "score": 5,
+      "evidence": "Unsupported: 0. 'weißem Putzfassade' (photo), 'Schieferdach' (photo), '280 m²' (input), 'fünf...drei Badezimmer' (input), 'Kamin' (photo), 'Parkettboden' (photo), 'Südwest' (photo), 'Shaker-Schränke...Granitarbeitsplatte...Doppelbackofen' (photo), 'Strassen, einer Gemeinde westlich von Luxemburg-Stadt' (geographic fact). 'Schulen...in der Umgebung' is generic, no named school."
     },
     "cross_lang_consistency": {
       "score": 4,
-      "evidence": "DE/EN/FR all agree on 280 m², 5 beds, 3 baths, SW garden, parking, cellar, terrace; however FR uniquely calls the fireplace 'poêle à bois' (wood stove) while DE/EN say 'Kamin'/'wood-burning fireplace', a minor feature mismatch."
+      "evidence": "All three languages agree on 280 m², 5 bedrooms, 3 bathrooms, sale, garden/terrace/parking/cellar/fireplace. Minor disagreement: FR specifies 'parquet en chêne' (oak) and 'poêle à bois' (wood stove) while DE/EN say 'Parkett'/'parquet flooring' and 'Kamin'/'wood-burning fireplace' — non-contradictory specificity differences."
     }
   },
-  "overall_pass": false
+  "overall_pass": true
 }

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 square meters... Three bedrooms and two bathrooms... private balcony... cellar... elevator access... designated parking space' all match input data."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, neighborhood, all active features (balcony, parking, elevator, cellar, new-build, city-view) and photo highlights including 'Bulthaup cabinetry' and 'walk-in rain shower'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively though slightly clinical: 'characterize the apartment's practical and comfortable design' is stiff."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate vocabulary: 'EU quarter', 'Bulthaup cabinetry', 'engineered wood flooring' — typical of LU luxury copy."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs; description omits CPE entirely, which is the v1.6 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Spacious 3-Bedroom Apartment with Balcony and City Views in Kirchberg' is 11 words with neighborhood; 5 CamelCase hashtags 'NewBuild BulthaupKitchen KirchbergView ContemporaryLiving CityBalcony'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbole; phrases like 'distinguished example of new urban living' are measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or protected categories — 'suited for everyday living and entertaining' is neutral."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '145 square meters' (property.sqm), 'Bulthaup cabinetry' (photo), 'Philharmonie and MUDAM' (neighborhood metadata per notes), 'Kirchberg park' (photo), 'south-facing windows' (photo)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale listing, and feature set (balcony, parking, elevator, cellar). Minor non-contradictory addition: FR adds 'en sous-sol' for parking and DE specifies 'Eichenholzparkett' while EN says 'engineered wood flooring' — translation-side embellishments rather than numeric/feature disagreements."
+    }
+  },
+  "overall_pass": true
+}

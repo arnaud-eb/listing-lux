@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:06.694Z",
+  "output": {
+    "title": "Bright One-Bedroom Apartment with Cellar in Lively Bonnevoie District",
+    "description": "This 52 m² apartment offers a practical and functional living space within the vibrant Bonnevoie neighborhood. The property features a well-maintained living room with laminate flooring and a south-facing window, ensuring ample natural light throughout the day. The neutral color palette provides a calm atmosphere adaptable to various furnishing styles.\n\nThe compact kitchen is arranged in a galley layout with white cabinetry and ceramic tile flooring. While the kitchen maintains a traditional design, it provides a practical space suitable for everyday meal preparation. Adjacent to the kitchen, the bathroom includes a full-size shower-tub combination with white tiled walls and a single vanity, designed for convenience and efficient use of space.\n\nA separate cellar is included, offering additional storage capacity beyond the main living areas. Bonnevoie is characterized by its multicultural and lively environment with a diverse dining scene and the popular local market. The neighborhood benefits from good connections to the central station, providing access to broader transit options. The apartment’s location integrates residential comfort with ease of access to local amenities and city connections.",
+    "highlights": [
+      {
+        "text": "52 m² functional living area",
+        "icon": "square"
+      },
+      {
+        "text": "One bedroom and one bathroom with full-size tub",
+        "icon": "bed"
+      },
+      {
+        "text": "Living room with south-facing window providing natural light",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact, practical galley kitchen with ceramic tile floor",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Separate cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Laminate flooring in living area",
+        "icon": "home"
+      },
+      {
+        "text": "Well-maintained interior with neutral color scheme",
+        "icon": "building-2"
+      },
+      {
+        "text": "Situated in Bonnevoie’s multicultural and lively neighborhood",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "BrightApartment",
+      "FunctionalLayout",
+      "BonnevoieLiving",
+      "SouthFacing",
+      "AdditionalStorage"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'semi-detached house, constructed in the 1990s', '195 m²', four bedrooms, two bathrooms, south-facing garden, brick facade — all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 195 m², 4 bed/2 bath, garden, terrace ('private patio'), parking, cellar, plus photo highlights fireplace, breakfast nook, south exposure."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads native English: 'enhancing natural light and accessibility' is fine; closing line 'combining indoor and outdoor living with practical features' is slightly generic but idiomatic."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Generic English vocabulary ('comfortably sized residential option', 'designed to accommodate a range of residential needs') reads more like rental copy than LU luxury sale at €1.35M."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned in prose; none supplied in inputs — correct default behavior."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Four-Bedroom Semi-Detached House with Parking and South-Facing Garden' = 10 words, has property-defining adjectives but lacks neighborhood Bertrange. 5 valid CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; phrases like 'practical and inviting space', 'well-maintained' are restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'designed to accommodate a range of residential needs' is generic and non-discriminatory."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0 — all concrete claims (195 m², 1990s, brick facade, south-facing, tile flooring, fireplace, wood cabinetry, tile splashback, freestanding range, breakfast nook, patio, cellar, driveway) supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement (195 m², 4 bed, 2 bath) holds across FR/EN/DE. However listing-kind/property-type disagreement: FR 'maison mitoyenne' and EN 'semi-detached house' agree with input, but DE 'freistehende Einfamilienhaus' asserts freestanding — a feature-list/type disagreement on the same property."
+    }
+  },
+  "overall_pass": true
+}

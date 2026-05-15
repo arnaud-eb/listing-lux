@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'penthouse de 220 m²', 'quartier résidentiel prisé de Belair', '4 chambres', '3 salles de bains' all match inputs."
+      "evidence": "'penthouse de 220 m²', '4 chambres', 'trois salles de bains' all match inputs."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Mentions all key features: 'parquet en chêne', 'cheminée à foyer ouvert', 'appareils Gaggenau', 'marbre de Carrare', 'cave à vins', 'terrasse exposée plein sud', 'ascenseur', 'cave privative', 'parking'."
+      "evidence": "Mentions '220 m²', 'quartier résidentiel prisé de Belair', 'Gaggenau', 'marbre de Carrare', 'terrasse', 'ascenseur', 'cave', 'parking'."
     },
     "native_quality": {
       "score": 5,
-      "evidence": "'conciliant tranquillité et accès urbain direct' reads as native French real-estate prose."
+      "evidence": "'baies vitrées du sol au plafond qui illuminent un séjour spacieux' reads natively."
     },
     "market_fit": {
-      "score": 4,
-      "evidence": "'quartier résidentiel prisé de Belair' and 'suite parentale' match LU luxury vocabulary, though 'cheminée au bois' in highlights is slightly less idiomatic."
+      "score": 5,
+      "evidence": "'suite parentale', 'cave à vins', 'exposé plein sud' align with LU luxury vocabulary."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class mentioned, no class supplied in inputs — correct omission per v1.5 default."
+      "evidence": "No CPE class is mentioned; inputs supplied none, so omission is correct."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Penthouse rénové de 220 m² avec terrasse et vue panoramique sur la ville' is 12 words; 5 hashtags 'PenthouseContemporain VuePanoramique CuisineGastronomique TerrasseSud BelairLuxembourg' are CamelCase and non-duplicating."
+      "evidence": "Title 'Penthouse rénové de 220 m² avec terrasse et vue panoramique sur la ville' is 12 words but omits Belair; 5 hashtags clean CamelCase."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "No exclamation marks; phrases like 'espace extérieur remarquable' are restrained, no 'breathtaking'-style hyperbole."
+      "score": 4,
+      "evidence": "'remarquable' and 'vue dégagée' are restrained, but 'quartier résidentiel prisé' is slightly promotional."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No reference to occupant demographics, family status, or similar; only describes the property and neighborhood."
+      "evidence": "No references to demographics; 'suite parentale' is a standard property term, not a family-status targeting."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "Every concrete element ('marbre de Carrare', '180 degrés', 'plein sud') is supported by photo_analyses inputs."
+      "evidence": "Unsupported: 0. All concrete claims supported: '220 m²' (sqm), 'Belair' (neighborhood), 'Gaggenau' (photo), 'marbre de Carrare' (photo), 'cave à vins' (photo), 'parquet en chêne' (photo), '180 degrés' (photo), 'plein sud' (photo), 'composite' (photo), 'cheminée' (photo)."
     },
     "cross_lang_consistency": {
-      "score": 5,
-      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, Gaggenau, Carrara marble, 180-degree south-facing terrace, elevator, parking, cellar."
+      "score": 4,
+      "evidence": "FR/DE/EN agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, terrace, elevator, cellar, parking. Minor: DE highlight list omits explicit parking line item while FR and EN call out 'place de parking privative'/'parking space included'; non-contradictory."
     }
   },
   "overall_pass": true

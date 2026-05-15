@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Listing says 'Zwei Schlafzimmer' which matches inputs, but 'BalkonMitAussicht' hashtag implies a view despite balcony being a small north-facing one — minor stretch."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 95 m², 2 bedrooms, 1 bathroom, balcony, elevator, cellar, furnished, renovated, kitchen equipment, Limpertsberg neighborhood; omits that this is a rental at €2,400/month entirely from prose (acceptable per rubric) but doesn't frame it as a rental either."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as native German: 'Die Räume sind mit Mehrschichtparkett ausgelegt und weisen eine skandinavisch inspirierte, zeitgenössische Gestaltung auf' — fluent, though slightly bureaucratic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU/DE real-estate vocabulary like 'Wohnfläche', 'bezugsfertig', 'Einbauküche', 'Kellerraum' — fits the corpus well."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and the description omits CPE entirely — correct under v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Helles 2-Zimmer Apartment mit Balkon und Einbauküche in Limpertsberg' is 10 words and well-shaped; however hashtag 'BalkonMitAussicht' is misleading (north-facing small balcony, no view claimed in inputs) and 'KulturViertel' is generic."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrases like 'eignet sich für Frischluftpausen' and 'großzügig ausgestattete Küche' stay measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics, family status, age, or origin anywhere in the text."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Parc Edmond Klein' (not in inputs; also appears to be a fabricated/garbled park name — the actual Limpertsberg park is Parc de Merl-area or Parc Tony-Neuman, not 'Edmond Klein') and 'BalkonMitAussicht' implies a view not in inputs. 'Universität' is plausibly supported by Limpertsberg context but not in supplied inputs either, making it borderline; counting the two stronger violations."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only one language (DE) generated, so consistency is trivially satisfied."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Rental framing gap surfaced as predicted — no mention that this is for rent or at €2,400/month, reading like a sale listing."
+}

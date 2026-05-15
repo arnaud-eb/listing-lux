@@ -1,0 +1,56 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:02.890Z",
+  "output": {
+    "title": "Duplex neuf de 3 chambres avec terrasse et vue panoramique à la Cloche d'Or",
+    "description": "Situé dans le quartier en pleine expansion de la Cloche d'Or, ce duplex neuf de 180 m² se distingue par ses volumes généreux et son architecture moderne. Le séjour, baigné de lumière naturelle grâce à une double hauteur sous plafond et de larges baies vitrées, offre une vue dégagée sur le nouveau parc adjacent, apportant une atmosphère de sérénité en cœur de ville.\n\nLa cuisine ouverte, équipée d'appareils Siemens intégrés et d'un plan de travail en quartz, s'intègre harmonieusement au séjour, favorisant un espace fluide et convivial. Le choix des matériaux, notamment le parquet en chêne massif et les meubles à fermeture douce, souligne la qualité de ce logement neuf.\n\nL'espace nuit se déploie à l'étage supérieur, où la chambre principale bénéficie d'un accès direct à une terrasse enveloppante avec vue sur le centre commercial voisin. Des placards intégrés offrent un espace de rangement fonctionnel. Deux autres chambres complètent cet étage, desservies par deux salles de bains.\n\nComplété par un ascenseur desservant tous les niveaux, un parking et une cave privée, ce duplex propose un ensemble confortable et adapté à la vie urbaine. Le quartier de la Cloche d'Or conjugue dynamisme économique, commerces et espaces verts, contribuant à une qualité de vie actuelle et pratique.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 180 m² en duplex moderne",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres avec rangements intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Deux salles de bains confortables",
+        "icon": "bath"
+      },
+      {
+        "text": "Cuisine ouverte équipée Siemens et plan quartz",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Double hauteur sous plafond dans le séjour",
+        "icon": "home"
+      },
+      {
+        "text": "Terrasse enveloppante avec exposition au soleil couchant",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascenseur desservant tous les étages",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Parking privatif accessible",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privative incluse",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "DuplexModerne",
+      "TerrassePanoramique",
+      "CuisineEquipée",
+      "DoubleHauteur",
+      "ParkingsPrivatif"
+    ]
+  }
+}

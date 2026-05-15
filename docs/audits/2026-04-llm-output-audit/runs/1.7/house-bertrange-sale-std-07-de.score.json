@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'Dieses freistehende Einfamilienhaus' contradicts the input photo analysis 'semi-detached house' — freestanding vs semi-detached is a material misrepresentation."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 195 m², 4 Schlafzimmer, 2 Badezimmer, Garten, Terrasse, Stellplatz, Keller, Kamin, Frühstücksbereich — all key inputs covered."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'doppelflügelige Türen einen direkten Zugang zur Terrasse und dem südlich ausgerichteten Garten ermöglichen' — fluent though slightly bureaucratic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU/DE real-estate idiom: 'gepflegter Zustand', 'Wohnkomfort', 'Stellplatz', 'Frühstücksbereich' align with athome.lu DE listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; prose omits energy class entirely, consistent with v1.5 default given no class in inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Gepflegtes Einfamilienhaus mit Garten und Terrasse in ruhiger Wohnlage' = 9 words but says Einfamilienhaus (freestanding) which contradicts the property; no neighborhood. Hashtags are in English ('FourBedrooms', 'SouthFacingGarden') — mismatched language."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation; 'behagliche Wärme', 'entspannten Nutzung' are restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'zeitgemäße Wohnstruktur' is neutral."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'freistehende Einfamilienhaus' (input says semi-detached), 'private Zufahrtstor' (a gate is not in inputs; inputs say 'private driveway'). 'mehrere Fenster' is also somewhat invented but generic."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement (195 m², 4 bed, 2 bath) holds across FR/EN/DE. However listing-kind/property-type disagreement: FR 'maison mitoyenne' and EN 'semi-detached house' agree with input, but DE 'freistehende Einfamilienhaus' asserts freestanding — a feature-list/type disagreement on the same property."
+    }
+  },
+  "overall_pass": false
+}

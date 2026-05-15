@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:39:46.390Z",
+  "output": {
+    "title": "Luxuriöses Penthouse mit 220 m², Terrasse und Panoramablick in Belair",
+    "description": "Dieses großzügige Penthouse befindet sich in einem ruhigen, exklusiven Wohnviertel und bietet auf 220 m² Wohnfläche eine hochwertige, moderne Ausstattung. Die offene Raumgestaltung im Wohnbereich wird durch bodentiefe Fenster und Eichenparkett hervorgehoben, die für viel Tageslicht und eine angenehme Atmosphäre sorgen. Ein Holzofen integriert in den Wohnraum ergänzt das Ambiente und vermittelt ein behagliches Wohngefühl.\n\nDie Küche ist mit Marken-Geräten von Gaggenau und einer Carrara-Marmorinsel ausgestattet, die sowohl funktional als auch repräsentativ ist. Die integrierte Weinklimatisierung und die matte schwarze Armatur unterstreichen den hochwertigen Charakter der Küche.\n\nVier Schlafzimmer, darunter eine Master-Suite mit eigenem Badezimmer und Zugang zur privaten Terrasse, bieten großzügige Raumverhältnisse und Komfort. Die südlich ausgerichtete Terrasse verfügt über eine Glasbalustrade und bietet einen weitreichenden 180-Grad-Blick auf die Stadt Luxemburg.\n\nZur Immobilie gehören ein Aufzug, ein Parkplatz sowie ein separater Kellerraum. Die Renovierung wurde mit Fokus auf moderne Materialien und höchsten Standard durchgeführt. Die Lage in Belair verbindet ruhige Wohnqualität mit guter Anbindung an das Stadtzentrum.",
+    "highlights": [
+      {
+        "text": "220 m² Wohnfläche in exklusivem Penthouse",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer inklusive Master-Suite mit Terrasse",
+        "icon": "bed"
+      },
+      {
+        "text": "Drei Badezimmer modern ausgestattet",
+        "icon": "bath"
+      },
+      {
+        "text": "Großzügige Terrasse mit 180° Stadtblick und Südausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Renoviert mit hochwertigen Materialien und Design",
+        "icon": "building-2"
+      },
+      {
+        "text": "Moderne Gaggenau-Küche mit Carrara-Marmorinsel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Eigener Pkw-Stellplatz und separater Kellerraum",
+        "icon": "car"
+      },
+      {
+        "text": "Barrierefreier Zugang durch Aufzug",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLiving",
+      "CityView",
+      "BelairResidence",
+      "LuxuryRenovation",
+      "ExclusiveTerrace"
+    ]
+  }
+}

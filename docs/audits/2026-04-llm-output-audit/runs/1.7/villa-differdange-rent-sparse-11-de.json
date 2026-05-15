@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:09.967Z",
+  "output": {
+    "title": "Freistehende Villenresidenz mit 4 Schlafzimmern und gepflegtem Garten",
+    "description": "Diese freistehende Villa aus den 1970er-Jahren bietet eine großzügige Wohnfläche von ca. 200 m² und überzeugt durch eine solide Bausubstanz mit traditioneller Steinfassade. Das Anwesen umfasst vier separate Schlafbereiche und zwei Badezimmer, was komfortables Wohnen auf mehreren Ebenen ermöglicht.\n\nDas geräumige Wohnzimmer zeigt sich mit originaler Holzvertäfelung und einem Stein-Kamin, der dem Raum Wärme und Charakter verleiht. Große Fensterfronten bieten Blick in den angelegten Garten und sorgen für Tageslicht. An den Wohnbereich schließt sich eine Terrasse an, die sich für entspannte Stunden im Freien eignet.\n\nDer pflegeleichte, natürliche Garten weist eine großzügige Rasenfläche mit reifem Baumbestand auf und bietet Raum für vielfältige Gestaltungsmöglichkeiten. Der Keller dient als separater Abstellraum. Zum Anwesen gehört eine Doppelgarage mit direktem Zugang zur Villa, zudem steht zusätzlicher Stellplatz zur Verfügung.\n\nDiese Immobilie befindet sich in einem etablierten Wohnumfeld, das durch seine ruhigen Straßen und Einfamilienhausbebauung geprägt ist. Die Wohnumgebung ist durch gewachsene Strukturen charakterisiert und ermöglicht unverbaute Ausblicke ins Grüne.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit 4 Schlafzimmern",
+        "icon": "home"
+      },
+      {
+        "text": "2 Badezimmer für gehobenen Wohnkomfort",
+        "icon": "bath"
+      },
+      {
+        "text": "Originaler Stein-Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Großer, natürlicher Garten mit reifem Baumbestand",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse als Erweiterung des Wohnraums im Freien",
+        "icon": "sun"
+      },
+      {
+        "text": "Doppelgarage plus zusätzlicher Parkplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum als Abstellfläche",
+        "icon": "archive"
+      },
+      {
+        "text": "Traditionelle Steinfassade aus den 1970er-Jahren",
+        "icon": "building"
+      }
+    ],
+    "hashtags": [
+      "DetachedVilla",
+      "StoneFacade",
+      "PrivateGarden",
+      "OriginalFeatures",
+      "SpaciousLiving"
+    ]
+  }
+}

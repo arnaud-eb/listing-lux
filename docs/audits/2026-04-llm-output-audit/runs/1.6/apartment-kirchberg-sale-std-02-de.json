@@ -1,0 +1,47 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:40:11.229Z",
+  "output": {
+    "title": "Moderne 3-Zimmer-Neubauwohnung mit Balkon und Parkblick in Kirchberg",
+    "description": "Diese großzügige Neubauwohnung mit rund 145 m² Wohnfläche befindet sich im modernen Geschäftsviertel Kirchberg. Das offen gestaltete Wohnzimmer zeichnet sich durch eine doppelt hohe Decke und südlich ausgerichtete Fenster aus, die für reichlich Tageslicht sorgen. Das hochwertige Eichenholzparkett unterstreicht das zeitgemäße Ambiente und verbindet den Wohnbereich harmonisch mit dem angrenzenden Essbereich.\n\nDie Küche ist mit hochwertiger Bulthaup-Ausstattung versehen und beinhaltet eine Stein-Arbeitsplatte sowie eine moderne Induktionskochfläche. Eine zentrale Kochinsel mit Frühstückstheke ergänzt die funktionale, minimalistische Gestaltung dieser Einbauküche nachhaltig.\n\nVom Balkon aus bietet sich ein ruhiger Blick auf den Kirchberger Park, der mit einer Glasbalustrade und Fliesenboden ausgestattet ist – ein geeigneter Platz zur Entspannung. Die beiden Bäder sind mit einer bodengleichen Regendusche, einem Doppelwaschtisch und Fußbodenheizung versehen; die verwendeten Materialien sind insbesondere Porzellanfliesen mit einer zurückhaltenden, modernen Optik.\n\nZur Wohnung gehören ein Aufzug im Gebäude, ein Stellplatz sowie ein separater Kellerraum. Die Lage in Kirchberg ermöglicht einen modernen urbanen Lebensstil in unmittelbarer Nähe zu den EU-Institutionen, der Philharmonie sowie dem Museum MUDAM. Internationale Schulen und weitere Annehmlichkeiten sind im Quartier ebenfalls vorhanden.",
+    "highlights": [
+      {
+        "text": "145 m² Wohnfläche mit 3 Zimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Balkon mit Blick auf Kirchberger Park",
+        "icon": "sun"
+      },
+      {
+        "text": "Hochwertige Bulthaup-Küche mit Kochinsel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "2 moderne Bäder mit Fußbodenheizung",
+        "icon": "bath"
+      },
+      {
+        "text": "Eichenholzparkett und doppelt hohe Decke im Wohnzimmer",
+        "icon": "sofa"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Eigener Stellplatz und Kellerraum",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "ParkView",
+      "BulthaupKitchen",
+      "KirchbergApartment"
+    ]
+  }
+}

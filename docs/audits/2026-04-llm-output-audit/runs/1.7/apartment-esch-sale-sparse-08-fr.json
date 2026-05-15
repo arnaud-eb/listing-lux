@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:32.282Z",
+  "output": {
+    "title": "Appartement lumineux 2 chambres avec balcon et parking à Esch-sur-Alzette",
+    "description": "Situé dans un immeuble avec ascenseur à Esch-sur-Alzette, cet appartement propose une surface habitable de 78 m² répartie en deux chambres et une salle de bains. Le séjour offre une ambiance claire et neutre, avec un accès direct à un balcon qui apporte un espace extérieur privatif.\n\nLa cuisine en L est équipée de meubles blancs et comprend un petit espace repas adapté à une table de taille modeste. Le revêtement au sol en parquet stratifié et les murs aux tons beiges contribuent à une atmosphère chaleureuse et soignée.\n\nL'appartement bénéficie d'une place de parking incluse, facilitant le stationnement en milieu urbain. L'ensemble se trouve à Esch-sur-Alzette, deuxième ville du Luxembourg, connue pour sa scène culturelle dynamique, son université et le développement autour du site de Belval.\n\nLa résidence, desservie par un ascenseur, permet un accès aisé à tous les étages. Le quartier offre des commodités variées et une bonne desserte en transports publics, renforçant l'attrait de cette adresse pour un logement confortable en ville.",
+    "highlights": [
+      {
+        "text": "Deux chambres lumineuses",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcon accessible depuis le séjour",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine en L avec espace repas",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Place de parking privative",
+        "icon": "car"
+      },
+      {
+        "text": "Résidence avec ascenseur",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Revêtement parquet stratifié dans le séjour",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "Balcon",
+      "ParkingPrivatif",
+      "Ascenseur",
+      "CuisineAménagée",
+      "EschSurAlzette"
+    ]
+  }
+}

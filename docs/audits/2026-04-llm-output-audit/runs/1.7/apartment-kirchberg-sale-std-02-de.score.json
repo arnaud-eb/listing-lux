@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m²', 'drei separaten Schlafzimmern und zwei Badezimmern', 'Stellplatz', 'Aufzug', 'Kellerraum' all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm/beds/baths/Kirchberg/balcony/parking/elevator/cellar/new-build, but city-view feature is rendered only as 'Blick auf den Park' without broader city-view mention."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively; 'Eichen-Mehrschichtparkett' and 'Kulinarikzone' are idiomatic though 'Kulinarikzone' is slightly unusual."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Bulthaup-Küche', 'begehbare Regendusche', 'Fußbodenheizung', 'Glasbrüstung' match LU/DE luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE in inputs; German prose omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Moderne 3-Zimmer Neubauwohnung mit Balkon und Parkblick in Kirchberg' (10 words) includes neighborhood; 5 hashtags 'ModernLiving KirchbergView BulthaupKitchen NewBuildApartment CityBalcony'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole/exclamations; phrases like 'ruhigen Rückzugsort' and 'qualitativen Neubau-Charakter' stay restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Eichen-Mehrschichtparkett' specifies oak, but photo analysis only says 'engineered wood flooring' without oak species. Other claims (südliche Ausrichtung, Parkblick, Bulthaup, Naturstein-Arbeitsplatte) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, elevator, cellar, new-build, sale. Minor: EN mentions 'city views' in title while DE/FR foreground 'Parkblick/vue sur parc' — non-contradictory framing difference."
+    }
+  },
+  "overall_pass": false
+}

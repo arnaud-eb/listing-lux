@@ -4,46 +4,46 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 4,
-      "evidence": "'Nähe zur Universität Belval' is unsupported by inputs but consistent with Esch context."
+      "score": 5,
+      "evidence": "'Diese 78 m² große Eigentumswohnung' and '2 Schlafzimmer und ein Badezimmer' align with inputs."
     },
     "completeness": {
-      "score": 5,
-      "evidence": "'Diese 78 m² große Eigentumswohnung', 'zwei Schlafzimmer und ein Badezimmer', balcony, parking, elevator all included."
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, Balkon, Parkplatz, Aufzug, Esch; selling points from photos partially used ('Laminatboden', 'weißen Schränken')."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'Der Wohnbereich ist hell und neutral gestaltet' reads as natural German."
+      "evidence": "'der zweitgrößten Stadt Luxemburgs' and 'funktional in L-Form angeordnet' read native; minor: 'Universität Belval' is awkward German."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'Eigentumswohnung', 'Aufzug im Gebäude', 'Parkplatz inklusive' match LU German listing register."
+      "evidence": "'Eigentumswohnung', 'Wohnfläche', 'Parkplatz inklusive' match LU portal German."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class mentioned; correctly omitted as none supplied."
+      "evidence": "No CPE class in inputs and description omits CPE entirely — correct v1.5 default."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Helle 2-Zimmer-Wohnung mit Balkon und Parkplatz in Esch-sur-Alzette' is well-shaped; 5 CamelCase hashtags."
+      "evidence": "Title 'Helle 2-Zimmer-Wohnung mit Balkon und Parkplatz in Esch-sur-Alzette' is well-shaped; 5 hashtags clean, though 'UrbanLiving' is generic."
     },
     "tone_discipline": {
       "score": 4,
-      "evidence": "'modernen Wohnkomfort' is mild; the apartment isn't described as new/renovated, slight overreach."
+      "evidence": "'modernen Wohnkomfort' is mild puffery; otherwise restrained, no exclamation marks."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic targeting present."
+      "evidence": "No reference to occupants or demographics."
     },
     "hallucination": {
       "score": 2,
-      "evidence": "'Tageslicht durch große Fenster' (large windows) is not in photo analysis; 'Universität Belval' invented and 'modernen Wohnkomfort' contradicts neutral well-maintained input."
+      "evidence": "Unsupported: 3 — 'Universität Belval' (named institution not in inputs), 'aufstrebende Kulturszene' (not in inputs), 'modernen Wohnkomfort' (contradicts neutral/well-maintained, no 'modern' in data), and 'große Fenster' for the highlight 'Tageslicht durch große Fenster' (window size not in photo analyses)."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/DE/EN all agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and Belval/university framing."
+      "evidence": "All three agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, Esch-sur-Alzette, and sale framing; no numeric or feature-list disagreement."
     }
   },
   "overall_pass": false,
-  "notes": "Invented 'large windows' and 'modern living comfort' beyond input."
+  "notes": "Multiple fabricated specifics about Belval and window size."
 }

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:43:15.293Z",
+  "output": {
+    "title": "Villa indépendante de 4 chambres avec jardin et double garage à Luxembourg",
+    "description": "Cette villa indépendante, construite dans les années 1970, offre une surface habitable d'environ 200 m² répartis sur plusieurs niveaux. La façade en pierre et les détails traditionnels témoignent du style résidentiel typique de cette époque au Luxembourg. Le terrain privatif comprend un jardin spacieux et un double garage, offrant un cadre à la fois fonctionnel et agréable.\n\nLe séjour, chaleureux et convivial, est agrémenté d’un parement en bois et d’une cheminée en pierre d’origine, permettant d’apprécier une ambiance traditionnelle. De larges fenêtres offrent une belle luminosité et une vue directe sur le jardin, renforçant la relation entre l’intérieur et l’extérieur.\n\nLe jardin, d’un style naturel et bien entretenu, s’étend sur une grande pelouse entourée d’arbres matures. Une terrasse invite à la détente en extérieur, dans un environnement calme et privé. Les espaces extérieurs complètent harmonieusement les volumes intérieurs de cette villa.\n\nUn sous-sol avec cave offre une surface supplémentaire de rangement. L’ensemble combine des prestations classiques avec un potentiel pour la personnalisation selon les besoins actuels, tout en bénéficiant d’un emplacement résidentiel calme.",
+    "highlights": [
+      {
+        "text": "Villa indépendante construite dans les années 1970",
+        "icon": "home"
+      },
+      {
+        "text": "Surface habitable d'environ 200 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Cheminée en pierre d'origine dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Grand jardin naturel avec arbres matures",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse attenante au jardin",
+        "icon": "sun"
+      },
+      {
+        "text": "Double garage privé",
+        "icon": "car"
+      },
+      {
+        "text": "Cave en sous-sol pour rangement",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "1970sArchitecture",
+      "TraditionalFireplace",
+      "PrivateGarden",
+      "DoubleGarage",
+      "SpaciousVilla"
+    ]
+  }
+}

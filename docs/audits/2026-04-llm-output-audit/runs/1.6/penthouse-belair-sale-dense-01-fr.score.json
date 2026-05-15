@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m²', '4 chambres', '3 salles de bains', 'parquet en chêne', 'cheminée à bois' all match inputs faithfully."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm/beds/baths/Belair, parking, cellar, elevator, terrace, renovation, plus photo selling points like 'vue dégagée à 180 degrés' and 'îlot central en marbre de Carrare'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively French with phrases like 'distribution fluide des espaces' and 'allie confort urbain et qualité de vie', though 'sol en dalle composite' is slightly awkward."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU luxury vocabulary: 'quartier résidentiel prisé de Belair', 'emplacement de parking privatif', 'cave'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description omits CPE entirely, matching v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Penthouse rénové 4 chambres avec terrasse panoramique au cœur de Belair' is 11 words with neighborhood and adjective; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, but 'PenthouseLuxe' hashtag and 'atmosphère chaleureuse et contemporaine' lean slightly promotional; no exclamation marks or banned superlatives."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; only 'idéal pour recevoir' which describes the kitchen, not occupants."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '220 m²', '4 chambres', '3 salles de bains' (property data); 'Gaggenau', 'marbre de Carrare', 'parquet en chêne', 'cheminée à bois', '180 degrés', 'orientée sud' (photo_analyses); 'Belair' (neighborhood)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, sale of penthouse in Belair, parking, cellar, elevator, south-facing terrace, Gaggenau kitchen — no numeric or feature contradictions."
+    }
+  },
+  "overall_pass": true
+}

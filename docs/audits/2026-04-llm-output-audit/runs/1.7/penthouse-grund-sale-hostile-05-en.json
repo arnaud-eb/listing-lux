@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:41.052Z",
+  "output": {
+    "title": "Penthouse renovado con vistas a la valle de la Alzette en el Grund",
+    "description": "Este penthouse de 175 m² ofrece un equilibrio entre el carácter histórico y las comodidades contemporáneas. Situado en el distrito del Grund, reconocido por su atmósfera única y su entorno declarado Patrimonio de la Humanidad por la UNESCO, la propiedad presenta una cuidada renovación que realza elementos originales como muros de piedra aparente y techos abovedados.\n\nEl salón, con su amplia ventana, proporciona una vista directa sobre la valle de la Alzette, generando una sensación amplia y luminosa. La cocina contigua está equipada con mobiliario de madera maciza, superficie de mármol y una placa de cocción profesional de acero inoxidable, ideal para quienes valoran una cocina funcional y elegante.\n\nLas tres habitaciones mantienen detalles como vigas expuestas y suelos de madera, incluyendo un dormitorio con ventana abuhardillada que aporta un rincón de lectura con vista hacia el valle. La terraza privada, pavimentada en piedra y delimitada por un barandal de hierro forjado, completa el conjunto con un espacio exterior que aprovecha la panorámica de la zona histórica.\n\nLa propiedad también incluye un ascensor en el edificio, plaza de estacionamiento y un cuarto de almacenamiento en el sótano. Estos elementos, junto con su carácter único, reflejan un estilo de vida que combina patrimonio arquitectónico y funcionalidad actual.",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "Tres dormitorios con vigas expuestas",
+        "icon": "bed"
+      },
+      {
+        "text": "Dos cuartos de baño renovados",
+        "icon": "bath"
+      },
+      {
+        "text": "Cocina con mobiliario de madera y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terraza privada con vistas a la vallé de la Alzette",
+        "icon": "sun"
+      },
+      {
+        "text": "Plaza de estacionamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cuarto de almacenamiento (cellar) en sótano",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricPenthouse",
+      "ValleDeLaAlzetteView",
+      "RenovatedResidence",
+      "GrundCharm",
+      "UNESCOSetting"
+    ]
+  }
+}

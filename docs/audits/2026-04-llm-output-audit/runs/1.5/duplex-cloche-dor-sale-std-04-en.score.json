@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'Three bedrooms including upper-floor master with terrace access' and '180 m² duplex' match inputs accurately."
+      "evidence": "All facts align: '180 m² duplex', 'three bedrooms', 'master bedroom...direct access to a wraparound terrace'."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Includes 180 m², three bedrooms, 'two bathrooms, elevator access, parking, and a cellar', terrace, new-build, neighborhood."
+      "evidence": "Mentions 180m², 3 bedrooms, 2 bathrooms, Cloche d'Or, new-build, terrace, parking, cellar, elevator, city view, Siemens kitchen."
     },
     "native_quality": {
       "score": 5,
-      "evidence": "'The kitchen is designed with sociability in mind, fully open to the dining and living spaces' reads natively."
+      "evidence": "Reads as native English: 'designed with sociability in mind, fully open to the dining and living spaces'."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'engineered oak flooring', 'wraparound terrace', 'showcase district' aligns with LU EN luxury phrasing."
+      "evidence": "Uses appropriate luxury vocabulary: 'engineered oak flooring', 'quartz worktops', 'wraparound terrace'."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; description omits energy class as none supplied."
+      "evidence": "No CPE class supplied and description omits CPE entirely, consistent with v1.5 default."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Spacious 3-Bedroom Duplex with Terrace and Park Views in Cloche d'Or' (12 words); hashtags 'UrbanLiving ParkView NewBuildDuplex OpenPlanKitchen TerraceLife' are CamelCase and 5 distinct."
+      "evidence": "Title 'Spacious 3-Bedroom Duplex with Terrace and Park Views in Cloche d'Or' is 12 words with neighborhood; 5 CamelCase hashtags."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "'creating an airy and bright atmosphere' avoids hyperbole, no exclamation marks or 'breathtaking'."
+      "score": 4,
+      "evidence": "Generally restrained; 'showcase district' and 'airy and bright atmosphere' are mild but acceptable."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "'private retreat with fitted wardrobes' is neutral, no demographic references."
+      "evidence": "No references to demographics or occupant identity."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "All claims trace to inputs; 'views over the shopping center' and 'evening sun exposure' come from photo analysis."
+      "evidence": "Unsupported: 0. 'Cloche d'Or' supported by neighborhood field, 'Siemens appliances' and 'quartz worktops' from photo analysis, 'wraparound terrace with wood decking' from terrace photo, '180 m²' from property data."
     },
     "cross_lang_consistency": {
-      "score": 3,
-      "evidence": "DE, EN, FR all agree on 180 m² and three bedrooms, but DE adds 'nach Südwesten ausgerichtet' and extends fitted wardrobes to all bedrooms, while EN and FR correctly limit fitted wardrobes to the master; FR specifies 'sous-sol' parking not in EN/DE."
+      "score": 4,
+      "evidence": "All three agree on 180m², 3 bedrooms, 2 bathrooms (EN/FR explicit, DE implicit), and sale of duplex. Minor: FR specifies 'parking en sous-sol' while DE/EN say only 'Stellplatz'/'parking' — non-contradictory addition."
     }
   },
   "overall_pass": true

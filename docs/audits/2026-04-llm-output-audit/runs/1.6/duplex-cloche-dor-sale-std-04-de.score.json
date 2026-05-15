@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'180 m² Wohnfläche', '3 Schlafzimmer, 2 Bäder', and terrace/parking/cellar/elevator all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, neighborhood, parking, cellar, elevator, terrace, new-build, oak flooring, Siemens, quartz, double-height ceiling, park view, wraparound terrace."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Das Herzstück bildet der imposante Wohnbereich mit doppelhoher Decke' reads natively German; minor: 'Die Wohnung verfügt über zwei Badezimmer' after describing a duplex is slightly inconsistent register."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Eichenparkett', 'Quarz-Arbeitsplatte', 'umlaufende Terrasse', 'Aufzug' match LU/DE luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description omits CPE entirely, consistent with v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Modernes 3-Zimmer-Duplex mit Terrasse und Stadtblick in Cloche d'Or' = 10 words with neighborhood and adjective; 5 CamelCase hashtags, but 'ModernLiving' is generic."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or banned hyperbole; 'imposante Wohnbereich' is restrained adjective usage."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics, family status, or origin."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'profitiert von südlicher Abendsonne' attaches 'südlicher' (south-facing) to evening sun, but inputs only state 'evening sun exposure' with no compass orientation. All other claims (Siemens, quartz, oak, park view, wraparound terrace, shopping center) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 180 m², 3 bedrooms, 2 bathrooms, duplex, sale, parking, cellar, elevator, wraparound terrace; minor: FR specifies 'chêne massif' while DE/EN say engineered/Eichenparkett — a finish-detail disagreement but not numeric or feature-list."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Solid German listing, one minor orientation invention."
+}

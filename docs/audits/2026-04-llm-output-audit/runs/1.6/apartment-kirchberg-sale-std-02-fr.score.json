@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m²... trois chambres et deux salles de bains... ascenseur... place de parking... cave' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, neighborhood, balcony, parking, elevator, cellar, new-build, city-view (via 'vue dégagée'), plus Bulthaup and walk-in shower."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as natively French: 'douche à l'italienne à effet pluie', 'invite à la convivialité' are idiomatic."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "Excellent FR luxury real estate vocabulary: 'séjour à double hauteur', 'suite parentale', 'douche à l'italienne', 'parquet en bois contrecollé'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE in inputs; FR description omits CPE entirely, matching v1.6 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement neuf de 3 chambres avec vue dégagée au cœur de Kirchberg' is 13 words with neighborhood; 5 CamelCase hashtags 'KirchbergLiving BulthaupKitchen ModernArchitecture CityViewApartment ParkView'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamations or hyperbole; 'quartier dynamique' and 'finitions contemporaines de qualité' stay measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or occupant references; copy stays on property attributes."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'place de parking en sous-sol' — inputs confirm parking but do not specify 'en sous-sol' (basement). All other named places (Philharmonie, MUDAM, parc de Kirchberg) and numerics supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale listing, and feature set (balcony, parking, elevator, cellar). Minor non-contradictory addition: FR adds 'en sous-sol' for parking and DE specifies 'Eichenholzparkett' while EN says 'engineered wood flooring' — translation-side embellishments rather than numeric/feature disagreements."
+    }
+  },
+  "overall_pass": false
+}

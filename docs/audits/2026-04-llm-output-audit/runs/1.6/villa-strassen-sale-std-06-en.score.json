@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Title says 'with Garden and Parking' (accurate) but description says 'accommodating generous family living and guest provisions' — interpretive but inputs do not specify guest provisions."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers all core inputs: '280 m²... five bedrooms and three bathrooms', SW garden, parquet, fireplace, kitchen island, double oven, cellar, parking, Strassen."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively, though 'accommodating generous family living and guest provisions' is slightly stilted."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'detached villa', 'pitched slate roof', 'shaker cabinetry', 'granite worktops' aligns with LU luxury English corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied and description omits CPE entirely — correct v1.5+ default behaviour."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Renovated 5-Bedroom Villa with Garden and Parking in Strassen' is 10 words with neighborhood and defining adjective; 5 CamelCase hashtags, no duplicates of generic market tags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'accommodating generous family living', 'tranquil environment ideal for relaxation', 'creating a warm atmosphere' lean promotional, though no banned hyperbole/exclamation."
+    },
+    "fair_housing": {
+      "score": 3,
+      "evidence": "'accommodating generous family living and guest provisions' explicitly references family living as intended use — a fair-housing steering signal."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0 — every concrete claim (280 m², 5 bed/3 bath, SW exposure, slate roof, plaster facade, fireplace, parquet, shaker cabinetry, granite, double oven, cellar, parking, Strassen west of LU city) is supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 280 m², 5 bedrooms, 3 bathrooms, SW garden, parking, cellar, fireplace, sale context. Minor disagreement: DE and FR titles say 'Garage'/'garage' while EN says 'Parking', and FR adds 'parquet en chêne' (oak) which DE/EN do not specify — non-contradictory but a small divergence."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Family-living phrase is fair-housing concern."
+}

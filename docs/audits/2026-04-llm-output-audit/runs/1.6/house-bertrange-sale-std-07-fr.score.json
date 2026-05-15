@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'quatre chambres et deux salles de bains' and '195 m²' match inputs accurately."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, garden, parking, cellar, terrace, fireplace, but omits Bertrange neighborhood name: 'située dans un cadre résidentiel calme'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as native French: 'agrémenté d'une terrasse privative, invitant à profiter d'un espace extérieur lumineux et calme'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU portal vocabulary like 'maison semi-mitoyenne', 'cave', 'séjour' but lacks specific Bertrange/commune references."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE invented; description omits energy class entirely, consistent with no class supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison semi-mitoyenne avec jardin sud et parking dans quartier résidentiel' is 11 words, lacks neighborhood; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamations; restrained phrasing like 'offrant un équilibre entre confort et fonctionnalité'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; neutral language throughout."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '195 m²' (sqm), 'années 1990' (1990s Luxembourg residential), 'façade en brique' (brick facade), 'jardin orienté au sud' (south-facing), 'cheminée' (fireplace), 'quatre chambres et deux salles de bains' (4/2), 'cave' (cellar)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR 'maison semi-mitoyenne' and EN 'semi-detached house' agree, but DE 'freistehendes Wohnhaus'/'FreistehendesHaus' asserts detached — a listing-kind/feature contradiction on structural typology; numerics (195 m², 4 beds, 2 baths) agree across all three."
+    }
+  },
+  "overall_pass": true
+}

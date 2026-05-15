@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'environ 52 m²', 'Une chambre indépendante', 'cave' all match inputs without contradiction."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², one bedroom, bathroom, cellar, Bonnevoie, south-facing living room, galley kitchen — covers core facts though doesn't explicitly say '1 bathroom'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'cet appartement d'environ 52 m² offre un espace de vie clair et accueillant' reads natively in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Surface habitable', 'séjour orienté plein sud', 'cave' are standard LU/FR real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely as appropriate when no class supplied."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement lumineux d'une chambre avec cave à Bonnevoie' is fine (~9 words); but hashtag 'LuminositéSud' contains a non-ASCII accent and 'BonnevoieUrbanLife' mixes FR/EN awkwardly."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'belle luminosité naturelle' is mild; no exclamation marks or 'must-see' hyperbole, though 'Revêtements de qualité soignée' slightly overclaims for laminate."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics, family status, or other protected characteristics."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'son marché populaire' (Bonnevoie market not in neighborhood inputs). Supported: '52 m²', 'orientation sud', 'sol en stratifié', 'baignoire-douche', 'cave', 'cuisine en couloir'."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 52 m², 1 bedroom, 1 bathroom, cellar, south-facing living room, sale, Bonnevoie — no numeric or feature contradictions."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Solid entry-tier copy, restrained tone."
+}

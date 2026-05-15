@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'auf 38 m²' and 'Zweiflammen-Herd sowie einem Kühlschrank' match property and photo inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, furnished, renovated, beams, kitchenette, bathroom, Clausen; omits explicit bathroom count and rental price framing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'in der schmucken, steinernen Fassade' is idiomatic German, though 'schmucken' is slightly unusual."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'historische Bausubstanz', 'Kochnische', 'Clausen-Tal' align with LU German real-estate register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with no class supplied."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title is 8 words including neighborhood; hashtags 'HistoricCharacter RenovatedStudio CozyLiving ClausenSetting' are English in a German listing."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'überzeugt mit einer zeitgemäßen Duschkabine' stays measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'ideal für Personen, die Wert auf einen authentischen Wohnraum mit Charakter legen' targets preferences, not protected demographics."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '38 m²', 'freiliegende Holzbalken', 'Zweiflammen-Herd', 'steinernen Fassade', 'Clausen-Tal' all supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three (FR/DE/EN) cite '38 m²', furnished+renovated studio, two-burner cooktop kitchenette, renovated bathroom with shower, and Clausen historic stone building — no numeric or feature disagreement."
+    }
+  },
+  "overall_pass": true
+}

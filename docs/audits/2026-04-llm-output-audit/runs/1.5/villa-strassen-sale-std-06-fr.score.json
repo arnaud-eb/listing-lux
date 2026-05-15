@@ -4,44 +4,44 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 3,
-      "evidence": "'parquet en chêne' invents oak species (input only says 'parquet flooring'); 'poêle à bois' (wood stove) contradicts input 'fireplace' / 'wood-burning fireplace'."
+      "score": 4,
+      "evidence": "Mostly accurate but 'parquet en chêne' specifies oak, while photo only says 'parquet flooring' without species — minor factual overreach."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Covers 'villa individuelle de 280 m²', 'cinq chambres', 'trois salles de bains', Strassen, jardin, terrasse, cave, parking, îlot, double four, SW."
+      "evidence": "Covers '280 m² habitables', 'cinq chambres', 'trois salles de bains', terrasse, jardin sud-ouest, cave, parking, îlot, double four."
     },
     "native_quality": {
       "score": 5,
-      "evidence": "'agencement fonctionnel avec plans de travail en granite' reads as native French real-estate prose."
+      "evidence": "Idiomatic French: 'L'implantation en retrait et le jardin paysagé mature apportent une atmosphère sereine'."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'villa individuelle', 'suite principale', 'cave', 'stationnement' match LU FR portal lexicon."
+      "evidence": "'villa individuelle', 'salles de bains', 'cave', 'stationnement' fit LU FR corpus; 'le niveau nuit' is appropriate immo vocabulary."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; description omits energy class as no class was supplied."
+      "evidence": "No CPE class invented; energy class omitted as no input data."
     },
     "seo_signal": {
       "score": 4,
       "evidence": "Title 'Villa rénovée 5 chambres avec jardin mature et terrasses à Strassen' is 11 words with neighborhood; 5 CamelCase hashtags."
     },
     "tone_discipline": {
-      "score": 4,
-      "evidence": "'invite à la convivialité' and 'équilibre entre authenticité et modernité' are mildly marketing but no exclamation or 'à couper le souffle'."
+      "score": 5,
+      "evidence": "Restrained; 'invite à la convivialité', 'équilibre entre authenticité et modernité' — no exclamation or hyperbole."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic steering language present."
+      "evidence": "No demographic steering; 'environnement résidentiel avec écoles renommées à proximité' is location-oriented, not occupant-targeted."
     },
     "hallucination": {
-      "score": 2,
-      "evidence": "'écoles renommées à proximité' invents reputation of schools, and 'bon accès aux axes autoroutiers' invents motorway proximity not in inputs."
+      "score": 3,
+      "evidence": "Unsupported: 2. 'parquet en chêne' (photo says only 'parquet flooring', no species), 'écoles renommées à proximité' (no named schools and 'renommées' is an invented qualifier). 'poêle à bois' is a translation of photo's 'wood-burning fireplace' — borderline (poêle vs cheminée), but the input says 'fireplace' which is closer to 'cheminée'; counted as the second unsupported specific material claim."
     },
     "cross_lang_consistency": {
       "score": 4,
-      "evidence": "DE/EN/FR all agree on 280 m², 5 beds, 3 baths, SW garden, parking, cellar, terrace; however FR uniquely calls the fireplace 'poêle à bois' (wood stove) while DE/EN say 'Kamin'/'wood-burning fireplace', a minor feature mismatch."
+      "evidence": "All three languages agree on 280 m², 5 bedrooms, 3 bathrooms, sale, garden/terrace/parking/cellar/fireplace. Minor disagreement: FR specifies 'parquet en chêne' (oak) and 'poêle à bois' (wood stove) while DE/EN say 'Parkett'/'parquet flooring' and 'Kamin'/'wood-burning fireplace' — non-contradictory specificity differences."
     }
   },
   "overall_pass": false

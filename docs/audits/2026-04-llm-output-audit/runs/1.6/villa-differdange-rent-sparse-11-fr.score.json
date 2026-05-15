@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'répartis sur plusieurs niveaux' is not stated in inputs — assumes multi-level layout."
+    },
+    "completeness": {
+      "score": 2,
+      "evidence": "Title says 'à Luxembourg' instead of Differdange; neighborhood omitted, only generic 'emplacement résidentiel calme'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'De larges fenêtres offrent une belle luminosité et une vue directe sur le jardin'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Standard FR luxury vocabulary ('villa indépendante', 'surface habitable') but generic 'à Luxembourg' is vague for a Differdange property."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Villa indépendante de 4 chambres avec jardin et double garage à Luxembourg' is 13 words but 'à Luxembourg' misrepresents the actual locale; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained: 'L'ensemble combine des prestations classiques' — no exclamations or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'personnalisation selon les besoins actuels' is neutral; no demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'répartis sur plusieurs niveaux' (multi-level layout) is not stated in inputs. Other claims (200 m², 1970s, façade en pierre, cheminée en pierre, double garage, arbres matures, cave) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, terrace, double garage, cellar, fireplace; FR adds a non-contradictory but unsupported detail 'répartis sur plusieurs niveaux' not in DE/EN."
+    }
+  },
+  "overall_pass": false
+}

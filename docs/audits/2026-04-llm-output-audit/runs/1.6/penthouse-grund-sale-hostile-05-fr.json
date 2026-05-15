@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:21.567Z",
+  "output": {
+    "title": "Penthouse renovado con terraza privada y vistas a la valle de la Alzette",
+    "description": "Situado en el corazón histórico del Grund, este penthouse de 175 m² ofrece un equilibrio entre el carácter antiguo y las comodidades modernas. El salón presenta una combinación de muros de piedra vista y vigas originales bajo un techo abovedado, aportando una atmósfera cálida con vistas hacia la valle de la Alzette.\n\nLa cocina, diseñada con mobiliario de madera maciza y encimera de mármol, cuenta con equipamiento de acero inoxidable que responde a un estilo transicional y funcional. Tres dormitorios incluyen detalles como ventanas abuhardilladas y suelos de madera, uno de ellos con un rincón para lectura que también disfruta de vistas al valle.\n\nLa terraza privada, pavimentada en piedra y delimitada con una barandilla de hierro forjado, invita a disfrutar del entorno patrimonial de la zona catalogada por la UNESCO. El inmueble incluye ascensor, plaza de aparcamiento y una bodega que aumenta las posibilidades de almacenamiento.\n\nEl Grund es reconocido por su encanto histórico y su dinámica oferta gastronómica, ubicado en la pintoresca valle de la Alzette, subrayando el valor cultural y la calidad de vida que ofrece esta propiedad.",
+    "highlights": [
+      {
+        "text": "Amplias vistas a la valle de la Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Muros de piedra vista y vigas originales",
+        "icon": "building-2"
+      },
+      {
+        "text": "Terraza privada con pavimento de piedra",
+        "icon": "trees"
+      },
+      {
+        "text": "Cocina equipada con mobiliario en madera maciza y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Bodega privada",
+        "icon": "archive"
+      },
+      {
+        "text": "Reforma cuidada que combina elementos históricos y contemporáneos",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "AlzetteValleyView",
+      "RenovatedPenthouse",
+      "PrivateTerrace",
+      "UNESCOSetting"
+    ]
+  }
+}

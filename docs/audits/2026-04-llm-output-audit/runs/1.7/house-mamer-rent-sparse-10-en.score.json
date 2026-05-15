@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This 130 m² row house, constructed in the 1980s, offers three bedrooms and one bathroom' matches inputs accurately."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, garden, shed, cellar, parking; omits Mamer neighborhood name."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'a maintained lawn enclosed by a wooden fence and a small storage shed' reads as natural English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'row house', 'onsite parking', 'cellar' fit Anglophone LU listings; entry-tier vocabulary appropriate."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; consistent with null inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Three-Bedroom 1980s Row House with Garden and Parking' is 9 words but omits Mamer; 5 hashtags CamelCase."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'modest garden space' and 'dated style' are honestly restrained — no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; only 'established residential setting'."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0 — every concrete claim (130 m², 3 beds, 1 bath, 1980s, beige carpet, tube TV alcove, patio doors, wooden fence, storage shed, cellar, parking) is supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE agree on 130 m², 3 bedrooms, 1 bathroom, 1980s, garden, parking, cellar, shed. Minor disagreement: FR highlight adds 'accès terrasse' which EN and DE do not assert."
+    }
+  },
+  "overall_pass": true
+}

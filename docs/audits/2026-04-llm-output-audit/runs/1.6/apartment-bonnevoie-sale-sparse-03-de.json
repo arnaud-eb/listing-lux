@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:40:34.578Z",
+  "output": {
+    "title": "Gemütliche 1-Zimmer-Wohnung mit Süd-Ausrichtung und Keller in Bonnevoie",
+    "description": "Diese 1-Zimmer-Wohnung mit einer Wohnfläche von 52 m² befindet sich in einem ruhigen Gebäude im lebendigen Viertel Bonnevoie. Das Wohn- und Schlafzimmer ist nach Süden ausgerichtet und bietet durch ein großes Fenster eine helle und freundliche Atmosphäre. Der gepflegte Laminatboden und die weißen Wände unterstreichen die klare, neutrale Gestaltung des Raumes.\n\nDie Küche ist funktional mit einer kompakten Anordnung, ausgestattet mit weißen Schränken und einem keramischen Fliesenboden. Obwohl der Küchenbereich eher traditionell gehalten und in einem renovierungsbedürftigen Zustand ist, bietet er eine praktische Galerielayout.\n\nDas Badezimmer ist übersichtlich, mit einer kombinierten Dusch- und Badewanneneinheit sowie weißen Wandfliesen. Ein einzelnes Waschbecken komplettiert den Sanitätsbereich. Zusätzlich verfügt die Immobilie über einen separaten Kellerraum, der zusätzlichen Stauraum bereitstellt.\n\nDas multikulturelle und zentrale Umfeld von Bonnevoie zeichnet sich durch seine lebendige Atmosphäre und die Nähe zum Hauptbahnhof aus. Die vielfältige Restaurantszene und der bekannte Bonnevoie-Markt prägen die Nachbarschaft. Die Wohnung bietet somit eine gut angebundene und abwechslungsreiche städtische Wohnlage.",
+    "highlights": [
+      {
+        "text": "52 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "Südlich ausgerichtetes Wohnzimmer mit Laminatboden",
+        "icon": "sun"
+      },
+      {
+        "text": "Funktionale, traditionelle Küche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Badezimmer mit Dusch- und Badewanne",
+        "icon": "bath"
+      },
+      {
+        "text": "Separater Kellerraum als Abstellmöglichkeit",
+        "icon": "archive"
+      },
+      {
+        "text": "Zentrale Lage im Stadtteil Bonnevoie",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Nahe Hauptbahnhof und Bonnevoie-Markt",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "Suedorientiert",
+      "Kellerraum",
+      "KompakteKueche",
+      "ZentraleLage",
+      "Bonnevoie"
+    ]
+  }
+}

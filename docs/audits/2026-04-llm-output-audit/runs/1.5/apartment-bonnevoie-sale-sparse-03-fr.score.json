@@ -5,45 +5,44 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'cet appartement d'environ 52 m²' and '1 chambre' match inputs; cellar mentioned correctly."
+      "evidence": "'environ 52 m²' and '1 chambre' match inputs; 'cave privative' matches cellar=true."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Mentions 52m², 1 chambre, cave, Bonnevoie, south-facing, galley kitchen, tub — but bathroom count not explicit and 'baignoire-douche' covers tub."
+      "evidence": "Covers sqm, 1 bedroom, cellar, south-facing, galley kitchen, bath; omits explicit bathroom count but mentions 'salle de bain'."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'cuisine fermée en configuration en couloir' is slightly awkward but reads natively otherwise."
+      "evidence": "'cuisine fermée en configuration en couloir' reads slightly awkward but otherwise natural French."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'cave privative', 'séjour lumineux orienté sud', 'gare centrale' align with athome.lu vocabulary."
+      "evidence": "'cave privative', 'séjour lumineux orienté sud', 'gare centrale' match LU listing vocabulary."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class mentioned and none in inputs — correctly omitted from prose."
+      "evidence": "No CPE class invented; CPE omitted entirely, consistent with v1.5 default since inputs lacked class."
     },
     "seo_signal": {
-      "score": 3,
-      "evidence": "Title 'Appartement lumineux 1 chambre avec cave dans quartier central de Bonnevoie' is 11 words and good; hashtag 'AppartementLumieux' has a typo (should be 'Lumineux')."
+      "score": 4,
+      "evidence": "Title 'Appartement lumineux 1 chambre avec cave dans quartier central de Bonnevoie' is 11 words with neighborhood; 5 hashtags, CamelCase, no duplicates ('AppartementLumieux' has typo)."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "'Bien que simple, elle propose un plan de travail fonctionnel' — restrained, no hyperbole or exclamations."
+      "score": 4,
+      "evidence": "Mostly restrained; 'belle luminosité naturelle' and 'quartier central et dynamique' mild but acceptable, no exclamation or 'must-see'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "'contexte vivant et multiculturel' references the area's character, not occupant demographics."
+      "evidence": "No references to occupant demographics; 'contexte vivant et multiculturel' describes neighborhood, not occupants."
     },
     "hallucination": {
       "score": 4,
-      "evidence": "'présence du marché de Bonnevoie à proximité' — the Bonnevoie market is plausible local knowledge but not in inputs; minor unsupported specific."
+      "evidence": "Unsupported: 1 — 'marché de Bonnevoie à proximité' is a specific named place/amenity not in neighborhood inputs. Other claims (52 m², south-facing, gare centrale connection, laminate, white walls, galley) are supported."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/EN/DE all agree on 52 m², 1 bedroom, south-facing window, galley kitchen, shower-tub combo, cellar, Bonnevoie central location."
+      "evidence": "DE/FR/EN all agree on 52 m², 1 bedroom, cellar, south-facing living room, galley kitchen, shower-tub bath, Bonnevoie/central station proximity; no numeric or feature contradictions."
     }
   },
-  "overall_pass": false,
-  "notes": "Hashtag typo 'Lumieux'."
+  "overall_pass": false
 }

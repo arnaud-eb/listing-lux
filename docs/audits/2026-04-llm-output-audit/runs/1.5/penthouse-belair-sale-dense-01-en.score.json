@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'220 m² penthouse', 'four bedrooms and three bathrooms', 'Belair neighborhood' all match inputs."
+      "evidence": "'220 m² penthouse', 'four bedrooms and three bathrooms', 'Belair' match inputs."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Covers 'oak parquet flooring', 'wood-burning fireplace', 'Gaggenau appliances', 'Carrara marble island', 'integrated wine fridge', 'walk-in closet', 'composite decking', 'elevator', 'parking', 'cellar', 'smart-home lighting'."
+      "evidence": "Mentions '220 m²', 'Belair', '4 bedrooms, 3 bathrooms', 'Gaggenau', 'Carrara marble', 'smart-home lighting', 'elevator', 'parking', 'cellar', 'terrace'."
     },
     "native_quality": {
       "score": 5,
-      "evidence": "'a refined living experience in the upscale Belair neighborhood' reads as fluent native English."
+      "evidence": "'oak parquet flooring and a wood-burning fireplace, complemented by floor-to-ceiling windows' reads natively."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'upscale Belair neighborhood' and 'master suite' fit luxury vocabulary, though 'TerraceLife' hashtag is generic."
+      "evidence": "'upscale Belair neighborhood', 'master suite', 'composite decking' fit luxury English; 'tree-lined streets' is slightly generic."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE mention; correct per v1.5 default when no class is provided."
+      "evidence": "No CPE class mentioned; inputs supplied none."
     },
     "seo_signal": {
-      "score": 5,
-      "evidence": "Title 'Renovated 4-Bedroom Penthouse with Panoramic City Views in Belair' is 10 words including neighborhood; 5 CamelCase hashtags 'CityView RenovatedPenthouse BelairLiving GaggenauKitchen TerraceLife'."
+      "score": 4,
+      "evidence": "Title 'Renovated 4-Bedroom Penthouse with Panoramic City Views in Belair' is 10 words including neighborhood and adjective; 5 hashtags clean."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "'tranquil setting' and 'refined living experience' avoid hyperbole; no exclamations or 'must-see'."
+      "score": 4,
+      "evidence": "'refined living experience' and 'upscale' are mild; no exclamations or 'breathtaking'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "Mentions only 'elegant villas and quiet tree-lined streets', no occupant demographics."
+      "evidence": "No demographic references; 'master suite' is standard."
     },
     "hallucination": {
       "score": 4,
-      "evidence": "'south-facing terraces' (plural) and 'outdoor lounge areas' (plural) slightly inflate — inputs describe one terrace with one outdoor lounge area."
+      "evidence": "Unsupported: 1. 'quiet tree-lined streets' is a specific environmental claim about Belair not in any input. Other concrete claims ('Gaggenau', 'Carrara marble', '180-degree', 'south-facing', 'composite decking', 'oak parquet') supported."
     },
     "cross_lang_consistency": {
-      "score": 5,
-      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, Gaggenau, Carrara marble, 180-degree south-facing terrace, elevator, parking, cellar."
+      "score": 4,
+      "evidence": "FR/DE/EN agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, terrace, elevator, cellar, parking. Minor: DE highlight list omits explicit parking line item while FR and EN call out 'place de parking privative'/'parking space included'; non-contradictory."
     }
   },
   "overall_pass": false

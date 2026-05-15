@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Contradiction: photo says 'engineered oak flooring' but FR says 'parquet stratifié chêne' (laminate, not engineered hardwood); also claims terrace 's'orientant vers le sud' though no orientation given."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions sqm, 3 bedrooms, terrace, parking, elevator, cellar, neighborhood, Siemens, quartz; however omits explicit mention of two bathrooms."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'cet ensemble reflète un mode de vie résolument urbain'; some filler sentences like 'L’ensemble des prestations indique une construction récente conforme aux standards actuels' feel padded."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses corpus-fitting vocabulary: 'duplex neuf', 'baies vitrées', 'plan de travail en quartz', 'cave privée', 'emplacement de parking intérieur'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced, consistent with absent input data."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Duplex neuf de 180 m² avec terrasse panoramique et parking à Cloche d'Or' ~13 words with neighborhood; 5 hashtags though 'EspacesLumieux' is misspelled (should be 'Lumineux')."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly measured; 'terrasse panoramique' in title is mildly promotional but no exclamation marks or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; neutral focus on property features."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. (1) 's'orientant vers le sud' — no south orientation in inputs; photo only says 'evening sun exposure'. (2) 'parking intérieur' — inputs say parking=true but do not specify indoor/covered. Other items ('180 m²', 'Siemens', 'quartz', 'parc urbain') are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "Numeric agreement (180 m², 3 bedrooms) across DE/EN/FR; FR adds 'orientation sud' for the terrace which DE/EN do not state, a minor non-contradictory detail; FR also omits explicit two-bathroom mention while DE ('Zwei Bäder') and EN ('Two bathrooms') include it — minor disagreement."
+    }
+  },
+  "overall_pass": false
+}

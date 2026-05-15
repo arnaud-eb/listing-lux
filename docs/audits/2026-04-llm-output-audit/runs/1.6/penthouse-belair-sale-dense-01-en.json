@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:40:01.634Z",
+  "output": {
+    "title": "Renovated 4-Bedroom Penthouse with Panoramic City Views in Belair",
+    "description": "This spacious 220 m² penthouse, located in the upscale Belair neighborhood, offers a refined urban living experience complemented by green surroundings. The apartment features four bedrooms and three bathrooms, including a master suite with direct access to a private terrace, enhancing its connection to outdoor space.\n\nThe living area is bright and airy, characterized by floor-to-ceiling windows that frame panoramic views of Luxembourg City. Newly renovated, it combines oak parquet flooring with a wood-burning fireplace, presenting a harmonious blend of contemporary style and comfort. Integrated smart-home lighting contributes to the sophisticated atmosphere.\n\nThe kitchen is designed for both functionality and elegance, equipped with Gaggenau appliances and featuring a Carrara marble island alongside matte black fixtures. A built-in wine fridge adds to the appeal, making it suitable for entertaining or culinary pursuits.\n\nAn expansive, south-facing terrace offers 180-degree unobstructed city views, fitted with composite decking and a glass balustrade. The outdoor lounge area adds to the living space, ideal for relaxation and social gatherings.\n\nAdditional amenities include elevator access, parking, and a cellar, providing convenience and storage within the building. Positioned in a quiet, green part of Belair, the property balances urban proximity with a tranquil environment.",
+    "highlights": [
+      {
+        "text": "220 m² renovated penthouse with 4 bedrooms and 3 bathrooms",
+        "icon": "home"
+      },
+      {
+        "text": "Panoramic 180-degree city views from living area and terrace",
+        "icon": "mountain"
+      },
+      {
+        "text": "Gaggenau appliances and Carrara marble island in kitchen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "South-facing terrace with composite decking and outdoor lounge",
+        "icon": "sun"
+      },
+      {
+        "text": "Floor-to-ceiling windows with oak parquet and wood-burning fireplace",
+        "icon": "flame"
+      },
+      {
+        "text": "Private master suite terrace access and walk-in closet",
+        "icon": "bed"
+      },
+      {
+        "text": "Building amenities include elevator, parking, and cellar storage",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "CityViewPenthouse",
+      "BelairLiving",
+      "GaggenauKitchen",
+      "SouthFacingTerrace",
+      "SmartHomeIntegration"
+    ]
+  }
+}

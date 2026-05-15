@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'180 m²', 'three bedrooms and two bathrooms', wraparound terrace, parking, cellar, elevator all align with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, baths, neighborhood, plus 80%+ active features (parking, elevator, cellar, terrace, new-build, city-view) and photo selling points (double-height, Siemens, oak, wraparound terrace)."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'The voluminous living area features a double-height ceiling and expansive panoramic windows' reads as native English copywriting."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'engineered oak flooring', 'wraparound terrace', 'quartz work surface' match luxury portal vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and description omits CPE entirely, per v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Contemporary 3-Bedroom Duplex with Panoramic City Views in Cloche d'Or' = 11 words with neighborhood + adjective; 5 distinct CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'sleek, uncluttered appearance' restrained; no 'breathtaking' or 'must-see'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No occupant-demographic references anywhere."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0 — all concrete claims (180 m², three bedrooms, two bathrooms, Siemens, quartz, oak flooring, wraparound terrace, shopping center, park, Cloche d'Or) are supported by property/photo inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 180 m², 3 bedrooms, 2 bathrooms, duplex, sale, parking, cellar, elevator, wraparound terrace; minor: FR specifies 'chêne massif' while DE/EN say engineered/Eichenparkett — a finish-detail disagreement but not numeric or feature-list."
+    }
+  },
+  "overall_pass": true,
+  "notes": "Clean English version."
+}

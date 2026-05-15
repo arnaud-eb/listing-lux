@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'220 m²', '4 Schlafzimmern', '3 Bäder', 'Belair' all consistent with inputs."
+      "evidence": "'220 m²', '4 Schlafzimmer, 3 Bäder', 'Belair', 'Carrara-Marmor' all match inputs."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Mentions most features but the smart-home lighting and wood-burning specificity ('Kamin im Wohnbereich' is generic — does not specify wood-burning) are slightly underused."
+      "evidence": "Covers most features but the smart-home lighting selling point is omitted; parking is mentioned only vaguely as 'Parkmöglichkeiten für Bewohner'."
     },
     "native_quality": {
-      "score": 5,
-      "evidence": "'präsentiert sich nach umfassender Renovierung in einem zeitgemäßen Stil' reads as native German property prose."
+      "score": 4,
+      "evidence": "'Glasgeländer-Umfassung' is a slightly awkward compound; otherwise 'bodentiefe Fenster' and 'lichtdurchflutet' read natively."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'Hauptschlafzimmer mit begehbarem Kleiderschrank' fits LU/DE luxury vocabulary; 'Glasgeländer-Umfassung' is slightly awkward."
+      "evidence": "'Wohnfläche', 'Hauptschlafzimmer', 'Eichenparkett' align with German luxury corpus; 'Composite-Dielen' is acceptable."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented or mentioned, consistent with v1.5 default when no class supplied."
+      "evidence": "No CPE class invented; inputs had none."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Exklusives Penthouse mit 4 Schlafzimmern und Panoramablick in Belair' is 9 words; only 4 hashtags 'PenthouseLiving CityViewLuxembourg BelairResidence ModernRenovation' (within 3-5 range)."
+      "evidence": "Title 'Exklusives Penthouse mit 4 Schlafzimmern und Panoramablick in Belair' is 9 words with neighborhood; only 4 hashtags, all clean CamelCase."
     },
     "tone_discipline": {
       "score": 4,
-      "evidence": "'Exklusives Penthouse' in title borders on hyperbole but is acceptable; no exclamation marks or 'atemberaubend'."
+      "evidence": "'Exklusives Penthouse' in title leans promotional but no exclamation marks or 'atemberaubend'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic references; describes only property and 'grüne Umgebung'."
+      "evidence": "No demographic references."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "All concrete claims ('Gaggenau', 'Carrara-Marmor', '180-Grad-Sicht') are supported by photo_analyses."
+      "evidence": "Unsupported: 0. '220 m²', 'Belair', 'Gaggenau', 'Carrara-Marmor', 'Eichenparkett', 'Weinkühler', '180-Grad-Sicht', 'südliche Ausrichtung', 'Composite-Dielen', 'Kamin' all in inputs."
     },
     "cross_lang_consistency": {
-      "score": 5,
-      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, Gaggenau, Carrara marble, 180-degree south-facing terrace, elevator, parking, cellar."
+      "score": 4,
+      "evidence": "FR/DE/EN agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, terrace, elevator, cellar, parking. Minor: DE highlight list omits explicit parking line item while FR and EN call out 'place de parking privative'/'parking space included'; non-contradictory."
     }
   },
   "overall_pass": true

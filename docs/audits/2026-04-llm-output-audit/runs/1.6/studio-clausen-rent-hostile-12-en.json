@@ -1,0 +1,44 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:43:38.237Z",
+  "output": {
+    "title": "Furnished 38 m² Studio with Character in Historic Clausen",
+    "description": "This studio apartment occupies a compact 38 m² within a well-preserved historic stone building located on a narrow street in Clausen. The main room features exposed wooden beams lending a characterful, rustic-modern feel complemented by a wood floor. The fully furnished interior comprises a double bed integrated efficiently within the living space.\n\nA functional kitchenette occupies one corner of the studio, equipped with a two-burner cooktop, a compact refrigerator, a small wall cabinet, and a stainless steel sink, all recently renovated to reflect a modern aesthetic. The bathroom is also renovated, featuring a shower stall, compact vanity, and white tile finishes, emphasizing clean lines and contemporary fittings.\n\nThe building stands in the Clausen valley, a setting known for its historic charm. While the building exterior retains its historic stone façade and character, the interior spaces have been sensitively updated to provide modern comfort within this atmospheric context. The location provides access to nearby city amenities while maintaining a quiet street presence.\n\nThis studio presents an opportunity for those seeking a furnished residence combining historic elements with practical modern features in a central, characterful environment.",
+    "highlights": [
+      {
+        "text": "Fully furnished studio",
+        "icon": "home"
+      },
+      {
+        "text": "Exposed historic wooden beams",
+        "icon": "building-2"
+      },
+      {
+        "text": "Compact, well-organized living space",
+        "icon": "square"
+      },
+      {
+        "text": "Recently renovated kitchenette and bathroom",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Historic stone building facade",
+        "icon": "building"
+      },
+      {
+        "text": "Located in Clausen valley setting",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "RusticModern",
+      "HistoricBuilding",
+      "CompactLiving",
+      "ClausenValley",
+      "RenovatedStudio"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:50.341Z",
+  "output": {
+    "title": "Renovated 5-Bedroom Villa with Garden and Parking in Strassen",
+    "description": "This detached villa offers 280 m² of renovated living space arranged over two floors within the residential area of Strassen. The property features five bedrooms and three bathrooms, accommodating generous family living and guest provisions. The architecture reflects traditional Luxembourg style with a pitched slate roof and white plaster facade, complemented by an established mature garden that provides a private outdoor setting.\n\nInside, the living room presents high ceilings and parquet flooring, creating a warm atmosphere further enhanced by a wood-burning fireplace. Patio doors open directly to the garden, extending the living space outdoors. Adjacent, the kitchen is fully renovated with shaker cabinetry and granite worktops, including a central island with seating and a double oven, suitable for both everyday meals and entertaining.\n\nThe garden benefits from a south-west exposure, featuring a naturalistic, well-maintained lawn, mature trees for privacy, and a stone-paved patio. This outdoor space offers a tranquil environment ideal for relaxation. The master bedroom overlooks the garden and includes fitted wardrobes, contributing to practical storage solutions within the villa.\n\nAdditional features comprise a cellar providing separate storage capacity and on-site parking. The property is situated in Strassen, a suburban municipality west of Luxembourg city noted for its good motorway access, village character, and nearby schools.",
+    "highlights": [
+      {
+        "text": "280 m² renovated villa with 5 bedrooms and 3 bathrooms",
+        "icon": "building-2"
+      },
+      {
+        "text": "South-west facing established garden with mature trees",
+        "icon": "trees"
+      },
+      {
+        "text": "Living room with parquet flooring and wood-burning fireplace",
+        "icon": "sofa"
+      },
+      {
+        "text": "Renovated kitchen with central island and double oven",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Direct access from living room to garden",
+        "icon": "door-open"
+      },
+      {
+        "text": "On-site parking available",
+        "icon": "car"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Traditional Luxembourg residential style with pitched slate roof",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "RenovatedVilla",
+      "EstablishedGarden",
+      "TraditionalArchitecture",
+      "SpaciousLiving",
+      "SouthWestExposure"
+    ]
+  }
+}

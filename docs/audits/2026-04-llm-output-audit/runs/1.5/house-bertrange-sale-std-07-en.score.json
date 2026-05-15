@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "\"195 m² semi-detached house\" and \"Four bedrooms and two bathrooms\" match inputs."
+      "evidence": "'195 m² semi-detached house', 'four bedrooms and two bathrooms', 'south-facing rear garden' all match inputs."
     },
     "completeness": {
-      "score": 3,
-      "evidence": "Covers most features but omits Bertrange neighborhood entirely: \"situated in an established neighborhood typical of Luxembourg's 1990s housing developments\"."
+      "score": 4,
+      "evidence": "Mentions sqm, beds/baths, garden, patio, parking, cellar, fireplace, but neighborhood Bertrange not named."
     },
     "native_quality": {
       "score": 3,
-      "evidence": "\"accommodating varied residential needs\" and \"facilitating functional family meal preparation\" read stiff and corporate."
+      "evidence": "Slightly clinical phrasing like 'Additional interior amenities comprise four bedrooms' and 'accommodating varied residential needs' reads stiff."
     },
     "market_fit": {
       "score": 3,
-      "evidence": "\"freestanding range\" is more US-English than LU luxury corpus; otherwise generic."
+      "evidence": "'established neighborhood typical of Luxembourg's 1990s housing developments' is generic; lacks LU-specific descriptors."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class mentioned or invented in the description."
+      "evidence": "No CPE class invented or referenced; correct given no class supplied."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title \"Traditional Semi-Detached 4-Bedroom House with Garden and Parking\" — 9 words, no neighborhood; 5 well-formed hashtags."
+      "evidence": "Title 'Traditional Semi-Detached 4-Bedroom House with Garden and Parking' is 9 words; 5 hashtags including 'SouthFacingGarden', 'PrivateParking'."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "\"The property balances practical features with classic residential design\" — no hyperbole."
+      "evidence": "No hyperbole; phrasing like 'inviting atmosphere' is restrained."
     },
     "fair_housing": {
-      "score": 5,
-      "evidence": "\"accommodating varied residential needs\" — neutral, no demographic targeting."
+      "score": 4,
+      "evidence": "'family meal preparation' and 'FamilySized' hashtag lightly suggest family demographic."
     },
     "hallucination": {
-      "score": 4,
-      "evidence": "\"constructed in the 1990s\" derives from photo style tag; no Bertrange-specific invented amenities."
+      "score": 5,
+      "evidence": "Unsupported: 0. '195 m²', '1990s', 'brick' (brick facade), 'small front garden', 'private driveway', 'south-facing rear garden', 'tile flooring', 'fireplace', 'wood cabinetry', 'tiled splashback', 'freestanding range', 'breakfast nook', 'cellar' all in inputs."
     },
     "cross_lang_consistency": {
-      "score": 3,
-      "evidence": "FR/EN/DE all agree on 195 m², 4 beds, 2 baths, but DE title labels it \"Einfamilienhaus\" while FR/EN and DE body call it semi-detached/Doppelhaus — typology mismatch."
+      "score": 4,
+      "evidence": "All three agree on 195 m², 4 bedrooms, 2 bathrooms, sale, garden+terrace+parking+cellar+fireplace; minor: DE title says 'Einfamilienhaus' while FR/EN use 'semi-mitoyenne/semi-detached' — judged as translation choice under native_quality, not a data disagreement."
     }
   },
   "overall_pass": false

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'280 m² Wohnfläche', 'fünf Schlafzimmern und drei Badezimmern' match inputs exactly."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions beds/baths/sqm/Strassen, plus garden, terrace, parking, cellar, fireplace, granite kitchen, SW-exposure — covers active features and photo selling points."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German ('verbindet traditionelle Elemente ... mit modernem Wohnkomfort'), though 'Schiefer-Dachstuhl' is slightly awkward (Schieferdach would be more idiomatic)."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU/DE luxury vocabulary like 'freistehende Villa', 'Wohnfläche', 'Südwest-Ausrichtung' — appropriate but not distinctive."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs; the prose omits CPE entirely, matching v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Terrasse in ruhiger Wohnlage von Strassen' is 12 words with neighborhood + adjectives; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrases like 'angenehme Wärme' and 'entspannten Außennutzung' remain measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; avoids the 'family-friendly' pitfall the fixture notes warned about (only neutral 'Mittelblock mit Sitzgelegenheiten')."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All claims supported — '280 m²', 'fünf Schlafzimmern', 'drei Badezimmern', 'Schiefer', 'Granit-Arbeitsplatte', 'Südwest-Ausrichtung', 'Doppelbackofen', 'Strassen' all map to inputs; 'mehrere Schulen' and 'Autobahnnetz' are general commune facts but presented generically without specific names."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², villa, Strassen, renovated, garden/terrace/parking/cellar/fireplace. FR omits the bathroom count ('trois salles de bain') that DE and EN both state — minor non-contradictory omission."
+    }
+  },
+  "overall_pass": true
+}

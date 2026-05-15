@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:09:59.824Z",
+  "output": {
+    "title": "Renovated Five-Bedroom Villa with Mature Garden and Terrace in Strassen",
+    "description": "This detached villa offers approximately 280 m² of renovated living space distributed over two storeys, located in the residential municipality of Strassen. The white plaster facade and pitched slate roof complement the traditional Luxembourg architectural style, set within an established mature garden that enhances the property's private atmosphere.\n\nInside, the living room features parquet flooring and high ceilings, creating an open and inviting environment. A wood-burning fireplace provides a focal point, while patio doors offer direct access to the garden, facilitating an indoor-outdoor connection. The kitchen is fitted with shaker cabinetry and a granite worktop, including a central island with seating and a double oven, supporting both functional cooking and sociable dining.\n\nThe villa comprises five bedrooms and three bathrooms. The master bedroom benefits from fitted wardrobes and views over the garden. Additional storage is provided by a cellar situated within the building's basement. Outdoor amenities include a stone-paved terrace and a garden exposed to the south-west, featuring mature trees that contribute to privacy and a naturalistic feel.\n\nStrassen is characterized by its suburban and residential nature, known for good schools and convenient motorway access. The village character of the area offers a tranquil setting while remaining accessible to city amenities.\n\nParking is available on the property, complementing the spacious living and outdoor areas. The renovation work reflects a careful update that maintains the transitional style throughout the home.",
+    "highlights": [
+      {
+        "text": "280 m² renovated villa with traditional exterior",
+        "icon": "home"
+      },
+      {
+        "text": "Five bedrooms and three bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Living room with fireplace and garden access",
+        "icon": "sofa"
+      },
+      {
+        "text": "Kitchen with central island and double oven",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Mature garden with south-west exposure",
+        "icon": "trees"
+      },
+      {
+        "text": "Stone-paved terrace for outdoor living",
+        "icon": "door-open"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Private parking space included",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "RenovatedVilla",
+      "MatureGarden",
+      "TransitionalStyle",
+      "SpaciousLiving",
+      "StrassenResidence"
+    ]
+  }
+}

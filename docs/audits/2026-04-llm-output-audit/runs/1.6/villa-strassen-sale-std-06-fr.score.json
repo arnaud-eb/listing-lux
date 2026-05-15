@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Title claims 'garage' but inputs list parking; also 'parquet en chêne' (oak parquet) — inputs only say 'parquet flooring', species not specified. Two fabricated specifics."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 280 m², 5 chambres, 3 salles de bains, jardin SW, cheminée, parquet, îlot, double four, cave, stationnement, Strassen."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Idiomatic French throughout ('portes-fenêtres', 'plan de travail en granit', 'exposition sud-ouest'); 'habitation familiale de belle envergure' is slightly heavy."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU/FR vocabulary like 'villa individuelle', 'cave', 'emplacement de stationnement privatif' which fits athome.lu corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and description omits CPE — correct v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 11 words with neighborhood + adjective; 5 CamelCase hashtags but 'EspaceEtLuminosite' is generic and 'CharmeLuxembourgeois' borderline generic."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'lumineux et chaleureux', 'atmosphère accueillante et élégante', 'ensoleillement optimal' are promotional adjective stacks, though no banned hyperbole."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "'habitation familiale de belle envergure' references family use — mild steering signal, less explicit than EN/DE versions but still present."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'parquet en chêne' (species not in inputs, photo analysis only says 'parquet flooring') and 'façades blanchies à la chaux' (inputs say 'white plaster facade', not lime-washed); 'garage' in title is also stronger than 'parking'. Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 280 m², 5 bedrooms, 3 bathrooms, SW garden, parking, cellar, fireplace, sale context. Minor disagreement: DE and FR titles say 'Garage'/'garage' while EN says 'Parking', and FR adds 'parquet en chêne' (oak) which DE/EN do not specify — non-contradictory but a small divergence."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Oak parquet and lime-wash facade are fabricated specifics."
+}

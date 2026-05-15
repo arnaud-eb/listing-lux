@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "'This 52 m² apartment' and 'separate cellar' match inputs accurately."
+      "evidence": "'52 m² apartment', 'south-facing window', 'separate cellar' all align with inputs."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Covers sqm, bedroom (in title), south-facing, galley kitchen, shower-tub, cellar, neighborhood; bathroom count not stated."
+      "evidence": "Covers sqm, bedroom count via title, bath features, cellar, south orientation, galley kitchen."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'accommodating essential requirements efficiently' is slightly stilted but generally natural."
+      "evidence": "Reads natural; 'accommodating essential requirements efficiently' is slightly stiff but acceptable."
     },
     "market_fit": {
-      "score": 3,
-      "evidence": "'known for its affordability compared to other central localities' is more generic real-estate prose than luxury LU corpus, though appropriate for entry-tier."
+      "score": 4,
+      "evidence": "'central station', 'cellar', 'galley kitchen' fit LU English listing register."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented or mentioned — correctly omitted."
+      "evidence": "No CPE mentioned and none invented, consistent with absent input data."
     },
     "seo_signal": {
       "score": 4,
-      "evidence": "Title 'Bright 1-Bedroom Apartment with South-Facing Living Area in Bonnevoie' (10 words) good; 5 CamelCase hashtags including Bonnevoie."
+      "evidence": "Title 12 words with neighborhood and adjective; 5 hashtags CamelCase, no duplicates of generic tags."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "'straightforward and functional living environment' — appropriately restrained for entry-tier."
+      "score": 4,
+      "evidence": "Restrained: 'straightforward and functional', no hyperbole or exclamations."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "'multicultural neighborhood with a lively market' refers to area character, not occupants."
+      "evidence": "'multicultural neighborhood' describes area, no occupant targeting."
     },
     "hallucination": {
       "score": 4,
-      "evidence": "'a lively market and diverse dining options' — the market and dining scene are not in inputs, mild unsupported claim."
+      "evidence": "Unsupported: 1 — 'lively market and diverse dining options' is a specific neighborhood amenity claim not in inputs. Other facts (52 m², south-facing, laminate, white walls, galley, cellar, central station) supported."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/EN/DE all agree on 52 m², 1 bedroom, south-facing window, galley kitchen, shower-tub combo, cellar, Bonnevoie central location."
+      "evidence": "DE/FR/EN all agree on 52 m², 1 bedroom, cellar, south-facing living room, galley kitchen, shower-tub bath, Bonnevoie/central station proximity; no numeric or feature contradictions."
     }
   },
   "overall_pass": false

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:08:37.380Z",
+  "output": {
+    "title": "Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg",
+    "description": "Ce spacieux appartement neuf de 145 m² situé dans le quartier moderne et dynamique de Kirchberg offre un cadre de vie contemporain avec des prestations soignées. Le séjour lumineux profite d’une double hauteur sous plafond et de grandes fenêtres orientées sud, mettant en valeur les sols en parquet stratifié et créant une atmosphère ouverte et accueillante qui s'ouvre sur l’espace repas.\n\nLa cuisine adjacente, aux lignes épurées, est équipée d’éléments Bulthaup haut de gamme, d’un plan de travail en pierre et d’un îlot central avec plaque à induction, offrant un espace fonctionnel et convivial. Le balcon privé, avec garde-corps vitré et revêtement en carrelage, propose une vue dégagée sur un parc arboré, un lieu calme pour les moments de détente.\n\nLe bien comprend trois chambres confortables et deux salles de bains modernes. La suite parentale bénéficie d’une salle d’eau avec douche à l’italienne, double vasque sur meuble suspendu, carrelage en porcelaine et chauffage au sol, assurant un confort optimal. Un ascenseur dessert l’immeuble, complété par une cave de rangement et une place de parking au sein de la résidence.\n\nKirchberg est le quartier d’affaires et européen du Luxembourg, accueillant la Philharmonie et le musée MUDAM, ainsi que plusieurs établissements scolaires internationaux. Ce secteur présente une architecture récente et une bonne desserte en transports en commun, contribuant à une qualité de vie urbaine.\n\nCe logement offre ainsi une adresse contemporaine offrant des prestations actuelles dans un environnement tertiaire en pleine expansion.",
+    "highlights": [
+      {
+        "text": "Appartement neuf avec 145 m² de surface habitable",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres et deux salles de bains modernes",
+        "icon": "bed"
+      },
+      {
+        "text": "Cuisine Bulthaup équipée avec îlot central",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balcon avec vue dégagée sur parc",
+        "icon": "trees"
+      },
+      {
+        "text": "Ascenseur dans l’immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privée attenante au logement",
+        "icon": "archive"
+      },
+      {
+        "text": "Double hauteur sous plafond dans le séjour",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "NeufKirchberg",
+      "VueSurParc",
+      "EspaceEtLumiere",
+      "CuisineBulthaup",
+      "AppartementContemporain"
+    ]
+  }
+}

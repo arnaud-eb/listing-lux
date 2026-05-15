@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'ca. 78 m²', '2 Schlafzimmer', '1 Badezimmer', 'Balkon', 'Aufzug' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 78 m², 2 Schlafzimmer, 1 Badezimmer, Balkon, Stellplatz, Aufzug, Küche L-Form plus photo-derived 'Laminatboden' and 'beige Wandflächen'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'gut geschnittene 2-Zimmer-Wohnung' and 'strapazierfähigen Laminatboden' are idiomatic German real-estate phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Tiefgaragenstellplatz', 'Wohnfläche', 'gut geschnittene' aligns with LU/DE corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied; description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 12 words with neighborhood; 5 CamelCase hashtags 'Balkonwohnung EschSurAlzette KomfortabelWohnen Stadtentwicklung Lichtdurchflutet' but 'Balkonwohnung' and 'Lichtdurchflutet' are single tokens."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'zeitgemäßes Wohnangebot in einer aufstrebenden Stadtregion' is mild promotion, no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references in the description."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Tiefgaragenstellplatz' (parking type not specified, only parking=true), 'Badewannen-Duschbereich' (no bathroom photo in inputs), 'Nähe zur Universität und zum Entwicklungsgebiet Belval' / 'Alzettetal' (neighborhood detail not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 78 m², 2 bedrooms, balcony, parking, elevator; DE adds 'Tiefgaragenstellplatz' (parking type) and 'Badewannen-Duschbereich' which FR/EN do not assert — minor non-contradictory additions."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Invented Tiefgarage and bathtub-shower combo."
+}

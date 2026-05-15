@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Cet appartement de 52 m²' and 'une cave privative' match inputs (52 sqm, cellar=true)."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², cave, south-facing room, kitchen, bathroom, Bonnevoie — but bedroom count only appears in title ('1 chambre'), not described in prose."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'pièce à vivre présente un sol stratifié sobre' reads as native French copy."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'cave privative', 'quartier dynamique', 'gare centrale' are standard athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class was supplied and the description omits CPE entirely, which is the new default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement 1 chambre lumineux orienté sud avec cave à Bonnevoie' is 10 words with neighborhood; only 4 hashtags ('LuminositéSud CuisineFonctionnelle BonnevoieMarket CavePrivative') and 'LuminositéSud' uses accented CamelCase."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'espace maîtrisé', 'solution complète' — restrained, no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to occupant demographics; 'quartier dynamique et multiculturel' describes neighborhood, not target tenant."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'son marché local' (Bonnevoie market not in inputs) and 'bonne desserte vers la gare centrale' (central station proximity not in inputs). Supported: 52 m², south orientation, laminate, white walls, galley kitchen, shower-tub, cellar, Bonnevoie."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR and EN treat the unit as a 1-bedroom apartment with a separate living room, while DE recasts it as a studio ('Wohn- und Schlafzimmer ist nach Süden ausgerichtet'), a feature/layout disagreement on bedroom configuration."
+    }
+  },
+  "overall_pass": false
+}

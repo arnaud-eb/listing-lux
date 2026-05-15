@@ -5,45 +5,45 @@
   "scores": {
     "factual_fidelity": {
       "score": 5,
-      "evidence": "\"Cette maison mitoyenne de 130 m²... trois chambres et une salle de bains\" matches inputs exactly."
+      "evidence": "'130 m²', 'trois chambres et une salle de bains', 'jardin privatif', 'emplacement de parking', 'cave' all match inputs."
     },
     "completeness": {
       "score": 4,
-      "evidence": "\"emplacement de parking et d'une cave\" plus jardin privatif and 130 m²/3 chambres/1 SDB covered, but Mamer neighborhood is never named."
+      "evidence": "Covers sqm/beds/baths/garden/parking/cellar and 1980s style, but never mentions Mamer neighborhood: 'dans un quartier résidentiel calme'."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "\"De larges portes-fenêtres s'ouvrent sur le jardin arrière, apportant lumière naturelle\" reads naturally in French."
+      "evidence": "Reads natively in French: 'De larges portes-fenêtres s'ouvrent sur le jardin arrière, apportant lumière naturelle'."
     },
     "market_fit": {
-      "score": 3,
-      "evidence": "\"maison mitoyenne\" and \"emplacement de parking\" are correct LU terms, but the prose is generic and lacks luxury-corpus polish (\"sans détails supplémentaires sur les services ou commodités à proximité\")."
+      "score": 4,
+      "evidence": "Vocabulary aligns with athome.lu rental norms: 'maison mitoyenne', 'cave', 'emplacement de parking'."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no class supplied."
+      "evidence": "No CPE class invented or mentioned; inputs had null cpe_class."
     },
     "seo_signal": {
-      "score": 4,
-      "evidence": "\"Maison mitoyenne des années 1980 avec jardin privatif et parking\" is 10 words but lacks neighborhood (Mamer not in registry); 5 CamelCase hashtags \"Maison1980 JardinPrivatif ParkingInclus RésidentielCalme EspaceExtérieur\"."
+      "score": 3,
+      "evidence": "Title 'Maison mitoyenne des années 1980 avec jardin privatif et parking' is 10 words but omits Mamer; 5 hashtags but 'RésidentielCalme' and 'EspaceExtérieur' are generic."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "\"Cette propriété constitue une opportunité dans un environnement résidentiel apaisé\" — no hyperbole, no exclamation marks."
+      "evidence": "No hyperbole or exclamation marks; honest framing like 'un style quelque peu daté'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "\"adaptés à une occupation confortable\" — no demographic or family references."
+      "evidence": "No demographic references; 'adaptés à une occupation confortable' is neutral."
     },
     "hallucination": {
       "score": 5,
-      "evidence": "No invented places, transit, or schools; \"sans détails supplémentaires sur les services ou commodités à proximité\" explicitly avoids fabrication."
+      "evidence": "Unsupported: 0. All concrete claims supported: '130 m²' (sqm), 'trois chambres' (bedrooms=3), 'années 1980' ('1980s residential' style), 'moquette beige' ('beige carpet'), 'clôture en bois' ('wood fence'), 'abri de jardin' ('small shed')."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "FR/EN/DE all agree: 130 m², 3 bedrooms, 1 bathroom, private rear garden, parking, cellar, 1980s row house, no neighborhood claim."
+      "evidence": "FR/EN/DE all agree on 130 m², 3 bedrooms, 1 bathroom, garden/parking/cellar present, rental house, 1980s build."
     }
   },
   "overall_pass": true,
-  "notes": "Sensible handling of sparse input; correctly avoided inventing Mamer specifics."
+  "notes": "Mamer not mentioned, which is safer than inventing details about it."
 }

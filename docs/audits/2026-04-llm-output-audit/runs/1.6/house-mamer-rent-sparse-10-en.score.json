@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'row of houses dating from the 1980s' matches photo 'row house' and '1980s residential'; 'three bedrooms and one bathroom' matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 130 m², 3 beds, 1 bath, garden, parking, cellar, shed, but omits Mamer location and rental framing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in formal listing register: 'A dedicated parking space is included, enhancing convenience for residents.'"
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Vocabulary like 'row house', 'private rear garden', 'cellar' is acceptable but generic; not distinctly luxury."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs; description omits CPE — correct per v1.5."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Three-Bedroom Row House with Private Garden and Parking in Quiet Residential Area' is 13 words including property-defining adjective; 5 hashtags CamelCase, no dupes."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Measured throughout — 'a simple, manageable outdoor space'; no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'suitable for those seeking a residence with private outdoor areas and parking provision' — no protected-class reference."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '130 m²', 'three bedrooms', 'one bathroom', 'beige carpet', 'tube TV' alcove, 'patio doors', 'wood fence', 'storage shed', 'cellar', 'parking space' — all supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement (130 m², 3 beds, 1 bath) holds across FR/EN/DE, but listing-kind disagreement: DE says 'eignet sich für Käufer' (sale) while FR/EN are neutral; FR title also calls it 'Maison individuelle' while EN/DE correctly call it row/Reihenhaus."
+    }
+  },
+  "overall_pass": true
+}

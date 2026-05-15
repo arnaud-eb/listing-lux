@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:05.186Z",
+  "output": {
+    "title": "Gepflegtes Einfamilienhaus mit Garten und Terrasse in ruhiger Wohnlage",
+    "description": "Dieses freistehende Einfamilienhaus aus den 1990er Jahren präsentiert sich in einem gepflegten Zustand und umfassenden Wohnkomfort auf einer Fläche von 195 m². Die Backsteinfassade und das private Zufahrtstor mit Stellplatz prägen das äußere Erscheinungsbild dieses Hauses, das eine etablierte Wohnumgebung widerspiegelt.\n\nDas Erdgeschoss überzeugt mit einem offen gestalteten Wohn- und Essbereich, welcher mit Fliesenboden ausgestattet ist und durch mehrere Fenster eine helle Atmosphäre erzeugt. Ein Kamin sorgt für behagliche Wärme, während doppelflügelige Türen einen direkten Zugang zur Terrasse und dem südlich ausgerichteten Garten ermöglichen.\n\nDie Küche ist traditionell gestaltet und verfügt über Holzeinbauten sowie eine funktional durchdachte Anordnung mit einem integrierten Frühstücksbereich. Während der Garten eine südliche Ausrichtung aufweist, laden eine private Terrasse und eine gepflegte Rasenfläche zur entspannten Nutzung im Freien ein.\n\nDas Objekt umfasst insgesamt vier Schlafzimmer und zwei Badezimmer, welche eine zeitgemäße Wohnstruktur gewährleisten. Ein separater Kellerraum bietet zusätzlichen Stauraum. Das Grundstück verfügt insgesamt über einen privaten Gartenbereich sowie eine Terrasse, die für Außenaktivitäten geeignet sind.",
+    "highlights": [
+      {
+        "text": "Vier Schlafzimmer für vielfältige Nutzung",
+        "icon": "bed"
+      },
+      {
+        "text": "Zwei zeitgemäße Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "sofa"
+      },
+      {
+        "text": "Traditionelle Küche mit Frühstücksbereich",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten mit Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Privater Stellplatz über Zufahrt",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum vorhanden",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "FourBedrooms",
+      "SouthFacingGarden",
+      "OpenLivingSpace",
+      "PrivateDriveway",
+      "TraditionalKitchen"
+    ]
+  }
+}

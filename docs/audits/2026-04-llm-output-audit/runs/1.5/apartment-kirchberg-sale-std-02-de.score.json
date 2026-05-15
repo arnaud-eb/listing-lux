@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 4,
-      "evidence": "\"Eichenparkett\" invents oak — input said only \"engineered wood flooring\"; otherwise faithful."
+      "evidence": "Says 'Eichenparkett' but photo states only 'engineered wood flooring' — oak is not specified; also 'weißen Porzellanfliesen' adds white color not in inputs."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Mentions 145 m², 3 Schlafzimmer, 2 Badezimmer, Balkon, Keller, Stellplatz, Aufzug, Bulthaup, Kochinsel, Regendusche."
+      "evidence": "Covers 145 m², '3 Schlafzimmer, 2 Badezimmer', balcony, parking, elevator, cellar, Bulthaup kitchen, underfloor heating."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "Mostly natural German; \"setzen eine gemütliche und hochwertige Akzentuierung\" is awkward phrasing."
+      "evidence": "Idiomatic German overall ('Diese neu errichtete Wohnung im Herzen des Kirchberg'); 'gemütliche und hochwertige Akzentuierung' is slightly awkward."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "\"Geschäftsviertel Kirchberg, unweit der Europäischen Institutionen, Philharmonie und des MUDAM\" fits LU corpus."
+      "evidence": "Vocabulary like 'Neubau', 'Geschäftsviertel Kirchberg', 'Kochinsel', 'Aufzug' aligns with LU/DE luxury real-estate corpus."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented or mentioned, consistent with v1.5 default when class is absent."
+      "evidence": "No CPE supplied; description omits energy class entirely per v1.5 default."
     },
     "seo_signal": {
-      "score": 5,
-      "evidence": "Title \"Moderner 3-Zimmer-Neubau mit Balkon und Parkblick im Geschäftsviertel Kirchberg\" is 10 words; 5 CamelCase hashtags."
+      "score": 4,
+      "evidence": "Title 'Moderner 3-Zimmer-Neubau mit Balkon und Parkblick im Geschäftsviertel Kirchberg' is 10 words; 5 CamelCase hashtags."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "No exclamation marks; \"besticht durch eine zweigeschossige Deckenhöhe\" is measured."
+      "evidence": "No exclamation marks or hyperbole; phrases like 'vermittelt ein ruhiges Ambiente' are measured."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic targeting; \"internationalen Schulen\" describes neighborhood amenities."
+      "evidence": "No demographic references in prose."
     },
     "hallucination": {
       "score": 3,
-      "evidence": "\"Eichenparkett\" (oak parquet) and \"weißen Porzellanfliesen\" (white) add specifics not in inputs (engineered wood, porcelain tile without color)."
+      "evidence": "Unsupported: 2 — 'Eichenparkett' (oak specifically not in inputs; photo says 'engineered wood flooring') and 'weißen Porzellanfliesen' (color 'white' not stated; input says 'porcelain tile'). Other claims (Philharmonie, MUDAM, EU institutions, schools) supported by fixture neighborhood metadata."
     },
     "cross_lang_consistency": {
       "score": 4,
-      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, Bulthaup, elevator, cellar, parking; minor divergences are flooring type (DE Eichenparkett, FR bois massif stratifié, EN engineered wood) and FR adding 'sous-sol' for parking."
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale, balcony, parking, elevator, cellar. Minor non-contradictory addition: FR specifies 'parking en sous-sol' while EN/DE just say parking."
     }
   },
   "overall_pass": false

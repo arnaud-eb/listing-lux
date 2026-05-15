@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m²', 'Vier Schlafzimmer', 'Drei Badezimmer', 'Carrara-Marmorinsel', 'Gaggenau' all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm/beds/baths, parking, cellar, elevator, terrace, kitchen features; mentions Belair but omits the smart-home lighting photo selling point."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'Holzofen integriert in den Wohnraum' is awkward (a wood-burning fireplace is 'Kaminofen' or 'offener Kamin', not 'Holzofen'); 'matte schwarze Armatur' is singular and slightly off."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU-appropriate vocabulary: 'Penthouse', 'Wohnfläche', 'Pkw-Stellplatz', 'Kellerraum'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and description omits CPE entirely, matching v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Luxuriöses Penthouse mit 220 m², Terrasse und Panoramablick in Belair' includes neighborhood and adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'Luxuriöses Penthouse', 'exklusivem Wohnviertel', 'höchsten Standard', and hashtag 'LuxuryRenovation' stack multiple luxury superlatives."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references anywhere in the German text."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '220 m²', 'Vier Schlafzimmer', 'Drei Badezimmer' (property); 'Gaggenau', 'Carrara-Marmorinsel', 'Glasbalustrade', '180-Grad-Blick', 'südlich ausgerichtete' (photo_analyses); 'Belair' (neighborhood). 'Barrierefreier Zugang' is a reasonable inference from elevator presence."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, sale of penthouse in Belair, parking, cellar, elevator, south-facing terrace, Gaggenau kitchen — no numeric or feature contradictions."
+    }
+  },
+  "overall_pass": true
+}

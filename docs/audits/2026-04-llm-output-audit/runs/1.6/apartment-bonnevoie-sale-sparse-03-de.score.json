@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'Das Wohn- und Schlafzimmer ist nach Süden ausgerichtet' contradicts inputs — the property has 1 separate bedroom (bedrooms=1), it is not a studio combining living and sleeping."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 52 m², south orientation, kitchen, bathroom, cellar, neighborhood; framing as combined living/sleeping room misrepresents the bedroom."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'bietet er eine praktische Galerielayout' is ungrammatical (wrong gender + anglicism instead of 'Schlauchküche')."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Galerielayout' is not standard LU/DE real-estate vocabulary; 'Hauptbahnhof' and 'Kellerraum' are appropriate."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and none invented."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Gemütliche 1-Zimmer-Wohnung mit Süd-Ausrichtung und Keller in Bonnevoie' is 9 words; 5 hashtags ('Suedorientiert Kellerraum KompakteKueche ZentraleLage Bonnevoie'), 'Bonnevoie' is a generic place tag."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'übersichtlich', 'funktional' — sober tone with no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupants; 'multikulturelle ... Umfeld' describes neighborhood."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'ein großes Fenster' (photo said 'single south window', not large), 'Nähe zum Hauptbahnhof', and 'bekannte Bonnevoie-Markt' (no market in inputs). Supported: 52 m², Süd, Laminat, weiße Wände, Keller, Bonnevoie."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR and EN treat the unit as a 1-bedroom apartment with a separate living room, while DE recasts it as a studio ('Wohn- und Schlafzimmer ist nach Süden ausgerichtet'), a feature/layout disagreement on bedroom configuration."
+    }
+  },
+  "overall_pass": false
+}

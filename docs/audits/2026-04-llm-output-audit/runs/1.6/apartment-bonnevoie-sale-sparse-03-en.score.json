@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This 52 m² apartment' and 'separate cellar' are consistent with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, living room, kitchen, bathroom, cellar, neighborhood; bedroom count only in title ('1-Bedroom')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Mostly natural but 'Adjoining the living areas, the kitchen's straightforward design accommodates essential cooking needs' is slightly stilted."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'central station', 'multicultural ambiance', 'cellar' align with EN luxury-portal idiom."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and none invented in prose."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Bright 1-Bedroom Apartment with South-Facing Living Room in Bonnevoie' is 11 words; 5 hashtags ('SouthFacing CompactKitchen BonnevoieLiving UrbanApartment CellarStorage'), all CamelCase."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'competitive pricing relative to nearby areas' is a marketing claim and 'vibrant Bonnevoie neighborhood' edges toward boilerplate."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No occupant-demographic language; 'multicultural ambiance' refers to the neighborhood character."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'near Luxembourg's central station', 'lively market', and 'competitive pricing relative to nearby areas' (none in inputs). Supported: 52 m², south-facing, laminate, white walls, galley, shower-tub combination, cellar, Bonnevoie."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR and EN treat the unit as a 1-bedroom apartment with a separate living room, while DE recasts it as a studio ('Wohn- und Schlafzimmer ist nach Süden ausgerichtet'), a feature/layout disagreement on bedroom configuration."
+    }
+  },
+  "overall_pass": false
+}

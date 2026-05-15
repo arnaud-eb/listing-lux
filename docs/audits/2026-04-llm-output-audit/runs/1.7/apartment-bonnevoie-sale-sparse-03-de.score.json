@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'52 m²', '1 Schlafzimmer', '1 Badezimmer mit Badewanne', 'separater Kellerraum' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "All core facts present: '52 m²', '1 Schlafzimmer', '1 Badezimmer', 'Kellerraum', 'Bonnevoie', 'südlich ausgerichtetem Fenster'."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'klassischen Galerielayout' is an awkward calque of English 'galley layout' (German would say 'Küchenzeile')."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Galerielayout' and 'Einbauschrankfront' are not standard German real-estate vocabulary; otherwise serviceable."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE/Energieklasse invented or mentioned."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title '1-Zimmer-Apartment mit südlicher Ausrichtung und Keller in Bonnevoie' is ~9 words with neighborhood; 5 hashtags but all English ('BonnevoieLiving', 'UrbanResidence' etc.) on a German listing — inconsistent."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'kompakte Küche', 'funktional' — measured, no hyperbole or '!' marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupants, family, age, or origin."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'guter Anbindung an den Hauptbahnhof' and 'der beliebte Bonnevoie-Markt' (named market and Hauptbahnhof proximity not in inputs). Supported: '52 m²', 'südlich ausgerichtetem Fenster', 'keramischen Fliesenboden', 'Dusch- und Badewannenkombination', 'Kellerraum'."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 52 m², 1 bedroom, 1 bathroom, cellar, south-facing living room, sale, Bonnevoie — no numeric or feature contradictions."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Anglicism 'Galerielayout' weakens native feel; English-only hashtags inconsistent with DE listing."
+}

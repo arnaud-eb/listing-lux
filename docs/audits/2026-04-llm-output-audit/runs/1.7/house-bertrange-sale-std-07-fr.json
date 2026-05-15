@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:13.443Z",
+  "output": {
+    "title": "Maison mitoyenne quatre chambres avec jardin orienté sud et parking privé",
+    "description": "Située dans un environnement résidentiel typique des années 1990, cette maison mitoyenne offre une surface habitable de 195 m² répartie sur plusieurs niveaux. La façade en brique participe à son caractère traditionnel et soigné, accompagné d’un petit jardin avant et d’une allée privée menant au stationnement, garantissant un accès direct et sécurisé.\n\nL’intérieur se distingue par un séjour ouvert sur la salle à manger, agrémenté d’un revêtement de sol en carrelage et d’une cheminée fonctionnelle. Les doubles portes-fenêtres donnent un accès direct au jardin, créant une fluidité entre les espaces de vie et l’extérieur. La cuisine, aménagée en bois avec un plan de travail carrelé et un coin petit-déjeuner, propose un agencement pratique et convivial.\n\nLe jardin orienté sud bénéficie d’un bon ensoleillement naturel, aménagé avec une pelouse et une terrasse privative, offrant un cadre calme et verdoyant pour les moments de détente. Deux salles de bains desservent les quatre chambres spacieuses, tandis qu’une cave complète les prestations en offrant un espace de rangement supplémentaire.\n\nCet ensemble présente des finitions classiques et un état d’entretien soigné, intégrant des éléments fonctionnels tels que le parking privatif et la terrasse, pour un confort de vie adapté à une habitation de ce type.",
+    "highlights": [
+      {
+        "text": "Maison mitoyenne des années 1990 avec façade en brique",
+        "icon": "building-2"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Séjour avec cheminée et accès direct au jardin",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine traditionnelle avec coin petit-déjeuner",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin et terrasse exposés au sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking privé et allée d’accès",
+        "icon": "car"
+      },
+      {
+        "text": "Cave pour rangement séparé",
+        "icon": "archive"
+      },
+      {
+        "text": "Surface habitable d’environ 195 m²",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "MaisonMitoyenne",
+      "JardinOrientéSud",
+      "Cheminée",
+      "ParkingPrivé",
+      "TerrassePrivative"
+    ]
+  }
+}

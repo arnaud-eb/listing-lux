@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:08:50.498Z",
+  "output": {
+    "title": "1-Zimmer-Apartment mit südlicher Ausrichtung und Keller in Bonnevoie",
+    "description": "Dieses 1-Zimmer-Apartment umfasst eine Wohnfläche von 52 m² und befindet sich in Bonnevoie, einem lebendigen und multikulturellen Stadtviertel Luxemburgs. Die Wohnung verfügt über einen gut belichteten Wohnbereich mit südlich ausgerichtetem Fenster, das für natürliches Tageslicht sorgt und eine angenehme Atmosphäre schafft.\n\nDie kompakte Küche präsentiert sich im klassischen Galerielayout mit weißer Einbauschrankfront und einem keramischen Fliesenboden. Trotz des traditionell gestalteten Raumes ist die Anordnung funktional und bietet ausreichend Arbeits- und Stauraum für den täglichen Bedarf.\n\nDas Badezimmer ist mit einer Dusch- und Badewannenkombination ausgestattet, verfügt über weiße Fliesen und ein einzelnes Waschbecken. Es wurde sorgfältig instand gehalten und ermöglicht vollständigen Komfort auf begrenzter Fläche. Weiterhin gehört ein separater Kellerraum zur Wohnung, der zusätzlichen Stauraum bietet.\n\nBonnevoie zeichnet sich durch seine zentrale Lage mit guter Anbindung an den Hauptbahnhof und ein vielfältiges gastronomisches Angebot aus. In diesem Viertel befinden sich zudem der beliebte Bonnevoie-Markt und diverse Einkaufsmöglichkeiten. Die Wohnung liegt in einem Umfeld, das Zentralität und urbanes Leben verbindet.",
+    "highlights": [
+      {
+        "text": "1 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer mit Badewanne",
+        "icon": "bath"
+      },
+      {
+        "text": "Südlich ausgerichtetes Wohnzimmer mit viel Tageslicht",
+        "icon": "sun"
+      },
+      {
+        "text": "Kompakte funktionale Küche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Gute Verkehrsanbindung im lebendigen Viertel Bonnevoie",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "BonnevoieLiving",
+      "UrbanResidence",
+      "CompactApartment",
+      "SouthFacing",
+      "FunctionalKitchen"
+    ]
+  }
+}

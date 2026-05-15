@@ -5,43 +5,43 @@
   "scores": {
     "factual_fidelity": {
       "score": 4,
-      "evidence": "\"parquet en bois massif stratifié\" contradicts itself (massif vs stratifié) and adds detail beyond \"engineered wood flooring\"."
+      "evidence": "'parquet en bois massif stratifié' contradicts the input — 'massif' (solid) and 'stratifié' (laminated) are mutually exclusive and inputs say only 'engineered wood'."
     },
     "completeness": {
       "score": 5,
-      "evidence": "Includes 145 m², trois chambres, deux salles de bains, balcon, cave, parking, ascenseur, Bulthaup, îlot, douche à l'italienne."
+      "evidence": "Covers 145 m², 3 chambres, 2 salles de bains, balcon, cave, parking, ascenseur, Bulthaup, Kirchberg."
     },
     "native_quality": {
-      "score": 4,
-      "evidence": "Reads natively in French — \"un prolongement naturel de l'espace de vie intérieur\" is idiomatic."
+      "score": 3,
+      "evidence": "'parquet en bois massif stratifié' is internally contradictory and not idiomatic; otherwise fluent French."
     },
     "market_fit": {
-      "score": 5,
-      "evidence": "\"douche à l'italienne\", \"suite parentale\", \"institutions européennes\", \"Philharmonie et le MUDAM\" align with LU FR luxury corpus."
+      "score": 4,
+      "evidence": "Uses LU-FR luxury terms 'douche à l'italienne', 'suite parentale', 'cave privative', 'Philharmonie et MUDAM'."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class mentioned, consistent with v1.5 default when no class supplied."
+      "evidence": "No CPE supplied; description omits energy class entirely per v1.5 default."
     },
     "seo_signal": {
-      "score": 5,
-      "evidence": "Title \"Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg\" is 12 words; 5 CamelCase hashtags."
+      "score": 4,
+      "evidence": "Title 'Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg' is 13 words; 5 CamelCase hashtags."
     },
     "tone_discipline": {
       "score": 5,
-      "evidence": "No exclamations; \"élégance discrète\" stays restrained."
+      "evidence": "No hyperbole or exclamation marks; restrained 'élégance discrète'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic references; \"écoles internationales\" frames area, not buyer."
+      "evidence": "No demographic or occupant references."
     },
     "hallucination": {
-      "score": 3,
-      "evidence": "\"emplacement de parking en sous-sol\" and \"sous-sol sécurisé\" invent that parking is underground/secure — input only states parking:true."
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'parking en sous-sol sécurisé' specifies underground/secured which is not in inputs (only 'parking: true'). The 'bois massif stratifié' issue is a factual contradiction counted under factual_fidelity. Philharmonie/MUDAM/EU institutions/international schools supported by neighborhood metadata."
     },
     "cross_lang_consistency": {
       "score": 4,
-      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, Bulthaup, elevator, cellar, parking; minor divergences are flooring type (DE Eichenparkett, FR bois massif stratifié, EN engineered wood) and FR adding 'sous-sol' for parking."
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale, balcony, parking, elevator, cellar. Minor non-contradictory addition: FR specifies 'parking en sous-sol' while EN/DE just say parking."
     }
   },
   "overall_pass": false

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Die Wohnfläche von 130 m² verteilt sich auf drei Schlafzimmer und ein Badezimmer' matches inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, 3 Schlafzimmer, 1 Bad, Garten, Schuppen, Keller, Stellplatz; omits Mamer."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'den Stauraumangebot dieser Immobilie' is ungrammatical (should be 'das Stauraumangebot'); 'Holzsicherheitzaun' is an awkward compound."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Reihenhaus', 'Pkw-Stellplatz', 'Kellerraum' fit LU German listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; consistent with null inputs."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Hashtag 'Dachgeschoss' (attic floor) is unsupported and irrelevant — no attic mentioned in inputs; title omits Mamer."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'präsentiert sich in gepflegtem Zustand' restrained, no hyperbole or exclamation."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'eignet sich für Personen, die eine ruhige Wohnlage ... suchen' — refers to preference not demographic class."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — hashtag 'Dachgeschoss' implies an attic that is not in inputs. All prose claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/EN/DE agree on 130 m², 3 bedrooms, 1 bathroom, 1980s, garden, parking, cellar, shed. Minor disagreement: FR highlight adds 'accès terrasse' which EN and DE do not assert."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Dachgeschoss hashtag is a clear hallucination."
+}

@@ -1,0 +1,44 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:42:56.787Z",
+  "output": {
+    "title": "Three-Bedroom Row House with Private Garden and Parking in Quiet Residential Area",
+    "description": "This 130 m² residence is situated in a well-maintained row of houses dating from the 1980s, offering a tranquil residential setting. The exterior features a neutral facade complemented by a small front yard that provides a modest buffer from the street. A dedicated parking space is included, enhancing convenience for residents.\n\nInside, the living room presents a traditional layout with a beige carpet and an alcove designed for a tube TV. Patio doors afford direct access to the private rear garden and provide natural light along with views over the greenery.\n\nThe garden comprises a lawn enclosed by a wood fence, offering a simple, manageable outdoor space. A small storage shed within the garden area adds practical storage options for tools or equipment.\n\nAdditional amenities include a cellar, providing separate storage space apart from the main living areas. The house includes three bedrooms and one bathroom, with potential for modernization to reflect contemporary tastes.\n\nThis property combines functional interior and exterior spaces within a quiet neighborhood setting, suitable for those seeking a residence with private outdoor areas and parking provision.",
+    "highlights": [
+      {
+        "text": "130 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "One bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Private rear garden with lawn",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking space available",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "RowHouse",
+      "PrivateGarden",
+      "ParkingIncluded",
+      "StorageCellar",
+      "1980sResidence"
+    ]
+  }
+}

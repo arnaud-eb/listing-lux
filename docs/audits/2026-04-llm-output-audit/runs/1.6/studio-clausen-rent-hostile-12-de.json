@@ -1,0 +1,47 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:43:28.195Z",
+  "output": {
+    "title": "Renoviertes möbliertes Studio mit Charakter im historischen Clausen",
+    "description": "Dieses vollständig renovierte Studio im Herzen des Clausen-Tals vereint historische Bausubstanz mit zeitgemäßem Komfort. Die präsentierten sichtbaren Holzbalken und der Eichenparkettboden schaffen eine wohnliche Atmosphäre in einem kompakten, gut organisierten Wohnbereich. Die Einrichtung ist vollständig und bietet eine umgehend bezugsfertige Unterkunft.\n\nDie funktionelle Kochnische ist mit einem Zweizonen-Kochfeld, einem Kühlschrank und einer Edelstahlspüle ausgestattet und fügt sich harmonisch in das Raumkonzept ein. Das Badezimmer wurde ebenfalls modern gestaltet, mit einer Duschkabine und hellen Fliesen, die den Raum optisch vergrößern.\n\nDer Gebäudekomplex liegt in der engen, malerischen Straße im Clausen-Tal, bekannt für seine historische Bausubstanz und gepflegten Fassaden. Das Studio bietet dadurch einen Ruhepol in unmittelbarer Nähe zur Innenstadt von Luxemburg, ohne auf den atmosphärischen Charakter dieses Stadtteils zu verzichten.",
+    "highlights": [
+      {
+        "text": "Vollständig möbliert und bezugsfertig",
+        "icon": "home"
+      },
+      {
+        "text": "Sichtbare historische Holzbalken",
+        "icon": "building-2"
+      },
+      {
+        "text": "Kompakt und funktional gestaltet",
+        "icon": "square"
+      },
+      {
+        "text": "Moderne Kochnische mit Edelstahlspüle",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Renoviertes Badezimmer mit Duschkabine",
+        "icon": "bath"
+      },
+      {
+        "text": "Liegt im historischen Clausen-Tal",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Holzboden in Wohnraum verlegt",
+        "icon": "floor-plan"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "RenovatedStudio",
+      "ClausenLocation",
+      "CompactLiving"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m² penthouse', 'four bedrooms and three bathrooms', 'Gaggenau appliances', 'Carrara marble island' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes sqm/beds/baths/Belair, parking, cellar, elevator, terrace, renovation, plus photo points 'integrated smart-home lighting', 'walk-in closet', 'composite decking', '180-degree'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as natively written English: 'harmonious blend of contemporary style and comfort', 'balances urban proximity with a tranquil environment'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard luxury vocabulary: 'upscale Belair neighborhood', 'master suite', 'south-facing terrace'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and description omits CPE entirely, matching v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Renovated 4-Bedroom Penthouse with Panoramic City Views in Belair' is 10 words with neighborhood and adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No banned superlatives or exclamation marks; phrases like 'refined urban living experience' are measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'ideal for relaxation and social gatherings' refers to space use, not occupants."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '220 m²', '4 bedrooms', '3 bathrooms' (property); 'Gaggenau', 'Carrara marble', 'oak parquet', 'wood-burning fireplace', '180-degree', 'south-facing', 'composite decking', 'walk-in closet', 'smart-home lighting' (photo_analyses); 'Belair', 'Luxembourg City' (neighborhood)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR, DE, EN all agree on 220 m², 4 bedrooms, 3 bathrooms, sale of penthouse in Belair, parking, cellar, elevator, south-facing terrace, Gaggenau kitchen — no numeric or feature contradictions."
+    }
+  },
+  "overall_pass": true
+}

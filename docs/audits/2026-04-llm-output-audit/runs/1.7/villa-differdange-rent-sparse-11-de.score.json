@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'komfortables Wohnen auf mehreren Ebenen' — no input indicates multiple levels; otherwise consistent with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 200 m², 4 Schlafzimmer, 2 Badezimmer, Garten, Terrasse, Doppelgarage, Keller, Kamin — but omits Differdange neighborhood and rental nature."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Diese freistehende Villa aus den 1970er-Jahren bietet eine großzügige Wohnfläche von ca. 200 m²' reads natively in German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Wohnfläche', 'Steinfassade', 'Doppelgarage', 'Kellerraum' align with LU/DE real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with null input — 'Traditionelle Steinfassade aus den 1970er-Jahren' is the closest reference and avoids energy claims."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Freistehende Villenresidenz mit 4 Schlafzimmern und gepflegtem Garten' is 9 words but lacks neighborhood (Differdange); 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'überzeugt durch eine solide Bausubstanz' is mildly promotional but no 'atemberaubend' or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics; 'etabliertes Wohnumfeld' refers to area, not people."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'Wohnen auf mehreren Ebenen' (no level data in inputs); 'Doppelgarage mit direktem Zugang zur Villa' (direct access not in photo analysis); 'zusätzlicher Stellplatz' (not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE, EN, FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar, stone fireplace, 1970s; no listing-kind disagreement (none mention rent, but consistent)."
+    }
+  },
+  "overall_pass": false
+}

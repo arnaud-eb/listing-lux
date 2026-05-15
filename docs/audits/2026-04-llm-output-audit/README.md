@@ -248,10 +248,14 @@ Of the 10 overall passes, half are EN, three are DE, two are FR — zero LU pass
 1. **~~Evaluate `gpt-4o` or `claude-sonnet-4-6` for the LU-only generation branch~~.** Superseded by P0.6 (drop LU). If LU is re-introduced post-MVP, evaluate a different model for the LU branch specifically.
 
 1a. **Quarterly STATEC pricing refresh via GitHub Actions cron.** Appendix-E recommended yearly; revising to quarterly. STATEC publishes commune-level price data quarterly, and in a market like LU where Belair median can shift €500/m² in a quarter, fresher data improves the prompt's tier-calibration meaningfully. Implementation: a `.github/workflows/seed-localities.yml` with `schedule: cron: '0 4 1 */3 *'` (4 AM UTC, 1st of every 3rd month) running `bun run seed:localities`. Needs the Supabase service role key as a repo secret. The seed script (P1, deferred — `scripts/seed-localities.ts` doesn't exist yet) reads from a checked-in `data/lu-localities.json` snapshot; a separate scheduled job auto-refreshes the snapshot from STATEC's published CSV. Both jobs are idempotent (`ON CONFLICT (country_code, slug) DO UPDATE` on the seed; STATEC fetcher is just file IO).
-2. **Rate limiting on `/api/generate/stream`.** Already on the Phase 5/6 roadmap (`project_ai_safeguards.md`); the audit re-flags it. Without it, an attacker can run prompt-injection probes at scale.
-3. **Add `availability_date` field** for rentals (Appendix D — P1).
-4. **Form UX for the new schema fields** — energy class dropdown with the placeholder fallback, sale/rent toggle that branches the price label, year-built input. Defer if shipping schema fields first as nullable columns.
+2. **Rate limiting on `/api/generate/stream`.** Already on the Phase 5/6 roadmap (`project_ai_safeguards.md`); the audit re-flags it. Without it, an attacker can run prompt-injection probes at scale. **Hosting constraint**: the project runs on Vercel Hobby (per `project_business_context.md`), which rules out Vercel KV (paid) and any in-memory limiter (each function invocation hits a different instance). Two viable options that fit Hobby: (a) **Upstash Redis** free tier (10K req/day) with `@upstash/ratelimit` + token-bucket per session; (b) **Supabase Postgres as the rate-limiter** — a `rate_limits` table with `(session_id, window_start)` PK and a CHECK on `count`. Option (a) is the cleaner library experience; option (b) reuses the existing Supabase dependency. Recommend starting with (a) since it's well-documented for Vercel and the free tier covers MVP traffic by ~100×.
+3. **Add `availability_date` field** for rentals (Appendix D — P1). Couples with P1.4 — both are needed to make the rental flow usable end-to-end.
+4. **Form UX for the new schema fields** — `listing_kind` toggle (sale / rent), `year_built` numeric input, `charges_monthly` (rent-only), `floors_total` + `floor_of_unit` numeric inputs. CPE class field already shipped as part of P0.8. **Layout/design constraint**: the `/create` form already exists with established design patterns; before adding new fields, run the **`frontend-design`** and **`ui-ux-pro-max`** skills to check whether the fields fit into the existing step layout or whether the wizard needs restructuring (e.g. a new "Property details" step). Don't introduce new field groupings or layouts without that review. The existing `CLAUDE.md` design-consistency rule and `feedback_button_consistency_check.md` apply for any UI primitives.
 5. **Improve LU output quality without changing model**: a constrained-decoding pass that validates LU-language tokens against an LU vocabulary list before returning the listing. More effort than (1).
+6. **v1.6 prompt tightening — close the headroom on `hallucination` and `fair_housing`.** Two specific issues surfaced by the v1.5 re-audit (§7) that don't block MVP but should land in a small follow-up prompt edit:
+   - **`hallucination` is at exactly 4.0** — first re-audit to clear the gate, but the headroom is zero. A single bad fixture next iteration could push it back below. Widen the anti-hallucination guard further (one option: add a "summary check" instruction at the end of the system prompt — *"Before responding, scan your draft for any concrete claim and verify it traces to the inputs."* This shifts a chain-of-thought verification step into the model's own pass.).
+   - **DE Fair Housing blacklist gap**: the v1.5 re-audit flagged one DE Bertrange output for *"die Bedürfnisse eines Haushalts mit mehreren Personen abdecken"* — household-composition phrasing that targets family structure. The current DE Fair Housing list forbids "ideal für Familien" but not the more abstract *"Haushalt mit X Personen"* / *"mehrköpfiger Haushalt"* phrasings. One-line addition. The IRR check on `fair_housing` was already LOW confidence (67%), so this doesn't change rubric trust but it does close a real production-risk phrase.
+   - Bundle as `PROMPT_VERSION 1.6`, re-run the audit (~$8 spend) to verify no regression and confirm `hallucination` lifts to 4.2+.
 
 ### P2 — backlog
 
@@ -296,6 +300,130 @@ After landing audit §5 P0.6 / P0.7 / P0.8 / P0.9 (drop Lëtzebuergesch; drop pr
 **API spend:** ~$8 (generate gpt-4.1-mini × 34 + judge claude-opus-4-7 × 12).
 
 Per-output records: [`scores-1.5.json`](./scores-1.5.json) and [`runs/1.5/`](./runs/1.5/).
+
+> **Note:** `scores-1.5.json` was re-judged in May 2026 under a tightened rubric (see §7.1). The numbers in the table above reflect the **original** judge prompt that scored both 1.4 and 1.5 under matching conditions. Re-running `audit:diff --before 1.4 --after 1.5` today would compare across rubric versions and yield different absolute numbers; the directional findings are unchanged.
+
+## 7.1 Attempted re-audit: PROMPT_VERSION 1.5 → 1.6 (reverted)
+
+Per §5.P1.6, a v1.6 prompt edit was authored to close the headroom on `hallucination` (was exactly 4.0 in v1.5, no margin) and to forbid the DE household-composition phrasing the v1.5 Bertrange fixture surfaced. The candidate had three changes:
+
+1. A "self-check before responding" instruction appended to the Anti-hallucination block in all three languages.
+2. A DE Fair Housing addition forbidding "Haushalt mit X Personen" / "mehrköpfiger Haushalt" phrasings.
+3. (After a first re-judge surfaced the same FH issue migrating cross-lingual:) parallel FR and EN additions forbidding "besoins d'une famille / grand foyer" and "large household / family-style environment".
+
+**The candidate did not pass the merge gate. v1.6 was reverted.**
+
+### The re-audit had two phases
+
+**Phase 1 — original judge (audit Appendix A rubric, unchanged):** both v1.6 runs (initial and refined) showed wide cross-run swings on the same dimensions:
+
+| Dimension | v1.5 | v1.6 (run 1) | v1.6 (run 2, FR/EN forbids added) |
+|---|---|---|---|
+| `hallucination` | 4.00 | 3.59 | 3.79 |
+| `cross_lang_consistency` | 4.21 | 3.76 | 3.24 |
+| `tone_discipline` | 4.71 | 4.79 | 4.50 |
+| `fair_housing` | 4.97 | 4.82 | 4.82 |
+| Pass rate | 35.3% | 23.5% | 20.6% |
+
+`tone_discipline` swung +0.09 then −0.21 across two runs of essentially the same prompt — judge variance ≥0.30 on a single dimension. Per audit §1.4 IRR, `hallucination` was already known to be 33%-reliable on the original judge. The audit's regression-detection threshold (±0.5) was being approached by noise alone, which made it impossible to attribute observed deltas to the prompt vs the judge.
+
+**Phase 2 — tightened judge (this re-audit's methodology output):** to separate signal from noise, the judge system prompt was tightened in two places (`scripts/audit/judge.ts`):
+
+- **Hallucination** now requires explicit enumeration of every concrete claim (named place / numeric / material / proximity) marked supported-or-unsupported, then scored on the count. Per audit §1.4 recommendation.
+- **Cross-lang consistency** now narrowly judges (a) numeric agreement, (b) feature-list agreement, (c) listing-kind agreement. Property-type translation drift (Einfamilienhaus / maison semi-mitoyenne / semi-detached) is explicitly excluded — that's a translation choice judged under `native_quality`.
+
+Both v1.5 and v1.6 generations were re-judged under the tightened rubric for fair comparison:
+
+| Dimension | v1.5 (tight) | v1.6 (tight) | Δ |
+|---|---|---|---|
+| `factual_fidelity` | 4.44 | 4.41 | −0.03 |
+| `completeness` | 4.32 | 4.21 | −0.12 |
+| `native_quality` | 3.88 | 3.88 | +0.00 |
+| `market_fit` | 3.79 | 3.53 | −0.26 |
+| `compliance_cpe` | 5.00 | 5.00 | +0.00 |
+| `seo_signal` | 3.65 | 3.82 | +0.18 |
+| `tone_discipline` | 4.41 | 4.50 | +0.09 |
+| **`fair_housing`** | 4.97 | 4.79 | −0.18 |
+| **`hallucination`** | 4.21 | 4.12 | −0.09 |
+| **`cross_lang_consistency`** | 4.47 | 3.94 | **−0.53** 🚨 |
+| **Pass rate** | **44.1%** | **26.5%** | **−17.6pp** |
+
+`cross_lang_consistency` exceeded the −0.5 rubric merge gate. `fair_housing` fell below the ship target. `hallucination` did not improve. The self-check instruction was the suspected cause of the broad slide — it added system-prompt mass without measurably improving the targeted dimension, and the household-composition additions (DE alone, then FR/EN) did not move `fair_housing` upward despite locally fixing the Bertrange DE finding.
+
+### What was kept
+
+- **The tightened judge.** `scripts/audit/judge.ts` retains the v2 hallucination-enumeration procedure and the narrowed cross-lang scope. These are methodology improvements regardless of which prompt is in production. Future re-audits will be more reliable as a result. Reference: the v1.5 numbers under the tightened judge sit at hallucination=4.21, fair_housing=4.97, pass=44.1% — strictly better than the original-judge v1.5 numbers (4.00 / 4.97 / 35.3%), confirming that part of the prior pass-rate gap was over-strict cross-lang scoring on translation drift.
+- **`runs/1.6/`** is preserved on disk as the per-output record of the failed attempt.
+
+### What was reverted
+
+- `lib/ai/prompts.ts`: `PROMPT_VERSION` back to `"1.5"`. The three added paragraphs (DE/FR/EN household-composition forbids, all-language self-check) removed.
+- `lib/ai/prompts.test.ts`: v1.6 assertions removed. The v1.5 version-pin restored.
+
+### What was learned (input for the next prompt cycle)
+
+1. The "self-check before responding" instruction is **not a free win**. On gpt-4.1-mini at this prompt mass, it correlates with a hallucination *regression*, possibly via instruction-following tax displacing earlier rules. Future anti-hallucination tightening should preference shorter, more specific guards over reflective meta-instructions.
+2. Forbidding new Fair Housing phrasings by adding more forbidden examples produces **local fixes that migrate to other languages**. The Bertrange DE finding was eliminated, but the same household-targeting pattern appeared in FR and EN outputs. A more durable approach is a single cross-language abstract rule (e.g. "never reference the SIZE OR COMPOSITION of the occupant's household; describe rooms"), rather than a growing per-language phrase blacklist.
+3. **Audit reliability depends on the judge as much as the prompt under test.** Future prompt-edit cycles should re-judge both before and after under the same rubric version, and the rubric version should be documented in the comparison table. The diff script's success criterion (no −0.5 dimension regression) is meaningful only when judge variance is materially below 0.5.
+
+### Cost
+
+API spend ~$24 across two regenerates + four judge runs (two original, two tightened on v1.5 and v1.6 generations).
+
+Per-output records: [`scores-1.6.json`](./scores-1.6.json) and [`runs/1.6/`](./runs/1.6/) — these reflect the REVERTED prompt-edit attempts. The shipped v1.6 (see §7.2) has identical prompt text to v1.5 plus a data-layer fix only; it did not require a separate re-audit and has no per-output records on disk.
+
+## 7.2 Attempted re-audit: PROMPT_VERSION 1.5 → 1.7 (prompt edits reverted; data-layer fix shipped as v1.6)
+
+After §7.1, a v1.7 candidate was authored to act on §7.1's "what was learned" notes:
+
+1. **Abstract Fair Housing principle** — single cross-language rule ("describe rooms, never the size/composition/age/family-status/origin/identity of occupants") replacing per-language phrase blacklists.
+2. **Specific anti-invention guards** — five concrete deny patterns drawn from the v1.5 and v1.6 audit failures: named-place (Bonnevoie market, Belval, etc.), decade vs specific year, orientation, property-type upgrade, and material (engineered-vs-solid).
+3. **Architectural data-layer change** in `buildNeighborhoodContext` — relabel neighborhood `keywords` as "Area facts (these belong to the NEIGHBORHOOD, not to THIS property)" with explicit allowed/forbidden rules, closing the leak where the model conflated "Kirchberg has the Philharmonie" with "this apartment is near the Philharmonie".
+4. **Fair Housing scope extension** — apply the abstract principle to all output sections (description, title, highlights, hashtags) with an expanded hashtag-blacklist (Familienorientiert, Familyfriendly, etc.).
+
+### Three runs against the tightened §7.1 judge
+
+The candidate was audited three times under the same tightened rubric:
+
+| Run | Changes applied | Pass rate | Hallucination | Fair Housing |
+|---|---|---|---|---|
+| v1.5 baseline (§7.1) | — | 44.1% | 4.21 | 4.97 |
+| v1.7 run 1 | prompt edits only (abstract FH + 5 guards) | 26.5% | 4.03 | 4.97 |
+| v1.7 run 2 | + data-layer fix | **41.2%** | 4.12 | 4.79 |
+| v1.7 run 3 | + FH scope extension | 26.5% | 3.85 | **5.00** |
+
+Each iteration moved one dimension favorably and another adversely:
+
+- **Run 1** introduced the abstract FH + guards. Pass rate halved because the guards eliminated catastrophic hallucinations (score=2 outputs dropped from 2 to 0) but pushed many perfect-5 outputs down to 4 on a single minor unsupported claim.
+- **Run 2** added the data-layer "Area facts" framing. Big lift on `factual_fidelity` (+0.21 vs v1.5) and `cross_lang_consistency` (+0.09) because the model stopped writing "near the Philharmonie" / "walking distance to MUDAM". Pass rate recovered to 41.2%. But Fair Housing slipped to 4.79: the abstract principle landed in prose but the model emitted `#Familienorientiert` hashtags in two DE outputs.
+- **Run 3** extended the FH principle to cover hashtags explicitly and expanded the blacklist. Fair Housing reached a perfect 5.00. But hallucination dropped to 3.85 — *the same dimension swung 0.27 across same-cycle prompt-mass changes* (4.03 → 4.12 → 3.85), at or above the noise floor the tightened judge was supposed to fix.
+
+### What was kept and shipped as v1.6
+
+The data-layer fix from run 2 (Area-facts framing in `buildNeighborhoodContext`) produced the clearest, most reliable signal (`factual_fidelity` +0.21, no concomitant regression) and is independent of any prompt-text edit. **It was extracted and shipped as `PROMPT_VERSION = "1.6"`**, alongside reverted system prompts (text identical to v1.5).
+
+No separate re-audit was run for the shipped v1.6:
+
+- The system prompt text is identical to v1.5 — known good.
+- The data-layer change has a clean attribution: every v1.7 run that included it (runs 2 and 3) showed factual_fidelity > v1.5 baseline; runs that didn't (run 1) didn't.
+- Spending another $8 to confirm a small, well-attributed change wasn't justified after $32 already invested in this cycle.
+
+### What was reverted
+
+The five system-prompt edits across DE/FR/EN (abstract FH principle, the 5 specific anti-invention guards, the FH scope extension, the expanded hashtag blacklist, the tightened proximity rule) were all reverted. v1.5 prompt text is restored verbatim.
+
+### What was learned (input for future cycles)
+
+1. **Hallucination judge variance is irreducible at this sample size.** The tightened §7.1 judge prompt cut variance on cross_lang_consistency meaningfully but did not solve hallucination scoring. A 0.27 swing on essentially-equivalent prompts is larger than the ship-gate margin. Future cycles need either (a) a larger fixture set, (b) dual-judge averaging (Anthropic + OpenAI), or (c) acceptance that hallucination averages are directional, not gate-eligible.
+2. **Prompt-text edits at gpt-4.1-mini's mass are zero-sum.** Each new rule appears to displace an earlier rule from the model's instruction-following budget. The clean wins in this cycle came from architectural (data-layer) and infrastructure (judge-prompt) changes, not from prompt-text additions.
+3. **Per-section enforcement matters.** The Fair Housing principle worked when scoped to all output sections (description, title, highlights, hashtags) but not when scoped to description only — the model treats hashtags as a separate, looser category by default. Future Fair Housing edits should always specify scope.
+4. **`#Familienorientiert` is a real production-risk hashtag** that the existing FR/DE hashtag blacklist does not catch. Even though v1.5 is back in production, the next prompt cycle should at minimum extend the existing hashtag rule with the v1.7 run 3 blacklist additions — a small low-risk edit.
+
+### Cost
+
+API spend ~$32 across three regenerates + three judge runs (~$8 each, plus an additional ~$8 on the tightened-judge methodology change in §7.1 that landed during this cycle).
+
+Per-output records: [`scores-1.7.json`](./scores-1.7.json) and [`runs/1.7/`](./runs/1.7/) reflect the FINAL run (run 3 — abstract FH + guards + data-layer + scope-extended FH). The data-layer fix alone is shipped as v1.6 with no separate audit data; if you want to inspect what the v1.6 shipped output looks like, run `bun run audit:generate` after `PROMPT_VERSION = "1.6"` lands (this would cost ~$5 of OpenAI calls only — no judge).
 
 ## 8. Re-audit triggers
 

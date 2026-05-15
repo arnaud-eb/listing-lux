@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'d'une surface de 38 m²' and 'kitchenette compacte, équipée d'une plaque à deux feux' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 38 m², Clausen, furnished, renovated, beams, kitchenette, bathroom; omits explicit bathroom count and rental framing but covers most features."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'rehaussent le cachet authentique du lieu' reads as native French prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'cachet authentique', 'kitchenette compacte', 'vallée de Clausen' fit LU luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely as no class was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Studio meublé rénové avec charme dans le quartier historique de Clausen' is 11 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrases like 'fonctionnalité et modernité' stay measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'adaptée à une utilisation immédiate grâce à son mobilier complet' targets the unit, not demographics."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '38 m²' (sqm=38), 'poutres apparentes' (exposed beams), 'plaque à deux feux' (two-burner cooktop), 'évier inox' (stainless sink), 'vallée de Clausen' (Clausen valley setting) — all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three (FR/DE/EN) cite '38 m²', furnished+renovated studio, two-burner cooktop kitchenette, renovated bathroom with shower, and Clausen historic stone building — no numeric or feature disagreement."
+    }
+  },
+  "overall_pass": true
+}

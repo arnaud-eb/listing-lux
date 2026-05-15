@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:11:29.505Z",
+  "output": {
+    "title": "Studio meublé rénové avec charme dans le quartier historique de Clausen",
+    "description": "Ce studio soigneusement rénové, d’une surface de 38 m², se situe dans un immeuble en pierre à l'architecture historique, typique du quartier de Clausen. L’espace principal s’ouvre sur un cadre chaleureux et caractéristique avec ses poutres apparentes et un parquet en bois qui rehaussent le cachet authentique du lieu.\n\nLa kitchenette compacte, équipée d'une plaque à deux feux, d’un petit réfrigérateur et d’un évier inox, combine fonctionnalité et modernité sans empiéter sur l’espace de vie. La salle de bains rénovée présente un aménagement contemporain avec douche, meuble vasque et carrelage blanc, alliant propreté et simplicité.\n\nL’emplacement dans la vallée de Clausen offre un environnement à l’atmosphère préservée, avec ses ruelles étroites et son bâti ancien entretenu, tout en restant relié aux commodités urbaines. Ce logement propose une ambiance à la fois fonctionnelle et empreinte d’un caractère vintage, adaptée à une utilisation immédiate grâce à son mobilier complet.",
+    "highlights": [
+      {
+        "text": "Studio entièrement meublé et rénové",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes offrant un cachet historique",
+        "icon": "building-2"
+      },
+      {
+        "text": "Kitchenette compacte et fonctionnelle",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains rénovée moderne",
+        "icon": "bath"
+      },
+      {
+        "text": "Parquet en bois garantissant une ambiance chaleureuse",
+        "icon": "square"
+      },
+      {
+        "text": "Immeuble historique en pierre",
+        "icon": "building"
+      },
+      {
+        "text": "Implanté dans la vallée de Clausen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "StudioMeublé",
+      "CharmeHistorique",
+      "Clausen",
+      "RénovationSoignée",
+      "VieUrbainAuthentique"
+    ]
+  }
+}

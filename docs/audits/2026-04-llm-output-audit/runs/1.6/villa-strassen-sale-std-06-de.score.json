@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Title says 'Garage' but inputs only list 'parking' (Stellplätze); minor mismatch — 'Parkplätze am Haus' in body is fine but title 'Garage' is stronger than input."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 280 m², 5 bedrooms, 3 bathrooms, Strassen, renovation, garden SW exposure, fireplace, parquet, kitchen island, cellar, parking — all key inputs used."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively but 'einem zentralen Kochinsel' should be 'einer zentralen Kochinsel' (gender error) and 'GartenWohnung' hashtag is awkward."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses idiomatic LU terms like 'freistehendes Wohnhaus', 'Schieferdach', 'Stellplätze' consistent with the LU corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description omits CPE entirely, consistent with v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Garage in Strassen' (9 words, neighborhood + adjective); 5 CamelCase hashtags but 'FamilienHaus' borders on demographic steering."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'überzeugt mit einem etablierten, reifen Garten' is mildly promotional; no exclamation marks or banned hyperbole."
+    },
+    "fair_housing": {
+      "score": 3,
+      "evidence": "Hashtag 'FamilienHaus' directly targets family status — a fair-housing steering signal the notes explicitly warned about."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Garage' in title (inputs say parking only, not garage); all other claims (280m², 5 bed, 3 bath, SW exposure, slate roof, fireplace, granite, double oven, cellar) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 280 m², 5 bedrooms, 3 bathrooms, SW garden, parking, cellar, fireplace, sale context. Minor disagreement: DE and FR titles say 'Garage'/'garage' while EN says 'Parking', and FR adds 'parquet en chêne' (oak) which DE/EN do not specify — non-contradictory but a small divergence."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FamilienHaus hashtag is the fair-housing concern flagged in fixture notes."
+}

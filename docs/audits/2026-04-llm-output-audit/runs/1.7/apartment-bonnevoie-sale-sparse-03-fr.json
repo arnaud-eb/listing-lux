@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:08:58.554Z",
+  "output": {
+    "title": "Appartement lumineux d'une chambre avec cave à Bonnevoie",
+    "description": "Situé dans le quartier vivant de Bonnevoie, cet appartement d'environ 52 m² offre un espace de vie clair et accueillant. Le séjour bénéficie d'une orientation sud, apportant une belle luminosité naturelle à la pièce dotée d'un sol en stratifié et de murs blancs, pour une atmosphère sobre et agréable.\n\nLa cuisine fermée présente un agencement en couloir fonctionnel, avec des éléments de rangement blancs et un sol en carrelage céramique, dans un style traditionnel. Elle constitue un espace pratique à mettre à jour selon vos préférences.\n\nLa salle de bains, aux installations classiques, inclut une baignoire-douche et un meuble vasque unique, le tout agencé sur un revêtement mural blanc, garantissant un usage quotidien confortable.\n\nUne cave complète ce bien, offrant un rangement complémentaire indépendant. Bonnevoie se distingue par sa scène gastronomique variée ainsi que par son marché populaire, tout en proposant des prix abordables pour un cadre central et multiculturel.",
+    "highlights": [
+      {
+        "text": "Surface habitable d'environ 52 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Une chambre indépendante",
+        "icon": "bed"
+      },
+      {
+        "text": "Séjour orienté plein sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine en couloir fonctionnelle",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains avec baignoire-douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Revêtements de qualité soignée (stratifié, carrelage)",
+        "icon": "home"
+      },
+      {
+        "text": "Cave disponible pour rangement supplémentaire",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "BonnevoieUrbanLife",
+      "LuminositéSud",
+      "CuisineFonctionnelle",
+      "AppartementAvecCave",
+      "MarchéLocal"
+    ]
+  }
+}

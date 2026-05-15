@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'approximately 280 m²', 'five bedrooms and three bathrooms' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers beds/baths/sqm/Strassen plus garden, terrace, fireplace, kitchen island, SW-exposure, cellar, parking — comprehensive."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively ('indoor-outdoor connection', 'transitional style throughout'); a few slightly stiff phrasings like 'supporting both functional cooking and sociable dining'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard luxury vocabulary: 'detached villa', 'mature garden', 'south-west exposure', 'shaker cabinetry' — fits Engel & Völkers register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied; prose omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovated Five-Bedroom Villa with Mature Garden and Terrace in Strassen' is 11 words with neighborhood + adjective; 5 distinct CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbole; 'open and inviting environment' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'good schools and convenient motorway access' is neutral infrastructure description."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'distributed over two storeys' — photo analysis mentions 'two-storey detached' so this is SUPPORTED. 'cellar situated within the building's basement' — placement specifier 'basement' is a mild extrapolation from 'cellar'. 'known for good schools' — Strassen schools not in provided neighborhood data input. Otherwise all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², villa, Strassen, renovated, garden/terrace/parking/cellar/fireplace. FR omits the bathroom count ('trois salles de bain') that DE and EN both state — minor non-contradictory omission."
+    }
+  },
+  "overall_pass": false
+}

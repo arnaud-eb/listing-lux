@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.7",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-15T04:10:26.011Z",
+  "output": {
+    "title": "Hell und gepflegt: 2-Zimmer-Wohnung mit Balkon und Aufzug in Esch-sur-Alzette",
+    "description": "Diese 2-Zimmer-Wohnung bietet auf 78 m² eine durchdachte Raumaufteilung mit einem Wohnzimmer, das durch seine große Tür zum Balkon hin viel Tageslicht erhält. Die hellen, beigen Wände und der gepflegte Laminatboden schaffen eine freundliche und neutrale Atmosphäre.\n\nDie offene, in L-Form gestaltete Küche verfügt über weiße Einbauschränke und ist ausreichend dimensioniert, um einen kleinen Essbereich zu integrieren. Die kompakten Maße sind funktional gestaltet und lassen eine praktische Nutzung zu.\n\nDer Balkon ist mit einem Fliesenboden versehen und ermöglicht zusätzlichen Außenraum. Die Wohnung befindet sich in einem Gebäude mit Aufzug und bietet einen zugehörigen Parkplatz, der den Komfort im Wohnalltag erhöht.\n\nEsch-sur-Alzette ist Luxemburgs zweitgrößte Stadt und zeichnet sich durch ein wachsendes kulturelles Angebot aus. Der Standort profitiert von seiner Multikulturalität sowie nahegelegener Universität und Belval, was das Viertel als lebendige und erschwingliche Adresse kennzeichnet.",
+    "highlights": [
+      {
+        "text": "Wohnfläche von 78 m²",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Balkon mit Zugang vom Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "L-förmige Küche mit Essbereich",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "Balkonwohnung",
+      "Aufzug",
+      "EschSurAlzette",
+      "PraktischeKüche",
+      "Wohnkomfort"
+    ]
+  }
+}

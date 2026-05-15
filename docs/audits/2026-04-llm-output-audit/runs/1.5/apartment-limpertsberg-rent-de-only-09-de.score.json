@@ -5,45 +5,45 @@
   "scores": {
     "factual_fidelity": {
       "score": 4,
-      "evidence": "'lichtdichten Vorhängen' — inputs specify 'blackout blinds' (Rollos/Jalousien), not curtains; minor factual drift."
+      "evidence": "Description says 'lichtdichten Vorhängen' but inputs specify 'blackout blinds' (Rollos/Jalousien), a minor material substitution; otherwise facts match."
     },
     "completeness": {
       "score": 4,
-      "evidence": "Mentions '95 m²', '2 Schlafzimmer', '1 Badezimmer', 'Limpertsberg', balcony, elevator, cellar, furnished, renovated, induction; omits explicit rental framing but covers nearly all features."
+      "evidence": "Covers 95 m², 2 Schlafzimmer, 1 Badezimmer, Limpertsberg, balcony, elevator, cellar, furnished, renovated, induction cooktop; omits explicit mention of rental framing and dishwasher is mentioned but not parking absence — strong coverage."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'Diese 95 m² große Wohnung befindet sich in einem gepflegten Mehrparteienhaus' reads as natural German prose."
+      "evidence": "Reads natively in German ('präsentiert sich mit einem hellen, skandinavisch inspirierten Wohnraum'), though 'Fußboden aus Holzwerkstoff' is slightly awkward for engineered wood."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "Standard LU/DE real-estate vocabulary like 'Mehrparteienhaus', 'bezugsfertig', 'Wohnfläche' fits the corpus."
+      "evidence": "Uses standard LU/DE real-estate vocabulary like 'gepflegtes Mehrparteienhaus', 'bezugsfertig', 'Einbauküche' aligned with the local corpus."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; description omits energy class entirely as no class was supplied — 'Ein Kellerraum steht zur zusätzlichen Nutzung zur Verfügung.'"
+      "evidence": "No CPE class supplied in inputs and the description correctly omits any energy class claim."
     },
     "seo_signal": {
-      "score": 3,
-      "evidence": "Title 'Modernisierte 2-Zimmer-Wohnung mit Balkon und Aufzug im begehrten Limpertsberg' fits length; hashtags 'Renoviert Limpertsberg Balkon Aufzug Möbliert' are space-separated, not CamelCase with # markers."
+      "score": 4,
+      "evidence": "Title 'Modernisierte 2-Zimmer-Wohnung mit Balkon und Aufzug im begehrten Limpertsberg' is 11 words with neighborhood and adjective; hashtags 'Renoviert Limpertsberg Balkon Aufzug Möbliert' are 5 but not CamelCase formatted as single tokens."
     },
     "tone_discipline": {
-      "score": 4,
-      "evidence": "'im beliebten Stadtteil Limpertsberg' and 'begehrten Limpertsberg' are mild marketing, no exclamation marks or 'atemberaubend'."
+      "score": 5,
+      "evidence": "No hyperbole or exclamations; phrasing like 'bietet eine Möglichkeit für frische Luft' is restrained."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic targeting; 'Nähe zur Universität' is a factual location amenity, not occupant targeting."
+      "evidence": "No references to occupant demographics, family, religion, or origin anywhere in the copy."
     },
     "hallucination": {
-      "score": 2,
-      "evidence": "'Théâtre du Centaure und den Park Edmond Klein' and 'Nähe zur Universität' are named places not present in inputs — concrete invented landmarks."
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Théâtre du Centaure' and 'Park Edmond Klein' are named landmarks not present in inputs (no neighborhood_data provided); 'Nähe zur Universität' is also unsupported but generic. Supported: 95 m², 2 BR, 1 BA, balcony/north-facing, elevator, cellar, furnished, renovated, induction, dishwasher, Limpertsberg."
     },
     "cross_lang_consistency": {
       "score": 5,
-      "evidence": "Only DE provided, so trivially consistent."
+      "evidence": "Only one language (DE) present, so no cross-language disagreement is possible."
     }
   },
   "overall_pass": false,
-  "notes": "Hallucinated named cultural venues and a park ('Théâtre du Centaure', 'Park Edmond Klein') trigger hard-fail on hallucination. Also no rent framing despite monthly price."
+  "notes": "Rental framing (monthly rent) is not surfaced in the prose — matches fixture note about sale/rent gap."
 }

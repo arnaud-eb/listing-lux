@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.6",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Wohnfläche von etwa 200 m², verteilt auf vier Schlafzimmer und zwei Badezimmer' matches inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions beds/baths/sqm and most features, but omits neighborhood Differdange entirely: 'Aufgrund fehlender spezifischer Angaben zur Umgebung wird auf detaillierte Aussagen zur Nachbarschaft verzichtet.'"
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German: 'Der Wohnbereich besticht durch seinen warmen, traditionellen Charakter mit Holzvertäfelungen'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Vocabulary is solid ('freistehende Villa', 'Wohnfläche') but the meta-comment 'Aufgrund fehlender spezifischer Angaben zur Umgebung wird auf detaillierte Aussagen zur Nachbarschaft verzichtet' is unusual for luxury listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no class supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Geräumige 4-Zimmer-Villa mit Garten und Doppelgarage in ruhiger Lage' is 11 words but lacks neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, though 'besticht durch' is mild marketing language; no exclamation marks or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'ideal für vielfältige Wohnbedürfnisse' is neutral; no demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims (200 m², 4 beds, 2 baths, 1970s, stone facade, double garage, fireplace, terrace, cellar, mature trees) trace to inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, terrace, double garage, cellar, fireplace; FR adds a non-contradictory but unsupported detail 'répartis sur plusieurs niveaux' not in DE/EN."
+    }
+  },
+  "overall_pass": true
+}

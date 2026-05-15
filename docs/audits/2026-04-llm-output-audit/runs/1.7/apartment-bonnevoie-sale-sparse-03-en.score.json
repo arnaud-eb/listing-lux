@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'52 m² apartment', 'One bedroom and one bathroom', 'separate cellar' all align with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 52 m², 1 bed, 1 bath with tub, cellar, Bonnevoie neighborhood, south-facing window, galley kitchen — all core data used."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'This 52 m² apartment offers a practical and functional living space' reads natively though a touch corporate."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'galley layout', 'shower-tub combination', 'cellar' fit LU English listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, consistent with absent input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Bright One-Bedroom Apartment with Cellar in Lively Bonnevoie District' = 10 words, includes neighborhood; 5 clean CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'practical and functional', 'compact, practical galley kitchen' — restrained, no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or occupant references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'good connections to the central station' and 'the popular local market' (neither central-station proximity nor a named market provided in neighborhood inputs). Supported: '52 m²', 'south-facing window', 'laminate flooring', 'galley layout', 'full-size shower-tub combination', 'cellar'."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 52 m², 1 bedroom, 1 bathroom, cellar, south-facing living room, sale, Bonnevoie — no numeric or feature contradictions."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Tone is well-calibrated for entry-tier; minor neighborhood overreach."
+}

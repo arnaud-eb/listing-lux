@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.6",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-13T05:41:59.348Z",
+  "output": {
+    "title": "Geräumiges Einfamilienhaus mit vier Schlafzimmern und südlich ausgerichtetem Garten",
+    "description": "Dieses freistehende Wohnhaus aus den 1990er-Jahren verfügt über eine Wohnfläche von 195 m², verteilt auf vier Schlafzimmer und zwei Badezimmer. Die Fassade aus Ziegelstein beweist den soliden, zeittypischen Baustil und ist gut instand gehalten. Ein kleiner Vorgarten sowie eine private Einfahrt prägen die Außenansicht und bieten Stellmöglichkeiten für Fahrzeuge.\n\nDer Wohnbereich ist offen gestaltet und geht in den Essbereich über. Bodentiefe doppelte Türen verbinden das Wohnzimmer direkt mit dem angrenzenden Garten und schaffen helle, luftige Räume mit Blick ins Freie. Ein Kamin sorgt für zusätzlichen Komfort an kühleren Tagen. Der Bodenbelag aus Fliesen ist pflegeleicht und unterstreicht den praktischen Charakter des Hauses.\n\nDie Küche ist traditionell ausgestattet mit Holzfronten, einem Fliesenspiegel und einem freistehenden Herd. Ein integrierter Frühstücksbereich bietet eine einladende Ecke für den Tagesstart. Die räumliche Aufteilung unterstützt funktionales Kochen und geselliges Beisammensein.\n\nDer südlich ausgerichtete Garten umfasst eine Rasenfläche und eine gepflasterte Terrasse, die von der Wohnfläche aus zugänglich ist. Dieser Außenbereich ist ruhig gelegen und eignet sich zur individuellen Nutzung und Freizeitgestaltung. Ein separater Kellerraum ergänzt die Lagerkapazitäten der Immobilie.\n\nDie Immobilie ist mit allen grundlegenden Ausstattungen versehen und benötigt keine sofortigen Renovierungen. Parkmöglichkeiten sind durch die private Einfahrt gegeben. Angaben zu weiteren Infrastrukturmerkmalen oder dem Mikrostandort liegen nicht vor.",
+    "highlights": [
+      {
+        "text": "Wohnfläche von 195 m² mit vier Schlafzimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "sofa"
+      },
+      {
+        "text": "Separate, traditionelle Küche mit Frühstücksecke",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Private Einfahrt als Parkplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Kellerraum für zusätzlichen Stauraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Baujahr der Immobilie in den 1990er Jahren",
+        "icon": "building"
+      }
+    ],
+    "hashtags": [
+      "FreistehendesHaus",
+      "SüdGarten",
+      "KaminWohnzimmer",
+      "PraktischeKüche",
+      "PrivatEinfahrt"
+    ]
+  }
+}

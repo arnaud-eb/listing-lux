@@ -4,45 +4,45 @@
   "prompt_version": "1.5",
   "scores": {
     "factual_fidelity": {
-      "score": 5,
-      "evidence": "'D'une surface habitable d'environ 200 m², la maison comprend quatre chambres à coucher et deux salles de bains' matches inputs."
+      "score": 4,
+      "evidence": "'Cette villa indépendante, construite dans les années 1970' matches inputs; does not misframe sale vs rent but also doesn't state rental."
     },
     "completeness": {
       "score": 3,
-      "evidence": "Includes sqm, beds, baths, garden, terrace, garage, cellar, fireplace, but omits Differdange ('sans données spécifiques disponibles quant à son contexte immédiat')."
+      "evidence": "Covers 200 m², four bedrooms, two bathrooms, garden, terrace, double garage, cellar; omits Differdange neighborhood ('sans données spécifiques disponibles')."
     },
     "native_quality": {
       "score": 4,
-      "evidence": "'Le séjour, orné d'un habillage lambrissé et d'une cheminée en pierre d'origine' reads natively in French."
+      "evidence": "'orné d'un habillage lambrissé et d'une cheminée en pierre d'origine' reads as native French."
     },
     "market_fit": {
       "score": 4,
-      "evidence": "'villa indépendante', 'surface habitable', 'jardin privatif', 'cheminée en pierre d'origine' match LU luxury corpus."
+      "evidence": "'villa indépendante', 'surface habitable', 'jardin privatif', 'cave' are standard LU/FR real-estate vocabulary."
     },
     "compliance_cpe": {
       "score": 5,
-      "evidence": "No CPE class invented; energy class omitted as none supplied."
+      "evidence": "No CPE supplied and description omits CPE entirely, per v1.5 default."
     },
     "seo_signal": {
       "score": 3,
-      "evidence": "Title 'Villa traditionnelle avec jardin privé, garage double et vaste terrasse' is 11 words but lacks Differdange neighborhood."
+      "evidence": "Title 'Villa traditionnelle avec jardin privé, garage double et vaste terrasse' is 11 words but lacks the Differdange neighborhood."
     },
     "tone_discipline": {
-      "score": 5,
-      "evidence": "No hyperbole; 'propices aux moments de détente en plein air' is restrained."
+      "score": 4,
+      "evidence": "'vaste terrasse', 'luminosité naturelle' are mild; no exclamations or 'incontournable'."
     },
     "fair_housing": {
       "score": 5,
-      "evidence": "No demographic targeting in the prose."
+      "evidence": "No demographic references; only describes property and setting."
     },
     "hallucination": {
-      "score": 5,
-      "evidence": "All concrete details ('200 m²', 'quatre chambres', 'cheminée en pierre d'origine', 'double garage') are supported."
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'bénéficie d'une luminosité naturelle' (natural light claim) is not in photo_analyses; all other claims (1970s, stone façade, 200 m², 4 bed/2 bath, wood paneling, stone fireplace, mature trees, terrace, double garage, cellar) are supported."
     },
     "cross_lang_consistency": {
-      "score": 5,
-      "evidence": "DE, EN and FR all agree on 200 m², 4 bedrooms, 2 bathrooms, 1970s build, double garage, stone fireplace, mature garden, terrace, and cellar."
+      "score": 4,
+      "evidence": "DE, EN, FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar, 1970s. Minor disagreement: DE frames it as a sale ('richtet sich das Objekt an Käufer') while EN and FR are neutral on sale-vs-rent — a listing-kind framing slip but not a contradictory numeric/feature claim."
     }
   },
-  "overall_pass": true
+  "overall_pass": false
 }

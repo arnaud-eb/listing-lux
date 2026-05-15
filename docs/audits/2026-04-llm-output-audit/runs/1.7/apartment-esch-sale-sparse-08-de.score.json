@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'auf 78 m²', '2 Schlafzimmer', '1 Badezimmer', 'Parkplatz', 'Aufzug' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Highlights list 78 m², 2 Schlafzimmer, 1 Badezimmer, Balkon, L-Küche, Parkplatz, Aufzug — comprehensive."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'durchdachte Raumaufteilung' and 'kompakten Maße sind funktional gestaltet' read natively in German real-estate register."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Wohnfläche', 'Einbauschränke', 'Gebäude mit Aufzug' align with DE/LU portal corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class consistent with sparse input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title is 11 words and includes neighborhood; 5 CamelCase hashtags 'Balkonwohnung Aufzug EschSurAlzette PraktischeKüche Wohnkomfort', though 'Aufzug' is a single word not CamelCase compound."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'lebendige und erschwingliche Adresse' is mild promotional language but no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'Multikulturalität' refers to the city, not the buyer demographic; no protected-category targeting."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'nahegelegener Universität' (university not in inputs) and 'Belval' (not in inputs as a neighborhood landmark for this property). 'offene...Küche' slightly extrapolates beyond 'L-shape layout' but is not a concrete claim."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and sale context in Esch-sur-Alzette; no numeric or feature-list disagreements."
+    }
+  },
+  "overall_pass": false,
+  "notes": "University and Belval references are unsupported by the input bundle."
+}

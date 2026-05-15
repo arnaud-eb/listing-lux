@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.7",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'quatre chambres ainsi que deux salles de bains' and 'surface habitable d'environ 200 m²' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 200 m², 4 chambres, 2 salles de bains, jardin, terrasse, double garage, cave, cheminée; omits Differdange and rental status."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'agrémenté de boiseries et d'une cheminée en pierre d'origine qui offre une atmosphère traditionnelle' reads as native French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'villa indépendante', 'surface habitable', 'cave', 'double garage' match LU francophone listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with null inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Villa individuelle de 200 m² avec jardin mature et double garage' is 11 words but lacks Differdange; 5 hashtags but 'Villa1970s' is borderline and 'CheminéePierre' uses accent."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'séjour chaleureux agrémenté de boiseries' — restrained, no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'secteur résidentiel calme' describes area."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims (200 m², 4 chambres, 2 sdb, façade en pierre, cheminée, terrasse, jardin, double garage, cave, années 1970) are supported by property data or photo analyses."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE, EN, FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar, stone fireplace, 1970s; no listing-kind disagreement (none mention rent, but consistent)."
+    }
+  },
+  "overall_pass": true
+}
