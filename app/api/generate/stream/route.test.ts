@@ -26,6 +26,16 @@ vi.mock("@/lib/ai/client", () => ({
   LISTING_MODEL: "gpt-4.1-mini",
 }));
 
+const mockCheckRateLimit = vi.fn();
+vi.mock("@/lib/rate-limit", () => ({
+  checkRateLimit: (...args: unknown[]) => mockCheckRateLimit(...args),
+  rateLimitHeaders: (result: { limit: number; remaining: number; reset: number }) => ({
+    "X-RateLimit-Limit": String(result.limit),
+    "X-RateLimit-Remaining": String(result.remaining),
+    "X-RateLimit-Reset": String(Math.ceil(result.reset / 1000)),
+  }),
+}));
+
 vi.mock("@/lib/markets", () => ({
   getNeighborhoodBySlug: vi.fn(() => ({
     slug: "kirchberg",
@@ -80,6 +90,13 @@ function makeRequest(body: unknown, sessionId = "session-123"): Request {
 describe("/api/generate/stream", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    // Default: rate limit passes. The 429 test below overrides per-call.
+    mockCheckRateLimit.mockResolvedValue({
+      success: true,
+      remaining: 9,
+      limit: 10,
+      reset: Date.now() + 60_000,
+    });
   });
 
   // --- Input validation ---
@@ -438,6 +455,103 @@ describe("/api/generate/stream", () => {
     await capturedOnFinish!({ text: JSON.stringify({ title: "Test" }) });
 
     expect(mockUpsert).not.toHaveBeenCalled();
+  });
+
+  // --- Rate limiting ---
+
+  it("returns 429 with Retry-After when the per-session limit is exhausted", async () => {
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "session-123",
+      },
+      error: null,
+    });
+
+    const reset = Date.now() + 42_000;
+    mockCheckRateLimit.mockResolvedValueOnce({
+      success: false,
+      remaining: 0,
+      limit: 10,
+      reset,
+    });
+
+    const res = await POST(
+      makeRequest({ propertyId: "abc-123", language: "de" }),
+    );
+    expect(res.status).toBe(429);
+    const retryAfter = Number(res.headers.get("Retry-After"));
+    expect(retryAfter).toBeGreaterThan(0);
+    expect(retryAfter).toBeLessThanOrEqual(43); // reset was now+42s
+    expect(res.headers.get("X-RateLimit-Limit")).toBe("10");
+    expect(res.headers.get("X-RateLimit-Remaining")).toBe("0");
+    const json = await res.json();
+    expect(json.error).toMatch(/too many requests/i);
+    // Critically: streaming was not even started, so no OpenAI cost was incurred.
+    expect(mockStreamText).not.toHaveBeenCalled();
+  });
+
+  it("rate-limits by session, not by property — keyed on the cookie", async () => {
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "session-XYZ",
+      },
+      error: null,
+    });
+
+    mockStreamText.mockReturnValueOnce({
+      toTextStreamResponse: () => new Response("ok"),
+    });
+
+    await POST(
+      makeRequest({ propertyId: "abc-123", language: "de" }, "session-XYZ"),
+    );
+    expect(mockCheckRateLimit).toHaveBeenCalledWith("session-XYZ", "generate");
+  });
+
+  it("does not rate-limit before the 403 session-ownership check", async () => {
+    // Foreign session — must short-circuit on 403 without touching Upstash budget.
+    mockSingle.mockResolvedValueOnce({
+      data: {
+        id: "abc-123",
+        neighborhood: "kirchberg",
+        photo_analyses: [],
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 80,
+        price: 500000,
+        property_type: "apartment",
+        features: {},
+        photo_urls: [],
+        session_id: "owner-session",
+      },
+      error: null,
+    });
+
+    const res = await POST(
+      makeRequest({ propertyId: "abc-123", language: "de" }, "attacker-session"),
+    );
+    expect(res.status).toBe(403);
+    expect(mockCheckRateLimit).not.toHaveBeenCalled();
   });
 
   it("onFinish preserves existing hashtags when regenerating with a comment", async () => {

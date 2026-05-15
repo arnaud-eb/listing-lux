@@ -8,6 +8,7 @@ import { listingOutputSchema } from "@/lib/schemas/listing";
 import type { Language, PhotoAnalysis } from "@/lib/types";
 import { MAX_COMMENT_LENGTH } from "@/lib/constants";
 import { getSessionIdFromCookie } from "@/lib/session";
+import { checkRateLimit, rateLimitHeaders } from "@/lib/rate-limit";
 
 function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
   const match = cookieHeader.match(/NEXT_LOCALE=(\w+)/);
@@ -61,6 +62,23 @@ export async function POST(request: Request) {
   const sessionId = getSessionIdFromCookie(cookieHeader);
   if (!sessionId || property.session_id !== sessionId) {
     return Response.json({ error: t("unauthorized") }, { status: 403 });
+  }
+
+  // Per-session rate limit. Runs AFTER ownership check so 403 still wins for
+  // foreign sessions — limit reads here would otherwise waste Upstash budget.
+  const rl = await checkRateLimit(sessionId, "generate");
+  if (!rl.success) {
+    const retryAfter = Math.max(1, Math.ceil((rl.reset - Date.now()) / 1000));
+    return Response.json(
+      { error: t("rateLimited") },
+      {
+        status: 429,
+        headers: {
+          ...rateLimitHeaders(rl),
+          "Retry-After": String(retryAfter),
+        },
+      },
+    );
   }
 
   // Build prompt
