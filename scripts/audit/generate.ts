@@ -58,8 +58,8 @@ async function generateOne(
     {
       bedrooms: fixture.property.bedrooms,
       bathrooms: fixture.property.bathrooms,
-      sqm: fixture.property.sqm,
-      price: fixture.property.price,
+      sqm: fixture.property.sqm ?? null,
+      price: fixture.property.price ?? null,
       neighborhood: fixture.property.neighborhood,
       property_type: fixture.property.property_type,
       features: fixture.property.features,

@@ -38,6 +38,16 @@ describe("toCamelCase", () => {
     expect(toCamelCase("Agency 21")).toBe("Agency21");
     expect(toCamelCase("century 21 luxury")).toBe("Century21Luxury");
   });
+
+  it("transliterates Latin diacritics instead of dropping them", () => {
+    // Pre-NFKD-normalization fix: "Côté" became "Ct" (accents stripped as
+    // "special chars") and "Müller" became "Mller". The NFKD pass now splits
+    // them into base + combining mark so the base letter survives.
+    expect(toCamelCase("Côté Lux")).toBe("CoteLux");
+    expect(toCamelCase("Müller Immo")).toBe("MullerImmo");
+    expect(toCamelCase("Sànchez & Reñé")).toBe("SanchezRene");
+    expect(toCamelCase("Déjà-Vu Properties")).toBe("DejaVuProperties");
+  });
 });
 
 describe("buildPdfFilename", () => {
@@ -122,6 +132,12 @@ describe("buildPdfFilename", () => {
         agency_name: "Sotheby's International Realty",
       }),
     ).toBe("SothebysInternationalRealty-Kirchberg-Apartment.pdf");
+  });
+
+  it("transliterates accented agency names (Luxembourg/BE/FR market)", () => {
+    expect(
+      buildPdfFilename(property, { agency_name: "Côté Lux Immobilier" }),
+    ).toBe("CoteLuxImmobilier-Kirchberg-Apartment.pdf");
   });
 
   describe("language suffix", () => {

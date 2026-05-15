@@ -56,10 +56,20 @@ vi.mock("@/lib/supabase.server", () => ({
   })),
 }));
 
+const mockCheckRateLimit = vi.fn();
+vi.mock("@/lib/rate-limit", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@/lib/rate-limit")>();
+  return {
+    ...actual,
+    checkRateLimit: (...args: unknown[]) => mockCheckRateLimit(...args),
+  };
+});
+
 import {
   getSignedUploadUrl,
   saveProperty,
   derivePropertyAggregates,
+  analyzePhoto,
 } from "./actions";
 import type { PhotoAnalysis } from "@/lib/schemas/photo-analysis";
 
@@ -230,6 +240,61 @@ describe("saveProperty", () => {
     });
     expect(mockCookieSet).not.toHaveBeenCalled();
   });
+
+  it("rejects a rent submission with a past availability_date", async () => {
+    await expect(
+      saveProperty({
+        bedrooms: 2,
+        bathrooms: 1,
+        sqm: 100,
+        price: 2_400,
+        neighborhood: "belair",
+        property_type: "apartment",
+        features: {},
+        photo_urls: VALID_URLS,
+        listing_kind: "rent",
+        availability_date: "2000-01-01",
+      }),
+    ).rejects.toThrow("availability_date cannot be in the past");
+  });
+
+  it("accepts a rent submission with a future availability_date", async () => {
+    const future = new Date();
+    future.setFullYear(future.getFullYear() + 1);
+    const futureIso = future.toISOString().slice(0, 10);
+    const result = await saveProperty({
+      bedrooms: 2,
+      bathrooms: 1,
+      sqm: 100,
+      price: 2_400,
+      neighborhood: "belair",
+      property_type: "apartment",
+      features: {},
+      photo_urls: VALID_URLS,
+      listing_kind: "rent",
+      availability_date: futureIso,
+    });
+    expect(result.id).toBeDefined();
+  });
+
+  it("ignores availability_date on sale even if set in the past (server rent gate is the only branch that checks)", async () => {
+    // The server-side rent gate nulls availability_date on sale before insert,
+    // so a past date on sale is benign — it never reaches the DB. This guards
+    // against accidentally adding the past-date check outside the isRent branch.
+    const result = await saveProperty({
+      bedrooms: 2,
+      bathrooms: 1,
+      sqm: 100,
+      price: 850_000,
+      neighborhood: "belair",
+      property_type: "apartment",
+      features: {},
+      photo_urls: VALID_URLS,
+      listing_kind: "sale",
+      availability_date: "2000-01-01",
+    });
+    expect(result.id).toBeDefined();
+  });
 });
 
 function makeAnalysis(overrides: Partial<PhotoAnalysis> = {}): PhotoAnalysis {
@@ -240,6 +305,8 @@ function makeAnalysis(overrides: Partial<PhotoAnalysis> = {}): PhotoAnalysis {
     condition: "immaculate",
     selling_points: ["open plan"],
     atmosphere: "bright",
+    cpe_class: null,
+    thermal_insulation_class: null,
     ...overrides,
   };
 }
@@ -284,5 +351,50 @@ describe("derivePropertyAggregates", () => {
     await expect(
       derivePropertyAggregates([makeAnalysis()]),
     ).rejects.toThrow("rate limit");
+  });
+});
+
+describe("analyzePhoto rate limiting", () => {
+  it("throws RateLimitError when per-session limit is exhausted", async () => {
+    mockCheckRateLimit.mockResolvedValueOnce({
+      success: false,
+      remaining: 0,
+      limit: 30,
+      reset: Date.now() + 30_000,
+    });
+    // Sanity: the OpenAI call must not happen on a denied request — that's the
+    // whole point of the limiter.
+    mockGenerateObject.mockClear();
+
+    await expect(
+      analyzePhoto("https://example.com/photo.jpg"),
+    ).rejects.toMatchObject({
+      name: "RateLimitError",
+      retryAfter: expect.any(Number),
+    });
+    expect(mockGenerateObject).not.toHaveBeenCalled();
+  });
+
+  it("proceeds to OpenAI when the limiter allows", async () => {
+    mockCheckRateLimit.mockResolvedValueOnce({
+      success: true,
+      remaining: 29,
+      limit: 30,
+      reset: Date.now() + 60_000,
+    });
+    mockGenerateObject.mockResolvedValueOnce({
+      object: {
+        room_type: "living-room",
+        atmosphere: "bright",
+        style: "modern",
+        condition: "renovated",
+        features: [],
+        selling_points: [],
+        cpe_class: null,
+        thermal_insulation_class: null,
+      },
+    });
+    const result = await analyzePhoto("https://example.com/photo.jpg");
+    expect(result.room_type).toBe("living-room");
   });
 });

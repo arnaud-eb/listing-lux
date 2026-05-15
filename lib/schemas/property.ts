@@ -5,8 +5,8 @@ import { CPE_CLASSES, LISTING_KINDS } from "@/lib/constants";
 const propertyBase = {
   bedrooms: z.number().int().min(0),
   bathrooms: z.number().int().min(0),
-  sqm: z.number().positive(),
-  price: z.number().positive(),
+  sqm: z.number().positive().optional().nullable(),
+  price: z.number().positive().optional().nullable(),
   neighborhood: z.string().min(1),
   property_type: z.string().min(1),
   features: z.record(z.string(), z.boolean()),
@@ -25,13 +25,15 @@ const propertyBase = {
   floors_total: z.number().int().positive().optional().nullable(),
   /** Floor of this unit. 0 = ground floor, negative = basement. */
   floor_of_unit: z.number().int().optional().nullable(),
+  /** Move-in date for rentals. ISO YYYY-MM-DD; pass-through to native <input type="date">. */
+  availability_date: z.iso.date().optional().nullable(),
 };
 
 /** Form submission — base + optional photo analyses + optional address */
 export const propertyFormSchema = z.object({
   ...propertyBase,
   photo_analyses: z.array(z.any()).optional(),
-  address: z.string().optional(),
+  address: z.string().optional().nullable(),
 });
 
 /** DB row — base + server-managed fields */

@@ -10,6 +10,7 @@ import {
 } from "@/lib/constants";
 import { generateObject } from "ai";
 import { openai } from "@/lib/ai/client";
+import { checkRateLimit, RateLimitError } from "@/lib/rate-limit";
 import { propertyFormSchema } from "@/lib/schemas/property";
 import { photoAnalysisSchema, type PhotoAnalysis } from "@/lib/schemas/photo-analysis";
 import {
@@ -84,6 +85,16 @@ export async function analyzePhoto(photoUrl: string) {
     new URL(photoUrl);
   } catch {
     throw new Error("photoUrl must be a valid URL");
+  }
+
+  // Per-session rate limit. Photo analysis is cheaper per call than generation
+  // but agents batch-upload 10–20 photos, so this bucket is roomier (30/min
+  // vs 10/min for generation).
+  const sessionId = await getOrCreateSession();
+  const rl = await checkRateLimit(sessionId, "photoAnalysis");
+  if (!rl.success) {
+    const retryAfter = Math.max(1, Math.ceil((rl.reset - Date.now()) / 1000));
+    throw new RateLimitError(retryAfter);
   }
 
   const { object: analysis } = await generateObject({
@@ -195,6 +206,24 @@ export async function saveProperty(
 
   const supabase = createServiceClient();
 
+  // Server-side rent gating (defense in depth — the client also gates in
+  // buildPropertyFormData, but never trust the client). Sale listings must never
+  // persist charges/availability even if a forged payload sends them.
+  const listingKind = formData.listing_kind ?? "sale";
+  const isRent = listingKind === "rent";
+
+  // Reject past availability dates server-side. ISO YYYY-MM-DD sorts
+  // lexicographically, so a string compare against today's ISO date is correct
+  // without parsing into Date objects.
+  if (isRent && formData.availability_date) {
+    const todayIso = new Date().toISOString().slice(0, 10);
+    if (formData.availability_date < todayIso) {
+      throw new Error(
+        "Validation failed: availability_date cannot be in the past",
+      );
+    }
+  }
+
   const { data, error } = await supabase
     .from("properties")
     .insert({
@@ -208,11 +237,15 @@ export async function saveProperty(
       photo_urls: formData.photo_urls,
       photo_analyses: formData.photo_analyses ?? [],
       session_id: sessionId,
-      ...(formData.address ? { address: formData.address } : {}),
-      ...(formData.cpe_class ? { cpe_class: formData.cpe_class } : {}),
-      ...(formData.thermal_insulation_class
-        ? { thermal_insulation_class: formData.thermal_insulation_class }
-        : {}),
+      listing_kind: listingKind,
+      address: formData.address ?? null,
+      cpe_class: formData.cpe_class ?? null,
+      thermal_insulation_class: formData.thermal_insulation_class ?? null,
+      year_built: formData.year_built ?? null,
+      floors_total: formData.floors_total ?? null,
+      floor_of_unit: formData.floor_of_unit ?? null,
+      charges_monthly: formData.charges_monthly ?? null,
+      availability_date: isRent ? formData.availability_date ?? null : null,
     })
     .select("id")
     .single();

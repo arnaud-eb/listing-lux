@@ -14,8 +14,8 @@ interface PropertyWithListings {
   id: string;
   bedrooms: number;
   bathrooms: number;
-  sqm: number;
-  price: number;
+  sqm: number | null;
+  price: number | null;
   neighborhood: string;
   property_type: string;
   photo_urls: string[] | null;
@@ -128,10 +128,12 @@ export default async function HistoryPage() {
                       <Bath className="size-3.5" />
                       {property.bathrooms}
                     </span>
-                    <span className="flex items-center gap-1">
-                      <Maximize className="size-3.5" />
-                      {property.sqm} m²
-                    </span>
+                    {property.sqm != null && (
+                      <span className="flex items-center gap-1">
+                        <Maximize className="size-3.5" />
+                        {property.sqm} m²
+                      </span>
+                    )}
                   </div>
 
                   <div className="flex items-center justify-between mt-3">
@@ -139,7 +141,9 @@ export default async function HistoryPage() {
                       amount={property.price}
                       className="text-sm font-semibold text-navy-deep"
                     />
-                    <span className="text-2xs text-gray-400">{createdAt}</span>
+                    <span className="ml-auto text-2xs text-gray-400">
+                      {createdAt}
+                    </span>
                   </div>
                 </div>
               </Link>

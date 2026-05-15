@@ -1,6 +1,6 @@
 import { useReducer, useCallback, useEffect, useRef, useState } from "react";
 import type { ListingPhoto, PropertyFormData } from "@/lib/types";
-import type { CpeClass } from "@/lib/constants";
+import type { CpeClass, ListingKind } from "@/lib/constants";
 import { MIN_PHOTOS, FEATURE_OPTIONS } from "@/lib/constants";
 import {
   getSignedUploadUrl,
@@ -13,7 +13,7 @@ const DRAFT_KEY = "listinglux-create-draft";
 
 // --- State ---
 
-interface PropertyFormState {
+export interface PropertyFormState {
   bedrooms: number;
   bathrooms: number;
   sqm: number | "";
@@ -26,9 +26,21 @@ interface PropertyFormState {
   /** "" sentinel = unselected. The Select renders "" as the placeholder. */
   cpeClass: CpeClass | "";
   thermalInsulationClass: CpeClass | "";
+  /** Sale or rent. Drives visibility of charges/availability fields. Defaults to 'sale' (~70% of LU listings). */
+  listingKind: ListingKind;
+  /** Year of construction (1800–2100). "" = blank. */
+  yearBuilt: number | "";
+  /** Monthly charges (€). Rent only. "" = blank. */
+  chargesMonthly: number | "";
+  /** Floors in the building. "" = blank. */
+  floorsTotal: number | "";
+  /** Floor of this unit. 0 = ground floor, negative = basement. "" = blank. */
+  floorOfUnit: number | "";
+  /** ISO YYYY-MM-DD from <input type="date">. Rent only. "" = blank. */
+  availabilityDate: string;
 }
 
-const INITIAL_STATE: PropertyFormState = {
+export const INITIAL_STATE: PropertyFormState = {
   bedrooms: 2,
   bathrooms: 1,
   sqm: "",
@@ -40,11 +52,17 @@ const INITIAL_STATE: PropertyFormState = {
   address: "",
   cpeClass: "",
   thermalInsulationClass: "",
+  listingKind: "sale",
+  yearBuilt: "",
+  chargesMonthly: "",
+  floorsTotal: "",
+  floorOfUnit: "",
+  availabilityDate: "",
 };
 
 // --- Actions ---
 
-type FormAction =
+export type FormAction =
   | {
       type: "SET_FIELD";
       key: keyof Omit<PropertyFormState, "photos">;
@@ -64,7 +82,7 @@ type FormAction =
   | { type: "RESTORE_DRAFT"; state: PropertyFormState }
   | { type: "RESET" };
 
-function formReducer(
+export function formReducer(
   state: PropertyFormState,
   action: FormAction,
 ): PropertyFormState {
@@ -150,12 +168,7 @@ export function usePropertyForm() {
   ).length;
 
   const hasRequiredFields =
-    state.bedrooms >= 0 &&
-    typeof state.sqm === "number" &&
-    state.sqm > 0 &&
-    typeof state.price === "number" &&
-    state.price > 0 &&
-    state.neighborhood !== "";
+    state.bedrooms >= 0 && state.neighborhood !== "";
 
   const canGenerate =
     readyPhotoCount >= MIN_PHOTOS &&
@@ -181,6 +194,12 @@ export function usePropertyForm() {
         cpeClass: d.cpeClass ?? INITIAL_STATE.cpeClass,
         thermalInsulationClass:
           d.thermalInsulationClass ?? INITIAL_STATE.thermalInsulationClass,
+        listingKind: d.listingKind ?? INITIAL_STATE.listingKind,
+        yearBuilt: d.yearBuilt ?? INITIAL_STATE.yearBuilt,
+        chargesMonthly: d.chargesMonthly ?? INITIAL_STATE.chargesMonthly,
+        floorsTotal: d.floorsTotal ?? INITIAL_STATE.floorsTotal,
+        floorOfUnit: d.floorOfUnit ?? INITIAL_STATE.floorOfUnit,
+        availabilityDate: d.availabilityDate ?? INITIAL_STATE.availabilityDate,
         photos: d.photos?.length
           ? d.photos.map((p: Record<string, unknown>) => ({
               ...p,
@@ -393,29 +412,8 @@ export function usePropertyForm() {
     dispatch({ type: "RESET" });
   }
 
-  // --- Build form data for submission ---
   function toFormData(): PropertyFormData {
-    const readyPhotos = state.photos.filter(
-      (p) => p.status === "ready" && p.publicUrl,
-    );
-    return {
-      bedrooms: state.bedrooms,
-      bathrooms: state.bathrooms,
-      sqm: state.sqm as number,
-      price: state.price as number,
-      neighborhood: state.neighborhood,
-      property_type: state.propertyType,
-      features: state.features,
-      photo_urls: readyPhotos.map((p) => p.publicUrl!),
-      photo_analyses: readyPhotos
-        .filter((p) => p.aiAnalysis)
-        .map((p) => p.aiAnalysis!),
-      ...(state.address ? { address: state.address } : {}),
-      ...(state.cpeClass ? { cpe_class: state.cpeClass } : {}),
-      ...(state.thermalInsulationClass
-        ? { thermal_insulation_class: state.thermalInsulationClass }
-        : {}),
-    };
+    return buildPropertyFormData(state);
   }
 
   function clearDraft() {
@@ -439,4 +437,63 @@ export function usePropertyForm() {
     toFormData,
     clearDraft,
   };
+}
+
+// --- Pure selectors (exported for unit tests and page.tsx) ---
+
+// availability_date is rent-only (gate below); charges_monthly applies to both
+// sale and rent listings (co-ownership fees for sale, monthly charges for rent).
+export function buildPropertyFormData(
+  state: PropertyFormState,
+): PropertyFormData {
+  const readyPhotos = state.photos.filter(
+    (p) => p.status === "ready" && p.publicUrl,
+  );
+  const isRent = state.listingKind === "rent";
+  return {
+    bedrooms: state.bedrooms,
+    bathrooms: state.bathrooms,
+    sqm: typeof state.sqm === "number" ? state.sqm : null,
+    price: typeof state.price === "number" ? state.price : null,
+    neighborhood: state.neighborhood,
+    property_type: state.propertyType,
+    features: state.features,
+    photo_urls: readyPhotos.map((p) => p.publicUrl!),
+    photo_analyses: readyPhotos
+      .filter((p) => p.aiAnalysis)
+      .map((p) => p.aiAnalysis!),
+    listing_kind: state.listingKind,
+    address: state.address || null,
+    cpe_class: state.cpeClass || null,
+    thermal_insulation_class: state.thermalInsulationClass || null,
+    year_built: typeof state.yearBuilt === "number" ? state.yearBuilt : null,
+    floors_total:
+      typeof state.floorsTotal === "number" ? state.floorsTotal : null,
+    floor_of_unit:
+      typeof state.floorOfUnit === "number" ? state.floorOfUnit : null,
+    charges_monthly:
+      typeof state.chargesMonthly === "number" ? state.chargesMonthly : null,
+    availability_date:
+      isRent && state.availabilityDate ? state.availabilityDate : null,
+  };
+}
+
+/**
+ * True when any field differs from INITIAL_STATE. Derived from the state shape
+ * (Object.keys) so new fields added to PropertyFormState are tracked
+ * automatically — no manual OR-chain to keep in sync.
+ */
+export function isFormDirty(state: PropertyFormState): boolean {
+  for (const key of Object.keys(INITIAL_STATE) as (keyof PropertyFormState)[]) {
+    if (key === "features") {
+      if (Object.values(state.features).some(Boolean)) return true;
+      continue;
+    }
+    if (key === "photos") {
+      if (state.photos.length > 0) return true;
+      continue;
+    }
+    if (state[key] !== INITIAL_STATE[key]) return true;
+  }
+  return false;
 }

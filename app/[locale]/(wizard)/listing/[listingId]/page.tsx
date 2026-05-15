@@ -73,13 +73,21 @@ export async function generateMetadata({
       type: typeName,
       neighborhood: neighborhoodName,
     }),
-    description: t("listingDescriptionTemplate", {
-      bedrooms: p.bedrooms,
-      bathrooms: p.bathrooms,
-      sqm: p.sqm,
-      type: p.property_type,
-      neighborhood: neighborhoodName,
-    }),
+    description:
+      p.sqm != null
+        ? t("listingDescriptionTemplate", {
+            bedrooms: p.bedrooms,
+            bathrooms: p.bathrooms,
+            sqm: p.sqm,
+            type: p.property_type,
+            neighborhood: neighborhoodName,
+          })
+        : t("listingDescriptionTemplateNoSqm", {
+            bedrooms: p.bedrooms,
+            bathrooms: p.bathrooms,
+            type: p.property_type,
+            neighborhood: neighborhoodName,
+          }),
     openGraph: {
       images: p.photo_urls[0] ? [{ url: p.photo_urls[0] }] : [],
     },
@@ -108,8 +116,8 @@ export default async function ListingPage({ params }: PageProps) {
     id: p.id,
     bedrooms: p.bedrooms,
     bathrooms: p.bathrooms,
-    sqm: p.sqm,
-    price: p.price,
+    sqm: p.sqm ?? null,
+    price: p.price ?? null,
     neighborhood: p.neighborhood,
     property_type: p.property_type,
     features: p.features,

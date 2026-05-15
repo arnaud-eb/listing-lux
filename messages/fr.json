@@ -6,7 +6,8 @@
     "profileTitle": "Votre profil — ListingLux AI",
     "listingNotFoundTitle": "Annonce introuvable — ListingLux AI",
     "listingTitleTemplate": "{type} à {neighborhood} — ListingLux AI",
-    "listingDescriptionTemplate": "{bedrooms} ch · {bathrooms} sdb · {sqm} m² {type} de luxe à {neighborhood}, Luxembourg"
+    "listingDescriptionTemplate": "{bedrooms} ch · {bathrooms} sdb · {sqm} m² {type} de luxe à {neighborhood}, Luxembourg",
+    "listingDescriptionTemplateNoSqm": "{bedrooms} ch · {bathrooms} sdb {type} de luxe à {neighborhood}, Luxembourg"
   },
   "common": {
     "skipToMain": "Aller au contenu principal",
@@ -156,22 +157,39 @@
       "startOver": "Tout recommencer",
       "startOverDialogTitle": "Tout recommencer ?",
       "startOverDialogDescription": "Cela effacera tous les détails et photos que vous avez ajoutés. Cette action est irréversible.",
-      "propertyDetails": "Détails du bien",
+      "essentialsTitle": "Informations essentielles",
+      "moreDetailsTitle": "Détails complémentaires",
+      "moreDetailsHint": "Optionnel",
+      "listingKindLabel": "Type d'annonce",
+      "listingKindSale": "Vente",
+      "listingKindRent": "Location",
       "bedroomsLabel": "Chambres",
       "bathroomsLabel": "Salles de bain",
       "sizeLabel": "Superficie (m²)",
       "sizePlaceholder": "ex. 120",
       "priceLabel": "Prix demandé (€)",
+      "rentPriceLabel": "Loyer mensuel (€)",
       "pricePlaceholder": "ex. 850.000",
+      "rentPricePlaceholder": "ex. 2.400",
+      "chargesMonthlyLabel": "Charges / mois (€)",
+      "chargesMonthlyPlaceholder": "ex. 250",
+      "availabilityDateLabel": "Disponible à partir du",
+      "availabilityDatePastError": "La date ne peut pas être dans le passé",
       "addressLabel": "Adresse du bien",
       "addressPlaceholder": "ex. 12 Rue de Clausen, Luxembourg",
-      "addressHelper": "Optionnel — inclus dans les exports PDF et réseaux sociaux",
+      "addressHelper": "Incluse dans les exports PDF et réseaux sociaux",
+      "yearBuiltLabel": "Année de construction",
+      "yearBuiltPlaceholder": "ex. 2020",
+      "floorsTotalLabel": "Étages du bâtiment",
+      "floorsTotalPlaceholder": "ex. 4",
+      "floorOfUnitLabel": "Étage du logement",
+      "floorOfUnitPlaceholder": "0 = rez-de-chaussée",
       "cpeClassLabel": "Classe énergétique (CPE)",
       "cpeClassPlaceholder": "Optionnel",
-      "cpeClassClear": "Effacer la classe énergétique",
+      "cpeClassNone": "Aucune",
       "thermalClassLabel": "Classe d'isolation thermique",
       "thermalClassPlaceholder": "Optionnel",
-      "thermalClassClear": "Effacer la classe d'isolation thermique",
+      "thermalClassNone": "Aucune",
       "validationError": "Veuillez vérifier vos informations et réessayer."
     },
     "photoUploader": {
@@ -202,6 +220,10 @@
     "stepperInput": {
       "ariaDecrease": "Diminuer {label}",
       "ariaIncrease": "Augmenter {label}"
+    },
+    "numberField": {
+      "minError": "Minimum : {min}",
+      "maxError": "Maximum : {max}"
     },
     "generateBar": {
       "generating": "Génération…",
@@ -244,7 +266,7 @@
     },
     "history": {
       "title": "Vos annonces",
-      "subtitle": "Les biens que vous avez créés",
+      "subtitle": "Les annonces que vous avez créées",
       "emptyTitle": "Aucune annonce pour le moment",
       "emptyBody": "Créez votre première annonce pour la voir apparaître ici.",
       "createListing": "Créer une annonce",
@@ -476,7 +498,8 @@
       "noValidLanguages": "Aucune langue valide fournie",
       "noListingsFound": "Aucune annonce trouvée pour les langues demandées",
       "noCompletedListings": "Aucune annonce complète trouvée",
-      "pdfFailed": "La génération du PDF a échoué"
+      "pdfFailed": "La génération du PDF a échoué",
+      "rateLimited": "Trop de requêtes. Veuillez réessayer dans un instant."
     },
     "actions": {
       "validationFailed": "Validation échouée : {messages}",

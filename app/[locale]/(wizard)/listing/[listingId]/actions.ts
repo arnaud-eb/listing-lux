@@ -11,8 +11,8 @@ export async function updateProperty(
   updates: {
     bedrooms?: number;
     bathrooms?: number;
-    sqm?: number;
-    price?: number;
+    sqm?: number | null;
+    price?: number | null;
     property_type?: string;
     neighborhood?: string;
     address?: string | null;

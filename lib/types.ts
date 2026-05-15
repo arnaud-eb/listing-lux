@@ -1,5 +1,5 @@
 import type { PhotoAnalysis } from '@/lib/schemas/photo-analysis'
-import type { CpeClass } from '@/lib/constants'
+import type { CpeClass, ListingKind } from '@/lib/constants'
 
 export type Language = 'de' | 'fr' | 'en'
 
@@ -21,8 +21,8 @@ export interface Property {
   id: string
   bedrooms: number
   bathrooms: number
-  sqm: number
-  price: number
+  sqm: number | null
+  price: number | null
   neighborhood: string
   property_type: string
   features: Record<string, boolean>
@@ -69,14 +69,21 @@ export interface AgentProfile {
 export interface PropertyFormData {
   bedrooms: number
   bathrooms: number
-  sqm: number
-  price: number
+  sqm?: number | null
+  price?: number | null
   neighborhood: string
   property_type: string
   features: Record<string, boolean>
   photo_urls: string[]
   photo_analyses?: PhotoAnalysis[]
-  address?: string
+  address?: string | null
+  listing_kind?: ListingKind
   cpe_class?: CpeClass | null
   thermal_insulation_class?: CpeClass | null
+  year_built?: number | null
+  charges_monthly?: number | null
+  floors_total?: number | null
+  floor_of_unit?: number | null
+  /** ISO YYYY-MM-DD; rentals only. */
+  availability_date?: string | null
 }

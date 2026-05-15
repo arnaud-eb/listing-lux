@@ -67,7 +67,13 @@ export const IMMOTOP_CHAR_LIMIT = 3000;
 
 function buildPropertyDetailsLine(property: Property, language: Language): string {
   const labels = PROPERTY_DETAIL_LABELS[language] ?? PROPERTY_DETAIL_LABELS.en;
-  return `${formatCurrency(property.price)} | ${property.sqm} m² | ${property.bedrooms} ${labels.bedroom(property.bedrooms)} | ${property.bathrooms} ${labels.bathroom(property.bathrooms)}`;
+  const parts = [
+    property.price != null ? formatCurrency(property.price) : null,
+    property.sqm != null ? `${property.sqm} m²` : null,
+    `${property.bedrooms} ${labels.bedroom(property.bedrooms)}`,
+    `${property.bathrooms} ${labels.bathroom(property.bathrooms)}`,
+  ].filter((p): p is string => p !== null);
+  return parts.join(" | ");
 }
 
 function highlightTexts(highlights: Highlight[]): string[] {
@@ -194,7 +200,13 @@ export function formatForSocialMedia(
 
   const language = (listing.language ?? "en") as Language;
   const labels = PROPERTY_DETAIL_LABELS[language] ?? PROPERTY_DETAIL_LABELS.en;
-  const detailsLine = `💰 ${formatCurrency(property.price)} | 📏 ${property.sqm} m² | 🛏️ ${property.bedrooms} ${labels.bedroom(property.bedrooms)} | 🚿 ${property.bathrooms} ${labels.bathroom(property.bathrooms)}`;
+  const detailParts = [
+    property.price != null ? `💰 ${formatCurrency(property.price)}` : null,
+    property.sqm != null ? `📏 ${property.sqm} m²` : null,
+    `🛏️ ${property.bedrooms} ${labels.bedroom(property.bedrooms)}`,
+    `🚿 ${property.bathrooms} ${labels.bathroom(property.bathrooms)}`,
+  ].filter((p): p is string => p !== null);
+  const detailsLine = detailParts.join(" | ");
   const addressLine = property.address ? `📍 ${property.address}` : "";
 
   const parts = [

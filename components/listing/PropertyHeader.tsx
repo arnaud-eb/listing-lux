@@ -14,7 +14,11 @@ import {
 } from "@/components/ui/select";
 import PriceDisplay from "@/components/shared/PriceDisplay";
 import { getActiveMarket, getNeighborhoodBySlug } from "@/lib/markets";
-import { formatNumber, parseFormattedNumber } from "@/lib/format";
+import {
+  formatNumber,
+  parseFormattedNumber,
+  parseIntegerInput,
+} from "@/lib/format";
 import { updateProperty } from "@/app/[locale]/(wizard)/listing/[listingId]/actions";
 import { toast } from "sonner";
 import type { Property } from "@/lib/types";
@@ -33,7 +37,15 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
   const [editing, setEditing] = useState(false);
   const [isPending, startTransition] = useTransition();
 
-  const [draft, setDraft] = useState({
+  const [draft, setDraft] = useState<{
+    property_type: string;
+    neighborhood: string;
+    bedrooms: number;
+    bathrooms: number;
+    sqm: number | null;
+    price: number | null;
+    address: string;
+  }>({
     property_type: property.property_type,
     neighborhood: property.neighborhood,
     bedrooms: property.bedrooms,
@@ -44,8 +56,12 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
   });
   const [bedsInput, setBedsInput] = useState(String(property.bedrooms));
   const [bathsInput, setBathsInput] = useState(String(property.bathrooms));
-  const [sqmInput, setSqmInput] = useState(String(property.sqm));
-  const [priceInput, setPriceInput] = useState(formatNumber(property.price));
+  const [sqmInput, setSqmInput] = useState(
+    property.sqm != null ? String(property.sqm) : "",
+  );
+  const [priceInput, setPriceInput] = useState(
+    property.price != null ? formatNumber(property.price) : "",
+  );
 
   const neighborhoodName =
     getNeighborhoodBySlug(property.neighborhood)?.name ??
@@ -64,8 +80,8 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
     });
     setBedsInput(String(property.bedrooms));
     setBathsInput(String(property.bathrooms));
-    setSqmInput(String(property.sqm));
-    setPriceInput(formatNumber(property.price));
+    setSqmInput(property.sqm != null ? String(property.sqm) : "");
+    setPriceInput(property.price != null ? formatNumber(property.price) : "");
     setEditing(true);
   }
 
@@ -173,10 +189,9 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               value={bedsInput}
               className="h-9 w-16 shadow-none border-dashed border-gold bg-gold/5"
               onChange={(e) => {
-                const raw = e.target.value.replace(/[^0-9]/g, "");
-                setBedsInput(raw);
-                const n = parseInt(raw, 10);
-                if (!isNaN(n)) setDraft((d) => ({ ...d, bedrooms: n }));
+                const { cleaned, value } = parseIntegerInput(e.target.value);
+                setBedsInput(cleaned);
+                if (value !== "") setDraft((d) => ({ ...d, bedrooms: value }));
               }}
               onBlur={() => setBedsInput(String(draft.bedrooms))}
             />
@@ -189,10 +204,9 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               value={bathsInput}
               className="h-9 w-16 shadow-none border-dashed border-gold bg-gold/5"
               onChange={(e) => {
-                const raw = e.target.value.replace(/[^0-9]/g, "");
-                setBathsInput(raw);
-                const n = parseInt(raw, 10);
-                if (!isNaN(n)) setDraft((d) => ({ ...d, bathrooms: n }));
+                const { cleaned, value } = parseIntegerInput(e.target.value);
+                setBathsInput(cleaned);
+                if (value !== "") setDraft((d) => ({ ...d, bathrooms: value }));
               }}
               onBlur={() => setBathsInput(String(draft.bathrooms))}
             />
@@ -205,12 +219,13 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               value={sqmInput}
               className="h-9 w-24 shadow-none border-dashed border-gold bg-gold/5"
               onChange={(e) => {
-                const raw = e.target.value.replace(/[^0-9]/g, "");
-                setSqmInput(raw);
-                const n = parseInt(raw, 10);
-                if (!isNaN(n)) setDraft((d) => ({ ...d, sqm: n }));
+                const { cleaned, value } = parseIntegerInput(e.target.value);
+                setSqmInput(cleaned);
+                setDraft((d) => ({ ...d, sqm: value === "" ? null : value }));
               }}
-              onBlur={() => setSqmInput(String(draft.sqm))}
+              onBlur={() =>
+                setSqmInput(draft.sqm != null ? String(draft.sqm) : "")
+              }
             />
           </div>
           <div className="flex flex-col gap-1">
@@ -224,11 +239,15 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
               onChange={(e) => {
                 setPriceInput(e.target.value);
                 const parsed = parseFormattedNumber(e.target.value);
-                if (parsed !== "")
-                  setDraft((d) => ({ ...d, price: parsed as number }));
+                setDraft((d) => ({
+                  ...d,
+                  price: parsed === "" ? null : (parsed as number),
+                }));
               }}
               onBlur={() => {
-                if (draft.price) setPriceInput(formatNumber(draft.price));
+                setPriceInput(
+                  draft.price != null ? formatNumber(draft.price) : "",
+                );
               }}
             />
           </div>
@@ -271,13 +290,21 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
           {property.bathrooms}{" "}
           {property.bathrooms === 1 ? t("bathSingular") : t("bathPlural")}
         </span>
-        <span>·</span>
-        <span>{property.sqm} m²</span>
-        <span>·</span>
-        <PriceDisplay
-          amount={property.price}
-          className="font-semibold text-navy-deep"
-        />
+        {property.sqm != null && (
+          <>
+            <span>·</span>
+            <span>{property.sqm} m²</span>
+          </>
+        )}
+        {property.price != null && (
+          <>
+            <span>·</span>
+            <PriceDisplay
+              amount={property.price}
+              className="font-semibold text-navy-deep"
+            />
+          </>
+        )}
         <button
           type="button"
           onClick={handleEdit}

@@ -18,6 +18,8 @@ function makeReadyPhoto(roomType = "kitchen"): ListingPhoto {
       condition: "immaculate",
       selling_points: ["open plan"],
       atmosphere: "bright",
+      cpe_class: null,
+      thermal_insulation_class: null,
     },
   };
 }

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   Document,
   Page,
@@ -268,25 +269,21 @@ function DetailsBar({
   language: Language;
 }) {
   const labels = PROPERTY_DETAIL_LABELS[language];
+  const items: string[] = [];
+  if (property.price != null) items.push(formatCurrency(property.price));
+  if (property.sqm != null) items.push(`${property.sqm} m²`);
+  items.push(`${property.bedrooms} ${labels.bedroom(property.bedrooms)}`);
+  items.push(`${property.bathrooms} ${labels.bathroom(property.bathrooms)}`);
+  if (property.address) items.push(property.address);
+
   return (
     <View style={styles.detailsBar}>
-      <Text style={styles.detailItem}>{formatCurrency(property.price)}</Text>
-      <Text style={styles.detailItem}>|</Text>
-      <Text style={styles.detailItem}>{property.sqm} m²</Text>
-      <Text style={styles.detailItem}>|</Text>
-      <Text style={styles.detailItem}>
-        {property.bedrooms} {labels.bedroom(property.bedrooms)}
-      </Text>
-      <Text style={styles.detailItem}>|</Text>
-      <Text style={styles.detailItem}>
-        {property.bathrooms} {labels.bathroom(property.bathrooms)}
-      </Text>
-      {property.address && (
-        <>
-          <Text style={styles.detailItem}>|</Text>
-          <Text style={styles.detailItem}>{property.address}</Text>
-        </>
-      )}
+      {items.map((item, i) => (
+        <Fragment key={i}>
+          {i > 0 && <Text style={styles.detailItem}>|</Text>}
+          <Text style={styles.detailItem}>{item}</Text>
+        </Fragment>
+      ))}
     </View>
   );
 }

@@ -24,6 +24,34 @@ export function parseFormattedNumber(input: string): number | "" {
   return Number(digits);
 }
 
+// --- Integer input sanitization ---
+
+/**
+ * Sanitize a raw text input into a display string + parsed integer. Shared by
+ * the property form's `NumberField` and the listing `PropertyHeader` inline
+ * editors — both need to strip non-digits (optionally accepting a leading
+ * minus), collapse multiple minuses, and parse the result without silently
+ * truncating ("1,998" must produce 1998, not 1).
+ *
+ * `value === ""` covers empty input, a transient lone "-", and unparseable
+ * garbage. Callers decide whether `""` should clear the model or be ignored.
+ */
+export function parseIntegerInput(
+  raw: string,
+  { allowNegative = false }: { allowNegative?: boolean } = {},
+): { cleaned: string; value: number | "" } {
+  let cleaned = raw.replace(allowNegative ? /[^\d-]/g : /\D/g, "");
+  if (allowNegative) {
+    const negative = cleaned.startsWith("-");
+    cleaned = (negative ? "-" : "") + cleaned.replace(/-/g, "");
+  }
+  if (cleaned === "" || cleaned === "-") {
+    return { cleaned, value: "" };
+  }
+  const n = parseInt(cleaned, 10);
+  return { cleaned, value: Number.isFinite(n) ? n : "" };
+}
+
 // --- Currency formatting ---
 
 const CURRENCY_FORMATTER = new Intl.NumberFormat(LOCALE, {

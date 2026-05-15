@@ -54,7 +54,7 @@ export default function GenerateBar({
 
       {/* Validation hint */}
       {!canGenerate && !isLoading && (
-        <p className="text-xs text-gray-400" role="status">
+        <p className="text-xs text-gray-500" role="status">
           {photosNeeded > 0
             ? t("photosNeeded", { count: photosNeeded })
             : inFlightPhotoCount > 0

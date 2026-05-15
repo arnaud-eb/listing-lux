@@ -6,7 +6,8 @@
     "profileTitle": "Your Profile — ListingLux AI",
     "listingNotFoundTitle": "Listing Not Found — ListingLux AI",
     "listingTitleTemplate": "{type} in {neighborhood} — ListingLux AI",
-    "listingDescriptionTemplate": "{bedrooms} bed · {bathrooms} bath · {sqm} m² luxury {type} in {neighborhood}, Luxembourg"
+    "listingDescriptionTemplate": "{bedrooms} bed · {bathrooms} bath · {sqm} m² luxury {type} in {neighborhood}, Luxembourg",
+    "listingDescriptionTemplateNoSqm": "{bedrooms} bed · {bathrooms} bath luxury {type} in {neighborhood}, Luxembourg"
   },
   "common": {
     "skipToMain": "Skip to main content",
@@ -156,22 +157,39 @@
       "startOver": "Start Over",
       "startOverDialogTitle": "Start over?",
       "startOverDialogDescription": "This will clear all the details and photos you've added. This action cannot be undone.",
-      "propertyDetails": "Property Details",
+      "essentialsTitle": "Listing essentials",
+      "moreDetailsTitle": "Property details",
+      "moreDetailsHint": "Optional",
+      "listingKindLabel": "Listing type",
+      "listingKindSale": "Sale",
+      "listingKindRent": "Rent",
       "bedroomsLabel": "Bedrooms",
       "bathroomsLabel": "Bathrooms",
       "sizeLabel": "Size (m²)",
       "sizePlaceholder": "e.g. 120",
       "priceLabel": "Asking Price (€)",
+      "rentPriceLabel": "Monthly rent (€)",
       "pricePlaceholder": "e.g. 850.000",
+      "rentPricePlaceholder": "e.g. 2.400",
+      "chargesMonthlyLabel": "Charges / month (€)",
+      "chargesMonthlyPlaceholder": "e.g. 250",
+      "availabilityDateLabel": "Available from",
+      "availabilityDatePastError": "Date cannot be in the past",
       "addressLabel": "Property Address",
       "addressPlaceholder": "e.g. 12 Rue de Clausen, Luxembourg",
-      "addressHelper": "Optional — included in PDF and social media exports",
+      "addressHelper": "Included in PDF and social media exports",
+      "yearBuiltLabel": "Year built",
+      "yearBuiltPlaceholder": "e.g. 2020",
+      "floorsTotalLabel": "Floors in building",
+      "floorsTotalPlaceholder": "e.g. 4",
+      "floorOfUnitLabel": "Floor of unit",
+      "floorOfUnitPlaceholder": "0 = ground",
       "cpeClassLabel": "Energy class (CPE)",
       "cpeClassPlaceholder": "Optional",
-      "cpeClassClear": "Clear energy class",
+      "cpeClassNone": "None",
       "thermalClassLabel": "Thermal insulation class",
       "thermalClassPlaceholder": "Optional",
-      "thermalClassClear": "Clear thermal insulation class",
+      "thermalClassNone": "None",
       "validationError": "Please check your input and try again."
     },
     "photoUploader": {
@@ -202,6 +220,10 @@
     "stepperInput": {
       "ariaDecrease": "Decrease {label}",
       "ariaIncrease": "Increase {label}"
+    },
+    "numberField": {
+      "minError": "Minimum: {min}",
+      "maxError": "Maximum: {max}"
     },
     "generateBar": {
       "generating": "Generating…",
@@ -244,7 +266,7 @@
     },
     "history": {
       "title": "Your Listings",
-      "subtitle": "Properties you've created",
+      "subtitle": "Listings you've created",
       "emptyTitle": "No listings yet",
       "emptyBody": "Create your first property listing to see it here.",
       "createListing": "Create Listing",
@@ -476,7 +498,8 @@
       "noValidLanguages": "No valid languages provided",
       "noListingsFound": "No listings found for the requested languages",
       "noCompletedListings": "No completed listings found",
-      "pdfFailed": "PDF generation failed"
+      "pdfFailed": "PDF generation failed",
+      "rateLimited": "Too many requests. Please try again in a moment."
     },
     "actions": {
       "validationFailed": "Validation failed: {messages}",

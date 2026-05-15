@@ -2,6 +2,13 @@ import { describe, it, expect } from "vitest";
 import type { ListingPhoto } from "@/lib/types";
 import { MIN_PHOTOS } from "@/lib/constants";
 import { propertyFormSchema } from "@/lib/schemas/property";
+import {
+  buildPropertyFormData,
+  isFormDirty,
+  formReducer,
+  INITIAL_STATE,
+  type PropertyFormState,
+} from "./use-property-form";
 
 /**
  * These tests verify the invariant that caused a production bug:
@@ -9,10 +16,11 @@ import { propertyFormSchema } from "@/lib/schemas/property";
  * passes Zod validation. Previously, canGenerate counted "processing"
  * photos but toFormData() only collected "ready" ones, so the CTA
  * enabled before the form data was actually valid.
+ *
+ * The canGenerate derivation itself isn't exported (it lives inside the React
+ * hook closure), so we mirror its logic here. The form-data builder, however,
+ * IS exported as `buildPropertyFormData` and these tests exercise it directly.
  */
-
-// Mirror the derived-state logic from use-property-form.ts
-// so we can test it without rendering a React hook.
 
 function makePhoto(overrides: Partial<ListingPhoto> = {}): ListingPhoto {
   return {
@@ -27,16 +35,13 @@ function makePhoto(overrides: Partial<ListingPhoto> = {}): ListingPhoto {
   };
 }
 
-function deriveCanGenerate(photos: ListingPhoto[], fields: { bedrooms: number; sqm: number; price: number; neighborhood: string }) {
+function deriveCanGenerate(photos: ListingPhoto[], fields: { bedrooms: number; neighborhood: string }) {
   const readyPhotoCount = photos.filter((p) => p.status === "ready").length;
   const inFlightPhotoCount = photos.filter(
     (p) => p.status === "uploading" || p.status === "processing",
   ).length;
   const hasRequiredFields =
-    fields.bedrooms > 0 &&
-    fields.sqm > 0 &&
-    fields.price > 0 &&
-    fields.neighborhood !== "";
+    fields.bedrooms >= 0 && fields.neighborhood !== "";
   return (
     readyPhotoCount >= MIN_PHOTOS &&
     inFlightPhotoCount === 0 &&
@@ -44,19 +49,9 @@ function deriveCanGenerate(photos: ListingPhoto[], fields: { bedrooms: number; s
   );
 }
 
-function buildFormData(photos: ListingPhoto[], fields: { bedrooms: number; bathrooms: number; sqm: number; price: number; neighborhood: string; propertyType: string; features: Record<string, boolean> }) {
-  const readyPhotos = photos.filter((p) => p.status === "ready" && p.publicUrl);
-  return {
-    bedrooms: fields.bedrooms,
-    bathrooms: fields.bathrooms,
-    sqm: fields.sqm,
-    price: fields.price,
-    neighborhood: fields.neighborhood,
-    property_type: fields.propertyType,
-    features: fields.features,
-    photo_urls: readyPhotos.map((p) => p.publicUrl!),
-    photo_analyses: readyPhotos.filter((p) => p.aiAnalysis).map((p) => p.aiAnalysis!),
-  };
+/** Build a full PropertyFormState from a partial — fills missing keys from INITIAL_STATE. */
+function makeState(overrides: Partial<PropertyFormState> = {}): PropertyFormState {
+  return { ...INITIAL_STATE, ...overrides };
 }
 
 const VALID_FIELDS = {
@@ -103,7 +98,7 @@ describe("canGenerate / toFormData invariant", () => {
     const canGenerate = deriveCanGenerate(photos, VALID_FIELDS);
     expect(canGenerate).toBe(true);
 
-    const formData = buildFormData(photos, VALID_FIELDS);
+    const formData = buildPropertyFormData(makeState({ ...VALID_FIELDS, photos }));
     const result = propertyFormSchema.safeParse(formData);
     expect(result.success).toBe(true);
   });
@@ -114,7 +109,7 @@ describe("canGenerate / toFormData invariant", () => {
       makePhoto({ status: "processing" }),
     ];
 
-    const formData = buildFormData(photos, VALID_FIELDS);
+    const formData = buildPropertyFormData(makeState({ ...VALID_FIELDS, photos }));
     expect(formData.photo_urls).toHaveLength(MIN_PHOTOS);
   });
 
@@ -162,6 +157,184 @@ function mergeAggregates(
   }
   return merged;
 }
+
+describe("optional sqm and price", () => {
+  it("emits null for sqm and price when left blank", () => {
+    const data = buildPropertyFormData(
+      makeState({ neighborhood: "kirchberg", sqm: "", price: "" }),
+    );
+    expect(data.sqm).toBeNull();
+    expect(data.price).toBeNull();
+  });
+
+  it("schema accepts a property with neither sqm nor price", () => {
+    const photos = Array.from({ length: MIN_PHOTOS }, () =>
+      makePhoto({ status: "ready" }),
+    );
+    const formData = buildPropertyFormData(
+      makeState({ neighborhood: "kirchberg", photos, sqm: "", price: "" }),
+    );
+    const result = propertyFormSchema.safeParse(formData);
+    expect(result.success).toBe(true);
+  });
+
+  it("canGenerate is true without sqm or price as long as the neighborhood is set", () => {
+    const photos = Array.from({ length: MIN_PHOTOS }, () =>
+      makePhoto({ status: "ready" }),
+    );
+    expect(
+      deriveCanGenerate(photos, { bedrooms: 2, neighborhood: "kirchberg" }),
+    ).toBe(true);
+  });
+});
+
+describe("rental form data emission (buildPropertyFormData)", () => {
+  it("always emits listing_kind, even on default sale", () => {
+    expect(buildPropertyFormData(makeState()).listing_kind).toBe("sale");
+  });
+
+  it("flows charges_monthly on sale (co-ownership fees) but nulls availability_date", () => {
+    const data = buildPropertyFormData(
+      makeState({
+        listingKind: "sale",
+        chargesMonthly: 350,
+        availabilityDate: "2026-09-15",
+      }),
+    );
+    expect(data.charges_monthly).toBe(350);
+    expect(data.availability_date).toBeNull();
+  });
+
+  it("emits charges_monthly and availability_date on rent when typed", () => {
+    const data = buildPropertyFormData(
+      makeState({
+        listingKind: "rent",
+        chargesMonthly: 250,
+        availabilityDate: "2026-06-01",
+      }),
+    );
+    expect(data.charges_monthly).toBe(250);
+    expect(data.availability_date).toBe("2026-06-01");
+  });
+
+  it("nulls empty rent fields even on rent (both are optional)", () => {
+    const data = buildPropertyFormData(makeState({ listingKind: "rent" }));
+    expect(data.charges_monthly).toBeNull();
+    expect(data.availability_date).toBeNull();
+    expect(data.listing_kind).toBe("rent");
+  });
+
+  it("emits year_built / floors_total / floor_of_unit on both kinds", () => {
+    const fields = { yearBuilt: 1998, floorsTotal: 4, floorOfUnit: 0 } as const;
+    expect(buildPropertyFormData(makeState(fields))).toMatchObject({
+      year_built: 1998,
+      floors_total: 4,
+      floor_of_unit: 0,
+    });
+    expect(
+      buildPropertyFormData(makeState({ listingKind: "rent", ...fields })),
+    ).toMatchObject({
+      year_built: 1998,
+      floors_total: 4,
+      floor_of_unit: 0,
+    });
+  });
+
+  it("preserves floor_of_unit = 0 (ground floor) — falsy but valid", () => {
+    expect(
+      buildPropertyFormData(makeState({ floorOfUnit: 0 })).floor_of_unit,
+    ).toBe(0);
+  });
+
+  it("preserves negative floor_of_unit (basement)", () => {
+    expect(
+      buildPropertyFormData(makeState({ floorOfUnit: -1 })).floor_of_unit,
+    ).toBe(-1);
+  });
+});
+
+describe("formReducer — listingKind toggles preserve rent-only fields", () => {
+  it("preserves chargesMonthly and availabilityDate when toggling to sale (gate happens at submit-time in buildPropertyFormData)", () => {
+    const dirtyRent: PropertyFormState = {
+      ...INITIAL_STATE,
+      listingKind: "rent",
+      chargesMonthly: 250,
+      availabilityDate: "2026-06-01",
+    };
+    const next = formReducer(dirtyRent, {
+      type: "SET_FIELD",
+      key: "listingKind",
+      value: "sale",
+    });
+    expect(next.listingKind).toBe("sale");
+    expect(next.chargesMonthly).toBe(250);
+    expect(next.availabilityDate).toBe("2026-06-01");
+  });
+
+  it("preserves chargesMonthly and availabilityDate when listingKind stays rent", () => {
+    const dirtyRent: PropertyFormState = {
+      ...INITIAL_STATE,
+      listingKind: "rent",
+      chargesMonthly: 250,
+      availabilityDate: "2026-06-01",
+    };
+    const next = formReducer(dirtyRent, {
+      type: "SET_FIELD",
+      key: "listingKind",
+      value: "rent",
+    });
+    expect(next.chargesMonthly).toBe(250);
+    expect(next.availabilityDate).toBe("2026-06-01");
+  });
+
+  it("does not touch chargesMonthly when an unrelated field is set", () => {
+    const dirtyRent: PropertyFormState = {
+      ...INITIAL_STATE,
+      listingKind: "rent",
+      chargesMonthly: 250,
+    };
+    const next = formReducer(dirtyRent, {
+      type: "SET_FIELD",
+      key: "yearBuilt",
+      value: 1998,
+    });
+    expect(next.chargesMonthly).toBe(250);
+  });
+});
+
+describe("isFormDirty", () => {
+  it("returns false for the initial state", () => {
+    expect(isFormDirty(INITIAL_STATE)).toBe(false);
+  });
+
+  it("returns true when sqm has been entered", () => {
+    expect(isFormDirty(makeState({ sqm: 120 }))).toBe(true);
+  });
+
+  it("returns true when listingKind is rent (toggled away from default sale)", () => {
+    expect(isFormDirty(makeState({ listingKind: "rent" }))).toBe(true);
+  });
+
+  it("returns true when a feature has been toggled on", () => {
+    expect(isFormDirty(makeState({ features: { balcony: true } }))).toBe(true);
+  });
+
+  it("returns false when features map exists but every value is false", () => {
+    expect(isFormDirty(makeState({ features: { balcony: false } }))).toBe(false);
+  });
+
+  it("returns true when at least one photo has been added", () => {
+    expect(
+      isFormDirty(
+        makeState({ photos: [makePhoto({ status: "uploading" })] }),
+      ),
+    ).toBe(true);
+  });
+
+  it("returns true for a building-detail field (floorOfUnit basement)", () => {
+    expect(isFormDirty(makeState({ floorOfUnit: -1 }))).toBe(true);
+  });
+});
 
 describe("SET_AGGREGATES feature merge", () => {
   it("adds derived features to an empty map", () => {
