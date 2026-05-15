@@ -1,0 +1,63 @@
+# Quarterly re-seed of the Supabase `localities` table from the checked-in
+# `data/lu-localities.json` snapshot.
+#
+# Audit P1.1a (docs/audits/2026-04-llm-output-audit/README.md §5). STATEC publishes
+# commune-level price data quarterly; once the STATEC fetcher lands (separate
+# workstream), it will refresh `data/lu-localities.json` and commit it back. This
+# job picks up whatever the snapshot currently contains and upserts it. Idempotent.
+#
+# Required repo secrets:
+#   NEXT_PUBLIC_SUPABASE_URL    — public Supabase project URL
+#   SUPABASE_SERVICE_ROLE_KEY   — server-side service role (NEVER share)
+#
+# Schedule: 4 AM UTC on the 1st of every 3rd month (Jan 1, Apr 1, Jul 1, Oct 1).
+# Quarterly cadence chosen to match STATEC's publication schedule; daily/hourly
+# would be wasted work.
+
+name: Seed localities
+
+on:
+  schedule:
+    - cron: "0 4 1 */3 *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run validator only (no DB writes)"
+        type: boolean
+        default: false
+
+# Don't pile up overlapping runs if a previous one hasn't finished.
+concurrency:
+  group: seed-localities
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        # --frozen-lockfile guards against an unrelated lockfile drift turning
+        # the cron into a surprise upgrade run.
+        run: bun install --frozen-lockfile
+
+      - name: Run seed
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            bun run seed:localities --dry-run
+          else
+            bun run seed:localities
+          fi

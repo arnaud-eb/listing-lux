@@ -1,0 +1,59 @@
+# CI — run tests, type check, and lint on every push and PR.
+#
+# Runs against ubuntu-latest with Bun (matching the local dev runtime). Fails
+# loudly on any test/typecheck/lint failure so the PR can't merge with broken
+# main-branch invariants.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel any earlier in-progress run on the same ref when a new commit lands —
+# saves Actions minutes and lets the latest commit's result be authoritative.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Run unit + component tests
+        run: bun run test --run
+
+      - name: Type check
+        # Pre-existing TS errors in actions.ts / EditableListingContent.tsx /
+        # ListingGenerator.tsx are tracked separately (audit 2026-04 §"Pre-existing
+        # TypeScript errors"). This job tolerates exactly the 6 known errors and
+        # fails if a new one is introduced. Update the threshold when those are
+        # fixed.
+        run: |
+          set +e
+          ERRORS=$(bunx tsc --noEmit 2>&1 | grep -cE "error TS")
+          set -e
+          echo "TypeScript errors: $ERRORS"
+          if [ "$ERRORS" -gt 6 ]; then
+            echo "::error::TypeScript error count ($ERRORS) exceeds the 6 known pre-existing baseline."
+            bunx tsc --noEmit
+            exit 1
+          fi
+
+      - name: Lint
+        run: bunx eslint

@@ -13,7 +13,8 @@
     "test:e2e": "playwright test",
     "audit:generate": "bun run scripts/audit/generate.ts",
     "audit:judge": "bun run scripts/audit/judge.ts",
-    "audit:diff": "bun run scripts/audit/diff.ts"
+    "audit:diff": "bun run scripts/audit/diff.ts",
+    "seed:localities": "bun run scripts/seed-localities.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.71",

@@ -44,3 +44,10 @@ next-env.d.ts
 
 # playwright-mcp browser-automation artifacts (page snapshots, console logs)
 .playwright-mcp/
+
+# MCP server config (project-specific; can pin secret-ish refs)
+.mcp.json
+
+# Supabase local-dev scaffolding from `supabase init` (only migrations are tracked)
+supabase/.gitignore
+supabase/config.toml
