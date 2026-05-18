@@ -65,6 +65,25 @@ vi.mock("@/lib/rate-limit", async (importOriginal) => {
   };
 });
 
+// Phase 3 slug-existence validation: saveProperty now rejects unknown locality
+// slugs. Mock returns a non-null Locality so the validation passes for the
+// "happy path" tests; tampered-slug coverage lives in its own integration test.
+vi.mock("@/lib/localities/repository", () => ({
+  getBySlug: vi.fn(async (slug: string) => ({
+    id: "loc-id",
+    slug,
+    countryCode: "LU",
+    kind: "quartier",
+    name: slug,
+    nameLocalized: { fr: slug, en: slug, de: slug },
+    descriptionLocalized: {},
+    keywordsLocalized: {},
+    tags: [],
+    parent: null,
+    price: null,
+  })),
+}));
+
 import {
   getSignedUploadUrl,
   saveProperty,

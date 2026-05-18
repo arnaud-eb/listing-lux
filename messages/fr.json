@@ -233,12 +233,26 @@
       "analyzing": "{count, plural, one {Analyse de # photo} other {Analyse de # photos}}",
       "fillRequired": "Remplissez tous les champs requis pour continuer"
     },
-    "neighborhood": {
-      "label": "Quartier",
-      "placeholder": "Sélectionner un quartier…",
+    "locality": {
+      "label": "Localité",
+      "placeholder": "Sélectionner une localité…",
       "estimatedValue": "Valeur de marché estimée :",
       "averagePrefix": "Moy. :",
-      "ariaEstimate": "Prix moyen estimé : {value}"
+      "ariaEstimate": "Prix moyen estimé : {value}",
+      "empty": "Aucune localité trouvée",
+      "searchPlaceholder": "Rechercher une localité…",
+      "clearSelection": "Effacer la sélection",
+      "dataSource": "STATEC · {year}",
+      "dataSourceAria": "Source : STATEC, données {year}",
+      "searchResults": "{count, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
+      "group": {
+        "luxembourgVille": "Luxembourg-Ville",
+        "eschSurAlzette": "Esch-sur-Alzette",
+        "communes": "Communes"
+      },
+      "validation": {
+        "unknown": "Cette localité n'est pas reconnue — contactez-nous pour l'ajouter."
+      }
     },
     "features": {
       "legend": "Caractéristiques",

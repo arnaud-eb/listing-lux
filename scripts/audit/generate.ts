@@ -18,7 +18,7 @@ import path from "node:path";
 
 import { openai, LISTING_MODEL } from "@/lib/ai/client";
 import { buildListingPrompt, PROMPT_VERSION } from "@/lib/ai/prompts";
-import { getNeighborhoodBySlug } from "@/lib/markets";
+import { getNeighborhoodBySlug } from "@/lib/markets/server";
 import { listingOutputSchema } from "@/lib/schemas/listing";
 import {
   fixtures,

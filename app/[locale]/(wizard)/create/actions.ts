@@ -2,6 +2,7 @@
 
 import { createServiceClient } from "@/lib/supabase.server";
 import { getOrCreateSession } from "@/lib/session";
+import { getBySlug as getLocalityBySlug } from "@/lib/localities/repository";
 import type { PropertyFormData } from "@/lib/types";
 import {
   PHOTO_BUCKET,
@@ -199,6 +200,14 @@ export async function saveProperty(
   if (!parsed.success) {
     const messages = parsed.error.issues.map((i) => i.message).join(", ");
     throw new Error(`Validation failed: ${messages}`);
+  }
+
+  // Validate locality slug exists in the localities table. The client dropdown
+  // is the contract; a tampered slug or stale client-side state shouldn't
+  // create an orphan property row pointing at a nonexistent locality.
+  const locality = await getLocalityBySlug(formData.neighborhood);
+  if (!locality) {
+    throw new Error(`Validation failed: unknown locality "${formData.neighborhood}"`);
   }
 
   // Session tracking: read or create session cookie

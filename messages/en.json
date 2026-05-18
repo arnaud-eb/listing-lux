@@ -233,12 +233,26 @@
       "analyzing": "{count, plural, one {Analyzing # photo} other {Analyzing # photos}}",
       "fillRequired": "Fill in all required fields to continue"
     },
-    "neighborhood": {
-      "label": "Neighborhood",
-      "placeholder": "Select neighborhood…",
+    "locality": {
+      "label": "Locality",
+      "placeholder": "Select a locality…",
       "estimatedValue": "Estimated market value:",
       "averagePrefix": "Avg:",
-      "ariaEstimate": "Estimated average price: {value}"
+      "ariaEstimate": "Estimated average price: {value}",
+      "empty": "No locality found",
+      "searchPlaceholder": "Search a locality…",
+      "clearSelection": "Clear selection",
+      "dataSource": "STATEC · {year}",
+      "dataSourceAria": "Source: STATEC, {year} data",
+      "searchResults": "{count, plural, =0 {No results} one {# result} other {# results}}",
+      "group": {
+        "luxembourgVille": "Luxembourg City",
+        "eschSurAlzette": "Esch-sur-Alzette",
+        "communes": "Municipalities"
+      },
+      "validation": {
+        "unknown": "This locality is not recognized — contact us to add it."
+      }
     },
     "features": {
       "legend": "Features",

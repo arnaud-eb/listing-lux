@@ -8,12 +8,16 @@ import DeleteListingButton from "@/app/[locale]/(wizard)/history/DeleteListingBu
 import ListingGenerator from "@/components/listing/ListingGenerator";
 import PropertyHeader from "@/components/listing/PropertyHeader";
 import type { Listing, Property } from "@/lib/types";
+import type { LocalityOption } from "@/lib/localities/types";
 
 interface ListingPageClientProps {
   property: Property;
   /** Pre-resolved locality display name (server-side lookup). Read-only — edit
    *  mode in PropertyHeader still uses the slug as the source of truth. */
   neighborhoodName: string;
+  /** Full DB-backed locality dropdown options, threaded to PropertyHeader edit
+   *  mode. Page is owner-only so eager load is safe. */
+  localityOptions: LocalityOption[];
   initialListings: Listing[];
   /** Server-rendered gallery slot (PhotoCarousel). */
   gallery: React.ReactNode;
@@ -22,6 +26,7 @@ interface ListingPageClientProps {
 export default function ListingPageClient({
   property: initialProperty,
   neighborhoodName,
+  localityOptions,
   initialListings,
   gallery,
 }: ListingPageClientProps) {
@@ -37,6 +42,7 @@ export default function ListingPageClient({
         <PropertyHeader
           property={property}
           neighborhoodName={neighborhoodName}
+          localityOptions={localityOptions}
           onUpdate={setProperty}
           onEditingChange={setIsEditingProperty}
         />

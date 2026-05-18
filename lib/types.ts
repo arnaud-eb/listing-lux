@@ -51,7 +51,7 @@ export interface Listing {
 export interface ListingUpdates {
   title?: string;
   description?: string;
-  highlights?: string[];
+  highlights?: Highlight[];
   hashtags?: string[];
 }
 

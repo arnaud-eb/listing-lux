@@ -2,6 +2,13 @@ import "@testing-library/jest-dom";
 import { vi } from "vitest";
 import enMessages from "./messages/en.json";
 
+// `server-only` throws at import time outside the React-Server export
+// condition. Vitest doesn't honor that condition, so anything that imports
+// from `lib/markets/server.ts` (or any other 'server-only'-marked module)
+// would fail to load. Stub it out — production safety still comes from
+// next/headers + the React-Server condition in the real build.
+vi.mock("server-only", () => ({}));
+
 // Resolve a dotted key like "wizard.create.title" against the EN dictionary.
 // Returning real strings keeps existing test assertions (which check for
 // English text) passing without rewriting every test.

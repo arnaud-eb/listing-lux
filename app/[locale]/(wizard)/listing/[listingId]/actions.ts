@@ -107,7 +107,7 @@ export async function inferHighlightIcon(
   try {
     const { text: result } = await generateText({
       model: openai(LISTING_MODEL),
-      maxTokens: 20,
+      maxOutputTokens: 20,
       messages: [
         {
           role: "system",

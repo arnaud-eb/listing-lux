@@ -1,19 +1,24 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import { useTranslations } from "next-intl";
+import { useMemo, useState, useTransition } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Pencil, Check, X, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
 import PriceDisplay from "@/components/shared/PriceDisplay";
 import { getActiveMarket } from "@/lib/markets";
+import { pickLocalized } from "@/lib/localities/locale";
+import type { LocalityOption } from "@/lib/localities/types";
+import type { Language } from "@/lib/types";
 import {
   formatNumber,
   parseFormattedNumber,
@@ -28,14 +33,51 @@ interface PropertyHeaderProps {
   /** Pre-resolved display name for the locality slug. Parent (server component)
    *  fetches via lib/localities so the client never hits the DB. */
   neighborhoodName: string;
+  /** Full DB-backed dropdown options for the edit-mode locality select. */
+  localityOptions: LocalityOption[];
   onUpdate: (updated: Property) => void;
   onEditingChange?: (editing: boolean) => void;
 }
 
-export default function PropertyHeader({ property, neighborhoodName, onUpdate, onEditingChange }: PropertyHeaderProps) {
+export default function PropertyHeader({
+  property,
+  neighborhoodName,
+  localityOptions,
+  onUpdate,
+  onEditingChange,
+}: PropertyHeaderProps) {
   const market = getActiveMarket();
-  const neighborhoods = market.areas.flatMap((a) => a.neighborhoods);
   const t = useTranslations("wizard.listing.propertyHeader");
+  const tLoc = useTranslations("wizard.locality");
+  const localeStr = useLocale();
+  const locale: Language = localeStr === "fr" || localeStr === "en" || localeStr === "de"
+    ? localeStr
+    : "fr";
+
+  const groupedLocalities = useMemo(() => {
+    const buckets: Record<"luxembourgVille" | "eschSurAlzette" | "communes", LocalityOption[]> = {
+      luxembourgVille: [],
+      eschSurAlzette: [],
+      communes: [],
+    };
+    for (const o of localityOptions) {
+      if (o.kind === "quartier" || o.kind === "sub_quartier") {
+        if (o.parent.slug === "luxembourg-city") buckets.luxembourgVille.push(o);
+        else if (o.parent.slug === "esch-sur-alzette") buckets.eschSurAlzette.push(o);
+        else buckets.communes.push(o);
+      } else {
+        buckets.communes.push(o);
+      }
+    }
+    const sortByName = (a: LocalityOption, b: LocalityOption) =>
+      pickLocalized(a.nameLocalized, locale, a.slug).localeCompare(
+        pickLocalized(b.nameLocalized, locale, b.slug),
+      );
+    buckets.luxembourgVille.sort(sortByName);
+    buckets.eschSurAlzette.sort(sortByName);
+    buckets.communes.sort(sortByName);
+    return buckets;
+  }, [localityOptions, locale]);
 
   const [editing, setEditing] = useState(false);
   const [isPending, startTransition] = useTransition();
@@ -169,11 +211,20 @@ export default function PropertyHeader({ property, neighborhoodName, onUpdate, o
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              {neighborhoods.map((n) => (
-                <SelectItem key={n.slug} value={n.slug}>
-                  {n.name}
-                </SelectItem>
-              ))}
+              {(["luxembourgVille", "eschSurAlzette", "communes"] as const).map((groupKey) => {
+                const items = groupedLocalities[groupKey];
+                if (items.length === 0) return null;
+                return (
+                  <SelectGroup key={groupKey}>
+                    <SelectLabel>{tLoc(`group.${groupKey}`)}</SelectLabel>
+                    {items.map((o) => (
+                      <SelectItem key={o.slug} value={o.slug}>
+                        {pickLocalized(o.nameLocalized, locale, o.slug)}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                );
+              })}
             </SelectContent>
           </Select>
         </div>
