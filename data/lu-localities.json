@@ -2,8 +2,8 @@
   "_meta": {
     "country_code": "LU",
     "source": "lib/markets/lu.ts (transcribed) — audit P0.5 / P1.1a; checked-in snapshot, will be auto-refreshed from STATEC quarterly when the fetcher lands.",
-    "data_as_of": "2026-04-15",
-    "notes": "Each entry's parent is referenced by slug to keep the file human-editable. The seed script resolves parent_id at insert time. Entries with kind='quartier' must have an existing parent commune (seeded by migration 010 or earlier in this file). The full 102-commune long tail is out of scope for the initial snapshot — communes lacking rich data will be added when the STATEC fetcher writes back to this file."
+    "data_as_of": "2026-05-18",
+    "notes": "Country-wide LU coverage: 14 hand-curated quartiers/communes (LU-Ville quartiers + Strassen + Esch-sur-Alzette) shipped previously, plus 12 additional LU-Ville quartiers, 8 Esch-sur-Alzette quartiers, the top-30 high-volume communes (hand-curated multilingual descriptions + objective keywords), and the long-tail of remaining ~70 rural communes (tier-only with formulaic stub descriptions). Total = 102 communes + 14 LU-Ville quartiers + 8 Esch quartiers + cross-canton coverage. Descriptions follow the Fair Housing rule from the 2026-04 LLM output audit appendix on neighborhood metadata — no demographic descriptors; only objective amenity language. LU-language commune name spellings use authoritative Lëtzebuergesch forms where they differ from FR; unfamiliar ones default to the FR spelling. The seed script resolves parent_id at insert time."
   },
   "localities": [
     {
@@ -313,6 +313,2032 @@
       "price_per_sqm_median": 10800,
       "price_per_sqm_max": 13500,
       "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "beggen",
+      "name": "Beggen",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Beggen", "fr": "Beggen", "en": "Beggen", "lu": "Beggen" },
+      "description_localized": {
+        "de": "Beggen ist ein nördliches Wohnviertel im Alzette-Tal mit gemischter Bebauung, lokalen Geschäften und guter Busanbindung an Kirchberg und das Stadtzentrum. Schulen und Spielplätze prägen das ruhige Wohnumfeld.",
+        "fr": "Beggen est un quartier résidentiel au nord, situé dans la vallée de l'Alzette, avec un habitat mixte, des commerces de proximité et de bonnes liaisons bus vers Kirchberg et le centre-ville. Écoles et aires de jeux structurent ce cadre calme.",
+        "en": "Beggen is a northern residential neighborhood in the Alzette valley, with mixed housing, local shops, and reliable bus connections to Kirchberg and the city centre. Schools and playgrounds shape the calm setting."
+      },
+      "keywords_localized": {
+        "de": ["Alzette-Tal", "Bus", "Schulen", "ruhig", "wohnlich"],
+        "fr": ["vallée Alzette", "bus", "écoles", "calme", "résidentiel"],
+        "en": ["Alzette valley", "bus", "schools", "quiet", "residential"]
+      },
+      "tags": ["residential", "valley", "transport"],
+      "price_per_sqm_min": 6500,
+      "price_per_sqm_median": 8500,
+      "price_per_sqm_max": 10500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "cessange",
+      "name": "Cessange",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Zessingen", "fr": "Cessange", "en": "Cessange", "lu": "Zéisseng" },
+      "description_localized": {
+        "de": "Cessange liegt im Süden der Stadt und bietet eine Mischung aus Wohnhäusern, dem Stadion sowie guter Autobahn- und Tramanbindung. Gewerbeflächen und Wohnquartiere wechseln sich ab.",
+        "fr": "Cessange se trouve au sud de la ville et propose un mélange de maisons d'habitation, le stade et de bonnes connexions autoroute et tram. Zones d'activité et quartiers résidentiels alternent.",
+        "en": "Cessange lies south of the city and offers a mix of houses, the stadium, and strong motorway and tram links. Commercial zones and residential blocks alternate."
+      },
+      "keywords_localized": {
+        "de": ["Stadion", "Autobahn", "Tram", "Süden", "wohnlich"],
+        "fr": ["stade", "autoroute", "tram", "sud", "résidentiel"],
+        "en": ["stadium", "motorway", "tram", "south", "residential"]
+      },
+      "tags": ["residential", "transport", "central"],
+      "price_per_sqm_min": 6500,
+      "price_per_sqm_median": 8500,
+      "price_per_sqm_max": 10500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "clausen",
+      "name": "Clausen",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Clausen", "fr": "Clausen", "en": "Clausen", "lu": "Klausen" },
+      "description_localized": {
+        "de": "Clausen liegt malerisch im Alzette-Tal unter den Festungsmauern und vereint historische Bausubstanz mit einer dynamischen Ausgehszene. UNESCO-Welterbe-Lage und Nähe zu Kirchberg und Zentrum prägen das Viertel.",
+        "fr": "Clausen est niché dans la vallée de l'Alzette, sous les remparts, et marie patrimoine historique et scène nocturne dynamique. Classé UNESCO et proche de Kirchberg et du centre, ce quartier conserve un caractère unique.",
+        "en": "Clausen sits picturesquely in the Alzette valley below the fortress walls, blending historic architecture with a lively nightlife scene. UNESCO World Heritage location and proximity to Kirchberg and the centre define the area."
+      },
+      "keywords_localized": {
+        "de": ["UNESCO", "historisch", "Ausgehviertel", "Festung", "Alzette-Tal"],
+        "fr": ["UNESCO", "historique", "vie nocturne", "forteresse", "vallée Alzette"],
+        "en": ["UNESCO", "historic", "nightlife", "fortress", "Alzette valley"]
+      },
+      "tags": ["historic", "UNESCO", "nightlife", "premium"],
+      "price_per_sqm_min": 7500,
+      "price_per_sqm_median": 10500,
+      "price_per_sqm_max": 13000,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "dommeldange",
+      "name": "Dommeldange",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Dommeldingen", "fr": "Dommeldange", "en": "Dommeldange", "lu": "Dummeldeng" },
+      "description_localized": {
+        "de": "Dommeldingen liegt nördlich von Kirchberg mit dem Bahnhof Dommeldange, dem Centre Hospitalier de Luxembourg in der Nähe und einer Mischung aus älteren Wohnhäusern und neuen Projekten am Hang.",
+        "fr": "Dommeldange se situe au nord de Kirchberg, avec la gare de Dommeldange, le Centre Hospitalier de Luxembourg à proximité et un mélange d'anciennes maisons et de projets résidentiels neufs sur les coteaux.",
+        "en": "Dommeldange lies north of Kirchberg, with its own train station, the Centre Hospitalier de Luxembourg nearby, and a mix of older houses and newer hillside developments."
+      },
+      "keywords_localized": {
+        "de": ["Bahnhof", "Krankenhaus", "Kirchberg-Nähe", "Hang", "Wohnen"],
+        "fr": ["gare", "hôpital", "proche Kirchberg", "coteau", "résidentiel"],
+        "en": ["station", "hospital", "near Kirchberg", "hillside", "residential"]
+      },
+      "tags": ["residential", "transport", "near Kirchberg"],
+      "price_per_sqm_min": 7000,
+      "price_per_sqm_median": 9500,
+      "price_per_sqm_max": 12000,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "eich",
+      "name": "Eich",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Eich", "fr": "Eich", "en": "Eich", "lu": "Eech" },
+      "description_localized": {
+        "de": "Eich ist ein kleines Wohnviertel im Norden mit dörflichem Charakter, herrschaftlichen Häusern und der historischen Kirche Saint-Pierre. Ruhige Lage mit schneller Verbindung nach Kirchberg.",
+        "fr": "Eich est un petit quartier résidentiel au nord, au caractère villageois, avec ses demeures bourgeoises et l'église historique Saint-Pierre. Cadre tranquille avec accès rapide vers Kirchberg.",
+        "en": "Eich is a small residential neighborhood to the north with a village character, distinguished houses, and the historic Saint-Pierre church. A quiet setting with quick access to Kirchberg."
+      },
+      "keywords_localized": {
+        "de": ["dörflich", "ruhig", "historisch", "Kirchberg-Nähe", "Wohnen"],
+        "fr": ["villageois", "calme", "historique", "proche Kirchberg", "résidentiel"],
+        "en": ["village feel", "quiet", "historic", "near Kirchberg", "residential"]
+      },
+      "tags": ["residential", "historic", "quiet"],
+      "price_per_sqm_min": 7000,
+      "price_per_sqm_median": 9500,
+      "price_per_sqm_max": 12000,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "hamm",
+      "name": "Hamm",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Hamm", "fr": "Hamm", "en": "Hamm", "lu": "Hamm" },
+      "description_localized": {
+        "de": "Hamm liegt östlich der Stadt mit dem amerikanischen und deutschen Militärfriedhof, einem ruhigen Wohngebiet und einer durchgrünten Lage. Gute Verbindung zur Autobahn und zum Flughafen.",
+        "fr": "Hamm se trouve à l'est de la ville, avec les cimetières militaires américain et allemand, un quartier résidentiel calme et un cadre verdoyant. Bon accès à l'autoroute et à l'aéroport.",
+        "en": "Hamm sits east of the city with the American and German military cemeteries, a calm residential area, and a green setting. Good motorway and airport access."
+      },
+      "keywords_localized": {
+        "de": ["ruhig", "grün", "Flughafen", "Autobahn", "wohnlich"],
+        "fr": ["calme", "vert", "aéroport", "autoroute", "résidentiel"],
+        "en": ["quiet", "green", "airport", "motorway", "residential"]
+      },
+      "tags": ["residential", "quiet", "green"],
+      "price_per_sqm_min": 5500,
+      "price_per_sqm_median": 7500,
+      "price_per_sqm_max": 9500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "muhlenbach",
+      "name": "Mühlenbach",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Mühlenbach", "fr": "Mühlenbach", "en": "Mühlenbach", "lu": "Millebaach" },
+      "description_localized": {
+        "de": "Mühlenbach liegt in einem ruhigen Tal nordwestlich des Zentrums, eingebettet in Wälder und Wanderwege. Kleine, etablierte Wohnsiedlung mit dörflichem Charakter trotz Stadtnähe.",
+        "fr": "Mühlenbach se trouve dans une vallée calme au nord-ouest du centre, entouré de forêts et de sentiers de randonnée. Petit quartier résidentiel établi, au caractère villageois malgré la proximité de la ville.",
+        "en": "Mühlenbach lies in a quiet valley northwest of the centre, surrounded by forests and walking trails. A small, established residential pocket with a village feel despite its city proximity."
+      },
+      "keywords_localized": {
+        "de": ["ruhig", "Wald", "dörflich", "Wandern", "etabliert"],
+        "fr": ["calme", "forêt", "villageois", "randonnée", "établi"],
+        "en": ["quiet", "forest", "village feel", "hiking", "established"]
+      },
+      "tags": ["residential", "quiet", "green"],
+      "price_per_sqm_min": 6500,
+      "price_per_sqm_median": 8500,
+      "price_per_sqm_max": 10500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "neudorf-weimershof",
+      "name": "Neudorf-Weimershof",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Neudorf-Weimershof", "fr": "Neudorf-Weimershof", "en": "Neudorf-Weimershof", "lu": "Neiduerf-Weimeschhaff" },
+      "description_localized": {
+        "de": "Neudorf-Weimershof verbindet ein traditionelles Tal-Wohngebiet mit den modernen Anlagen oberhalb von Kirchberg. Krankenhaus, internationale Schule und Tramanbindung machen das Viertel praktisch und gut erschlossen.",
+        "fr": "Neudorf-Weimershof associe un quartier résidentiel traditionnel en vallée aux ensembles modernes des hauteurs de Kirchberg. Hôpital, école internationale et accès tram rendent le secteur pratique et bien desservi.",
+        "en": "Neudorf-Weimershof combines a traditional valley residential area with the modern blocks above Kirchberg. Hospital, international school, and tram access make the neighborhood practical and well connected."
+      },
+      "keywords_localized": {
+        "de": ["Kirchberg", "Tram", "Krankenhaus", "internationale Schule", "wohnlich"],
+        "fr": ["Kirchberg", "tram", "hôpital", "école internationale", "résidentiel"],
+        "en": ["Kirchberg", "tram", "hospital", "international school", "residential"]
+      },
+      "tags": ["residential", "near Kirchberg", "well-connected"],
+      "price_per_sqm_min": 7000,
+      "price_per_sqm_median": 9000,
+      "price_per_sqm_max": 11000,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "pfaffenthal",
+      "name": "Pfaffenthal",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Pfaffenthal", "fr": "Pfaffenthal", "en": "Pfaffenthal", "lu": "Pafendall" },
+      "description_localized": {
+        "de": "Pfaffenthal liegt im Alzette-Tal unterhalb der Oberstadt und verbindet historische Bausubstanz mit dem Panoramaaufzug zum Plateau. UNESCO-Welterbe-Lage mit charakteristischen Stadtmauern und engen Gassen.",
+        "fr": "Pfaffenthal se trouve dans la vallée de l'Alzette sous la Ville Haute et marie patrimoine historique et ascenseur panoramique vers le plateau. Site classé UNESCO, avec ses remparts caractéristiques et ses ruelles étroites.",
+        "en": "Pfaffenthal lies in the Alzette valley below the upper city, combining historic buildings with the panoramic lift to the plateau. UNESCO World Heritage setting with characteristic walls and narrow lanes."
+      },
+      "keywords_localized": {
+        "de": ["UNESCO", "historisch", "Tal", "Panoramaaufzug", "Stadtmauern"],
+        "fr": ["UNESCO", "historique", "vallée", "ascenseur panoramique", "remparts"],
+        "en": ["UNESCO", "historic", "valley", "panoramic lift", "ramparts"]
+      },
+      "tags": ["historic", "UNESCO", "valley"],
+      "price_per_sqm_min": 5500,
+      "price_per_sqm_median": 7500,
+      "price_per_sqm_max": 9500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "pulvermuhl",
+      "name": "Pulvermühl",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Pulvermühl", "fr": "Pulvermühl", "en": "Pulvermühl", "lu": "Polfermillen" },
+      "description_localized": {
+        "de": "Pulvermühl liegt im Alzette-Tal östlich des Zentrums, mit einer Mischung aus älteren Wohnhäusern, kleinen Gewerbebetrieben und industriellem Erbe. Ruhiger, weniger touristischer Talstandort.",
+        "fr": "Pulvermühl est situé dans la vallée de l'Alzette à l'est du centre, avec un mélange d'anciennes maisons, de petits commerces et un héritage industriel. Cadre de vallée calme et moins touristique.",
+        "en": "Pulvermühl lies in the Alzette valley east of the centre, with a mix of older houses, small businesses, and industrial heritage. A calmer, less touristy valley setting."
+      },
+      "keywords_localized": {
+        "de": ["Alzette-Tal", "industrielles Erbe", "ruhig", "gemischt", "östlich"],
+        "fr": ["vallée Alzette", "héritage industriel", "calme", "mixte", "est"],
+        "en": ["Alzette valley", "industrial heritage", "quiet", "mixed", "east"]
+      },
+      "tags": ["valley", "industrial heritage", "quiet"],
+      "price_per_sqm_min": 5500,
+      "price_per_sqm_median": 7500,
+      "price_per_sqm_max": 9500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "rollingergrund",
+      "name": "Rollingergrund",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Rollingergrund", "fr": "Rollingergrund", "en": "Rollingergrund", "lu": "Rolléngergronn" },
+      "description_localized": {
+        "de": "Rollingergrund erstreckt sich entlang einer Hauptachse nordwestlich des Zentrums, mit Wohnhäusern, kleinen Geschäften und Zugang zum Bambësch-Wald. Gute Anbindung an Limpertsberg und das Krankenhaus.",
+        "fr": "Rollingergrund s'étire le long d'un axe principal au nord-ouest du centre, avec des maisons d'habitation, des commerces et un accès à la forêt du Bambësch. Bonne liaison vers Limpertsberg et l'hôpital.",
+        "en": "Rollingergrund stretches along a main artery northwest of the centre, with houses, small shops, and access to the Bambësch forest. Good links to Limpertsberg and the hospital."
+      },
+      "keywords_localized": {
+        "de": ["Bambësch", "Wald", "Limpertsberg-Nähe", "Hauptachse", "wohnlich"],
+        "fr": ["Bambësch", "forêt", "proche Limpertsberg", "axe principal", "résidentiel"],
+        "en": ["Bambësch", "forest", "near Limpertsberg", "main road", "residential"]
+      },
+      "tags": ["residential", "green", "accessible"],
+      "price_per_sqm_min": 6500,
+      "price_per_sqm_median": 8500,
+      "price_per_sqm_max": 10500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "weimerskirch",
+      "name": "Weimerskirch",
+      "parent_slug": "luxembourg-city",
+      "name_localized": { "de": "Weimerskirch", "fr": "Weimerskirch", "en": "Weimerskirch", "lu": "Weimeschkierch" },
+      "description_localized": {
+        "de": "Weimerskirch ist ein kleines Wohnviertel nordöstlich des Zentrums mit einer historischen Kirche, ruhigen Straßen und schneller Anbindung an Kirchberg und Eich.",
+        "fr": "Weimerskirch est un petit quartier résidentiel au nord-est du centre, avec une église historique, des rues calmes et un accès rapide à Kirchberg et Eich.",
+        "en": "Weimerskirch is a small residential neighborhood northeast of the centre, with a historic church, quiet streets, and quick access to Kirchberg and Eich."
+      },
+      "keywords_localized": {
+        "de": ["ruhig", "historische Kirche", "Kirchberg-Nähe", "wohnlich", "klein"],
+        "fr": ["calme", "église historique", "proche Kirchberg", "résidentiel", "petit"],
+        "en": ["quiet", "historic church", "near Kirchberg", "residential", "small"]
+      },
+      "tags": ["residential", "quiet", "historic"],
+      "price_per_sqm_min": 5500,
+      "price_per_sqm_median": 7500,
+      "price_per_sqm_max": 9500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-belval",
+      "name": "Belval",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Belval", "fr": "Belval", "en": "Belval", "lu": "Belval" },
+      "description_localized": {
+        "de": "Belval ist Eschs modernster Stadtteil, entstanden auf dem ehemaligen ArcelorMittal-Hochofengelände. Heute beherbergt es den Universitätscampus, die Rockhal, neue Wohntürme und das Einkaufszentrum Belval Plaza — eine markante Mischung aus Industrieerbe und zeitgenössischer Architektur.",
+        "fr": "Belval est le quartier le plus moderne d'Esch, aménagé sur l'ancien site sidérurgique d'ArcelorMittal. Il accueille aujourd'hui le campus universitaire, la Rockhal, de nouvelles tours résidentielles et le centre commercial Belval Plaza — un mélange marquant de patrimoine industriel et d'architecture contemporaine.",
+        "en": "Belval is Esch's most modern district, built on the former ArcelorMittal blast-furnace site. It now hosts the university campus, the Rockhal concert hall, new residential towers, and the Belval Plaza shopping centre — a striking blend of industrial heritage and contemporary architecture."
+      },
+      "keywords_localized": {
+        "de": ["Universität", "Rockhal", "Hochöfen", "Neubau", "Einkaufszentrum"],
+        "fr": ["université", "Rockhal", "hauts fourneaux", "neuf", "centre commercial"],
+        "en": ["university", "Rockhal", "blast furnaces", "new build", "shopping centre"]
+      },
+      "tags": ["modern", "university", "new development", "industrial heritage"],
+      "price_per_sqm_min": 6000,
+      "price_per_sqm_median": 7500,
+      "price_per_sqm_max": 9500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-brill",
+      "name": "Brill",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Brill", "fr": "Brill", "en": "Brill", "lu": "Bréil" },
+      "description_localized": {
+        "de": "Brill ist ein etabliertes Wohnviertel im Westen von Esch mit gemischter Bebauung und kurzen Wegen ins Zentrum.",
+        "fr": "Brill est un quartier résidentiel établi à l'ouest d'Esch, avec un habitat mixte et un accès rapide au centre-ville.",
+        "en": "Brill is an established residential neighborhood west of Esch with mixed housing and short trips to the centre."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["residential"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-centre",
+      "name": "Centre",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Zentrum", "fr": "Centre", "en": "Centre", "lu": "Zentrum" },
+      "description_localized": {
+        "de": "Das Zentrum von Esch konzentriert die Fußgängerzone Rue de l'Alzette, Verwaltung und Kulturhäuser auf engem Raum.",
+        "fr": "Le centre d'Esch concentre la rue piétonne Rue de l'Alzette, l'administration et les institutions culturelles dans un espace compact.",
+        "en": "Esch's centre concentrates the pedestrian Rue de l'Alzette, town hall, and cultural venues in a compact area."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["central", "walkable"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-grenz",
+      "name": "Grenz",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Grenz", "fr": "Grenz", "en": "Grenz", "lu": "Grenz" },
+      "description_localized": {
+        "de": "Grenz liegt an der französischen Grenze im Süden von Esch und kombiniert Wohnhäuser mit guter Anbindung über die Grenze.",
+        "fr": "Grenz longe la frontière française au sud d'Esch et combine maisons d'habitation et bonnes connexions transfrontalières.",
+        "en": "Grenz lies along the French border south of Esch, combining houses with good cross-border connections."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["residential", "border"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-lallange",
+      "name": "Lallange",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Lallingen", "fr": "Lallange", "en": "Lallange", "lu": "Lalleng" },
+      "description_localized": {
+        "de": "Lallange ist ein nördliches Wohnviertel von Esch mit überwiegend kleinteiliger Bebauung und kurzen Wegen zur Universität.",
+        "fr": "Lallange est un quartier résidentiel au nord d'Esch, dominé par un habitat individuel et proche de l'université.",
+        "en": "Lallange is a northern residential neighborhood of Esch dominated by detached housing and close to the university."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["residential"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-neiduerf",
+      "name": "Neiduerf",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Neudorf", "fr": "Neiduerf", "en": "Neiduerf", "lu": "Neiduerf" },
+      "description_localized": {
+        "de": "Neiduerf ist ein gemischtes Wohngebiet im Osten von Esch mit gewachsener Nachbarschaftsstruktur.",
+        "fr": "Neiduerf est un quartier résidentiel mixte à l'est d'Esch, à la structure de voisinage bien établie.",
+        "en": "Neiduerf is a mixed residential area east of Esch with an established neighborhood fabric."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["residential"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-park",
+      "name": "Park",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Park", "fr": "Park", "en": "Park", "lu": "Park" },
+      "description_localized": {
+        "de": "Park ist ein Wohnviertel rund um den Parc Laval mit Grünflächen, Spielplätzen und gemischter Bebauung.",
+        "fr": "Park est un quartier résidentiel autour du Parc Laval, avec espaces verts, aires de jeux et habitat mixte.",
+        "en": "Park is a residential neighborhood around Parc Laval, with green spaces, playgrounds, and mixed housing."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["residential", "green"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "quartier",
+      "slug": "esch-universiteit",
+      "name": "Universiteit",
+      "parent_slug": "esch-sur-alzette",
+      "name_localized": { "de": "Universität", "fr": "Universiteit", "en": "Universiteit", "lu": "Universitéit" },
+      "description_localized": {
+        "de": "Universiteit umfasst die Wohnlagen rund um den Universitätscampus mit kompakten Apartments, neuen Bürogebäuden und Verbindung zu Belval.",
+        "fr": "Universiteit regroupe les zones résidentielles autour du campus universitaire, avec petits appartements, bureaux récents et lien vers Belval.",
+        "en": "Universiteit covers the residential blocks around the university campus, with compact apartments, recent offices, and links to Belval."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": ["university", "modern"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "bertrange",
+      "name": "Bertrange",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Bartringen", "fr": "Bertrange", "en": "Bertrange", "lu": "Bartreng" },
+      "description_localized": {
+        "de": "Bertrange ist eine wohlhabende Wohngemeinde unmittelbar westlich der Hauptstadt, bekannt für die Belle Étoile (Luxemburgs größtes Einkaufszentrum), gute Schulinfrastruktur und Tramanbindung über die Cloche d'Or.",
+        "fr": "Bertrange est une commune résidentielle aisée juste à l'ouest de la capitale, connue pour la Belle Étoile (plus grand centre commercial du pays), de bonnes infrastructures scolaires et une desserte tram via la Cloche d'Or.",
+        "en": "Bertrange is an affluent residential commune immediately west of the capital, known for Belle Étoile (the country's largest shopping centre), strong school infrastructure, and tram links via Cloche d'Or."
+      },
+      "keywords_localized": {
+        "de": ["Belle Étoile", "Tram", "Schulen", "Wohngemeinde", "westlich"],
+        "fr": ["Belle Étoile", "tram", "écoles", "résidentiel", "ouest"],
+        "en": ["Belle Étoile", "tram", "schools", "residential", "west"]
+      },
+      "tags": ["suburban", "premium", "shopping", "well-connected"],
+      "price_per_sqm_min": 7500,
+      "price_per_sqm_median": 9500,
+      "price_per_sqm_max": 12000,
+      "currency": "EUR"
+    },
+    {
+      "kind": "commune",
+      "slug": "mamer",
+      "name": "Mamer",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Mamer", "fr": "Mamer", "en": "Mamer", "lu": "Mamer" },
+      "description_localized": {
+        "de": "Mamer ist eine Wohngemeinde westlich der Hauptstadt mit der Lycée Josy Barthel, dem European School Luxembourg II in Bertrange-Mamer und sehr guter Autobahn- und Zuganbindung.",
+        "fr": "Mamer est une commune résidentielle à l'ouest de la capitale, avec le Lycée Josy Barthel, l'European School Luxembourg II à Bertrange-Mamer et une excellente desserte autoroute et train.",
+        "en": "Mamer is a residential commune west of the capital, with the Lycée Josy Barthel, the European School Luxembourg II at Bertrange-Mamer, and excellent motorway and rail access."
+      },
+      "keywords_localized": {
+        "de": ["European School", "Lycée", "Autobahn", "Zug", "westlich"],
+        "fr": ["École européenne", "lycée", "autoroute", "train", "ouest"],
+        "en": ["European School", "lycée", "motorway", "train", "west"]
+      },
+      "tags": ["suburban", "schools", "well-connected"],
+      "price_per_sqm_min": 6000,
+      "price_per_sqm_median": 7500,
+      "price_per_sqm_max": 9500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "commune",
+      "slug": "hesperange",
+      "name": "Hesperange",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Hesperingen", "fr": "Hesperange", "en": "Hesperange", "lu": "Hesper" },
+      "description_localized": {
+        "de": "Hesperange grenzt südlich an die Hauptstadt und kombiniert Wohnlagen entlang des Alzette-Tals mit Einkaufsangeboten, Schulen und direkter Buslinien-Anbindung an Kirchberg.",
+        "fr": "Hesperange jouxte la capitale au sud et combine des zones résidentielles le long de la vallée de l'Alzette, des commerces, des écoles et une liaison bus directe vers Kirchberg.",
+        "en": "Hesperange adjoins the capital to the south, combining residential areas along the Alzette valley with shopping, schools, and direct bus links to Kirchberg."
+      },
+      "keywords_localized": {
+        "de": ["Alzette-Tal", "Bus", "Schulen", "Stadtrand", "Einkaufen"],
+        "fr": ["vallée Alzette", "bus", "écoles", "périphérie", "commerces"],
+        "en": ["Alzette valley", "bus", "schools", "outskirts", "shopping"]
+      },
+      "tags": ["suburban", "well-connected", "near capital"],
+      "price_per_sqm_min": 7000,
+      "price_per_sqm_median": 9000,
+      "price_per_sqm_max": 11500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "commune",
+      "slug": "walferdange",
+      "name": "Walferdange",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Walferdingen", "fr": "Walferdange", "en": "Walferdange", "lu": "Walfer" },
+      "description_localized": {
+        "de": "Walferdingen ist eine Wohngemeinde nördlich der Hauptstadt im Alzette-Tal mit eigener Bahnstation, Schulzentrum und der ehemaligen Großherzoglichen Residenz Helmsange.",
+        "fr": "Walferdange est une commune résidentielle au nord de la capitale, dans la vallée de l'Alzette, avec sa gare, son campus scolaire et l'ancienne résidence grand-ducale de Helmsange.",
+        "en": "Walferdange is a residential commune north of the capital in the Alzette valley, with its own train station, school campus, and the former grand-ducal residence at Helmsange."
+      },
+      "keywords_localized": {
+        "de": ["Bahn", "Schulen", "Alzette-Tal", "nördlich", "Wohngemeinde"],
+        "fr": ["gare", "écoles", "vallée Alzette", "nord", "résidentiel"],
+        "en": ["train", "schools", "Alzette valley", "north", "residential"]
+      },
+      "tags": ["suburban", "rail", "schools"],
+      "price_per_sqm_min": 6500,
+      "price_per_sqm_median": 8500,
+      "price_per_sqm_max": 10500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "commune",
+      "slug": "differdange",
+      "name": "Differdange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Differdingen", "fr": "Differdange", "en": "Differdange", "lu": "Déifferdeng" },
+      "description_localized": {
+        "de": "Differdingen ist die drittgrößte Stadt Luxemburgs im Süden des Landes, mit industriellem Erbe, dem Schloss Differdange (heute Miami University-Campus) und neuen Wohnprojekten rund um den Stadtkern.",
+        "fr": "Differdange est la troisième ville du pays, dans le sud, avec un patrimoine industriel, le château de Differdange (aujourd'hui campus Miami University) et de nouveaux projets résidentiels autour du centre.",
+        "en": "Differdange is Luxembourg's third-largest city in the south, with industrial heritage, the Differdange castle (now Miami University's campus), and new residential developments around the centre."
+      },
+      "keywords_localized": {
+        "de": ["industrielles Erbe", "Miami University", "Stadt", "Süden", "Neubauten"],
+        "fr": ["héritage industriel", "Miami University", "ville", "sud", "neufs"],
+        "en": ["industrial heritage", "Miami University", "city", "south", "new builds"]
+      },
+      "tags": ["third city", "industrial heritage", "growing"],
+      "price_per_sqm_min": 4500,
+      "price_per_sqm_median": 6000,
+      "price_per_sqm_max": 7500,
+      "currency": "EUR"
+    },
+    {
+      "kind": "commune",
+      "slug": "niederanven",
+      "name": "Niederanven",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Niederanven", "fr": "Niederanven", "en": "Niederanven", "lu": "Nidderaanwen" },
+      "description_localized": {
+        "de": "Niederanven liegt östlich der Hauptstadt zwischen dem Flughafen Findel und dem Grünewald, mit gepflegten Wohnlagen, einem Sportzentrum und kurzen Wegen nach Kirchberg.",
+        "fr": "Niederanven se trouve à l'est de la capitale, entre l'aéroport de Findel et le Grünewald, avec des zones résidentielles soignées, un centre sportif et un accès rapide à Kirchberg.",
+        "en": "Niederanven lies east of the capital between Findel airport and the Grünewald forest, with well-kept residential areas, a sports centre, and quick links to Kirchberg."
+      },
+      "keywords_localized": {
+        "de": ["Flughafen", "Grünewald", "Sportzentrum", "Kirchberg-Nähe", "östlich"],
+        "fr": ["aéroport", "Grünewald", "centre sportif", "proche Kirchberg", "est"],
+        "en": ["airport", "Grünewald", "sports centre", "near Kirchberg", "east"]
+      },
+      "tags": ["suburban", "premium", "near Kirchberg"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "sandweiler",
+      "name": "Sandweiler",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Sandweiler", "fr": "Sandweiler", "en": "Sandweiler", "lu": "Sandweiler" },
+      "description_localized": {
+        "de": "Sandweiler liegt unmittelbar am Flughafen Findel östlich der Hauptstadt, mit Wohnlagen, dem amerikanischen Soldatenfriedhof und sehr guter Autobahnanbindung Richtung Trier.",
+        "fr": "Sandweiler se situe juste à côté de l'aéroport de Findel, à l'est de la capitale, avec des zones résidentielles, le cimetière militaire américain et un excellent accès autoroutier vers Trèves.",
+        "en": "Sandweiler sits next to Findel airport east of the capital, with residential areas, the American military cemetery, and very good motorway access toward Trier."
+      },
+      "keywords_localized": {
+        "de": ["Flughafen", "Autobahn", "Wohngemeinde", "östlich", "Trier"],
+        "fr": ["aéroport", "autoroute", "résidentiel", "est", "Trèves"],
+        "en": ["airport", "motorway", "residential", "east", "Trier"]
+      },
+      "tags": ["suburban", "airport", "well-connected"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "steinsel",
+      "name": "Steinsel",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Steinsel", "fr": "Steinsel", "en": "Steinsel", "lu": "Steesel" },
+      "description_localized": {
+        "de": "Steinsel liegt nördlich der Hauptstadt im Alzette-Tal, mit Wohnlagen in Steinsel, Heisdorf und Mullendorf, einem Sportzentrum und schneller Anbindung an die Stadt.",
+        "fr": "Steinsel se trouve au nord de la capitale, dans la vallée de l'Alzette, avec des secteurs résidentiels à Steinsel, Heisdorf et Mullendorf, un centre sportif et un accès rapide à la ville.",
+        "en": "Steinsel lies north of the capital in the Alzette valley, with residential areas in Steinsel, Heisdorf, and Mullendorf, a sports centre, and quick access to the city."
+      },
+      "keywords_localized": {
+        "de": ["Alzette-Tal", "Sportzentrum", "nördlich", "Wohngemeinde", "Stadtnähe"],
+        "fr": ["vallée Alzette", "centre sportif", "nord", "résidentiel", "proche ville"],
+        "en": ["Alzette valley", "sports centre", "north", "residential", "near city"]
+      },
+      "tags": ["suburban", "premium", "near capital"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "kopstal",
+      "name": "Kopstal",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Kopstal", "fr": "Kopstal", "en": "Kopstal", "lu": "Koplescht" },
+      "description_localized": {
+        "de": "Kopstal liegt nordwestlich der Hauptstadt im Mamer-Tal mit den Ortsteilen Kopstal und Bridel — letzterer eine der wohlhabendsten Adressen des Landes mit Villen und großen Grundstücken.",
+        "fr": "Kopstal se trouve au nord-ouest de la capitale, dans la vallée de la Mamer, avec les sections de Kopstal et Bridel — cette dernière étant l'une des adresses les plus cossues du pays, avec villas et grandes parcelles.",
+        "en": "Kopstal lies northwest of the capital in the Mamer valley, with the sections of Kopstal and Bridel — the latter one of the country's most prestigious addresses, with villas and large plots."
+      },
+      "keywords_localized": {
+        "de": ["Bridel", "Villen", "Mamer-Tal", "Premium", "Wald"],
+        "fr": ["Bridel", "villas", "vallée Mamer", "haut de gamme", "forêt"],
+        "en": ["Bridel", "villas", "Mamer valley", "premium", "forest"]
+      },
+      "tags": ["suburban", "premium", "villas"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "schuttrange",
+      "name": "Schuttrange",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Schüttringen", "fr": "Schuttrange", "en": "Schuttrange", "lu": "Schëtter" },
+      "description_localized": {
+        "de": "Schüttringen liegt östlich der Hauptstadt im hügeligen Umland, mit Wohnlagen in Munsbach, Schrassig und Neuhäusgen, dem Geschäftspark Munsbach und kurzen Wegen zum Flughafen.",
+        "fr": "Schuttrange se trouve à l'est de la capitale, dans un cadre vallonné, avec des sections résidentielles à Munsbach, Schrassig et Neuhäusgen, le parc d'activités de Munsbach et un accès rapide à l'aéroport.",
+        "en": "Schuttrange lies east of the capital in rolling countryside, with residential sections at Munsbach, Schrassig, and Neuhäusgen, the Munsbach business park, and quick access to the airport."
+      },
+      "keywords_localized": {
+        "de": ["Munsbach", "Geschäftspark", "Flughafen", "hügelig", "östlich"],
+        "fr": ["Munsbach", "parc d'activités", "aéroport", "vallonné", "est"],
+        "en": ["Munsbach", "business park", "airport", "rolling", "east"]
+      },
+      "tags": ["suburban", "premium", "business park"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "contern",
+      "name": "Contern",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Contern", "fr": "Contern", "en": "Contern", "lu": "Conter" },
+      "description_localized": {
+        "de": "Contern liegt südöstlich der Hauptstadt mit Wohnlagen in Contern, Moutfort und Medingen, dem Geschäftspark Contern und guter Anbindung an die Autobahn A3.",
+        "fr": "Contern se trouve au sud-est de la capitale, avec des sections résidentielles à Contern, Moutfort et Medingen, le parc d'activités de Contern et un bon accès à l'autoroute A3.",
+        "en": "Contern lies southeast of the capital, with residential sections at Contern, Moutfort, and Medingen, the Contern business park, and good access to the A3 motorway."
+      },
+      "keywords_localized": {
+        "de": ["Geschäftspark", "Autobahn", "Moutfort", "wohnlich", "Stadtrand"],
+        "fr": ["parc d'activités", "autoroute", "Moutfort", "résidentiel", "périphérie"],
+        "en": ["business park", "motorway", "Moutfort", "residential", "outskirts"]
+      },
+      "tags": ["suburban", "business park", "well-connected"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "mersch",
+      "name": "Mersch",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Mersch", "fr": "Mersch", "en": "Mersch", "lu": "Miersch" },
+      "description_localized": {
+        "de": "Mersch ist das Verwaltungszentrum des gleichnamigen Kantons in der Landesmitte mit eigener Bahnstation, lokalem Krankenhaus und einer Mischung aus historischem Ortskern und neuen Wohnprojekten.",
+        "fr": "Mersch est le chef-lieu du canton éponyme, au centre du pays, avec sa gare, un hôpital local et un mélange de centre historique et de nouveaux projets résidentiels.",
+        "en": "Mersch is the administrative centre of its canton in the country's centre, with its own train station, a local hospital, and a mix of historic core and new residential projects."
+      },
+      "keywords_localized": {
+        "de": ["Bahn", "Krankenhaus", "Kantonshauptort", "zentral", "Neubau"],
+        "fr": ["gare", "hôpital", "chef-lieu", "central", "neuf"],
+        "en": ["rail", "hospital", "canton seat", "central", "new build"]
+      },
+      "tags": ["regional centre", "rail", "growing"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "roeser",
+      "name": "Roeser",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Roeser", "fr": "Roeser", "en": "Roeser", "lu": "Réiser" },
+      "description_localized": {
+        "de": "Roeser liegt im Süden zwischen Hauptstadt und Esch, mit Wohnlagen in Roeser, Crauthem, Bivange und Berchem sowie zwei Bahnhöfen an der Linie Luxemburg–Esch.",
+        "fr": "Roeser se trouve au sud, entre la capitale et Esch, avec des sections résidentielles à Roeser, Crauthem, Bivange et Berchem, et deux gares sur la ligne Luxembourg–Esch.",
+        "en": "Roeser lies in the south between the capital and Esch, with residential sections at Roeser, Crauthem, Bivange, and Berchem and two stations on the Luxembourg–Esch line."
+      },
+      "keywords_localized": {
+        "de": ["Bahn", "Süden", "Crauthem", "wohnlich", "Stadtmitte"],
+        "fr": ["gare", "sud", "Crauthem", "résidentiel", "entre villes"],
+        "en": ["rail", "south", "Crauthem", "residential", "between cities"]
+      },
+      "tags": ["suburban", "rail"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "leudelange",
+      "name": "Leudelange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Leudelingen", "fr": "Leudelange", "en": "Leudelange", "lu": "Leideleng" },
+      "description_localized": {
+        "de": "Leudelingen grenzt südwestlich an die Hauptstadt mit dem großen Geschäftspark Leudelange, einem etablierten Ortskern und neuen Wohnquartieren entlang der Autobahn A4.",
+        "fr": "Leudelange jouxte la capitale au sud-ouest avec son grand parc d'activités, un centre établi et de nouveaux quartiers résidentiels le long de l'autoroute A4.",
+        "en": "Leudelange borders the capital to the southwest, with its large business park, an established village core, and new residential quarters along the A4 motorway."
+      },
+      "keywords_localized": {
+        "de": ["Geschäftspark", "Autobahn", "Stadtrand", "Neubau", "wohnlich"],
+        "fr": ["parc d'activités", "autoroute", "périphérie", "neuf", "résidentiel"],
+        "en": ["business park", "motorway", "outskirts", "new build", "residential"]
+      },
+      "tags": ["suburban", "business park", "growing"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "junglinster",
+      "name": "Junglinster",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Junglinster", "fr": "Junglinster", "en": "Junglinster", "lu": "Jonglënster" },
+      "description_localized": {
+        "de": "Junglinster ist eine Wohngemeinde nordöstlich der Hauptstadt mit eigenem Lyzeum, Sportzentrum und einer Mischung aus Dorfkernen und neueren Wohngebieten entlang der N11.",
+        "fr": "Junglinster est une commune résidentielle au nord-est de la capitale, avec son lycée, un centre sportif et un mélange de noyaux villageois et de nouveaux lotissements le long de la N11.",
+        "en": "Junglinster is a residential commune northeast of the capital, with its own lycée, a sports centre, and a mix of village cores and newer residential pockets along the N11."
+      },
+      "keywords_localized": {
+        "de": ["Lyzeum", "Sportzentrum", "N11", "Wohngemeinde", "nordöstlich"],
+        "fr": ["lycée", "centre sportif", "N11", "résidentiel", "nord-est"],
+        "en": ["lycée", "sports centre", "N11", "residential", "northeast"]
+      },
+      "tags": ["suburban", "schools"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "dudelange",
+      "name": "Dudelange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Düdelingen", "fr": "Dudelange", "en": "Dudelange", "lu": "Diddeleng" },
+      "description_localized": {
+        "de": "Düdelingen ist die viertgrößte Stadt Luxemburgs im Süden, mit industriellem Erbe, dem Centre national de l'audiovisuel, drei Bahnhöfen und einer aktiven Stadtentwicklung rund um das Quartier NeiSchmelz.",
+        "fr": "Dudelange est la quatrième ville du pays, dans le sud, avec un patrimoine industriel, le Centre national de l'audiovisuel, trois gares et un développement urbain actif autour du quartier NeiSchmelz.",
+        "en": "Dudelange is Luxembourg's fourth-largest city in the south, with industrial heritage, the Centre national de l'audiovisuel, three train stations, and active urban development around the NeiSchmelz district."
+      },
+      "keywords_localized": {
+        "de": ["industrielles Erbe", "Bahn", "NeiSchmelz", "CNA", "Stadt"],
+        "fr": ["héritage industriel", "gare", "NeiSchmelz", "CNA", "ville"],
+        "en": ["industrial heritage", "rail", "NeiSchmelz", "CNA", "city"]
+      },
+      "tags": ["secondary city", "rail", "industrial heritage"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "petange",
+      "name": "Pétange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Petingen", "fr": "Pétange", "en": "Pétange", "lu": "Péiteng" },
+      "description_localized": {
+        "de": "Petingen liegt im Südwesten an der belgischen Grenze, mit den Sektionen Petingen, Rodange und Lamadelaine, einem Bahnknoten, dem Naturpark Titelberg und Wohnlagen in städtischer Dichte.",
+        "fr": "Pétange se situe au sud-ouest à la frontière belge, avec les sections de Pétange, Rodange et Lamadelaine, un nœud ferroviaire, le parc naturel du Titelberg et un habitat de densité urbaine.",
+        "en": "Pétange lies in the southwest on the Belgian border, with the Pétange, Rodange, and Lamadelaine sections, a rail junction, the Titelberg nature park, and urban-density housing."
+      },
+      "keywords_localized": {
+        "de": ["Bahnknoten", "Grenze Belgien", "Rodange", "Titelberg", "städtisch"],
+        "fr": ["nœud ferroviaire", "frontière Belgique", "Rodange", "Titelberg", "urbain"],
+        "en": ["rail hub", "Belgian border", "Rodange", "Titelberg", "urban"]
+      },
+      "tags": ["secondary city", "rail", "border"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "kayl",
+      "name": "Kayl",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Kayl", "fr": "Kayl", "en": "Kayl", "lu": "Kayl" },
+      "description_localized": {
+        "de": "Kayl liegt im Südosten der Minette-Region mit den Sektionen Kayl und Tétange, industriellem Erbe und einer Mischung aus Altbauten und neueren Wohnprojekten.",
+        "fr": "Kayl est située dans le sud-est du bassin minier, avec les sections de Kayl et Tétange, un patrimoine industriel et un mélange d'anciennes maisons et de projets résidentiels récents.",
+        "en": "Kayl lies in the southeast of the Minette region with the Kayl and Tétange sections, industrial heritage, and a mix of older houses and recent residential projects."
+      },
+      "keywords_localized": {
+        "de": ["Minette", "industrielles Erbe", "Tétange", "Süden", "wohnlich"],
+        "fr": ["bassin minier", "héritage industriel", "Tétange", "sud", "résidentiel"],
+        "en": ["Minette", "industrial heritage", "Tétange", "south", "residential"]
+      },
+      "tags": ["secondary", "industrial heritage"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "sanem",
+      "name": "Sanem",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Sassenheim", "fr": "Sanem", "en": "Sanem", "lu": "Suessem" },
+      "description_localized": {
+        "de": "Sassenheim umfasst die Sektionen Sanem, Belvaux, Ehlerange und Soleuvre, grenzt unmittelbar an Belval und kombiniert Wohnlagen mit Industriearealen und neuen Bahnstationen.",
+        "fr": "Sanem regroupe les sections de Sanem, Belvaux, Ehlerange et Soleuvre, jouxte Belval et combine zones résidentielles, sites industriels et nouvelles gares.",
+        "en": "Sanem covers the Sanem, Belvaux, Ehlerange, and Soleuvre sections, adjoins Belval, and combines residential areas with industrial sites and new train stations."
+      },
+      "keywords_localized": {
+        "de": ["Belval-Nähe", "Belvaux", "Bahn", "Industrie", "Süden"],
+        "fr": ["proche Belval", "Belvaux", "gare", "industrie", "sud"],
+        "en": ["near Belval", "Belvaux", "rail", "industry", "south"]
+      },
+      "tags": ["secondary", "near Belval", "rail"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "mondercange",
+      "name": "Mondercange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Monnerich", "fr": "Mondercange", "en": "Mondercange", "lu": "Monnerech" },
+      "description_localized": {
+        "de": "Mondercange liegt zwischen Esch und der Hauptstadt mit den Sektionen Mondercange, Bergem und Foetz, einer Bahnstation und dem Einkaufszentrum Foetz an der Autobahn.",
+        "fr": "Mondercange se trouve entre Esch et la capitale, avec les sections de Mondercange, Bergem et Foetz, une gare et la zone commerciale de Foetz le long de l'autoroute.",
+        "en": "Mondercange lies between Esch and the capital, with the Mondercange, Bergem, and Foetz sections, a train station, and the Foetz commercial zone along the motorway."
+      },
+      "keywords_localized": {
+        "de": ["Foetz", "Bahn", "Autobahn", "Einkaufszentrum", "Süden"],
+        "fr": ["Foetz", "gare", "autoroute", "zone commerciale", "sud"],
+        "en": ["Foetz", "rail", "motorway", "retail zone", "south"]
+      },
+      "tags": ["secondary", "rail", "retail"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "bettembourg",
+      "name": "Bettembourg",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Bettemburg", "fr": "Bettembourg", "en": "Bettembourg", "lu": "Beetebuerg" },
+      "description_localized": {
+        "de": "Bettemburg liegt im Süden an einem wichtigen Bahnknoten Richtung Frankreich, mit dem Parc Merveilleux, dem multimodalen Terminal CFL und Wohnlagen in Bettembourg, Huncherange, Noertzange und Abweiler.",
+        "fr": "Bettembourg se trouve au sud, sur un important nœud ferroviaire vers la France, avec le Parc Merveilleux, le terminal multimodal CFL et des sections résidentielles à Bettembourg, Huncherange, Noertzange et Abweiler.",
+        "en": "Bettembourg lies in the south on a major rail junction toward France, with the Parc Merveilleux family park, the CFL multimodal terminal, and residential sections at Bettembourg, Huncherange, Noertzange, and Abweiler."
+      },
+      "keywords_localized": {
+        "de": ["Bahnknoten", "Parc Merveilleux", "Süden", "Frankreich", "Multimodal"],
+        "fr": ["nœud ferroviaire", "Parc Merveilleux", "sud", "France", "multimodal"],
+        "en": ["rail hub", "Parc Merveilleux", "south", "France", "multimodal"]
+      },
+      "tags": ["secondary", "rail", "logistics"],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "lintgen",
+      "name": "Lintgen",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Lintgen", "fr": "Lintgen", "en": "Lintgen", "lu": "Lëntgen" },
+      "description_localized": {
+        "de": "Lintgen liegt im Alzette-Tal nördlich der Hauptstadt mit eigener Bahnstation, einem etablierten Dorfkern und Wohnlagen entlang der Hauptachse N7.",
+        "fr": "Lintgen se trouve dans la vallée de l'Alzette au nord de la capitale, avec sa gare, un centre villageois établi et des zones résidentielles le long de la N7.",
+        "en": "Lintgen lies in the Alzette valley north of the capital, with its own train station, an established village core, and residential areas along the N7."
+      },
+      "keywords_localized": {
+        "de": ["Bahn", "N7", "Alzette-Tal", "Dorfkern", "nördlich"],
+        "fr": ["gare", "N7", "vallée Alzette", "village", "nord"],
+        "en": ["rail", "N7", "Alzette valley", "village", "north"]
+      },
+      "tags": ["suburban", "rail"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "lorentzweiler",
+      "name": "Lorentzweiler",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Lorentzweiler", "fr": "Lorentzweiler", "en": "Lorentzweiler", "lu": "Luerenzweiler" },
+      "description_localized": {
+        "de": "Lorentzweiler liegt im Alzette-Tal zwischen Walferdingen und Lintgen mit eigener Bahnstation, Wohnlagen in Lorentzweiler, Hunsdorf, Asselborn und Helmdange und kurzem Weg in die Stadt.",
+        "fr": "Lorentzweiler se trouve dans la vallée de l'Alzette entre Walferdange et Lintgen, avec sa gare, des sections résidentielles à Lorentzweiler, Hunsdorf, Asselborn et Helmdange, et un accès rapide à la ville.",
+        "en": "Lorentzweiler lies in the Alzette valley between Walferdange and Lintgen, with its own train station, residential sections at Lorentzweiler, Hunsdorf, Asselborn, and Helmdange, and quick city access."
+      },
+      "keywords_localized": {
+        "de": ["Bahn", "Alzette-Tal", "Hunsdorf", "Stadtnähe", "nördlich"],
+        "fr": ["gare", "vallée Alzette", "Hunsdorf", "proche ville", "nord"],
+        "en": ["rail", "Alzette valley", "Hunsdorf", "near city", "north"]
+      },
+      "tags": ["suburban", "rail"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "steinfort",
+      "name": "Steinfort",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Steinfort", "fr": "Steinfort", "en": "Steinfort", "lu": "Stengefort" },
+      "description_localized": {
+        "de": "Steinfort liegt im Westen an der belgischen Grenze mit den Sektionen Steinfort, Hagen, Kleinbettingen und Grass, eigener Bahnstation Richtung Brüssel und kurzem Weg nach Mamer.",
+        "fr": "Steinfort se trouve à l'ouest à la frontière belge, avec les sections de Steinfort, Hagen, Kleinbettingen et Grass, sa gare vers Bruxelles et un accès rapide à Mamer.",
+        "en": "Steinfort lies in the west on the Belgian border, with the Steinfort, Hagen, Kleinbettingen, and Grass sections, its station on the Brussels line, and quick access to Mamer."
+      },
+      "keywords_localized": {
+        "de": ["Bahn", "Belgien", "Kleinbettingen", "Mamer-Nähe", "westlich"],
+        "fr": ["gare", "Belgique", "Kleinbettingen", "proche Mamer", "ouest"],
+        "en": ["rail", "Belgium", "Kleinbettingen", "near Mamer", "west"]
+      },
+      "tags": ["suburban", "rail", "border"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "kehlen",
+      "name": "Kehlen",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Kehlen", "fr": "Kehlen", "en": "Kehlen", "lu": "Kielen" },
+      "description_localized": {
+        "de": "Kehlen liegt nordwestlich der Hauptstadt im hügeligen Umland mit den Sektionen Kehlen, Keispelt, Meispelt, Olm, Dondelange und Nospelt sowie Wohnlagen in dörflichem Maßstab.",
+        "fr": "Kehlen se trouve au nord-ouest de la capitale, dans un cadre vallonné, avec les sections de Kehlen, Keispelt, Meispelt, Olm, Dondelange et Nospelt, et un habitat à échelle villageoise.",
+        "en": "Kehlen lies northwest of the capital in rolling countryside, with the Kehlen, Keispelt, Meispelt, Olm, Dondelange, and Nospelt sections and village-scale housing."
+      },
+      "keywords_localized": {
+        "de": ["dörflich", "Olm", "hügelig", "Wohngemeinde", "nordwestlich"],
+        "fr": ["villageois", "Olm", "vallonné", "résidentiel", "nord-ouest"],
+        "en": ["village", "Olm", "rolling", "residential", "northwest"]
+      },
+      "tags": ["suburban", "village", "rolling"],
+      "price_tier_id": "lu_urban"
+    },
+    {
+      "kind": "commune",
+      "slug": "larochette",
+      "name": "Larochette",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Fels", "fr": "Larochette", "en": "Larochette", "lu": "Fiels" },
+      "description_localized": {
+        "de": "Larochette ist eine kleine Burgstadt in einem Felsental nordöstlich von Mersch, mit historischem Ortskern, Schloss Larochette und Wohnlagen in dichter Dorfstruktur.",
+        "fr": "Larochette est une petite bourgade castrale dans une vallée encaissée au nord-est de Mersch, avec un centre historique, le château de Larochette et un habitat villageois compact.",
+        "en": "Larochette is a small castle town in a rocky valley northeast of Mersch, with a historic core, Larochette castle, and dense village housing."
+      },
+      "keywords_localized": {
+        "de": ["Schloss", "historisch", "Felsental", "Dorfkern", "nordöstlich"],
+        "fr": ["château", "historique", "vallée", "village", "nord-est"],
+        "en": ["castle", "historic", "valley", "village", "northeast"]
+      },
+      "tags": ["historic", "village", "castle"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "echternach",
+      "name": "Echternach",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Echternach", "fr": "Echternach", "en": "Echternach", "lu": "Iechternach" },
+      "description_localized": {
+        "de": "Echternach ist die älteste Stadt Luxemburgs im Osten an der Sauer und der deutschen Grenze, mit der UNESCO-Springprozession, der Basilika St. Willibrord und einer aktiven Tourismus- und Wohnstadt im Müllerthal.",
+        "fr": "Echternach est la plus ancienne ville du Luxembourg, à l'est sur la Sûre et la frontière allemande, avec la procession dansante classée UNESCO, la basilique Saint-Willibrord et une vie urbaine et touristique active au cœur du Mullerthal.",
+        "en": "Echternach is Luxembourg's oldest town, in the east on the Sauer and the German border, with the UNESCO Dancing Procession, the Saint Willibrord basilica, and an active tourist and residential town at the heart of the Mullerthal."
+      },
+      "keywords_localized": {
+        "de": ["UNESCO", "Müllerthal", "Sauer", "Basilika", "Tourismus"],
+        "fr": ["UNESCO", "Mullerthal", "Sûre", "basilique", "tourisme"],
+        "en": ["UNESCO", "Mullerthal", "Sauer", "basilica", "tourism"]
+      },
+      "tags": ["regional centre", "historic", "tourism", "border"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "grevenmacher",
+      "name": "Grevenmacher",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Grevenmacher", "fr": "Grevenmacher", "en": "Grevenmacher", "lu": "Gréiwemaacher" },
+      "description_localized": {
+        "de": "Grevenmacher ist der Hauptort des Moseltals an der deutschen Grenze, mit Weinkellereien, dem Schmetterlingsgarten, einem Hafen und einer Mischung aus Altstadt und neueren Wohnvierteln über den Rebhängen.",
+        "fr": "Grevenmacher est le chef-lieu de la vallée mosellane, à la frontière allemande, avec des caves viticoles, le Jardin des Papillons, un port et un mélange de vieille ville et de quartiers résidentiels récents sur les coteaux.",
+        "en": "Grevenmacher is the main town of the Moselle valley on the German border, with wineries, the Butterfly Garden, a river port, and a mix of old town and newer hillside residential quarters."
+      },
+      "keywords_localized": {
+        "de": ["Mosel", "Wein", "Hafen", "Grenze", "Tourismus"],
+        "fr": ["Moselle", "vin", "port", "frontière", "tourisme"],
+        "en": ["Moselle", "wine", "port", "border", "tourism"]
+      },
+      "tags": ["regional centre", "wine", "river"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "wormeldange",
+      "name": "Wormeldange",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Wormeldingen", "fr": "Wormeldange", "en": "Wormeldange", "lu": "Wuermeldeng" },
+      "description_localized": {
+        "de": "Wormeldingen liegt an der Mosel südlich von Grevenmacher, mit den Weinbau-Sektionen Wormeldange, Ahn, Machtum und Dreiborn, einer Marina und Wohnlagen über den Rebhängen.",
+        "fr": "Wormeldange est située sur la Moselle au sud de Grevenmacher, avec les sections viticoles de Wormeldange, Ahn, Machtum et Dreiborn, une marina et des zones résidentielles sur les coteaux.",
+        "en": "Wormeldange lies on the Moselle south of Grevenmacher, with the wine-growing sections of Wormeldange, Ahn, Machtum, and Dreiborn, a marina, and residential areas on the slopes."
+      },
+      "keywords_localized": {
+        "de": ["Mosel", "Wein", "Marina", "Ahn", "Rebhänge"],
+        "fr": ["Moselle", "vin", "marina", "Ahn", "coteaux"],
+        "en": ["Moselle", "wine", "marina", "Ahn", "slopes"]
+      },
+      "tags": ["wine", "river", "scenic"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "remich",
+      "name": "Remich",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Remich", "fr": "Remich", "en": "Remich", "lu": "Réimech" },
+      "description_localized": {
+        "de": "Remich ist die kleinste Stadt Luxemburgs an der Mosel, mit der bekannten Uferpromenade Esplanade, Sektkellereien, einer Marina und einer Wohnstruktur, die Altstadt und neuere Quartiere verbindet.",
+        "fr": "Remich est la plus petite ville du pays, sur la Moselle, avec sa célèbre Esplanade le long du fleuve, des caves à crémant, une marina et un tissu résidentiel mêlant vieille ville et nouveaux quartiers.",
+        "en": "Remich is Luxembourg's smallest town on the Moselle, with its well-known riverside Esplanade, crémant cellars, a marina, and a residential fabric blending old town and newer quarters."
+      },
+      "keywords_localized": {
+        "de": ["Mosel", "Esplanade", "Crémant", "Marina", "Tourismus"],
+        "fr": ["Moselle", "Esplanade", "crémant", "marina", "tourisme"],
+        "en": ["Moselle", "Esplanade", "crémant", "marina", "tourism"]
+      },
+      "tags": ["regional centre", "wine", "river"],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "kaerjeng",
+      "name": "Käerjeng",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Käerjeng", "fr": "Käerjeng", "en": "Käerjeng", "lu": "Käerjeng" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Capellen, au sud-ouest du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Capellen, im Südwesten des Großherzogtums.",
+        "en": "Residential commune in the Capellen canton, in the southwest of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "clemency",
+      "name": "Clemency",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Küntzig", "fr": "Clemency", "en": "Clemency", "lu": "Kënzeg" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Capellen, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Capellen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Capellen canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "dippach",
+      "name": "Dippach",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Dippach", "fr": "Dippach", "en": "Dippach", "lu": "Dippech" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Capellen, à l'ouest du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Capellen, im Westen des Großherzogtums.",
+        "en": "Residential commune in the Capellen canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "garnich",
+      "name": "Garnich",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Garnich", "fr": "Garnich", "en": "Garnich", "lu": "Garnech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Capellen, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Capellen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Capellen canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "habscht",
+      "name": "Habscht",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Habscht", "fr": "Habscht", "en": "Habscht", "lu": "Habscht" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Capellen, à l'ouest du Grand-Duché, issue de la fusion de Hobscheid et Septfontaines.",
+        "de": "Ländliche Gemeinde im Kanton Capellen, im Westen des Großherzogtums, hervorgegangen aus der Fusion von Hobscheid und Septfontaines.",
+        "en": "Rural commune in the Capellen canton, in the west of the Grand Duchy, formed by the merger of Hobscheid and Septfontaines."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "koerich",
+      "name": "Koerich",
+      "parent_slug": "canton-capellen",
+      "name_localized": { "de": "Koerich", "fr": "Koerich", "en": "Koerich", "lu": "Käerch" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Capellen, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Capellen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Capellen canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "clervaux",
+      "name": "Clervaux",
+      "parent_slug": "canton-clervaux",
+      "name_localized": { "de": "Clerf", "fr": "Clervaux", "en": "Clervaux", "lu": "Klierf" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Clervaux, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Clerf, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Clervaux canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "parc-hosingen",
+      "name": "Parc Hosingen",
+      "parent_slug": "canton-clervaux",
+      "name_localized": { "de": "Parc Housen", "fr": "Parc Hosingen", "en": "Parc Hosingen", "lu": "Parc Housen" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Clervaux, au nord du Grand-Duché, issue de la fusion de Hosingen, Consthum et Hoscheid.",
+        "de": "Ländliche Gemeinde im Kanton Clerf, im Norden des Großherzogtums, hervorgegangen aus der Fusion von Housen, Consthum und Hoscheid.",
+        "en": "Rural commune in the Clervaux canton, in the north of the Grand Duchy, formed by the merger of Hosingen, Consthum, and Hoscheid."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "troisvierges",
+      "name": "Troisvierges",
+      "parent_slug": "canton-clervaux",
+      "name_localized": { "de": "Ulflingen", "fr": "Troisvierges", "en": "Troisvierges", "lu": "Ëlwen" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Clervaux, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Clerf, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Clervaux canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "weiswampach",
+      "name": "Weiswampach",
+      "parent_slug": "canton-clervaux",
+      "name_localized": { "de": "Weiswampach", "fr": "Weiswampach", "en": "Weiswampach", "lu": "Wäisswampech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Clervaux, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Clerf, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Clervaux canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "wincrange",
+      "name": "Wincrange",
+      "parent_slug": "canton-clervaux",
+      "name_localized": { "de": "Wintger", "fr": "Wincrange", "en": "Wincrange", "lu": "Wëntger" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Clervaux, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Clerf, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Clervaux canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "bettendorf",
+      "name": "Bettendorf",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Bettendorf", "fr": "Bettendorf", "en": "Bettendorf", "lu": "Bettenduerf" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "bourscheid",
+      "name": "Bourscheid",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Burscheid", "fr": "Bourscheid", "en": "Bourscheid", "lu": "Buurschent" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "diekirch",
+      "name": "Diekirch",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Diekirch", "fr": "Diekirch", "en": "Diekirch", "lu": "Dikrech" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Residential commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "erpeldange-sur-sure",
+      "name": "Erpeldange-sur-Sûre",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Erpeldingen an der Sauer", "fr": "Erpeldange-sur-Sûre", "en": "Erpeldange-sur-Sûre", "lu": "Erpeldeng-Sauer" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Residential commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "ettelbruck",
+      "name": "Ettelbruck",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Ettelbrück", "fr": "Ettelbruck", "en": "Ettelbruck", "lu": "Ettelbréck" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Residential commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "feulen",
+      "name": "Feulen",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Feulen", "fr": "Feulen", "en": "Feulen", "lu": "Feelen" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "mertzig",
+      "name": "Mertzig",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Mertzig", "fr": "Mertzig", "en": "Mertzig", "lu": "Mäerzeg" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "reisdorf",
+      "name": "Reisdorf",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Reisdorf", "fr": "Reisdorf", "en": "Reisdorf", "lu": "Reisduerf" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "schieren",
+      "name": "Schieren",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Schieren", "fr": "Schieren", "en": "Schieren", "lu": "Schieren" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "vallee-de-l-ernz",
+      "name": "Vallée de l'Ernz",
+      "parent_slug": "canton-diekirch",
+      "name_localized": { "de": "Ernz-Tal", "fr": "Vallée de l'Ernz", "en": "Vallée de l'Ernz", "lu": "Äernz-Dall" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Diekirch, au nord du Grand-Duché, issue d'une fusion de communes.",
+        "de": "Ländliche Gemeinde im Kanton Diekirch, im Norden des Großherzogtums, hervorgegangen aus einer Gemeindefusion.",
+        "en": "Rural commune in the Diekirch canton, in the north of the Grand Duchy, formed by a merger of communes."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "beaufort",
+      "name": "Beaufort",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Befort", "fr": "Beaufort", "en": "Beaufort", "lu": "Befort" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "bech",
+      "name": "Bech",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Bech", "fr": "Bech", "en": "Bech", "lu": "Bech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "berdorf",
+      "name": "Berdorf",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Berdorf", "fr": "Berdorf", "en": "Berdorf", "lu": "Bäerdref" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "consdorf",
+      "name": "Consdorf",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Consdorf", "fr": "Consdorf", "en": "Consdorf", "lu": "Konsdref" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "mompach",
+      "name": "Mompach",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Mompach", "fr": "Mompach", "en": "Mompach", "lu": "Mompech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "rosport-mompach",
+      "name": "Rosport-Mompach",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Rosport-Mompach", "fr": "Rosport-Mompach", "en": "Rosport-Mompach", "lu": "Rouspert-Mompech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché, issue de la fusion de Rosport et Mompach.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums, hervorgegangen aus der Fusion von Rosport und Mompach.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy, formed by the merger of Rosport and Mompach."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "waldbillig",
+      "name": "Waldbillig",
+      "parent_slug": "canton-echternach",
+      "name_localized": { "de": "Waldbillig", "fr": "Waldbillig", "en": "Waldbillig", "lu": "Waldbëlleg" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Echternach, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Echternach, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Echternach canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "frisange",
+      "name": "Frisange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Frisingen", "fr": "Frisange", "en": "Frisange", "lu": "Fréiseng" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton d'Esch-sur-Alzette, au sud du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Esch, im Süden des Großherzogtums.",
+        "en": "Residential commune in the Esch-sur-Alzette canton, in the south of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "reckange-sur-mess",
+      "name": "Reckange-sur-Mess",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Reckingen an der Mess", "fr": "Reckange-sur-Mess", "en": "Reckange-sur-Mess", "lu": "Reckeng op der Mess" },
+      "description_localized": {
+        "fr": "Commune rurale du canton d'Esch-sur-Alzette, au sud-ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Esch, im Südwesten des Großherzogtums.",
+        "en": "Rural commune in the Esch-sur-Alzette canton, in the southwest of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "rumelange",
+      "name": "Rumelange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Rümelingen", "fr": "Rumelange", "en": "Rumelange", "lu": "Rëmeleng" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton d'Esch-sur-Alzette, au sud du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Esch, im Süden des Großherzogtums.",
+        "en": "Residential commune in the Esch-sur-Alzette canton, in the south of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "schifflange",
+      "name": "Schifflange",
+      "parent_slug": "canton-esch-sur-alzette",
+      "name_localized": { "de": "Schifflingen", "fr": "Schifflange", "en": "Schifflange", "lu": "Schëffleng" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton d'Esch-sur-Alzette, au sud du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Esch, im Süden des Großherzogtums.",
+        "en": "Residential commune in the Esch-sur-Alzette canton, in the south of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_secondary"
+    },
+    {
+      "kind": "commune",
+      "slug": "betzdorf",
+      "name": "Betzdorf",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Betzdorf", "fr": "Betzdorf", "en": "Betzdorf", "lu": "Betzder" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Grevenmacher, à l'est du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Grevenmacher, im Osten des Großherzogtums.",
+        "en": "Residential commune in the Grevenmacher canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "biwer",
+      "name": "Biwer",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Biwer", "fr": "Biwer", "en": "Biwer", "lu": "Biwer" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Grevenmacher, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Grevenmacher, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Grevenmacher canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "flaxweiler",
+      "name": "Flaxweiler",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Flaxweiler", "fr": "Flaxweiler", "en": "Flaxweiler", "lu": "Fluessweiler" },
+      "description_localized": {
+        "fr": "Commune viticole du canton de Grevenmacher, à l'est du Grand-Duché.",
+        "de": "Weinbaugemeinde im Kanton Grevenmacher, im Osten des Großherzogtums.",
+        "en": "Wine-growing commune in the Grevenmacher canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "manternach",
+      "name": "Manternach",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Manternach", "fr": "Manternach", "en": "Manternach", "lu": "Manternach" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Grevenmacher, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Grevenmacher, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Grevenmacher canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "mertert",
+      "name": "Mertert",
+      "parent_slug": "canton-grevenmacher",
+      "name_localized": { "de": "Mertert", "fr": "Mertert", "en": "Mertert", "lu": "Mertert" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Grevenmacher, à l'est du Grand-Duché, sur la Moselle.",
+        "de": "Residentielle Gemeinde im Kanton Grevenmacher, im Osten des Großherzogtums, an der Mosel.",
+        "en": "Residential commune in the Grevenmacher canton, in the east of the Grand Duchy, on the Moselle."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "weiler-la-tour",
+      "name": "Weiler-la-Tour",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Weiler zum Turm", "fr": "Weiler-la-Tour", "en": "Weiler-la-Tour", "lu": "Weiler-zum-Tuerm" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Luxembourg, au sud-est du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Luxemburg, im Südosten des Großherzogtums.",
+        "en": "Residential commune in the Luxembourg canton, in the southeast of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "bissen",
+      "name": "Bissen",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Bissen", "fr": "Bissen", "en": "Bissen", "lu": "Biissen" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Mersch, au centre du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Mersch, im Zentrum des Großherzogtums.",
+        "en": "Residential commune in the Mersch canton, in the centre of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "helperknapp",
+      "name": "Helperknapp",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Helperknapp", "fr": "Helperknapp", "en": "Helperknapp", "lu": "Helperknapp" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Mersch, au centre du Grand-Duché, issue de la fusion de Boevange-sur-Attert et Tuntange.",
+        "de": "Ländliche Gemeinde im Kanton Mersch, im Zentrum des Großherzogtums, hervorgegangen aus der Fusion von Boevange-sur-Attert und Tuntange.",
+        "en": "Rural commune in the Mersch canton, in the centre of the Grand Duchy, formed by the merger of Boevange-sur-Attert and Tuntange."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "colmar-berg",
+      "name": "Colmar-Berg",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Colmar-Berg", "fr": "Colmar-Berg", "en": "Colmar-Berg", "lu": "Kolmer-Bierg" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Mersch, au centre du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Mersch, im Zentrum des Großherzogtums.",
+        "en": "Residential commune in the Mersch canton, in the centre of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "fischbach",
+      "name": "Fischbach",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Fischbach", "fr": "Fischbach", "en": "Fischbach", "lu": "Fëschbech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Mersch, au centre du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Mersch, im Zentrum des Großherzogtums.",
+        "en": "Rural commune in the Mersch canton, in the centre of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "heffingen",
+      "name": "Heffingen",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Heffingen", "fr": "Heffingen", "en": "Heffingen", "lu": "Hiefenech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Mersch, au centre du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Mersch, im Zentrum des Großherzogtums.",
+        "en": "Rural commune in the Mersch canton, in the centre of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "nommern",
+      "name": "Nommern",
+      "parent_slug": "canton-mersch",
+      "name_localized": { "de": "Nommern", "fr": "Nommern", "en": "Nommern", "lu": "Noumer" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Mersch, au centre du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Mersch, im Zentrum des Großherzogtums.",
+        "en": "Rural commune in the Mersch canton, in the centre of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "vichten",
+      "name": "Vichten",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Vichten", "fr": "Vichten", "en": "Vichten", "lu": "Veichten" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "beckerich",
+      "name": "Beckerich",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Beckerich", "fr": "Beckerich", "en": "Beckerich", "lu": "Biekerech" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "ell",
+      "name": "Ell",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Ell", "fr": "Ell", "en": "Ell", "lu": "Ell" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "grosbous-wahl",
+      "name": "Grosbous-Wahl",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Grosbous-Wahl", "fr": "Grosbous-Wahl", "en": "Grosbous-Wahl", "lu": "Groussbus-Wal" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché, issue de la fusion de Grosbous et Wahl.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums, hervorgegangen aus der Fusion von Grosbous und Wahl.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy, formed by the merger of Grosbous and Wahl."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "preizerdaul",
+      "name": "Préizerdaul",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Preizerdaul", "fr": "Préizerdaul", "en": "Préizerdaul", "lu": "Préizerdaul" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "rambrouch",
+      "name": "Rambrouch",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Rambrouch", "fr": "Rambrouch", "en": "Rambrouch", "lu": "Rammerich" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "redange-sur-attert",
+      "name": "Redange-sur-Attert",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Redingen an der Attert", "fr": "Redange-sur-Attert", "en": "Redange-sur-Attert", "lu": "Réiden-Atert" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Residentielle Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Residential commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "saeul",
+      "name": "Saeul",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Saeul", "fr": "Saeul", "en": "Saeul", "lu": "Sëll" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "useldange",
+      "name": "Useldange",
+      "parent_slug": "canton-redange",
+      "name_localized": { "de": "Useldingen", "fr": "Useldange", "en": "Useldange", "lu": "Useldeng" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Redange, à l'ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Redingen, im Westen des Großherzogtums.",
+        "en": "Rural commune in the Redange canton, in the west of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "bous-waldbredimus",
+      "name": "Bous-Waldbredimus",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Bous-Waldbredimus", "fr": "Bous-Waldbredimus", "en": "Bous-Waldbredimus", "lu": "Bous-Waldbriedemes" },
+      "description_localized": {
+        "fr": "Commune viticole du canton de Remich, à l'est du Grand-Duché, issue de la fusion de Bous et Waldbredimus.",
+        "de": "Weinbaugemeinde im Kanton Remich, im Osten des Großherzogtums, hervorgegangen aus der Fusion von Bous und Waldbredimus.",
+        "en": "Wine-growing commune in the Remich canton, in the east of the Grand Duchy, formed by the merger of Bous and Waldbredimus."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "burmerange",
+      "name": "Burmerange",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Burmerange", "fr": "Burmerange", "en": "Burmerange", "lu": "Buermereng" },
+      "description_localized": {
+        "fr": "Commune viticole du canton de Remich, à l'est du Grand-Duché.",
+        "de": "Weinbaugemeinde im Kanton Remich, im Osten des Großherzogtums.",
+        "en": "Wine-growing commune in the Remich canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "dalheim",
+      "name": "Dalheim",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Dalheim", "fr": "Dalheim", "en": "Dalheim", "lu": "Duelem" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Remich, à l'est du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Remich, im Osten des Großherzogtums.",
+        "en": "Rural commune in the Remich canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "lenningen",
+      "name": "Lenningen",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Lenningen", "fr": "Lenningen", "en": "Lenningen", "lu": "Lenneng" },
+      "description_localized": {
+        "fr": "Commune viticole du canton de Remich, à l'est du Grand-Duché.",
+        "de": "Weinbaugemeinde im Kanton Remich, im Osten des Großherzogtums.",
+        "en": "Wine-growing commune in the Remich canton, in the east of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "mondorf-les-bains",
+      "name": "Mondorf-les-Bains",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Bad Mondorf", "fr": "Mondorf-les-Bains", "en": "Mondorf-les-Bains", "lu": "Munneref" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Remich, au sud-est du Grand-Duché, connue pour ses thermes et son casino.",
+        "de": "Residentielle Gemeinde im Kanton Remich, im Südosten des Großherzogtums, bekannt für ihre Thermen und das Kasino.",
+        "en": "Residential commune in the Remich canton, in the southeast of the Grand Duchy, known for its thermal baths and casino."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "schengen",
+      "name": "Schengen",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Schengen", "fr": "Schengen", "en": "Schengen", "lu": "Schengen" },
+      "description_localized": {
+        "fr": "Commune viticole du canton de Remich, à l'est du Grand-Duché, sur la Moselle, lieu de signature de l'Accord de Schengen.",
+        "de": "Weinbaugemeinde im Kanton Remich, im Osten des Großherzogtums, an der Mosel, Ort der Unterzeichnung des Schengener Abkommens.",
+        "en": "Wine-growing commune in the Remich canton, in the east of the Grand Duchy, on the Moselle, where the Schengen Agreement was signed."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "stadtbredimus",
+      "name": "Stadtbredimus",
+      "parent_slug": "canton-remich",
+      "name_localized": { "de": "Stadtbredimus", "fr": "Stadtbredimus", "en": "Stadtbredimus", "lu": "Briedemes" },
+      "description_localized": {
+        "fr": "Commune viticole du canton de Remich, à l'est du Grand-Duché, sur la Moselle.",
+        "de": "Weinbaugemeinde im Kanton Remich, im Osten des Großherzogtums, an der Mosel.",
+        "en": "Wine-growing commune in the Remich canton, in the east of the Grand Duchy, on the Moselle."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "putscheid",
+      "name": "Putscheid",
+      "parent_slug": "canton-vianden",
+      "name_localized": { "de": "Pütscheid", "fr": "Putscheid", "en": "Putscheid", "lu": "Pëtschent" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Vianden, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Vianden, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Vianden canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "tandel",
+      "name": "Tandel",
+      "parent_slug": "canton-vianden",
+      "name_localized": { "de": "Tandel", "fr": "Tandel", "en": "Tandel", "lu": "Tandel" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Vianden, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Vianden, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Vianden canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "vianden",
+      "name": "Vianden",
+      "parent_slug": "canton-vianden",
+      "name_localized": { "de": "Vianden", "fr": "Vianden", "en": "Vianden", "lu": "Veianen" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Vianden, au nord du Grand-Duché, dominée par son château médiéval.",
+        "de": "Residentielle Gemeinde im Kanton Vianden, im Norden des Großherzogtums, geprägt durch ihre mittelalterliche Burg.",
+        "en": "Residential commune in the Vianden canton, in the north of the Grand Duchy, dominated by its medieval castle."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "boulaide",
+      "name": "Boulaide",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Bauschleiden", "fr": "Boulaide", "en": "Boulaide", "lu": "Bauschelt" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Wiltz, au nord-ouest du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Wiltz, im Nordwesten des Großherzogtums.",
+        "en": "Rural commune in the Wiltz canton, in the northwest of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "esch-sur-sure",
+      "name": "Esch-sur-Sûre",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Esch an der Sauer", "fr": "Esch-sur-Sûre", "en": "Esch-sur-Sûre", "lu": "Esch-Sauer" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Wiltz, au nord du Grand-Duché, dans le Parc naturel de la Haute-Sûre.",
+        "de": "Ländliche Gemeinde im Kanton Wiltz, im Norden des Großherzogtums, im Naturpark Obersauer.",
+        "en": "Rural commune in the Wiltz canton, in the north of the Grand Duchy, within the Upper Sûre nature park."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "goesdorf",
+      "name": "Goesdorf",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Goesdorf", "fr": "Goesdorf", "en": "Goesdorf", "lu": "Géisdref" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Wiltz, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Wiltz, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Wiltz canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "kiischpelt",
+      "name": "Kiischpelt",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Kiischpelt", "fr": "Kiischpelt", "en": "Kiischpelt", "lu": "Kiischpelt" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Wiltz, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Wiltz, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Wiltz canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "lac-de-la-haute-sure",
+      "name": "Lac de la Haute-Sûre",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Stausee Obersauer", "fr": "Lac de la Haute-Sûre", "en": "Lac de la Haute-Sûre", "lu": "Stauséi" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Wiltz, au nord du Grand-Duché, autour du lac de la Haute-Sûre.",
+        "de": "Ländliche Gemeinde im Kanton Wiltz, im Norden des Großherzogtums, rund um den Stausee Obersauer.",
+        "en": "Rural commune in the Wiltz canton, in the north of the Grand Duchy, around the Upper Sûre reservoir."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
+    },
+    {
+      "kind": "commune",
+      "slug": "wiltz",
+      "name": "Wiltz",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Wiltz", "fr": "Wiltz", "en": "Wiltz", "lu": "Wolz" },
+      "description_localized": {
+        "fr": "Commune résidentielle du canton de Wiltz, au nord du Grand-Duché, chef-lieu du canton.",
+        "de": "Residentielle Gemeinde im Kanton Wiltz, im Norden des Großherzogtums, Hauptort des Kantons.",
+        "en": "Residential commune in the Wiltz canton, in the north of the Grand Duchy, the canton's main town."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_suburban"
+    },
+    {
+      "kind": "commune",
+      "slug": "winseler",
+      "name": "Winseler",
+      "parent_slug": "canton-wiltz",
+      "name_localized": { "de": "Winseler", "fr": "Winseler", "en": "Winseler", "lu": "Wanseler" },
+      "description_localized": {
+        "fr": "Commune rurale du canton de Wiltz, au nord du Grand-Duché.",
+        "de": "Ländliche Gemeinde im Kanton Wiltz, im Norden des Großherzogtums.",
+        "en": "Rural commune in the Wiltz canton, in the north of the Grand Duchy."
+      },
+      "keywords_localized": { "de": [], "fr": [], "en": [] },
+      "tags": [],
+      "price_tier_id": "lu_rural"
     }
   ]
 }

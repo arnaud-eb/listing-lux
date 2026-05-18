@@ -10,6 +10,12 @@
 #   NEXT_PUBLIC_SUPABASE_URL    — public Supabase project URL
 #   SUPABASE_SERVICE_ROLE_KEY   — server-side service role (NEVER share)
 #
+# Optional repo secrets (cache revalidation — POSTs to /api/admin/revalidate-localities
+# after a successful upsert so the running app picks up new rows without waiting
+# for the natural cache TTL):
+#   LOCALITIES_REVALIDATE_URL     — base URL of the production app
+#   LOCALITIES_REVALIDATE_SECRET  — shared secret matching the route handler
+#
 # Schedule: 4 AM UTC on the 1st of every 3rd month (Jan 1, Apr 1, Jul 1, Oct 1).
 # Quarterly cadence chosen to match STATEC's publication schedule; daily/hourly
 # would be wasted work.
@@ -55,6 +61,8 @@ jobs:
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          LOCALITIES_REVALIDATE_URL: ${{ secrets.LOCALITIES_REVALIDATE_URL }}
+          LOCALITIES_REVALIDATE_SECRET: ${{ secrets.LOCALITIES_REVALIDATE_SECRET }}
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
             bun run seed:localities --dry-run

@@ -22,6 +22,12 @@
  *   NEXT_PUBLIC_SUPABASE_URL    — public Supabase project URL
  *   SUPABASE_SERVICE_ROLE_KEY   — server-side service role (NEVER expose client-side)
  *
+ * Env optional (cache revalidation — see lib/localities/repository.ts):
+ *   LOCALITIES_REVALIDATE_URL     — base URL of the running Next.js app
+ *   LOCALITIES_REVALIDATE_SECRET  — shared secret matching the route handler
+ *   If either is missing, the cache-revalidate POST is skipped silently — useful
+ *   for offline seeding into a fresh DB before the app is up.
+ *
  * In production this script runs from the GitHub Actions cron defined in
  * .github/workflows/seed-localities.yml.
  */
@@ -240,7 +246,34 @@ async function main() {
     `\n${args.dryRun ? "Validated" : "Upserted"} ${inserted} rows${failed > 0 ? `, ${failed} failed` : ""}.`,
   );
 
+  if (!args.dryRun && failed === 0) {
+    await pingRevalidate();
+  }
+
   if (failed > 0) process.exit(1);
+}
+
+async function pingRevalidate(): Promise<void> {
+  const url = process.env.LOCALITIES_REVALIDATE_URL;
+  const secret = process.env.LOCALITIES_REVALIDATE_SECRET;
+  if (!url || !secret) {
+    console.log("  (revalidate skipped — LOCALITIES_REVALIDATE_URL or _SECRET not set)");
+    return;
+  }
+  const endpoint = `${url.replace(/\/$/, "")}/api/admin/revalidate-localities`;
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${secret}` },
+    });
+    if (!res.ok) {
+      console.warn(`  (revalidate failed: HTTP ${res.status} at ${endpoint})`);
+      return;
+    }
+    console.log("  → localities cache revalidated");
+  } catch (err) {
+    console.warn(`  (revalidate failed: ${(err as Error).message})`);
+  }
 }
 
 main().catch((err) => {
