@@ -20,6 +20,7 @@ import {
   IMMOTOP_CHAR_LIMIT,
 } from "@/lib/copy-formatter";
 import type { Listing, Property } from "@/lib/types";
+import { formatNumber } from "@/lib/format";
 import { FORMATTERS, type CopyFormat } from "./formatters";
 
 interface CopyMenuProps {
@@ -184,8 +185,8 @@ function CopyRow({
             {isOverLimit
               ? t("overByChars", { count: overBy ?? 0 })
               : t("charCount", {
-                  current: charCount.toLocaleString(),
-                  limit: charLimit.toLocaleString(),
+                  current: formatNumber(charCount),
+                  limit: formatNumber(charLimit),
                 })}
           </span>
         )}
