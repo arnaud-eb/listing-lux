@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Bath, BedDouble, Maximize } from "lucide-react";
 import PriceDisplay from "@/components/shared/PriceDisplay";
-import { getNeighborhoodBySlug } from "@/lib/markets";
 import DeleteListingButton from "./DeleteListingButton";
 import type { HistoryRow } from "./types";
 
@@ -23,7 +22,6 @@ export default function HistoryCard({
   onDeleted,
 }: HistoryCardProps) {
   const t = useTranslations("wizard.history");
-  const neighborhood = getNeighborhoodBySlug(row.neighborhood);
   const createdAt = new Date(row.created_at).toLocaleDateString(dateLocale, {
     day: "numeric",
     month: "short",
@@ -74,7 +72,7 @@ export default function HistoryCard({
 
           <p className="text-sm text-gray-500 capitalize">
             {row.property_type}
-            {neighborhood ? ` · ${neighborhood.name}` : ""}
+            {row.neighborhoodName ? ` · ${row.neighborhoodName}` : ""}
           </p>
 
           <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">

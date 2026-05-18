@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import PriceDisplay from "@/components/shared/PriceDisplay";
-import { getActiveMarket, getNeighborhoodBySlug } from "@/lib/markets";
+import { getActiveMarket } from "@/lib/markets";
 import {
   formatNumber,
   parseFormattedNumber,
@@ -25,11 +25,14 @@ import type { Property } from "@/lib/types";
 
 interface PropertyHeaderProps {
   property: Property;
+  /** Pre-resolved display name for the locality slug. Parent (server component)
+   *  fetches via lib/localities so the client never hits the DB. */
+  neighborhoodName: string;
   onUpdate: (updated: Property) => void;
   onEditingChange?: (editing: boolean) => void;
 }
 
-export default function PropertyHeader({ property, onUpdate, onEditingChange }: PropertyHeaderProps) {
+export default function PropertyHeader({ property, neighborhoodName, onUpdate, onEditingChange }: PropertyHeaderProps) {
   const market = getActiveMarket();
   const neighborhoods = market.areas.flatMap((a) => a.neighborhoods);
   const t = useTranslations("wizard.listing.propertyHeader");
@@ -62,10 +65,6 @@ export default function PropertyHeader({ property, onUpdate, onEditingChange }: 
   const [priceInput, setPriceInput] = useState(
     property.price != null ? formatNumber(property.price) : "",
   );
-
-  const neighborhoodName =
-    getNeighborhoodBySlug(property.neighborhood)?.name ??
-    property.neighborhood.replace(/-/g, " ");
 
   function handleEdit() {
     onEditingChange?.(true);

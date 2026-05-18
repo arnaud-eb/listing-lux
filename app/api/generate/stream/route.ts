@@ -82,7 +82,7 @@ export async function POST(request: Request) {
   }
 
   // Build prompt
-  const neighborhood = getNeighborhoodBySlug(property.neighborhood);
+  const neighborhood = await getNeighborhoodBySlug(property.neighborhood);
   const photoAnalyses: PhotoAnalysis[] = property.photo_analyses ?? [];
   // Validate optional comment
   const safeComment =
@@ -141,7 +141,7 @@ export async function POST(request: Request) {
             ...buildBaseHashtags({
               language: lang,
               propertyType: property.property_type,
-              neighborhood: property.neighborhood,
+              neighborhoodName: neighborhood?.name ?? null,
             }),
             ...object.hashtags,
           ]);

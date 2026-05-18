@@ -51,7 +51,7 @@ async function generateOne(
   fixture: ListingFixture,
   language: Language,
 ): Promise<GenerationOutput> {
-  const neighborhood = getNeighborhoodBySlug(fixture.property.neighborhood);
+  const neighborhood = await getNeighborhoodBySlug(fixture.property.neighborhood);
 
   const prompt = buildListingPrompt(
     language,

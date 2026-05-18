@@ -11,6 +11,9 @@ import type { Listing, Property } from "@/lib/types";
 
 interface ListingPageClientProps {
   property: Property;
+  /** Pre-resolved locality display name (server-side lookup). Read-only — edit
+   *  mode in PropertyHeader still uses the slug as the source of truth. */
+  neighborhoodName: string;
   initialListings: Listing[];
   /** Server-rendered gallery slot (PhotoCarousel). */
   gallery: React.ReactNode;
@@ -18,6 +21,7 @@ interface ListingPageClientProps {
 
 export default function ListingPageClient({
   property: initialProperty,
+  neighborhoodName,
   initialListings,
   gallery,
 }: ListingPageClientProps) {
@@ -32,6 +36,7 @@ export default function ListingPageClient({
       <div className="mb-8 relative">
         <PropertyHeader
           property={property}
+          neighborhoodName={neighborhoodName}
           onUpdate={setProperty}
           onEditingChange={setIsEditingProperty}
         />
@@ -66,6 +71,7 @@ export default function ListingPageClient({
             propertyId={property.id}
             initialListings={initialListings}
             property={property}
+            neighborhoodName={neighborhoodName}
             onGeneratingChange={setIsGenerating}
           />
         </div>

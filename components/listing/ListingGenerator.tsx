@@ -19,6 +19,9 @@ interface ListingGeneratorProps {
   propertyId: string;
   initialListings: Listing[];
   property: Property;
+  /** Pre-resolved locality display name (server-side lookup). Threaded to the
+   *  generation hook for hashtag construction. */
+  neighborhoodName: string | null;
   /** Optional callback fired when the generation state changes — lets parents disable actions during generation. */
   onGeneratingChange?: (isGenerating: boolean) => void;
 }
@@ -27,6 +30,7 @@ export default function ListingGenerator({
   propertyId,
   initialListings,
   property,
+  neighborhoodName,
   onGeneratingChange,
 }: ListingGeneratorProps) {
   const t = useTranslations("wizard.listing");
@@ -51,6 +55,7 @@ export default function ListingGenerator({
     propertyId,
     initialListings,
     property,
+    neighborhoodName,
     preferredLanguage,
   );
 

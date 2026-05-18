@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getSessionId } from "@/lib/session";
 import { Button } from "@/components/ui/button";
 import type { ListingKind } from "@/lib/constants";
+import { getBySlugs } from "@/lib/localities/repository";
+import { pickLocalized } from "@/lib/localities/locale";
+import type { Language } from "@/lib/types";
 import type { KindFilter } from "./HistoryFilter";
 import HistoryShell from "./HistoryShell";
 import {
@@ -78,7 +81,13 @@ export default async function HistoryPage({
   const initialPage = initialHasMore
     ? fetched.slice(0, HISTORY_PAGE_SIZE)
     : fetched;
-  const initialRows = initialPage.map(toHistoryRow);
+
+  const slugs = [...new Set(initialPage.map((p) => p.neighborhood))];
+  const localityMap = await getBySlugs(slugs);
+  const locale = (await getLocale()) as Language;
+  const resolveName = (slug: string) =>
+    pickLocalized(localityMap.get(slug)?.nameLocalized, locale, slug);
+  const initialRows = initialPage.map((p) => toHistoryRow(p, resolveName(p.neighborhood)));
 
   return (
     <div className="container mx-auto px-6 py-8">

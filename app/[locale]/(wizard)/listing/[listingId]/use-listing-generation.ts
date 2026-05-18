@@ -44,6 +44,9 @@ export function useListingGeneration(
   propertyId: string,
   initialListings: Listing[],
   property: Pick<Property, "property_type" | "neighborhood">,
+  /** Pre-resolved locality display name from the parent server component. Threaded
+   *  into buildBaseHashtags. Null when the slug doesn't resolve in either source. */
+  neighborhoodName: string | null,
   /**
    * Preferred starting language for the tab and the generation queue. Pass the user's
    * site locale (`fr` / `en`) when available; falls back to `de` otherwise (the first
@@ -97,7 +100,7 @@ export function useListingGeneration(
           ...buildBaseHashtags({
             language: lang,
             propertyType: property.property_type,
-            neighborhood: property.neighborhood,
+            neighborhoodName,
           }),
           ...(object.hashtags ?? []),
         ]);

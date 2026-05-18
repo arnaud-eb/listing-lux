@@ -62,7 +62,7 @@ export async function generateMetadata({
     return { title: t("listingNotFoundTitle") };
   }
 
-  const neighborhood = getNeighborhoodBySlug(p.neighborhood);
+  const neighborhood = await getNeighborhoodBySlug(p.neighborhood);
   const neighborhoodName =
     neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
   const typeName =
@@ -126,6 +126,10 @@ export default async function ListingPage({ params }: PageProps) {
     created_at: p.created_at,
   };
 
+  const neighborhood = await getNeighborhoodBySlug(p.neighborhood);
+  const neighborhoodName =
+    neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
+
   const gallery = (
     <PhotoCarousel
       urls={p.photo_urls}
@@ -138,6 +142,7 @@ export default async function ListingPage({ params }: PageProps) {
       <div className="container mx-auto px-6 py-8 flex-1">
         <ListingPageClient
           property={property}
+          neighborhoodName={neighborhoodName}
           initialListings={existingListings}
           gallery={gallery}
         />

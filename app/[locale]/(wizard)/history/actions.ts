@@ -1,9 +1,13 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { getLocale } from "next-intl/server";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getSessionId } from "@/lib/session";
 import { LISTING_KINDS, type ListingKind } from "@/lib/constants";
+import { getBySlugs } from "@/lib/localities/repository";
+import { pickLocalized } from "@/lib/localities/locale";
+import type { Language } from "@/lib/types";
 import {
   HISTORY_PAGE_SIZE,
   toHistoryRow,
@@ -102,8 +106,14 @@ export async function getMoreListings({
   const hasMore = rows.length > HISTORY_PAGE_SIZE;
   const page = hasMore ? rows.slice(0, HISTORY_PAGE_SIZE) : rows;
 
+  const slugs = [...new Set(page.map((p) => p.neighborhood))];
+  const localityMap = await getBySlugs(slugs);
+  const locale = (await getLocale()) as Language;
+  const resolveName = (slug: string) =>
+    pickLocalized(localityMap.get(slug)?.nameLocalized, locale, slug);
+
   return {
-    rows: page.map(toHistoryRow),
+    rows: page.map((p) => toHistoryRow(p, resolveName(p.neighborhood))),
     hasMore,
   };
 }

@@ -8,6 +8,9 @@ export interface HistoryRow {
   sqm: number | null;
   price: number | null;
   neighborhood: string;
+  /** Pre-resolved display name for the neighborhood slug. Server-side lookup so
+   *  the client doesn't hit the DB per card. Falls back to a humanized slug. */
+  neighborhoodName: string;
   property_type: string;
   photo_url: string | null;
   created_at: string;
@@ -31,7 +34,10 @@ export interface PropertyWithListings {
   listings: { title: string; language: string }[] | null;
 }
 
-export function toHistoryRow(p: PropertyWithListings): HistoryRow {
+export function toHistoryRow(
+  p: PropertyWithListings,
+  neighborhoodName: string,
+): HistoryRow {
   const sorted = p.listings
     ? [...p.listings].sort(
         (a, b) =>
@@ -46,6 +52,7 @@ export function toHistoryRow(p: PropertyWithListings): HistoryRow {
     sqm: p.sqm,
     price: p.price,
     neighborhood: p.neighborhood,
+    neighborhoodName,
     property_type: p.property_type,
     photo_url: p.photo_urls?.[0] ?? null,
     created_at: p.created_at,
