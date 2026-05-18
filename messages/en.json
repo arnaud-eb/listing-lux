@@ -271,6 +271,18 @@
       "emptyBody": "Create your first property listing to see it here.",
       "createListing": "Create Listing",
       "altPropertyPhoto": "Property photo",
+      "noResultsForFilter": "No listings match this filter.",
+      "typeBadge": {
+        "sale": "For sale",
+        "rent": "For rent"
+      },
+      "filter": {
+        "all": "All",
+        "sale": "For sale",
+        "rent": "For rent"
+      },
+      "loadMore": "Load more listings",
+      "loadMoreError": "Failed to load more",
       "deleteButton": {
         "ariaLabelGeneric": "Delete listing",
         "ariaLabelNamed": "Delete {title}",

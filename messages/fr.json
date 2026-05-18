@@ -271,6 +271,18 @@
       "emptyBody": "Créez votre première annonce pour la voir apparaître ici.",
       "createListing": "Créer une annonce",
       "altPropertyPhoto": "Photo du bien",
+      "noResultsForFilter": "Aucune annonce ne correspond à ce filtre.",
+      "typeBadge": {
+        "sale": "À vendre",
+        "rent": "À louer"
+      },
+      "filter": {
+        "all": "Toutes",
+        "sale": "À vendre",
+        "rent": "À louer"
+      },
+      "loadMore": "Voir plus d'annonces",
+      "loadMoreError": "Échec du chargement",
       "deleteButton": {
         "ariaLabelGeneric": "Supprimer l'annonce",
         "ariaLabelNamed": "Supprimer {title}",

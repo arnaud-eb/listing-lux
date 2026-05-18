@@ -3,6 +3,23 @@
 import { revalidatePath } from "next/cache";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getSessionId } from "@/lib/session";
+import { LISTING_KINDS, type ListingKind } from "@/lib/constants";
+import {
+  HISTORY_PAGE_SIZE,
+  toHistoryRow,
+  type HistoryRow,
+  type PropertyWithListings,
+} from "./types";
+
+interface GetMoreListingsArgs {
+  cursor: string;
+  kind: "all" | ListingKind;
+}
+
+interface GetMoreListingsResult {
+  rows: HistoryRow[];
+  hasMore: boolean;
+}
 
 /**
  * Soft-delete a property. Sets `deleted_at` timestamp on the property row.
@@ -40,4 +57,53 @@ export async function deleteProperty(
   revalidatePath("/history");
 
   return { success: true };
+}
+
+export async function getMoreListings({
+  cursor,
+  kind,
+}: GetMoreListingsArgs): Promise<GetMoreListingsResult> {
+  if (!cursor || typeof cursor !== "string") {
+    throw new Error("cursor is required");
+  }
+  if (
+    kind !== "all" &&
+    !LISTING_KINDS.includes(kind as ListingKind)
+  ) {
+    throw new Error("invalid kind");
+  }
+
+  const sessionId = await getSessionId();
+  if (!sessionId) {
+    throw new Error("Unauthorized");
+  }
+
+  const supabase = createServiceClient();
+  let query = supabase
+    .from("properties")
+    .select("*, listings(title, language)")
+    .eq("session_id", sessionId)
+    .is("deleted_at", null)
+    .lt("created_at", cursor)
+    .order("created_at", { ascending: false })
+    .limit(HISTORY_PAGE_SIZE + 1);
+
+  if (kind !== "all") {
+    query = query.eq("listing_kind", kind);
+  }
+
+  const { data, error } = await query;
+  if (error) {
+    throw new Error("Failed to load more listings");
+  }
+
+  const rows = (data ?? []) as unknown as PropertyWithListings[];
+
+  const hasMore = rows.length > HISTORY_PAGE_SIZE;
+  const page = hasMore ? rows.slice(0, HISTORY_PAGE_SIZE) : rows;
+
+  return {
+    rows: page.map(toHistoryRow),
+    hasMore,
+  };
 }

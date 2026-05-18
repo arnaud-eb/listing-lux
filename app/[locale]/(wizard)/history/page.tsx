@@ -1,27 +1,17 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { createServiceClient } from "@/lib/supabase.server";
 import { getSessionId } from "@/lib/session";
-import { getNeighborhoodBySlug } from "@/lib/markets";
-import PriceDisplay from "@/components/shared/PriceDisplay";
 import { Button } from "@/components/ui/button";
-import { Bath, BedDouble, Maximize } from "lucide-react";
-import DeleteListingButton from "./DeleteListingButton";
-
-interface PropertyWithListings {
-  id: string;
-  bedrooms: number;
-  bathrooms: number;
-  sqm: number | null;
-  price: number | null;
-  neighborhood: string;
-  property_type: string;
-  photo_urls: string[] | null;
-  created_at: string;
-  listings: { title: string; language: string }[] | null;
-}
+import type { ListingKind } from "@/lib/constants";
+import type { KindFilter } from "./HistoryFilter";
+import HistoryShell from "./HistoryShell";
+import {
+  HISTORY_PAGE_SIZE,
+  toHistoryRow,
+  type PropertyWithListings,
+} from "./types";
 
 export async function generateMetadata({
   params,
@@ -33,7 +23,15 @@ export async function generateMetadata({
   return { title: t("historyTitle") };
 }
 
-export default async function HistoryPage() {
+function parseKindFilter(raw: string | string[] | undefined): KindFilter {
+  return raw === "sale" || raw === "rent" ? raw : "all";
+}
+
+export default async function HistoryPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ kind?: string | string[] }>;
+}) {
   const sessionId = await getSessionId();
   const t = await getTranslations("wizard.history");
 
@@ -42,115 +40,61 @@ export default async function HistoryPage() {
   }
 
   const supabase = createServiceClient();
+  const kindFilter = parseKindFilter((await searchParams).kind);
 
-  const { data: properties } = await supabase
+  let propertiesQuery = supabase
     .from("properties")
     .select("*, listings(title, language)")
     .eq("session_id", sessionId)
     .is("deleted_at", null)
-    .order("created_at", { ascending: false });
+    .order("created_at", { ascending: false })
+    .limit(HISTORY_PAGE_SIZE + 1);
 
-  if (!properties || properties.length === 0) {
+  if (kindFilter !== "all") {
+    propertiesQuery = propertiesQuery.eq("listing_kind", kindFilter);
+  }
+
+  const countQuery = (kind: ListingKind) =>
+    supabase
+      .from("properties")
+      .select("id", { count: "exact", head: true })
+      .eq("session_id", sessionId)
+      .is("deleted_at", null)
+      .eq("listing_kind", kind);
+
+  const [{ data: properties }, { count: saleCount }, { count: rentCount }] =
+    await Promise.all([propertiesQuery, countQuery("sale"), countQuery("rent")]);
+
+  const totalCount = (saleCount ?? 0) + (rentCount ?? 0);
+  if (totalCount === 0) {
     return <EmptyState />;
   }
 
-  const typedProperties = properties as unknown as PropertyWithListings[];
-  const titleMap = new Map<string, string>();
-  for (const property of typedProperties) {
-    if (property.listings && property.listings.length > 0) {
-      const sorted = [...property.listings].sort((a, b) =>
-        a.language.localeCompare(b.language),
-      );
-      titleMap.set(property.id, sorted[0].title);
-    }
-  }
+  const showFilter = (saleCount ?? 0) > 0 && (rentCount ?? 0) > 0;
+
+  const fetched =
+    (properties as unknown as PropertyWithListings[] | null) ?? [];
+  const initialHasMore = fetched.length > HISTORY_PAGE_SIZE;
+  const initialPage = initialHasMore
+    ? fetched.slice(0, HISTORY_PAGE_SIZE)
+    : fetched;
+  const initialRows = initialPage.map(toHistoryRow);
 
   return (
     <div className="container mx-auto px-6 py-8">
-      <div className="mb-8">
+      <div className="mb-6">
         <h1 className="font-serif text-3xl font-bold text-navy-deep">
           {t("title")}
         </h1>
         <p className="text-sm text-gray-500 mt-1">{t("subtitle")}</p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {typedProperties.map((property) => {
-          const neighborhood = getNeighborhoodBySlug(property.neighborhood);
-          const title = titleMap.get(property.id);
-          const thumbnail = property.photo_urls?.[0];
-          const createdAt = new Date(property.created_at).toLocaleDateString(
-            "fr-LU",
-            { day: "numeric", month: "short", year: "numeric" },
-          );
-
-          return (
-            <div
-              key={property.id}
-              className="group relative bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow"
-            >
-              <DeleteListingButton propertyId={property.id} title={title} />
-              <Link href={`/listing/${property.id}`} className="block">
-                <div className="aspect-16/10 relative bg-gray-100 overflow-hidden">
-                  {thumbnail ? (
-                    <Image
-                      src={thumbnail}
-                      alt={title ?? t("altPropertyPhoto")}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center h-full text-gray-300">
-                      <Maximize className="size-8" />
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-4">
-                  {title && (
-                    <h2 className="font-serif text-base font-semibold text-navy-deep line-clamp-1 mb-1">
-                      {title}
-                    </h2>
-                  )}
-
-                  <p className="text-sm text-gray-500 capitalize">
-                    {property.property_type}
-                    {neighborhood ? ` · ${neighborhood.name}` : ""}
-                  </p>
-
-                  <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
-                    <span className="flex items-center gap-1">
-                      <BedDouble className="size-3.5" />
-                      {property.bedrooms}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Bath className="size-3.5" />
-                      {property.bathrooms}
-                    </span>
-                    {property.sqm != null && (
-                      <span className="flex items-center gap-1">
-                        <Maximize className="size-3.5" />
-                        {property.sqm} m²
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex items-center justify-between mt-3">
-                    <PriceDisplay
-                      amount={property.price}
-                      className="text-sm font-semibold text-navy-deep"
-                    />
-                    <span className="ml-auto text-2xs text-gray-400">
-                      {createdAt}
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          );
-        })}
-      </div>
+      <HistoryShell
+        initialRows={initialRows}
+        initialHasMore={initialHasMore}
+        kind={kindFilter}
+        showFilter={showFilter}
+      />
     </div>
   );
 }
