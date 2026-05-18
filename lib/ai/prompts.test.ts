@@ -1,23 +1,32 @@
 import { describe, it, expect } from "vitest";
 import { buildListingPrompt, PROMPT_VERSION } from "./prompts";
 import type { PhotoAnalysis } from "@/lib/types";
-import type { Neighborhood } from "@/lib/markets/types";
+import type { Locality } from "@/lib/localities/types";
 
-const mockNeighborhood: Neighborhood = {
+const mockLocality: Locality = {
   id: "kirchberg",
-  name: "Kirchberg",
   slug: "kirchberg",
-  pricePerSqm: { min: 8500, max: 14000, median: 11000, currency: "EUR" },
-  tags: ["EU quarter", "modern", "expat-friendly"],
-  descriptions: {
+  countryCode: "LU",
+  kind: "quartier",
+  name: "Kirchberg",
+  nameLocalized: { de: "Kirchberg", fr: "Kirchberg", en: "Kirchberg" },
+  descriptionLocalized: {
     de: "Kirchberg ist das moderne Geschäftsviertel.",
     fr: "Kirchberg est le quartier d'affaires moderne.",
     en: "Kirchberg is the modern business district.",
   },
-  keywords: {
+  keywordsLocalized: {
     de: ["EU-Viertel", "modern"],
     fr: ["quartier européen", "moderne"],
     en: ["EU quarter", "modern"],
+  },
+  tags: ["EU quarter", "modern", "expat-friendly"],
+  parent: null,
+  price: {
+    minPerSqm: 8500,
+    maxPerSqm: 14000,
+    medianPerSqm: 11000,
+    source: "override",
   },
 };
 
@@ -51,7 +60,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(system).toContain("experienced real estate copywriter");
     expect(user).toContain("apartment");
@@ -66,7 +75,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(user).toContain("balcony");
     expect(user).toContain("parking");
@@ -78,7 +87,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(user).toContain("Kirchberg");
     expect(user).toContain("EU quarter");
@@ -90,7 +99,7 @@ describe("buildListingPrompt", () => {
       "de",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(userDe).toContain("Geschäftsviertel");
 
@@ -98,7 +107,7 @@ describe("buildListingPrompt", () => {
       "fr",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(userFr).toContain("quartier d'affaires");
   });
@@ -108,7 +117,7 @@ describe("buildListingPrompt", () => {
       "de",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(de).toContain("erfahrener Immobilientexter");
 
@@ -116,7 +125,7 @@ describe("buildListingPrompt", () => {
       "fr",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(fr).toContain("rédacteur immobilier expérimenté");
   });
@@ -126,7 +135,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(user).toContain("living room");
     expect(user).toContain("hardwood floors");
@@ -149,7 +158,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       [],
-      mockNeighborhood,
+      mockLocality,
     );
     expect(user).toContain("No photo analysis available");
   });
@@ -159,7 +168,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
       "emphasize the garden view",
     );
     expect(user).not.toContain("emphasize the garden view");
@@ -172,7 +181,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
       "make it shorter",
       {
         title: "Luxury Apartment in Kirchberg",
@@ -191,7 +200,7 @@ describe("buildListingPrompt", () => {
       "en",
       mockProperty,
       mockAnalyses,
-      mockNeighborhood,
+      mockLocality,
     );
     expect(feedback).toBeUndefined();
     expect(user).not.toContain("Current listing");
@@ -209,9 +218,9 @@ describe("buildListingPrompt", () => {
   // (true area-fact) with "this property is near Philharmonie" (unsupported
   // proximity claim) — lifted factual_fidelity in the v1.7 audit run.
   describe("v1.6 — buildNeighborhoodContext architectural fix", () => {
-    const kirchberg: Neighborhood = {
-      ...mockNeighborhood,
-      keywords: {
+    const kirchberg: Locality = {
+      ...mockLocality,
+      keywordsLocalized: {
         de: ["Philharmonie", "MUDAM"],
         fr: ["Philharmonie", "MUDAM"],
         en: ["Philharmonie", "MUDAM"],

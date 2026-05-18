@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { openai, LISTING_MODEL } from "@/lib/ai/client";
 import { createServiceClient } from "@/lib/supabase.server";
 import { buildBaseHashtags, dedupeHashtags } from "@/lib/markets";
-import { getNeighborhoodBySlug } from "@/lib/markets/server";
+import { getBySlug as getLocalityBySlug } from "@/lib/localities/repository";
 import { buildListingPrompt, PROMPT_VERSION } from "@/lib/ai/prompts";
 import { listingOutputSchema } from "@/lib/schemas/listing";
 import type { Language, PhotoAnalysis } from "@/lib/types";
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
   }
 
   // Build prompt
-  const neighborhood = await getNeighborhoodBySlug(property.neighborhood);
+  const locality = await getLocalityBySlug(property.neighborhood);
   const photoAnalyses: PhotoAnalysis[] = property.photo_analyses ?? [];
   // Validate optional comment
   const safeComment =
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
     lang,
     property,
     photoAnalyses,
-    neighborhood,
+    locality,
     safeComment,
     safeCurrentListing,
   );
@@ -142,7 +142,7 @@ export async function POST(request: Request) {
             ...buildBaseHashtags({
               language: lang,
               propertyType: property.property_type,
-              neighborhoodName: neighborhood?.name ?? null,
+              neighborhoodName: locality?.name ?? null,
             }),
             ...object.hashtags,
           ]);

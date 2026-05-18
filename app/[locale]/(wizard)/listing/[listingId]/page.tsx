@@ -4,9 +4,10 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { createClient } from "@/lib/supabase.server";
 import { verifyPropertyOwnership, UnauthorizedError } from "@/lib/auth";
-import { getNeighborhoodBySlug } from "@/lib/markets/server";
-import { listForDropdown } from "@/lib/localities/repository";
+import { getBySlug as getLocalityBySlug, listForDropdown } from "@/lib/localities/repository";
+import { pickLocalized } from "@/lib/localities/locale";
 import PhotoCarousel from "@/components/listing/PhotoCarousel";
+import type { Language } from "@/lib/types";
 import ListingPageClient from "./listing-page-client";
 import { propertySchema } from "@/lib/schemas/property";
 import type { Listing, Property } from "@/lib/types";
@@ -63,9 +64,12 @@ export async function generateMetadata({
     return { title: t("listingNotFoundTitle") };
   }
 
-  const neighborhood = await getNeighborhoodBySlug(p.neighborhood);
-  const neighborhoodName =
-    neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
+  const locality = await getLocalityBySlug(p.neighborhood);
+  const neighborhoodName = pickLocalized(
+    locality?.nameLocalized,
+    locale as Language,
+    p.neighborhood,
+  );
   const typeName =
     p.property_type.charAt(0).toUpperCase() + p.property_type.slice(1);
 
@@ -97,7 +101,7 @@ export async function generateMetadata({
 }
 
 export default async function ListingPage({ params }: PageProps) {
-  const { listingId } = await params;
+  const { listingId, locale } = await params;
 
   if (!z.string().uuid().safeParse(listingId).success) {
     notFound();
@@ -128,15 +132,16 @@ export default async function ListingPage({ params }: PageProps) {
   };
 
   // Page is owner-only (verifyPropertyOwnership above) so eager-loading the
-  // dropdown for inline edit is safe — no anonymous-LCP cost. cmdk upgrade for
-  // this surface is deferred to Phase 4; the current edit-mode Select consumes
-  // the full DB list and supports search via the Radix Select's typeahead.
-  const [neighborhood, localityOptions] = await Promise.all([
-    getNeighborhoodBySlug(p.neighborhood),
+  // dropdown for inline edit is safe — no anonymous-LCP cost.
+  const [locality, localityOptions] = await Promise.all([
+    getLocalityBySlug(p.neighborhood),
     listForDropdown(),
   ]);
-  const neighborhoodName =
-    neighborhood?.name ?? p.neighborhood.replace(/-/g, " ");
+  const neighborhoodName = pickLocalized(
+    locality?.nameLocalized,
+    locale as Language,
+    p.neighborhood,
+  );
 
   const gallery = (
     <PhotoCarousel

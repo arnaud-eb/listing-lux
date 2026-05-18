@@ -36,12 +36,23 @@ vi.mock("@/lib/rate-limit", () => ({
   }),
 }));
 
-vi.mock("@/lib/markets", () => ({
-  getNeighborhoodBySlug: vi.fn(() => ({
-    slug: "kirchberg",
+vi.mock("@/lib/localities/repository", () => ({
+  getBySlug: vi.fn(async (slug: string) => ({
+    id: "loc-id",
+    slug,
+    countryCode: "LU",
+    kind: "quartier",
     name: "Kirchberg",
-    avgPricePerSqm: 12000,
+    nameLocalized: { de: "Kirchberg", fr: "Kirchberg", en: "Kirchberg" },
+    descriptionLocalized: {},
+    keywordsLocalized: {},
+    tags: [],
+    parent: null,
+    price: null,
   })),
+}));
+
+vi.mock("@/lib/markets", () => ({
   buildBaseHashtags: vi.fn(() => ["#LuxembourgRealEstate", "#Kirchberg"]),
   dedupeHashtags: vi.fn((tags: string[]) => {
     const seen = new Set<string>();

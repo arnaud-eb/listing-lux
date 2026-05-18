@@ -1,5 +1,6 @@
 import type { Language, PhotoAnalysis } from "@/lib/types";
-import type { Neighborhood } from "@/lib/markets/types";
+import type { Locality } from "@/lib/localities/types";
+import { pickLocalized } from "@/lib/localities/locale";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
 export const PROMPT_VERSION = "1.6";
@@ -115,32 +116,33 @@ Hashtags: generate 3-5 listing-specific hashtags (e.g. distinctive architectural
 };
 
 function buildNeighborhoodContext(
-  neighborhood: Neighborhood | null,
+  locality: Locality | null,
   language: Language,
 ): string {
-  if (!neighborhood) {
+  if (!locality) {
     return "Neighborhood data: not available for this property's locality. Do NOT invent neighborhood character, amenities, schools, transit, or distances. Reference the locality only if its name appears in the property data above; otherwise stay generic about the immediate setting.";
   }
 
+  const name = pickLocalized(locality.nameLocalized, language, locality.slug);
   const parts: string[] = [
     `--- Neighborhood context (about the AREA, not about THIS property) ---`,
-    `Neighborhood: ${neighborhood.name}`,
+    `Neighborhood: ${name}`,
   ];
 
-  if (neighborhood.tags.length > 0) {
+  if (locality.tags.length > 0) {
     parts.push(
-      `Area character tags (DO NOT carry directly into copy if they describe people — e.g. "family-friendly", "expat-friendly", "student"): ${neighborhood.tags.join(", ")}`,
+      `Area character tags (DO NOT carry directly into copy if they describe people — e.g. "family-friendly", "expat-friendly", "student"): ${locality.tags.join(", ")}`,
     );
   }
 
-  const desc = neighborhood.descriptions?.[language];
+  const desc = locality.descriptionLocalized[language];
   if (desc) {
     parts.push(
       `Area description (background only — do not paraphrase descriptors that describe people or borrow architectural details and apply them to THIS property): ${desc}`,
     );
   }
 
-  const kw = neighborhood.keywords?.[language];
+  const kw = locality.keywordsLocalized[language];
   if (kw && kw.length > 0) {
     // v1.7 architectural fix (audit §7.2): landmark/keyword facts about the
     // neighborhood are area-facts, NOT proximity-from-this-property facts. The
@@ -153,10 +155,12 @@ function buildNeighborhoodContext(
     );
   }
 
-  const price = neighborhood.pricePerSqm;
-  parts.push(
-    `Price range for the area: €${price.min.toLocaleString()}-€${price.max.toLocaleString()}/m² (median: €${price.median.toLocaleString()}/m²) — for your tier-calibration only; do not quote €/m² figures unless the property data does.`,
-  );
+  if (locality.price) {
+    const { minPerSqm, maxPerSqm, medianPerSqm } = locality.price;
+    parts.push(
+      `Price range for the area: €${minPerSqm.toLocaleString()}-€${maxPerSqm.toLocaleString()}/m² (median: €${medianPerSqm.toLocaleString()}/m²) — for your tier-calibration only; do not quote €/m² figures unless the property data does.`,
+    );
+  }
 
   parts.push(`--- End of neighborhood context ---`);
 
@@ -191,7 +195,7 @@ export function buildListingPrompt(
   language: Language,
   property: PropertyData,
   photoAnalyses: PhotoAnalysis[],
-  neighborhood: Neighborhood | null,
+  locality: Locality | null,
   comment?: string,
   currentListing?: CurrentListing,
 ): PromptMessages {
@@ -199,7 +203,7 @@ export function buildListingPrompt(
     .filter(([, v]) => v)
     .map(([k]) => k);
 
-  const neighborhoodContext = buildNeighborhoodContext(neighborhood, language);
+  const neighborhoodContext = buildNeighborhoodContext(locality, language);
   const photoContext = buildPhotoContext(photoAnalyses);
 
   let user = `Generate a property listing for this property.

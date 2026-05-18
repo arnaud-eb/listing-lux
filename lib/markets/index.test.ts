@@ -23,10 +23,10 @@ describe('getActiveMarket', () => {
     expect(market.supportedLanguages).not.toContain('lu')
   })
 
-  it('returns market with areas', () => {
+  it('returns market with features and property types', () => {
     const market = getActiveMarket()
-    expect(market.areas.length).toBeGreaterThan(0)
-    expect(market.areas[0].neighborhoods.length).toBeGreaterThan(0)
+    expect(market.features.length).toBeGreaterThan(0)
+    expect(market.propertyTypes.length).toBeGreaterThan(0)
   })
 })
 

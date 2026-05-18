@@ -18,7 +18,7 @@ import path from "node:path";
 
 import { openai, LISTING_MODEL } from "@/lib/ai/client";
 import { buildListingPrompt, PROMPT_VERSION } from "@/lib/ai/prompts";
-import { getNeighborhoodBySlug } from "@/lib/markets/server";
+import { getBySlug as getLocalityBySlug } from "@/lib/localities/repository";
 import { listingOutputSchema } from "@/lib/schemas/listing";
 import {
   fixtures,
@@ -51,7 +51,7 @@ async function generateOne(
   fixture: ListingFixture,
   language: Language,
 ): Promise<GenerationOutput> {
-  const neighborhood = await getNeighborhoodBySlug(fixture.property.neighborhood);
+  const locality = await getLocalityBySlug(fixture.property.neighborhood);
 
   const prompt = buildListingPrompt(
     language,
@@ -65,7 +65,7 @@ async function generateOne(
       features: fixture.property.features,
     },
     fixture.photo_analyses,
-    neighborhood,
+    locality,
     fixture.user_comment,
     fixture.current_listing,
   );

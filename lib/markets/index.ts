@@ -60,4 +60,4 @@ export function dedupeHashtags(tags: string[]): string[] {
   return out
 }
 
-export type { Market, Neighborhood } from './types'
+export type { Market } from './types'
