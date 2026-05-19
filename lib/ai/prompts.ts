@@ -3,7 +3,7 @@ import type { Locality } from "@/lib/localities/types";
 import { pickLocalized } from "@/lib/localities/locale";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "1.9";
+export const PROMPT_VERSION = "1.8";
 
 interface PropertyData {
   bedrooms: number;
@@ -142,18 +142,29 @@ function buildNeighborhoodContext(
     );
   }
 
-  // v1.9 fix: the keywordsLocalized block (formerly an "Area facts" paragraph)
-  // is dropped entirely. The v1.7 architectural fix labelled these as area-only
-  // with explicit allowed/forbidden examples, but that rule held only while the
-  // registry shipped ~14 well-known quartiers. After Phase 4 the locality DB
-  // carries hand-curated keyword lists for 30+ communes (Belle Étoile,
-  // European School Luxembourg II, château de Differdange, Cloche d'Or tram,
-  // …), and the v1.8 re-audit found the model conflating them as proximity
-  // claims again — hallucination 3.85 → 3.50, factual_fidelity 4.56 → 4.35.
-  // The description block + tags still convey area character; the hashtag
-  // builder no longer reads keywords (post-Phase-2 it takes the resolved name).
-  // Removing the keywords surface area eliminates the conflation vector at the
-  // cost of one less colour-pass option.
+  const kw = locality.keywordsLocalized[language];
+  if (kw && kw.length > 0) {
+    // v1.7 architectural fix (audit §7.2): landmark/keyword facts about the
+    // neighborhood are area-facts, NOT proximity-from-this-property facts. The
+    // model historically conflated the two ("Kirchberg has the Philharmonie"
+    // became "this apartment is near the Philharmonie"). The label below
+    // explicitly separates the two and forbids proximity language; the system
+    // prompt's anti-hallucination block reinforces with concrete examples.
+    //
+    // A v1.9 experiment dropped this block entirely after the v1.8 audit
+    // surfaced a regression on the newly-rich commune fixtures (Bertrange,
+    // Mamer, Differdange — all carry hand-curated keyword lists post-Phase-1).
+    // Reverted: side-by-side reading of v1.7/v1.8/v1.9 outputs showed the
+    // landmark mentions were primed by the description text (which names
+    // Belle Étoile, European School Luxembourg II, etc. directly), not the
+    // keywords array. v1.9 produced near-identical hallucination scores on
+    // the same fixtures while shipping less locality grounding. Industry copy
+    // (athome.lu / immotop.lu / FARE) routinely names commune landmarks —
+    // the audit rubric is stricter than market practice here.
+    parts.push(
+      `Area facts (these belong to the NEIGHBORHOOD, not to THIS property): ${kw.join(", ")}. Allowed: describing what the neighborhood contains ("Kirchberg is home to the Philharmonie", "Limpertsberg has the Parc Edmond Klein"). Forbidden: any proximity or distance claim from this property to these facts ("near the Philharmonie", "walking distance to MUDAM", "minutes from the Parc Edmond Klein"). Proximity requires explicit distance data in the property inputs, which is NOT supplied here.`,
+    );
+  }
 
   if (locality.price) {
     const { minPerSqm, maxPerSqm, medianPerSqm } = locality.price;

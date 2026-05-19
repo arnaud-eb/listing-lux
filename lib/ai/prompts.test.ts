@@ -206,19 +206,17 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 1.9", () => {
-    expect(PROMPT_VERSION).toBe("1.9");
+  it("has version 1.8", () => {
+    expect(PROMPT_VERSION).toBe("1.8");
   });
 
-  // v1.9 — dropped the keywordsLocalized "Area facts" block from
-  // buildNeighborhoodContext entirely. v1.7's "Allowed/Forbidden" framing held
-  // while the registry shipped ~14 well-known quartiers, but the v1.8 re-audit
-  // showed the model conflating area facts as proximity claims again once 30+
-  // communes carried hand-curated keyword lists (Belle Étoile, European School
-  // Luxembourg II, château de Differdange, Cloche d'Or tram, …). The
-  // description block + tags still carry area colour; the hashtag builder no
-  // longer reads keywords. See audits README §7.2/§9 for the post-mortem.
-  describe("v1.9 — keyword block removed from buildNeighborhoodContext", () => {
+  // The v1.7 architectural fix labels keyword data as "Area facts" with explicit
+  // "allowed: describing area / forbidden: proximity claims" rules. A v1.9
+  // experiment removed this block to chase a hallucination-score lift; side-
+  // by-side reading of the resulting outputs showed the landmark mentions were
+  // primed by the description text, not the keywords array — v1.9 shipped less
+  // locality grounding for the same hallucination score, so it was reverted.
+  describe("v1.8 — buildNeighborhoodContext area-facts framing", () => {
     const kirchberg: Locality = {
       ...mockLocality,
       keywordsLocalized: {
@@ -228,16 +226,17 @@ describe("buildListingPrompt", () => {
       },
     };
 
-    it("does not surface keyword values in the prompt", () => {
+    it("frames keywords as area facts, not as proximity-from-this-property", () => {
       const { user } = buildListingPrompt("en", mockProperty, [], kirchberg);
-      expect(user).not.toContain("Philharmonie");
-      expect(user).not.toContain("MUDAM");
-      expect(user).not.toMatch(/Area facts/);
+      expect(user).toMatch(/Area facts \(these belong to the NEIGHBORHOOD/);
+      expect(user).toMatch(/Allowed: describing what the neighborhood contains/);
+      expect(user).toMatch(/Forbidden: any proximity or distance claim/);
     });
 
-    it("still emits the description block (area colour comes from there)", () => {
+    it("emits keyword values within the area-facts framing", () => {
       const { user } = buildListingPrompt("en", mockProperty, [], kirchberg);
-      expect(user).toContain("Kirchberg is the modern business district");
+      expect(user).toMatch(/Area facts[\s\S]*Philharmonie/);
+      expect(user).toMatch(/Area facts[\s\S]*MUDAM/);
     });
   });
 });
