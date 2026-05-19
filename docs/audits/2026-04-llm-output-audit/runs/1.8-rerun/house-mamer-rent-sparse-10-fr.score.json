@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "The listing describes the property generically without indicating it's a rental, despite price 2900 being monthly rent; no contradiction of specs but omits rental nature."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 130 m², 3 chambres, 1 salle de bain, jardin, parking, cave, Mamer; missing explicit rental framing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French though 'revêtement moquetté beige' is slightly awkward phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Maison mitoyenne', 'jardin privatif', 'cave' align with athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and description omits CPE entirely, matching v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison mitoyenne 3 chambres avec jardin privatif à Mamer' is 9 words with neighborhood; 5 hashtags in CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained tone; 'apportant luminosité et douceur' is mild flourish but no hyperbole or exclamation."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "'pour un logement familial' references family suitability, a mild fair-housing concern."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Lycée Josy Barthel' and 'European School Luxembourg II à Bertrange-Mamer' are named schools not in inputs; 'connexion routière et ferroviaire' is unsupported but generic."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE frames the property as a sale ('eignet sich für Käufer') while FR and EN are tenure-neutral — a listing-kind disagreement on rent vs sale; numeric specs (130 m², 3 bedrooms, 1 bathroom) agree across all three."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Family reference and unsupported school names are the main issues."
+}

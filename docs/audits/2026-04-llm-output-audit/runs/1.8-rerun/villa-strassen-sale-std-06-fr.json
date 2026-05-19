@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:07.475Z",
+  "output": {
+    "title": "Villa rénovée 5 chambres avec jardin mature et parking à Strassen",
+    "description": "Située dans un quartier résidentiel paisible de Strassen, cette villa indépendante de 280 m² combine un style traditionnel luxembourgeois et des prestations contemporaines. Le bâtiment, à deux étages, présente une façade en enduit blanc ainsi qu’un toit en ardoise à double pente, typique de la région. Un jardin mature, orienté sud-ouest, entoure la maison en offrant un cadre verdoyant et une intimité appréciable.\n\nL’intérieur, récemment rénové, se distingue par des espaces lumineux et des finitions de qualité. Le salon, avec son parquet en chêne massif et ses plafonds hauts, intègre une cheminée à foyer ouvert et s’ouvre directement sur la terrasse et le jardin via de larges baies vitrées. La cuisine équipée adopte un style shaker chaleureux avec un plan de travail en granite et un îlot central accueillant, complétée par un double four intégrée, favorisant un usage convivial et fonctionnel.\n\nCinq chambres offrent des superficies généreuses, dont une suite principale avec vue dégagée sur la verdure et rangements intégrés. Trois salles de bains desservent l’ensemble des chambres, elles aussi rénovées avec des matériaux actuels. Un sous-sol abrite une cave et des espaces de rangement supplémentaires. Un parking privé complète ce bien, répondant à des besoins pratiques.\n\nLa commune de Strassen se caractérise par son environnement résidentiel calme tout en bénéficiant d’une bonne accessibilité aux axes autoroutiers majeurs. Les infrastructures scolaires de qualité et le caractère encore villageois de ce secteur contribuent à son attractivité.\n\nCette villa propose un équilibre entre le charme classique, les rénovations récentes et les espaces extérieurs confortables, dans un cadre résidentiel établi.",
+    "highlights": [
+      {
+        "text": "Villa indépendante traditionnelle avec toit en ardoise",
+        "icon": "home"
+      },
+      {
+        "text": "Surface habitable de 280 m² avec cinq chambres",
+        "icon": "bed"
+      },
+      {
+        "text": "Salon avec cheminée et accès direct au jardin",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central et double four",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin mature exposé sud-ouest avec terrasse pavée",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking privé sur la propriété",
+        "icon": "car"
+      },
+      {
+        "text": "Sous-sol avec cave intégrée",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier résidentiel calme et accès autoroute à Strassen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "VillaRenovee",
+      "JardinMature",
+      "CuisineAmenagee",
+      "QuartierResidentiel",
+      "Cheminée"
+    ]
+  }
+}

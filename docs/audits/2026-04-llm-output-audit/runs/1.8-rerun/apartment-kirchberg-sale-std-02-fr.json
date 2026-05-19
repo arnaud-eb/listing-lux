@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:11:58.298Z",
+  "output": {
+    "title": "Appartement 3 chambres avec balcon et vue sur Kirchberg, 145 m²",
+    "description": "Cet appartement neuf de 145 m², implanté dans un immeuble avec ascenseur, offre un cadre de vie contemporain au sein du quartier dynamique de Kirchberg. L'espace de vie principal se distingue par un double plafond et de grandes fenêtres orientées au sud, qui laissent pénétrer une lumière naturelle abondante et mettent en valeur le parquet en bois d'ingénierie. L'aménagement ouvert relie harmonieusement le salon et la salle à manger, créant une atmosphère fluide et chaleureuse.\n\nLa cuisine intégrée présente un design moderne et fonctionnel avec des éléments Bulthaup, un plan de travail en pierre, une plaque à induction et un îlot central équipé d'un coin repas. Ce choix de matériaux et d'équipements souligne la qualité et la sobriété des prestations. Le balcon attenant, doté d'une balustrade vitrée et d'un sol carrelé, offre une vue dégagée sur un espace vert de Kirchberg, invitant à la détente dans un cadre tranquille.\n\nL'appartement dispose de trois chambres confortables et de deux salles de bains modernes. La salle de bains principale est aménagée comme un espace de bien-être avec une douche à l'italienne équipée d’une pomme de pluie, un double lavabo et un chauffage au sol. Les revêtements en carrelage porcelaine complètent l'aspect soigné et épuré de cette pièce.\n\nUn emplacement de parking dans l'immeuble et une cave viennent compléter les prestations de ce logement. Le quartier de Kirchberg, siège des institutions européennes et d’équipements culturels comme la Philharmonie et le MUDAM, s’affirme comme un secteur moderne mêlant activités économiques, culturelles et éducatives.",
+    "highlights": [
+      {
+        "text": "Appartement neuf de 145 m² avec luminosité naturelle",
+        "icon": "sun"
+      },
+      {
+        "text": "Trois chambres et deux salles de bains modernes",
+        "icon": "bed"
+      },
+      {
+        "text": "Cuisine Bulthaup avec îlot central et équipement haut de gamme",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balcon avec vue sur parc et balustrade en verre",
+        "icon": "trees"
+      },
+      {
+        "text": "Salle de bains avec douche à l'italienne et chauffage au sol",
+        "icon": "bath"
+      },
+      {
+        "text": "Ascenseur desservant l'immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking privative",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privative incluse",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "KirchbergView",
+      "HighEndKitchen",
+      "SpaciousLayout",
+      "BalconyView"
+    ]
+  }
+}

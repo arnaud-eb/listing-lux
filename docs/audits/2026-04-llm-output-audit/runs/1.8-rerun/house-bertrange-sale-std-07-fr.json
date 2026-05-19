@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:25.328Z",
+  "output": {
+    "title": "Maison semi-individuelle 4 chambres avec jardin orienté sud à Bertrange",
+    "description": "Implantée dans un quartier résidentiel de Bertrange, cette maison semi-individuelle datant des années 1990 s’inscrit dans une ambiance calme et bien entretenue. Sa façade en brique, associée à un jardin orienté au sud, offre un cadre privilégié à la fois lumineux et privé.\n\nL’intérieur développe environ 195 m² habitables distribués sur plusieurs niveaux. Le séjour présente un espace ouvert sur la salle à manger, avec un sol carrelé facile d’entretien et une cheminée fonctionnelle. De larges portes-fenêtres s’ouvrent directement sur le jardin, créant une belle continuité entre l’espace de vie et l’extérieur.\n\nLa cuisine propose un agencement traditionnel avec des meubles en bois clair, un plan de travail carrelé et un coin petit-déjeuner chaleureux. Quatre chambres assurent une répartition confortable des espaces nuit, complétées par deux salles d’eau fonctionnelles.\n\nÀ l’extérieur, la parcelle bénéficie d’un jardin orienté au sud, agrémenté d’une pelouse et d’une terrasse privative. Un parking en entrée et une cave complémentaire sécurisent les besoins de stationnement et de rangement.\n\nBertrange se caractérise par son cadre résidentiel agréable, à proximité du centre commercial Belle Étoile, ainsi que par ses infrastructures scolaires et son accès au réseau de tramway via la Cloche d’Or, soulignant la qualité de vie de l’environnement.",
+    "highlights": [
+      {
+        "text": "Maison semi-individuelle construite dans les années 1990",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d’environ 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "4 chambres et 2 salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Jardin privatif orienté sud avec terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée dans le séjour ouvert sur la salle à manger",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine fonctionnelle avec coin petit-déjeuner",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parking privé en entrée de propriété",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée pour rangements additionnels",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SemiIndividuelle",
+      "JardinSud",
+      "Cheminée",
+      "BelleEtoileProximité",
+      "TerrassePrivative"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'Eichenholzparkettboden' specifies oak, but input says 'engineered wood flooring' without specifying species — minor contradiction/embellishment."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions '145 m²', '3 Schlafzimmer und 2 moderne Bäder', Balkon, Kirchbergpark, Bulthaup, Aufzug, Stellplatz, Kellerraum, Fußbodenheizung."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Doppel-Deckhöhe' in highlights is a calque; 'doppelte Raumhöhe' in body is correct. Otherwise idiomatic German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Neubauwohnung', 'Geschäftsviertel Kirchberg', 'Stellplatz', 'Kellerraum' align with LU German listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied and none invented in the prose."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Hochwertige 3-Zimmer-Neubauwohnung mit Balkon und Blick auf Kirchbergpark' is 10 words with neighborhood; 5 CamelCase hashtags including 'BulthaupKüche Doppelraumhöhe Parkblick'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'beeindruckt mit einer doppelten Raumhöhe' and 'wohltuende Spa-Qualitäten' are mild but acceptable, no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No occupant demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'Eichenholzparkettboden' — input states 'engineered wood flooring' without oak species. Other claims (145 m², Bulthaup, Induktionskochplatte, Kirchbergpark, Glasbrüstung, Fußbodenheizung) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, cellar, elevator, new-build, sale-kind apartment in Kirchberg with park view."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Oak specification not in inputs; otherwise faithful."
+}

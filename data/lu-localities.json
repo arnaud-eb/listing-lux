@@ -8,6 +8,16 @@
   "localities": [
     {
       "kind": "commune",
+      "slug": "luxembourg-city",
+      "name": "Luxembourg City",
+      "parent_slug": "canton-luxembourg",
+      "name_localized": { "de": "Luxemburg-Stadt", "fr": "Ville de Luxembourg", "en": "Luxembourg City", "lu": "Stad Lëtzebuerg" },
+      "tags": ["capital", "historic", "UNESCO", "urban"],
+      "price_tier_id": "lu_premium_urban",
+      "currency": "EUR"
+    },
+    {
+      "kind": "commune",
       "slug": "strassen",
       "name": "Strassen",
       "parent_slug": "canton-luxembourg",

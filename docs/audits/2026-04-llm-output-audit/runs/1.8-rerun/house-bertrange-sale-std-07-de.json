@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:19.658Z",
+  "output": {
+    "title": "Charmantes Einfamilienhaus mit 4 Schlafzimmern und sonnigem Garten in Bertrange",
+    "description": "Das 1990er-Jahre Einfamilienhaus präsentiert sich mit einer gepflegten Backsteinfassade und einem privaten Vorgarten, eingebettet in eine etablierte Wohngegend Bertranges. Es verfügt über eine Wohnfläche von 195 m², verteilt auf großzügige, gut geschnittene Räume mit einem klaren, funktionalen Grundriss. Ein privater Stellplatz ergänzt das Angebot.\n\nIm Erdgeschoss empfängt ein offener Wohn- und Essbereich mit Fliesenboden und einem Kamin, der durch doppelflügelige Türen Zugang zum südlich ausgerichteten Garten gewährt. Die Ausstattung verbindet traditionellen Komfort mit einer freundlichen, alltäglichen Atmosphäre. Die angrenzende Küche mit Holzfronten und Frühstücksnische vervollständigt diesen wohnlichen Bereich.\n\nDas Obergeschoss umfasst vier Schlafzimmer sowie zwei Badezimmer, die dem Bedarf nach Privatsphäre und Funktionalität gerecht werden. Ein Kellerraum steht als separater Abstellbereich zur Verfügung. Die Terrasse am Garten bietet einen geschützten Außenbereich mit südlicher Ausrichtung, ideal für entspannte Stunden im Freien.\n\nBertrange ist eine bekannte Wohngemeinde westlich von Luxemburg-Stadt, welche durch gute Anbindung an öffentliche Verkehrsmittel mit Tramanschluss sowie Einkaufsmöglichkeiten in der Belle Étoile geprägt ist. Die Wohnlage in einer bevorzugten Vorstadtstruktur ermöglicht zugleich Ruhe und Erreichbarkeit.",
+    "highlights": [
+      {
+        "text": "195 m² Wohnfläche auf mehreren Ebenen",
+        "icon": "square"
+      },
+      {
+        "text": "Vier Schlafzimmer für variable Nutzung",
+        "icon": "bed"
+      },
+      {
+        "text": "Zwei gepflegte Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "sofa"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Private Einfahrt und Stellplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Einfamilienhaus",
+      "Suedgarten",
+      "OffenerWohnbereich",
+      "Bertrange",
+      "Kamin"
+    ]
+  }
+}

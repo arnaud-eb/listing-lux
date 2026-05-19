@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'sorgfältig renovierte Studio' and 'vollständig möblierten Wohnbereich' match renovated:true and furnished:true."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Omits the 38 sqm figure and bedroom/bathroom count is implicit only; covers furnished, renovated, kitchenette, bath, beams."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'sichtbare Holzbalken' and 'Küchenzeile' read native German; 'Die Unterkunft verbindet' is slightly stiff."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Küchenzeile', 'Duschkabine', 'Steingebäude' match LU/DE real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, matching null input."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Attraktives möbliertes Studio in historischem Clausen' is only 6 words, below the 8-15 range; 5 hashtags fine."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'atmosphärische Umgebung' stays restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3. 'UNESCO-Weltkulturerbes Clausen' (not in inputs), 'Alzette-Tal' (not in inputs), 'lebendige Ausgehkultur' (vibrant nightlife — not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN agree on studio, furnished, renovated, kitchenette features; only EN states '38 m²' explicitly while FR and DE omit the figure — a minor non-contradictory disagreement."
+    }
+  },
+  "overall_pass": false
+}

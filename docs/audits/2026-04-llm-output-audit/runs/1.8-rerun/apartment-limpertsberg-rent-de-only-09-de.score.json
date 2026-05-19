@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Photo analysis says 'engineered wood flooring' but listing claims 'Eichenparkett' (oak parquet) — a specific material upgrade not in inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 95 m², 2-Zimmer, balcony, elevator, cellar, kitchen, bedroom, Limpertsberg, but omits the fact that the unit is furnished as an explicit feature and does not frame the listing as a rental (€2400/month)."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Phrasing like 'Der Wohnbereich empfängt mit warmem Eichenparkett' and 'ein etabliertes Wohnviertel' reads as natively written German, not translated."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like 'renovierte 2-Zimmer-Wohnung', 'Einbauküche mit Induktionskochfeld' aligns with athome.lu conventions, though the missing rental framing weakens fit."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and the prose omits CPE entirely — correct under v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helles 2-Zimmer-Apartment mit Balkon und moderner Ausstattung in Limpertsberg' is 11 words with neighborhood and adjective; 5 hashtags in CamelCase with no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrasing like 'angenehme Möglichkeit, frische Luft zu genießen' stays measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to family status, demographics, or protected categories — neutral phrasing throughout ('ruhig gelegene 2-Zimmer-Wohnung')."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'Eichenparkett' (inputs say only 'engineered wood flooring', not oak); 'Parc Edmond Klein' (no such park is in inputs — note: the actual Limpertsberg park is Parc de Merl/Parc Tony Neuman area; this appears fabricated). Supported: 95 m², 2-Zimmer, balcony north-facing, Induktionskochfeld, Geschirrspüler, Queensize-Bett, Verdunklungsrollos, Aufzug, Kellerraum, Limpertsberg, university nearby (Limpertsberg hosts Uni.lu campus)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only one language (DE) present, so no cross-language disagreements possible."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Rental framing gap: price €2400 is monthly rent but the description reads like a sale listing with no mention of Miete/zur Miete."
+}

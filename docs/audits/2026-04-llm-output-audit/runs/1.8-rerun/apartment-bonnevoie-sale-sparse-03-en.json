@@ -1,0 +1,47 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:18.055Z",
+  "output": {
+    "title": "Bright 1-Bedroom Apartment with South-Facing Living Room in Bonnevoie",
+    "description": "This 52 m² apartment offers a well-laid-out living space within the vibrant Bonnevoie neighborhood. The living room benefits from south-facing exposure, providing consistent daylight that enhances the neutral and well-maintained interior ambiance. Laminate flooring and white walls contribute to a clean and versatile living area.\n\nThe compact kitchen features a traditional galley design with white cabinetry and ceramic tile flooring, maintaining functionality and convenience despite its modest size. An adjacent bathroom, equipped with a shower-tub combination and white tiling, supports practical living requirements effectively.\n\nAdditional storage needs are addressed through a separate cellar, located within the building’s basement, enhancing the overall utility of the apartment. Positioned in Bonnevoie, the property situates residents within a lively and multicultural district, known for its diverse dining options and market, with accessibility to the central station and city center connections.",
+    "highlights": [
+      {
+        "text": "52 m² total living area",
+        "icon": "square"
+      },
+      {
+        "text": "1 bedroom, 1 bathroom with tub",
+        "icon": "bath"
+      },
+      {
+        "text": "South-facing living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact, functional kitchen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Separate cellar storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Laminate and ceramic tile flooring",
+        "icon": "home"
+      },
+      {
+        "text": "Located in lively Bonnevoie neighborhood",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SouthFacing",
+      "CompactKitchen",
+      "CellarStorage",
+      "BonnevoieLiving"
+    ]
+  }
+}

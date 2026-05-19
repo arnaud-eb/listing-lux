@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:01.717Z",
+  "output": {
+    "title": "Maison mitoyenne 3 chambres avec jardin privatif à Mamer",
+    "description": "Cette maison mitoyenne des années 1980 développe une surface habitable de 130 m², proposant un agencement fonctionnel sur plusieurs niveaux. La façade sobre et bien entretenue s'ouvre sur une petite cour avant, tandis qu'un jardin privatif agrémente l'arrière du bâtiment.\n\nL'espace de vie principal comprend un séjour éclairé par une porte-fenêtre donnant sur le jardin. Le salon, au style actuel à actualiser, présente un revêtement moquetté beige et un espace dédié à un téléviseur. La disposition des pièces met en valeur la vue sur le jardin, apportant luminosité et douceur à l'environnement intérieur.\n\nLes trois chambres offrent des dimensions confortables pour un logement familial. La salle de bain unique dessert les chambres et les espaces communs. Au sous-sol, une cave indépendante permet un rangement supplémentaire.\n\nL'extérieur comprend un jardin composé d'une pelouse bordée d'une clôture en bois, ainsi qu'un petit abri de rangement. Un emplacement de parking complète cette propriété, facilitant le stationnement dans ce secteur résidentiel.\n\nLa commune de Mamer est réputée pour son cadre suburbain avec ses établissements scolaires tels que le Lycée Josy Barthel et l'European School Luxembourg II à Bertrange-Mamer. Le quartier bénéficie également d'une bonne connexion routière et ferroviaire vers les environs de la capitale.",
+    "highlights": [
+      {
+        "text": "Maison mitoyenne de 130 m²",
+        "icon": "home"
+      },
+      {
+        "text": "3 chambres",
+        "icon": "bed"
+      },
+      {
+        "text": "1 salle de bain",
+        "icon": "bath"
+      },
+      {
+        "text": "Jardin privatif avec abri de rangement",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking inclus",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée",
+        "icon": "archive"
+      },
+      {
+        "text": "Séjour avec vue sur jardin",
+        "icon": "sofa"
+      }
+    ],
+    "hashtags": [
+      "MaisonMitoyenne",
+      "JardinPrivatif",
+      "ParkingInclus",
+      "Mamer",
+      "QuartierSuburbain"
+    ]
+  }
+}

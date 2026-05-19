@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:03.515Z",
+  "output": {
+    "title": "Contemporary 3-Bedroom Apartment with Balcony and City Views in Kirchberg",
+    "description": "This newly built apartment offers 145 m² of refined living space characterized by modern design and high-quality finishes. The open-plan living area features south-facing windows and a double-height ceiling that enhance the abundant natural light, creating a spacious and inviting atmosphere. Engineered wood flooring adds warmth to the living and dining areas, which flow seamlessly.\n\nThe kitchen is equipped with Bulthaup cabinetry and a central island with a breakfast bar, complemented by an induction cooktop and stone worktop surfaces. Its minimalist aesthetic provides a functional and stylish space for culinary activities. From the living area, access to a balcony provides tranquil views over Kirchberg park, separated by a glass balustrade and tiled flooring, suitable for relaxation or morning coffee.\n\nTwo modern bathrooms, including a spa-like ensuite, are appointed with walk-in rain showers, double vanities, porcelain tiles, and underfloor heating, contributing to comfort and a sense of understated luxury. Additional features include an elevator within the building, a parking space, and a cellar that offers separate storage.\n\nSituated in Kirchberg, Luxembourg’s contemporary business district, this apartment benefits from views over the parkland and proximity to institutions including the EU quarter and cultural venues like the Philharmonie and MUDAM. The neighborhood is characterized by modern architecture and international educational facilities, reflecting the area's dynamic urban environment.",
+    "highlights": [
+      {
+        "text": "145 m² of contemporary living space",
+        "icon": "square"
+      },
+      {
+        "text": "South-facing spacious living room with double-height ceiling",
+        "icon": "sun"
+      },
+      {
+        "text": "Bulthaup kitchen with induction cooktop and stone worktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balcony overlooking Kirchberg park",
+        "icon": "trees"
+      },
+      {
+        "text": "Two bathrooms featuring walk-in rain showers and underfloor heating",
+        "icon": "bath"
+      },
+      {
+        "text": "Elevator access and parking included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Newly built in Kirchberg business district",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "ModernArchitecture",
+      "ParkView",
+      "BulthaupKitchen",
+      "UnderfloorHeating",
+      "KirchbergLiving"
+    ]
+  }
+}

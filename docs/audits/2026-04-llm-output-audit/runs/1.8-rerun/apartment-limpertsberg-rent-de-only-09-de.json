@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:47.451Z",
+  "output": {
+    "title": "Helles 2-Zimmer-Apartment mit Balkon und moderner Ausstattung in Limpertsberg",
+    "description": "Diese ruhig gelegene 2-Zimmer-Wohnung in Limpertsberg bietet auf 95 m² eine renovierte und geschmackvoll eingerichtete Wohnfläche. Der Wohnbereich empfängt mit warmem Eichenparkett und skandinavischer Möblierung, die ein angenehmes und zeitgemäßes Ambiente schafft. Große Fenster sorgen für eine helle, freundliche Raumatmosphäre.\n\nDie moderne Küche ist mit hochwertigen Einbaugeräten einschließlich Induktionskochfeld und Geschirrspüler ausgestattet und umfasst zusätzlich eine kompakte Essecke. Das Schlafzimmer präsentiert sich mit einem Queensize-Bett, einem geräumigen Kleiderschrank und Verdunklungsrollos für optimalen Schlafkomfort.\n\nDer Balkon ist nach Norden ausgerichtet und bietet eine angenehme Möglichkeit, frische Luft zu genießen. Zur Wohnung gehört außerdem ein Kellerraum. Das Gebäude ist mit einem Aufzug ausgestattet, was den Zugang erleichtert.\n\nLimpertsberg ist ein etabliertes Wohnviertel mit kulturellen Einrichtungen, dem Parc Edmond Klein und einer lebendigen Atmosphäre. Die Nähe zur Universität sowie die gute Infrastruktur prägen das Umfeld dieses Stadtteils.",
+    "highlights": [
+      {
+        "text": "Renovierte 2-Zimmer-Wohnung auf 95 m²",
+        "icon": "home"
+      },
+      {
+        "text": "Moderne Einbauküche mit Induktionskochfeld und Geschirrspüler",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balkon mit Nordausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Schlafzimmer mit Queensize-Bett und Verdunklungsrollos",
+        "icon": "bed"
+      },
+      {
+        "text": "Heller Wohnbereich mit Eichenparkett und skandinavischer Einrichtung",
+        "icon": "sofa"
+      },
+      {
+        "text": "Kellerraum im Gebäude vorhanden",
+        "icon": "archive"
+      },
+      {
+        "text": "Aufzug im Haus",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "LimpertsbergLiving",
+      "RenovatedApartment",
+      "BalconyAccess",
+      "ModernKitchen",
+      "CityResidence"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Mit einer Wohnfläche von 280 m²' and '5-Zimmer-Villa' and 'Drei Badezimmer' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 280 m², 5 bedrooms, 3 bathrooms, Strassen, garden, terrace, parking, cellar, fireplace, kitchen island, fitted wardrobes."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'einen matureten Garten' is not native German; 'Doppelbackröhre' is awkward (correct would be Doppelbackofen)."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'freistehendes, zweigeschossiges Wohnhaus' and 'Wohnfläche' match LU luxury corpus, but 'matureten Garten' is off-register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs; description correctly omits it entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit etabliertem Garten und hochwertiger Ausstattung in Strassen' is 11 words with neighborhood; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'repräsentatives Wohnangebot' and 'verspricht' lean slightly marketing but no exclamations or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; 'familienfreundlich' is not used in DE output."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims (280 m², 5 bedrooms, 3 bathrooms, slate roof, white plaster, fireplace, parquet, granite, double oven, SW garden, cellar, parking, Strassen west of city, motorway, schools nearby) are supported by inputs and notes."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR agree on 280 m², 5 bedrooms, 3 bathrooms, parking, garden, terrace, cellar, sale-kind. Minor non-contradictory detail: FR adds 'parquet en chêne massif' and 'foyer ouvert' which DE/EN do not assert, but no direct disagreement."
+    }
+  },
+  "overall_pass": true
+}

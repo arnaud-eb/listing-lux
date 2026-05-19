@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'cet appartement de 52 m²' and 'Une cave individuelle' match the inputs (52 sqm, cellar=true)."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions '52 m²', '1 chambre', salle de bains, cave, Bonnevoie, and the south-facing living room and galley kitchen from photo analyses."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'cet appartement de 52 m² propose un cadre de vie urbain combiné à une orientation sud'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU/FR real-estate vocabulary like 'séjour', 'cave individuelle', 'baignoire avec douche intégrée'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned; inputs had no class, prose correctly omits it."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement 1 chambre lumineux avec cave dans le quartier dynamique de Bonnevoie' is 12 words with neighborhood and adjective; 5 hashtags CamelCase: 'BonnevoieUrbanLifestyle LuminositeSud AppartementAvecCave CuisineFonctionnelle ProximiteGare'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; uses restrained terms like 'luminosité naturelle appréciable' and 'fonctionnelle'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; only describes the property and 'quartier multiculturel et animé'."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'à proximité de la gare centrale' (named landmark not in inputs). Supported: 52 m² (property.sqm), cave (cellar=true), Bonnevoie (neighborhood), south-facing (photo), galley/white cabinetry (photo), bathtub-shower (photo)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 52 m², 1 bedroom, 1 bathroom, cellar, south-facing, sale; DE adds 'Mehrparteienhaus' and 'Bonneweg-Markt' which FR/EN do not contradict — one minor non-contradictory addition."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Solid entry-tier copy with one unsupported geographic claim."
+}

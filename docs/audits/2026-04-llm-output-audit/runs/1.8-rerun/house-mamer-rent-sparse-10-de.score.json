@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'eignet sich für Käufer' frames it as a sale ('buyers'), contradicting the rental price of 2900."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Covers sqm, 3 Schlafzimmer, Garten, Keller, Parkplatz; omits the 1 Badezimmer count explicitly in highlights and misframes as sale."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Reiheneinfamilienhaus aus den 1980er Jahren' reads natively in German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Reiheneinfamilienhaus', 'Wohnfläche', 'Kellerraum' align with LU German listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Reiheneinfamilienhaus mit 3 Schlafzimmern und eigenem Garten in Mamer' is 9 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained tone overall; no exclamation marks or hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'für Käufer, die Wert auf eine ruhige Wohnlage' references buyer preference, not protected demographics."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Lycée Josy Barthel' and 'European School Luxembourg II' named schools not in inputs; 'nahegelegenen Autobahnen und Bahnhofsanbindungen' is generic infrastructure claim."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE frames the property as a sale ('eignet sich für Käufer') while FR and EN are tenure-neutral — a listing-kind disagreement on rent vs sale; numeric specs (130 m², 3 bedrooms, 1 bathroom) agree across all three."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Misframes a rental as a purchase ('für Käufer')."
+}

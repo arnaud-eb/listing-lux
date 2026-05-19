@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m² of refined living space', '3-Bedroom', 'Two modern bathrooms', balcony, parking, cellar, elevator all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 145 m², 3 bedrooms, two bathrooms, Kirchberg, balcony, parking, cellar, elevator, new-build, city/park view, plus Bulthaup kitchen and underfloor heating from photos."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'suitable for relaxation or morning coffee' reads slightly stiff but generally natural English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Luxembourg's contemporary business district', 'EU quarter', 'Philharmonie and MUDAM' align with LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description omits CPE entirely, matching the v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Contemporary 3-Bedroom Apartment with Balcony and City Views in Kirchberg' is 11 words with neighborhood; hashtags 'ModernArchitecture ParkView BulthaupKitchen UnderfloorHeating KirchbergLiving' are 5 CamelCase tags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'understated luxury' and 'spa-like ensuite' are mild but no exclamations or 'breathtaking/must-see'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'international educational facilities' refers to area, not occupants."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'cultural venues like the Philharmonie and MUDAM' — these specific named venues are not in the provided inputs (notes only mention 'EU institutions and international schools'). All other claims (145 m², Bulthaup, Kirchberg park, engineered wood, double-height ceiling) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, cellar, elevator, new-build, sale-kind apartment in Kirchberg with park view."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Strong listing; Philharmonie/MUDAM appear unsupported by provided neighborhood data."
+}

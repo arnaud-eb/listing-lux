@@ -1,0 +1,44 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:09.504Z",
+  "output": {
+    "title": "Freistehende Villa mit 4 Schlafzimmern und großem Garten in Differdingen",
+    "description": "Diese freistehende Villa aus den 1970er Jahren präsentiert sich mit einer klassisch-zeitlosen Steinfassade auf einem gepflegten Grundstück in Differdingen. Mit einer Wohnfläche von etwa 200 m² verteilt auf vier Schlafzimmer und zwei Badezimmer bietet das Haus großzügigen Raum für individuelle Wohnkonzepte. Ein doppelter PKW-Stellplatz – eine Doppelgarage – ist auf dem eigenen Grundstück vorhanden.\n\nDer Wohnbereich besticht durch eine warme, traditionelle Atmosphäre mit Holzvertäfelungen und einem original erhaltenen Kamin aus Stein, der zusätzlich zur Ausstattung beiträgt. Große Fenster ermöglichen den Blick in den privaten Garten und sorgen für Tageslicht im Innenraum.\n\nDer Garten ist mit einer großen Rasenfläche, ausgewachsenen Bäumen und einer gepflasterten Terrasse angelegt, die zur ruhigen Freizeitgestaltung im Freien einlädt. Ergänzend steht ein separater Kellerraum zur Verfügung, der zusätzlichen Stauraum bietet.\n\nDifferdingen ist als drittgrößte Stadt Luxemburgs im Süden durch sein industrielles Erbe geprägt und verfügt unter anderem über den Campus der Miami University am Schloss Differdange sowie verschiedene Neubauprojekte im Stadtkern. Die Lage verbindet städtische Infrastruktur mit einer gewachsenen Nachbarschaft und vorhandenen Grünflächen.\n",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit ca. 200 m² Wohnfläche",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer und zwei Bäder",
+        "icon": "bed"
+      },
+      {
+        "text": "Originaler Stein-Kamin im Wohnraum",
+        "icon": "flame"
+      },
+      {
+        "text": "Großer, gepflegter Garten mit Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Doppelgarage für zwei Fahrzeuge",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum für Lagerung",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SteinVilla",
+      "GartenTerrasse",
+      "Doppelgarage",
+      "Kaminofen",
+      "Differdingen"
+    ]
+  }
+}

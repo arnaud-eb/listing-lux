@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:20.989Z",
+  "output": {
+    "title": "Well-Maintained 4-Bedroom Villa with Private Garden and Parking in Differdange",
+    "description": "This detached villa, reflecting the architectural style of Luxembourg from the 1970s, offers approximately 200 m² of living space across well-proportioned rooms. Constructed with a stone facade and situated on private grounds, the property includes a double garage and a cellar, enhancing practicality and storage options.\n\nThe interior features a traditional living room characterized by wood paneling and an original stone fireplace, creating a warm and inviting atmosphere. Large windows provide views onto the garden, allowing for natural light and a connection with the outdoor space.\n\nThe outdoor areas comprise a mature garden with a generous lawn, mature trees, and a patio suitable for outdoor seating. The terrace offers an additional area for relaxation and entertaining. Parking is accommodated by a double garage with direct access to the villa.\n\nLocated in Differdange, Luxembourg’s third-largest city situated in the south, the area is noted for its industrial heritage and the presence of Miami University within Differdange Castle, alongside ongoing residential developments. This context provides a blend of historical significance and contemporary living environments.\n\nOverall, this villa combines established residential charm with functional spaces including private outdoor areas and parking, within a city characterized by its evolving urban landscape.",
+    "highlights": [
+      {
+        "text": "200 m² living area",
+        "icon": "square"
+      },
+      {
+        "text": "4 bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "2 bathrooms",
+        "icon": "bath"
+      },
+      {
+        "text": "Double garage parking",
+        "icon": "car"
+      },
+      {
+        "text": "Private mature garden with terrace",
+        "icon": "trees"
+      },
+      {
+        "text": "Original stone fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "StoneFacade",
+      "TraditionalInterior",
+      "PrivateGarden",
+      "DoubleGarage",
+      "DifferdangeResidence"
+    ]
+  }
+}

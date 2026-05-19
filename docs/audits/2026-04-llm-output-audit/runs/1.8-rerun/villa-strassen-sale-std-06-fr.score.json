@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'villa indépendante de 280 m²', 'Cinq chambres', 'Trois salles de bains' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, Strassen, garden, terrace, parking, cave, cheminée, kitchen island, fitted wardrobes, fireplace."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Mostly native French; 'un double four intégrée' has a gender agreement error (should be 'intégré')."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "'villa indépendante', 'baies vitrées', 'plafonds hauts', 'jardin mature orienté sud-ouest' matches athome.lu/E&V FR corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied; description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Villa rénovée 5 chambres avec jardin mature et parking à Strassen' is 11 words with neighborhood; 5 CamelCase hashtags, no generic duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'charme classique' and 'cadre verdoyant' lean slightly promotional but no exclamation or 'incontournable'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'familles' not invoked."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'parquet en chêne massif' (oak species not in inputs; photos say 'parquet flooring') and 'cheminée à foyer ouvert' (photo says 'wood-burning fireplace', open hearth is a specific claim not supported). Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR agree on 280 m², 5 bedrooms, 3 bathrooms, parking, garden, terrace, cellar, sale-kind. Minor non-contradictory detail: FR adds 'parquet en chêne massif' and 'foyer ouvert' which DE/EN do not assert, but no direct disagreement."
+    }
+  },
+  "overall_pass": false
+}

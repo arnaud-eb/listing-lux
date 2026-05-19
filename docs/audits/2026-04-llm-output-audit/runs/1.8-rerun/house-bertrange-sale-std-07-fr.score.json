@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'deux salles d'eau fonctionnelles' — slight imprecision (salles d'eau vs salles de bains), and 'cheminée fonctionnelle' is inferred but plausible from photo; otherwise faithful."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 195 m², 4 chambres, 2 salles de bains, jardin sud, terrasse, cave, parking, cheminée, cuisine — all active features and photo highlights."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'maison semi-individuelle' and 'portes-fenêtres s'ouvrent directement sur le jardin' read naturally in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'jardin orienté au sud', 'cave', 'parking en entrée' match athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no class supplied."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Maison semi-individuelle 4 chambres avec jardin orienté sud à Bertrange' is in range; hashtags 'BelleEtoileProximité' is awkward and only 5 tags, acceptable."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; 'cadre privilégié à la fois lumineux et privé' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; neutral language throughout."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'centre commercial Belle Étoile' and 'accès au réseau de tramway via la Cloche d'Or' are named landmarks/transit not in inputs (notes confirm Bertrange has no neighborhood context); '195 m²' and south-facing garden are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement on 195 m², 4 beds, 2 baths across DE/FR/EN; however DE labels the property 'Einfamilienhaus' (detached single-family) while FR ('semi-individuelle') and EN ('semi-detached') agree on semi-detached — this is a listing-feature disagreement on property kind, not merely a vocabulary translation."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Invents Belle Étoile and Cloche d'Or tram link — risky given no neighborhood data was provided."
+}

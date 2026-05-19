@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'180 m²', 'three bedrooms', 'Siemens appliances', 'wraparound terrace' all match property/photo inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Sqm, bedrooms, neighborhood, terrace, parking, cellar, elevator, new-build, oak flooring, double-volume, kitchen all included."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'seamlessly connecting to the dining and living areas to create an inviting environment' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'master suite with fitted wardrobes', 'engineered oak flooring', 'private parking space' match LU luxury English idiom."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented; consistent with null input."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Spacious 3-Bedroom Duplex with Wraparound Terrace in Cloche d'Or' is 10 words with neighborhood; 5 distinct CamelCase tags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; 'Spacious', 'inviting', 'distinctive' are restrained descriptors, no 'breathtaking' or 'must-see'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or occupant references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '180 m²', 'Cloche d'Or', 'Siemens appliances', 'quartz countertops', 'soft-close cabinetry', 'wraparound terrace', 'wood decking', 'shopping center', 'engineered oak flooring', 'three bedrooms', 'elevator', 'cellar', 'parking' all map to property/photo inputs. 'modern office buildings, shopping centers, and parks' is generic neighborhood description not contradicting inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 180 m², 3 bedrooms, sale, parking, cellar, elevator, terrace. Minor disagreement: FR says terrace is 'bois composite' while DE 'Holzdeck' and EN 'wood decking' indicate solid wood — a feature-detail contradiction within the wraparound terrace material."
+    }
+  },
+  "overall_pass": true
+}

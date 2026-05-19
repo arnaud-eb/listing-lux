@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'this three-bedroom house offers 130 square meters' matches inputs; no rental framing but no contradiction."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, 3 bedrooms, 1 bathroom, garden, parking, cellar, Mamer; rental status not stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'primed for modernization to suit contemporary tastes' reads natively in English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'row house' and 'suburban commune' are acceptable but slightly generic vs LU corpus terms like 'semi-detached'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE mentioned, matching v1.5 default when no class supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Three-Bedroom House with Private Garden and Parking in Mamer' is 10 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'enhancing its welcoming aspect' is mild marketing language but no hyperbole or exclamation."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'calm neighborhood that benefits from suburban amenities' is neutral."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'European School Luxembourg II' and 'various lycées' are named/implied schools not in inputs; 'motorways and rail' connections are unsupported."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE frames the property as a sale ('eignet sich für Käufer') while FR and EN are tenure-neutral — a listing-kind disagreement on rent vs sale; numeric specs (130 m², 3 bedrooms, 1 bathroom) agree across all three."
+    }
+  },
+  "overall_pass": false
+}

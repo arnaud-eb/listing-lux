@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:09.352Z",
+  "output": {
+    "title": "Helle 1-Zimmer-Wohnung mit Süd-Ausrichtung und Keller in Bonneweg",
+    "description": "Diese 52 m² große 1-Zimmer-Wohnung befindet sich in einem Mehrparteienhaus im lebendigen Stadtteil Bonneweg. Das zentral gelegene Apartment besticht durch einen nach Süden ausgerichteten Wohnraum, der für angenehme Helligkeit sorgt. Die Räume präsentieren sich in einem gepflegten, neutralen Zustand mit Laminatboden und weiß gestrichenen Wänden, was vielseitige Gestaltungsmöglichkeiten eröffnet.\n\nDie Küche ist funktional mit einer klassischen Einbauküche in Weiß gestaltet und verfügt über einen kleinen Galerieraumzuschnitt mit keramischen Fliesen. Das Bad kombiniert eine Dusch- und Badewanne, ebenfalls in einem traditionellen Stil, und ist mit weißen Fliesen ausgekleidet, was eine helle und saubere Atmosphäre schafft.\n\nZur Wohnung gehört ein separater Kellerraum, der zusätzlichen Stauraum bietet. Das Quartier Bonneweg zeichnet sich durch seine kulturelle Vielfalt, eine lebhafte Gastronomieszene sowie den bekannten Bonneweg-Markt aus. Dank der guten Anbindung an den Luxemburger Hauptbahnhof ist eine unkomplizierte Mobilität gegeben. Das Umfeld ist durch ein lebendiges Stadtflair mit erschwinglicheren Preisen im Vergleich zu anderen Vierteln Luxemburgs geprägt.",
+    "highlights": [
+      {
+        "text": "Helle, südlich ausgerichtete Wohnfläche",
+        "icon": "sun"
+      },
+      {
+        "text": "Separate Küche mit funktionalem Galerieschnitt",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Badezimmer mit Dusch- und Badewannen-Kombination",
+        "icon": "bath"
+      },
+      {
+        "text": "Pflegeleichter Laminatboden im Wohnraum",
+        "icon": "sofa"
+      },
+      {
+        "text": "Eigener Kellerraum als Abstellmöglichkeit",
+        "icon": "archive"
+      },
+      {
+        "text": "Zentrale Lage im lebendigen Bonneweg",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SuedAusrichtung",
+      "Kellerabteil",
+      "Galerekueche",
+      "LebendigesQuartier",
+      "Badewanne"
+    ]
+  }
+}

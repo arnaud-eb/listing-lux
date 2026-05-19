@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:29.278Z",
+  "output": {
+    "title": "Studio meublé rénové avec caractère dans le quartier historique de Clausen",
+    "description": "Ce studio soigneusement rénové se situe dans le quartier historique de Clausen, niché dans la vallée de l'Alzette et classé au patrimoine mondial de l'UNESCO. L'appartement offre une atmosphère chaleureuse grâce à ses poutres apparentes et son parquet en bois, témoins du style rustique-moderne de cet espace optimisé.\n\nL'espace de vie principal est entièrement meublé, intégrant un coin kitchenette fonctionnel avec plaque de cuisson deux feux et un réfrigérateur compact, adaptés à un usage quotidien. La salle de bains, récemment rénovée, présente des finitions modernes avec une cabine de douche et un meuble vasque compact.\n\nLe bâtiment lui-même, en pierre authentique, conserve son caractère historique dans une rue étroite typique de Clausen. Ce cadre préserve le charme particulier de la vallée tout en offrant un accès aux commodités du centre-ville et de Kirchberg, reconnus pour leur dynamisme culturel et économique.",
+    "highlights": [
+      {
+        "text": "Studio entièrement meublé",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes caractérisant l'intérieur",
+        "icon": "building-2"
+      },
+      {
+        "text": "Espace compact et bien agencé",
+        "icon": "square"
+      },
+      {
+        "text": "Coin kitchenette moderne et fonctionnel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains rénovée récemment",
+        "icon": "bath"
+      },
+      {
+        "text": "Bâtiment en pierre historique",
+        "icon": "building"
+      },
+      {
+        "text": "Quartier classé UNESCO, vallée de l'Alzette",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "RenovatedStudio",
+      "ClausenLiving",
+      "CompactComfort",
+      "UNESCOLocation"
+    ]
+  }
+}

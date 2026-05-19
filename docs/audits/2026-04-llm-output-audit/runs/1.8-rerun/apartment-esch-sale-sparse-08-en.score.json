@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All facts align: '78 m² apartment', 'two bedrooms', 'balcony', 'elevator', 'allocated parking space'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm/beds/bath/neighborhood and active features plus photo details: 'L-shaped layout with white cabinetry'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'creating a bright and inviting atmosphere', though 'suitable for a range of living arrangements' is slightly stiff."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard listing vocabulary: 'living area', 'allocated parking space', 'elevator within the building'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced, consistent with no input class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette' is 9 words with neighborhood; 5 hashtags CamelCase 'CompactLiving BalconyAccess ParkingIncluded EschSurAlzette CityApartment' but missing # prefix."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained: 'practical and comfortable living environment', no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'suitable for a range of living arrangements' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'hosts a university and the Belval neighborhood' not in neighborhood inputs. Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and sale in Esch-sur-Alzette."
+    }
+  },
+  "overall_pass": false
+}

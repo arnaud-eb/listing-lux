@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:11:50.205Z",
+  "output": {
+    "title": "Hochwertige 3-Zimmer-Neubauwohnung mit Balkon und Blick auf Kirchbergpark",
+    "description": "Diese großzügige Neubauwohnung erstreckt sich über 145 m² und bietet eine durchdachte Raumgestaltung in einem modernen Stil. Das Wohnzimmer beeindruckt mit einer doppelten Raumhöhe und bodentiefen, nach Süden ausgerichteten Fenstern, die einen lichtdurchfluteten, offenen Wohn- und Essbereich schaffen. Der hochwertige Eichenholzparkettboden unterstreicht die wohnliche Atmosphäre.\n\nDie offene Küche ist mit Bulthaup-Schränken ausgestattet und verfügt über eine Induktionskochplatte sowie eine Arbeitsfläche aus Stein. Eine zentrale Kücheninsel sowie eine Frühstückstheke setzen funktionale und ästhetische Akzente in diesem Bereich.\n\nDas Badezimmer ist mit einer begehbaren Regendusche, einem Doppelwaschbecken und einer Fußbodenheizung ausgestattet. Durch die Verwendung von großformatigen Feinsteinzeugfliesen erhält es eine ruhige, saubere Anmutung, die wohltuende Spa-Qualitäten vermittelt.\n\nEin besonderer Vorzug ist der Balkon mit Glasbrüstung und Fliesenboden, der einen ruhigen Blick über den Kirchbergpark bietet. Zur Wohnung gehören weiterhin ein Stellplatz, ein Aufzug sowie ein separater Kellerraum. Die Lage im Geschäftsviertel Kirchberg zeichnet sich durch eine moderne Infrastruktur sowie nahegelegene kulturelle Einrichtungen und internationale Bildungseinrichtungen aus.",
+    "highlights": [
+      {
+        "text": "145 m² großzügige Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlafzimmer und 2 moderne Bäder",
+        "icon": "bed"
+      },
+      {
+        "text": "Balkon mit Ausblick auf den Kirchbergpark",
+        "icon": "sun"
+      },
+      {
+        "text": "Küche mit hochwertigen Bulthaup-Schränken",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Doppel-Deckhöhe im Wohnbereich für viel Licht",
+        "icon": "home"
+      },
+      {
+        "text": "Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum als zusätzlicher Stauraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Neubauwohnung",
+      "KirchbergView",
+      "BulthaupKüche",
+      "Doppelraumhöhe",
+      "Parkblick"
+    ]
+  }
+}

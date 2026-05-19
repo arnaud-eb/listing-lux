@@ -1,0 +1,51 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:11:41.308Z",
+  "output": {
+    "title": "Penthouse rénové 4 chambres avec terrasse panoramique et parking à Belair",
+    "description": "Ce penthouse de 220 m², récemment rénové, se situe dans le quartier prisé de Belair, connu pour son cadre résidentiel verdoyant et son ambiance calme. L’appartement bénéficie d’un agencement ouvert et d’une luminosité naturelle abondante grâce à ses baies vitrées du sol au plafond qui offrent une vue dégagée sur la ville de Luxembourg.\n\nL’espace de vie comprend un séjour élégant avec parquet chêne et une cheminée à bois, complété par une cuisine moderne équipée d’appareils Gaggenau, d’un îlot central en marbre de Carrare et d’un dispositif de cave à vin intégré. L’appartement dispose de quatre chambres, dont une suite parentale offrant un accès direct à une terrasse privée, un dressing et une salle de bains attenante.\n\nLe point fort du bien est sa grande terrasse extérieure orientée plein sud, installée sur un confortable revêtement composite, agrémentée d’un salon d’extérieur et d’une balustrade en verre, offrant un panorama à 180 degrés sur la ville. La propriété inclut également une cave, un emplacement de stationnement et l’accès par ascenseur, complétant ainsi ce logement répondant aux attentes d’un mode de vie urbain haut de gamme dans un environnement résidentiel.",
+    "highlights": [
+      {
+        "text": "220 m² habitables avec 4 chambres",
+        "icon": "square"
+      },
+      {
+        "text": "Terrasse sud avec vue panoramique sur la ville",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine équipée appareils Gaggenau et îlot en marbre",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Cheminée à bois dans séjour lumineux",
+        "icon": "flame"
+      },
+      {
+        "text": "Revêtement parquet chêne et finitions contemporaines",
+        "icon": "home"
+      },
+      {
+        "text": "Ascenseur desservant l’appartement",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking privative incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privée attenante au logement",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLuxembourg",
+      "TerrassePanoramique",
+      "CuisineDesign",
+      "BelairResidences"
+    ]
+  }
+}

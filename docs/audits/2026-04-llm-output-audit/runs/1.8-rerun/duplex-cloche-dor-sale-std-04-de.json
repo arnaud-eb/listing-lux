@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:26.239Z",
+  "output": {
+    "title": "Exklusives Duplex mit 3 Schlafzimmern und Panoramablick in Cloche d'Or",
+    "description": "Dieses großzügige Duplex mit 180 m² Wohnfläche wurde kürzlich neu erbaut und befindet sich in Luxemburgs dynamischem Stadtviertel Cloche d'Or. Die lichtdurchflutete Eingangsebene besticht durch einen zweigeschossigen Wohnbereich mit Panoramaverglasung und Eichenparkett. Die offene Treppe verbindet die Ebenen elegant und schafft ein luftiges Raumgefühl, das den Ausblick auf den angrenzenden Park einrahmt.\n\nDie moderne Küche ist offen zum Wohn- und Essbereich gestaltet und mit Siemens-Einbaugeräten sowie einer robusten Quarzarbeitsplatte ausgestattet. Die hochwertige Ausstattung mit Soft-Close-Schränken unterstreicht die zeitgemäße Gestaltung und Funktionalität dieses Bereichs.\n\nIm Obergeschoss liegen drei Schlafzimmer, darunter ein Hauptschlafzimmer mit direktem Zugang zu einer großzügigen, umlaufenden Terrasse. Die Räume sind mit maßangefertigten Einbauschränken versehen und bieten eine ruhige, private Atmosphäre. Die Terrasse mit Holzdeck ermöglicht einen weiten Blick über das Einkaufszentrum und profitiert von einer Abendsonnen-Ausrichtung.\n\nZur Wohnung gehören zudem ein separater Kellerraum, ein Stellplatz in der Tiefgarage sowie ein Aufzug, der barrierefreien Zugang garantiert. Die Kombination aus hochwertiger Bauweise und städtischem Umfeld macht diese Immobilie zu einem attraktiven Angebot in einem der modernsten Geschäfts- und Wohnviertel Luxemburgs.",
+    "highlights": [
+      {
+        "text": "180 m² Wohnfläche in Neubau-Duplex",
+        "icon": "home"
+      },
+      {
+        "text": "Dreifach-Schlafzimmer mit Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "Zweigeschossiger Wohnbereich mit Panoramaverglasung",
+        "icon": "sofa"
+      },
+      {
+        "text": "Moderne Einbauküche mit Siemens-Geräten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Großzügige, umlaufende Terrasse mit Abendsonne",
+        "icon": "sun"
+      },
+      {
+        "text": "Eigener Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Tiefgaragenstellplatz vorhanden",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "NeubauDuplex",
+      "PanoramaView",
+      "ModerneKüche",
+      "TerrasseMitAussicht",
+      "ClocheDOrLiving"
+    ]
+  }
+}

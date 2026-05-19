@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:11:35.664Z",
+  "output": {
+    "title": "Exklusives Penthouse mit 220 m² Wohnfläche und Panorama-City-View in Belair",
+    "description": "Diese großzügige Penthouse-Wohnung erstreckt sich über 220 m² und wurde kürzlich renoviert. Sie umfasst vier Schlafzimmer und drei Bäder, die durch eine offene und zugleich elegante Raumgestaltung verbunden sind. Die Ausstattung ist hochwertig, u. a. mit einem nach Süden ausgerichteten Wohnbereich, der dank bodentiefer Fenster natürliches Licht und einen umfassenden Blick über die Stadt bietet.\n\nDie Küche präsentiert sich in einem modernen und minimalistischen Stil, ausgestattet mit Geräten von Gaggenau sowie einer zentralen Insel aus Carrara-Marmor. Der integrierte Weinkühler unterstreicht das anspruchsvolle Ambiente und bietet Funktionalität für die Bewirtung von Gästen.\n\nSchlafbereich und Badezimmer zeichnen sich durch sorgfältige Materialwahl aus; das Hauptschlafzimmer verfügt über einen begehbaren Kleiderschrank, ein privates Bad und direkten Zugang zur Terrasse. Die großzügige, südlich ausgerichtete Terrasse mit Glasgeländer bietet einen uneingeschränkten 180-Grad-Panorama-Blick auf die Stadt und schafft eine ansprechende Verbindung zwischen Innen- und Außenbereich.\n\nZur weiteren Ausstattung gehören ein Aufzug, ein Stellplatz sowie ein separater Kellerraum. Das Penthouse ergänzt das anspruchsvolle Wohnumfeld des Belair-Quartiers, das durch seine grüne, ruhige Atmosphäre und seine Nähe zum Stadtzentrum charakterisiert wird.\n\nDie zentrale Lage im exklusiven Wohngebiet Belair stellt eine attraktive Kombination aus urbaner Lebensqualität und diskreter Privatheit dar. Die Nachbarschaft ist geprägt von gepflegten Straßen und einer gediegenen Wohnstruktur, die einer gehobenen Wohnansprüchen gerecht wird.",
+    "highlights": [
+      {
+        "text": "220 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "4 Schlafzimmer, 3 Bäder",
+        "icon": "bed"
+      },
+      {
+        "text": "Renoviert mit moderner Ausstattung",
+        "icon": "home"
+      },
+      {
+        "text": "Gaggenau Geräte und Carrara-Marmor-Küche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlich ausgerichtete Terrasse mit 180° City-View",
+        "icon": "sun"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Stellplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ExclusiveLiving",
+      "PenthouseView",
+      "ModernRenovation",
+      "BelairLiving",
+      "CityTerrace"
+    ]
+  }
+}

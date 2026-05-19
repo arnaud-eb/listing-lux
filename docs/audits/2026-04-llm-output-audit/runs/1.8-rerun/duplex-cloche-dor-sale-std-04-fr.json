@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:31.875Z",
+  "output": {
+    "title": "Duplex contemporain 3 chambres avec terrasse panoramique et parking à Cloche d'Or",
+    "description": "Ce duplex neuf de 180 m² présente un aménagement ouvert et une architecture moderne, situé dans le quartier dynamique de Cloche d'Or, un pôle d'affaires avec centre commercial et espaces verts aménagés.\n\nLe séjour en double hauteur bénéficie d'une luminosité naturelle accentuée par de larges baies vitrées offrant une vue dégagée sur un nouveau parc urbain. Le rez-de-chaussée intègre une cuisine ouverte équipée d'appareils Siemens, plans en quartz et rangements à fermeture douce, garantissant fonctionnalité et confort.\n\nL'étage supérieur abrite trois chambres, dont une suite parentale avec terrasse privative accessible depuis la chambre, apportant un espace extérieur intime. Le parquet en chêne massif et les placards intégrés contribuent à l'ambiance contemporaine et soignée.\n\nUne terrasse à usage exclusif, en bois composite, donne sur le centre commercial voisin et bénéficie d'une exposition favorable au soleil couchant. Le bien comprend également une cave et une place de parking, accessibles par ascenseur, complétant ces prestations dans un immeuble récent.",
+    "highlights": [
+      {
+        "text": "Duplex 3 chambres de 180 m²",
+        "icon": "home"
+      },
+      {
+        "text": "Séjour double hauteur avec grandes baies vitrées",
+        "icon": "square"
+      },
+      {
+        "text": "Cuisine ouverte équipée Siemens et plan quartz",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Suite parentale avec terrasse privative",
+        "icon": "bed"
+      },
+      {
+        "text": "Terrasse en bois avec vue sur centre commercial",
+        "icon": "sun"
+      },
+      {
+        "text": "Cave et place de parking incluses",
+        "icon": "archive"
+      },
+      {
+        "text": "Accès par ascenseur",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "DuplexContemporain",
+      "TerrassePanoramique",
+      "CuisineEquipee",
+      "VueUrbaine",
+      "ClocheDor"
+    ]
+  }
+}

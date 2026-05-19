@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'approximately 195 m² of living space', '4 bedrooms and 2 bathrooms', 'south-facing rear garden' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, baths, neighborhood, garden, terrace/patio, parking, cellar, fireplace, kitchen details — covers active features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'creating an inviting transition between indoor and outdoor living spaces' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'semi-detached residence', 'private driveway', 'cellar' align with EV Luxembourg English copy."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE invented; description omits energy class entirely as no input was provided."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Spacious 4-Bedroom Semi-Detached House with South-Facing Garden in Bertrange' is 12 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Spacious' in title is mild; otherwise restrained ('well-maintained semi-detached residence')."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'premium shopping at Belle Étoile' and 'tram connections via Cloche d'Or' are named places/transit not in inputs; 'suburban commune west of Luxembourg City' is general geographic fact, acceptable."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement on 195 m², 4 beds, 2 baths across DE/FR/EN; however DE labels the property 'Einfamilienhaus' (detached single-family) while FR ('semi-individuelle') and EN ('semi-detached') agree on semi-detached — this is a listing-feature disagreement on property kind, not merely a vocabulary translation."
+    }
+  },
+  "overall_pass": false
+}

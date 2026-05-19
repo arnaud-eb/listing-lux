@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Mostly accurate, but 'terrasse... en bois composite' contradicts photo input 'wood decking' (solid wood, not composite)."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes 180 m², 3 chambres, Cloche d'Or, terrasse, cave, parking, ascenseur, cuisine Siemens, double hauteur, parquet chêne."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Une terrasse à usage exclusif' is slightly awkward; otherwise idiomatic French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'suite parentale', 'baies vitrées', 'plan quartz', 'place de parking' match LU/FR luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned; consistent with null input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Duplex contemporain 3 chambres avec terrasse panoramique et parking à Cloche d'Or' is 12 words with neighborhood; 5 CamelCase tags, though 'ClocheDor' inconsistent casing with title."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamations, 'contemporain', 'soignée' are measured descriptors."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'terrasse... en bois composite' — photo says 'wood decking' (solid wood), not composite. Other claims ('180 m²', 'Siemens', 'quartz', 'chêne massif', 'centre commercial', 'parc urbain', 'ascenseur', 'cave', 'place de parking') supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 180 m², 3 bedrooms, sale, parking, cellar, elevator, terrace. Minor disagreement: FR says terrace is 'bois composite' while DE 'Holzdeck' and EN 'wood decking' indicate solid wood — a feature-detail contradiction within the wraparound terrace material."
+    }
+  },
+  "overall_pass": false
+}

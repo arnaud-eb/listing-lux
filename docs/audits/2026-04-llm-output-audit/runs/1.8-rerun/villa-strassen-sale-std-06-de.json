@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:02.028Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit etabliertem Garten und hochwertiger Ausstattung in Strassen",
+    "description": "Die elegante Villa präsentiert sich als freistehendes, zweigeschossiges Wohnhaus mit weiß verputzter Fassade und traditionellem Schieferdach. Mit einer Wohnfläche von 280 m² bietet das Anwesen großzügige und gut durchdachte Räumlichkeiten, eingebettet in einen matureten Garten mit südwestlicher Ausrichtung, der Privatsphäre und sonnige Stunden verspricht.\n\nIm Inneren empfängt ein Wohnbereich mit hohen Decken, Parkettboden und einem Kaminofen, der eine behagliche Atmosphäre schafft. Großzügige Terrassentüren öffnen den Raum zum Garten und ermöglichen einen fließenden Übergang ins Freie. Die Küche wurde ebenfalls renoviert und besticht durch eine zentrale Kochinsel mit Sitzgelegenheiten, Granit-Arbeitsflächen sowie eine Doppelbackröhre in hochwertiger Shaker-Einrichtung.\n\nFünf Schlafzimmer bieten vielfältige Nutzungsmöglichkeiten; das Hauptschlafzimmer verfügt über einen Blick in den Garten und maßgefertigte Einbauschränke. Drei Badezimmer sorgen für Komfort und eine klare funktionale Trennung der Räume. Zusätzliche Nutzflächen finden sich in einem separaten Kellerraum.\n\nDie ruhige Wohnlage in Strassen, einer Gemeinde westlich der Stadt Luxemburg, zeichnet sich durch ihren dörflichen Charakter trotz guter Anbindung an die Autobahn aus. Zahlreiche Schulen befinden sich in der näheren Umgebung, was die Lage auch unter infrastrukturellen Aspekten attraktiv macht. Die Immobilie verfügt zudem über Pkw-Stellplätze auf dem Grundstück.\n\nDas harmonische Zusammenspiel von traditioneller Bauweise, modern renovierter Ausstattung und dem etablierten Garten macht diese Villa zu einem repräsentativen Wohnangebot in einem etablierten und gut erreichbaren Wohnumfeld.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit 280 m² Wohnfläche",
+        "icon": "home"
+      },
+      {
+        "text": "Fünf Schlafzimmer mit Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "Drei Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Renovierte Küche mit Kochinsel und Doppelbackröhre",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Gemütlicher Wohnbereich mit Kamin und Parkettboden",
+        "icon": "sofa"
+      },
+      {
+        "text": "Südwestlich ausgerichteter, etablierter Garten",
+        "icon": "trees"
+      },
+      {
+        "text": "Parkplätze auf eigenem Grundstück",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "RenovierteVilla",
+      "EtablierterGarten",
+      "TraditionelleArchitektur",
+      "HoheDecken",
+      "SüdwestAusrichtung"
+    ]
+  }
+}

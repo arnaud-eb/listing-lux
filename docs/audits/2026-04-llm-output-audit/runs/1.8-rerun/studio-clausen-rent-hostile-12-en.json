@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:33.378Z",
+  "output": {
+    "title": "Furnished 38 m² Studio with Character in Historic Clausen",
+    "description": "Situated within a historic stone building along one of Clausen's quaint, narrow streets, this 38 m² studio blends rustic charm with modern updates. The main living area features exposed beams and wood flooring, creating a warm atmosphere enhanced by tasteful renovation. The space comes fully furnished, including a double bed and a compact, well-organized layout that maximizes functionality without compromising comfort.\n\nThe kitchenette retains a contemporary aesthetic with its stainless sink, two-burner cooktop, compact refrigerator, and minimal wall cabinetry. It is designed for convenience without occupying excessive space. The bathroom has been renovated recently, offering a clean aspect with white tiles, a shower stall, and a compact vanity, complementing the overall refreshed condition of the studio.\n\nThe property is located in Clausen, an area known for its historic architecture and status as a UNESCO World Heritage site. Positioned in the Alzette valley below the fortress walls, Clausen is distinguished by its preserved character and vibrant nightlife. This setting combines the appeal of an atmospheric neighborhood with proximity to Luxembourg’s center and the Kirchberg district.\n\nThis studio offers a blend of historic ambiance and recent renovation, making it a notable option for those seeking a compact, furnished residence in a distinctive area.",
+    "highlights": [
+      {
+        "text": "Fully furnished studio",
+        "icon": "home"
+      },
+      {
+        "text": "Exposed historic wooden beams",
+        "icon": "building-2"
+      },
+      {
+        "text": "Compact, functional kitchenette",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Renovated bathroom with shower stall",
+        "icon": "bath"
+      },
+      {
+        "text": "Historic stone building exterior",
+        "icon": "building"
+      },
+      {
+        "text": "Located in UNESCO World Heritage Clausen valley",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Wood flooring throughout",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "HistoricClausen",
+      "FurnishedStudio",
+      "Renovated",
+      "CompactLiving",
+      "UNESCOHeritage"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:43.123Z",
+  "output": {
+    "title": "Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette",
+    "description": "This 78 m² apartment offers a practical and comfortable living environment in Esch-sur-Alzette, the country's second-largest city known for its cultural scene and ongoing development. The residence includes two bedrooms and a well-proportioned bathroom, suitable for a range of living arrangements.\n\nThe living room features neutral beige walls and laminate flooring, creating a bright and inviting atmosphere. Access to a modest balcony extends the living space outdoors, allowing for fresh air and a quiet spot to enjoy the surroundings. The compact kitchen is arranged in an L-shaped layout with white cabinetry and incorporates a small dining area, providing functional space for meal preparation and dining.\n\nAdditional conveniences include an elevator within the building and an allocated parking space, enhancing accessibility and ease of daily living. The apartment’s location in Esch-sur-Alzette situates it within an expanding urban area that hosts a university and the Belval neighborhood, contributing to the city's dynamic character.",
+    "highlights": [
+      {
+        "text": "78 m² living area",
+        "icon": "square"
+      },
+      {
+        "text": "2 bedrooms, 1 bathroom",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcony accessible from living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact L-shape kitchen with dining space",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Elevator in building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Parking space included",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "CompactLiving",
+      "BalconyAccess",
+      "ParkingIncluded",
+      "EschSurAlzette",
+      "CityApartment"
+    ]
+  }
+}

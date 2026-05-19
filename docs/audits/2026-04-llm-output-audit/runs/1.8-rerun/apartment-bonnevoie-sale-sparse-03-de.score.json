@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Diese 52 m² große 1-Zimmer-Wohnung' aligns with sqm=52 and bedrooms=1; cellar mentioned per inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, bed count, kitchen, bath with tub-shower, cellar, Bonneweg, south orientation, laminate."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Non-standard coinages 'Galerieraumzuschnitt' and hashtag 'Galerekueche' damage native-quality feel."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Bonneweg' is correct LU/DE exonym but 'Galerieraumzuschnitt' is not portal-standard vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented in prose."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Hashtag set includes the malformed 'Galerekueche', diluting SEO quality."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'besticht durch' is mildly promotional but no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'in einem Mehrparteienhaus' (building structure not in inputs), 'gute Anbindung an den Luxemburger Hauptbahnhof' (named landmark), and 'bekannten Bonneweg-Markt' (named landmark). Supported: 52 m², 1-Zimmer, Süd-Ausrichtung, Laminat, weiße Wände, Keller, Bonneweg."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 52 m², 1 bedroom, 1 bathroom, cellar, south-facing, sale; DE adds 'Mehrparteienhaus' and 'Bonneweg-Markt' which FR/EN do not contradict — one minor non-contradictory addition."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Duplicate entry — disregard prior; final DE hallucination=2 due to three named-landmark/structure claims."
+}

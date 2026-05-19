@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:13.907Z",
+  "output": {
+    "title": "Appartement 1 chambre lumineux avec cave dans le quartier dynamique de Bonnevoie",
+    "description": "Situé dans le quartier animé de Bonnevoie, cet appartement de 52 m² propose un cadre de vie urbain combiné à une orientation sud offrant une luminosité naturelle appréciable. Il se compose d'un séjour clair, aux murs blancs et revêtu d'un sol stratifié, qui assure un espace de vie confortable et facile à aménager.\n\nLa cuisine, bien que compacte, bénéficie d'une disposition fonctionnelle en enfilade avec des meubles blancs traditionnels et un sol en carrelage. Elle invite à une organisation efficace dans un espace dédié.\n\nLa salle de bains, équipée d'une baignoire avec douche intégrée, présente un aménagement sobre en carreaux blancs et un meuble vasque simple. Elle combine fonctionnalité et entretien aisé.\n\nUne cave individuelle complète ce logement, offrant un espace de rangement privatif. Le quartier de Bonnevoie est reconnu pour son caractère multiculturel et son marché populaire. Il se situe à proximité de la gare centrale, facilitant les déplacements tout en restant un secteur accessible en termes de tarifs immobiliers.",
+    "highlights": [
+      {
+        "text": "Appartement 1 chambre de 52 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Séjour lumineux orienté sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine fonctionnelle avec agencement en enfilade",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains avec baignoire et douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Cave privative incluse",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier multiculturel et animé",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Bonne connexion à la gare centrale",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "BonnevoieUrbanLifestyle",
+      "LuminositeSud",
+      "AppartementAvecCave",
+      "CuisineFonctionnelle",
+      "ProximiteGare"
+    ]
+  }
+}

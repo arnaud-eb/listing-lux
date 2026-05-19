@@ -1,0 +1,44 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:24.928Z",
+  "output": {
+    "title": "Attraktives möbliertes Studio in historischem Clausen",
+    "description": "Das sorgfältig renovierte Studio befindet sich in einem historischen Steingebäude im Alzette-Tal, Teil des UNESCO-Weltkulturerbes Clausen. Die Unterkunft verbindet sichtbare Holzbalken und einen Holzfußboden in einem rustikal-modernen Stil und bietet einen kompakten, vollständig möblierten Wohnbereich.\n\nDie funktionale Küchenzeile in modernem Stil ist mit einem Zweiplattenkochfeld, einem Kühlschrank und einer Spüle ausgestattet und fügt sich harmonisch in den Raum ein. Das weiß geflieste Badezimmer mit Duschkabine wurde ebenfalls kürzlich renoviert und präsentiert sich in sauberem, modernem Design.\n\nDie Lage in Clausen, bekannt für seine historische Bausubstanz und die lebendige Ausgehkultur im Alzette-Tal, bietet eine atmosphärische Umgebung. Die gepflegte äußere Erscheinung des Gebäudes in einer schmalen Straße unterstreicht den historischen Charakter des Viertels.",
+    "highlights": [
+      {
+        "text": "Vollständig möbliert",
+        "icon": "sofa"
+      },
+      {
+        "text": "Sichtbare historische Holzbalken",
+        "icon": "home"
+      },
+      {
+        "text": "Kompakt und funktional gestaltet",
+        "icon": "square"
+      },
+      {
+        "text": "Renoviertes Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Historisches Steingebäude",
+        "icon": "building-2"
+      },
+      {
+        "text": "Lage im Alzette-Tal, UNESCO-Weltkulturerbe Clausen",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricLiving",
+      "CompactStudio",
+      "RenovatedBathroom",
+      "ClausenCharm",
+      "AlzetteValley"
+    ]
+  }
+}

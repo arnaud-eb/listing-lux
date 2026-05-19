@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "Matches inputs: '78 m²', 'deux chambres', 'balcon accessible depuis le séjour', 'place de parking privative', 'ascenseur'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, bath, balcony, parking, elevator and photo points: 'Cuisine en L fonctionnelle avec coin repas' and 'murs beiges et le sol stratifié'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'agencement fonctionnel et une luminosité naturelle' is idiomatic, though 'élément apprécié dans cette zone urbaine en développement' is slightly bureaucratic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU FR real-estate vocabulary: 'Surface habitable', 'place de parking privative', 'Ascenseur'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, which is correct since none was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement lumineux de 2 chambres avec balcon et parking à Esch-sur-Alzette' is ~12 words with neighborhood; 5 hashtags but only 'Balcon ParkingPrivatif EspaceOptimisé CuisineEquipee Ascenseur' lacks # symbols and missing accents on 'CuisineEquipee'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; restrained language like 'sobre et contemporaine' and 'aménagements classiques'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; only 'le résident' as a neutral term."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'l’université et le secteur de Belval' (Belval/university not in neighborhood inputs). Other claims (78 m², 2 chambres, balcon, parking, ascenseur, cuisine L) all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and sale in Esch-sur-Alzette."
+    }
+  },
+  "overall_pass": false
+}

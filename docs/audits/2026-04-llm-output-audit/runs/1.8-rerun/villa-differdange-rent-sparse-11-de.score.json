@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"vier Schlafzimmer und zwei Badezimmer\" and \"ca. 200 m²\" match inputs; no contradictions."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/baths/sqm/neighborhood, garden, terrace, cellar, parking (garage), fireplace, but omits that it's a rental (price/rent context)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"Diese freistehende Villa aus den 1970er Jahren präsentiert sich mit einer klassisch-zeitlosen Steinfassade\" reads natively in German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU German real-estate vocabulary like \"Wohnfläche\", \"Doppelgarage\", \"Kellerraum\"."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely, matching v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title \"Freistehende Villa mit 4 Schlafzimmern und großem Garten in Differdingen\" is 10 words with neighborhood + adjective; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; \"besticht durch eine warme, traditionelle Atmosphäre\" is mildly promotional but no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family, religion, age, gender, or origin."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — \"drittgrößte Stadt Luxemburgs\", \"Campus der Miami University am Schloss Differdange\", \"verschiedene Neubauprojekte im Stadtkern\" are not in inputs (no neighborhood data provided per notes)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar; FR adds \"parquet chaleureux\" not asserted by DE/EN — a minor non-contradictory detail divergence."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Strong prose but invents Differdange civic facts not in inputs."
+}

@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:38.369Z",
+  "output": {
+    "title": "Appartement lumineux de 2 chambres avec balcon et parking à Esch-sur-Alzette",
+    "description": "Ce bel appartement de 78 m² se distingue par un agencement fonctionnel et une luminosité naturelle, notamment grâce à son balcon accessible depuis le séjour. Les murs beiges et le sol stratifié participent à une atmosphère sobre et contemporaine.\n\nLa cuisine en L, équipée de meubles blancs, propose un espace suffisant pour installer un petit coin repas, adapté à une utilisation quotidienne. La pièce est claire, bien entretenue, et optimise l'espace disponible.\n\nL'appartement comprend deux chambres offrant une bonne taille ainsi qu’une salle de bains aux aménagements classiques. La présence d'un ascenseur facilite l'accès au logement situé en étage.\n\nCe logement dispose également d'une place de parking privative, élément apprécié dans cette zone urbaine en développement. La situation à Esch-sur-Alzette place le résident dans la deuxième ville du Luxembourg, reconnue pour son dynamisme culturel et l’expansion portée par l’université et le secteur de Belval.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 78 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Deux chambres confortables",
+        "icon": "bed"
+      },
+      {
+        "text": "Accès balcon depuis le séjour",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine en L fonctionnelle avec coin repas",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur dans l’immeuble",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "Balcon",
+      "ParkingPrivatif",
+      "EspaceOptimisé",
+      "CuisineEquipee",
+      "Ascenseur"
+    ]
+  }
+}

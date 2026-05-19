@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:14:14.466Z",
+  "output": {
+    "title": "Villa spacieuse 4 chambres avec jardin mature et garage double",
+    "description": "Située dans un environnement résidentiel établi, cette villa des années 1970 présente une façade en pierre classique et un agencement fonctionnel réparti sur 200 m². La propriété détachée offre un cadre de vie tranquille avec un jardin privé agrémenté de pelouse et d'arbres matures, ainsi qu'une terrasse qui prolonge agréablement les espaces de réception.\n\nLe séjour se distingue par un parquet chaleureux et un habillage en bois d'origine, complété par une cheminée en pierre qui apporte une atmosphère conviviale et un lien direct avec le caractère des maisons de cette époque. De larges ouvertures donnent sur le jardin, favorisant la luminosité naturelle et l'intégration avec l'extérieur.\n\nLa villa comprend quatre chambres et deux salles de bains, offrant un aménagement adapté à des besoins variés. La présence d'une cave ajoute une surface de rangement utile. Un garage double complète les prestations de cette maison, facilitant le stationnement sécurisé et l'accès direct à la propriété.\n\nLe quartier de Differdange, troisième ville du pays, est reconnu pour son patrimoine industriel et accueille le campus de la Miami University, ainsi que plusieurs projets résidentiels contemporains. Cette localisation combine les avantages d'une ville dynamique avec un cadre résidentiel paisible.",
+    "highlights": [
+      {
+        "text": "Villa de 200 m² construite dans les années 1970",
+        "icon": "building-2"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Cheminée en pierre d'origine dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Jardin mature avec pelouse et arbres",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse attenante au jardin",
+        "icon": "sun"
+      },
+      {
+        "text": "Garage double accessible depuis la propriété",
+        "icon": "car"
+      },
+      {
+        "text": "Cave pour stockage supplémentaire",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Villa1970s",
+      "JardinPrivé",
+      "GarageDouble",
+      "CheminéePierre",
+      "DifferdangeRésidentiel"
+    ]
+  }
+}

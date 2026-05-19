@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:43.092Z",
+  "output": {
+    "title": "Penthouse mit historischem Charakter und Talblick im Grund",
+    "description": "Der großzügige Penthouse-Wohnung im historischen Viertel Grund bietet auf 175 m² Wohnfläche eine gelungene Kombination aus klassischen Elementen und moderner Renovierung. Die Räume beeindrucken mit hohen Gewölbedecken, sichtbaren Steinmauern und Eichenparkett, die eine warme Atmosphäre schaffen und gleichzeitig die Nähe zur ehemaligen Festungsanlage widerspiegeln.\n\nDie offene Wohnküche ist mit maßgefertigten Holzschränken, einer Marmorarbeitsplatte und Geräten aus Edelstahl ausgestattet, was einen funktionalen und dennoch stilvollen Raum ergibt. Drei Schlafzimmer mit behaglichem Charme, unter anderem ein Zimmer mit Dachfenster und Blick ins Alzette-Tal, bieten vielfältige Nutzungsmöglichkeiten.\n\nEine private, steinbefestigte Terrasse mit schmiedeeisernem Geländer erlaubt den Blick auf das malerische Tal und unterstreicht die besondere Lage innerhalb des UNESCO-Weltkulturerbe-Umfeldes. Zur Wohnung gehören ein Kellerraum, ein Parkplatz sowie ein Aufzug, der barrierefreien Zugang gewährleistet.\n\nDie Lage im Grund, eingebettet im Alzette-Tal, verbindet historische Kulisse mit der Lebendigkeit eines touristisch frequentierten Stadtteils. Die unmittelbare Nähe zum Fluss und die charmante Umgebung tragen zur Individualität dieses Objekts bei.",
+    "highlights": [
+      {
+        "text": "Blick auf das Alzette-Tal",
+        "icon": "mountain"
+      },
+      {
+        "text": "Sichtbare historische Steinmauern",
+        "icon": "building-2"
+      },
+      {
+        "text": "Private Terrasse mit Talblick",
+        "icon": "sun"
+      },
+      {
+        "text": "Renovierte Wohnung mit hoher Raumhöhe",
+        "icon": "home"
+      },
+      {
+        "text": "Massgefertigte Holzküche mit Marmor",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Drei Schlafzimmer mit Dachfenstern",
+        "icon": "bed"
+      },
+      {
+        "text": "Aufzug und Parkplatz inklusive",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Kellerraum vorhanden",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "AlzetteTalView",
+      "HistoricCharm",
+      "RenovatedPenthouse",
+      "TerraceLiving",
+      "GrundLocation"
+    ]
+  }
+}

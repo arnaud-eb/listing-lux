@@ -1,10 +1,13 @@
-# Quarterly re-seed of the Supabase `localities` table from the checked-in
-# `data/lu-localities.json` snapshot.
+# Re-seed of the Supabase `localities` table from the checked-in
+# `data/lu-localities.json` snapshot. Idempotent.
 #
-# Audit P1.1a (docs/audits/2026-04-llm-output-audit/README.md §5). STATEC publishes
-# commune-level price data quarterly; once the STATEC fetcher lands (separate
-# workstream), it will refresh `data/lu-localities.json` and commit it back. This
-# job picks up whatever the snapshot currently contains and upserts it. Idempotent.
+# Audit P1.1a (docs/audits/2026-04-llm-output-audit/README.md §5).
+#
+# Triggers:
+#   - push to main when data/lu-localities.json changes — the natural signal
+#     (covers STATEC refresh PRs from statec-refresh.yml merging, and any hand-edits)
+#   - quarterly cron — safety net in case a push trigger is ever skipped
+#   - workflow_dispatch — manual runs / dry-runs
 #
 # Required repo secrets:
 #   NEXT_PUBLIC_SUPABASE_URL    — public Supabase project URL
@@ -15,14 +18,16 @@
 # for the natural cache TTL):
 #   LOCALITIES_REVALIDATE_URL     — base URL of the production app
 #   LOCALITIES_REVALIDATE_SECRET  — shared secret matching the route handler
-#
-# Schedule: 4 AM UTC on the 1st of every 3rd month (Jan 1, Apr 1, Jul 1, Oct 1).
-# Quarterly cadence chosen to match STATEC's publication schedule; daily/hourly
-# would be wasted work.
 
 name: Seed localities
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "data/lu-localities.json"
+      - "scripts/seed-localities.ts"
+      - ".github/workflows/seed-localities.yml"
   schedule:
     - cron: "0 4 1 */3 *"
   workflow_dispatch:

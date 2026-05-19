@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'180 m² Wohnfläche', 'drei Schlafzimmern', 'Siemens-Einbaugeräten', 'umlaufenden Terrasse' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, 3 bedrooms, Cloche d'Or, terrace, parking, cellar, elevator, new-build, Siemens kitchen, double-volume living, oak flooring."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Dreifach-Schlafzimmer mit Einbauschränken' is awkward German phrasing; otherwise reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Tiefgaragenstellplatz', 'Eichenparkett', 'Quarzarbeitsplatte' align with LU/DE luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, which is correct since no class was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Exklusives Duplex mit 3 Schlafzimmern und Panoramablick in Cloche d'Or' is 10 words with neighborhood; 5 CamelCase hashtags 'NeubauDuplex PanoramaView ModerneKüche TerrasseMitAussicht ClocheDOrLiving'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Exklusives Duplex' and 'attraktiven Angebot' are mild marketing flourishes but no exclamation marks or 'breathtaking'-class hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or occupant references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '180 m²' (sqm:180), 'drei Schlafzimmern' (bedrooms:3), 'Cloche d'Or' (neighborhood), 'Siemens' (photo), 'Quarzarbeitsplatte' (quartz worktop), 'Eichenparkett' (engineered oak), 'umlaufenden Terrasse' (wraparound), 'Einkaufszentrum' (view over shopping center), 'Park' (view onto new park), 'Tiefgarage'/'Aufzug'/'Keller' (parking/elevator/cellar features) all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 180 m², 3 bedrooms, sale, parking, cellar, elevator, terrace. Minor disagreement: FR says terrace is 'bois composite' while DE 'Holzdeck' and EN 'wood decking' indicate solid wood — a feature-detail contradiction within the wraparound terrace material."
+    }
+  },
+  "overall_pass": true
+}

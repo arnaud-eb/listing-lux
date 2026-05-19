@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Introduces \"un parquet chaleureux\" (oak/wood parquet floor) which is not in photo analyses — photo lists \"wood paneling\" not flooring."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions \"quatre chambres et deux salles de bains\", \"200 m²\", garden, terrace, cellar, garage; rental context absent."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"De larges ouvertures donnent sur le jardin, favorisant la luminosité naturelle\" reads natively in French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary like \"prestations\", \"cave\", \"garage double\", \"séjour\" aligns with athome.lu French corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied and prose omits it, per v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title \"Villa spacieuse 4 chambres avec jardin mature et garage double\" is 10 words but omits neighborhood (Differdange); 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "\"prolonge agréablement les espaces de réception\" is mild; no exclamation marks or hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 1,
+      "evidence": "Unsupported: 4 — \"parquet chaleureux\" (not in inputs; photo says wood paneling), \"troisième ville du pays\", \"campus de la Miami University\", \"plusieurs projets résidentiels contemporains\"."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar; FR adds \"parquet chaleureux\" not asserted by DE/EN — a minor non-contradictory detail divergence."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FR adds a fabricated flooring material on top of the civic-fact hallucinations."
+}

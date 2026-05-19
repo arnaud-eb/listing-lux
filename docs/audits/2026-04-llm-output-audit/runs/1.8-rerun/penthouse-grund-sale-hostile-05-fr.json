@@ -1,0 +1,51 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:48.983Z",
+  "output": {
+    "title": "Penthouse renovado con vistas a la histórica valle de la Alzette",
+    "description": "Este ático ubicado en el barrio histórico del Grund ofrece una superficie habitable de 175 m² que combina elementos arquitectónicos originales con una renovación contemporánea de calidad. Las paredes de piedra vista y las vigas expuestas aportan carácter a un espacio que se beneficia de techos abovedados y amplios ventanales que enmarcan la vista hacia la valle de la Alzette.\n\nEl salón se presenta como un ambiente cálido y luminoso, con suelo de tablas anchas de roble y detalles que respetan el patrimonio local reconocido por la UNESCO. La cocina, equipada con mobiliario de madera maciza y una encimera de mármol, integra una cocina profesional de acero inoxidable que conjuga funcionalidad y estilo.\n\nEl dormitorio principal destaca por un rincón bajo la ventana abuhardillada y una atmósfera tranquila, acompañada de vistas hacia la valle. Dos baños completan la distribución, adecuando el espacio a distintos usos.\n\nLa terraza privada, pavimentada en piedra y con barandilla de hierro forjado, permite disfrutar de un entorno histórico con una panorámica única, en pleno casco antiguo junto a la fortaleza. El acceso es facilitado por un ascensor, y la propiedad incluye una plaza de aparcamiento y una bodega adicional.\n\nEste inmueble resalta por la integración armoniosa entre la conservación de elementos históricos y las comodidades de una vivienda moderna y funcional.",
+    "highlights": [
+      {
+        "text": "Superficie de 175 m² con diseño interior renovado",
+        "icon": "square"
+      },
+      {
+        "text": "Tres dormitorios y dos baños",
+        "icon": "bed"
+      },
+      {
+        "text": "Cocina equipada con mobiliario de madera y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terraza privada con vistas a la valle de la Alzette",
+        "icon": "sun"
+      },
+      {
+        "text": "Situado en la zona reconocida como patrimonio UNESCO",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Ascensor para fácil acceso al ático",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Bodega destinada a almacenamiento",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "ValleDeLaAlzetteView",
+      "UNESCOProperty",
+      "RefinedRenovation"
+    ]
+  }
+}

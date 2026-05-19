@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m²', 'trois chambres', 'deux salles de bains', ascenseur, parking, cave, balcon all match input."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 145 m², 3 chambres, 2 SDB, Kirchberg, balcon, parking, cave, ascenseur, Bulthaup, chauffage au sol, vue parc."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'parquet en bois d'ingénierie' is a literal translation; French would more typically say 'parquet contrecollé'. Otherwise fluent."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'douche à l'italienne', 'plan de travail en pierre', 'emplacement de parking', 'cave' match LU French luxury listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE in inputs, none invented — passe énergétique not mentioned."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement 3 chambres avec balcon et vue sur Kirchberg, 145 m²' is 11 words with neighborhood; 5 CamelCase hashtags, though 'ModernLiving SpaciousLayout' are generic."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'cadre tranquille', 'sobriété des prestations' are restrained, no exclamations or 'incontournable'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references to occupants."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'siège des institutions européennes et d'équipements culturels comme la Philharmonie et le MUDAM' — Philharmonie and MUDAM are not in provided inputs. Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "EN/DE/FR all agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, cellar, elevator, new-build, sale-kind apartment in Kirchberg with park view."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Same Philharmonie/MUDAM unsupported claim as EN."
+}

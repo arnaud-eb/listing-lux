@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:55.609Z",
+  "output": {
+    "title": "Penthouse renovado con vistas a la histórica valle de Alzette, Grund",
+    "description": "Este penthouse de 175 m², ubicado en el pintoresco barrio de Grund, ofrece una integración armoniosa entre elementos históricos y renovaciones contemporáneas. Las paredes de piedra expuesta y el techo abovedado en el salón aportan carácter mientras que las amplias ventanas permiten vistas panorámicas de la valle de Alzette.\n\nLa cocina está equipada con mobiliario de madera maciza y encimeras de mármol, completada con una robusta cocina profesional de acero inoxidable, ideal para la preparación de alimentos en un ambiente cálido y funcional. Las tres habitaciones incluyen detalles como ventanas abuhardilladas y vigas vistas, proporcionando una atmósfera acogedora con vistas al valle circundante.\n\nUna terraza privada pavimentada en piedra con barandilla de hierro forjado ofrece un espacio exterior tranquilo que resalta la cercanía a un entorno declarado Patrimonio de la Humanidad por la UNESCO. El inmueble incluye también un ascensor, plaza de aparcamiento y una bodega independiente para almacenamiento adicional.\n\nEl barrio Grund es conocido por su emplazamiento en el valle de la Alzette, con un entorno histórico y una animada oferta gastronómica. Esta propiedad combina la proximidad a un ambiente culturalmente rico con la comodidad y el confort contemporáneo.",
+    "highlights": [
+      {
+        "text": "Vistas a la valle de Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Paredes de piedra expuesta",
+        "icon": "building-2"
+      },
+      {
+        "text": "Terraza privada con vistas al valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Renovación reciente y cuidada",
+        "icon": "home"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Bodega independiente",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "ValleyView",
+      "UNESCOHeritage",
+      "RenovatedPenthouse",
+      "RiversideLiving"
+    ]
+  }
+}

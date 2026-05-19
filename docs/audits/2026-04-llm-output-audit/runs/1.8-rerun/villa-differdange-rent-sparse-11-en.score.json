@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"approximately 200 m²\", \"4 bedrooms\", \"2 bathrooms\" all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Captures beds/baths/sqm/neighborhood, garage, cellar, garden, terrace, fireplace; rental context not stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"This detached villa, reflecting the architectural style of Luxembourg from the 1970s\" reads as natural English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Phrasing like \"enhancing practicality and storage options\" is more generic-corporate than luxury LU corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied; description omits CPE entirely, matching v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title \"Well-Maintained 4-Bedroom Villa with Private Garden and Parking in Differdange\" is 11 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained; \"warm and inviting atmosphere\" is mild and no exclamation marks or hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or origin references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — \"Luxembourg's third-largest city\", \"Miami University within Differdange Castle\", \"ongoing residential developments\" are not in inputs (no neighborhood metadata)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace, cellar; FR adds \"parquet chaleureux\" not asserted by DE/EN — a minor non-contradictory detail divergence."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Same unsupported civic facts as DE."
+}

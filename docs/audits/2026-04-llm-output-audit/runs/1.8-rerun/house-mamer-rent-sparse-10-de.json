@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:13:52.286Z",
+  "output": {
+    "title": "Reiheneinfamilienhaus mit 3 Schlafzimmern und eigenem Garten in Mamer",
+    "description": "Dieses gepflegte Reiheneinfamilienhaus aus den 1980er Jahren befindet sich in einem ruhigen Wohngebiet von Mamer. Die Fassade ist neutral gehalten, ergänzt durch einen kleinen Vorgarten, der einen zurückhaltenden Eingangsbereich schafft. Auf 130 m² Wohnfläche bietet das Haus drei Schlafzimmer und ein Badezimmer, was in der Größenordnung für die Region üblich ist.\n\nDas Wohnzimmer verfügt über eine beige Teppichbodenfläche und große Terrassentüren, die den Blick in den privaten Garten freigeben. Die Ausstattung zeigt Gebrauchsspuren und wurde seit der Errichtung des Hauses nicht umfassend modernisiert. Ein separater Kellerraum ergänzt die Nutzfläche und dient als Abstellmöglichkeit.\n\nDer hintere Garten ist privat, angelegt mit einem Rasenbereich und umgeben von einem Holzzaun, der Sichtschutz gewährt. Ein kleiner Geräteschuppen ist vorhanden und bietet weiteren Stauraum. Für Kraftfahrzeuge steht ein Parkplatz zur Verfügung.\n\nMamer bietet eine gute infrastrukturelle Anbindung, unter anderem durch die nahegelegenen Autobahnen und Bahnhofsanbindungen. Die Gemeinde ist bekannt für ihre Bildungseinrichtungen wie das Lycée Josy Barthel und die European School Luxembourg II in der Nähe.\n\nDiese Immobilie eignet sich für Käufer, die Wert auf eine ruhige Wohnlage in einem etablierten Viertel mit entsprechendem Raumangebot legen und bereit sind, Renovierungsarbeiten vorzunehmen.",
+    "highlights": [
+      {
+        "text": "130 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Privater Garten mit Rasen und Holzzaun",
+        "icon": "trees"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Parkplatz vorhanden",
+        "icon": "car"
+      },
+      {
+        "text": "Gute Anbindung an Autobahnen und Zugverbindungen",
+        "icon": "train"
+      },
+      {
+        "text": "Baujahr 1980er Jahre",
+        "icon": "building"
+      }
+    ],
+    "hashtags": [
+      "Reiheneinfamilienhaus",
+      "PrivaterGarten",
+      "RuhigeLage",
+      "Renovierungspotenzial",
+      "Mamer"
+    ]
+  }
+}

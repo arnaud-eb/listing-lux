@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.8-rerun",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T04:12:36.078Z",
+  "output": {
+    "title": "Spacious 3-Bedroom Duplex with Wraparound Terrace in Cloche d'Or",
+    "description": "This newly built duplex offers 180 m² of contemporary living space in the Cloche d'Or district, a vibrant neighborhood characterized by modern office buildings, shopping centers, and parks. The residence features a distinctive double-volume living room with panoramic glazing, allowing abundant natural light and offering views onto the adjacent park.\n\nThe open-plan kitchen is equipped with integrated Siemens appliances, quartz countertops, and soft-close cabinetry, seamlessly connecting to the dining and living areas to create an inviting environment for both daily living and entertaining.\n\nThe upper floor accommodates three bedrooms, including a master suite with fitted wardrobes and direct access to a wraparound terrace. The terrace is finished with wood decking and provides views over the shopping center, benefiting from evening sun exposure.\n\nAdditional amenities include a private parking space, elevator access, and a cellar for storage. Engineered oak flooring throughout the living and sleeping areas complements the modern architectural design of the residence.",
+    "highlights": [
+      {
+        "text": "180 m² duplex with double-volume living room",
+        "icon": "home"
+      },
+      {
+        "text": "Open-plan kitchen with Siemens appliances",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Three bedrooms with fitted wardrobes",
+        "icon": "bed"
+      },
+      {
+        "text": "Wraparound terrace with wood decking and city views",
+        "icon": "sun"
+      },
+      {
+        "text": "Elevator access within building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Private parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Located in modern Cloche d'Or district",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "DuplexLiving",
+      "PanoramicViews",
+      "SiemensKitchen",
+      "ClocheDOr",
+      "WraparoundTerrace"
+    ]
+  }
+}

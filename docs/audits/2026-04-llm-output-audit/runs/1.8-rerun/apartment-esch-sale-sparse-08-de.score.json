@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All facts match: '78 m²', '2 Schlafzimmer', '1 Badezimmer', 'Balkon', 'Stellplatz', 'Aufzug'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers all input features and photo details: 'L-Format', 'weißen Schränken', 'Laminatboden', plus beds/baths/sqm/neighborhood."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Has grammar issue: 'ein Laminatboden' should be 'einen Laminatboden' in accusative after 'ergänzt durch'; otherwise reads German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU/DE immo vocabulary: 'Wohnfläche', 'Stellplatz', 'Aufzug im Gebäude'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, consistent with no input class."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title acceptable but only 4 hashtags 'UrbanLiving BalkonWohnung EschAlzette StellplatzInklusive' (below 3-5 minimum is fine but no # prefix); 'StellplatzInklusive' has grammar issue (should be 'StellplatzInklusive' → 'Inklusive' wrong form)."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained tone: 'praktische Wahl', 'sachlich gestaltet', no exclamation marks or hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'Nutzer, die Wert auf zentrale Anbindung' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'die Universität und das Areal Belval' not in neighborhood inputs. All numerics and features supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, and sale in Esch-sur-Alzette."
+    }
+  },
+  "overall_pass": false
+}

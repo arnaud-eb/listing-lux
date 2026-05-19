@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'penthouse de 220 m²', '4 chambres', 'orientée plein sud', 'parking', 'cave', 'ascenseur' all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/sqm/neighborhood/terrace/parking/cellar/elevator/renovated/city-view but omits the 3 bathrooms count."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'dispositif de cave à vin intégré' is slightly awkward — 'cave à vin intégrée' would be more natural — but overall reads as native French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'quartier prisé de Belair', 'suite parentale', 'emplacement de stationnement', 'baies vitrées du sol au plafond' align with LU luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely, matching the v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Penthouse rénové 4 chambres avec terrasse panoramique et parking à Belair' is 11 words with neighborhood and adjective; 4 hashtags in CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks; restrained language like 'répondant aux attentes d'un mode de vie urbain haut de gamme'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics, family status, religion, age, gender, or national origin."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '220 m²' (sqm), '4 chambres' (bedrooms), 'Belair' (neighborhood), 'parquet chêne' (oak parquet), 'cheminée à bois', 'Gaggenau', 'marbre de Carrare', 'plein sud' (south-facing), 'revêtement composite', 'balustrade en verre', '180 degrés', 'cave', 'parking', 'ascenseur'."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 220 m², 4 bedrooms, sale listing, Belair, south-facing terrace, Gaggenau, parking, cellar, elevator. Minor non-contradictory disagreement: FR omits the bathroom count ('quatre chambres') while DE 'vier Schlafzimmer und drei Bäder' and EN 'four bedrooms and three bathrooms' state 3 baths."
+    }
+  },
+  "overall_pass": true
+}

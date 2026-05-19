@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.8-rerun",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'Einfamilienhaus' contradicts the photo-analysis label 'semi-detached house'; otherwise faithful (195 m², 4 Schlafzimmer, 2 Badezimmer)."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, garden, terrace, fireplace, kitchen, cellar, parking; brick facade mentioned."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'eingebettet in eine etablierte Wohngegend Bertranges' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Wohnfläche', 'Stellplatz', 'Kellerraum' match LU German real-estate vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; omitted entirely from prose."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Charmantes Einfamilienhaus mit 4 Schlafzimmern und sonnigem Garten in Bertrange' uses 'Einfamilienhaus' which mislabels the property type; 5 hashtags acceptable."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Charmantes' is mild; no exclamations or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Tramanschluss' and 'Einkaufsmöglichkeiten in der Belle Étoile' are unsupported (no neighborhood data); 'westlich von Luxemburg-Stadt' is general geography."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement on 195 m², 4 beds, 2 baths across DE/FR/EN; however DE labels the property 'Einfamilienhaus' (detached single-family) while FR ('semi-individuelle') and EN ('semi-detached') agree on semi-detached — this is a listing-feature disagreement on property kind, not merely a vocabulary translation."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Mislabels semi-detached as Einfamilienhaus — a property-type misrepresentation."
+}

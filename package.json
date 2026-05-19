@@ -14,7 +14,9 @@
     "audit:generate": "bun run scripts/audit/generate.ts",
     "audit:judge": "bun run scripts/audit/judge.ts",
     "audit:diff": "bun run scripts/audit/diff.ts",
-    "seed:localities": "bun run scripts/seed-localities.ts"
+    "seed:localities": "bun run scripts/seed-localities.ts",
+    "statec:audit": "bun run scripts/statec/audit-slug-match.ts",
+    "statec:fetch": "bun run scripts/statec/fetch-prices.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.71",
