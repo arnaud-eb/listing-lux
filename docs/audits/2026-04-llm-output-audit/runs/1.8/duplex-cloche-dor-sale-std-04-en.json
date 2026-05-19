@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:17.502Z",
+  "output": {
+    "title": "Contemporary 3-Bedroom Duplex with Panoramic City Views and Terrace in Cloche d'Or",
+    "description": "This 180 m² duplex apartment exemplifies modern urban living within the dynamic Cloche d'Or district. The dwelling features a voluminous living room with a double-height ceiling and expansive panoramic glazing, which affords abundant natural light and views overlooking a newly developed park. Engineered oak flooring extends throughout, enhancing the elegant yet understated interior atmosphere. An internal staircase connects the two levels, harmonizing spatial flow between the living and private areas.\n\nThe open-plan kitchen is equipped with fully integrated Siemens appliances, quartz worktops, and soft-close cabinetry, facilitating a sociable environment well suited for both daily routines and entertaining. Its adjacency to the dining and living areas maintains a coherent and versatile layout.\n\nThe upper floor hosts three bedrooms including a main suite with fitted wardrobes and direct access to a wraparound terrace laid with wood decking. This terrace offers unobstructed views across the surrounding cityscape and shopping center, capturing evening sunlight. \n\nAdditional amenities include a private cellar for storage, elevator access within the building, and dedicated parking facilities. The property’s new-build status ensures contemporary construction standards and finishes.\n\nSet within Cloche d'Or, Luxembourg's emerging hub of modern offices, extensive retail, and green space, this apartment offers residence in an area defined by recent development and urban convenience. The neighborhood is recognized for its combination of business infrastructure and living amenities, making it a distinctive urban environment.",
+    "highlights": [
+      {
+        "text": "180 m² of well-appointed living space",
+        "icon": "square"
+      },
+      {
+        "text": "3 bedrooms including upper-floor master with terrace access",
+        "icon": "bed"
+      },
+      {
+        "text": "2 bathrooms with modern fittings",
+        "icon": "bath"
+      },
+      {
+        "text": "Open-plan kitchen with Siemens appliances and quartz worktops",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Double-height living room with panoramic park views",
+        "icon": "sofa"
+      },
+      {
+        "text": "Wraparound upper-level terrace with city and shopping center views",
+        "icon": "sun"
+      },
+      {
+        "text": "Elevator access and private parking included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separate cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "CityView",
+      "DuplexDesign",
+      "IntegratedKitchen",
+      "TerraceLife"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:34:00.764Z",
+  "output": {
+    "title": "Maison de 3 chambres avec jardin privatif et parking à Mamer",
+    "description": "Située dans une rue résidentielle calme de Mamer, cette maison en rangée datant des années 1980 présente une façade neutre et un petit jardin avant. Elle offre environ 130 m² habitables, incluant trois chambres à coucher et une salle de bains. Un espace de stationnement dédié complète ce bien.\n\nLe séjour, aménagé dans un style un peu daté, bénéficie d'une ouverture sur le jardin grâce à des portes-fenêtres qui apportent une luminosité naturelle et une vue dégagée sur l’extérieur. Ce salon offre un volume fonctionnel à adapter selon les goûts et besoins actuels.\n\nLe jardin arrière, privatif et bien entretenu, comprend une pelouse simple, une clôture en bois et un petit abri de stockage. Côté praticité, la maison dispose également d'une cave offrant un espace de rangement supplémentaire.\n\nImplantée à Mamer, la maison profite d'une localisation suburban à l’ouest de la capitale, proche de liaisons autoroutières et ferroviaires performantes, ainsi que de plusieurs établissements scolaires tels que le Lycée Josy Barthel et l'European School Luxembourg II à Bertrange-Mamer.",
+    "highlights": [
+      {
+        "text": "Maison construite dans les années 1980, bien entretenue",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d'environ 130 m² sur deux niveaux",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres et une salle de bains équipée",
+        "icon": "bed"
+      },
+      {
+        "text": "Séjour avec vue et accès direct au jardin",
+        "icon": "sofa"
+      },
+      {
+        "text": "Jardin arrière privatif avec pelouse et abri de rangement",
+        "icon": "trees"
+      },
+      {
+        "text": "Place de parking privée",
+        "icon": "car"
+      },
+      {
+        "text": "Cave pour rangement supplémentaire",
+        "icon": "archive"
+      },
+      {
+        "text": "Situation dans une commune résidentielle bien desservie",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "MaisonMamer",
+      "JardinPrivatif",
+      "ParkingInclus",
+      "RésidentielSuburbain",
+      "Surface130m²"
+    ]
+  }
+}

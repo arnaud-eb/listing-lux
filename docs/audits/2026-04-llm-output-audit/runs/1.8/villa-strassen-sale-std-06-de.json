@@ -1,0 +1,51 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:37.087Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Garage in Strassen",
+    "description": "Diese großzügige Villa mit 280 m² Wohnfläche präsentiert sich im traditionellen luxemburgischen Baustil mit weißer Putzfassade und einem Schieferdach. Das zweigeschossige, freistehende Gebäude wurde umfassend renoviert und befindet sich in ruhiger, gewachsener Wohnumgebung. Der etablierte Garten mit reifen Bäumen sowie die Südwestterrasse schaffen eine einladende Atmosphäre mit ausreichend Freiraum im Grünen.\n\nIm Erdgeschoss führt ein weitläufiges Wohnzimmer mit Holzparkett und hohen Decken auf die Terrasse und in den Garten. Der Kamin ermöglicht eine behagliche Raumatmosphäre. Die Küche in zeitlosem Shaker-Stil verfügt über eine zentrale Insel mit Sitzmöglichkeit, großzügige Arbeitsflächen aus Granit sowie einen Doppelbackofen und lädt zum geselligen Kochen ein.\n\nDie fünf Schlafzimmer sind im oberen Geschoss angeordnet; das Hauptschlafzimmer bietet Gartenblick sowie eingebaute Schränke für eine funktionale Raumaufteilung. Die drei Bäder sind modern gestaltet und ergänzen das Raumangebot auf anspruchsvolle Weise. Abgerundet wird das Objekt durch einen separaten Kellerraum und eine Garage, welche praktische Nutzflächen und Stellmöglichkeiten bieten.\n\nStrassen ist eine westlich der Stadt gelegene Gemeinde, die durch ihre dörfliche Prägung und die Nähe zur Autobahn überzeugt. Die Umgebung verfügt über ein breites Angebot an Bildungseinrichtungen und erreicht eine attraktive Wohnqualität durch die gute Anbindung an das Stadtzentrum von Luxemburg.",
+    "highlights": [
+      {
+        "text": "280 m² Wohnfläche auf zwei Ebenen",
+        "icon": "square"
+      },
+      {
+        "text": "Fünf Schlafzimmer mit Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "Modernisierte Küche mit Granitarbeitsflächen und Doppelbackofen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Wohnzimmer mit Holzparkett, Kamin und Gartenanbindung",
+        "icon": "sofa"
+      },
+      {
+        "text": "Etablierter Garten mit Südwestterrasse und reifen Bäumen",
+        "icon": "trees"
+      },
+      {
+        "text": "Garage für privaten Pkw-Stellplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum für Lagerung",
+        "icon": "archive"
+      },
+      {
+        "text": "Renovierter Zustand in traditioneller Bauweise",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "RenovierteVilla",
+      "GartenMitTerrasse",
+      "StrassenWohnung",
+      "KaminImWohnzimmer"
+    ]
+  }
+}

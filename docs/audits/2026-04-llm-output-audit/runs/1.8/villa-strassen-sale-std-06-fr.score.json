@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'parquet en chêne massif' — input says 'parquet flooring' without specifying oak species; minor extrapolation. Other facts match."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 280 m², 5 chambres, 3 salles de bains, Strassen, jardin sud-ouest, cheminée, îlot, double four, cave, parking, rénovée."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Title phrase 'en pleine subdivision résidentielle' is awkward and not idiomatic French luxury portal style; the rest reads fluently."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'subdivision résidentielle' in the title is unusual in LU/FR luxury copy; 'parking privatif', 'cave séparée' otherwise fit."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Villa rénovée de 280 m² avec jardin mature et terrasse en pleine subdivision résidentielle' is ~14 words but omits the neighborhood name 'Strassen' and uses awkward 'subdivision résidentielle'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; 'cadre extérieur paisible' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; 'conviviale' is generic."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'parquet en chêne massif' (species not in input) and 'institutions scolaires reconnues de Strassen' (no named or 'recognized' schools in inputs). Other concrete claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², 5 bedrooms, 3 bathrooms, renovated, south-west garden, cellar, parking. Minor non-contradictory variation: DE title/highlights specify 'Garage' while EN/FR say 'parking' / 'parking privatif' — a small addition, not a contradiction."
+    }
+  },
+  "overall_pass": false
+}

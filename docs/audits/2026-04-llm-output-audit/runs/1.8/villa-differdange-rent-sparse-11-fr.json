@@ -1,0 +1,47 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:17:03.742Z",
+  "output": {
+    "title": "Villa classique avec jardin mature et double garage à Differdange",
+    "description": "Située dans un quartier résidentiel établi de Differdange, cette villa individuelle de 200 m² offre un cadre de vie confortable sur un terrain privatif. Édifiée dans les années 1970, la maison présente une façade en pierre bien entretenue, attestant de la qualité de sa construction. Son double garage et son parking facilitent le stationnement sécurisant des véhicules.\n\nL'intérieur conserve un charme traditionnel avec ses boiseries d'origine et une cheminée en pierre dans le salon qui apporte une ambiance chaleureuse. Les grandes fenêtres donnent sur le jardin, baignant les pièces de lumière naturelle et offrant un contact direct avec les espaces verts.\n\nLe jardin, d'un style naturel avec une pelouse généreuse et des arbres matures, s'accompagne d'une terrasse offrant un espace extérieur agréablement ombragé. Une cave complète ce bien, assurant des possibilités de rangement supplémentaires.\n\nDifferdange, troisième ville du Luxembourg, est reconnue pour son patrimoine industriel et accueille aujourd'hui des projets résidentiels autour de son centre-ville. Le château de Differdange, transformé en campus universitaire, illustre cette dynamique locale.",
+    "highlights": [
+      {
+        "text": "Villa individuelle avec façade en pierre des années 1970",
+        "icon": "home"
+      },
+      {
+        "text": "Surface habitable de 200 m² avec 4 chambres et 2 salles de bains",
+        "icon": "square"
+      },
+      {
+        "text": "Double garage et parking privatif",
+        "icon": "car"
+      },
+      {
+        "text": "Cheminée en pierre d'origine dans le salon",
+        "icon": "flame"
+      },
+      {
+        "text": "Jardin naturel avec pelouse et arbres matures",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrasse attenante pour repas en extérieur",
+        "icon": "sun"
+      },
+      {
+        "text": "Cave privative pour stockage supplémentaire",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "Villa1970s",
+      "JardinMature",
+      "CheminéePierre",
+      "DoubleGarage"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:28.429Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de Alzette",
+    "description": "Este penthouse de 175 m² ubicado en el histórico barrio de Grund combina elementos tradicionales con una renovación contemporánea que realza su carácter. Las paredes de piedra vista y las vigas originales se integran con suelos de madera de roble y techos abovedados, creando un ambiente cálido y luminoso.\n\nEl salón ofrece vistas panorámicas a la valle de Alzette, mientras que la cocina equipada con mobiliario de madera maciza y encimeras de mármol cuenta con una placa de acero inoxidable profesional. Tres dormitorios aportan confort y funcionalidad, con detalles como ventanas abuhardilladas y vistas hacia el valle.\n\nLa terraza privada, pavimentada en piedra y protegida con barandillas de hierro forjado, permite disfrutar del entorno declarado Patrimonio de la Humanidad por la UNESCO. Además, el inmueble dispone de ascensor, estacionamiento y una bodega separada, completando así las comodidades de la propiedad.\n\nEl barrio de Grund destaca por su atmósfera histórica situada en la valle de Alzette y su riqueza gastronómica, ofreciendo un entorno único para quienes buscan una combinación de patrimonio y vida urbana.",
+    "highlights": [
+      {
+        "text": "175 m² de espacio habitable",
+        "icon": "square"
+      },
+      {
+        "text": "Tres dormitorios con vistas al valle",
+        "icon": "bed"
+      },
+      {
+        "text": "Cocina con mobiliario de madera maciza y encimeras de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terraza privada con vistas a la valle de Alzette",
+        "icon": "sun"
+      },
+      {
+        "text": "Paredes de piedra vista originales",
+        "icon": "building"
+      },
+      {
+        "text": "Ascensor y plaza de aparcamiento incluidos",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Bodega separada",
+        "icon": "archive"
+      },
+      {
+        "text": "Ubicación en el barrio histórico de Grund, zona declarada Patrimonio UNESCO",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "TerrazaPrivada",
+      "VistasAlzette",
+      "EdificioHistorico",
+      "CocinaMaderaMaciza",
+      "BarrioGrund"
+    ]
+  }
+}

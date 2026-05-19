@@ -1,0 +1,47 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:24.805Z",
+  "output": {
+    "title": "Renovierte 2-Zimmer Wohnung mit Balkon und Aufzug in Limpertsberg",
+    "description": "Diese saniert und möblierte 2-Zimmer-Wohnung mit 95 m² Wohnfläche präsentiert sich in einem zeitgemäßen skandinavischen Stil. Der Wohnbereich überzeugt durch helle Raumatmosphäre, hochwertiges Echtholzparkett und eine geschmackvolle Einrichtung mit Designer-Sofa. Die großen Fenster sorgen für reichlich Tageslicht und eine angenehme Wohnqualität.\n\nDie Küche ist funktional gestaltet und umfasst moderne Einbaugeräte wie Induktionskochfeld und Geschirrspüler. Ein kompakter Essbereich bietet zusätzlichen Raum zum Verweilen und Essen. Das Badezimmer ist gepflegt und stilvoll, passend zur Ausstattung im gesamten Apartment.\n\nDas Schlafzimmer ist ruhiger Rückzugsort mit möblierter Einrichtung, inklusive Queensize-Bett, geräumigem Kleiderschrank und lichtdichten Jalousien für ungestörten Schlaf. Der Balkon ist nordseitig ausgerichtet, mit Fliesenboden und bietet einen einfachen Freiluftplatz in der städtischen Umgebung.\n\nDas Gebäude verfügt über einen Aufzug und im Keller steht ein separater Abstellraum zur Verfügung. Das Apartment eignet sich für Bewohner, die eine kernsanierte, bezugsfertige Wohnung mit moderner Ausstattung suchen.\n\nLimpertsberg ist ein urban geprägtes Viertel, bekannt durch die Nähe zur Universität und kulturelle Einrichtungen sowie grössere Grünanlagen wie den Parc Edmond Klein. Die Nachbarschaft bietet ein vielfältiges Angebot an Cafés und lokalen Geschäften in lebendiger Umgebung.",
+    "highlights": [
+      {
+        "text": "95 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer mit Möblierung",
+        "icon": "bed"
+      },
+      {
+        "text": "Modern ausgestattete Küche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balkon mit Nordausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Sanierung und Möblierung 2022",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "ScandinavianLiving",
+      "RenovatedApartment",
+      "CityBalcony",
+      "FunctionalKitchen"
+    ]
+  }
+}

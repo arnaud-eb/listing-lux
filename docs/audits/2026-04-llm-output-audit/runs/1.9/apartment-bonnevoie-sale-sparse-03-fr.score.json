@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'appartement de 52 m²', '1 chambre', 'cave' all match inputs; no contradictions."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², 1 chambre, Bonnevoie, cave, sud-facing living, galley kitchen, bathroom; bathroom count not explicit but implied."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'cadre de vie agréable', 'format couloir', though 'ce appartement' should be 'cet appartement' — minor grammar slip."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'quartier dynamique', 'cave privative', 'orientation sud' are standard athome.lu vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no input class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement lumineux 1 chambre avec cave à Bonnevoie, orientation sud' is 10 words with neighborhood; 5 hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; phrases like 'base solide pour un éventuel rafraîchissement' acknowledge entry-tier honestly."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; neutral throughout."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'marché de Bonnevoie' is a named place not in inputs (neighborhood data not provided here). Other claims (52 m², sud, cave, gare centrale generic) supported or generic."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 52 m², 1 bedroom, cellar, south-facing, sale; DE adds an unsupported 'bezahlbare Miet- und Kaufpreise' framing that FR/EN don't, but no numeric or feature contradiction."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Solid entry-tier French copy with one minor grammar slip and one unsupported named market."
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "States 'Die drei Schlafzimmer sind auf zwei Ebenen verteilt' but inputs don't confirm bedroom distribution across two levels — minor inference."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 180 m², 3 bedrooms, Cloche d'Or, parking, elevator, cellar, terrace, new-build, city view, plus photo features ('Siemens-Geräten', 'Quarzarbeitsplatte', 'umlaufende Terrasse')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'Die offene Küche ist mit hochwertigen Siemens-Geräten ausgestattet' — fluent German real-estate register."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate LU/DACH luxury vocabulary like 'Neubau-Duplex', 'Eichenparkett', 'Quarzarbeitsplatte', 'umlaufende Terrasse'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned, matching the absent input — no invention."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Modernes 3-Schlafzimmer-Duplex mit Terrasse und Stadtblick in Cloche d'Or' is well-shaped; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'besticht durch' and 'besondere Großzügigkeit' are mild but acceptable, no exclamation marks or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or occupant references anywhere in the German text."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'massivem Eichenparkett' (inputs say 'engineered oak flooring', not solid/massif). Other claims (Siemens, quartz, soft-close, wraparound terrace, evening sun, shopping center view, park view) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR agree on 180 m², 3 bedrooms, duplex, sale-context features; EN uniquely specifies '2 bathrooms with modern fittings' while DE/FR omit bathroom count — minor non-contradictory addition."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Strong DE listing, minor 'massiv' inaccuracy vs engineered oak."
+}

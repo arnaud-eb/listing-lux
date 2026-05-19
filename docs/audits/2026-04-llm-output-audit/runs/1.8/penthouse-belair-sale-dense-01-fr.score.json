@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All facts align: '220 m²', 'quatre chambres', 'cheminée à foyer fermé', 'cuisine équipée de marque Gaggenau'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes beds/sqm/neighborhood plus parking, cave, ascenseur, terrasse, renovated, city view, fireplace, Gaggenau, marble island."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French luxury register: 'baigné de lumière naturelle grâce aux baies vitrées du sol au plafond'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses LU-appropriate vocabulary like 'quartier résidentiel haut de gamme', 'emplacement de parking', 'cave en sous-sol'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits any CPE claim."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title: 'Penthouse rénové de 220 m² avec quatre chambres et vaste terrasse à Belair' (~13 words, neighborhood + adjective); 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Largely restrained; mild flourishes like 'raffinement et élégance à chaque pièce' but no exclamations or 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, religion, or national origin."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. '220 m²', 'parquet en chêne', 'marbre de Carrare', 'Gaggenau', 'orientation sud', 'balustrade en verre', 'cave', 'parking', 'ascenseur' all supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN agree on 220 m², 4 bedrooms, sale, Gaggenau, Carrara, parking, cellar, elevator; minor discrepancy: EN implies 'an additional large terrace' while FR/DE describe a single terrace."
+    }
+  },
+  "overall_pass": true
+}

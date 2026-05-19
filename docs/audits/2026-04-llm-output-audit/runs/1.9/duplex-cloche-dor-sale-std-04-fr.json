@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:31:40.919Z",
+  "output": {
+    "title": "Duplex neuf 3 chambres avec terrasse et vue sur la ville à Cloche d'Or",
+    "description": "Ce duplex moderne de 180 m² offre un cadre de vie contemporain dans le quartier dynamique de la Cloche d'Or. Conçu avec un double volume, le séjour baigné de lumière naturelle bénéficie d’un plafond très élevé et de grandes baies vitrées donnant sur un parc récemment aménagé. Le sol en chêne contrecollé souligne le caractère qualitatif des espaces de vie qui incluent une élégante cuisine ouverte équipée d’appareils Siemens et de plans de travail en quartz.\n\nLes trois chambres profitent d’une distribution fonctionnelle, dont la suite parentale à l’étage, qui dispose d’un accès direct à une terrasse privative. Cette dernière, en bois sur une structure enveloppante, offre une exposition plein sud permettant de jouir du soleil en fin de journée tout en contemplant la vue dégagée sur le centre commercial du quartier.\n\nL’immeuble récent est pourvu d’un ascenseur facilitant l’accès, et le bien comprend une place de parking ainsi qu’une cave indépendante. La Cloche d'Or est un secteur en plein développement, mêlant bureaux modernes, commerces et espaces verts, cadre idéal pour une vie urbaine avec un accès aisé aux commodités.\n\nL’ensemble présente un état neuf avec des prestations contemporaines et un agencement privilégiant lumière et confort. Cette adresse combine la praticité d’un quartier en pleine croissance à la qualité d’un logement pensé pour optimiser volumes et vues.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 180 m² avec triple chambre",
+        "icon": "square"
+      },
+      {
+        "text": "Double hauteur sous plafond dans le séjour lumineux",
+        "icon": "home"
+      },
+      {
+        "text": "Cuisine ouverte équipée d’appareils Siemens",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse enveloppante avec exposition sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascenseur desservant le duplex",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privative dans l’immeuble",
+        "icon": "archive"
+      },
+      {
+        "text": "Vue sur parc et centre commercial depuis le logement",
+        "icon": "mountain"
+      }
+    ],
+    "hashtags": [
+      "DuplexContemporain",
+      "TerrassePanoramique",
+      "CuisineEquipeeSiemens",
+      "ClocheDor",
+      "VueSurVille"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:32:51.061Z",
+  "output": {
+    "title": "Helles Einfamilienhaus mit vier Schlafzimmern und Südgarten in Bertrange",
+    "description": "Dieses freistehende Einfamilienhaus wurde in den 1990er Jahren erbaut und präsentiert sich in gepflegtem Zustand. Die Fassade ist klassisch in Backstein gehalten, ergänzt durch einen kleinen Vorgarten und einen privaten Hauseingang mit eigenem Parkplatz. Mit einer Wohnfläche von 195 m² erstreckt sich das Haus über mehrere Ebenen und bietet großzügige Raumaufteilungen.\n\nDas offene Wohnzimmer besticht durch einen funktionalen Kamin und einen direkten Ausgang zur Terrasse und dem südlich ausgerichteten Garten. Die doppelflügeligen Türen verbinden Innen- und Außenbereich und sorgen für helle Wohnräume mit angenehmer Atmosphäre. Die Küche ist mit hochwertigen Holzfronten und einem praktischen Frühstücksbereich ausgestattet, was den Raum familienfreundlich und alltagsgerecht gestaltet.\n\nDer Garten liegt ruhig und zeigt sich mit gepflegtem Rasen sowie einer gepflasterten Terrasse, die von Süden Licht erhält. Hier findet sich ein geschützter Außenbereich, der durch seine Ausrichtung punktet. Insgesamt bietet das Haus vier Schlafzimmer und zwei Bäder, die ausreichend Platz für verschiedene Nutzungskonzepte zulassen.\n\nBertrange, gelegen westlich der Hauptstadt, ist bekannt für seine gute Infrastruktur mit nahegelegenen Einkaufsmöglichkeiten wie dem Einkaufszentrum Belle Étoile sowie Anbindungen an den öffentlichen Nahverkehr. Diese Lage vereint ruhiges Wohnen mit urbaner Erreichbarkeit.",
+    "highlights": [
+      {
+        "text": "Vier geräumige Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Zwei voll ausgestattete Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Privater Parkplatz am Haus",
+        "icon": "car"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten und Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "flame"
+      },
+      {
+        "text": "Separater Kellerraum im Untergeschoss",
+        "icon": "archive"
+      },
+      {
+        "text": "Gut angebundene Lage in Bertrange",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Suedgarten",
+      "KaminWohnzimmer",
+      "Privatparkplatz",
+      "BertrangeWohnen",
+      "Familienorientiert"
+    ]
+  }
+}

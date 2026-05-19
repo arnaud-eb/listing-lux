@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:00.203Z",
+  "output": {
+    "title": "Maison mitoyenne avec 4 chambres, jardin sud et parking privé à Bertrange",
+    "description": "Cette maison mitoyenne des années 1990 présente une façade en briques traditionnelle, située dans un quartier résidentiel établi de Bertrange. Avec une surface habitable de 195 m², elle offre un espace confortable réparti sur plusieurs niveaux, incluant un séjour ouvrant directement sur le jardin orienté plein sud.\n\nLe salon, accompagnant une cheminée fonctionnelle, bénéficie d'un agencement ouvert vers la salle à manger, créant une atmosphère conviviale et lumineuse grâce aux doubles portes vitrées donnant sur le jardin. Le carrelage sol apporte une touche sobre et pratique à cet espace de vie.\n\nLa cuisine, dotée de meubles en bois et d'un plan de travail carrelé, dispose d'un coin repas accueillant, idéal pour les repas informels. Elle allie fonctionnalité et convivialité avec son dispositif traditionnel et bien entretenu.\n\nLe jardin à exposition sud s'étend en arrière de la maison, équipé d'une pelouse et d'une terrasse privative, ce qui permet de profiter pleinement des apports solaires. Un espace de stationnement privé complète ce bien, ainsi qu'une cave séparée offrant un espace de rangement supplémentaire.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "4 chambres spacieuses",
+        "icon": "bed"
+      },
+      {
+        "text": "2 salles de bains équipées",
+        "icon": "bath"
+      },
+      {
+        "text": "Jardin privatif exposé sud avec terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Cheminée opérationnelle dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Parking privé avec allée d'accès",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée pour rangement",
+        "icon": "archive"
+      },
+      {
+        "text": "Agencement ouvert salon-salle à manger",
+        "icon": "sofa"
+      }
+    ],
+    "hashtags": [
+      "MaisonMitoyenne",
+      "JardinSud",
+      "EspaceInterieur",
+      "ParkingPrive",
+      "Bertrange"
+    ]
+  }
+}

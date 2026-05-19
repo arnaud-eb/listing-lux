@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:04.257Z",
+  "output": {
+    "title": "Spacious 4-Bedroom Semi-Detached House with Garden and Parking in Bertrange",
+    "description": "This 195 m² semi-detached house, built in the 1990s, offers well-maintained living spaces with practical layouts suitable for comfortable daily life in Bertrange. The residence features four bedrooms and two bathrooms, presenting ample accommodation complemented by a private driveway for parking convenience.\n\nThe living room enjoys a transitional style with tile flooring and a fireplace, creating a warm atmosphere. Double doors open directly onto the south-facing garden, enhancing indoor-outdoor connectivity. Adjoining the living area, the kitchen is fitted with wood cabinetry, a tile splashback, and includes a freestanding range as well as a breakfast nook, providing a functional space for casual dining.\n\nExternally, the private garden extends with a lawn and patio area that benefit from south-facing exposure, ensuring comfortable daylight throughout the day. Additionally, the property includes a cellar for storage needs.\n\nSituated within Bertrange, the home is positioned in a suburban area west of Luxembourg City known for its shopping amenities such as Belle Étoile, school infrastructure, and tram connections via Cloche d'Or. The neighborhood's established residential character offers tranquility alongside good access to local services and transport links.",
+    "highlights": [
+      {
+        "text": "195 m² semi-detached house from the 1990s",
+        "icon": "building-2"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "South-facing garden with patio and lawn",
+        "icon": "trees"
+      },
+      {
+        "text": "Open living room with fireplace and garden access",
+        "icon": "sofa"
+      },
+      {
+        "text": "Functional kitchen with breakfast nook",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Private driveway parking",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SemiDetachedHome",
+      "SouthFacingGarden",
+      "BertrangeLiving",
+      "FunctionalKitchen",
+      "ParkingIncluded"
+    ]
+  }
+}

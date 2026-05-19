@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'cet appartement neuf développe une surface habitable de 145 m²' with 'Trois chambres et deux salles de bains' matches inputs faithfully."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes 145 m², 3 chambres, 2 sdb, Kirchberg, balcon, cave, parking, ascenseur, neuf, vue parc, Bulthaup, double hauteur, orientation sud."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Mostly fluent but contains anglicism 'reflecte' (should be 'reflète') in 'Ce choix de matériaux et d'appareils reflecte un souci de qualité'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate FR-LU vocab: 'douche à l'italienne avec pomme de pluie', 'plan de travail en pierre', 'emplacement de parking sécurisé'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and none invented; prose omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Appartement neuf 3 chambres avec balcon et vue sur parc à Kirchberg' ~12 words with neighborhood and defining adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole, no exclamation marks; tone stays factual ('apportant un espace extérieur agréable et privatif')."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or any protected category."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'parking sécurisé' adds 'sécurisé' which isn't in inputs (only 'parking: true'). All other claims (145 m², Bulthaup, induction, pierre, parc de Kirchberg, double hauteur, orientation sud) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale, balcony, parking, elevator, cellar; minor non-contradictory additions (DE adds 'MUDAM' and 'Eichenparkett', FR adds 'sécurisé') don't change numerics or features."
+    }
+  },
+  "overall_pass": false
+}

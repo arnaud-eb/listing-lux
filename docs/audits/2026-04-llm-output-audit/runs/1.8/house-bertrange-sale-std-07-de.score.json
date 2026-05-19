@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'195 m² Wohnfläche', 'vier Schlafzimmer sowie zwei Bäder', 'südlich ausgerichteter Garten', 'Kamin', 'Keller' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, baths, Bartringen, parking (Auffahrt), garden, terrace, cellar, fireplace, kitchen."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively though 'die Familienstrukturen unterstützt' is awkward phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU-DE vocabulary: 'Doppelhaushälfte', 'Wohnfläche', 'Südgarten', 'Bartringen'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helle Doppelhaushälfte mit Südgarten und Terrasse in gepflegter Wohnlage' is 9 words but omits 'Bartringen' neighborhood name; 5 hashtags CamelCase-ish."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'Helle' in title and 'garantiert Licht und Privatsphäre, ideal für entspannte Stunden' is slightly promotional."
+    },
+    "fair_housing": {
+      "score": 3,
+      "evidence": "'eignet sich für Bewohner, die Wert auf eine ruhige, etablierte Wohnumgebung legen' is borderline, but 'die Familienstrukturen unterstützt' explicitly references family suitability."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'große Einkaufsmöglichkeiten und eine gute Verkehrsanbindung' and 'umfassenden Schulangebot und der Traminfrastruktur im weiteren Umfeld' — neighborhood data was empty, so shopping/schools/tram claims are unsupported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 195 m², 4 bedrooms, 2 bathrooms, south-facing garden, fireplace, cellar, private driveway, and sale of a semi-detached house in Bertrange."
+    }
+  },
+  "overall_pass": false,
+  "notes": "DE introduces unsupported neighborhood claims and a fair-housing-adjacent 'Familienstrukturen' reference."
+}

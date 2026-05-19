@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'three-bedroom row house, constructed in the 1980s, offers 130 m²' aligns with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds, bath, sqm, garden, parking, cellar, shed; doesn't mention rental status."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads naturally, e.g. 'offers 130 m² of living space within a quiet residential area'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'row house', 'cellar', 'patio doors' which match LU English listings."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied and description omits CPE."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 11 words with neighborhood; 5 hashtags but generic ones like 'SuburbanLiving' and 'WellConnected'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole: 'shows signs of its era and would benefit from updating' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Lycée Josy Barthel' and 'European School Luxembourg II in Bertrange-Mamer' (no neighborhood data provided in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN say 'row house' / 'maison en rangée' while DE upgrades to 'Reiheneckhaus' (end-row house) — a feature-list disagreement on property sub-type; numerics (130 m², 3 beds, 1 bath) agree across all three."
+    }
+  },
+  "overall_pass": false
+}

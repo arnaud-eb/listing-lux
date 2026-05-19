@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "No contradictions of inputs; '200 square meters', 'four bedrooms and two bathrooms' match. Rental status not stated but not contradicted."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm/beds/baths/neighborhood, garage, garden, terrace ('patio'), cellar, fireplace; misses explicit rental framing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'This detached villa, constructed in the 1970s, offers approximately 200 square meters of living space'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'detached villa', 'private grounds', 'cellar' — appropriate LU luxury EN vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced, consistent with no class in inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Only 4 hashtags ('TraditionalVilla PrivateGarden DoubleGarage 1970sArchitecture'); none include neighborhood like Differdange."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained: 'suitable for those seeking established residential accommodation'; no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; neutral language like 'ideal for leisure and entertaining'."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Luxembourg's third-largest city with industrial heritage' not in inputs. Other claims (200 m², 1970s, stone facade, double garage, cellar, patio) all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace/patio, cellar, 1970s. Minor: FR adds 'parking privatif' alongside garage while DE/EN mention only double garage — non-contradictory."
+    }
+  },
+  "overall_pass": false
+}

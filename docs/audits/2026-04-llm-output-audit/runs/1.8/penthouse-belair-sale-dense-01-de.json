@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:14:14.660Z",
+  "output": {
+    "title": "Renoviertes Penthouse mit 4 Schlafzimmern und weitläufiger Terrasse in Belair",
+    "description": "Dieses 220 m² große Penthouse bietet eine hochwertige Renovierung und überzeugt durch eine durchdachte Raumaufteilung mit vier Schlafzimmern und drei Bädern. Die hellen Wohnräume zeichnen sich durch bodentiefe Fenster und ein Eichenparkett aus, ergänzt durch einen Kamin, der eine angenehme Atmosphäre schafft. Der offene Grundriss verbindet Wohnzimmer und Essbereich, sodass Tageslicht den gesamten Wohnbereich durchflutet und den Blick auf die Stadt freigibt.\n\nDie moderne Küche ist mit Gaggenau-Geräten ausgestattet und verfügt über eine zentrale Insel aus Carrara-Marmor, ergänzt durch eine integrierte Weinklimaanlage und matte schwarze Armaturen, die den minimalistischen Stil unterstreichen. Von der Master-Suite aus gelangt man direkt auf eine private Terrasse; ein angrenzender begehbarer Kleiderschrank und ein eigenes Badezimmer erhöhen den Komfort.\n\nZur Immobilie gehören zudem eine großzügige, südlich ausgerichtete Dachterrasse mit 180-Grad-Stadtblick sowie composite Terrassendielen und ein Lounge-Bereich mit Glasgeländer. Ein Fahrstuhl erschließt die Etagen barrierefrei, und ein privater Kellerraum sowie ein Parkplatz sind Bestandteil des Angebots. Die Lage im Belair-Quartier verbindet städtischen Komfort mit einer ruhigen, grünen Umgebung in einem der exklusiven Wohnbezirke Luxemburgs.",
+    "highlights": [
+      {
+        "text": "220 m² großzügiges Penthouse mit vier Schlafzimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Drei moderne Bäder, teils ensuite",
+        "icon": "bath"
+      },
+      {
+        "text": "Großzügige, südlich ausgerichtete Terrasse mit Stadtblick",
+        "icon": "sun"
+      },
+      {
+        "text": "Offener Wohnbereich mit Kamin und Eichenparkett",
+        "icon": "flame"
+      },
+      {
+        "text": "Renovierte Küche mit Gaggenau-Geräten und Marmorinsel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Fahrstuhl im Gebäude vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Privater Kellerraum als separater Stauraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Parkplatz am Objekt verfügbar",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLiving",
+      "CityView",
+      "ModernRenovation",
+      "BelairResidence",
+      "LuxuryComfort"
+    ]
+  }
+}

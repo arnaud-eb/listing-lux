@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All claims align with inputs: '52 m² apartment', 'south-facing window', 'galley layout', 'full-size bathtub with a shower combination', 'separate cellar'."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, neighborhood, cellar, kitchen, bathroom and south-facing room, but does not explicitly state '1 bedroom / 1 bathroom' count in prose (highlights omit it too)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'creating a clean and inviting environment' and 'capitalizes on a straightforward layout'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Functional English ('straightforward layout and practical features') — appropriate for entry-tier but not luxury-corpus aligned."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE mentioned; inputs supply none, omission is correct."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'One-Bedroom Apartment with South-Facing Living Room and Cellar in Bonnevoie' is 12 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained, e.g. 'the kitchen may benefit from updating to suit contemporary tastes' — honest, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'multicultural atmosphere' refers to the neighborhood, not occupants."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'access to the popular local market' (no market in inputs) and 'convenient connections to Luxembourg's central station' (no transit data in inputs). 'diverse dining options' is generic neighborhood color."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR title asserts 'balcon orienté sud' (balcony) which EN and DE do not mention (and which contradicts inputs) — feature-list disagreement; additionally DE asserts 'Anbindung an den Hauptbahnhof' and EN asserts 'central station' while FR says 'gare centrale' (these agree) but the balcony fabrication plus the DE title framing as '1-Zimmer-Wohnung' (studio) vs FR/EN 'one-bedroom' is a second disagreement."
+    }
+  },
+  "overall_pass": false
+}

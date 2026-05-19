@@ -1,0 +1,44 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:33:52.809Z",
+  "output": {
+    "title": "Reiheneckhaus mit 3 Schlafzimmern und privatem Garten in Mamer",
+    "description": "Dieses gepflegte Reiheneckhaus aus den 1980er-Jahren bietet auf rund 130 m² Wohnfläche drei Schlafzimmer und ein Badezimmer. Die zeitgenössische Ausstattung zeigt sich in einem funktionalen Grundriss, wobei die Wohnräume eine Aktualisierung erhalten könnten. Die beige Teppichbodenfläche im Wohnzimmer öffnet sich über eine breite Terrassentür zum privaten Garten und schafft helle, freundliche Lichtverhältnisse.\n\nDer Garten im ruhigen hinteren Bereich des Grundstücks ist schlicht mit Rasenflächen und einem Holzzaun gestaltet und wird durch einen kleinen Geräteschuppen ergänzt, der zusätzlichen Stauraum bietet. Die ruhige Lage innerhalb einer Wohnsiedlung unterstreicht den zurückhaltenden Charme des Hauses und lässt Freiraum für individuelle Gestaltungsmöglichkeiten.\n\nDas Objekt verfügt über einen Kellerraum, der als Lagerfläche dient. Ein Parkplatz vor dem Haus gehört ebenfalls zur Ausstattung und sorgt für bequeme Erreichbarkeit. Die funktionale Anbindung an die umliegenden Verkehrswege in Mamer gewährleistet eine schnelle Verbindung in Richtung Luxemburg-Stadt und das Umland.\n\nDie Lage im Vorort Mamer ergänzt das Angebot durch das Vorhandensein von Bildungseinrichtungen wie der Europäischen Schule Luxemburg II im nahen Bertrange sowie dem Lycée Josy Barthel. Die Umgebung ist durch suburbanen Charakter mit verschiedenen Entwicklungelementen geprägt und verfügt über eine gute Infrastruktur. Die Nähe zu Autobahnen und dem Bahnhof ermöglicht flexible Mobilität.\n\nDieses Reiheneckhaus stellt eine solide Wohngelegenheit in einem etablierten Wohngebiet dar, die durch eine private Außenfläche und zeitgemäße Grundrissgestaltung besticht.",
+    "highlights": [
+      {
+        "text": "Drei Schlafzimmer auf 130 m² Wohnfläche",
+        "icon": "bed"
+      },
+      {
+        "text": "Privater Garten mit Rasen und Holzzaun",
+        "icon": "trees"
+      },
+      {
+        "text": "Keller als separater Abstellraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Eigener Parkplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Ruhige Wohnlage in Mamer",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Gute Anbindung an Autobahn und Zug",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "Reiheneckhaus",
+      "PrivaterGarten",
+      "SuburbanLiving",
+      "MamerWohnen",
+      "DreiSchlafzimmer"
+    ]
+  }
+}

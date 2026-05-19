@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'maison semi-mitoyenne de 195 m²' and '195 m² construite dans les années 1990' match inputs (semi-detached, 195 sqm, 1990s)."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 195 m², 4 chambres, 2 salles de bains, jardin sud, terrasse, cave, parking, cheminée; omits explicit mention of Bertrange neighborhood context beyond name but covers most features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French with idiomatic phrases like 'cadre de vie calme et fonctionnel', though 'accès aisée' has a minor agreement slip."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU-FR vocab: 'maison semi-mitoyenne', 'cave', 'secteur premium résidentiel', 'commune résidentielle'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description omits CPE entirely, consistent with v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison semi-mitoyenne 4 chambres avec jardin et parking à Bertrange' is 10 words with neighborhood; 5 CamelCase hashtags without generic duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; restrained phrasing like 'cadre de vie calme et fonctionnel'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; references are to features and location only."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'centre commercial de la Belle Étoile' (not in neighborhood inputs, which were empty) and 'infrastructures scolaires reconnues...liaisons de transport efficaces' (no school/transit data supplied)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement holds (195 m², 4 beds, 2 baths, 1990s). However DE asserts 'freistehende Einfamilienhaus' (detached) while FR ('semi-mitoyenne') and EN ('semi-detached') agree on semi-detached — a feature/listing-kind disagreement on a structural property attribute, not merely a translation choice."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Bertrange context was empty; model inferred Belle Étoile and schools."
+}

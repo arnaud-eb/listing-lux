@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All facts align: '280 m²', 'Fünf Schlafzimmer', 'Drei Badezimmer', 'Südwest-Ausrichtung' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers beds/baths/sqm/Strassen, garden, parking, cellar, terrace, renovation, fireplace, kitchen island, fitted wardrobes."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natural overall though 'zweifach Ofen' is awkward (should be 'Doppelofen' or 'zwei Backöfen')."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU vocabulary like 'Wohnfläche', 'Satteldach', 'Wohngemeinde' fits market; minor awkward phrasing."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely as no class was supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Garage in Strassen' is 10 words with neighborhood; 5 hashtags CamelCase; 'LuxusWohnfläche' slightly generic."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; restrained phrasing like 'angenehme Atmosphäre'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; says 'Wohnkomfort für die Bewohner' neutrally."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Garage' in title (inputs say 'parking: true' but garden photo/data say 'Parkmöglichkeiten am Haus', not garage); all other claims (280 m², slate roof, parquet, granite, double oven, SW garden) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 280 m², 5 bedrooms, 3 bathrooms, SW garden, parking, cellar, fireplace; minor: DE title says 'Garage' while EN/FR say 'parking'/'stationnement', a non-contradictory but slightly stronger feature claim."
+    }
+  },
+  "overall_pass": false
+}

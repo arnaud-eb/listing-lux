@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'195 m²', '4 chambres', '2 salles de bains', 'jardin orienté plein sud', 'cheminée', 'cave' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 195 m², 4 chambres, 2 salles de bains, Bertrange, parking, jardin sud, terrasse, cave, cheminée, breakfast nook."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively but minor awkwardness: 'Le carrelage sol apporte une touche sobre' and 'son dispositif traditionnel'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU vocabulary: 'maison mitoyenne', 'séjour', 'cave', 'jardin orienté plein sud'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; the description omits CPE entirely, consistent with no class in inputs."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison mitoyenne avec 4 chambres, jardin sud et parking privé à Bertrange' is 11 words with neighborhood; 5 hashtags but 'EspaceInterieur' is generic."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; descriptors like 'conviviale et lumineuse' are restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, age, or origin."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims supported: '195 m²' (input), '4 chambres' (input), 'années 1990' (photo style), 'façade en briques' (photo), 'jardin orienté plein sud' (photo), 'cheminée' (photo), 'cave' (input)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 195 m², 4 bedrooms, 2 bathrooms, south-facing garden, fireplace, cellar, private driveway, and sale of a semi-detached house in Bertrange."
+    }
+  },
+  "overall_pass": true,
+  "notes": "Solid, conservative FR listing."
+}

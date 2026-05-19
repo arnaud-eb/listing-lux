@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'78 m² große Eigentumswohnung' with 'zwei Schlafzimmer', Balkon, Aufzug, Parkplatz all match."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, 2 bedrooms, bathroom, balcony, parking, elevator, kitchen; bathroom count not explicit."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Der Wohnbereich besticht durch helle, beige Wände' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Eigentumswohnung', 'Stellplatz', 'Aufzug' — proper LU/DE real-estate terms."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, matching null inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 12 words OK; hashtags 'ModernerWohnkomfort BalkonWohnung EschAlzette Stadtleben PraktischeRaumaufteilung' lack # symbol."
+    },
+    "tone_discipline": {
+      "score": 3,
+      "evidence": "'besticht durch' is mildly promotional and meta-phrasing 'ohne explizite Angaben zu Entfernungen oder Nachbarschaftseinrichtungen zu machen' is awkward."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'eignet sich für alle, die eine überschaubare und gepflegte Wohnung... suchen' — neutral, no demographic targeting."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0 — no named landmarks, distances, or fabricated specifics; claims stay generic."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, balcony, parking, elevator, and L-shaped kitchen; no numeric or feature disagreements."
+    }
+  },
+  "overall_pass": true
+}

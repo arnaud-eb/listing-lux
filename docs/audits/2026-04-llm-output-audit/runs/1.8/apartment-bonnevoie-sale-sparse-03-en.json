@@ -1,0 +1,40 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:02.102Z",
+  "output": {
+    "title": "One-Bedroom Apartment with South-Facing Living Room and Cellar in Bonnevoie",
+    "description": "This 52 m² apartment offers a bright living space featuring a south-facing window that ensures natural light throughout the day. The living room presents a simple and neutral palette with laminate flooring and white walls, creating a clean and inviting environment.\n\nThe kitchen is arranged in a compact galley layout with traditional white cabinetry and ceramic tile flooring. While functional and practical, the kitchen may benefit from updating to suit contemporary tastes.\n\nThe bathroom includes a full-size bathtub with a shower combination, white tiling, and a single vanity, providing a well-maintained, practical bathing space.\n\nAdditional storage is available with a separate cellar, offering space beyond the living quarters. Located in the dynamic neighborhood of Bonnevoie, the area is known for its multicultural atmosphere, diverse dining options, and access to the popular local market. Bonnevoie is also recognized for its lively environment and convenient connections to Luxembourg's central station.\n\nThis apartment capitalizes on a straightforward layout and practical features within a vibrant urban setting.",
+    "highlights": [
+      {
+        "text": "Bright south-facing living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact, functional galley kitchen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Full-size bathtub with shower combo",
+        "icon": "bath"
+      },
+      {
+        "text": "Separate cellar for extra storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Located in culturally diverse Bonnevoie",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SouthFacing",
+      "CompactLiving",
+      "UrbanDwelling",
+      "CellarIncluded",
+      "BonnevoieCharm"
+    ]
+  }
+}

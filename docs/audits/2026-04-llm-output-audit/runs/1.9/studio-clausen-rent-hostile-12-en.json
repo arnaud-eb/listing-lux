@@ -1,0 +1,47 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:34:59.951Z",
+  "output": {
+    "title": "Renovated furnished studio with historic character in Clausen",
+    "description": "This studio apartment of 38 m² has undergone comprehensive renovation, blending historic elements with modern functionality. The main living space features exposed beams and wood flooring, lending a distinctive character within a compact, well-organized layout. Fully furnished, the room includes a double bed and a kitchenette fitted with a two-burner cooktop, compact refrigerator, and stainless steel sink.\n\nThe bathroom has been recently updated with a modern shower stall, compact vanity unit, and white tiling that complements the overall contemporary finish. The studio resides in a historic stone building situated along a narrow street in Clausen, one of Luxembourg City's UNESCO World Heritage neighborhoods.\n\nClausen lies in the Alzette valley beneath the fortress walls, known for its blend of heritage architecture and vibrant nightlife. This location offers an atmospheric setting while maintaining convenient access to the city center and Kirchberg, providing a balance of cultural depth and urban connectivity.",
+    "highlights": [
+      {
+        "text": "Fully furnished studio",
+        "icon": "home"
+      },
+      {
+        "text": "Exposed historic beams",
+        "icon": "building-2"
+      },
+      {
+        "text": "Compact but efficient kitchenette",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Renovated bathroom with shower stall",
+        "icon": "bath"
+      },
+      {
+        "text": "Historic stone building in Clausen",
+        "icon": "building"
+      },
+      {
+        "text": "Wood flooring throughout",
+        "icon": "square"
+      },
+      {
+        "text": "Located in UNESCO World Heritage area",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "ClausenLiving",
+      "RenovatedStudio",
+      "CompactLiving"
+    ]
+  }
+}

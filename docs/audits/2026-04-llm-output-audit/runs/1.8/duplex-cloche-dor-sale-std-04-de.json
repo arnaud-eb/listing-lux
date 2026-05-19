@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:07.083Z",
+  "output": {
+    "title": "Modernes 3-Schlafzimmer-Duplex mit Terrasse und Stadtblick in Cloche d'Or",
+    "description": "Dieser Neubau-Duplex bietet auf ca. 180 m² Wohnfläche ein großzügiges und lichtdurchflutetes Wohnambiente. Das Wohnzimmer besticht durch eine offen konzipierte, doppelhohe Decke und große Panoramafenster, die einen ungestörten Blick auf das neue Parkareal ermöglichen. Die elegant gestaltete Wohnfläche ist mit massivem Eichenparkett ausgelegt und vermittelt durch den offenen Grundriss eine besondere Großzügigkeit.\n\nDie offene Küche ist mit hochwertigen Siemens-Geräten ausgestattet und verfügt über eine widerstandsfähige Quarzarbeitsplatte sowie Schränke mit Soft-Close-Mechanismus. Die Verbindung zum Ess- und Wohnbereich ermöglicht ein kommunikatives Wohnerlebnis in modernem Stil.\n\nDie drei Schlafzimmer sind auf zwei Ebenen verteilt und bieten unterschiedliche Rückzugsmöglichkeiten. Das Hauptschlafzimmer im Obergeschoss ist mit maßgefertigten Einbauschränken ausgestattet und besitzt direkten Zugang zu einer großzügigen, umlaufenden Terrasse mit Abendsonne sowie einem Ausblick über das angrenzende Einkaufszentrum.\n\nZu den Ausstattungsmerkmalen zählen ein privater Kellerraum, ein Parkplatz sowie ein Aufzug, der bequem alle Ebenen verbindet. Die Wohnung liegt in Cloche d'Or, einem modernen Geschäfts- und Wohnviertel Luxemburgs mit einem etablierten Einkaufszentrum, Parkanlagen und zeitgemäßer Infrastruktur.",
+    "highlights": [
+      {
+        "text": "180 m² Wohnfläche verteilt auf zwei Ebenen",
+        "icon": "square"
+      },
+      {
+        "text": "Doppelhohe, lichtdurchflutete Wohnräume mit Panoramablick",
+        "icon": "home"
+      },
+      {
+        "text": "Moderne Einbauküche mit Siemens-Geräten und Quarzarbeitsplatte",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Drei Schlafzimmer mit Einbauschränken und privater Terrasse",
+        "icon": "bed"
+      },
+      {
+        "text": "Große umlaufende Terrasse mit Abendsonnenlage",
+        "icon": "sun"
+      },
+      {
+        "text": "Privater Kellerraum im Gebäude",
+        "icon": "archive"
+      },
+      {
+        "text": "Parkplatz im Haus sowie Aufzug vorhanden",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "DuplexLuxemburg",
+      "TerrassenWohnung",
+      "NeubauDesign",
+      "PanoramaBlick",
+      "ModerneAusstattung"
+    ]
+  }
+}

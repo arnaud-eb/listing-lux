@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:14:35.437Z",
+  "output": {
+    "title": "Moderne 3-Zimmer-Neubauwohnung mit Balkon und Parkblick in Kirchberg",
+    "description": "Diese großzügige Neubauwohnung mit 145 m² Wohnfläche befindet sich im dynamischen Geschäftsviertel Kirchberg und besticht durch eine zeitgemäße Architektur mit klaren Linien. Der Wohnbereich ist durch seine doppelte Raumhöhe und die südlich ausgerichteten Fensterflächen lichtdurchflutet und offen konzipiert, was eine angenehme Verbindung zum angrenzenden Essbereich schafft. Das hochwertige Eichenparkett ergänzt die moderne Raumwirkung.\n\nDie Küche ist mit maßgefertigten Bulthaup-Einbauten ausgestattet und verfügt über eine induction Kochfläche sowie eine steinerne Arbeitsplatte inklusive Frühstücksbar, die funktionalen Komfort und Design vereinen. Von hier aus gelangt man direkt auf den ruhigen Balkon, welcher mit einer Glasbrüstung und einer Fliesenfläche ausgestattet ist. Er bietet einen ungestörten Blick über den Park von Kirchberg – ein idealer Platz für die Morgensonne.\n\nZwei modern ausgestattete Badezimmer verfügen jeweils über eine begehbare Regen-Dusche, eine Doppelwaschtischanlage sowie eine Fußbodenheizung; die Verwendung von Porzellanfliesen unterstreicht die hochwertige Ausführung. Die Wohnung umfasst drei Schlafzimmer und ist über einen Aufzug barrierefrei erreichbar. Ein separater Kellerraum sowie ein Stellplatz im Haus runden das Angebot ab.\n\nKirchberg gilt als modernes EU-Viertel mit internationaler Ausstrahlung, geprägt von Institutionen wie der Philharmonie und dem MUDAM. Die Infrastruktur zeichnet sich durch internationale Schulen und zeitgemäße Wohnkomplexe aus. Aufgrund des Neubaucharakters und der Ausstattung entspricht diese Immobilie dem gehobenen Standard des Viertels.",
+    "highlights": [
+      {
+        "text": "145 m² Wohnfläche mit drei Schlafzimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Bulthaup-Küche mit Induktionskochfeld und Steinarbeitsplatte",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlich ausgerichteter Wohnraum mit doppelter Raumhöhe",
+        "icon": "sun"
+      },
+      {
+        "text": "Balkon mit Glasbrüstung und Blick auf den Park",
+        "icon": "trees"
+      },
+      {
+        "text": "Zwei moderne Bäder mit begehbaren Regen-Duschen und Fußbodenheizung",
+        "icon": "bath"
+      },
+      {
+        "text": "Aufzug im Gebäude vorhanden",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Stellplatz im Haus",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "NeubauWohnung",
+      "Parkblick",
+      "BulthaupKüche",
+      "KirchbergLiving",
+      "ModerneArchitektur"
+    ]
+  }
+}

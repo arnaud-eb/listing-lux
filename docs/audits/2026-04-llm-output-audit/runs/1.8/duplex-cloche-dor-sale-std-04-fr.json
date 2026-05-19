@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:12.403Z",
+  "output": {
+    "title": "Duplex contemporain 3 chambres avec terrasse panoramique à Cloche d'Or",
+    "description": "Ce duplex de 180 m² offre un cadre de vie moderne dans le quartier dynamique de la Cloche d'Or. Construit récemment, il se caractérise par un volume généreux dans le séjour grâce à sa double hauteur sous plafond et ses grandes baies vitrées qui inondent l’espace de lumière naturelle tout en proposant une vue dégagée sur un parc urbain.\n\nL’espace de vie décloisonné intègre une cuisine équipée Siemens, dotée d’un plan de travail en quartz et de rangements à fermeture douce. Cette configuration favorise une circulation fluide entre les espaces repas, salon et la terrasse extérieure, accessible depuis l’étage supérieur.\n\nLe niveau nuit compte trois chambres, dont une suite parentale avec un accès direct à la terrasse en bois orientée sud-ouest, bénéficiant ainsi d’une luminosité optimale en fin de journée. Les chambres sont équipées de dressings intégrés qui optimisent le rangement.\n\nComplètent ce bien un parking privatif, un ascenseur desservant tous les étages, ainsi qu’une cave individuelle. L’ensemble est implanté dans un immeuble neuf, promouvant un mode de vie urbain confortable à proximité de commerces et d’équipements modernes.",
+    "highlights": [
+      {
+        "text": "180 m² de surface habitable en duplex",
+        "icon": "square"
+      },
+      {
+        "text": "Triple chambre avec placards intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Cuisine équipée Siemens ouverte sur séjour",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Double hauteur sous plafond dans le salon",
+        "icon": "home"
+      },
+      {
+        "text": "Terrasse enveloppante exposée sud-ouest",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking inclus et cave privée",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur desservant tous les étages",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Vue sur parc et centre commercial",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "DuplexContemporain",
+      "TerrassePanoramique",
+      "CuisineIntegrée",
+      "VueUrbaine",
+      "ClocheDor"
+    ]
+  }
+}

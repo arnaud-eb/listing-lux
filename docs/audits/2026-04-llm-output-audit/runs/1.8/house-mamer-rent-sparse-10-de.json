@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:30.235Z",
+  "output": {
+    "title": "Reiheneinfamilienhaus mit Garten und Parkplatz in Mamer",
+    "description": "Dieses Ende der 1980er Jahre errichtete Reiheneinfamilienhaus bietet auf einer Wohnfläche von 130 m² eine klassische Raumaufteilung mit drei Schlafzimmern und einem Badezimmer. Die Außenfassade zeigt sich neutral und in gepflegtem Zustand, was den zurückhaltenden Stil des Hauses unterstreicht.\n\nDas Wohnzimmer überzeugt mit großflächigen Terrassentüren, die direkten Zugang und Blick auf den privaten Garten gewähren. Der beige Teppichboden und die vorhandene Nische für Fernsehgeräte geben dem Raum eine eher traditionelle Ausstrahlung und bieten Potenzial für zeitgemäße Modernisierungen.\n\nDer Garten ist eingezäunt und umfasst eine gepflegte Rasenfläche sowie ein Holzlagerhaus, das als zusätzlicher Abstellraum genutzt wird. Ein Kellerraum im Gebäude stellt weiteren Stauraum zur Verfügung. Zur Immobilie gehört ein Parkplatz, der die Alltagstauglichkeit ergänzt.\n\nMamer, als Wohngemeinde westlich der Hauptstadt gelegen, ist durch eine gute Anbindung an Autobahn und Zugverkehr gekennzeichnet. Die Nachbarschaft ist geprägt von einem ruhigen, vorstädtischen Umfeld mit einem Schulangebot, darunter das Lycée Josy Barthel und die European School Luxembourg II in der nahen Umgebung.",
+    "highlights": [
+      {
+        "text": "3 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Privater Garten mit Holzschuppen",
+        "icon": "trees"
+      },
+      {
+        "text": "Parkplatz vorhanden",
+        "icon": "car"
+      },
+      {
+        "text": "Kellerraum als zusätzlicher Stauraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Helle Terrassentüren im Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "Gut angebunden an Autobahn und Zug",
+        "icon": "train"
+      },
+      {
+        "text": "Reiheneinfamilienhaus aus den 1980er Jahren",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "Reiheneinfamilienhaus",
+      "Privatgarten",
+      "ParkplatzInklusive",
+      "KlassischerStil",
+      "Mamer"
+    ]
+  }
+}

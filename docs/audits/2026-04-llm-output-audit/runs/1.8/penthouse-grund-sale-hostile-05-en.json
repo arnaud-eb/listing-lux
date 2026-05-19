@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:32.120Z",
+  "output": {
+    "title": "Penthouse renovated with panoramic Alzette valley views and private terrace",
+    "description": "This penthouse, situated in Luxembourg's Grund district, offers 175 m² of renovated living space marked by a harmonious blend of historic features and contemporary finishes. The living room showcases exposed stone walls, wide-plank oak flooring, and vaulted ceilings, providing a commanding view over the Alzette valley. Natural light fills the area, enhancing its warm and inviting atmosphere.\n\nThe kitchen is fitted with solid wood cabinetry, complemented by a stainless steel professional range and marble countertops, combining functionality with elegant materials. Three bedrooms offer varied features, including dormer windows and exposed beams, with one bedroom featuring a reading nook overlooking the valley.\n\nA private stone-paved terrace with wrought-iron railings provides an exclusive outdoor space, situated within the UNESCO World Heritage setting of the Grund. Additional amenities include elevator access, cellar storage, and parking, accommodating both lifestyle and practical needs in this historic riverside neighborhood.",
+    "highlights": [
+      {
+        "text": "175 m² renovated penthouse area",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms with distinctive architectural features",
+        "icon": "bed"
+      },
+      {
+        "text": "Two bathrooms",
+        "icon": "bath"
+      },
+      {
+        "text": "Private stone-paved terrace with valley view",
+        "icon": "sun"
+      },
+      {
+        "text": "Exposed historic stone walls and vaulted ceilings",
+        "icon": "home"
+      },
+      {
+        "text": "Elevator access",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar storage available",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "AlzetteValleyView",
+      "RenovatedPenthouse",
+      "UNESCOSetting",
+      "PrivateTerrace"
+    ]
+  }
+}

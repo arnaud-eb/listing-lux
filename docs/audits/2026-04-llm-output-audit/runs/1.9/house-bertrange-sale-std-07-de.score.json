@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "'freistehende Einfamilienhaus' contradicts inputs which specify 'semi-detached house'; also 'erstreckt sich über mehrere Ebenen' is unsupported and 'Helles Einfamilienhaus' misclassifies the property type."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 195 m², vier Schlafzimmer, zwei Bäder, Südgarten, Terrasse, Keller, Parkplatz, Kamin, Belle Étoile."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German: 'besticht durch einen funktionalen Kamin', 'doppelflügeligen Türen verbinden Innen- und Außenbereich'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses 'Einfamilienhaus' incorrectly for a semi-detached property; otherwise vocabulary like 'Südgarten', 'Keller', 'Backstein' fits."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Helles Einfamilienhaus mit vier Schlafzimmern und Südgarten in Bertrange' is 9 words including neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'besticht durch' is mild marketing language; no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "'familienfreundlich' references a family demographic ('familienorientiert' also appears as a hashtag), which leans toward occupant targeting."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'freistehende Einfamilienhaus' (contradicts semi-detached input), 'erstreckt sich über mehrere Ebenen' (no floor count in inputs), 'Einkaufszentrum Belle Étoile' (no neighborhood data supplied)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "Numeric agreement holds (195 m², 4 beds, 2 baths, 1990s). However DE asserts 'freistehende Einfamilienhaus' (detached) while FR ('semi-mitoyenne') and EN ('semi-detached') agree on semi-detached — a feature/listing-kind disagreement on a structural property attribute, not merely a translation choice."
+    }
+  },
+  "overall_pass": false,
+  "notes": "DE version misclassifies property type as detached single-family, which is both a factual error and a hallucination."
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:54.803Z",
+  "output": {
+    "title": "Traditionelle Villa mit großem Garten und Doppelgarage in Differdingen",
+    "description": "Diese freistehende Villa aus den 1970er-Jahren präsentiert sich mit einer charakteristischen Steinfassade und gepflegtem Vorgarten in einem etablierten Wohngebiet von Differdingen. Die Immobilie umfasst circa 200 m² Wohnfläche und bietet insgesamt vier Schlafzimmer sowie zwei Badezimmer, was großzügigen Wohnkomfort ermöglicht.\n\nIm Inneren dominieren warme Holzelemente und ein original erhaltener, aus Stein gefertigter Kamin, der dem Wohnbereich eine behagliche Atmosphäre verleiht. Große Fensterfronten bieten Ausblick auf den gepflegten Garten und sorgen für eine natürliche Belichtung der Räume.\n\nDer private Garten ist mit einem ausgedehnten Rasenbereich, reifen Bäumen und einer Terrasse ausgestattet. Er bietet Raum für Erholung und Aktivitäten im Freien. Die Doppelgarage sowie ein separater Kellerraum erweitern den Nutzwert der Liegenschaft und ermöglichen komfortables Parken und zusätzlichen Stauraum.\n\nDie Villa liegt in Differdingen, der drittgrößten Stadt Luxemburgs im Süden des Landes. Die Umgebung ist geprägt von industriellem Erbe und neuen Wohnprojekten rund um den Stadtkern. Obwohl die Immobilie in einem ruhigen Wohnviertel liegt, befinden sich in Differdingen auch kulturelle Highlights wie das Schloss Differdange, das heute als Campus der Miami University genutzt wird.\n\nDiese Immobilie verbindet traditionelle Architektur mit praktischer Raumaufteilung in einem wachsenden städtischen Umfeld, das historisches Flair und zeitgemäße Entwicklung verbindet.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa mit 200 m² Wohnfläche",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Originaler Stein-Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Großer Garten mit Terrasse und reifen Bäumen",
+        "icon": "trees"
+      },
+      {
+        "text": "Doppelgarage für komfortables Parken",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum vorhanden",
+        "icon": "archive"
+      },
+      {
+        "text": "Wohnlage in Differdingen mit industriellem Erbe",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "VillaDifferdingen",
+      "GartenWohnung",
+      "Steinkamin",
+      "Doppelgarage",
+      "21070sArchitektur"
+    ]
+  }
+}

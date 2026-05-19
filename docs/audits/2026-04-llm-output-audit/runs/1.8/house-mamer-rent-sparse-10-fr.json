@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:36.886Z",
+  "output": {
+    "title": "Maison mitoyenne avec jardin privatif et parking à Mamer",
+    "description": "Située dans un quartier résidentiel calme construit dans les années 1980, cette maison mitoyenne offre environ 130 m² de surface habitable répartie sur plusieurs niveaux. Son architecture sobre et sa façade neutre s’intègrent harmonieusement dans l’environnement paisible.\n\nL’intérieur comprend un séjour avec une vue dégagée sur le jardin arrière, agrémenté de portes-fenêtres favorisant l’éclairage naturel. Le revêtement au sol est un tapis beige, soulignant le caractère à rafraîchir de la maison, qui pourra être modernisée selon les attentes.\n\nLa propriété dispose de trois chambres à coucher et d’une salle de bains fonctionnelle. Le jardin privatif, de taille modeste mais bien entretenu, est clôturé par une palissade en bois, incluant une pelouse et un petit abri de rangement. Un emplacement de parking assortit cette offre, ainsi qu’une cave pour le rangement.\n\nLe quartier de Mamer est une commune résidentielle à l’ouest de Luxembourg-ville, disposant d’une bonne connexion au réseau autoroutier et ferroviaire. La commune accueille plusieurs établissements scolaires reconnus, tels que le Lycée Josy Barthel et l’European School Luxembourg II dans la zone Bertrange-Mamer.",
+    "highlights": [
+      {
+        "text": "Maison mitoyenne d’environ 130 m² habitables",
+        "icon": "home"
+      },
+      {
+        "text": "Trois chambres et une salle de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Jardin privatif avec pelouse et abri de rangement",
+        "icon": "trees"
+      },
+      {
+        "text": "Place de parking attribuée",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée disponible",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier résidentiel calme des années 1980",
+        "icon": "building-2"
+      },
+      {
+        "text": "Bonne desserte autoroute et train dans la commune",
+        "icon": "train"
+      }
+    ],
+    "hashtags": [
+      "MaisonMamer",
+      "JardinPrivatif",
+      "QuartierResidence",
+      "ParkingInclus",
+      "EspaceDeVie"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'195 m²', 'four bedrooms and two bathrooms', 'south-facing garden', 'fireplace', 'cellar' all align with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, Bertrange, parking, garden, terrace/patio, cellar, fireplace, kitchen features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively though slightly stiff: 'presenting ample accommodation complemented by a private driveway for parking convenience'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'semi-detached house', 'south-facing garden', 'cellar' — appropriate for LU EN market."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE invented or referenced, consistent with absent input class."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 12 words with neighborhood and adjective; 5 CamelCase hashtags, 'BertrangeLiving' is reasonable."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'Spacious' in title and 'ensuring comfortable daylight throughout the day' edges toward soft hype."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or origin references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3. 'shopping amenities such as Belle Étoile', 'tram connections via Cloche d'Or', and 'school infrastructure' — neighborhood data was empty per fixture notes, so these named landmarks/transit are fabricated."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 195 m², 4 bedrooms, 2 bathrooms, south-facing garden, fireplace, cellar, private driveway, and sale of a semi-detached house in Bertrange."
+    }
+  },
+  "overall_pass": false,
+  "notes": "EN paragraph about Belle Étoile and Cloche d'Or tram is hallucinated since Bertrange has no neighborhood context."
+}

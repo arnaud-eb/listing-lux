@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Mostly accurate, but 'durchgängig verlegte Eichenparkett' specifies oak parquet whereas inputs say 'engineered wood flooring' (no species)."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "All major facts present: '145 m²', '3 Schlafzimmer und 2 moderne Badezimmer', 'Aufzug und eigener Parkplatz inklusive'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Generally idiomatic German though 'doppelgeschossige Decke' is a slightly awkward calque; otherwise 'Die Küche besticht durch eine hochwertige Ausstattung' reads native."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses Luxembourg-appropriate vocabulary: 'Neubauwohnung', 'Kochinsel', 'Wellnesszone' fit luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced, consistent with null cpe_class in inputs."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title is 9 words including 'Kirchberg' and 'Hochwertige'; 5 CamelCase hashtags 'NeubauWohnung KirchbergParkblick BulthaupKüche ModerneArchitektur Stadtwohnung'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'überzeugenden Adresse' and 'besticht durch' lean slightly promotional."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; references are to location features like 'internationale Schulen' as area amenity, not occupants."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'Eichenparkett' (inputs say only 'engineered wood flooring', not oak) and 'Philharmonie und dem MUDAM' (specific named landmarks not in inputs — notes only mention 'EU institutions and international schools' generically)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 145 m², 3 bedrooms, 2 bathrooms, balcony, parking, cellar, elevator, sale-kind. Minor: DE adds non-contradictory landmarks 'Philharmonie und dem MUDAM' not mentioned in EN/FR, and DE specifies 'Eichenparkett' while EN/FR say generic engineered wood."
+    }
+  },
+  "overall_pass": false
+}

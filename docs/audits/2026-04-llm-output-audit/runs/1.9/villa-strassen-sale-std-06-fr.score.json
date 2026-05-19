@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All facts match: '280 m² habitables', 'Cinq chambres', 'Trois salles de bains', 'exposé sud-ouest'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers beds, baths, sqm, Strassen, garden, terrace, cellar, parking, fireplace, kitchen island, fitted wardrobes."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Idiomatic French: 'développe environ 280 m² habitables', 'suite parentale avec vue sur le jardin'."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "Strong LU FR luxury vocab: 'suite parentale', 'prestations', 'volumes confortables', 'cave aménagée'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa rénovée de 5 chambres avec jardin mature orienté sud-ouest à Strassen' is 12 words; 5 CamelCase hashtags, well-shaped."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained, no hyperbole or exclamations; 'belle retraite naturelle' is mild."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic steering; 'adaptées aux besoins quotidiens' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'sous-sol aménagé en cave' implies a finished basement (inputs only list 'cellar: true' with no aménagement detail); all other concrete claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 280 m², 5 bedrooms, 3 bathrooms, SW garden, parking, cellar, fireplace; minor: DE title says 'Garage' while EN/FR say 'parking'/'stationnement', a non-contradictory but slightly stronger feature claim."
+    }
+  },
+  "overall_pass": false
+}

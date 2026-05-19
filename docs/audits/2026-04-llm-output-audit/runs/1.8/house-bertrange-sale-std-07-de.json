@@ -1,0 +1,44 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:53.772Z",
+  "output": {
+    "title": "Helle Doppelhaushälfte mit Südgarten und Terrasse in gepflegter Wohnlage",
+    "description": "Diese Doppelhaushälfte aus den 1990er Jahren bietet auf rund 195 m² Wohnfläche vier Schlafzimmer sowie zwei Bäder und eignet sich für Bewohner, die Wert auf eine ruhige, etablierte Wohnumgebung legen. Die Fassade aus Backstein führt in einen geräumigen Wohnbereich mit offenem Esszimmer und Kamin, der durch doppelflügelige Türen direkten Zugang zum Garten gewährt. Die Räume sind mit Fliesen versehen, die eine pflegeleichte und zeitlose Oberfläche bilden.\n\nDie Wohnküche präsentiert sich mit traditionellen Holzfronten, einem funktionalen Layout sowie einer Frühstücksecke und ist für den täglichen Gebrauch ausgelegt. Durch die Anordnung ergibt sich eine freundliche Atmosphäre, die Familienstrukturen unterstützt. Der südlich ausgerichtete Garten mit Rasenfläche und Terrasse garantiert Licht und Privatsphäre, ideal für entspannte Stunden im Freien.\n\nZum Haus gehören eine eigene Auffahrt, die Stellplätze ermöglicht, sowie ein separater Kellerraum, der zusätzlichen Stauraum bietet. Die Lage im Bartringer Gemeindegebiet charakterisiert sich durch eine vorstädtische Struktur, in der sich neben Wohnnutzung auch große Einkaufsmöglichkeiten und eine gute Verkehrsanbindung finden lassen. Die Nachbarschaft profitiert von einem umfassenden Schulangebot und der Traminfrastruktur im weiteren Umfeld.\n\nInsgesamt verbindet das Objekt eine solide Bausubstanz und durchdachte Raumaufteilung mit einer bevorzugten Ausrichtung der Außenbereiche. Die Kombination aus guter Erreichbarkeit und der ruhigen Umgebung reflektiert die Qualität des Wohnumfeldes im Bartringer Bereich.",
+    "highlights": [
+      {
+        "text": "Wohnfläche von ca. 195 m² mit 4 Schlafzimmern",
+        "icon": "square"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "sofa"
+      },
+      {
+        "text": "Separater Kellerraum für Abstellzwecke",
+        "icon": "archive"
+      },
+      {
+        "text": "Private Auffahrt mit Stellplatzmöglichkeit",
+        "icon": "car"
+      },
+      {
+        "text": "Traditionelle Holzküche mit Frühstücksecke",
+        "icon": "cooking-pot"
+      }
+    ],
+    "hashtags": [
+      "Suedgarten",
+      "Doppelhaushälfte",
+      "Kaminwohnzimmer",
+      "Terrasse",
+      "Bartringen"
+    ]
+  }
+}

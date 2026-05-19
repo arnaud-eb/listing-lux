@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'three-bedroom apartment offers 145 m²' matches inputs (3 beds, 145 sqm); features like balcony, parking, elevator, cellar all align."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions '145 m²', 'Three bedrooms and two bathrooms', Kirchberg, plus balcony, parking, elevator, cellar, new-build, city/park view, and photo-derived Bulthaup kitchen and double-height ceiling."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively though slightly formal: 'establishing an open layout ideal for both everyday living and entertaining.'"
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses corpus-appropriate phrasing like 'Bulthaup cabinetry', 'walk-in rain shower', 'Luxembourg's modern business district'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and none invented; description omits CPE entirely as per v1.5 default."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Spacious 3-Bedroom Apartment with Balcony and Park Views in Kirchberg' is 11 words including neighborhood; 5 CamelCase hashtags with no generic duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but uses 'Spacious' in title and 'spa-like ambiance'; no exclamation marks or 'breathtaking/must-see'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or occupant type — 'enhancing convenience for residents' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Philharmonie' is a named landmark not present in supplied inputs (only generic 'EU institutions/international schools' implied by notes). 'Kirchberg park' is supported by photo analysis; Bulthaup, induction, stone worktop, 145 m² all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale, balcony, parking, elevator, cellar; minor non-contradictory additions (DE adds 'MUDAM' and 'Eichenparkett', FR adds 'sécurisé') don't change numerics or features."
+    }
+  },
+  "overall_pass": false
+}

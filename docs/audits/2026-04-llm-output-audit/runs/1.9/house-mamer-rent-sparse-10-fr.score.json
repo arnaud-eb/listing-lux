@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "States 'maison en rangée' and '130 m²' matching inputs, but adds 'sur deux niveaux' in highlights which is not supported."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 3 chambres, 1 salle de bains, 130 m², Mamer, jardin, parking, cave; omits explicit mention this is a rental."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Mostly natural French though 'localisation suburban' is an anglicism instead of 'suburbaine'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU vocabulary like 'maison en rangée', 'cave', 'portes-fenêtres'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison de 3 chambres avec jardin privatif et parking à Mamer' is 11 words with neighborhood; 5 hashtags but 'Surface130m²' is awkward."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; even mentions 'style un peu daté' honestly."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to demographics, family status, or protected categories."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Lycée Josy Barthel', 'European School Luxembourg II à Bertrange-Mamer', 'sur deux niveaux'; neighborhood data not provided so these named institutions are fabricated."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN say 'row house' / 'maison en rangée' while DE upgrades to 'Reiheneckhaus' (end-row house) — a feature-list disagreement on property sub-type; numerics (130 m², 3 beds, 1 bath) agree across all three."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Sparse-input fixture, Mamer not in registry — model invented school names."
+}

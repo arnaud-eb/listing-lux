@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Property data lists property_type as 'house' generically; the listing calls it 'maison mitoyenne' which aligns with photo analysis 'row house'. No contradiction with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 130 m², 3 chambres, 1 salle de bains, Mamer, jardin, parking, cave; omits explicit rental framing but covers most active features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'Son architecture sobre et sa façade neutre s'intègrent harmonieusement dans l'environnement paisible.'"
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU/FR vocabulary: 'maison mitoyenne', 'jardin privatif', 'place de parking', 'cave'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely, which is the correct default."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Maison mitoyenne avec jardin privatif et parking à Mamer' is 9 words and well-shaped; hashtags include 'EspaceDeVie' which is generic and 'QuartierResidence' is awkward."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'son architecture sobre' and 's'intègrent harmonieusement' are mild but no exclamation marks or 'incontournable'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or protected categories."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Lycée Josy Barthel', 'European School Luxembourg II dans la zone Bertrange-Mamer', and 'bonne connexion au réseau autoroutier et ferroviaire' are not in inputs (notes explicitly say Mamer not in registry)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 130 m², 3 bedrooms, 1 bathroom, garden, parking, cellar, shed, and 1980s row house — no numeric or feature disagreement."
+    }
+  },
+  "overall_pass": false
+}

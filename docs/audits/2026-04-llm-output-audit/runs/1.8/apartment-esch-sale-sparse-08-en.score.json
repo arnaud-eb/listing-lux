@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This 78 m² apartment' with 'two bedrooms and one bathroom', balcony, parking, elevator all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 78 m², 2 bed/1 bath, balcony from living room, L-shaped kitchen with dining area, parking, elevator, neighborhood."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'The living room is modestly appointed with beige walls and laminate flooring' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard terms 'parking space', 'elevator access', 'L-shaped configuration' appropriate."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 9 words OK; hashtags 'BalconyLiving CompactComfort EschSurAlzette UrbanResidence ParkingIncluded' lack # symbol."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained: 'modestly appointed', 'balanced living space' — no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'designed for efficient and comfortable living' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'includes a university and the Belval district' is not in inputs (no neighborhood data supplied)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, balcony, parking, elevator, and L-shaped kitchen; no numeric or feature disagreements."
+    }
+  },
+  "overall_pass": false
+}

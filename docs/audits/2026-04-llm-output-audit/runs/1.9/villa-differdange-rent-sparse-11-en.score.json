@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Adds unsupported claim 'Luxembourg's third-largest city' and 'Differdange castle campus of Miami University'; also omits the rental nature."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions '200 square meters', '4 bedrooms and two bathrooms', garden, garage, cellar, terrace, fireplace; no rental signal."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads naturally: 'Set on private grounds, the property benefits from a well-maintained garden with mature trees'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'detached villa', 'private grounds', 'Alzette valley' — fits LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class fabricated or referenced, appropriate given absent input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Well-Maintained 4-Bedroom Villa with Garden and Double Garage in Differdange' is 11 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Calm phrasing like 'enhancing the room's inviting atmosphere'; no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; only neutral descriptors of the area."
+    },
+    "hallucination": {
+      "score": 1,
+      "evidence": "Unsupported: 4 — 'Luxembourg's third-largest city', 'Differdange castle campus of Miami University', 'new residential developments', 'Alzette valley region'."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/FR/EN agree on 200 m², 4 bedrooms, 2 bathrooms, garage, garden, cellar, terrace, fireplace; DE adds 'Schloss und Campus Miami University' and FR/EN add 'third-largest city' — minor non-contradictory embellishments that don't disagree on numbers or features."
+    }
+  },
+  "overall_pass": false
+}

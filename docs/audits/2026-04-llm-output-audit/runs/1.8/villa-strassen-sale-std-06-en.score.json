@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'five bedrooms and three bathrooms', '280 m²', 'detached villa', 'south-west exposure' all match inputs accurately."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Includes beds/baths/sqm/neighborhood and most active features: parquet, fireplace, kitchen island, double oven, mature garden, cellar, parking, renovated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively; minor stiffness in 'thoughtfully arranged over two storeys, combining traditional Luxembourg architectural elements'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'detached villa', 'south-west exposure', 'mature garden' align with LU luxury English portal style."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, consistent with absent input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovated 5-Bedroom Villa with Mature Garden and Parking in Strassen' is 11 words, includes neighborhood + adjective; 5 hashtags, CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No 'breathtaking' or exclamation marks; 'substantial residence' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'social gatherings' is generic, not demographic."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'established schools' in Strassen is a named-category claim not in inputs. All other concrete claims (280 m², 5 bed, 3 bath, slate roof, granite, double oven, south-west exposure, stone-paved patio) are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², 5 bedrooms, 3 bathrooms, renovated, south-west garden, cellar, parking. Minor non-contradictory variation: DE title/highlights specify 'Garage' while EN/FR say 'parking' / 'parking privatif' — a small addition, not a contradiction."
+    }
+  },
+  "overall_pass": false
+}

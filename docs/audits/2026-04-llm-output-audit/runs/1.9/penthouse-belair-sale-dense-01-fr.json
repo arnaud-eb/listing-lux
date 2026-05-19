@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:30:26.882Z",
+  "output": {
+    "title": "Penthouse rénové de 220 m² avec terrasse et vue panoramique sur la ville",
+    "description": "Ce penthouse de 220 m² situé dans le quartier résidentiel de Belair allie élégance contemporaine et confort moderne. L'espace de vie principal, baigné de lumière naturelle grâce à de grandes baies vitrées du sol au plafond, offre une atmosphère aérée et raffinée. Le parquet chêne et la cheminée à bois encadrent un salon en open space qui s'ouvre sur une vue panoramique sur la ville, complétée par un éclairage intelligent intégré.\n\nLa cuisine, récemment rénovée, révèle des équipements haut de gamme signés Gaggenau, un îlot central en marbre de Carrare idéal pour recevoir, ainsi qu'un réfrigérateur à vin intégré et des finitions en noir mat qui soulignent son design épuré. Quatre chambres offrent des volumes généreux, dont une suite parentale avec dressing, salle de bains attenante et un accès direct à une terrasse privée.\n\nL'espace extérieur principal se caractérise par une vaste terrasse orientée au sud, équipée de terrasses composites et d'un salon extérieur, offrant une vue dégagée à 180 degrés sur la capitale. Des prestations complémentaires telles qu'un ascenseur, un parking et une cave viennent compléter ce bien rénové alliant fonctionnalité et prestations soignées.\n\nLe penthouse se situe dans le quartier de Belair, reconnu pour son environnement résidentiel paisible et verdoyant à proximité immédiate du centre-ville, équilibrant ainsi vie urbaine et cadre naturel.",
+    "highlights": [
+      {
+        "text": "220 m² d'espace habitable avec quatre chambres",
+        "icon": "square"
+      },
+      {
+        "text": "Cuisine équipée d'appareils Gaggenau et îlot en marbre de Carrare",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse spacieuse offrant une vue panoramique à 180° sur la ville",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée à bois dans un salon lumineux avec parquet chêne",
+        "icon": "flame"
+      },
+      {
+        "text": "Suite parentale avec dressing, salle de bains privée et terrasse",
+        "icon": "bed"
+      },
+      {
+        "text": "Ascenseur desservant l'étage",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking privée",
+        "icon": "car"
+      },
+      {
+        "text": "Rangement séparé en cave incluse",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "RenovatedPenthouse",
+      "CityView",
+      "ModernLiving",
+      "BelairResidence",
+      "SpaciousTerrace"
+    ]
+  }
+}

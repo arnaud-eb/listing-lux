@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:34:39.578Z",
+  "output": {
+    "title": "Well-Maintained 4-Bedroom Villa with Garden and Double Garage in Differdange",
+    "description": "This detached villa, built in the 1970s, offers approximately 200 square meters of living space featuring four bedrooms and two bathrooms. The stone facade complements the architectural style typical of established residential areas in Luxembourg from that period. Set on private grounds, the property benefits from a well-maintained garden with mature trees and a spacious lawn, creating a tranquil outdoor environment.\n\nInside, the living area is characterized by warm wooden paneling and includes an original stone fireplace that overlooks the garden, enhancing the room's inviting atmosphere. The villa also includes a terrace that extends the living space outdoors, suitable for relaxation and entertaining.\n\nAdditional practical features include a double garage providing secure parking and a separate cellar offering extra storage space. The villa is situated in Differdange, Luxembourg's third-largest city known for its industrial heritage and proximity to the Differdange castle campus of Miami University. The area features new residential developments and offers access to local amenities and infrastructure, making it a notable location within the Alzette valley region.",
+    "highlights": [
+      {
+        "text": "Detached villa built in the 1970s with stone facade",
+        "icon": "home"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Original stone fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Mature private garden with lawn and patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Terrace extending living space outdoors",
+        "icon": "sun"
+      },
+      {
+        "text": "Double garage providing parking",
+        "icon": "car"
+      },
+      {
+        "text": "Separate cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Located in Differdange near Differdange castle campus",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "1970sArchitecture",
+      "GardenVilla",
+      "DoubleGarage",
+      "DifferdangeLiving",
+      "StoneFacade"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:14:57.606Z",
+  "output": {
+    "title": "Appartement 1 chambre lumineux avec balcon orienté sud à Bonnevoie",
+    "description": "Situé dans le quartier dynamique de Bonnevoie, cet appartement d’une surface de 52 m² offre un espace de vie confortable et optimal. Le séjour, orienté au sud, bénéficie d’un apport lumineux naturel apprécié, avec un revêtement en parquet stratifié et des murs blancs qui contribuent à une atmosphère claire et épurée.\n\nLa cuisine, fonctionnelle et en configuration en couloir, intègre un mobilier traditionnel blanc et un sol en carreaux de céramique. Elle permet une bonne organisation des espaces malgré ses dimensions modestes. La salle de bains comprend une baignoire-douche combinée, un lavabo simple vasque, et un carrelage blanc, offrant un ensemble pratique et bien entretenu.\n\nL’appartement est complété par une chambre à coucher pouvant accueillir un lit double. Un avantage complémentaire réside dans la cave privative associée, permettant un espace de rangement supplémentaire. La situation dans Bonnevoie positionne ce logement au cœur d’un environnement aux multiples facettes culturelles, avec un accès facilité vers la gare centrale et une offre commerciale variée dans le quartier.\n\nCe bien propose ainsi un compromis intéressant entre la fonctionnalité d’un appartement bien aménagé et une localisation dans un secteur urbain vivant, adapté à différentes modalités de vie citadine.",
+    "highlights": [
+      {
+        "text": "Appartement de 52 m² avec 1 chambre et 1 salle de bains",
+        "icon": "square"
+      },
+      {
+        "text": "Séjour lumineux orienté sud avec revêtement stratifié",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine fonctionnelle en galley avec mobilier blanc",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains équipée d’une baignoire-douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Cave privative incluse pour rangement complémentaire",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier Bonnevoie à caractère multiculturel et dynamique",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "BonnevoieLiving",
+      "SouthFacing",
+      "FunctionalLayout",
+      "UrbanLifestyle",
+      "PrivateCellar"
+    ]
+  }
+}

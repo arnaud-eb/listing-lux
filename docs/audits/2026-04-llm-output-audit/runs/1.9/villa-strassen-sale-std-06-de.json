@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:32:24.028Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Garage in Strassen",
+    "description": "Diese klassische zwei-geschossige Villa präsentiert sich mit einer weißen Putzfassade und einem schiefergedeckten Satteldach in einem ruhigen Wohngebiet von Strassen. Das 280 m² große Wohnhaus wurde umfassend renoviert und zeichnet sich durch hochwertige Materialien wie Parkettböden und eine sorgfältige Innenausstattung aus.\n\nIm Wohnbereich bieten hohe Decken und ein Holz-Kamin eine angenehme Atmosphäre. Große Terrassentüren verbinden das Wohnzimmer mit dem Garten und ermöglichen einen offenen Wohncharakter mit direktem Zugang zur Außenanlage. Die Küche ist modern und funktional gestaltet, ausgestattet mit einer zentralen Insel, Granitarbeitsflächen und hochwertigen Einbaugeräten inklusive zweifach Ofen.\n\nDer private Garten zeigt sich mit einer Südwest-Ausrichtung, einem Rasenbereich sowie etablierten, zum Teil großen Bäumen, die Sichtschutz und ruhige natürliche Akzente setzen. Eine steinbepflasterte Terrasse lädt zur Nutzung im Freien ein. Zur Immobilie gehört zudem ein separater Kellerraum sowie Parkmöglichkeiten am Haus.\n\nDie Villa bietet fünf Schlafzimmer, wovon das Hauptschlafzimmer mit Einbauschränken und Blick auf den Garten ausgestattet ist. Drei Badezimmer erhöhen den Wohnkomfort für die Bewohner. Die Lage in Strassen verbindet eine ruhige Wohnumgebung mit guter Anbindung an das Stadtzentrum von Luxemburg und die Autobahn.\n\nStrassen selbst ist als Wohngemeinde bekannt für seine schulische Infrastruktur und seinen dörflichen Charakter, der dennoch eine zeitgemäße Qualität in der Nähe der Stadt bietet.",
+    "highlights": [
+      {
+        "text": "280 m² Wohnfläche in ruhiger Lage",
+        "icon": "home"
+      },
+      {
+        "text": "Fünf Schlafzimmer mit Einbauschränken",
+        "icon": "bed"
+      },
+      {
+        "text": "Drei Badezimmer modern ausgestattet",
+        "icon": "bath"
+      },
+      {
+        "text": "Südwestlich ausgerichteter Garten mit Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Renovierte Wohnräume mit Parkett und Kamin",
+        "icon": "flame"
+      },
+      {
+        "text": "Große Küche mit zentraler Insel und Granitarbeitsplatte",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Parkplatz am Grundstück",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "RenovierteVilla",
+      "GartenMitTerrasse",
+      "LuxusWohnfläche",
+      "Kaminzimmer",
+      "StrassenLeben"
+    ]
+  }
+}

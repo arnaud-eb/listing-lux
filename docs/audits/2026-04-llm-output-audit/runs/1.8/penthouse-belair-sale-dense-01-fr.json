@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:14:19.898Z",
+  "output": {
+    "title": "Penthouse rénové de 220 m² avec quatre chambres et vaste terrasse à Belair",
+    "description": "Situé dans le quartier résidentiel haut de gamme de Belair, cet appartement de type penthouse offre une surface habitable généreuse de 220 m², répartie sur un agencement moderne et lumineux. La rénovation récente a privilégié des matériaux nobles tels que le parquet en chêne naturel et le marbre de Carrare, apportant raffinement et élégance à chaque pièce.\n\nLe séjour, baigné de lumière naturelle grâce aux baies vitrées du sol au plafond, bénéficie d'une vue panoramique sur la ville. Sa cheminée à foyer fermé crée une atmosphère chaleureuse tout en s'intégrant harmonieusement au style contemporain. L'espace ouvert communique avec la cuisine équipée de marque Gaggenau et d'un îlot central fonctionnel en marbre, idéal pour la convivialité et le rangement, ainsi qu'un cellier attenant.\n\nQuatre chambres bien proportionnées composent l’unité, dont une suite principale dotée d’un dressing, d’une salle de bain attenante et d’un accès privé à la terrasse. Celle-ci déploie une large surface extérieure avec une orientation sud et une vue dégagée sur Luxembourg, aménagée avec un salon d’extérieur sur terrasse en composite et protégée par une balustrade en verre.\n\nL’appartement est également pourvu d’un ascenseur desservant directement l’étage, d’un emplacement de parking ainsi que d’une cave en sous-sol, complétant ainsi les commodités nécessaires pour un confort optimal en milieu urbain.\n\nBelair se caractérise par son environnement verdoyant et qualitatif, entre villas cossues et rues calmes, conférant à cette adresse une atmosphère sereine à proximité de la capitale.",
+    "highlights": [
+      {
+        "text": "220 m² habitables avec quatre chambres",
+        "icon": "square"
+      },
+      {
+        "text": "Vue panoramique 180° sur la ville",
+        "icon": "mountain"
+      },
+      {
+        "text": "Cuisine équipée Gaggenau avec îlot en marbre",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse sud avec balustrade en verre et salon d’extérieur",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée à foyer fermé dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Ascenseur desservant directement l’appartement",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Cave privative en sous-sol",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "PenthouseContemporain",
+      "CuisineGaggenau",
+      "TerrasseVueVille",
+      "ParquetChene",
+      "BelairLuxembourg"
+    ]
+  }
+}

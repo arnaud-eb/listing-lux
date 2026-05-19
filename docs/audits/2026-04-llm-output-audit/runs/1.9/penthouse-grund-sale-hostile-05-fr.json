@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:32:09.885Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de la Alzette",
+    "description": "Este penthouse de 175 m² se sitúa en el histórico barrio del Grund, reconocido por su entorno declarado Patrimonio de la Humanidad por la UNESCO. El inmueble combina elementos arquitectónicos originales, como muros de piedra vista y techos abovedados, con una renovación contemporánea que aporta confort y funcionalidad.\n\nLa sala de estar ofrece una atmósfera cálida, acentuada por el suelo de roble de lamas anchas y una excelente iluminación natural que destaca la vista panorámica de la valle de la Alzette. La cocina adyacente dispone de mobiliario de madera maciza, encimera de mármol y un equipamiento de acero inoxidable profesional que garantiza un espacio práctico y estilizado.\n\nEl penthouse cuenta con tres dormitorios, dos baños, y un espacio de lectura acogedor junto a la ventana tipo buhardilla. La terraza privada, pavimentada en piedra y protegida por una barandilla de hierro forjado, permite disfrutar de un panorama único sobre el valle y refuerza la conexión con el carácter histórico del entorno.\n\nEl edificio dispone de ascensor y una plaza de aparcamiento. Además, se incluye una bodega separada que aporta espacio adicional para almacenamiento. La situación en Grund combina la tranquilidad de un barrio con rica historia y un acceso fácil al centro urbano de Luxemburgo.",
+    "highlights": [
+      {
+        "text": "Vista panorámica a la valle de la Alzette",
+        "icon": "mountain"
+      },
+      {
+        "text": "Muros de piedra vista restaurados",
+        "icon": "building-2"
+      },
+      {
+        "text": "Terraza privada con pavimento de piedra",
+        "icon": "trees"
+      },
+      {
+        "text": "Cocina equipada con mobiliario de madera maciza y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Bodega privada separada",
+        "icon": "archive"
+      },
+      {
+        "text": "Rehabilitación armoniosa que combina elementos históricos y modernos",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "PatrimonioHistorico",
+      "ValleAlzette",
+      "TerrazaPrivada",
+      "InterioresRenovados",
+      "CocinaProfesional"
+    ]
+  }
+}

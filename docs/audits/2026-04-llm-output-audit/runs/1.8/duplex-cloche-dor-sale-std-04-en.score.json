@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All claims match inputs: '180 m² duplex', 'double-height ceiling', 'Siemens appliances', '3 bedrooms', '2 bathrooms'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "All key fields present plus 2 bathrooms explicit: '2 bathrooms with modern fittings'; photo-derived points covered."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads naturally with sophisticated register: 'harmonizing spatial flow between the living and private areas'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Vocabulary aligns with LU luxury English: 'wraparound terrace laid with wood decking', 'engineered oak flooring'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or referenced, matching null input."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Contemporary 3-Bedroom Duplex with Panoramic City Views and Terrace in Cloche d'Or' is 12 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained: 'exemplifies modern urban living' is mildly promotional but no banned hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No occupant demographics referenced."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0 — all concrete claims (180 m², Siemens, quartz, oak, wraparound terrace, shopping center, park, evening sun, elevator, parking, cellar) supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR agree on 180 m², 3 bedrooms, duplex, sale-context features; EN uniquely specifies '2 bathrooms with modern fittings' while DE/FR omit bathroom count — minor non-contradictory addition."
+    }
+  },
+  "overall_pass": true,
+  "notes": "Solid EN execution."
+}

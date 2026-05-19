@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:46.339Z",
+  "output": {
+    "title": "Renovated 5-Bedroom Villa with Mature Garden and Parking in Strassen",
+    "description": "This detached villa of approximately 280 m² living space presents a well-maintained residential home in the Strassen municipality. The property offers five bedrooms and three bathrooms, thoughtfully arranged over two storeys, combining traditional Luxembourg architectural elements with contemporary renovations. The white plastered facade and pitched slate roof integrate into a quiet neighborhood setting.\n\nInside, the living room features parquet flooring, high ceilings, and a wood-burning fireplace, creating a warm atmosphere. Patio doors provide direct access to the garden, enhancing indoor-outdoor flow. The adjoining kitchen is fitted with shaker cabinetry and granite worktops, including a central island with seating and a double oven, supporting both daily living and social gatherings.\n\nThe mature garden extends with a naturalistic style, encompassing a lawn, stone-paved patio, and established trees that ensure privacy. The garden benefits from a south-west exposure, allowing ample natural light in the afternoon and evening. The villa also includes a cellar and private parking facilities.\n\nSituated in Strassen, this property lies within a suburban residential area known for its village character and good access to motorways. The neighborhood hosts established schools and combines proximity to urban amenities with a tranquil environment.\n\nThe villa’s renovated condition, generous size, and thoughtful features present a substantial residence in a sought-after location.",
+    "highlights": [
+      {
+        "text": "280 m² renovated detached villa",
+        "icon": "home"
+      },
+      {
+        "text": "Five bedrooms with garden views",
+        "icon": "bed"
+      },
+      {
+        "text": "Three bathrooms",
+        "icon": "bath"
+      },
+      {
+        "text": "Living room with wood-burning fireplace and garden access",
+        "icon": "flame"
+      },
+      {
+        "text": "Kitchen with central island and double oven",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Established mature garden with south-west exposure",
+        "icon": "trees"
+      },
+      {
+        "text": "Stone-paved patio area",
+        "icon": "sun"
+      },
+      {
+        "text": "Private parking and cellar",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "DetachedVilla",
+      "RenovatedHome",
+      "MatureGarden",
+      "SouthWestExposure",
+      "SpaciousLiving"
+    ]
+  }
+}

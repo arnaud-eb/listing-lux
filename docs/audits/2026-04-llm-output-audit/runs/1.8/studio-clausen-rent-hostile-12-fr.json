@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:17:18.574Z",
+  "output": {
+    "title": "Studio meublé rénové avec caractère historique à Clausen",
+    "description": "Ce studio soigneusement rénové s'inscrit dans un bâtiment construit en pierre, typique du quartier de Clausen, situé dans la vallée de l'Alzette. L'espace principal dévoile un charme rustique modernisé, avec des poutres apparentes et un parquet en bois, offrant une atmosphère chaleureuse et authentique.\n\nLe coin kitchenette, fonctionnel et moderne, comprend une plaque de cuisson deux feux, un petit réfrigérateur et un évier en inox, parfaitement intégré dans l'espace de vie compact. La salle de bains, récemment réaménagée, propose une cabine de douche et un meuble vasque sobre, habillés de carreaux blancs qui participent à la clarté de cet intérieur.\n\nCe logement est totalement meublé, prêt à vivre, et bénéficie du cadre distinctif de Clausen, reconnu pour son patrimoine classé UNESCO et son ambiance pleine de caractère. Ce secteur, en fond de vallée, est réputé pour conjuguer histoire et animation urbaine, sans pour autant perdre de sa quiétude.",
+    "highlights": [
+      {
+        "text": "Surface de 38 m² optimisée",
+        "icon": "square"
+      },
+      {
+        "text": "Studio entièrement meublé",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes authentiques",
+        "icon": "building"
+      },
+      {
+        "text": "Cuisine compacte et fonctionnelle",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains rénovée",
+        "icon": "bath"
+      },
+      {
+        "text": "Bâtiment en pierre historique",
+        "icon": "building-2"
+      },
+      {
+        "text": "Situé dans la vallée de l'Alzette",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "StudioRénové",
+      "CharmeHistorique",
+      "CuisineCompacte",
+      "CaveauClausen",
+      "PatrimoineUNESCO"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:16:09.078Z",
+  "output": {
+    "title": "Helle 2-Zimmer-Wohnung mit Balkon und Stellplatz in Esch an der Alzette",
+    "description": "Diese 78 m² große Eigentumswohnung befindet sich in Esch an der Alzette, der zweitgrößten Stadt Luxemburgs, die durch ihre kulturelle Vielfalt und ein belebtes Stadtleben geprägt ist. Die Wohnung erstreckt sich über ein durchdachtes Raumkonzept und verfügt über zwei Schlafzimmer sowie ein zeitgemäß ausgestattetes Badezimmer.\n\nDer Wohnbereich besticht durch helle, beige Wände und einen gepflegten Laminatboden. Von hier aus gelangt man auf den Balkon, der als zusätzlicher Außenraum dient und einen Blick ins Freie bietet. Die angrenzende Küche ist in L-Form angeordnet und mit weißen Schränken versehen. Ein kleiner Essbereich innerhalb der Küche ermöglicht eine praktische Nutzung der Räume.\n\nEin Aufzug erleichtert den Zugang zur Wohnung, und ein privater Parkplatz ist Teil des Angebots. Die Lage in Esch an der Alzette bietet Zugang zu einem wachsenden urbanen Umfeld mit vielfältiger Kulturszene und Bildungseinrichtungen. Die Infrastruktur ist auf eine wachsende Bevölkerung ausgelegt, ohne explizite Angaben zu Entfernungen oder Nachbarschaftseinrichtungen zu machen.\n\nDas Objekt eignet sich für alle, die eine überschaubare und gepflegte Wohnung in einer dynamischen Stadt suchen, ohne auf praktische Annehmlichkeiten wie Balkon und Stellplatz verzichten zu wollen. Die Ausrichtung der Wohnung sowie die Materialien sind neutral und zeitgemäß gewählt, um vielfältigen Einrichtungsstilen Raum zu geben.",
+    "highlights": [
+      {
+        "text": "Wohnfläche von 78 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Zwei Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Badezimmer mit moderner Ausstattung",
+        "icon": "bath"
+      },
+      {
+        "text": "Balkon als Außenfläche",
+        "icon": "sun"
+      },
+      {
+        "text": "Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Küche mit L-Form und Essbereich",
+        "icon": "cooking-pot"
+      }
+    ],
+    "hashtags": [
+      "ModernerWohnkomfort",
+      "BalkonWohnung",
+      "EschAlzette",
+      "Stadtleben",
+      "PraktischeRaumaufteilung"
+    ]
+  }
+}

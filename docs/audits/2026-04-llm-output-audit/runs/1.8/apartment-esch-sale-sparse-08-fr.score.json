@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'cet appartement de 78 m²' with '2 chambres', balcon, parking, ascenseur all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 78 m², 2 chambres, balcon, parking, ascenseur, cuisine en L; bathroom mentioned only generically and 1 bathroom count not stated."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'Le séjour bénéficie d'une belle luminosité grâce à sa porte-fenêtre' reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU vocabulary: 'séjour', 'place de parking', 'ascenseur', 'stratifié'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely, matching null inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement 2 chambres lumineux avec balcon et parking à Esch-sur-Alzette' is fine, but hashtags 'Balcon ParkingPrivé Ascenseur CuisineEquipee EschSurAlzette' lack # and CamelCase on 'Balcon'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'belle luminosité' and 'développement dynamique' mildly promotional but no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'offrant des espaces privés pour le repos' is neutral."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'proximité de l'université' and 'site industriel et culturel de Belval' are not in inputs (neighborhood data not provided)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, balcony, parking, elevator, and L-shaped kitchen; no numeric or feature disagreements."
+    }
+  },
+  "overall_pass": false
+}

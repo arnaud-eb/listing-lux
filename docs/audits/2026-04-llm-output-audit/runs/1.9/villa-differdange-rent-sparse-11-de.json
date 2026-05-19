@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:34:16.567Z",
+  "output": {
+    "title": "Vollunterkellerte 4-Zimmer-Villa mit Garten und Doppelgarage in Differdingen",
+    "description": "Diese freistehende Villa aus den 1970er Jahren präsentiert sich in einem gepflegten Zustand und bietet auf ca. 200 m² Wohnfläche ein Raumangebot, das durch klassische Architektur und zeittypische Materialien geprägt ist. Die Natursteinfassade und der Vorgarten mit Rasenfläche unterstreichen die solide Bauweise und die ruhige Wohnlage.\n\nIm Erdgeschoss empfängt ein wohnliches Wohnzimmer mit Holzvertäfelung und einem original erhaltenen, gemauerten Kamin, der behagliche Stunden gewährleistet. Große Fensterflächen ermöglichen den Ausblick in den ruhig angelegten, naturbelassenen Garten mit reifem Baumbestand und einer Patio-Terrasse.\n\nDie Immobilie verfügt über insgesamt vier Schlafzimmer und zwei Badezimmer, was den Bedürfnissen verschiedener Nutzungskonzepte entgegenkommt. Die Planung umfasst eine Doppelgarage und eine abgeschlossene Einfahrt, die komfortables Parken gewährleistet.\n\nEin separater Kellerbereich bietet zusätzliche Nutzfläche für Vorräte und Haustechnik. Die Ausrichtung und Gestaltung des Gartens schaffen Privatsphäre und bieten Raum für erholsame Zeiten im Freien. Die Lage in Differdingen verbindet den Charakter einer etablierten Stadt mit ihrem industriellen Erbe und Nähe zum Stadtzentrum sowie landschaftlichen Bereichen in der Alzette-Region.",
+    "highlights": [
+      {
+        "text": "Freistehende Villa aus den 1970er Jahren",
+        "icon": "home"
+      },
+      {
+        "text": "Ca. 200 m² Wohnfläche mit 4 Schlafzimmern",
+        "icon": "bed"
+      },
+      {
+        "text": "Originaler gemauerter Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Doppelgarage und private Einfahrt",
+        "icon": "car"
+      },
+      {
+        "text": "Naturbelassener, ruhiger Garten mit Patio-Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Vollunterkellerung als separater Abstellraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Steinfassade und Holzvertäfelung im Innenbereich",
+        "icon": "building"
+      },
+      {
+        "text": "Lage in Differdingen nahe Schloss und Campus Miami University",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Villa1970s",
+      "KlassischeArchitektur",
+      "Steinkamin",
+      "PrivaterGarten",
+      "Doppelgarage"
+    ]
+  }
+}

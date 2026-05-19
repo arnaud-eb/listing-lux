@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "No contradictions: '200 m²', '4 chambres et 2 salles de bains' match inputs; rental status not stated."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers all major features: 'double garage', 'cheminée en pierre', 'jardin', 'terrasse', 'cave'; rental framing absent."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'L'intérieur conserve un charme traditionnel avec ses boiseries d'origine'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU FR luxury vocabulary: 'villa individuelle', 'surface habitable', 'cave privative'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description silent on energy class, matching inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Only 4 hashtags ('Villa1970s JardinMature CheminéePierre DoubleGarage'); none reference Differdange neighborhood."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained: 'cadre de vie confortable'; minor flourish 'agréablement ombragé' but no banned terms."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; neutral phrasing 'espace extérieur agréablement ombragé'."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'troisième ville du Luxembourg' and 'château de Differdange, transformé en campus universitaire' not in inputs. 'agréablement ombragé' (terrace shading) also not in inputs but minor."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace/patio, cellar, 1970s. Minor: FR adds 'parking privatif' alongside garage while DE/EN mention only double garage — non-contradictory."
+    }
+  },
+  "overall_pass": false
+}

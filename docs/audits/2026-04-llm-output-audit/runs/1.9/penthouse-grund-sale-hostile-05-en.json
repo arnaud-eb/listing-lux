@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:32:17.374Z",
+  "output": {
+    "title": "Spacious 3-Bedroom Penthouse with Terrace and Alzette Valley Views",
+    "description": "This meticulously renovated penthouse apartment occupies a prominent position in the Grund district, an area celebrated for its historic ambiance and riverside charm in the Alzette valley. Spanning 175 m², the residence offers generous living spaces that combine contemporary comfort with characteristic historic elements.\n\nThe living room features vaulted ceilings, wide-plank oak flooring, and an exposed stone wall that reflects the building's heritage, complemented by extensive natural light and views over the Alzette valley. The kitchen is appointed with solid wood cabinetry, marble countertops, and a stainless steel professional range, catering to both form and function.\n\nThree bedrooms provide intimate atmospheres enhanced by dormer windows and exposed beams, with at least one offering scenic valley views. Two bathrooms accommodate the household needs with modern fixtures. A private stone-paved terrace with wrought-iron railing overlooks the UNESCO World Heritage surroundings, presenting a distinctive outdoor space.\n\nAdditional amenities include elevator access, dedicated parking, and a cellar for storage. The property's setting in Grund situates it within a picturesque and culturally rich context, offering both residential tranquility and proximity to a vibrant dining scene.",
+    "highlights": [
+      {
+        "text": "175 m² renovated penthouse",
+        "icon": "square"
+      },
+      {
+        "text": "3 bedrooms with valley views",
+        "icon": "bed"
+      },
+      {
+        "text": "2 modern bathrooms",
+        "icon": "bath"
+      },
+      {
+        "text": "Private stone-paved terrace with Alzette valley vistas",
+        "icon": "sun"
+      },
+      {
+        "text": "Exposed historic stone walls and vaulted ceilings",
+        "icon": "home"
+      },
+      {
+        "text": "Solid wood kitchen cabinetry with marble worktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Elevator access and private parking",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricPenthouse",
+      "AlzetteViews",
+      "UNESCOSetting",
+      "RenovatedResidence",
+      "TerraceLiving"
+    ]
+  }
+}

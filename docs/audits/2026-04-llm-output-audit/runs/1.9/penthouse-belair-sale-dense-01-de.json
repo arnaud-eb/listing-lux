@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:30:18.445Z",
+  "output": {
+    "title": "Großzügiges 4-Zimmer Penthouse mit Panorama-Terrasse und Stadtblick in Belair",
+    "description": "Dieses exklusive Penthouse im renommierten Wohnviertel Belair bietet auf 220 m² Wohnfläche ein modernes, hochwertig renoviertes Ambiente mit klarer Linienführung und eleganter Ausstattung. Das helle, offen gestaltete Wohnzimmer besticht durch bodentiefe Fenster, welche einen direkten Blick auf die Stadt ermöglichen, sowie durch Eichenparkett und einen Kamin, die eine angenehme Atmosphäre schaffen. Die integrierte Smart-Home-Beleuchtung unterstützt ein komfortables Wohngefühl.\n\nDie moderne Küche ist mit professionellen Gaggenau-Geräten und einer großzügigen Kücheninsel aus Carrara-Marmor ausgestattet. Der minimalistische Stil wird durch matte schwarze Armaturen und einen integrierten Weinkühlschrank ergänzt, was die Küche zum Mittelpunkt für anspruchsvolles Kochen und geselliges Beisammensein macht.\n\nDas Hauptschlafzimmer verfügt über einen begehbaren Kleiderschrank, ein angrenzendes Badezimmer en suite sowie einen privaten Zugang zur südlich ausgerichteten, weitläufigen Terrasse. Die Terrasse bietet mit ihrer Glasbrüstung und dem modernen Verbundholzbelag einen unverbauten 180-Grad-Blick über Luxemburg Stadt und lädt zum Verweilen im Freien ein.\n\nZusätzliche Ausstattungsmerkmale umfassen zwei weitere Schlafzimmer, zwei weitere Badezimmer, einen Kellerraum sowie einen Pkw-Stellplatz. Der Aufzug erschließt bequem alle Ebenen und unterstreicht den gehobenen Wohnstandard. Das Penthouse liegt in einer ruhigen, grünen Wohngegend nahe dem Stadtzentrum, die eine ausgewogene Verbindung zwischen urbanem Komfort und naturnaher Umgebung bietet.",
+    "highlights": [
+      {
+        "text": "220 m² Wohnfläche im Penthouse-Stil",
+        "icon": "home"
+      },
+      {
+        "text": "Vier Schlafzimmer inklusive Hauptsuite mit Terrasse",
+        "icon": "bed"
+      },
+      {
+        "text": "Drei moderne Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Terrasse mit 180° Stadtblick und südlicher Ausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Moderne Küche mit Gaggenau Geräten und Carrara-Marmorinsel",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Eichenparkett und Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Pkw-Stellplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzugzugang und separater Kellerraum",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLiving",
+      "CityView",
+      "BelairResidence",
+      "ModernRenovation",
+      "Luxembourg"
+    ]
+  }
+}

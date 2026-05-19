@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Listing describes it as a sale-style listing without mentioning rent; price/rental status absent but no direct contradiction of inputs like '200 m² Wohnfläche'."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/baths/sqm/neighborhood and most features ('Vier Schlafzimmer und zwei Badezimmer', 'Doppelgarage', 'Kellerraum', 'Terrasse', 'Garten') but does not signal it is a rental."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German: 'Diese freistehende Villa aus den 1970er-Jahren präsentiert sich mit einer charakteristischen Steinfassade'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate LU vocabulary like 'freistehende Villa', 'Wohnfläche', 'Liegenschaft'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no class in inputs."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Hashtag '21070sArchitektur' is malformed (typo) and only 5 hashtags without # prefix; title length acceptable."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, though 'kulturelle Highlights' is mild marketing; no exclamation marks or 'atemberaubend'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics or family status; neutral phrasing like 'Raum für Erholung und Aktivitäten im Freien'."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'drittgrößten Stadt Luxemburgs' (not in inputs) and 'Schloss Differdange, das heute als Campus der Miami University genutzt wird' (not in inputs, though factually true). '1970er-Jahren' and stone fireplace are supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 200 m², 4 bedrooms, 2 bathrooms, double garage, garden, terrace/patio, cellar, 1970s. Minor: FR adds 'parking privatif' alongside garage while DE/EN mention only double garage — non-contradictory."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Hashtag typo and unsupported civic claims about Differdange are the main issues."
+}

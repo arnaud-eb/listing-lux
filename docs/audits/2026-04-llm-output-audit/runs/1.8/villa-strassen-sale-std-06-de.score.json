@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Title says 'mit Garten und Garage' and highlights mention 'Garage für privaten Pkw-Stellplatz' — input has parking:true but does not specify a garage, minor extrapolation."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 280 m², 5 bedrooms, 3 bathrooms, Strassen, renovated, parquet, fireplace, kitchen island, double oven, south-west garden, cellar, parking."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Generally idiomatic German, though 'erreicht eine attraktive Wohnqualität durch die gute Anbindung' is slightly awkward phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Wohnfläche', 'freistehend', 'gewachsener Wohnumgebung' — appropriate LU/DE luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with no class supplied in inputs."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Garage in Strassen' is 9 words and good; hashtags include only 4 tags and 'StrassenWohnung' is incorrect (it's a villa, not an apartment)."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrasing like 'einladende Atmosphäre' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to family status or demographics; 'geselligen Kochen' is generic, not demographic."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'Garage' (input has parking:true but no garage type specified). All other claims (280 m², slate roof, white plaster, fireplace, granite, double oven, south-west, mature trees) supported. 'breites Angebot an Bildungseinrichtungen' is generic and borderline but not a named claim."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR all agree on 280 m², 5 bedrooms, 3 bathrooms, renovated, south-west garden, cellar, parking. Minor non-contradictory variation: DE title/highlights specify 'Garage' while EN/FR say 'parking' / 'parking privatif' — a small addition, not a contradiction."
+    }
+  },
+  "overall_pass": false
+}

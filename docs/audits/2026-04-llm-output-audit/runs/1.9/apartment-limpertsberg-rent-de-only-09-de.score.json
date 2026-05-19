@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Says '2 Schlafzimmer mit Möblierung' but inputs show 2 bedrooms total — the apartment has 2 rooms (likely 1 bedroom + living) per '2-Zimmer-Wohnung'; also claims '1. Obergeschoss' which is not in inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 95 m², balcony, elevator, cellar, furnished, renovated, kitchen features, bedroom; omits explicit bathroom count and rental framing/price."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads natively: 'Vom Wohnbereich gelangt man auf den Balkon, der nach Norden ausgerichtet ist' is idiomatic German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate LU/DE real-estate vocabulary like 'Mehrparteienhaus', 'Einbauküche', 'bezugsfertig'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description correctly omits any energy-class claim."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Renovierte 2-Zimmer-Wohnung mit Balkon und Einbauküche im Limpertsberg' is 10 words and includes neighborhood; but hashtags 'Renoviert FurnishReady Limpertsberg ModerneKüche' mix English/German awkwardly and 'FurnishReady' is malformed."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrasing like 'überschaubaren Größe' is restrained and honest."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or protected categories — neutral phrasing like 'stilvoller Wohnraum in einem lebendigen, innerstädtischen Umfeld'."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Théâtre du Centaure', 'Park Edmond Klein' (not Edmond Klein — likely fabricated; the actual park is Parc Edmond Klein/Tony Neuman area, uncertain), and 'Eichenparkett' (inputs say 'engineered wood flooring', not oak); also '1. Obergeschoss' is unsupported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only one language (DE) present, so no cross-language disagreement possible."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Rental framing entirely absent — no mention of monthly rent or that this is a rental, surfacing the prompt's sale/rent gap."
+}

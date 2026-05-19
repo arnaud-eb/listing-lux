@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'drei Schlafzimmern und einem Badezimmer' and '130 m²' match; calling it 'Reiheneinfamilienhaus' aligns with 'row house'."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 3 Schlafzimmer, 1 Bad, 130 m², Mamer, Garten, Parkplatz, Keller, Terrassentüren; rental status not flagged."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'Holzlagerhaus' is awkward/incorrect German for a garden shed (should be 'Gartenhäuschen' or 'Holzschuppen' as used in highlights); inconsistent within the listing."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Reiheneinfamilienhaus', 'Privatgarten', 'Kellerraum' are appropriate; but 'Holzlagerhaus' and 'Nische für Fernsehgeräte' read odd."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs, no class invented in prose."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Reiheneinfamilienhaus mit Garten und Parkplatz in Mamer' is 7 words — slightly short of the 8-15 anchor; 5 hashtags CamelCase, no generic duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained: 'Die Außenfassade zeigt sich neutral und in gepflegtem Zustand' — no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or protected-class references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Lycée Josy Barthel', 'European School Luxembourg II in der nahen Umgebung', and 'gute Anbindung an Autobahn und Zugverkehr' not in inputs (Mamer not in registry)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 130 m², 3 bedrooms, 1 bathroom, garden, parking, cellar, shed, and 1980s row house — no numeric or feature disagreement."
+    }
+  },
+  "overall_pass": false
+}

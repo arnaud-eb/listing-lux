@@ -1,0 +1,43 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:17:23.140Z",
+  "output": {
+    "title": "Renovated furnished studio with historic character in Clausen",
+    "description": "This thoughtfully renovated studio apartment occupies a historic stone building in the Clausen valley, an area known for its blend of old-world charm and dynamic urban life. The main living space features exposed wooden beams and a warm wood floor, combining rustic elements with a modern, functional layout. Fully furnished, the studio offers an efficient use of space with a double bed and carefully integrated furnishings.\n\nThe kitchenette is compact yet practical, equipped with a two-burner cooktop, a small refrigerator, and a stainless steel sink, all designed to optimize limited space without sacrificing usability. The bathroom has been recently updated with white tiles, a shower stall, and a compact vanity, contributing a clean and contemporary feel.\n\nSituated within the historic setting of Clausen, the building reflects the architectural heritage of the Alzette valley. The area features preserved structures and a lively nightlife, while Clausen’s proximity to the city center retains an atmospheric quality appreciated by residents and visitors alike. This studio provides a measured balance between historic surroundings and modern refurbishment, suitable for those seeking an authentically characterful yet efficient urban living space.",
+    "highlights": [
+      {
+        "text": "Fully furnished and renovated studio",
+        "icon": "home"
+      },
+      {
+        "text": "Exposed historic wooden beams",
+        "icon": "building-2"
+      },
+      {
+        "text": "Compact kitchenette with modern fittings",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Renovated bathroom with shower",
+        "icon": "bath"
+      },
+      {
+        "text": "38 m² of optimized living space",
+        "icon": "square"
+      },
+      {
+        "text": "Historic stone building in Clausen valley",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricLiving",
+      "ClausenValley",
+      "CompactLiving",
+      "RenovatedStudio"
+    ]
+  }
+}

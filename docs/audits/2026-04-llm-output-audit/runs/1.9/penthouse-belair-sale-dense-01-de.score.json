@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m² Wohnfläche', 'Vier Schlafzimmer', 'Drei moderne Badezimmer', 'Belair' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, 4 beds, 3 baths, Belair, all active features (elevator/parking/cellar/terrace/renovated/city-view), plus Gaggenau, Carrara, oak parquet, south-facing."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Generally native German; 'Verbundholzbelag' for composite decking is acceptable though 'WPC-Belag' would be more standard."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'Penthouse', 'Hauptsuite mit Terrasse', 'Carrara-Marmorinsel', 'gehobenen Wohnstandard' — fits luxury LU/DE corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and none invented in the description."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Großzügiges 4-Zimmer Penthouse mit Panorama-Terrasse und Stadtblick in Belair' includes Belair and is 11 words; 5 CamelCase hashtags but 'Luxembourg' is generic."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly disciplined but 'exklusive Penthouse' and 'lädt zum Verweilen im Freien ein' veer toward marketing cliché."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No protected-class references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims ('220 m²', 'Gaggenau', 'Carrara-Marmor', 'Eichenparkett', '180-Grad-Blick', 'südlich ausgerichteten', 'Belair') are supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/DE/EN agree on 220 m², 4 bedrooms, 3 bathrooms (FR mentions 'Quatre chambres' and three baths implicitly via 'salle de bains attenante' but DE/EN explicitly confirm three; sale framing, Belair, terrace, parking, cellar, elevator all consistent)."
+    }
+  },
+  "overall_pass": true
+}

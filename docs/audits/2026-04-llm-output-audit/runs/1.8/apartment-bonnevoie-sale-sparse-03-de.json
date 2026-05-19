@@ -1,0 +1,51 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:14:53.435Z",
+  "output": {
+    "title": "Helle 1-Zimmer-Wohnung mit Südausrichtung und Keller in Bonneweg",
+    "description": "Diese 1-Zimmer-Wohnung umfasst eine Wohnfläche von 52 m² und verfügt über einen durchdachten Grundriss mit Wohn- und Schlafbereich. Das hell gestaltete Zimmer ist mit Laminatboden ausgelegt und bietet dank der südlichen Ausrichtung eine angenehme Tageslichtbeleuchtung.\n\nDie Küche ist einfach eingerichtet und verfügt über eine funktionale, kleine Galley-Anordnung mit weißen Einbaumöbeln und einem Fliesenboden. Sie eignet sich als praktischer Bereich zur Zubereitung von Mahlzeiten.\n\nDas Badezimmer ist kompakt gehalten und mit einer Duschbadewanne sowie weißen Fliesen ausgestattet. Ein einzelnes Waschbecken ergänzt die Ausstattung und ermöglicht die tägliche Nutzung.\n\nZur Wohnung gehört ein separater Kellerraum, der zusätzlichen Stauraum bietet. Die Immobilie liegt im Stadtteil Bonneweg, einem lebendigen und vielfältigen Viertel mit einer ausgeprägten gastronomischen Szene und dem bekannten Bonnevoie-Markt. Die Anbindung an den Hauptbahnhof gewährleistet eine gute Erreichbarkeit anderer Stadtteile.",
+    "highlights": [
+      {
+        "text": "52 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "1 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer mit Wanne",
+        "icon": "bath"
+      },
+      {
+        "text": "Südlich ausgerichteter Wohnraum",
+        "icon": "sun"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Funktionale Küche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Gute Anbindung an Hauptbahnhof",
+        "icon": "train"
+      },
+      {
+        "text": "Vielseitiges, lebendiges Viertel Bonneweg",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SuedAusrichtung",
+      "KellerAbstellraum",
+      "BonnewegLage",
+      "KompakteWohnung"
+    ]
+  }
+}

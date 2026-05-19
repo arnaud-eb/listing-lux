@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "States '2 Schlafzimmer mit Möblierung' — input has 2 bedrooms, consistent; however 'Sanierung und Möblierung 2022' invents a year not in inputs."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 95 m², 2 bedrooms, Limpertsberg, balcony, elevator, cellar, furnished, renovated — but omits bathroom count and never frames as a rental (no mention of monthly rent of €2400)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German: 'Der Wohnbereich überzeugt durch helle Raumatmosphäre, hochwertiges Echtholzparkett' — though 'saniert und möblierte' has a minor agreement slip and 'grössere' uses Swiss spelling."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Uses standard luxury vocabulary like 'kernsanierte, bezugsfertige Wohnung' but mid-tier rental feel rather than high-luxury; appropriate for the price point."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and description omits any energy class reference entirely."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Renovierte 2-Zimmer Wohnung mit Balkon und Aufzug in Limpertsberg' is 9 words and includes neighborhood; hashtags are only 4 and not CamelCase-separated (space-delimited single tokens), missing # symbols formatting."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained ('funktional gestaltet', 'gepflegt und stilvoll'); no exclamations, but 'überzeugt durch' is mildly promotional."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'Das Apartment eignet sich für Bewohner, die eine kernsanierte, bezugsfertige Wohnung ... suchen' — references housing-feature preference, not demographics."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Parc Edmond Klein' (no such park; fabricated name, real park is Parc de Merl/Kinnekswiss), 'Nähe zur Universität' (not in inputs), 'Sanierung und Möblierung 2022' (year invented)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only one language (DE) provided, so no cross-language disagreement is possible."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Rental framing entirely missing — no mention of monthly rent or rental context, surfacing the prompt gap noted in fixture notes."
+}

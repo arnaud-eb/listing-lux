@@ -1,0 +1,44 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:17:13.611Z",
+  "output": {
+    "title": "Renoviertes, möbliertes Studio mit historischem Flair in Clausen",
+    "description": "Dieses sorgfältig modernisierte Studio besticht durch seine gelungene Kombination aus historischem Charakter und zeitgemäßem Wohnkomfort. Eichenparkett und sichtbar belassene Deckenbalken prägen den Wohnbereich, der vollständig möbliert ist und eine kompakte, funktional gestaltete Kochnische beherbergt. Das Studio eignet sich mit seinen 38 m² Raumfläche als ruhiger Rückzugsort im lebendigen Clausen.\n\nDie Kochnische ist mit einem Zweiflammen-Herd, einem kleinen Kühlschrank und einem Edelstahl-Spülbecken ausgestattet und unterstützt eine effiziente Nutzung des begrenzten Raums. Das modernisierte Badezimmer verfügt über eine Duschkabine und weiße Fliesen, die eine klare und gepflegte Atmosphäre schaffen.\n\nDas Gebäude fügt sich mit seiner historischen Steinfassade hervorragend in das UNESCO-geschützte Clausen-Areal im Alzette-Tal ein. Die Lage zeichnet sich durch eine Mischung aus denkmalgeschützter Bausubstanz und dem Flair eines urbanen Ausgehviertels aus. Clausen ist zudem durch seine Nähe zu Kirchberg und dem Stadtzentrum geprägt, was die Lage auch aus städtebaulicher Sicht interessant macht.",
+    "highlights": [
+      {
+        "text": "Voll möbliert und renoviert",
+        "icon": "home"
+      },
+      {
+        "text": "Charakteristische sichtbare Holzbalken",
+        "icon": "building-2"
+      },
+      {
+        "text": "Kompakte, funktionale Kochnische",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Modernisiertes Badezimmer mit Dusche",
+        "icon": "bath"
+      },
+      {
+        "text": "Historisches Stein-Gebäude",
+        "icon": "building"
+      },
+      {
+        "text": "Lage im UNESCO-Welterbe Clausen-Tal",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "CompactLiving",
+      "RenovatedStudio",
+      "UNESCOClausen",
+      "CityValley"
+    ]
+  }
+}

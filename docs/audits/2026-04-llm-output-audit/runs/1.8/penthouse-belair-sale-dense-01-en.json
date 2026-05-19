@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:14:26.055Z",
+  "output": {
+    "title": "Renovated 4-Bedroom Penthouse with Panoramic City Views in Belair",
+    "description": "This 220 m² penthouse resides in Luxembourg's Belair neighborhood, known for its upscale residential character. Recently renovated, the apartment combines contemporary design with elevated comfort across expansive living spaces.\n\nThe open-plan living room benefits from floor-to-ceiling windows that fill the space with natural light and frame panoramic views of the city. Oak parquet flooring and a wood-burning fireplace add refinement and warmth, complemented by integrated smart-home lighting that enhances convenience.\n\nThe adjacent kitchen features a sleek, minimalist design with professional-grade Gaggenau appliances and a central Carrara marble island, ideal for culinary preparation and entertaining. Matte black fixtures and an integrated wine fridge contribute to the modern aesthetic.\n\nFour bedrooms include a master suite with a walk-in closet, ensuite bathroom, and direct access to a private terrace. The spacious master terrace, along with an additional large terrace, offers south-facing exposure and unobstructed 180-degree views of Luxembourg City, finished with composite decking and glass balustrades.\n\nAdditional amenities include a cellar for storage, parking facilities, and an elevator for convenient access. The residence presents a refined living environment within one of Luxembourg's well-regarded neighborhoods, balancing urban proximity with a green, quiet setting.",
+    "highlights": [
+      {
+        "text": "220 m² renovated penthouse with open-plan living",
+        "icon": "home"
+      },
+      {
+        "text": "Panoramic south-facing city views from terraces",
+        "icon": "sun"
+      },
+      {
+        "text": "Gaggenau appliances and Carrara marble kitchen island",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Four bedrooms including master with walk-in closet and ensuite",
+        "icon": "bed"
+      },
+      {
+        "text": "Wood-burning fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Private terraces with composite decking and glass balustrades",
+        "icon": "sun"
+      },
+      {
+        "text": "Elevator access and parking included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separate cellar/storage room",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "CityView",
+      "RenovatedLiving",
+      "ModernKitchen",
+      "SpaciousPenthouse",
+      "TerraceLiving"
+    ]
+  }
+}

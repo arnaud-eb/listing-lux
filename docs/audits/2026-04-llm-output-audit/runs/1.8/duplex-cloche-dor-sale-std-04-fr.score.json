@@ -1,0 +1,49 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Claims 'terrasse en bois orientée sud-ouest' — orientation south-west is not in inputs (photo notes 'evening sun exposure' only, no compass bearing)."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 180 m², 3 chambres, parking, ascenseur, cave, terrasse, Cloche d'Or, neuf; omits explicit mention of 2 bathrooms."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'L'espace de vie décloisonné intègre une cuisine équipée Siemens'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU/FR luxury vocab: 'suite parentale', 'dressings intégrés', 'cave individuelle', 'cuisine équipée'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned, matching null input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Duplex contemporain 3 chambres avec terrasse panoramique à Cloche d'Or' fits range; 5 CamelCase hashtags including 'ClocheDor'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained tone; 'luminosité optimale' is mild, no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'terrasse en bois orientée sud-ouest' (no SW orientation in inputs) and 'Triple chambre' in highlights is an odd specific phrasing but the bedroom count is supported; the south-west claim is the fabricated specific, plus 'parc urbain' is fine but 'vue dégagée sur un parc urbain' aligns."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/EN/FR agree on 180 m², 3 bedrooms, duplex, sale-context features; EN uniquely specifies '2 bathrooms with modern fittings' while DE/FR omit bathroom count — minor non-contradictory addition."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FR invents south-west orientation."
+}

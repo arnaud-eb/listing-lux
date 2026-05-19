@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Mostly accurate but states 'Das hochwertige Eichenparkett' (oak parquet) whereas inputs say 'engineered wood flooring' without specifying oak."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 145 m², drei Schlafzimmern, zwei Bäder, Kirchberg, Balkon, Aufzug, Keller, Stellplatz, Neubau, Bulthaup, Parkblick."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'eine induction Kochfläche' mixes English 'induction' instead of 'Induktion'; otherwise idiomatic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate LU/DE corpus terms: 'Neubauwohnung', 'Stellplatz', 'Fußbodenheizung', 'EU-Viertel'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and none invented; prose omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Moderne 3-Zimmer-Neubauwohnung mit Balkon und Parkblick in Kirchberg' fits the length window with neighborhood and adjective; 5 CamelCase hashtags, no generics."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained but 'großzügige', 'besticht durch', 'lichtdurchflutet' lean slightly promotional; no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'internationaler Ausstrahlung' refers to the district, not occupants."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'Eichenparkett' (oak specifically, inputs say only engineered wood) and 'MUDAM' (named institution not in inputs). 'Philharmonie' also named but borderline; counting MUDAM and oak as the two clearest unsupported specifics."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 145 m², 3 bedrooms, 2 bathrooms, sale, balcony, parking, elevator, cellar; minor non-contradictory additions (DE adds 'MUDAM' and 'Eichenparkett', FR adds 'sécurisé') don't change numerics or features."
+    }
+  },
+  "overall_pass": false
+}

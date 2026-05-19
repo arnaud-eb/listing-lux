@@ -1,0 +1,51 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:15:24.090Z",
+  "output": {
+    "title": "Exclusives Penthouse mit Terrasse und Alzette-Talblick im historischen Grund",
+    "description": "Dieses Penthouse erstreckt sich über 175 m² und befindet sich im Herzen des historischen Grund, einer malerischen Lage im Alzette-Tal, das durch seine UNESCO-Welterbe-Umgebung geprägt ist. Die Lage bietet einen ruhigen Rahmen in einem Viertel mit charaktervoller Architektur und direktem Blick ins Tal.\n\nDie Wohn- und Schlafbereiche wurden umfassend renoviert und verbinden zeitgemäßen Komfort mit authentischen Details wie freiliegenden Steinmauern und Gewölbedecken. Die großzügige, lichtdurchflutete Wohnhalle mit Eichenholz-Parkett und die hochwertige Küche mit maßgefertigten Holzfronten sowie Marmorarbeitsfläche sind auf anspruchsvolles Wohnen ausgerichtet.\n\nDrei Schlafzimmer und zwei Badezimmer gewährleisten großzügige Raumaufteilung, während der individuelle Charme durch Details wie Dachfenster und sichtbare Holzbalken unterstrichen wird. Die private, steinbepflasterte Terrasse mit schmiedeeisernem Geländer ermöglicht Ausblicke über das Alzette-Tal und lädt zum Verweilen ein.\n\nWeitere Ausstattungsmerkmale umfassen einen Fahrstuhl, einen Kellerraum sowie einen Stellplatz, die den Wohnkomfort ergänzen. Die Kombination aus historischem Ambiente und modernem Ausbaustandard zeichnet diese Immobilie im Grund aus.",
+    "highlights": [
+      {
+        "text": "175 m² Wohnfläche im Penthouse",
+        "icon": "square"
+      },
+      {
+        "text": "Drei Schlafzimmer, zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Private Terrasse mit Talblick",
+        "icon": "sun"
+      },
+      {
+        "text": "Eingebaute maßgefertigte Holzküche mit Marmorarbeitsfläche",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Freiliegende Steinmauern und Gewölbedecken",
+        "icon": "building-2"
+      },
+      {
+        "text": "Fahrstuhlzugang im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Stellplatz inklusive",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "HistoricLiving",
+      "Talblick",
+      "RenovatedPenthouse",
+      "Terrassenwohnung"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'three bedrooms and one bathroom' and '130 square meters' match inputs exactly."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers beds/baths/sqm/Mamer, garden, shed, parking, cellar, patio doors; rental framing not explicit but features well-utilized."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'The private rear garden includes a modest lawn area enclosed by a wooden fence.'"
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'row house', 'commune', 'cellar' fit LU English; but 'facilitating practical storage solutions and vehicle accommodation' is bureaucratic."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs, none invented in prose."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Three-Bedroom Row House with Private Garden and Parking in Mamer' is 11 words, well-formed; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Generally restrained: 'well-positioned for those seeking a suburban home'; no hyperbole or exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or protected-class references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'European School Luxembourg II', 'Lycée Josy Barthel', 'motorway and rail connections' not in inputs (Mamer not in registry per notes)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 130 m², 3 bedrooms, 1 bathroom, garden, parking, cellar, shed, and 1980s row house — no numeric or feature disagreement."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "Asserts unsupported 'troisième ville du Luxembourg' and 'vallée de l'Alzette et proche d'infrastructures urbaines et de projets résidentiels innovants'; doesn't signal rental."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers '200 m²', '4 chambres ainsi que deux salles de bains', garden, garage, cellar, terrace, fireplace; rental not flagged."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as native French: 'Ce pavillon indépendant d'environ 200 m², construit dans les années 1970, s'implante sur un terrain privé soigné'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'pavillon indépendant', 'cave', 'salles de bains' — appropriate LU FR vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, matching the absent input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa spacieuse de 4 chambres avec jardin et garage à Differdange' is 11 words; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained — 'présence sobre et élégante' is moderate, no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "Neutral phrasing 'appropriées pour divers aménagements résidentiels'."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'troisième ville du Luxembourg', 'vallée de l'Alzette', 'projets résidentiels innovants'."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "DE/FR/EN agree on 200 m², 4 bedrooms, 2 bathrooms, garage, garden, cellar, terrace, fireplace; DE adds 'Schloss und Campus Miami University' and FR/EN add 'third-largest city' — minor non-contradictory embellishments that don't disagree on numbers or features."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'Eichenparkett' (oak parquet) is asserted but photo analysis only says 'wood floor' — invents specific wood type."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 38 m², möbliert, renoviert, Kochnische details, Bad with Dusche, Holzbalken, Steinfassade."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'sorgfältig modernisierte Studio besticht durch' reads as natural German real-estate prose."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Kochnische', 'Duschkabine', 'denkmalgeschützter Bausubstanz' are appropriate LU/DE luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with null input."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 9 words, fine; but hashtags are in English ('HistoricCharm CompactLiving RenovatedStudio UNESCOClausen CityValley') in a German listing — inconsistent and UNESCOClausen references unsupported claim."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'fügt sich hervorragend ein' is mild; no 'atemberaubend' or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'ruhiger Rückzugsort' — no demographic targeting."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Eichenparkett' (inputs say only 'wood floor', not oak), 'UNESCO-geschützte Clausen-Areal' (Clausen itself not listed as UNESCO in inputs), 'Nähe zu Kirchberg und dem Stadtzentrum' (named neighborhoods/distances not in inputs since neighborhood registry returned empty)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 38 m², studio, furnished, renovated, kitchenette, shower; DE adds 'Kirchberg/Stadtzentrum' proximity not in FR/EN, and FR/DE assert UNESCO while EN does not — minor non-numeric divergences."
+    }
+  },
+  "overall_pass": false,
+  "notes": "German hashtags should not be English."
+}

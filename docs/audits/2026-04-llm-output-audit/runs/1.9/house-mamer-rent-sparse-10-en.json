@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:34:06.806Z",
+  "output": {
+    "title": "Three-Bedroom House with Private Garden and Parking in Mamer",
+    "description": "This well-maintained three-bedroom row house, constructed in the 1980s, offers 130 m² of living space within a quiet residential area of Mamer. The property features a neutral facade complemented by a small front yard and a private, rear garden, providing an outdoor area for leisure and gardening activities. An adjoining small storage shed extends practical use of the garden space.\n\nInside, the living room is designed with a traditional layout, featuring a beige carpet and patio doors that open towards the garden, allowing for natural light and an accessible connection to the outdoor space. Though the interior shows signs of its era and would benefit from updating, it offers a functional and comfortable living environment.\n\nThe house includes three bedrooms and one bathroom, suited to various spatial needs. A cellar in the basement provides additional storage capacity. Parking is available on the property, enhancing convenience for residents.\n\nSituated in Mamer, the property benefits from proximity to notable educational institutions such as Lycée Josy Barthel and the European School Luxembourg II in Bertrange-Mamer. The location also offers excellent motorway and rail connections, facilitating accessibility to Luxembourg City and surrounding areas.",
+    "highlights": [
+      {
+        "text": "130 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "One bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Private rear garden with shed",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking space on property",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Quiet residential neighborhood",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "SuburbanLiving",
+      "RowHouse",
+      "GardenAccess",
+      "StorageIncluded",
+      "WellConnected"
+    ]
+  }
+}

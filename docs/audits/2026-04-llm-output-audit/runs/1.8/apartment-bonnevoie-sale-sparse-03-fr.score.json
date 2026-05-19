@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Title claims 'avec balcon orienté sud' but inputs explicitly state balcony: false — this contradicts the property data."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers 52 m², 1 chambre, 1 salle de bains, Bonnevoie, cave, south-facing living room, galley kitchen, bath combo."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'cet appartement d'une surface de 52 m² offre un espace de vie confortable'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Vocabulary is generic ('compromis intéressant', 'modalités de vie citadine') — adequate but not strongly aligned with LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned; inputs supplied none, so omission is correct per v1.5."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title fabricates 'avec balcon orienté sud' (no balcony exists); hashtags are 5 and CamelCase but title contains a false feature."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained tone: 'compromis intéressant entre la fonctionnalité… et une localisation'; no hyperbole or exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics; phrase 'adapté à différentes modalités de vie citadine' is neutral."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'balcon orienté sud' (no balcony in inputs) and 'accès facilité vers la gare centrale' (no transit info in inputs). 'multiples facettes culturelles' is generic."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR title asserts 'balcon orienté sud' (balcony) which EN and DE do not mention (and which contradicts inputs) — feature-list disagreement; additionally DE asserts 'Anbindung an den Hauptbahnhof' and EN asserts 'central station' while FR says 'gare centrale' (these agree) but the balcony fabrication plus the DE title framing as '1-Zimmer-Wohnung' (studio) vs FR/EN 'one-bedroom' is a second disagreement."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Hard-fail risk on factual_fidelity due to fabricated balcony in title."
+}

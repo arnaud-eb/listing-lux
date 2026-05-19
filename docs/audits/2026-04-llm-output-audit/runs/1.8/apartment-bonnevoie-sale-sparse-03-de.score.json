@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Generally accurate but title says '1-Zimmer-Wohnung' while describing 'Wohn- und Schlafbereich' — minor confusion between 1-Zimmer (studio) and 1-bedroom; 52 m² and cellar correct."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², 1 Schlafzimmer, 1 Badezimmer, Keller, Südausrichtung, Küche, Bonneweg; covers active features and key photo points."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Native German phrasing: 'verfügt über einen durchdachten Grundriss mit Wohn- und Schlafbereich'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Standard German real-estate vocabulary ('Wohnfläche', 'Einbaumöbeln', 'Stauraum'); adequate, not particularly LU-luxury."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; inputs supplied none, so omission is correct."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Helle 1-Zimmer-Wohnung mit Südausrichtung und Keller in Bonneweg' is 9 words with neighborhood; only 4 hashtags (rubric asks 3-5, OK) but 'KompakteWohnung' is generic."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained: 'Die Küche ist einfach eingerichtet' — honest about modest finish, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; 'vielseitiges, lebendiges Viertel' describes the neighborhood."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'dem bekannten Bonnevoie-Markt' (no market in inputs) and 'Anbindung an den Hauptbahnhof gewährleistet eine gute Erreichbarkeit' (no transit data in inputs). 'ausgeprägte gastronomische Szene' is generic."
+    },
+    "cross_lang_consistency": {
+      "score": 2,
+      "evidence": "FR title asserts 'balcon orienté sud' (balcony) which EN and DE do not mention (and which contradicts inputs) — feature-list disagreement; additionally DE asserts 'Anbindung an den Hauptbahnhof' and EN asserts 'central station' while FR says 'gare centrale' (these agree) but the balcony fabrication plus the DE title framing as '1-Zimmer-Wohnung' (studio) vs FR/EN 'one-bedroom' is a second disagreement."
+    }
+  },
+  "overall_pass": false
+}

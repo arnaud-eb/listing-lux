@@ -1,0 +1,43 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:33:30.281Z",
+  "output": {
+    "title": "Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette",
+    "description": "Located in Esch-sur-Alzette, Luxembourg's second-largest city, this well-kept apartment offers 78 m² of living space composed of two bedrooms and a single bathroom. The layout includes a living room that opens onto a modest balcony, providing outdoor access and natural light through neutral beige walls and laminate flooring.\n\nThe kitchen is designed with a practical L-shaped layout featuring white cabinetry and sufficient space for a small dining table, maintaining a straightforward and functional style. The apartment benefits from an elevator and includes a parking space, adding convenience to daily living.\n\nSituated in a city known for its cultural vitality and proximity to the university and Belval area, the neighborhood is undergoing growth, contributing to its attractiveness. This apartment provides a residence within a developing urban context, combining practical amenities and straightforward design.",
+    "highlights": [
+      {
+        "text": "78 m² of living space",
+        "icon": "square"
+      },
+      {
+        "text": "Two bedrooms and one bathroom",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcony accessible from living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact kitchen with dining area",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Elevator in building",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Parking included",
+        "icon": "car"
+      }
+    ],
+    "hashtags": [
+      "CityLiving",
+      "BalconyAccess",
+      "CompactKitchen",
+      "UrbanGrowth"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "1.8",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "Matches inputs: '220 m²', 'vier Schlafzimmern und drei Bädern', 'Gaggenau-Geräten', 'Carrara-Marmor'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers beds/baths/sqm/Belair plus elevator ('Fahrstuhl'), cellar, parking, terrace, fireplace, renovated, city view, Gaggenau, marble."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "Mostly fluent but contains awkward anglicism 'composite Terrassendielen' (uncapitalized adjective, untranslated)."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate terms 'Belair-Quartier', 'Master-Suite', 'begehbarer Kleiderschrank'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied; description omits any energy class claim."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renoviertes Penthouse mit 4 Schlafzimmern und weitläufiger Terrasse in Belair' (~11 words); 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained tone, no exclamations; minor luxury adjectives like 'exklusiven Wohnbezirke'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or national-origin references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims ('220 m²','vier Schlafzimmern','drei Bädern','Gaggenau','Carrara-Marmor','südlich ausgerichtete','180-Grad-Stadtblick','Eichenparkett') supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN agree on 220 m², 4 bedrooms, sale, Gaggenau, Carrara, parking, cellar, elevator; minor discrepancy: EN implies 'an additional large terrace' while FR/DE describe a single terrace."
+    }
+  },
+  "overall_pass": true
+}

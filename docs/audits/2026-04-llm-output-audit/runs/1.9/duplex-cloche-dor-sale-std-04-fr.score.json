@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 2,
+      "evidence": "Claims 'exposition plein sud' though inputs only state 'evening sun exposure' (which implies west, not south) — and inputs give no orientation; also 'triple chambre' in highlight is odd phrasing for 3 chambers."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 180 m², 3 chambres, parking, cave, ascenseur, terrasse, Siemens, quartz, chêne, parc and centre commercial; omits explicit count of 2 bathrooms."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'le séjour baigné de lumière naturelle bénéficie d'un plafond très élevé et de grandes baies vitrées'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'chêne contrecollé', 'suite parentale', 'cave indépendante', 'place de parking' — appropriate LU/FR luxury register."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs; description omits CPE entirely, per v1.5+ default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Duplex neuf 3 chambres avec terrasse et vue sur la ville à Cloche d'Or' ~13 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Restrained register: 'cadre de vie contemporain', no exclamation marks or hyperbole like 'à couper le souffle'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'exposition plein sud' (inputs give no compass orientation; evening sun ≠ south) and 'triple chambre' (implies a specific configuration not in inputs). Supported: '180 m²', 'Cloche d'Or', 'Siemens', 'quartz', 'chêne contrecollé', 'centre commercial', 'parc récemment aménagé'."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 180 m², 3 chambres/bedrooms, duplex, terrace, parking, cellar, elevator, sale; minor disagreement: FR claims 'exposition plein sud' while DE/EN only say 'Abendsonne'/'evening sun' (non-contradictory orientation detail FR adds)."
+    }
+  },
+  "overall_pass": false
+}

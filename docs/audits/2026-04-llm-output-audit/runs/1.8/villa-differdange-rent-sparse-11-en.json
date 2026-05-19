@@ -1,0 +1,47 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "1.8",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:17:08.835Z",
+  "output": {
+    "title": "Spacious 4-Bedroom Villa with Garden and Double Garage in Differdange",
+    "description": "This detached villa, constructed in the 1970s, offers approximately 200 square meters of living space within an established residential setting in Differdange. The exterior features a stone facade and encompasses private grounds, including a front lawn and mature garden with a naturalistic design. A double garage adjacent to the residence provides secure parking facilities.\n\nInside, the property maintains its traditional character, with wood paneling enhancing the warm ambiance of the living room. A central stone fireplace stands as a distinctive element, complementing views over the well-maintained garden. The layout accommodates four bedrooms and two bathrooms, with ample space for varied living arrangements.\n\nOutdoor amenities include a sizable lawn and patio area, ideal for leisure and entertaining. The property also benefits from a cellar, offering additional storage space. Situated in Differdange, Luxembourg's third-largest city with industrial heritage and ongoing residential development, the area combines urban accessibility with a residential atmosphere.\n\nThis villa provides a balance of traditional design and private outdoor space, suitable for those seeking established residential accommodation within a dynamic city context.",
+    "highlights": [
+      {
+        "text": "Detached villa built in the 1970s",
+        "icon": "home"
+      },
+      {
+        "text": "Approximately 200 m² of living space",
+        "icon": "square"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Original stone fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Mature private garden with patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Double garage for secure parking",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "TraditionalVilla",
+      "PrivateGarden",
+      "DoubleGarage",
+      "1970sArchitecture"
+    ]
+  }
+}

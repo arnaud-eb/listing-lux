@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "1.9",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "\"78 m² of living space composed of two bedrooms and a single bathroom\" matches inputs exactly."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, baths, balcony, parking, elevator, kitchen, neighborhood; 6 highlights cover active features."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "\"this well-kept apartment offers 78 m² of living space\" reads naturally in English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "\"78 m² of living space\" and \"parking space\" align with LU English luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title is fine but only 4 hashtags (CityLiving BalconyAccess CompactKitchen UrbanGrowth) — at lower bound and \"UrbanGrowth\" is vague."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "\"a modest balcony\" and \"straightforward and functional style\" avoid hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; \"cultural vitality and proximity to the university\" is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. \"proximity to the university and Belval area\" — Belval and university are not in neighborhood data inputs. Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "FR/DE/EN all agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator; DE and EN add a non-contradictory Belval/university reference absent from FR."
+    }
+  },
+  "overall_pass": false
+}

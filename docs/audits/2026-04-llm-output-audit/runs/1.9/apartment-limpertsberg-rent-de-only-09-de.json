@@ -1,0 +1,51 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "1.9",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-05-19T03:33:41.649Z",
+  "output": {
+    "title": "Renovierte 2-Zimmer-Wohnung mit Balkon und Einbauküche im Limpertsberg",
+    "description": "Diese gepflegte 2-Zimmer-Wohnung mit einer Wohnfläche von 95 m² befindet sich in einem ruhigen Mehrparteienhaus im attraktiven Stadtteil Limpertsberg. Das 1. Obergeschoss ist bequem mit dem Aufzug erreichbar und bietet eine durchdachte Raumaufteilung mit einem Wohnbereich, der durch die großen Fensterflächen mit natürlichem Licht durchflutet wird. Das helle, einladende Wohnzimmer ist mit hochwertigem Eichenparkett ausgelegt und verfügt über eine geschmackvolle, skandinavisch inspirierte Einrichtung inklusive Designer-Sofa.\n\nAn den Wohnraum schließt sich die modern ausgestattete Einbauküche an. Ausgestattet mit Induktionskochfeld, Geschirrspüler und einem kompakten Essbereich, verbindet sie Funktionalität mit einem klaren, zurückhaltenden Design und wurde ebenfalls frisch renoviert. Die Wohnung wird komplett möbliert übergeben und ermöglicht einen direkten Einzug ohne weiteren Aufwand.\n\nDas ruhige Schlafzimmer verfügt über einen Kleiderschrank, ein Queensize-Bett und blickdichte Jalousien, die einen ungestörten Schlaf gewährleisten. Vom Wohnbereich gelangt man auf den Balkon, der nach Norden ausgerichtet ist und trotz seiner überschaubaren Größe frische Luft und einen urbanen Außenbereich bietet. Ein Kellerraum ergänzt das Platzangebot und sorgt für zusätzlichen Stauraum.\n\nDie Lage in Limpertsberg besticht durch die Nähe zur Universität, kulturellen Einrichtungen wie dem Théâtre du Centaure und dem Park Edmond Klein. Gute Anbindung an den öffentlichen Nahverkehr und diverse lokale Einkaufsmöglichkeiten sowie Cafés runden das Angebot ab. Diese Wohnung eignet sich als stilvoller Wohnraum in einem lebendigen, innerstädtischen Umfeld.",
+    "highlights": [
+      {
+        "text": "95 m² renovierte Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer mit Möblierung",
+        "icon": "bed"
+      },
+      {
+        "text": "Moderne Einbauküche mit Induktionskochfeld und Geschirrspüler",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balkon mit Nord-Ausrichtung",
+        "icon": "sun"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum im Haus",
+        "icon": "archive"
+      },
+      {
+        "text": "Voll möbliert und bezugsfertig",
+        "icon": "sofa"
+      },
+      {
+        "text": "Lage im kulturell geprägten Limpertsberg",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Renoviert",
+      "FurnishReady",
+      "Limpertsberg",
+      "ModerneKüche"
+    ]
+  }
+}
