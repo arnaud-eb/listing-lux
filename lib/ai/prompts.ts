@@ -165,7 +165,7 @@ function buildNeighborhoodContext(
   const desc = locality.descriptionLocalized[language];
   if (desc) {
     parts.push(
-      `Area description (background only — do not paraphrase descriptors that describe people or borrow architectural details and apply them to THIS property): ${desc}`,
+      `Area description (background only — do not paraphrase descriptors that describe people, do not borrow architectural details, and do not turn a place named here into a proximity claim about THIS property: naming what the area contains is fine, "near" / "close to" / "minutes from" it is not): ${desc}`,
     );
   }
 
