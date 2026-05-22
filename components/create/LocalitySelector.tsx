@@ -27,15 +27,10 @@ import { Button } from '@/components/ui/button'
 import { useIsMobile } from '@/lib/hooks/use-is-mobile'
 import { pickLocalized } from '@/lib/localities/locale'
 import type { LocalityOption } from '@/lib/localities/types'
+import { isHouseType } from '@/lib/localities/types'
 import type { Language } from '@/lib/types'
 import { formatCurrency } from '@/lib/format'
 import { cn } from '@/lib/utils'
-
-// STATEC commune-level price data refreshes quarterly — surfaces in the badge
-// when a locality has no per-row override. Hardcoded for the MVP; Phase 4 will
-// thread the actual price_tiers.data_as_of through PriceBand when the facade is
-// deleted.
-const STATEC_YEAR = '2026'
 
 interface LocalitySelectorProps {
   value: string
@@ -45,6 +40,7 @@ interface LocalitySelectorProps {
    *  spelling). */
   options: LocalityOption[]
   sqm: number
+  propertyType: string
 }
 
 type OptionWithSearch = LocalityOption & { _search: string }
@@ -71,6 +67,7 @@ export default function LocalitySelector({
   onChange,
   options,
   sqm,
+  propertyType,
 }: LocalitySelectorProps) {
   const t = useTranslations('wizard.locality')
   const localeStr = useLocale()
@@ -127,10 +124,13 @@ export default function LocalitySelector({
     ? pickLocalized(selected.nameLocalized, locale, selected.slug)
     : ''
 
+  const priceBand = selected?.price
+    ? isHouseType(propertyType)
+      ? selected.price.house
+      : selected.price.apartment
+    : null
   const estimate =
-    selected?.price && sqm > 0
-      ? Math.round(selected.price.medianPerSqm * sqm)
-      : null
+    priceBand && sqm > 0 ? Math.round(priceBand.medianPerSqm * sqm) : null
 
   function handlePick(slug: string) {
     onChange(slug)
@@ -268,8 +268,9 @@ export default function LocalitySelector({
 
       {selected && (
         <EstimateBadge
-          source={selected.price?.source ?? null}
+          source={priceBand?.source ?? null}
           estimate={estimate}
+          dataAsOf={priceBand?.dataAsOf ?? null}
         />
       )}
     </div>
@@ -279,12 +280,15 @@ export default function LocalitySelector({
 function EstimateBadge({
   source,
   estimate,
+  dataAsOf,
 }: {
-  source: 'override' | 'tier' | null
+  source: 'statec' | 'override' | 'tier' | null
   estimate: number | null
+  dataAsOf: string | null
 }) {
   const t = useTranslations('wizard.locality')
   if (estimate == null || source == null) return null
+  const year = dataAsOf?.slice(0, 4)
   return (
     <div className="flex items-center gap-2 mt-1 flex-wrap" aria-live="polite">
       <span className="text-xs text-gray-500">{t('estimatedValue')}</span>
@@ -294,12 +298,12 @@ function EstimateBadge({
       >
         {t('averagePrefix')} {formatCurrency(estimate)}
       </span>
-      {source === 'tier' && (
+      {year && (source === 'tier' || source === 'statec') && (
         <span
           className="inline-flex items-center gap-1 text-2xs text-gray-500"
-          aria-label={t('dataSourceAria', { year: STATEC_YEAR })}
+          aria-label={t('dataSourceAria', { year })}
         >
-          {t('dataSource', { year: STATEC_YEAR })}
+          {t('dataSource', { year })}
         </span>
       )}
     </div>

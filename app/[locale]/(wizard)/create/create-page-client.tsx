@@ -286,6 +286,7 @@ export default function CreatePageClient({ localityOptions }: CreatePageClientPr
                     onChange={(v) => updateField("neighborhood", v)}
                     options={localityOptions}
                     sqm={typeof form.sqm === "number" ? form.sqm : 0}
+                    propertyType={form.propertyType}
                   />
 
                   <FeatureChips

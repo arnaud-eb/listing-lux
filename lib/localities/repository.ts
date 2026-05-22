@@ -7,16 +7,11 @@ import type {
   LocalityKind,
   LocalityOption,
   LocalityParent,
-  PriceBand,
+  LocalityPrice,
 } from './types'
+import { resolvePrice, parentPriceOf, type PriceTierRow } from './price'
 
 const DROPDOWN_KINDS = new Set<LocalityKind>(['commune', 'quartier', 'sub_quartier'])
-
-interface PriceTierRow {
-  price_per_sqm_min: number | null
-  price_per_sqm_median: number | null
-  price_per_sqm_max: number | null
-}
 
 interface LocalityRow {
   id: string
@@ -32,6 +27,9 @@ interface LocalityRow {
   price_per_sqm_min: number | null
   price_per_sqm_median: number | null
   price_per_sqm_max: number | null
+  asking_price_per_sqm_apt: number | null
+  asking_price_per_sqm_house: number | null
+  data_as_of: string | null
   price_tiers: PriceTierRow | null
 }
 
@@ -40,39 +38,15 @@ const SELECT_LOCALITY = `
   name_localized, description_localized, keywords_localized, tags,
   parent_id,
   price_per_sqm_min, price_per_sqm_median, price_per_sqm_max,
-  price_tiers ( price_per_sqm_min, price_per_sqm_median, price_per_sqm_max )
+  asking_price_per_sqm_apt, asking_price_per_sqm_house, data_as_of,
+  price_tiers ( price_per_sqm_min, price_per_sqm_median, price_per_sqm_max, data_as_of )
 `
 
-function resolvePrice(row: LocalityRow): PriceBand | null {
-  if (
-    row.price_per_sqm_median != null &&
-    row.price_per_sqm_min != null &&
-    row.price_per_sqm_max != null
-  ) {
-    return {
-      medianPerSqm: Number(row.price_per_sqm_median),
-      minPerSqm: Number(row.price_per_sqm_min),
-      maxPerSqm: Number(row.price_per_sqm_max),
-      source: 'override',
-    }
-  }
-  const tier = row.price_tiers
-  if (
-    tier?.price_per_sqm_median != null &&
-    tier?.price_per_sqm_min != null &&
-    tier?.price_per_sqm_max != null
-  ) {
-    return {
-      medianPerSqm: Number(tier.price_per_sqm_median),
-      minPerSqm: Number(tier.price_per_sqm_min),
-      maxPerSqm: Number(tier.price_per_sqm_max),
-      source: 'tier',
-    }
-  }
-  return null
-}
-
-function toLocality(row: LocalityRow, parent: LocalityParent | null): Locality {
+function toLocality(
+  row: LocalityRow,
+  parent: LocalityParent | null,
+  parentPrice: LocalityPrice | null,
+): Locality {
   return {
     id: row.id,
     slug: row.slug,
@@ -84,12 +58,16 @@ function toLocality(row: LocalityRow, parent: LocalityParent | null): Locality {
     keywordsLocalized: row.keywords_localized ?? {},
     tags: row.tags ?? [],
     parent,
-    price: resolvePrice(row),
+    price: resolvePrice(row, parentPrice),
   }
 }
 
-function toLocalityOption(row: LocalityRow, parent: LocalityParent | null): LocalityOption | null {
-  const price = resolvePrice(row)
+function toLocalityOption(
+  row: LocalityRow,
+  parent: LocalityParent | null,
+  parentPrice: LocalityPrice | null,
+): LocalityOption | null {
+  const price = resolvePrice(row, parentPrice)
   const nameLocalized = row.name_localized ?? {}
   if (row.kind === 'commune') {
     return {
@@ -127,18 +105,20 @@ async function _getBySlug(slug: string, countryCode = 'LU'): Promise<Locality | 
   if (!data) return null
 
   let parent: LocalityParent | null = null
+  let parentPrice: LocalityPrice | null = null
   if (data.parent_id) {
     const { data: p, error: pErr } = await sb
       .from('localities')
-      .select('id, slug, name, name_localized')
+      .select(SELECT_LOCALITY)
       .eq('id', data.parent_id)
-      .maybeSingle<{ id: string; slug: string; name: string; name_localized: Record<string, string> | null }>()
+      .maybeSingle<LocalityRow>()
     if (pErr) throw new Error(`getBySlug parent lookup: ${pErr.message}`)
-    parent = p
-      ? { id: p.id, slug: p.slug, name: p.name, nameLocalized: p.name_localized ?? {} }
-      : null
+    if (p) {
+      parent = { id: p.id, slug: p.slug, name: p.name, nameLocalized: p.name_localized ?? {} }
+      parentPrice = parentPriceOf(p)
+    }
   }
-  return toLocality(data, parent)
+  return toLocality(data, parent, parentPrice)
 }
 
 export const getBySlug = cache(_getBySlug)
@@ -160,22 +140,28 @@ export const getBySlugs = cache(async (
   if (!data || data.length === 0) return out
 
   const parentIds = [...new Set(data.map((r) => r.parent_id).filter((id): id is string => !!id))]
-  const parentsById = new Map<string, LocalityParent>()
+  const parentRowsById = new Map<string, LocalityRow>()
   if (parentIds.length > 0) {
     const { data: parents, error: pErr } = await sb
       .from('localities')
-      .select('id, slug, name, name_localized')
+      .select(SELECT_LOCALITY)
       .in('id', parentIds)
-      .returns<{ id: string; slug: string; name: string; name_localized: Record<string, string> | null }[]>()
+      .returns<LocalityRow[]>()
     if (pErr) throw new Error(`getBySlugs parent lookup: ${pErr.message}`)
-    for (const p of parents ?? []) {
-      parentsById.set(p.id, { id: p.id, slug: p.slug, name: p.name, nameLocalized: p.name_localized ?? {} })
-    }
+    for (const p of parents ?? []) parentRowsById.set(p.id, p)
   }
 
   for (const row of data) {
-    const parent = row.parent_id ? parentsById.get(row.parent_id) ?? null : null
-    out.set(row.slug, toLocality(row, parent))
+    const parentRow = row.parent_id ? parentRowsById.get(row.parent_id) : undefined
+    const parent: LocalityParent | null = parentRow
+      ? {
+          id: parentRow.id,
+          slug: parentRow.slug,
+          name: parentRow.name,
+          nameLocalized: parentRow.name_localized ?? {},
+        }
+      : null
+    out.set(row.slug, toLocality(row, parent, parentPriceOf(parentRow)))
   }
   return out
 })
@@ -196,6 +182,7 @@ const _listForDropdownCached = unstable_cache(
     for (const row of data) {
       if (!DROPDOWN_KINDS.has(row.kind)) continue
       let parent: LocalityParent | null = null
+      let parentPrice: LocalityPrice | null = null
       if (row.parent_id) {
         const p = byId.get(row.parent_id)
         if (p) {
@@ -205,9 +192,10 @@ const _listForDropdownCached = unstable_cache(
             name: p.name,
             nameLocalized: p.name_localized ?? {},
           }
+          parentPrice = parentPriceOf(p)
         }
       }
-      const opt = toLocalityOption(row, parent)
+      const opt = toLocalityOption(row, parent, parentPrice)
       if (opt) options.push(opt)
     }
     return options

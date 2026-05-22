@@ -23,10 +23,20 @@ const mockLocality: Locality = {
   tags: ["EU quarter", "modern", "expat-friendly"],
   parent: null,
   price: {
-    minPerSqm: 8500,
-    maxPerSqm: 14000,
-    medianPerSqm: 11000,
-    source: "override",
+    apartment: {
+      minPerSqm: 8500,
+      maxPerSqm: 14000,
+      medianPerSqm: 11000,
+      source: "override",
+      dataAsOf: "2026-03-26",
+    },
+    house: {
+      minPerSqm: 8500,
+      maxPerSqm: 14000,
+      medianPerSqm: 11000,
+      source: "override",
+      dataAsOf: "2026-03-26",
+    },
   },
 };
 
@@ -207,7 +217,7 @@ describe("buildListingPrompt", () => {
   });
 
   it("has version 1.8", () => {
-    expect(PROMPT_VERSION).toBe("1.8");
+    expect(PROMPT_VERSION).toBe("2.0");
   });
 
   // The v1.7 architectural fix labels keyword data as "Area facts" with explicit

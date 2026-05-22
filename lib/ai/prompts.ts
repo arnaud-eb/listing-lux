@@ -1,9 +1,10 @@
 import type { Language, PhotoAnalysis } from "@/lib/types";
 import type { Locality } from "@/lib/localities/types";
+import { isHouseType } from "@/lib/localities/types";
 import { pickLocalized } from "@/lib/localities/locale";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "1.8";
+export const PROMPT_VERSION = "2.0";
 
 interface PropertyData {
   bedrooms: number;
@@ -118,6 +119,7 @@ Hashtags: generate 3-5 listing-specific hashtags (e.g. distinctive architectural
 function buildNeighborhoodContext(
   locality: Locality | null,
   language: Language,
+  propertyType: string,
 ): string {
   if (!locality) {
     return "Neighborhood data: not available for this property's locality. Do NOT invent neighborhood character, amenities, schools, transit, or distances. Reference the locality only if its name appears in the property data above; otherwise stay generic about the immediate setting.";
@@ -167,10 +169,18 @@ function buildNeighborhoodContext(
   }
 
   if (locality.price) {
-    const { minPerSqm, maxPerSqm, medianPerSqm } = locality.price;
-    parts.push(
-      `Price range for the area: €${minPerSqm.toLocaleString()}-€${maxPerSqm.toLocaleString()}/m² (median: €${medianPerSqm.toLocaleString()}/m²) — for your tier-calibration only; do not quote €/m² figures unless the property data does.`,
-    );
+    const band = isHouseType(propertyType)
+      ? locality.price.house
+      : locality.price.apartment;
+    if (band && band.minPerSqm != null && band.maxPerSqm != null) {
+      parts.push(
+        `Price range for the area: €${band.minPerSqm.toLocaleString()}-€${band.maxPerSqm.toLocaleString()}/m² (median: €${band.medianPerSqm.toLocaleString()}/m²) — for your tier-calibration only; do not quote €/m² figures unless the property data does.`,
+      );
+    } else if (band) {
+      parts.push(
+        `Typical asking price for the area: ≈€${band.medianPerSqm.toLocaleString()}/m² — for your tier-calibration only; do not quote €/m² figures unless the property data does.`,
+      );
+    }
   }
 
   parts.push(`--- End of neighborhood context ---`);
@@ -214,7 +224,11 @@ export function buildListingPrompt(
     .filter(([, v]) => v)
     .map(([k]) => k);
 
-  const neighborhoodContext = buildNeighborhoodContext(locality, language);
+  const neighborhoodContext = buildNeighborhoodContext(
+    locality,
+    language,
+    property.property_type,
+  );
   const photoContext = buildPhotoContext(photoAnalyses);
 
   let user = `Generate a property listing for this property.
