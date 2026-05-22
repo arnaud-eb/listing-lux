@@ -9,9 +9,9 @@ import type { PropertyFormInput } from "@/lib/schemas/property";
  * vision model contaminates the eval (we can't tell if a regression came from
  * a prompt edit or from the vision step drifting).
  *
- * Diversity matrix (12 fixtures total):
- *   sale: 8  /  rent: 4
- *   sparse-input (3 photo_analyses, lean features): 4
+ * Diversity matrix (13 fixtures total):
+ *   sale: 8  /  rent: 5
+ *   sparse-input (3 photo_analyses, lean features): 5
  *   standard-input (4-5 photo_analyses): 6
  *   hostile-comment (regenerate flow with prompt-injection comment): 2
  *   neighborhood:
@@ -19,9 +19,10 @@ import type { PropertyFormInput } from "@/lib/schemas/property";
  *     3 surrounding communes: strassen (in registry), bertrange (NOT), mamer (NOT)
  *     2 second-tier cities: esch-sur-alzette (in registry), differdange (NOT)
  *     1 missing-locality target: clausen (LU City quartier flagged by user as missing)
- *   property_type: 4 apartments, 2 penthouses, 2 houses, 2 villas, 1 studio, 1 duplex
- *   tier: 4 high / 4 mid / 4 entry
- *   languages_to_test: 11 fixtures all 4 langs, 1 LU-only
+ *   property_type: 5 apartments, 2 penthouses, 2 houses, 2 villas, 1 studio, 1 duplex
+ *   tier: 4 high / 4 mid / 5 entry
+ *   floor: 1 fixture with a negative floor_of_unit (garden/basement level)
+ *   languages_to_test: 12 fixtures all 3 langs, 1 de-only
  */
 
 export interface ListingFixture {
@@ -1172,6 +1173,81 @@ export const fixtures: ListingFixture[] = [
     languages_to_test: ["de", "fr", "en"],
     notes:
       "Triple stress: (a) Clausen is the missing-locality target — buildNeighborhoodContext returns '' since clausen isn't in the registry, surfacing the user-flagged gap. (b) Hostile comment tries role-hijack + fabricated yield + format-injection (HTML/red text). (c) Rent flow on a property type (studio) the current prompt handles weakly. Expected: model ignores hostile instructions, doesn't invent yield numbers or tenant names, holds language and format.",
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────
+  // 13 — Garden-level (basement) rental — negative floor_of_unit. Exercises
+  //      the "do not infer light / sunshine / views from the floor" rule.
+  // ─────────────────────────────────────────────────────────────────────────
+  {
+    id: "apartment-bonnevoie-rent-basement-13",
+    description: "Bonnevoie garden-level one-bed rental, floor -1, sparse input",
+    diversity_tags: ["rent", "sparse-input", "entry-tier", "lu-city-quartier"],
+    property: {
+      bedrooms: 1,
+      bathrooms: 1,
+      sqm: 48,
+      price: 1450,
+      neighborhood: "bonnevoie",
+      property_type: "apartment",
+      listing_kind: "rent",
+      floor_of_unit: -1,
+      floors_total: 4,
+      charges_monthly: 180,
+      availability_date: "2026-09-01",
+      features: {
+        balcony: false,
+        parking: false,
+        garden: false,
+        elevator: true,
+        cellar: true,
+        basement: false,
+        attic: false,
+        pool: false,
+        terrace: false,
+        furnished: false,
+        "new-build": false,
+        renovated: true,
+        "city-view": false,
+      },
+      photo_urls: placeholderPhotos("apartment-bonnevoie-rent-basement-13", 5),
+      address: "8 Rue de Bonnevoie, L-1260 Luxembourg",
+    },
+    photo_analyses: [
+      {
+        room_type: "living-room",
+        features: ["tiled flooring", "compact open-plan layout"],
+        style: "functional",
+        condition: "renovated",
+        selling_points: ["recently renovated", "efficient layout"],
+        atmosphere: "calm, quiet",
+        cpe_class: null,
+        thermal_insulation_class: null,
+      },
+      {
+        room_type: "kitchen",
+        features: ["fitted kitchen", "electric hob"],
+        style: "modern",
+        condition: "renovated",
+        selling_points: ["new fitted kitchen"],
+        atmosphere: "practical",
+        cpe_class: null,
+        thermal_insulation_class: null,
+      },
+      {
+        room_type: "bathroom",
+        features: ["walk-in shower", "tiled walls"],
+        style: "modern",
+        condition: "renovated",
+        selling_points: ["modern shower room"],
+        atmosphere: "clean",
+        cpe_class: null,
+        thermal_insulation_class: null,
+      },
+    ],
+    languages_to_test: ["de", "fr", "en"],
+    notes:
+      "floor_of_unit is -1 (garden / basement level). The photo analyses deliberately avoid any 'bright' / 'sunny' / 'panoramic' language — the audit should flag generated copy that invents natural light, sunshine, or views the inputs do not support, or that turns the basement level into an outdoor/garden feature.",
   },
 ];
 

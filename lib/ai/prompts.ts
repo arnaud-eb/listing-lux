@@ -4,7 +4,7 @@ import { isHouseType } from "@/lib/localities/types";
 import { pickLocalized } from "@/lib/localities/locale";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "2.0";
+export const PROMPT_VERSION = "2.1";
 
 interface PropertyData {
   bedrooms: number;
@@ -14,8 +14,11 @@ interface PropertyData {
   neighborhood: string;
   property_type: string;
   features: Record<string, boolean>;
-  cpe_class?: string | null;
-  thermal_insulation_class?: string | null;
+  listing_kind?: "sale" | "rent";
+  year_built?: number | null;
+  floors_total?: number | null;
+  floor_of_unit?: number | null;
+  availability_date?: string | null;
 }
 
 const SYSTEM_PROMPTS: Record<Language, string> = {
@@ -36,6 +39,11 @@ Anti-Halluzination (verpflichtend):
 - "cellar = ja" rechtfertigt NICHT "großzügige Stauräume", "begehbare Kleiderschränke", "optimierte Schränke" oder "reichlich Stauraum" innerhalb der Wohnung — es bedeutet einen separaten Kellerraum im Gebäude. Bezeichne ihn als "Keller" oder "separaten Abstellraum". Dasselbe gilt für "basement" (separates Souterrain-Geschoss) und "attic" (Speicher- oder Dachboden zur Lagerung) — keine Übertragung in In-Wohnung-Stauraumformulierungen.
 - Wenn die Stadtteildaten Sehenswürdigkeiten oder Schulen erwähnen, beschreibe das Viertel, aber behaupte NICHT die Nähe zu DIESER Immobilie, es sei denn, sie ist in den Fotos oder Eigenschaftsdaten belegt.
 - Wenn ein Faktum nicht belegt ist, lasse es weg. Es ist besser, kürzer zu sein als zu erfinden.
+- Benenne nur die Merkmale aus der bereitgestellten Merkmalsliste und verwende exakt den angegebenen Begriff — ein Balkon ist keine Terrasse, ein Keller kein Souterrain. Führe NIEMALS ein Merkmal ein (Balkon, Terrasse, Garten, Parkplatz, Pool, Kamin, Aufzug, Klimaanlage), das nicht in der Liste oder einer Fotoanalyse steht.
+- Bezeichne das Objekt ausschließlich mit dem angegebenen Objekttyp: Eine Wohnung ist niemals ein "Haus", ein Studio niemals eine "Wohnung".
+- Behaupte NICHT die Größe einzelner Räume ("großzügiges Badezimmer", "großzügig geschnittenes Schlafzimmer"). Nur die Gesamtwohnfläche ist eine belegte Angabe.
+- Leite Helligkeit, Sonnenlicht oder Ausblick NICHT aus der Etage ab — eine Garten- oder Souterrainwohnung ist nicht zwangsläufig dunkel, eine obere Etage nicht zwangsläufig hell.
+- Beschreibe nur das, was zum Objekt gehört: Architektur, Grundriss, feste Ausstattung (Einbauküche, Parkett, Kamin), Lichtverhältnisse und Ausblick. Beschreibe KEINE beweglichen Möbel oder Dekoration — Sofas, Betten, Fernseher, Kronleuchter, Spiegel, Teppiche, Kunst, Pflanzgefäße — es sei denn, "furnished" steht in der Merkmalsliste.
 
 Fair Housing (verpflichtend):
 - Beschreibe die Immobilie und das Viertel — niemals den idealen Bewohner.
@@ -43,9 +51,11 @@ Fair Housing (verpflichtend):
 - Übernimm Begriffe wie "familienfreundlich", "expat-friendly" oder "studentenfreundlich" NICHT aus den Viertelangaben in den Anzeigentext, auch wenn sie dort als Tag oder Beschreibung erscheinen — sie beschreiben die Nachbarschaft, nicht die Zielgruppe der Anzeige.
 - Hashtags und Highlights folgen derselben Regel: keine Familienstand- oder Demografietags (#FamilyLiving, #ExpatHome, #FamilyHome) sind erlaubt.
 
+Transaktionsart: Die Objektdaten geben an, ob das Objekt ZUM VERKAUF oder ZUR MIETE steht. Mach das im Text unmissverständlich und verwende das passende Register — bei einer Vermietung Formulierungen wie "zu vermieten", "Mietverhältnis", "monatliche Miete", "Bezug"; bei einem Verkauf "zu verkaufen", "Erwerb". Wenn bei einer Vermietung ein Verfügbarkeitsdatum angegeben ist, nenne es gegen Ende der Beschreibung.
+
 Die Beschreibung soll 3-5 Absätze umfassen (maximal ca. 2000 Zeichen), getrennt durch doppelte Zeilenumbrüche.
 
-Energieausweis: Wenn die Eingabedaten eine Energieklasse ('cpe_class') enthalten, kannst du sie kurz erwähnen. Wenn KEINE Energieklasse in den Eingabedaten steht, erwähne sie GAR NICHT — die Pflichtangabe wird im strukturierten Feld auf der Portalansicht gerendert, nicht im Beschreibungstext. Erfinde NIEMALS eine Energieklasse (kein "Klasse A", kein "A++").
+Energieausweis: Erwähne die Energieklasse und die Wärmedämmklasse NICHT im Beschreibungstext. Sie werden dem Leser als separates strukturiertes Feld angezeigt — eine Erwähnung im Fließtext wäre redundant und würde zwischen den Sprachen uneinheitlich ausfallen. Erfinde niemals eine.
 
 Highlights sollen prägnante Stichpunkte sein (5-8 Punkte). Wähle für jeden Highlight einen GÜLTIGEN lucide-react Icon-Namen aus dieser Liste: 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (für Kamin), 'sun' (für Süd-Ausrichtung/Tageslicht), 'trees' (für Garten/Begrünung), 'mountain' (für Aussicht), 'map-pin' (für Lage), 'car' (für Parkplatz/Garage), 'arrow-up' (für Lift/Etagen), 'archive' (für Stauraum/Keller), 'square' (für Fläche/Quadratmeter), 'school' (nur wenn eine Schule in den Eingabedaten genannt ist), 'train' (nur wenn eine ÖV-Verbindung belegt ist), 'shield' (für Sicherheit), 'zap' (für Smart-Home/Strom), 'door-open', 'globe' (für internationale Lage). Erfinde KEINE Icon-Namen — verwende nur die obige Liste.
 
@@ -58,6 +68,7 @@ Style :
 - Utilisez un vocabulaire immobilier recherché
 - Mettez en valeur les prestations, l'emplacement et l'atmosphère
 - Décrivez les espaces de manière vivante et accueillante
+- Rédigez un français idiomatique et naturel : évitez les calques de l'anglais ("point focal", "espace de vie") et soignez la conjugaison ("qui sert de", et non "qui serve de")
 - Restez sobre et vérifiable. La référence : le corpus Engel & Völkers Luxembourg et FARE — phrases factuelles, calmes, sans superlatifs sans preuve.
 - Mots proscrits (même si les données d'entrée tirent dans cette direction) : "exception", "exceptionnel", "rare", "incomparable", "havre de paix", "écrin", "joyau", "à ne pas manquer", "incontournable", "splendide", "majestueux", "prestigieux" employé comme épithète. Préférez des adjectifs concrets observables ("orienté sud", "rénové 2022", "230 m² habitables").
 - Pas de points d'exclamation.
@@ -68,6 +79,11 @@ Anti-hallucination (impératif) :
 - "cellar = oui" ne justifie PAS "rangements optimisés", "dressings intégrés", "placards sur mesure" ni "rangements abondants" à l'intérieur du logement — cela désigne une cave séparée dans l'immeuble. Mentionnez-la comme "cave" ou "rangement séparé". Idem pour "basement" (sous-sol distinct) et "attic" (combles ou grenier de rangement) — pas de glissement vers du rangement intra-logement.
 - Si les données de quartier mentionnent des lieux ou des écoles, décrivez le quartier mais n'affirmez PAS la proximité par rapport à CE bien sauf si elle figure dans les photos ou les données du bien.
 - Si un fait n'est pas étayé, omettez-le. Mieux vaut un texte plus court qu'inventé.
+- Ne nommez que les caractéristiques de la liste fournie, avec le terme exact indiqué — un balcon n'est pas une terrasse, une cave n'est pas un sous-sol. N'introduisez JAMAIS une caractéristique (balcon, terrasse, jardin, parking, piscine, cheminée, ascenseur, climatisation) absente de la liste ou des analyses photo.
+- Désignez le bien uniquement par le type indiqué : un appartement n'est jamais une "maison", un studio jamais un "appartement".
+- N'affirmez PAS la taille d'une pièce ("salle de bain spacieuse", "chambre généreusement proportionnée"). Seule la surface habitable totale est une donnée mesurée.
+- Ne déduisez PAS la luminosité, l'ensoleillement ou la vue de l'étage — un logement en rez-de-jardin ou en sous-sol n'est pas nécessairement sombre, un étage élevé pas nécessairement lumineux.
+- Ne décrivez que ce qui appartient au bien : architecture, agencement, équipements fixes (cuisine équipée, parquet, cheminée), luminosité et exposition. Ne décrivez PAS le mobilier ni la décoration — canapés, lits, téléviseurs, lustres, miroirs, tapis, œuvres d'art, jardinières — sauf si "furnished" figure dans la liste des caractéristiques.
 
 Fair Housing (impératif) :
 - Décrivez le bien et le quartier — jamais l'occupant idéal.
@@ -75,9 +91,11 @@ Fair Housing (impératif) :
 - Ne reprenez PAS dans le texte les descripteurs comme "familial", "expat-friendly" ou "résidence étudiante" issus des données du quartier, même s'ils figurent dans les tags ou la description : ils caractérisent le voisinage, pas la cible de l'annonce.
 - La même règle s'applique aux hashtags et aux highlights : aucun tag de statut familial ou de démographie (#VillaFamiliale, #FamilyLiving, #ExpatLifestyle) n'est autorisé.
 
+Type de transaction : les données du bien indiquent s'il est À VENDRE ou À LOUER. Rendez-le sans ambiguïté dans le texte et adoptez le registre correspondant — pour une location, des formulations comme "à louer", "bail", "loyer mensuel", "emménagement" ; pour une vente, "à vendre", "acquisition". Lorsqu'une location précise une date de disponibilité, indiquez-la vers la fin de la description.
+
 La description doit comprendre 3 à 5 paragraphes (maximum environ 2000 caractères), séparés par des doubles sauts de ligne.
 
-Certificat de performance énergétique : si les données d'entrée comportent une classe énergétique ('cpe_class'), vous pouvez la mentionner brièvement. Si AUCUNE classe n'est fournie, ne la mentionnez PAS dans la description — la mention obligatoire est rendue dans le champ structuré du portail, pas dans le texte. N'inventez JAMAIS une classe (pas de "Classe A", pas de "A+").
+Certificat de performance énergétique : ne mentionnez PAS la classe énergétique ni la classe d'isolation thermique dans la description. Elles sont présentées au lecteur dans un champ structuré distinct — une mention dans le texte serait redondante et varierait d'une langue à l'autre. N'en inventez jamais.
 
 Les points forts doivent être des phrases concises (5-8 points). Pour chaque point fort, choisissez un nom d'icône lucide-react VALIDE dans cette liste : 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (pour cheminée), 'sun' (pour orientation sud/luminosité), 'trees' (pour jardin/verdure), 'mountain' (pour vue), 'map-pin' (pour emplacement), 'car' (pour parking/garage), 'arrow-up' (pour ascenseur/étages), 'archive' (pour rangement/cave), 'square' (pour surface/m²), 'school' (uniquement si une école est citée dans l'entrée), 'train' (uniquement si une liaison de transport est étayée), 'shield' (pour sécurité), 'zap' (pour domotique/électricité), 'door-open', 'globe' (pour situation internationale). N'inventez PAS de nom d'icône — utilisez uniquement la liste ci-dessus.
 
@@ -100,6 +118,11 @@ Anti-hallucination (mandatory):
 - "cellar = yes" does NOT license "integrated wardrobes", "walk-in closets", "optimized storage", or "abundant storage" inside the unit — it means a separate storage room in the building basement. Reference it as "cellar" or "separate storage room". Same for "basement = yes" (a distinct sub-grade floor) and "attic = yes" (loft or unfinished attic for storage) — no spillover into in-unit storage phrasing.
 - If the neighborhood data names landmarks or schools, describe the area but do NOT assert the proximity to THIS property unless it is in the photo data or the property data.
 - If a fact is unsupported, omit it. A shorter listing is better than an invented one.
+- Name only the features in the provided feature list, using the exact term given — a balcony is not a terrace, a cellar is not a basement. Never introduce a feature (balcony, terrace, garden, parking, pool, fireplace, lift, air-conditioning) that is not in the list or in a photo analysis.
+- Refer to the property only by its stated property type: an apartment is never a "house", a studio is never an "apartment".
+- Do not assert the size of an individual room ("spacious bathroom", "generously proportioned bedroom"). Only the total living area is a measured fact.
+- Do not infer light, sunshine, or views from the floor of the unit — a garden-level or basement unit is not necessarily dark, an upper floor not necessarily bright.
+- Describe only what conveys with the property: architecture, layout, fixed fittings (fitted kitchen, parquet, fireplace), light and outlook. Do NOT describe movable furniture or decoration — sofas, beds, televisions, chandeliers, mirrors, rugs, artwork, planters — unless "furnished" is in the feature list.
 
 Fair Housing (mandatory):
 - Describe the property and the neighborhood — never the ideal occupant.
@@ -107,9 +130,11 @@ Fair Housing (mandatory):
 - Do NOT carry over descriptors such as "family-friendly", "expat-friendly", or "student area" from the neighborhood data into the listing copy, even if they appear as tags or in the description: those describe the neighborhood, not the audience of the ad.
 - The same rule applies to hashtags and highlights: no family-status or demographic tags (#FamilyLiving, #ExpatHome, #FamilyHome, #FamilyFocused) are permitted.
 
+Transaction type: the property data states whether the property is FOR SALE or FOR RENT. Make this unambiguous in the copy and use the matching register — for a rental, wording such as "available to rent", "tenancy", "monthly rent", "move-in"; for a sale, "for sale", "purchase". When a rental specifies an availability date, state it near the end of the description.
+
 The description should contain 3-5 paragraphs (approximately 2000 characters max), separated by double line breaks.
 
-Energy passport: if the input data includes an energy class ('cpe_class'), you MAY mention it briefly. If NO class is supplied, do NOT mention it in the description — the mandatory disclosure is rendered as a structured field on the portal, not in the prose. NEVER invent an energy class (no "Class A", no "A++").
+Energy passport: do NOT mention the energy performance class or the thermal-insulation class in the description. They are shown to the reader as a separate structured field, so a prose mention would be redundant and would drift inconsistently between languages. Never invent one.
 
 Highlights should be concise bullet phrases (5-8 points). For each highlight, pick a VALID lucide-react icon name from this list: 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (for fireplace), 'sun' (for south-facing/daylight), 'trees' (for garden/greenery), 'mountain' (for view), 'map-pin' (for location), 'car' (for parking/garage), 'arrow-up' (for elevator/floors), 'archive' (for storage/cellar), 'square' (for area/sqm), 'school' (only if a school is named in the inputs), 'train' (only if a transit link is supported), 'shield' (for security), 'zap' (for smart-home/electrical), 'door-open', 'globe' (for international setting). Do NOT invent icon names — use only the list above.
 
@@ -231,20 +256,32 @@ export function buildListingPrompt(
   );
   const photoContext = buildPhotoContext(photoAnalyses);
 
+  const floorLine =
+    property.floor_of_unit == null
+      ? ""
+      : property.floor_of_unit === 0
+        ? "Floor of this unit: ground floor"
+        : property.floor_of_unit < 0
+          ? `Floor of this unit: ${property.floor_of_unit} (below ground / basement level)`
+          : `Floor of this unit: ${property.floor_of_unit}`;
+
   let user = `Generate a property listing for this property.
 
 IMPORTANT scope rule:
 - Describe the property and the neighborhood. Never describe the ideal occupant.
 - The neighborhood data below is CONTEXT for the location, not facts about THIS property. You may reference what the neighborhood IS (e.g. "near EU institutions", "in the Alzette valley") but never borrow descriptors that classify people ("family-friendly", "expat-friendly", "ideal for X").
-- Every concrete claim (named amenity, distance, transit line, school, store, year built, energy class, brand) must be supported by the property data, the photo analyses, or the neighborhood data below. If a claim is not supported, omit it.
+- Every concrete claim (named amenity, distance, transit line, school, store, year built, brand) must be supported by the property data, the photo analyses, or the neighborhood data below. If a claim is not supported, omit it.
 
+Transaction type: ${property.listing_kind === "rent" ? "FOR RENT (rental listing)" : "FOR SALE"}
 Property type: ${property.property_type}
 Bedrooms: ${property.bedrooms}
 Bathrooms: ${property.bathrooms}
 ${property.sqm != null ? `Size: ${property.sqm} m²` : "Size: not provided — do not quote any square-metre figure and do not invent one."}
+${property.year_built != null ? `Year built: ${property.year_built}` : ""}
+${property.floors_total != null ? `Floors in the building: ${property.floors_total}` : ""}
+${floorLine}
 ${activeFeatures.length > 0 ? `Features: ${activeFeatures.join(", ")}` : ""}
-${property.cpe_class ? `Energy class (CPE): ${property.cpe_class}` : ""}
-${property.thermal_insulation_class ? `Thermal insulation class: ${property.thermal_insulation_class}` : ""}
+${property.listing_kind === "rent" && property.availability_date ? `Available to rent from: ${property.availability_date}` : ""}
 
 ${neighborhoodContext}
 

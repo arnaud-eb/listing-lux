@@ -216,8 +216,88 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 1.8", () => {
-    expect(PROMPT_VERSION).toBe("2.0");
+  it("has version 2.1", () => {
+    expect(PROMPT_VERSION).toBe("2.1");
+  });
+
+  describe("v2.1 — transaction type, availability, floor", () => {
+    it("states FOR RENT in the user prompt for a rental", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        { ...mockProperty, listing_kind: "rent" },
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).toContain("FOR RENT");
+    });
+
+    it("defaults to FOR SALE when no listing kind is given", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        mockProperty,
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).toContain("FOR SALE");
+    });
+
+    it("includes the availability date for a rental", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        {
+          ...mockProperty,
+          listing_kind: "rent",
+          availability_date: "2026-09-01",
+        },
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).toContain("2026-09-01");
+    });
+
+    it("omits the availability date for a sale", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        {
+          ...mockProperty,
+          listing_kind: "sale",
+          availability_date: "2026-09-01",
+        },
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).not.toContain("2026-09-01");
+    });
+
+    it("flags a negative floor as a basement level", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        { ...mockProperty, floor_of_unit: -1 },
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).toContain("basement level");
+    });
+
+    it("instructs every language not to put the energy class in the prose", () => {
+      for (const lang of ["de", "fr", "en"] as const) {
+        const { system } = buildListingPrompt(
+          lang,
+          mockProperty,
+          mockAnalyses,
+          mockLocality,
+        );
+        // Matches "energy" / "Energie…" / "énergétique" across the languages.
+        expect(system).toMatch(/[ée]nerg/i);
+      }
+      const { system: en } = buildListingPrompt(
+        "en",
+        mockProperty,
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(en).toMatch(/do NOT mention the energy performance class/i);
+    });
   });
 
   // The v1.7 architectural fix labels keyword data as "Area facts" with explicit
