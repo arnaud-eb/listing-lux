@@ -63,6 +63,13 @@ async function generateOne(
       neighborhood: fixture.property.neighborhood,
       property_type: fixture.property.property_type,
       features: fixture.property.features,
+      // Forward the v2.1 fields so the audit exercises the same prompt the
+      // production route builds (transaction type, availability, floor).
+      listing_kind: fixture.property.listing_kind,
+      year_built: fixture.property.year_built ?? null,
+      floors_total: fixture.property.floors_total ?? null,
+      floor_of_unit: fixture.property.floor_of_unit ?? null,
+      availability_date: fixture.property.availability_date ?? null,
     },
     fixture.photo_analyses,
     locality,
