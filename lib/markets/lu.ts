@@ -25,21 +25,23 @@ export const luxembourgMarket: Market = {
     'renovated',
     'city-view',
   ],
+  // Curated base hashtags — high-volume and non-luxury. A hardcoded "luxury"
+  // tag misfits entry-tier listings (a studio in Bonnevoie is not #LuxuryApartment).
   hashtags: {
     en: [
-      '#LuxuryRealEstate',
-      '#LuxembourgRealEstate',
       '#RealEstate',
+      '#LuxembourgRealEstate',
+      '#HouseHunting',
       '#DreamHome',
-      '#LuxuryHomes',
-      '#LuxuryLiving',
+      '#NewHome',
+      '#HomeSweetHome',
       '#HomeForSale',
       '#PropertyForSale',
       '#Luxembourg',
     ],
     fr: [
       '#ImmobilierLuxembourg',
-      '#ImmobilierDeLuxe',
+      '#BienImmobilier',
       '#Immobilier',
       '#Immo',
       '#AgentImmobilier',
@@ -51,7 +53,7 @@ export const luxembourgMarket: Market = {
       '#ImmobilienLuxemburg',
       '#Immobilien',
       '#Immobilienmakler',
-      '#Luxusimmobilien',
+      '#Traumhaus',
       '#Eigenheim',
       '#Immobilieninvestment',
       '#Makler',
@@ -60,17 +62,17 @@ export const luxembourgMarket: Market = {
   },
   propertyTypeHashtags: {
     apartment: {
-      en: ['#LuxuryApartment'],
-      fr: ['#AppartementDeLuxe', '#Appartement'],
-      de: ['#Luxuswohnung', '#Wohnung'],
+      en: ['#Apartment'],
+      fr: ['#Appartement'],
+      de: ['#Wohnung'],
     },
     house: {
-      en: ['#LuxuryHouse'],
-      fr: ['#MaisonDeLuxe', '#Maison'],
-      de: ['#Luxushaus', '#Haus'],
+      en: ['#House'],
+      fr: ['#Maison'],
+      de: ['#Haus'],
     },
     penthouse: {
-      en: ['#Penthouse', '#LuxuryPenthouse'],
+      en: ['#Penthouse'],
       fr: ['#Penthouse'],
       de: ['#Penthouse'],
     },
@@ -85,7 +87,7 @@ export const luxembourgMarket: Market = {
       de: ['#Duplex'],
     },
     villa: {
-      en: ['#LuxuryVilla', '#Villa'],
+      en: ['#Villa'],
       fr: ['#Villa'],
       de: ['#Villa'],
     },
