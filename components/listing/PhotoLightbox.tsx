@@ -44,11 +44,13 @@ export default function PhotoLightbox({
   const resolvedAlt = alt ?? tCarousel("altPrefix");
   const [index, setIndex] = useState(initialIndex);
 
-  // Sync incoming initialIndex whenever the lightbox is (re-)opened with
-  // a different starting image.
-  useEffect(() => {
+  // Re-point to initialIndex each time the lightbox transitions to open, so a
+  // reopen always starts on the freshly clicked image.
+  const [wasOpen, setWasOpen] = useState(open);
+  if (open !== wasOpen) {
+    setWasOpen(open);
     if (open) setIndex(initialIndex);
-  }, [open, initialIndex]);
+  }
 
   const goPrev = useCallback(() => {
     setIndex((i) => (i === 0 ? urls.length - 1 : i - 1));

@@ -32,6 +32,7 @@ export default function DynamicIcon({ name, ...props }: DynamicIconProps) {
   const Icon = getLazyIcon(name);
   return (
     <Suspense fallback={<Sparkles {...props} />}>
+      {/* eslint-disable-next-line react-hooks/static-components -- iconCache keys each lazy icon by name, so its identity is stable across renders */}
       <Icon {...props} />
     </Suspense>
   );

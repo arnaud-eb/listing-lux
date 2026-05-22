@@ -130,10 +130,6 @@ function RoomTypePill({
   const [width, setWidth] = useState(40);
 
   useEffect(() => {
-    if (!isEditing) setDraft(value);
-  }, [value, isEditing]);
-
-  useEffect(() => {
     if (isEditing && inputRef.current) {
       inputRef.current.focus();
       inputRef.current.select();
@@ -167,6 +163,7 @@ function RoomTypePill({
         type="button"
         onClick={(e) => {
           e.stopPropagation();
+          setDraft(value);
           setIsEditing(true);
         }}
         aria-label={t("ariaEditRoomType", { value })}
