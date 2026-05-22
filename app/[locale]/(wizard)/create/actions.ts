@@ -108,7 +108,7 @@ export async function analyzePhoto(photoUrl: string) {
           "You are a luxury real estate photographer analyzing a single property photo. " +
           "Identify the room type, key features, architectural style, condition, top selling points, and overall atmosphere. " +
           "Be specific and use language that appeals to high-end property buyers. " +
-          "If — and only if — the photo IS a Luxembourg CPE / Energiepass certificate (or otherwise visibly displays the 'Classe énergétique' / 'Energieklasse' / 'Energy class' label with a letter A++..I), set `cpe_class` and `thermal_insulation_class` to the values shown. " +
+          "If — and only if — the photo IS a Luxembourg CPE / Energiepass certificate (or otherwise visibly displays the 'Classe énergétique' / 'Energieklasse' / 'Energy class' label with a letter A+..I), set `cpe_class` and `thermal_insulation_class` to the values shown. " +
           "Do NOT guess these classes from interior photos, exterior photos, kitchen renovations, etc. — leave both null in that case. Inventing a class is a regulatory issue under Luxembourg's RGD du 30 nov. 2007.",
       },
       {
@@ -162,9 +162,12 @@ export async function derivePropertyAggregates(
     .join("\n");
 
   const propertyTypeList = PROPERTY_TYPES.map((t) => t.value).join(", ");
-  const featureList = FEATURE_OPTIONS.map((f) => `${f.id} (${f.label})`).join(
-    ", ",
-  );
+  // 'furnished' is deliberately excluded from vision derivation: staging, or a
+  // current tenant's furniture in a photo, does not establish that the unit is
+  // sold/let furnished — that is a contractual fact only the agent can assert.
+  const featureList = FEATURE_OPTIONS.filter((f) => f.id !== "furnished")
+    .map((f) => `${f.id} (${f.label})`)
+    .join(", ");
 
   const { object } = await generateObject({
     model: openai("gpt-4.1-mini"),
@@ -187,6 +190,8 @@ export async function derivePropertyAggregates(
 
   return {
     ...object,
+    // Guard in case the model emits 'furnished' despite it being omitted above.
+    features: object.features.filter((id) => id !== "furnished"),
     cpe_class: cpeClass,
     thermal_insulation_class: thermalClass,
   };

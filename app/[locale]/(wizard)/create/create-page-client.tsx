@@ -193,6 +193,9 @@ export default function CreatePageClient({ localityOptions }: CreatePageClientPr
                         }
                         onKeyDown={blockNonNumeric}
                         min={1}
+                        autoComplete="off"
+                        data-lpignore="true"
+                        data-form-type="other"
                       />
                     </div>
 
@@ -261,6 +264,9 @@ export default function CreatePageClient({ localityOptions }: CreatePageClientPr
                           onChange={(e) =>
                             updateField("availabilityDate", e.target.value)
                           }
+                          autoComplete="off"
+                          data-lpignore="true"
+                          data-form-type="other"
                           aria-invalid={availabilityInPast || undefined}
                           aria-describedby={
                             availabilityInPast
@@ -361,6 +367,9 @@ export default function CreatePageClient({ localityOptions }: CreatePageClientPr
                       placeholder={t("addressPlaceholder")}
                       value={form.address ?? ""}
                       onChange={(e) => updateField("address", e.target.value)}
+                      autoComplete="off"
+                      data-lpignore="true"
+                      data-form-type="other"
                     />
                     <p className="text-2xs text-gray-500">
                       {t("addressHelper")}

@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import {
   Select,
@@ -32,24 +31,21 @@ export default function ClearableClassSelect({
   value,
   onChange,
 }: ClearableClassSelectProps) {
-  // Radix Select v1 won't re-render placeholder when value → undefined; force
-  // remount via resetKey. https://github.com/radix-ui/primitives/issues/1569
-  const [resetKey, setResetKey] = useState(0);
-
   function handleValueChange(next: string) {
-    if (next === NONE_VALUE) {
-      onChange("");
-      setResetKey((k) => k + 1);
-      return;
-    }
-    onChange(next as CpeClass);
+    onChange(next === NONE_VALUE ? "" : (next as CpeClass));
   }
 
   return (
     <div className="flex flex-col gap-1.5">
       <Label htmlFor={id}>{label}</Label>
+      {/* Radix Select v1 latches controlled/uncontrolled at mount: an initial
+          value="" (→ undefined) makes it uncontrolled, so a value restored
+          afterwards (sessionStorage draft) is ignored and the field looks
+          blank on reload. Keying on `value` remounts it so a restored value
+          initialises as controlled — and also covers the clear→placeholder
+          case the old resetKey handled (Radix issue #1569). */}
       <Select
-        key={resetKey}
+        key={value}
         value={value || undefined}
         onValueChange={handleValueChange}
       >

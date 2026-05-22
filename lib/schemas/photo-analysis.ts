@@ -37,7 +37,7 @@ export const photoAnalysisSchema = z.object({
     .enum(CPE_CLASSES)
     .nullable()
     .describe(
-      "Energy performance class from a CPE certificate photo (A++, A+, A, B, C, D, E, F, G, H, I). Set ONLY when the photo IS a CPE certificate or visibly contains the energy class label; otherwise null. Never guess from interior photos.",
+      "Energy performance class from a CPE certificate photo (A+, A, B, C, D, E, F, G, H, I). Set ONLY when the photo IS a CPE certificate or visibly contains the energy class label; otherwise null. Never guess from interior photos.",
     ),
   /** Thermal insulation class from the same CPE certificate. Same null rules as cpe_class. */
   thermal_insulation_class: z

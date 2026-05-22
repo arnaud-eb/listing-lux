@@ -94,7 +94,7 @@ describe("checkRateLimit — Upstash-backed path", () => {
     expect(result.success).toBe(true);
   });
 
-  it("uses different limits per kind (generate=10, photoAnalysis=30)", async () => {
+  it("uses different limits per kind (generate=10, photoAnalysis=80)", async () => {
     mockLimit.mockResolvedValue({
       success: true,
       remaining: 0,
@@ -104,7 +104,7 @@ describe("checkRateLimit — Upstash-backed path", () => {
     const gen = await checkRateLimit("s", "generate");
     const photo = await checkRateLimit("s", "photoAnalysis");
     expect(gen.limit).toBe(10);
-    expect(photo.limit).toBe(30);
+    expect(photo.limit).toBe(80);
   });
 });
 

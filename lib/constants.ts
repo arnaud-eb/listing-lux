@@ -44,8 +44,10 @@ export const MIN_PHOTOS = 5
 /** Maximum file size per photo (10MB) */
 export const MAX_PHOTO_SIZE = 10 * 1024 * 1024
 
-/** Maximum photos allowed per listing */
-export const MAX_PHOTOS = 20
+/** Maximum photos allowed per listing. Generous on purpose — the photos are
+ *  AI-analysis input for the listing copy, not a public gallery. Keep the
+ *  `photoAnalysis` rate-limit window (lib/rate-limit.ts) above this. */
+export const MAX_PHOTOS = 50
 
 /** Maximum characters for regeneration comment */
 export const MAX_COMMENT_LENGTH = 1000
@@ -63,8 +65,9 @@ export const PROPERTY_TYPES = [
   { value: 'villa', label: 'Villa' },
 ] as const
 
-/** Luxembourg energy passport (CPE) classes. Per RGD 30 Nov 2007 (Guichet.lu). */
-export const CPE_CLASSES = ['A++', 'A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'] as const
+/** Luxembourg energy passport (CPE) classes — the scale runs A+ (best) to I
+ *  (worst). Per RGD 30 Nov 2007 (Guichet.lu). There is no 'A++'. */
+export const CPE_CLASSES = ['A+', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'] as const
 export type CpeClass = (typeof CPE_CLASSES)[number]
 
 /** Listing transaction type. Drives copy register, CTA vocabulary, and legal disclosures. */
@@ -91,8 +94,8 @@ export const FEATURE_OPTIONS = [
   { id: 'parking', label: 'Parking' },
   { id: 'garden', label: 'Garden' },
   { id: 'elevator', label: 'Elevator' },
-  { id: 'cellar', label: 'Cellar / Storage room' },
-  { id: 'basement', label: 'Basement' },
+  { id: 'cellar', label: 'Cellar (private storage room in the building)' },
+  { id: 'basement', label: 'Basement (full sub-grade floor)' },
   { id: 'attic', label: 'Attic' },
   { id: 'pool', label: 'Pool' },
   { id: 'terrace', label: 'Terrace' },

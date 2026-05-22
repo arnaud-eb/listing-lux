@@ -65,6 +65,8 @@ export default function NumberField({
         type="text"
         inputMode="numeric"
         autoComplete="off"
+        data-lpignore="true"
+        data-form-type="other"
         placeholder={placeholder}
         value={draft}
         onChange={handleChange}

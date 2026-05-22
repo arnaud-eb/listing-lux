@@ -24,7 +24,9 @@ export type RateLimitKind = "generate" | "photoAnalysis";
  */
 const LIMITS: Record<RateLimitKind, { tokens: number; window: `${number} ${"s" | "m" | "h"}` }> = {
   generate: { tokens: 10, window: "1 m" },
-  photoAnalysis: { tokens: 30, window: "1 m" },
+  // Stays above MAX_PHOTOS (50) so a full batch upload never trips the limiter
+  // and silently drops analyses mid-batch, with headroom for re-adds/retries.
+  photoAnalysis: { tokens: 80, window: "1 m" },
 };
 
 let redis: Redis | null = null;
