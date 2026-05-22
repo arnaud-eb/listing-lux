@@ -36,7 +36,7 @@
       "contact": "Contact"
     },
     "login": "Connexion",
-    "tryDemo": "Essayer la démo"
+    "getStarted": "Commencer"
   },
   "wizardNav": {
     "home": "Accueil",
@@ -51,7 +51,7 @@
       "titlePrefix": "Générez des annonces immobilières en 3 langues —",
       "titleAccent": "En 5 minutes",
       "subtitle": "Valorisez votre portefeuille avec des textes immobiliers professionnels en allemand, français et anglais. Conçus pour le marché du luxe avec précision et rapidité.",
-      "ctaPrimary": "Essayer la démo",
+      "ctaPrimary": "Commencer gratuitement",
       "ctaSecondary": "Créer votre annonce",
       "imageAlt": "Extérieur d'une villa moderne de luxe au coucher du soleil"
     },
@@ -142,13 +142,6 @@
       "twitter": "Twitter",
       "linkedin": "LinkedIn"
     }
-  },
-  "demo": {
-    "icon": "🏡",
-    "title": "Démo bientôt disponible",
-    "description": "Nous préparons une démo pré-configurée avec des exemples d'annonces immobilières luxembourgeoises. En attendant, créez votre propre annonce.",
-    "backHome": "← Retour à l'accueil",
-    "createListing": "Créer une annonce"
   },
   "wizard": {
     "create": {

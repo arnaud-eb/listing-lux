@@ -56,7 +56,7 @@ export default function Navigation() {
             asChild
             className="rounded-lg h-10 px-5 bg-gold text-navy-deep font-bold shadow-lg shadow-gold/20 hover:scale-105 hover:bg-gold/90"
           >
-            <Link href="/create">{t("tryDemo")}</Link>
+            <Link href="/create">{t("getStarted")}</Link>
           </Button>
         </div>
 
@@ -116,7 +116,7 @@ export default function Navigation() {
                   asChild
                   className="rounded-lg h-12 w-full bg-gold text-navy-deep font-bold shadow-lg shadow-gold/20 hover:bg-gold/90"
                 >
-                  <Link href="/create">{t("tryDemo")}</Link>
+                  <Link href="/create">{t("getStarted")}</Link>
                 </Button>
               </SheetClose>
             </div>

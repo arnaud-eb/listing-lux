@@ -36,7 +36,7 @@
       "contact": "Contact"
     },
     "login": "Login",
-    "tryDemo": "Try Demo"
+    "getStarted": "Get started"
   },
   "wizardNav": {
     "home": "Home",
@@ -51,7 +51,7 @@
       "titlePrefix": "Generate Property Listings in 3 Languages —",
       "titleAccent": "In 5 Minutes",
       "subtitle": "Elevate your portfolio with professional real estate copy in German, French, and English. Tailored for the high-end luxury market with precision and speed.",
-      "ctaPrimary": "Try Demo Free",
+      "ctaPrimary": "Get started — free",
       "ctaSecondary": "Create Your Listing",
       "imageAlt": "Luxury modern villa exterior with sunset lighting"
     },
@@ -142,13 +142,6 @@
       "twitter": "Twitter",
       "linkedin": "LinkedIn"
     }
-  },
-  "demo": {
-    "icon": "🏡",
-    "title": "Demo Coming Soon",
-    "description": "We're preparing a pre-loaded demo with sample Luxembourg property listings. In the meantime, try creating your own listing.",
-    "backHome": "← Back to Home",
-    "createListing": "Create a Listing"
   },
   "wizard": {
     "create": {
