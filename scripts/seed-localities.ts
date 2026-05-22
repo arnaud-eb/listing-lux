@@ -58,6 +58,8 @@ interface LocalityRecord {
   price_per_sqm_min?: number | null;
   price_per_sqm_median?: number | null;
   price_per_sqm_max?: number | null;
+  asking_price_per_sqm_apt?: number | null;
+  asking_price_per_sqm_house?: number | null;
   currency?: string | null;
 }
 
@@ -105,6 +107,8 @@ function topoSortByKind(localities: LocalityRecord[]): LocalityRecord[] {
 interface DbClient {
   upsertLocality: (row: Record<string, unknown>) => Promise<void>;
   lookupParentId: (slug: string, countryCode: string) => Promise<string | null>;
+  /** All locality slugs currently in the DB. null for dry-run (no DB). */
+  listExistingSlugs: (countryCode: string) => Promise<string[] | null>;
 }
 
 function makeSupabaseClient(): DbClient {
@@ -133,13 +137,23 @@ function makeSupabaseClient(): DbClient {
       if (error) throw new Error(`Parent lookup failed for ${slug}: ${error.message}`);
       return data?.id ?? null;
     },
+    async listExistingSlugs(countryCode) {
+      const { data, error } = await sb
+        .from("localities")
+        .select("slug")
+        .eq("country_code", countryCode);
+      if (error) throw new Error(`listExistingSlugs failed: ${error.message}`);
+      return (data ?? []).map((r) => r.slug as string);
+    },
   };
 }
 
-function makeDryRunClient(known: Set<string>): DbClient {
-  // For dry-run we resolve parents from the in-memory set of slugs the JSON ships,
-  // plus any slug we successfully "upserted" earlier in this run. That way we can
-  // validate the JSON's internal FK consistency without touching the DB.
+function makeDryRunClient(): DbClient {
+  // The JSON is the complete source of truth (country → cantons → communes →
+  // quartiers). topoSortByKind guarantees a parent is "upserted" before any
+  // child, so resolving parents from slugs seen earlier in this run is a real
+  // FK-consistency check — an unresolved parent_slug means the JSON is broken.
+  const known = new Set<string>();
   return {
     async upsertLocality(row) {
       console.log(
@@ -149,6 +163,9 @@ function makeDryRunClient(known: Set<string>): DbClient {
     },
     async lookupParentId(slug) {
       return known.has(slug) ? `dry-run-${slug}` : null;
+    },
+    async listExistingSlugs() {
+      return null;
     },
   };
 }
@@ -162,34 +179,7 @@ async function main() {
     `seed:localities — ${seed.localities.length} rows, country=${countryCode}, snapshot=${seed._meta.data_as_of}${args.dryRun ? " (DRY RUN)" : ""}`,
   );
 
-  // For dry-run, prime the known-slugs set with what migration 010 already inserted
-  // so the validator doesn't false-alarm on parents it cannot see. Real run looks
-  // them up in the DB.
-  const seededByMigration010 = new Set([
-    "lu",
-    "canton-capellen",
-    "canton-clervaux",
-    "canton-diekirch",
-    "canton-echternach",
-    "canton-esch-sur-alzette",
-    "canton-grevenmacher",
-    "canton-luxembourg",
-    "canton-mersch",
-    "canton-redange",
-    "canton-remich",
-    "canton-vianden",
-    "canton-wiltz",
-    "luxembourg-city",
-    "strassen",
-    "bertrange",
-    "mamer",
-    "hesperange",
-    "walferdange",
-    "esch-sur-alzette",
-    "differdange",
-  ]);
-
-  const db = args.dryRun ? makeDryRunClient(seededByMigration010) : makeSupabaseClient();
+  const db = args.dryRun ? makeDryRunClient() : makeSupabaseClient();
 
   const ordered = topoSortByKind(seed.localities);
   let inserted = 0;
@@ -227,6 +217,8 @@ async function main() {
         price_per_sqm_min: loc.price_per_sqm_min ?? null,
         price_per_sqm_median: loc.price_per_sqm_median ?? null,
         price_per_sqm_max: loc.price_per_sqm_max ?? null,
+        asking_price_per_sqm_apt: loc.asking_price_per_sqm_apt ?? null,
+        asking_price_per_sqm_house: loc.asking_price_per_sqm_house ?? null,
         currency: loc.currency ?? null,
         data_source: seed._meta.source,
         data_as_of: seed._meta.data_as_of,
@@ -245,6 +237,21 @@ async function main() {
   console.log(
     `\n${args.dryRun ? "Validated" : "Upserted"} ${inserted} rows${failed > 0 ? `, ${failed} failed` : ""}.`,
   );
+
+  // upsert never deletes — flag DB rows the JSON no longer defines (e.g. communes
+  // merged away). Removal stays manual: a stale row is safer than a surprise delete.
+  const existingSlugs = await db.listExistingSlugs(countryCode);
+  if (existingSlugs) {
+    const jsonSlugs = new Set(seed.localities.map((l) => l.slug));
+    const orphans = existingSlugs.filter((s) => !jsonSlugs.has(s)).sort();
+    if (orphans.length > 0) {
+      console.warn(
+        `\n⚠ ${orphans.length} DB row(s) absent from the JSON — orphaned, not deleted:`,
+      );
+      for (const s of orphans) console.warn(`    ${s}`);
+      console.warn(`  Remove them manually if the omission is intentional.`);
+    }
+  }
 
   if (!args.dryRun && failed === 0) {
     await pingRevalidate();

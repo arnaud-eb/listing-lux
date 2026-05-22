@@ -1,109 +1,121 @@
 #!/usr/bin/env bun
 /**
- * audit:statec-slug-match — one-shot sanity check that STATEC's commune names
- * align with the slugs in data/lu-localities.json before fetch-prices.ts runs
- * for real. Every unmatched row becomes a candidate STATEC_SLUG_ALIASES entry.
+ * statec:audit — sanity check that STATEC's commune + Luxembourg-Ville quartier
+ * names align with the slugs in data/lu-localities.json before fetch-prices.ts
+ * runs for real. Every unmatched name is a candidate alias-map entry.
  *
  * Usage:
- *   bun run scripts/statec/audit-slug-match.ts --source path/to/statec.csv
+ *   bun run statec:audit                    # resolve + download from data.public.lu
+ *   bun run statec:audit --fixtures <dir>   # use local files (see fetch-prices.ts)
  *
- * Exit codes:
- *   0 — every STATEC commune matched a JSON slug
- *   1 — at least one STATEC commune is unmatched (manual alias needed)
+ * Exit 0 — every STATEC name matched a slug; exit 1 — at least one unmatched.
  */
 
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { matchCommunes } from "./slug-match";
+import {
+  matchLocalities,
+  STATEC_COMMUNE_ALIASES,
+  STATEC_QUARTIER_ALIASES,
+  type MatchResult,
+} from "./slug-match";
+import { parseStatecXls, type StatecPriceRow } from "./parse-xls";
+import { resolveStatec, downloadStatec, type StatecSources } from "./source";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-interface Args {
-  source: string;
-}
+const LU_VILLE = "luxembourg-city";
 
-function parseArgs(argv: string[]): Args {
-  const i = argv.indexOf("--source");
-  if (i === -1 || !argv[i + 1]) {
-    throw new Error(
-      "Usage: bun run scripts/statec/audit-slug-match.ts --source <csv>",
-    );
-  }
-  return { source: argv[i + 1] };
+function flag(argv: string[], name: string): string | null {
+  const i = argv.indexOf(name);
+  return i !== -1 && argv[i + 1] ? argv[i + 1] : null;
 }
 
 interface LocalityRow {
   kind: string;
   slug: string;
+  parent_slug: string | null;
 }
 
-async function loadKnownCommuneSlugs(): Promise<Set<string>> {
+async function loadSlugs(): Promise<{ communes: Set<string>; quartiers: Set<string> }> {
   const file = path.resolve(__dirname, "..", "..", "data", "lu-localities.json");
-  const raw = await fs.readFile(file, "utf-8");
-  const parsed = JSON.parse(raw) as { localities: LocalityRow[] };
-  return new Set(
-    parsed.localities.filter((l) => l.kind === "commune").map((l) => l.slug),
-  );
+  const { localities } = JSON.parse(await fs.readFile(file, "utf-8")) as {
+    localities: LocalityRow[];
+  };
+  return {
+    communes: new Set(
+      localities.filter((l) => l.kind === "commune").map((l) => l.slug),
+    ),
+    quartiers: new Set(
+      localities
+        .filter((l) => l.kind === "quartier" && l.parent_slug === LU_VILLE)
+        .map((l) => l.slug),
+    ),
+  };
 }
 
-/**
- * Lenient CSV reader: tolerates comma or semicolon separators (STATEC has used
- * both historically) and looks for a column named "commune" or "municipality".
- * Tighten this once the actual STATEC export format is confirmed.
- */
-async function readCommuneColumn(file: string): Promise<string[]> {
-  const text = await fs.readFile(file, "utf-8");
-  const lines = text.split(/\r?\n/).filter((l) => l.trim());
-  if (lines.length === 0) return [];
-  const sep = lines[0].includes(";") ? ";" : ",";
-  const header = lines[0].split(sep).map((c) => c.trim().toLowerCase());
-  const idx = header.findIndex((c) => c === "commune" || c === "municipality");
-  if (idx === -1) {
-    throw new Error(
-      `No "commune" column in ${file}. Headers: ${header.join(", ")}`,
-    );
+function report(label: string, rows: StatecPriceRow[], result: MatchResult): void {
+  const viaAlias = result.matched.filter((m) => m.via === "alias");
+  console.log(
+    `\n${label}: ${rows.length} STATEC rows → ✓ ${result.matched.length} matched (${viaAlias.length} via alias)`,
+  );
+  for (const m of viaAlias) console.log(`    alias "${m.statecName}" → ${m.slug}`);
+  if (result.unmatched.length > 0) {
+    console.log(`  ✗ unmatched (${result.unmatched.length}) — add to the alias map:`);
+    for (const n of result.unmatched) console.log(`      "${n}"`);
   }
-  return lines
-    .slice(1)
-    .map((l) => l.split(sep)[idx]?.trim().replace(/^"|"$/g, "") ?? "")
-    .filter(Boolean);
+  if (result.unseenSlugs.length > 0) {
+    console.log(`  ℹ JSON slugs STATEC didn't ship (${result.unseenSlugs.length}):`);
+    for (const s of result.unseenSlugs) console.log(`      ${s}`);
+  }
 }
 
 async function main() {
-  const { source } = parseArgs(process.argv.slice(2));
-  const [statecNames, knownSlugs] = await Promise.all([
-    readCommuneColumn(source),
-    loadKnownCommuneSlugs(),
-  ]);
+  const argv = process.argv.slice(2);
+  const fixturesDir = flag(argv, "--fixtures");
 
-  console.log(`STATEC source : ${source} (${statecNames.length} names)`);
-  console.log(`Local JSON    : ${knownSlugs.size} commune slugs\n`);
-
-  const result = matchCommunes(statecNames, knownSlugs);
-
-  const viaAlias = result.matched.filter((m) => m.via === "alias");
-  console.log(`✓ Matched ${result.matched.length}  (${viaAlias.length} via manual alias)`);
-  for (const m of viaAlias) {
-    console.log(`    alias "${m.statecName}" → ${m.slug}`);
+  let sources: StatecSources;
+  if (fixturesDir) {
+    sources = {
+      communeApartmentXls: path.join(fixturesDir, "commune-apartment.xls"),
+      communeHouseXls: path.join(fixturesDir, "commune-house.xls"),
+      quartierApartmentXls: path.join(fixturesDir, "quartier-apartment.xlsx"),
+      quartierHouseXls: path.join(fixturesDir, "quartier-house.xlsx"),
+    };
+  } else {
+    console.log("Resolving + downloading STATEC files from data.public.lu …");
+    sources = await downloadStatec(await resolveStatec());
   }
 
-  if (result.unmatched.length > 0) {
-    console.log(
-      `\n✗ Unmatched STATEC names (${result.unmatched.length}) — add to STATEC_SLUG_ALIASES in scripts/statec/slug-match.ts:`,
-    );
-    for (const n of result.unmatched) console.log(`    "${n}"`);
-  }
+  const communeRows = [
+    ...parseStatecXls(sources.communeApartmentXls),
+    ...parseStatecXls(sources.communeHouseXls),
+  ];
+  const quartierRows = [
+    ...parseStatecXls(sources.quartierApartmentXls),
+    ...parseStatecXls(sources.quartierHouseXls),
+  ];
+  const slugs = await loadSlugs();
 
-  if (result.unseenSlugs.length > 0) {
-    console.log(
-      `\nℹ JSON commune slugs STATEC didn't ship (${result.unseenSlugs.length}) — informational, prices stay as-is:`,
-    );
-    for (const s of result.unseenSlugs) console.log(`    ${s}`);
-  }
+  const communeResult = matchLocalities(
+    [...new Set(communeRows.map((r) => r.name))],
+    slugs.communes,
+    STATEC_COMMUNE_ALIASES,
+  );
+  const quartierResult = matchLocalities(
+    [...new Set(quartierRows.map((r) => r.name))],
+    slugs.quartiers,
+    STATEC_QUARTIER_ALIASES,
+  );
 
-  if (result.unmatched.length > 0) process.exit(1);
+  report("Communes", communeRows, communeResult);
+  report("Luxembourg-Ville quartiers", quartierRows, quartierResult);
+
+  if (communeResult.unmatched.length > 0 || quartierResult.unmatched.length > 0) {
+    process.exit(1);
+  }
 }
 
 main().catch((err) => {

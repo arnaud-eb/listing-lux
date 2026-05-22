@@ -1,14 +1,17 @@
 /**
- * STATEC commune names → data/lu-localities.json slug matcher.
+ * STATEC locality names → data/lu-localities.json slug matcher.
  *
- * STATEC publishes commune-level prices using FR-flavored names with accents
- * ("Pétange", "Käerjeng", "Esch-sur-Alzette"). Our JSON slugs are lowercased,
- * accent-stripped, dash-separated ("petange", "kaerjeng", "esch-sur-alzette").
- * For 95%+ of communes a deterministic normalize() should match directly; the
- * audit script surfaces the rest so we can add them to STATEC_SLUG_ALIASES.
+ * STATEC publishes names with accents and FR/LU spelling variants ("Pétange",
+ * "Käerjeng", "Ville-Haute"). Our JSON slugs are lowercased, accent-stripped,
+ * dash-separated. For most localities a deterministic normalize() matches
+ * directly; the audit script surfaces the rest as alias-map candidates.
+ *
+ * Two alias maps — communes and Luxembourg-Ville quartiers are matched against
+ * separate slug sets (and from separate STATEC datasets), so they keep separate
+ * override tables.
  */
 
-export function normalizeCommuneName(name: string): string {
+export function normalizeName(name: string): string {
   return name
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
@@ -22,14 +25,28 @@ export function normalizeCommuneName(name: string): string {
 
 /**
  * Manual overrides for STATEC names that don't normalize to our slugs.
- * Populate this map by running `bun run scripts/statec/audit-slug-match.ts`
- * against a fresh CSV — every "unmatched" line is a candidate entry here.
+ * Populate by running `bun run statec:audit` against fresh files — every
+ * "unmatched" line is a candidate entry.
  *
- * Key: result of normalizeCommuneName() applied to STATEC's raw name.
- * Value: the slug used in data/lu-localities.json.
+ * Key: result of normalizeName() on STATEC's raw name. Value: the JSON slug.
  */
-export const STATEC_SLUG_ALIASES: Record<string, string> = {
+export const STATEC_COMMUNE_ALIASES: Record<string, string> = {
   luxembourg: "luxembourg-city",
+  // STATEC uses the short name; the JSON slug carries the full commune name.
+  erpeldange: "erpeldange-sur-sure",
+  // STATEC uses the Lëtzebuergesch spelling; the JSON slug is FR-flavored.
+  "groussbus-wal": "grosbous-wahl",
+  // normalize() drops the apostrophe in "l'Ernz" → "lernz"; slug keeps "l-ernz".
+  "vallee-de-lernz": "vallee-de-l-ernz",
+};
+
+export const STATEC_QUARTIER_ALIASES: Record<string, string> = {
+  // STATEC lists the historic centre as "Ville-Haute"; our slug is centre-ville.
+  "ville-haute": "centre-ville",
+  // STATEC splits at "Neudorf"; our slug merges the twin quartier.
+  neudorf: "neudorf-weimershof",
+  // STATEC spelling carries a trailing "e".
+  pulvermuhle: "pulvermuhl",
 };
 
 export interface MatchedRow {
@@ -44,22 +61,23 @@ export interface MatchResult {
   unseenSlugs: string[];
 }
 
-export function matchCommunes(
+export function matchLocalities(
   statecNames: readonly string[],
   knownSlugs: ReadonlySet<string>,
+  aliases: Record<string, string>,
 ): MatchResult {
   const matched: MatchedRow[] = [];
   const unmatched: string[] = [];
   const consumed = new Set<string>();
 
   for (const name of statecNames) {
-    const norm = normalizeCommuneName(name);
+    const norm = normalizeName(name);
     if (knownSlugs.has(norm)) {
       matched.push({ statecName: name, slug: norm, via: "normalize" });
       consumed.add(norm);
       continue;
     }
-    const aliased = STATEC_SLUG_ALIASES[norm];
+    const aliased = aliases[norm];
     if (aliased && knownSlugs.has(aliased)) {
       matched.push({ statecName: name, slug: aliased, via: "alias" });
       consumed.add(aliased);

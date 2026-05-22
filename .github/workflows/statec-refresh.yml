@@ -1,28 +1,24 @@
-# Quarterly fetch of STATEC commune-price data → rewrite data/lu-localities.json
-# → open a PR. Once merged, seed-localities.yml syncs the updated JSON to Supabase
-# (it now triggers on push to that file).
+# Quarterly refresh of commune asking-prices in data/lu-localities.json from
+# STATEC / Observatoire de l'Habitat ("Prix annoncés des logements - Par
+# commune", data.public.lu, CC0), then opens a PR. Once merged, seed-localities.yml
+# syncs the updated JSON to Supabase (it triggers on push to that file).
 #
-# Schedule: 4 AM UTC on the 15th of every 3rd month. STATEC publishes early in
-# the quarter; running mid-month gives them time and avoids overlapping with
-# the seed cron's safety-net 1st-of-quarter run.
+# The fetcher resolves the current download URLs from the data.public.lu API
+# itself — no repo secrets or variables are needed.
 #
-# The CSV download URL is configured via the STATEC_CSV_URL repo variable
-# (Settings → Secrets and variables → Actions → Variables). The fetcher's
-# parser tolerates comma/semicolon separators and several column-name spellings,
-# but if STATEC ships a wildly different schema you may need to tweak
-# scripts/statec/fetch-prices.ts before this workflow can pass.
+# Schedule: 4 AM UTC every Monday. STATEC publishes quarterly but on no fixed
+# day, so a calendar guess would miss late releases. Instead the fetcher checks
+# the dataset's last_modified on every run and exits early when nothing changed
+# — so a weekly cron catches a new release within days, and the ~48 no-op runs
+# a year each cost a few seconds of free CI time (no diff → no PR).
 
 name: STATEC refresh
 
 on:
   schedule:
-    - cron: "0 4 15 */3 *"
+    - cron: "0 4 * * 1"
   workflow_dispatch:
     inputs:
-      source_url:
-        description: "Override STATEC CSV URL (defaults to STATEC_CSV_URL repo variable)"
-        required: false
-        type: string
       dry_run:
         description: "Run fetcher only (no PR)"
         type: boolean
@@ -41,7 +37,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -51,30 +47,12 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Resolve STATEC CSV URL
-        id: resolve
-        env:
-          INPUT_URL: ${{ inputs.source_url }}
-          REPO_VAR_URL: ${{ vars.STATEC_CSV_URL }}
-        run: |
-          url="${INPUT_URL:-$REPO_VAR_URL}"
-          if [ -z "$url" ]; then
-            echo "::error::No STATEC CSV URL configured. Set the STATEC_CSV_URL repo variable or pass source_url."
-            exit 1
-          fi
-          echo "url=$url" >> "$GITHUB_OUTPUT"
-
-      - name: Download STATEC CSV
-        run: |
-          curl -fsSL --retry 3 --retry-delay 5 -o /tmp/statec.csv "${{ steps.resolve.outputs.url }}"
-          wc -l /tmp/statec.csv
-
       - name: Run fetcher
         run: |
           if [ "${{ inputs.dry_run }}" = "true" ]; then
-            bun run statec:fetch --source /tmp/statec.csv --dry-run
+            bun run statec:fetch --dry-run
           else
-            bun run statec:fetch --source /tmp/statec.csv --as-of "$(date -u +%Y-%m-%d)"
+            bun run statec:fetch
           fi
 
       - name: Open PR with price diff
@@ -82,16 +60,17 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           branch: chore/statec-refresh
-          commit-message: "chore(localities): refresh STATEC commune prices"
-          title: "chore(localities): STATEC commune-price refresh"
+          commit-message: "chore(localities): refresh STATEC asking prices"
+          title: "chore(localities): STATEC asking-price refresh"
           body: |
-            Automated quarterly refresh of `data/lu-localities.json` from STATEC.
+            Automated quarterly refresh of `data/lu-localities.json` from STATEC /
+            Observatoire de l'Habitat ("Prix annoncés des logements - Par commune",
+            data.public.lu, CC0).
 
-            - Source: ${{ steps.resolve.outputs.url }}
             - Run: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}>
 
-            Review the JSON diff. Any commune that moved >30% QoQ already caused
-            the fetcher to fail — every value here is within sanity bounds.
+            Review the JSON diff. Any commune that moved >30% quarter-over-quarter
+            already failed the fetcher, so every value here is within sanity bounds.
             Once merged, seed-localities.yml syncs the change to Supabase.
           labels: localities, automated
           delete-branch: true
