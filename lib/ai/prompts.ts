@@ -189,7 +189,7 @@ function buildNeighborhoodContext(
     // (athome.lu / immotop.lu / FARE) routinely names commune landmarks —
     // the audit rubric is stricter than market practice here.
     parts.push(
-      `Area facts (these belong to the NEIGHBORHOOD, not to THIS property): ${kw.join(", ")}. Allowed: describing what the neighborhood contains ("Kirchberg is home to the Philharmonie", "Limpertsberg has the Parc Edmond Klein"). Forbidden: any proximity or distance claim from this property to these facts ("near the Philharmonie", "walking distance to MUDAM", "minutes from the Parc Edmond Klein"). Proximity requires explicit distance data in the property inputs, which is NOT supplied here.`,
+      `Area facts (these belong to the NEIGHBORHOOD, not to THIS property): ${kw.join(", ")}. Allowed: describing what the neighborhood contains ("Kirchberg is home to the Philharmonie", "Limpertsberg is home to the Grand Théâtre"). Forbidden: any proximity or distance claim from this property to these facts ("near the Philharmonie", "walking distance to MUDAM", "minutes from the Grand Théâtre"). Proximity requires explicit distance data in the property inputs, which is NOT supplied here.`,
     );
   }
 
