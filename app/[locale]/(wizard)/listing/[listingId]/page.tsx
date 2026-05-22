@@ -2,7 +2,7 @@ import { cache } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { createClient } from "@/lib/supabase.server";
+import { createServiceClient } from "@/lib/supabase.server";
 import { verifyPropertyOwnership, UnauthorizedError } from "@/lib/auth";
 import { getBySlug as getLocalityBySlug, listForDropdown } from "@/lib/localities/repository";
 import { pickLocalized } from "@/lib/localities/locale";
@@ -18,7 +18,7 @@ interface PageProps {
 }
 
 const getProperty = cache(async (id: string) => {
-  const supabase = await createClient();
+  const supabase = createServiceClient();
   const { data, error } = await supabase
     .from("properties")
     .select("*")
@@ -45,7 +45,7 @@ const getProperty = cache(async (id: string) => {
 });
 
 const getExistingListings = cache(async function getExistingListings(propertyId: string): Promise<Listing[]> {
-  const supabase = await createClient();
+  const supabase = createServiceClient();
   const { data } = await supabase
     .from("listings")
     .select("*")

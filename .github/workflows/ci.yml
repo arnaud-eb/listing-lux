@@ -38,7 +38,6 @@ jobs:
       - name: Run unit + component tests
         env:
           NEXT_PUBLIC_SUPABASE_URL: https://test.supabase.co
-          NEXT_PUBLIC_SUPABASE_ANON_KEY: test-anon-key
           SUPABASE_SERVICE_ROLE_KEY: test-service-role-key
           OPENAI_API_KEY: test-openai-key
           NEXT_PUBLIC_MARKET_ID: lu
