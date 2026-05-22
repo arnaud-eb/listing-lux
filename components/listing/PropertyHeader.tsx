@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/select";
 import PriceDisplay from "@/components/shared/PriceDisplay";
 import { getActiveMarket } from "@/lib/markets";
+import { BUILDING_DETAIL_LABELS } from "@/lib/constants";
 import { pickLocalized } from "@/lib/localities/locale";
 import type { LocalityOption } from "@/lib/localities/types";
 import type { Language } from "@/lib/types";
@@ -322,6 +323,13 @@ export default function PropertyHeader({
 
   return (
     <>
+      {property.listing_kind && (
+        <span className="inline-flex items-center px-2 py-0.5 mb-2 rounded-md bg-navy-deep/5 text-navy-deep text-xs font-semibold uppercase tracking-wide">
+          {property.listing_kind === "rent"
+            ? BUILDING_DETAIL_LABELS[locale].forRent
+            : BUILDING_DETAIL_LABELS[locale].forSale}
+        </span>
+      )}
       <h1 className="font-serif text-3xl font-bold text-navy-deep">
         {/* Capitalize only the first word — the property_type id is lowercase ("apartment"),
             but `t("in")` resolves to a connector ("in", "à") that must stay lowercase.

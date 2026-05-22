@@ -1,6 +1,16 @@
 import type { Listing, Property, Highlight, Language } from "./types";
 import { formatCurrency } from "./format";
-import { PROPERTY_DETAIL_LABELS } from "./constants";
+import { PROPERTY_DETAIL_LABELS, BUILDING_DETAIL_LABELS } from "./constants";
+
+/** "For sale" / "For rent" label for a listing, or null when the kind is unknown. */
+function listingKindLabel(
+  property: Property,
+  language: Language,
+): string | null {
+  if (!property.listing_kind) return null;
+  const labels = BUILDING_DETAIL_LABELS[language] ?? BUILDING_DETAIL_LABELS.en;
+  return property.listing_kind === "rent" ? labels.forRent : labels.forSale;
+}
 
 // --- Icon → Emoji mapping (derived at format-time, not stored in DB) ---
 
@@ -68,6 +78,7 @@ export const IMMOTOP_CHAR_LIMIT = 3000;
 function buildPropertyDetailsLine(property: Property, language: Language): string {
   const labels = PROPERTY_DETAIL_LABELS[language] ?? PROPERTY_DETAIL_LABELS.en;
   const parts = [
+    listingKindLabel(property, language),
     property.price != null ? formatCurrency(property.price) : null,
     property.sqm != null ? `${property.sqm} m²` : null,
     `${property.bedrooms} ${labels.bedroom(property.bedrooms)}`,
@@ -200,7 +211,9 @@ export function formatForSocialMedia(
 
   const language = (listing.language ?? "en") as Language;
   const labels = PROPERTY_DETAIL_LABELS[language] ?? PROPERTY_DETAIL_LABELS.en;
+  const kindLabel = listingKindLabel(property, language);
   const detailParts = [
+    kindLabel ? `🏷️ ${kindLabel}` : null,
     property.price != null ? `💰 ${formatCurrency(property.price)}` : null,
     property.sqm != null ? `📏 ${property.sqm} m²` : null,
     `🛏️ ${property.bedrooms} ${labels.bedroom(property.bedrooms)}`,

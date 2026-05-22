@@ -129,6 +129,14 @@ export default async function ListingPage({ params }: PageProps) {
     photo_urls: p.photo_urls,
     address: p.address,
     created_at: p.created_at,
+    listing_kind: p.listing_kind,
+    cpe_class: p.cpe_class ?? null,
+    thermal_insulation_class: p.thermal_insulation_class ?? null,
+    year_built: p.year_built ?? null,
+    charges_monthly: p.charges_monthly ?? null,
+    floors_total: p.floors_total ?? null,
+    floor_of_unit: p.floor_of_unit ?? null,
+    availability_date: p.availability_date ?? null,
   };
 
   // Page is owner-only (verifyPropertyOwnership above) so eager-loading the

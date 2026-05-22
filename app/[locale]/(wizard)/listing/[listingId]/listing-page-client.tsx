@@ -7,6 +7,7 @@ import { Plus } from "lucide-react";
 import DeleteListingButton from "@/app/[locale]/(wizard)/history/DeleteListingButton";
 import ListingGenerator from "@/components/listing/ListingGenerator";
 import PropertyHeader from "@/components/listing/PropertyHeader";
+import BuildingDetails from "@/components/listing/BuildingDetails";
 import type { Listing, Property } from "@/lib/types";
 import type { LocalityOption } from "@/lib/localities/types";
 
@@ -69,8 +70,9 @@ export default function ListingPageClient({
           their share. xl+ : 1 / 2 (gallery / content). lg–xl: 2 / 3.
           Below lg: stacked. */}
       <div className="grid grid-cols-3 gap-8 max-xl:grid-cols-5 max-lg:grid-cols-1">
-        <div className="col-span-1 max-xl:col-span-2 max-lg:col-span-full max-lg:order-1">
+        <div className="col-span-1 max-xl:col-span-2 max-lg:col-span-full max-lg:order-1 flex flex-col gap-6">
           {gallery}
+          <BuildingDetails property={property} />
         </div>
         <div className="col-span-2 max-xl:col-span-3 max-lg:col-span-full max-lg:order-2">
           <ListingGenerator

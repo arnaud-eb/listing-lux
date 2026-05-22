@@ -163,6 +163,68 @@ export const DESCRIPTION_LABEL: Record<Language, string> = {
 }
 
 /**
+ * Localized labels for the building-details block (listing page card + PDF).
+ * Keyed by listing language like the other label records, so the PDF — which
+ * renders one page per language — can label each page in its own language.
+ */
+export const BUILDING_DETAIL_LABELS: Record<
+  Language,
+  {
+    sectionTitle: string
+    yearBuilt: string
+    floorsTotal: string
+    floorOfUnit: string
+    groundFloor: string
+    energyClass: string
+    thermalClass: string
+    monthlyCharges: string
+    availableFrom: string
+    forSale: string
+    forRent: string
+  }
+> = {
+  de: {
+    sectionTitle: "Objektdetails",
+    yearBuilt: "Baujahr",
+    floorsTotal: "Etagen im Gebäude",
+    floorOfUnit: "Etage",
+    groundFloor: "Erdgeschoss",
+    energyClass: "Energieklasse",
+    thermalClass: "Wärmedämmklasse",
+    monthlyCharges: "Nebenkosten / Monat",
+    availableFrom: "Verfügbar ab",
+    forSale: "Zu verkaufen",
+    forRent: "Zu vermieten",
+  },
+  fr: {
+    sectionTitle: "Détails du bien",
+    yearBuilt: "Année de construction",
+    floorsTotal: "Étages dans l'immeuble",
+    floorOfUnit: "Étage",
+    groundFloor: "Rez-de-chaussée",
+    energyClass: "Classe énergétique",
+    thermalClass: "Classe d'isolation thermique",
+    monthlyCharges: "Charges / mois",
+    availableFrom: "Disponible à partir du",
+    forSale: "À vendre",
+    forRent: "À louer",
+  },
+  en: {
+    sectionTitle: "Building details",
+    yearBuilt: "Year built",
+    floorsTotal: "Floors in building",
+    floorOfUnit: "Floor",
+    groundFloor: "Ground floor",
+    energyClass: "Energy class",
+    thermalClass: "Thermal insulation class",
+    monthlyCharges: "Monthly charges",
+    availableFrom: "Available from",
+    forSale: "For sale",
+    forRent: "For rent",
+  },
+}
+
+/**
  * Localized labels for property details (price | sqm | bedrooms | bathrooms).
  * Returns short forms suitable for inline display (PDF details bar, copy formats).
  */

@@ -4,6 +4,7 @@ import {
   parseFormattedNumber,
   formatCurrency,
   parseIntegerInput,
+  formatListingDate,
 } from "./format";
 
 describe("formatNumber", () => {
@@ -133,5 +134,23 @@ describe("formatCurrency", () => {
     const result = formatCurrency(0);
     expect(result).toMatch(/0/);
     expect(result).toMatch(/€/);
+  });
+});
+
+describe("formatListingDate", () => {
+  it("formats an ISO date in English", () => {
+    const out = formatListingDate("2026-09-01", "en");
+    expect(out).toContain("2026");
+    expect(out).toContain("September");
+  });
+
+  it("formats an ISO date in French", () => {
+    const out = formatListingDate("2026-09-01", "fr");
+    expect(out).toContain("2026");
+    expect(out).toContain("septembre");
+  });
+
+  it("returns the raw input when it is not a valid ISO date", () => {
+    expect(formatListingDate("not-a-date", "en")).toBe("not-a-date");
   });
 });

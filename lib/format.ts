@@ -64,3 +64,25 @@ const CURRENCY_FORMATTER = new Intl.NumberFormat(LOCALE, {
 export function formatCurrency(amount: number): string {
   return CURRENCY_FORMATTER.format(amount);
 }
+
+// --- Date formatting ---
+
+const DATE_LOCALES: Record<string, string> = {
+  de: "de-LU",
+  fr: "fr-LU",
+  en: "en-GB",
+};
+
+/**
+ * Format an ISO `YYYY-MM-DD` date for display in a listing language. Parsed as
+ * a plain calendar date (component-wise) so there is no timezone shift.
+ */
+export function formatListingDate(iso: string, language: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d) return iso;
+  return new Intl.DateTimeFormat(DATE_LOCALES[language] ?? LOCALE, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(y, m - 1, d));
+}

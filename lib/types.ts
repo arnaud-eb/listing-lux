@@ -29,6 +29,17 @@ export interface Property {
   photo_urls: string[]
   address?: string | null
   created_at: string
+  /** Sale or rental. DB column is NOT NULL DEFAULT 'sale'; optional here only
+   *  for tolerance of old in-memory mocks. */
+  listing_kind?: ListingKind
+  cpe_class?: CpeClass | null
+  thermal_insulation_class?: CpeClass | null
+  year_built?: number | null
+  charges_monthly?: number | null
+  floors_total?: number | null
+  floor_of_unit?: number | null
+  /** ISO YYYY-MM-DD; rentals only. */
+  availability_date?: string | null
 }
 
 export interface Highlight {

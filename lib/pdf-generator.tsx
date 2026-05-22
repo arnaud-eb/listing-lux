@@ -11,12 +11,13 @@ import {
 } from "@react-pdf/renderer";
 import codepoints from "lucide-static/font/codepoints.json";
 import type { Listing, Property, Highlight, AgentProfile, Language } from "./types";
-import { formatCurrency } from "./format";
+import { formatCurrency, formatListingDate } from "./format";
 import {
   LANGUAGE_LABELS,
   HIGHLIGHTS_LABEL,
   DESCRIPTION_LABEL,
   PROPERTY_DETAIL_LABELS,
+  BUILDING_DETAIL_LABELS,
 } from "./constants";
 import path from "path";
 
@@ -103,6 +104,17 @@ const styles = StyleSheet.create({
   },
   detailItem: {
     fontSize: 10,
+  },
+  buildingBar: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 6,
+    marginTop: -6,
+    marginBottom: 16,
+  },
+  buildingItem: {
+    fontSize: 9,
+    color: GRAY_400,
   },
   sectionTitle: {
     fontFamily: "Inter",
@@ -288,6 +300,62 @@ function DetailsBar({
   );
 }
 
+function BuildingDetailsBar({
+  property,
+  language,
+}: {
+  property: Property;
+  language: Language;
+}) {
+  const L = BUILDING_DETAIL_LABELS[language];
+  const items: string[] = [];
+  if (property.listing_kind) {
+    items.push(property.listing_kind === "rent" ? L.forRent : L.forSale);
+  }
+  if (property.year_built != null) {
+    items.push(`${L.yearBuilt}: ${property.year_built}`);
+  }
+  if (property.floors_total != null) {
+    items.push(`${L.floorsTotal}: ${property.floors_total}`);
+  }
+  if (property.floor_of_unit != null) {
+    items.push(
+      `${L.floorOfUnit}: ${
+        property.floor_of_unit === 0 ? L.groundFloor : property.floor_of_unit
+      }`,
+    );
+  }
+  if (property.cpe_class) {
+    items.push(`${L.energyClass}: ${property.cpe_class}`);
+  }
+  if (property.thermal_insulation_class) {
+    items.push(`${L.thermalClass}: ${property.thermal_insulation_class}`);
+  }
+  if (property.charges_monthly != null) {
+    items.push(
+      `${L.monthlyCharges}: ${formatCurrency(property.charges_monthly)}`,
+    );
+  }
+  if (property.listing_kind === "rent" && property.availability_date) {
+    items.push(
+      `${L.availableFrom}: ${formatListingDate(property.availability_date, language)}`,
+    );
+  }
+
+  if (items.length === 0) return null;
+
+  return (
+    <View style={styles.buildingBar}>
+      {items.map((item, i) => (
+        <Fragment key={i}>
+          {i > 0 && <Text style={styles.buildingItem}>·</Text>}
+          <Text style={styles.buildingItem}>{item}</Text>
+        </Fragment>
+      ))}
+    </View>
+  );
+}
+
 function PhotoGrid({ urls }: { urls: string[] }) {
   // Count-aware layout: photos fill the block proportionally, so fewer photos
   // don't leave awkward empty grid cells and don't push text off the page.
@@ -455,6 +523,7 @@ function ListingPDF({ property, listings, profile }: ListingPDFProps) {
           <Text style={styles.title}>{listing.title}</Text>
 
           <DetailsBar property={property} language={language} />
+          <BuildingDetailsBar property={property} language={language} />
           <PhotoGrid urls={property.photo_urls} />
 
           <Text style={styles.sectionTitle}>{DESCRIPTION_LABEL[language]}</Text>

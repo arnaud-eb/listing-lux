@@ -223,3 +223,27 @@ describe("formatForSocialMedia", () => {
     expect(result).not.toContain("<br>");
   });
 });
+
+describe("listing kind in copy", () => {
+  it("shows 'For sale' in the email details line for a sale listing", () => {
+    const result = formatForEmail(mockListing, {
+      ...mockProperty,
+      listing_kind: "sale",
+    });
+    expect(result.plainText).toContain("For sale");
+  });
+
+  it("shows '🏷️ For rent' in the social-media details line for a rental", () => {
+    const result = formatForSocialMedia(mockListing, {
+      ...mockProperty,
+      listing_kind: "rent",
+    });
+    expect(result).toContain("🏷️ For rent");
+  });
+
+  it("omits the kind label when listing_kind is not set", () => {
+    const result = formatForEmail(mockListing, mockProperty);
+    expect(result.plainText).not.toContain("For sale");
+    expect(result.plainText).not.toContain("For rent");
+  });
+});
