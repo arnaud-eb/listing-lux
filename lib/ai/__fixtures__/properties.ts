@@ -95,7 +95,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "floor-to-ceiling windows",
           "oak parquet flooring",
@@ -204,7 +204,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "double-height ceiling",
           "engineered wood flooring",
@@ -305,7 +305,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: ["laminate flooring", "white walls", "single south window"],
         style: "neutral",
         condition: "well-maintained",
@@ -372,7 +372,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "double-volume ceiling",
           "internal staircase",
@@ -468,7 +468,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "exposed stone wall",
           "wide-plank oak flooring",
@@ -594,7 +594,7 @@ export const fixtures: ListingFixture[] = [
         thermal_insulation_class: null,
       },
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "fireplace",
           "patio doors to garden",
@@ -715,7 +715,7 @@ export const fixtures: ListingFixture[] = [
         thermal_insulation_class: null,
       },
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "open to dining",
           "tile flooring",
@@ -791,7 +791,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: ["beige walls", "laminate flooring", "balcony door"],
         style: "neutral",
         condition: "well-maintained",
@@ -864,7 +864,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: [
           "designer sofa",
           "engineered wood flooring",
@@ -968,7 +968,7 @@ export const fixtures: ListingFixture[] = [
         thermal_insulation_class: null,
       },
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: ["beige carpet", "patio doors", "tube TV alcove"],
         style: "dated",
         condition: "needs updating",
@@ -1039,7 +1039,7 @@ export const fixtures: ListingFixture[] = [
         thermal_insulation_class: null,
       },
       {
-        room_type: "living room",
+        room_type: "living-room",
         features: ["wood paneling", "stone fireplace", "garden view"],
         style: "1970s",
         condition: "well-maintained",
@@ -1101,7 +1101,7 @@ export const fixtures: ListingFixture[] = [
     },
     photo_analyses: [
       {
-        room_type: "studio main room",
+        room_type: "living-room",
         features: [
           "exposed beams",
           "wood floor",
@@ -1120,7 +1120,7 @@ export const fixtures: ListingFixture[] = [
         thermal_insulation_class: null,
       },
       {
-        room_type: "kitchenette",
+        room_type: "kitchen",
         features: [
           "two-burner cooktop",
           "compact fridge",

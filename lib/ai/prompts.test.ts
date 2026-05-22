@@ -53,7 +53,7 @@ const mockProperty = {
 
 const mockAnalyses: PhotoAnalysis[] = [
   {
-    room_type: "living room",
+    room_type: "living-room",
     features: ["hardwood floors", "high ceilings"],
     style: "modern",
     condition: "immaculate",
@@ -147,7 +147,7 @@ describe("buildListingPrompt", () => {
       mockAnalyses,
       mockLocality,
     );
-    expect(user).toContain("living room");
+    expect(user).toContain("living-room");
     expect(user).toContain("hardwood floors");
     expect(user).toContain("bright and spacious");
   });

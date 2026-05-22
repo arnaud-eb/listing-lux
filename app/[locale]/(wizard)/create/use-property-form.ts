@@ -1,7 +1,7 @@
 import { useReducer, useCallback, useEffect, useRef, useState } from "react";
 import type { ListingPhoto, PropertyFormData } from "@/lib/types";
 import type { CpeClass, ListingKind } from "@/lib/constants";
-import { MIN_PHOTOS, FEATURE_OPTIONS } from "@/lib/constants";
+import { MIN_PHOTOS, FEATURE_OPTIONS, normalizeRoomType } from "@/lib/constants";
 import {
   getSignedUploadUrl,
   confirmUpload,
@@ -370,21 +370,22 @@ export function usePropertyForm() {
       const photo = state.photos.find((p) => p.id === id);
       if (!photo?.aiAnalysis) return;
 
-      const oldType = photo.aiAnalysis.room_type;
+      const oldId = normalizeRoomType(photo.aiAnalysis.room_type);
+      const newId = normalizeRoomType(value);
+      if (oldId === newId) return;
 
       dispatch({
         type: "UPDATE_PHOTO",
         id,
-        updates: { aiAnalysis: { ...photo.aiAnalysis, room_type: value } },
+        updates: { aiAnalysis: { ...photo.aiAnalysis, room_type: newId } },
       });
 
-      // Sync features when old/new room type maps to a feature ID.
-      // e.g. correcting "BALCONY" → "TERRACE" should toggle the chips accordingly.
+      // Room-type ids and feature ids share a vocabulary (balcony, terrace,
+      // garden, pool, cellar, basement, attic, parking): correcting a photo's
+      // room type re-syncs the matching feature chip. Because both sides are
+      // canonical ids, this works identically in every UI language — fixing
+      // "balcon" → "terrasse" in French behaves like "balcony" → "terrace".
       const featureIdSet = new Set<string>(FEATURE_OPTIONS.map((f) => f.id));
-      const normalize = (t: string) => t.toLowerCase().replace(/\s+/g, "-");
-      const oldId = normalize(oldType);
-      const newId = normalize(value);
-
       if (!featureIdSet.has(oldId) && !featureIdSet.has(newId)) return;
 
       const features = { ...state.features };
@@ -392,7 +393,7 @@ export function usePropertyForm() {
         const stillPresent = state.photos.some(
           (p) =>
             p.id !== id &&
-            normalize(p.aiAnalysis?.room_type ?? "") === oldId,
+            normalizeRoomType(p.aiAnalysis?.room_type) === oldId,
         );
         if (!stillPresent) features[oldId] = false;
       }

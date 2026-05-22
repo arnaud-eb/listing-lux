@@ -214,8 +214,29 @@
       "ariaUploading": "Uploading",
       "ariaAnalyzing": "Analyzing photo",
       "ariaRemove": "Remove photo",
-      "ariaEditRoomType": "Edit room type (currently {value})",
-      "ariaRoomType": "Room type"
+      "ariaRoomType": "Room type",
+      "roomTypes": {
+        "kitchen": "Kitchen",
+        "living-room": "Living room",
+        "dining-room": "Dining room",
+        "bedroom": "Bedroom",
+        "bathroom": "Bathroom",
+        "hallway": "Hallway / Entrance",
+        "office": "Office",
+        "balcony": "Balcony",
+        "terrace": "Terrace",
+        "garden": "Garden",
+        "pool": "Pool",
+        "garage": "Garage",
+        "parking": "Parking",
+        "cellar": "Cellar",
+        "basement": "Basement",
+        "attic": "Attic",
+        "facade": "Building facade",
+        "exterior": "Exterior / Surroundings",
+        "floor-plan": "Floor plan",
+        "other": "Other"
+      }
     },
     "stepperInput": {
       "ariaDecrease": "Decrease {label}",

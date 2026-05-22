@@ -214,8 +214,29 @@
       "ariaUploading": "Téléchargement",
       "ariaAnalyzing": "Analyse de la photo",
       "ariaRemove": "Supprimer la photo",
-      "ariaEditRoomType": "Modifier le type de pièce (actuellement {value})",
-      "ariaRoomType": "Type de pièce"
+      "ariaRoomType": "Type de pièce",
+      "roomTypes": {
+        "kitchen": "Cuisine",
+        "living-room": "Salon",
+        "dining-room": "Salle à manger",
+        "bedroom": "Chambre",
+        "bathroom": "Salle de bain",
+        "hallway": "Hall / Entrée",
+        "office": "Bureau",
+        "balcony": "Balcon",
+        "terrace": "Terrasse",
+        "garden": "Jardin",
+        "pool": "Piscine",
+        "garage": "Garage",
+        "parking": "Parking",
+        "cellar": "Cave",
+        "basement": "Sous-sol",
+        "attic": "Grenier",
+        "facade": "Façade",
+        "exterior": "Extérieur / Environs",
+        "floor-plan": "Plan",
+        "other": "Autre"
+      }
     },
     "stepperInput": {
       "ariaDecrease": "Diminuer {label}",

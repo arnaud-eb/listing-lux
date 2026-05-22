@@ -107,6 +107,47 @@ export const FEATURE_OPTIONS = [
 
 export type FeatureId = (typeof FEATURE_OPTIONS)[number]['id']
 
+/**
+ * Canonical photo-subject types. The AI vision step emits one of these ids
+ * (photoAnalysisSchema.room_type); the create-page thumbnail translates the id
+ * for display and the form syncs feature chips off it. Keeping the value a
+ * stable id — never free text — is what lets feature-sync and the translated
+ * label work regardless of the UI language.
+ */
+export const ROOM_TYPES = [
+  'kitchen',
+  'living-room',
+  'dining-room',
+  'bedroom',
+  'bathroom',
+  'hallway',
+  'office',
+  'balcony',
+  'terrace',
+  'garden',
+  'pool',
+  'garage',
+  'parking',
+  'cellar',
+  'basement',
+  'attic',
+  'facade',
+  'exterior',
+  'floor-plan',
+  'other',
+] as const
+
+export type RoomType = (typeof ROOM_TYPES)[number]
+
+const ROOM_TYPE_SET = new Set<string>(ROOM_TYPES)
+
+/** Coerce a possibly-legacy free-text room type to a canonical id. */
+export function normalizeRoomType(raw: string | null | undefined): RoomType {
+  if (!raw) return 'other'
+  const slug = raw.trim().toLowerCase().replace(/[\s/]+/g, '-')
+  return ROOM_TYPE_SET.has(slug) ? (slug as RoomType) : 'other'
+}
+
 /** Localized label for the "Highlights" section */
 export const HIGHLIGHTS_LABEL: Record<Language, string> = {
   de: "Highlights",

@@ -2,6 +2,7 @@ import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import PhotoThumbnail from "./PhotoThumbnail";
 import type { ListingPhoto } from "@/lib/types";
+import type { PhotoAnalysis } from "@/lib/schemas/photo-analysis";
 
 function makeReadyPhoto(roomType = "kitchen"): ListingPhoto {
   return {
@@ -12,7 +13,9 @@ function makeReadyPhoto(roomType = "kitchen"): ListingPhoto {
     status: "ready",
     uploadProgress: 100,
     aiAnalysis: {
-      room_type: roomType,
+      // Cast so the tests can also exercise legacy free-text values that the
+      // component must tolerate (the live schema now emits canonical ids).
+      room_type: roomType as PhotoAnalysis["room_type"],
       features: ["granite countertops", "hardwood floors"],
       style: "modern",
       condition: "immaculate",
@@ -24,7 +27,7 @@ function makeReadyPhoto(roomType = "kitchen"): ListingPhoto {
   };
 }
 
-describe("PhotoThumbnail — editable room-type pill", () => {
+describe("PhotoThumbnail — room-type select", () => {
   const onRemove = vi.fn();
   const onUpdateRoomType = vi.fn();
 
@@ -32,19 +35,7 @@ describe("PhotoThumbnail — editable room-type pill", () => {
     vi.clearAllMocks();
   });
 
-  it("renders the room_type as an editable button", () => {
-    render(
-      <PhotoThumbnail
-        photo={makeReadyPhoto("kitchen")}
-        onRemove={onRemove}
-        onUpdateRoomType={onUpdateRoomType}
-      />,
-    );
-    const pill = screen.getByRole("button", { name: /edit room type/i });
-    expect(pill).toHaveTextContent("kitchen");
-  });
-
-  it("switches to input on click and saves on Enter", () => {
+  it("renders the room type as a select with the canonical value selected", () => {
     render(
       <PhotoThumbnail
         photo={makeReadyPhoto("bedroom")}
@@ -52,67 +43,48 @@ describe("PhotoThumbnail — editable room-type pill", () => {
         onUpdateRoomType={onUpdateRoomType}
       />,
     );
-    fireEvent.click(screen.getByRole("button", { name: /edit room type/i }));
+    expect(screen.getByRole("combobox", { name: /room type/i })).toHaveValue(
+      "bedroom",
+    );
+  });
 
-    const input = screen.getByRole("textbox", { name: /room type/i });
-    fireEvent.change(input, { target: { value: "office" } });
-    fireEvent.keyDown(input, { key: "Enter" });
-
+  it("calls onUpdateRoomType with the chosen canonical id on change", () => {
+    render(
+      <PhotoThumbnail
+        photo={makeReadyPhoto("bedroom")}
+        onRemove={onRemove}
+        onUpdateRoomType={onUpdateRoomType}
+      />,
+    );
+    fireEvent.change(screen.getByRole("combobox", { name: /room type/i }), {
+      target: { value: "office" },
+    });
     expect(onUpdateRoomType).toHaveBeenCalledWith("p1", "office");
   });
 
-  it("cancels on Escape without calling onUpdateRoomType", () => {
+  it("normalizes a legacy spaced room_type to its canonical id", () => {
     render(
       <PhotoThumbnail
-        photo={makeReadyPhoto("bedroom")}
+        photo={makeReadyPhoto("Living Room")}
         onRemove={onRemove}
         onUpdateRoomType={onUpdateRoomType}
       />,
     );
-    fireEvent.click(screen.getByRole("button", { name: /edit room type/i }));
-
-    const input = screen.getByRole("textbox", { name: /room type/i });
-    fireEvent.change(input, { target: { value: "office" } });
-    fireEvent.keyDown(input, { key: "Escape" });
-
-    expect(onUpdateRoomType).not.toHaveBeenCalled();
-    expect(
-      screen.getByRole("button", { name: /edit room type/i }),
-    ).toHaveTextContent("bedroom");
+    expect(screen.getByRole("combobox", { name: /room type/i })).toHaveValue(
+      "living-room",
+    );
   });
 
-  it("rejects an empty value and keeps the previous room_type", () => {
+  it("falls back to 'other' for an unrecognized legacy room_type", () => {
     render(
       <PhotoThumbnail
-        photo={makeReadyPhoto("bedroom")}
+        photo={makeReadyPhoto("Penthouse Sky Lounge")}
         onRemove={onRemove}
         onUpdateRoomType={onUpdateRoomType}
       />,
     );
-    fireEvent.click(screen.getByRole("button", { name: /edit room type/i }));
-
-    const input = screen.getByRole("textbox", { name: /room type/i });
-    fireEvent.change(input, { target: { value: "   " } });
-    fireEvent.keyDown(input, { key: "Enter" });
-
-    expect(onUpdateRoomType).not.toHaveBeenCalled();
-    expect(
-      screen.getByRole("button", { name: /edit room type/i }),
-    ).toHaveTextContent("bedroom");
-  });
-
-  it("does not call onUpdateRoomType when the value is unchanged", () => {
-    render(
-      <PhotoThumbnail
-        photo={makeReadyPhoto("kitchen")}
-        onRemove={onRemove}
-        onUpdateRoomType={onUpdateRoomType}
-      />,
+    expect(screen.getByRole("combobox", { name: /room type/i })).toHaveValue(
+      "other",
     );
-    fireEvent.click(screen.getByRole("button", { name: /edit room type/i }));
-    const input = screen.getByRole("textbox", { name: /room type/i });
-    fireEvent.keyDown(input, { key: "Enter" });
-
-    expect(onUpdateRoomType).not.toHaveBeenCalled();
   });
 });

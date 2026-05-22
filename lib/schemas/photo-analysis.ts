@@ -1,13 +1,13 @@
 import { z } from "zod";
-import { CPE_CLASSES } from "@/lib/constants";
+import { CPE_CLASSES, ROOM_TYPES } from "@/lib/constants";
 
 export type PhotoAnalysis = z.infer<typeof photoAnalysisSchema>;
 
 export const photoAnalysisSchema = z.object({
   room_type: z
-    .string()
+    .enum(ROOM_TYPES)
     .describe(
-      "Room type: kitchen, bedroom, living room, bathroom, balcony, exterior, building facade",
+      "The primary subject of the photo, given as one of the listed ids. Use 'facade' for the building's exterior front, 'exterior' for grounds / garden surroundings / street views, 'floor-plan' for a floor plan or blueprint, and 'other' when none of the ids fit.",
     ),
   features: z
     .array(z.string())

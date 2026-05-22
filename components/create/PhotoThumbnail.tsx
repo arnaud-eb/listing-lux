@@ -1,9 +1,10 @@
 "use client";
 
-import { memo, useEffect, useRef, useState } from "react";
+import { memo } from "react";
 import { useTranslations } from "next-intl";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ROOM_TYPES, normalizeRoomType } from "@/lib/constants";
 import type { ListingPhoto } from "@/lib/types";
 
 interface PhotoThumbnailProps {
@@ -38,7 +39,7 @@ export default memo(function PhotoThumbnail({
       {/* Uploading overlay */}
       {photo.status === "uploading" && (
         <div
-          className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-1"
+          className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-2"
           aria-live="polite"
         >
           <div
@@ -54,14 +55,14 @@ export default memo(function PhotoThumbnail({
         </div>
       )}
 
-      {/* Analyzing overlay */}
+      {/* Analyzing overlay — same spinner treatment as the uploading state */}
       {photo.status === "processing" && (
         <div
           className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-2"
           aria-live="polite"
         >
           <div
-            className="w-6 h-6 border-2 border-gold border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
+            className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
             role="status"
             aria-label={t("ariaAnalyzing")}
           />
@@ -86,7 +87,7 @@ export default memo(function PhotoThumbnail({
         <div className="absolute top-2 left-2 max-w-3/4">
           <RoomTypePill
             value={photo.aiAnalysis.room_type}
-            onSave={(next) => onUpdateRoomType(photo.id, next)}
+            onChange={(next) => onUpdateRoomType(photo.id, next)}
           />
         </div>
       ) : isFirst && photo.status === "ready" ? (
@@ -115,94 +116,40 @@ export default memo(function PhotoThumbnail({
 const PILL_CLASSES =
   "bg-gold text-white text-2xs px-2 py-0.5 rounded font-bold uppercase tracking-tighter";
 
+/**
+ * The room type the AI detected, as a translated <select> the agent can
+ * correct. The value is always a canonical ROOM_TYPES id — the select shows
+ * the localized label but stores the id, so a correction (e.g. balcony →
+ * terrace) re-syncs feature chips identically in every UI language.
+ */
 function RoomTypePill({
   value,
-  onSave,
+  onChange,
 }: {
   value: string;
-  onSave: (next: string) => void;
+  onChange: (next: string) => void;
 }) {
   const t = useTranslations("wizard.photoThumbnail");
-  const [isEditing, setIsEditing] = useState(false);
-  const [draft, setDraft] = useState(value);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const measureRef = useRef<HTMLSpanElement>(null);
-  const [width, setWidth] = useState(40);
-
-  useEffect(() => {
-    if (isEditing && inputRef.current) {
-      inputRef.current.focus();
-      inputRef.current.select();
-    }
-  }, [isEditing]);
-
-  useEffect(() => {
-    if (measureRef.current) {
-      setWidth(Math.max(40, measureRef.current.offsetWidth + 8));
-    }
-  }, [draft, isEditing]);
-
-  function commit() {
-    const trimmed = draft.trim();
-    if (trimmed && trimmed !== value) {
-      onSave(trimmed);
-    } else {
-      setDraft(value);
-    }
-    setIsEditing(false);
-  }
-
-  function cancel() {
-    setDraft(value);
-    setIsEditing(false);
-  }
-
-  if (!isEditing) {
-    return (
-      <button
-        type="button"
-        onClick={(e) => {
-          e.stopPropagation();
-          setDraft(value);
-          setIsEditing(true);
-        }}
-        aria-label={t("ariaEditRoomType", { value })}
-        className={`${PILL_CLASSES} truncate block max-w-full text-left cursor-text hover:bg-gold/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-1 focus-visible:ring-offset-gold`}
-      >
-        {value}
-      </button>
-    );
-  }
 
   return (
-    <>
-      <span
-        ref={measureRef}
-        aria-hidden
-        className={`${PILL_CLASSES} absolute invisible whitespace-pre`}
-      >
-        {draft || " "}
-      </span>
-      <input
-        ref={inputRef}
-        type="text"
-        value={draft}
-        onChange={(e) => setDraft(e.target.value)}
+    <div className="relative inline-block max-w-full">
+      <select
+        value={normalizeRoomType(value)}
+        onChange={(e) => onChange(e.target.value)}
         onClick={(e) => e.stopPropagation()}
-        onBlur={commit}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            e.preventDefault();
-            commit();
-          } else if (e.key === "Escape") {
-            e.preventDefault();
-            cancel();
-          }
-        }}
-        style={{ width: `${width}px` }}
         aria-label={t("ariaRoomType")}
-        className={`${PILL_CLASSES} border-0 outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 focus:ring-offset-gold`}
+        className={`${PILL_CLASSES} appearance-none cursor-pointer pr-5 max-w-full truncate hover:bg-gold/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-1 focus-visible:ring-offset-gold`}
+      >
+        {ROOM_TYPES.map((rt) => (
+          <option key={rt} value={rt}>
+            {t(`roomTypes.${rt}`)}
+          </option>
+        ))}
+      </select>
+      <ChevronDown
+        className="absolute right-1 top-1/2 -translate-y-1/2 size-3 text-white pointer-events-none"
+        aria-hidden
       />
-    </>
+    </div>
   );
 }
