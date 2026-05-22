@@ -47,20 +47,15 @@ export function useListingGeneration(
   /** Pre-resolved locality display name from the parent server component. Threaded
    *  into buildBaseHashtags. Null when the slug doesn't resolve in either source. */
   neighborhoodName: string | null,
-  /**
-   * Preferred starting language for the tab and the generation queue. Pass the user's
-   * site locale (`fr` / `en`) when available; falls back to `de` otherwise (the first
-   * language in LANGUAGES). The active tab does NOT auto-advance during generation —
-   * once set, it stays put while other languages stream in the background.
-   */
-  preferredLanguage?: Language,
 ) {
   const [state, setState] = useState<GenerationState>(() =>
     initState(initialListings),
   );
-  const [activeTab, setActiveTab] = useState<Language>(
-    preferredLanguage ?? "de",
-  );
+  // The tab and the generation queue always start on the market's primary
+  // listing language (LANGUAGES[0] — French for Luxembourg), not the agent's UI
+  // locale, which made the starting tab look random. The active tab does NOT
+  // auto-advance during generation; it stays put while the rest stream in.
+  const [activeTab, setActiveTab] = useState<Language>(LANGUAGES[0]);
   const [initialGenerationDone, setInitialGenerationDone] = useState(
     initialListings.length > 0,
   );
@@ -70,7 +65,7 @@ export function useListingGeneration(
   stateRef.current = state;
 
   // Track which language is currently being generated
-  const currentLangRef = useRef<Language>(preferredLanguage ?? "de");
+  const currentLangRef = useRef<Language>(LANGUAGES[0]);
   // Track the generation queue for sequential generation
   const queueRef = useRef<Language[]>([]);
   const completedCountRef = useRef(0);

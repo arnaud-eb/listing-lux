@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import ConfirmDiscardDialog from "@/components/shared/ConfirmDiscardDialog";
@@ -34,15 +34,6 @@ export default function ListingGenerator({
   onGeneratingChange,
 }: ListingGeneratorProps) {
   const t = useTranslations("wizard.listing");
-  // Default the active tab to the user's site locale so a French speaker lands on FR,
-  // not DE. Site locales are `fr` / `en`; both are valid Language values (LANGUAGES =
-  // ['fr', 'en', 'de']). If the locale is something else (e.g. an unknown future locale),
-  // we fall back to LANGUAGES[0] inside the hook.
-  const locale = useLocale();
-  const preferredLanguage =
-    locale === "fr" || locale === "en" || locale === "de"
-      ? (locale as Language)
-      : undefined;
   const {
     state,
     activeTab,
@@ -56,7 +47,6 @@ export default function ListingGenerator({
     initialListings,
     property,
     neighborhoodName,
-    preferredLanguage,
   );
 
   const [isEditing, setIsEditing] = useState(false);

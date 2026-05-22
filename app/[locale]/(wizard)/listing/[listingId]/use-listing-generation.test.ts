@@ -60,11 +60,12 @@ describe("useListingGeneration", () => {
     expect(capturedSubmit).toHaveBeenCalledTimes(1);
     expect(capturedSubmit).toHaveBeenCalledWith({
       propertyId: "prop-1",
-      language: "de",
+      language: "fr",
     });
 
-    // Simulate SDK completing each language — onFinish chains to next
-    const languages = ["de", "fr", "en"];
+    // Simulate SDK completing each language — onFinish chains to next.
+    // Generation starts on the primary language (fr) and queues the rest.
+    const languages = ["fr", "en", "de"];
     for (const lang of languages) {
       act(() => {
         capturedOnFinish?.({ object: makeListing(lang) });
@@ -154,7 +155,7 @@ describe("useListingGeneration", () => {
     );
 
     // Complete all 3 languages
-    for (const lang of ["de", "fr", "en"]) {
+    for (const lang of ["fr", "en", "de"]) {
       act(() => {
         capturedOnFinish?.({ object: makeListing(lang) });
       });
@@ -205,12 +206,12 @@ describe("useListingGeneration", () => {
       useListingGeneration("prop-1", [], mockProperty, "Kirchberg"),
     );
 
-    // Simulate SDK error on first language
+    // Simulate SDK error on first language (fr — the primary language)
     act(() => {
       capturedOnFinish?.({ error: new Error("Schema validation failed") });
     });
 
-    expect(result.current.state.de.status).toBe("error");
-    expect(result.current.state.de.error).toBe("Schema validation failed");
+    expect(result.current.state.fr.status).toBe("error");
+    expect(result.current.state.fr.error).toBe("Schema validation failed");
   });
 });
