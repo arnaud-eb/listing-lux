@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import {
   Check,
   ChevronsUpDown,
+  ExternalLink,
   X as XIcon,
 } from 'lucide-react'
 import {
@@ -29,8 +30,17 @@ import { pickLocalized } from '@/lib/localities/locale'
 import type { LocalityOption } from '@/lib/localities/types'
 import { isHouseType } from '@/lib/localities/types'
 import type { Language } from '@/lib/types'
+import type { ListingKind } from '@/lib/constants'
 import { formatCurrency } from '@/lib/format'
 import { cn } from '@/lib/utils'
+
+/** data.public.lu dataset behind asking_price_per_sqm_* — the figures' primary,
+ *  publicly verifiable source (Observatoire de l'Habitat, CC0). */
+const PRICE_SOURCE_URL: Record<Language, string> = {
+  fr: 'https://data.public.lu/fr/datasets/prix-annonces-des-logements-par-commune/',
+  en: 'https://data.public.lu/en/datasets/prix-annonces-des-logements-par-commune/',
+  de: 'https://data.public.lu/de/datasets/prix-annonces-des-logements-par-commune/',
+}
 
 interface LocalitySelectorProps {
   value: string
@@ -41,6 +51,8 @@ interface LocalitySelectorProps {
   options: LocalityOption[]
   sqm: number
   propertyType: string
+  /** The asking-price estimate is sale-only; the badge is hidden for rentals. */
+  listingKind: ListingKind
 }
 
 type OptionWithSearch = LocalityOption & { _search: string }
@@ -68,6 +80,7 @@ export default function LocalitySelector({
   options,
   sqm,
   propertyType,
+  listingKind,
 }: LocalitySelectorProps) {
   const t = useTranslations('wizard.locality')
   const localeStr = useLocale()
@@ -266,11 +279,12 @@ export default function LocalitySelector({
         </Popover>
       )}
 
-      {selected && (
+      {selected && listingKind !== 'rent' && (
         <EstimateBadge
           source={priceBand?.source ?? null}
           estimate={estimate}
           dataAsOf={priceBand?.dataAsOf ?? null}
+          locale={locale}
         />
       )}
     </div>
@@ -281,10 +295,12 @@ function EstimateBadge({
   source,
   estimate,
   dataAsOf,
+  locale,
 }: {
   source: 'statec' | 'override' | 'tier' | null
   estimate: number | null
   dataAsOf: string | null
+  locale: Language
 }) {
   const t = useTranslations('wizard.locality')
   if (estimate == null || source == null) return null
@@ -298,12 +314,23 @@ function EstimateBadge({
       >
         {t('averagePrefix')} {formatCurrency(estimate)}
       </span>
-      {year && (source === 'tier' || source === 'statec') && (
-        <span
-          className="inline-flex items-center gap-1 text-2xs text-gray-500"
-          aria-label={t('dataSourceAria', { year })}
+      {/* Only the 'statec' band is real published data — tier/override are
+          internal estimates and must not borrow the source's name. */}
+      {source === 'statec' ? (
+        <a
+          href={PRICE_SOURCE_URL[locale]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-2xs text-gray-500 underline underline-offset-2 decoration-gray-300 hover:text-navy-deep"
         >
-          {t('dataSource', { year })}
+          {t('dataSource')}
+          {year ? ` · ${year}` : ''}
+          <ExternalLink className="size-3" aria-hidden />
+          <span className="sr-only">{t('opensNewTab')}</span>
+        </a>
+      ) : (
+        <span className="text-2xs text-gray-400 italic">
+          {t('estimateIndicative')}
         </span>
       )}
     </div>

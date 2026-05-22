@@ -236,14 +236,15 @@
     "locality": {
       "label": "Localité",
       "placeholder": "Sélectionner une localité…",
-      "estimatedValue": "Valeur de marché estimée :",
+      "estimatedValue": "Valeur estimée :",
       "averagePrefix": "Moy. :",
       "ariaEstimate": "Prix moyen estimé : {value}",
       "empty": "Aucune localité trouvée",
       "searchPlaceholder": "Rechercher une localité…",
       "clearSelection": "Effacer la sélection",
-      "dataSource": "STATEC · {year}",
-      "dataSourceAria": "Source : STATEC, données {year}",
+      "dataSource": "Observatoire de l'Habitat · prix annoncés",
+      "opensNewTab": "(ouvre le jeu de données source dans un nouvel onglet)",
+      "estimateIndicative": "Estimation indicative",
       "searchResults": "{count, plural, =0 {Aucun résultat} one {# résultat} other {# résultats}}",
       "group": {
         "luxembourgVille": "Luxembourg-Ville",

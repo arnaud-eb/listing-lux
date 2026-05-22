@@ -287,6 +287,7 @@ export default function CreatePageClient({ localityOptions }: CreatePageClientPr
                     options={localityOptions}
                     sqm={typeof form.sqm === "number" ? form.sqm : 0}
                     propertyType={form.propertyType}
+                    listingKind={form.listingKind}
                   />
 
                   <FeatureChips
