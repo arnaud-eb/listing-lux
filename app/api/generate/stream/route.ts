@@ -18,6 +18,10 @@ function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
 
 const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en"]);
 
+// Sequential per-language generation can run ~30–45s end-to-end; default Vercel
+// Hobby cap of 10s would 504. 60s is the Hobby max.
+export const maxDuration = 60;
+
 export async function POST(request: Request) {
   const cookieHeader = request.headers.get("cookie") ?? "";
   const locale = readLocaleFromCookie(cookieHeader);
