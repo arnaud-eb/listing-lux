@@ -7,6 +7,9 @@ import type { Language, Listing, Property } from "@/lib/types";
 
 const VALID_LANGUAGES = new Set<Language>(["de", "fr", "en"]);
 
+// Puppeteer cold-start + render can spike past the 10s Hobby default.
+export const maxDuration = 60;
+
 function readLocaleFromCookie(cookieHeader: string): "fr" | "en" {
   const match = cookieHeader.match(/NEXT_LOCALE=(\w+)/);
   return match?.[1] === "en" ? "en" : "fr";
