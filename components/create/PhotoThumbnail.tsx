@@ -55,14 +55,15 @@ export default memo(function PhotoThumbnail({
         </div>
       )}
 
-      {/* Analyzing overlay — same spinner treatment as the uploading state */}
+      {/* Analyzing overlay — same size as uploading, gold ring distinguishes
+          the AI-analysis phase from the upload phase at a glance. */}
       {photo.status === "processing" && (
         <div
           className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-2"
           aria-live="polite"
         >
           <div
-            className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
+            className="w-8 h-8 border-2 border-gold border-t-transparent rounded-full animate-spin motion-reduce:animate-none"
             role="status"
             aria-label={t("ariaAnalyzing")}
           />
