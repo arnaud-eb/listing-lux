@@ -8,6 +8,7 @@ import { getBySlug as getLocalityBySlug, listForDropdown } from "@/lib/localitie
 import { pickLocalized } from "@/lib/localities/locale";
 import PhotoCarousel from "@/components/listing/PhotoCarousel";
 import type { Language } from "@/lib/types";
+import { propertyTypeLabel } from "@/lib/constants";
 import ListingPageClient from "./listing-page-client";
 import { propertySchema } from "@/lib/schemas/property";
 import type { Listing, Property } from "@/lib/types";
@@ -70,8 +71,7 @@ export async function generateMetadata({
     locale as Language,
     p.neighborhood,
   );
-  const typeName =
-    p.property_type.charAt(0).toUpperCase() + p.property_type.slice(1);
+  const typeName = propertyTypeLabel(p.property_type, locale as Language);
 
   return {
     title: t("listingTitleTemplate", {
