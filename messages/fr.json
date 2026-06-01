@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "rootTitle": "ListingLux AI — Annonces immobilières multilingues pour le Luxembourg",
+    "rootTitle": "ListingLux — Annonces immobilières multilingues pour le Luxembourg",
     "rootDescription": "Générez des descriptions immobilières professionnelles en allemand, français et anglais en quelques secondes.",
-    "historyTitle": "Vos annonces — ListingLux AI",
-    "profileTitle": "Votre profil — ListingLux AI",
-    "listingNotFoundTitle": "Annonce introuvable — ListingLux AI",
-    "listingTitleTemplate": "{type} à {neighborhood} — ListingLux AI",
+    "historyTitle": "Vos annonces — ListingLux",
+    "profileTitle": "Votre profil — ListingLux",
+    "listingNotFoundTitle": "Annonce introuvable — ListingLux",
+    "listingTitleTemplate": "{type} à {neighborhood} — ListingLux",
     "listingDescriptionTemplate": "{bedrooms} ch · {bathrooms} sdb · {sqm} m² {type} de luxe à {neighborhood}, Luxembourg",
     "listingDescriptionTemplateNoSqm": "{bedrooms} ch · {bathrooms} sdb {type} de luxe à {neighborhood}, Luxembourg"
   },
@@ -70,8 +70,8 @@
       },
       "newWay": {
         "tag": "Avec ListingLux",
-        "ariaLabel": "Approche ListingLux AI",
-        "heading": "ListingLux AI",
+        "ariaLabel": "Approche ListingLux",
+        "heading": "ListingLux",
         "point1": "Généré automatiquement en 5 minutes",
         "point2": "Niveau natif en FR, DE, EN",
         "point3": "Ton professionnel digne de Sotheby's",
@@ -138,7 +138,7 @@
       "support": "Support",
       "documentation": "Documentation",
       "contact": "Contact",
-      "rightsReserved": "{year} ListingLux AI. Tous droits réservés.",
+      "rightsReserved": "{year} ListingLux. Tous droits réservés.",
       "twitter": "Twitter",
       "linkedin": "LinkedIn"
     }
@@ -326,7 +326,7 @@
       "subtitle": "Gérez votre image professionnelle pour les exports PDF",
       "brandingHeading": "Informations de marque",
       "socialMediaHeading": "Réseaux sociaux",
-      "socialMediaBody": "Connectez vos comptes Facebook et Instagram pour partager vos annonces directement depuis ListingLux AI.",
+      "socialMediaBody": "Connectez vos comptes Facebook et Instagram pour partager vos annonces directement depuis ListingLux.",
       "toastProfileSaved": "Profil enregistré"
     },
     "branding": {
