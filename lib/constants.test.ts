@@ -17,6 +17,7 @@ describe("ROOM_TYPES", () => {
     "basement",
     "attic",
     "parking",
+    "garage",
   ] as const;
 
   it("keeps the feature-synced ids present in both vocabularies", () => {

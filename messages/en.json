@@ -275,6 +275,7 @@
       "options": {
         "balcony": "Balcony",
         "parking": "Parking",
+        "garage": "Garage",
         "garden": "Garden",
         "elevator": "Elevator",
         "cellar": "Cellar",
