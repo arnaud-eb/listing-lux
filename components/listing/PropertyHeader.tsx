@@ -16,7 +16,11 @@ import {
 } from "@/components/ui/select";
 import PriceDisplay from "@/components/shared/PriceDisplay";
 import { getActiveMarket } from "@/lib/markets";
-import { BUILDING_DETAIL_LABELS } from "@/lib/constants";
+import {
+  BUILDING_DETAIL_LABELS,
+  frPrepositionFor,
+  propertyTypeLabel,
+} from "@/lib/constants";
 import { pickLocalized } from "@/lib/localities/locale";
 import type { LocalityOption } from "@/lib/localities/types";
 import type { Language } from "@/lib/types";
@@ -197,8 +201,8 @@ export default function PropertyHeader({
             </SelectTrigger>
             <SelectContent>
               {market.propertyTypes.map((type) => (
-                <SelectItem key={type} value={type} className="capitalize">
-                  {type}
+                <SelectItem key={type} value={type}>
+                  {propertyTypeLabel(type, locale)}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -331,35 +335,37 @@ export default function PropertyHeader({
         </span>
       )}
       <h1 className="font-serif text-3xl font-bold text-navy-deep">
-        {/* Capitalize only the first word — the property_type id is lowercase ("apartment"),
-            but `t("in")` resolves to a connector ("in", "à") that must stay lowercase.
-            Using CSS `capitalize` here breaks FR ("Apartment À Belair"). */}
-        {property.property_type.charAt(0).toUpperCase() +
-          property.property_type.slice(1)}{" "}
-        {t("in")} {neighborhoodName}
+        {propertyTypeLabel(property.property_type, locale)}{" "}
+        {locale === "fr"
+          ? frPrepositionFor(property.neighborhood)
+          : t("in")}{" "}
+        {neighborhoodName}
       </h1>
-      <div className="flex items-center gap-3 mt-2 text-sm text-gray-500">
-        <span>
+      {/* whitespace-nowrap keeps "4 chambres" together (so the label doesn't
+          stack under the number on narrow viewports); flex-wrap lets the row
+          wrap as whole stats instead. */}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-sm text-gray-500">
+        <span className="whitespace-nowrap">
           {property.bedrooms}{" "}
           {property.bedrooms === 1 ? t("bedSingular") : t("bedPlural")}
         </span>
-        <span>·</span>
-        <span>
+        <span aria-hidden>·</span>
+        <span className="whitespace-nowrap">
           {property.bathrooms}{" "}
           {property.bathrooms === 1 ? t("bathSingular") : t("bathPlural")}
         </span>
         {property.sqm != null && (
           <>
-            <span>·</span>
-            <span>{property.sqm} m²</span>
+            <span aria-hidden>·</span>
+            <span className="whitespace-nowrap">{property.sqm} m²</span>
           </>
         )}
         {property.price != null && (
           <>
-            <span>·</span>
+            <span aria-hidden>·</span>
             <PriceDisplay
               amount={property.price}
-              className="font-semibold text-navy-deep"
+              className="font-semibold text-navy-deep whitespace-nowrap"
             />
           </>
         )}

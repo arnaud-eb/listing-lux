@@ -77,6 +77,67 @@ export type ListingKind = (typeof LISTING_KINDS)[number]
 export type PropertyTypeValue = (typeof PROPERTY_TYPES)[number]['value']
 
 /**
+ * Localized labels for property types (display name on the listing page, PDF
+ * metadata, etc.). Keyed by listing language; falls back to the capitalized id
+ * if a type isn't covered in a given language.
+ */
+export const PROPERTY_TYPE_LABELS: Record<Language, Record<PropertyTypeValue, string>> = {
+  de: {
+    apartment: 'Wohnung',
+    house: 'Haus',
+    penthouse: 'Penthouse',
+    studio: 'Studio',
+    duplex: 'Maisonette',
+    triplex: 'Triplex',
+    loft: 'Loft',
+    attic: 'Dachgeschosswohnung',
+    villa: 'Villa',
+  },
+  fr: {
+    apartment: 'Appartement',
+    house: 'Maison',
+    penthouse: 'Penthouse',
+    studio: 'Studio',
+    duplex: 'Duplex',
+    triplex: 'Triplex',
+    loft: 'Loft',
+    attic: 'Logement sous combles',
+    villa: 'Villa',
+  },
+  en: {
+    apartment: 'Apartment',
+    house: 'House',
+    penthouse: 'Penthouse',
+    studio: 'Studio',
+    duplex: 'Duplex',
+    triplex: 'Triplex',
+    loft: 'Loft',
+    attic: 'Attic apartment',
+    villa: 'Villa',
+  },
+}
+
+/**
+ * French preposition exceptions for the "{type} {prep} {locality}" headline.
+ * Default is "à". Localities whose French name carries an implicit article
+ * (le Centre-Ville → au) need an override here.
+ */
+const FR_LOCALITY_PREPOSITION: Record<string, string> = {
+  'centre-ville': 'au',
+}
+
+export function frPrepositionFor(slug: string): string {
+  return FR_LOCALITY_PREPOSITION[slug] ?? 'à'
+}
+
+/** Localized display label for a property type, with a capitalize fallback for
+ *  any value not covered in PROPERTY_TYPE_LABELS (defence against drift). */
+export function propertyTypeLabel(type: string, language: Language): string {
+  const labels = PROPERTY_TYPE_LABELS[language] as Record<string, string>
+  return labels[type] ?? type.charAt(0).toUpperCase() + type.slice(1)
+}
+
+/**
  * Selectable features — single source of truth for the chips, schema, and AI derivation.
  *
  * Storage split (audit P0.9, 2026-04): the ambiguous `storage` boolean was replaced with three

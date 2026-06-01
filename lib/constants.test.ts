@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { ROOM_TYPES, FEATURE_OPTIONS, normalizeRoomType } from "./constants";
+import {
+  ROOM_TYPES,
+  FEATURE_OPTIONS,
+  normalizeRoomType,
+  propertyTypeLabel,
+  frPrepositionFor,
+} from "./constants";
 import en from "@/messages/en.json";
 import fr from "@/messages/fr.json";
 
@@ -49,5 +55,31 @@ describe("ROOM_TYPES", () => {
     expect(normalizeRoomType("hallway/entryway")).toBe("other");
     expect(normalizeRoomType(null)).toBe("other");
     expect(normalizeRoomType("")).toBe("other");
+  });
+});
+
+describe("propertyTypeLabel", () => {
+  it("returns the FR label for a known property type", () => {
+    expect(propertyTypeLabel("house", "fr")).toBe("Maison");
+    expect(propertyTypeLabel("apartment", "fr")).toBe("Appartement");
+  });
+
+  it("returns the EN label for a known property type", () => {
+    expect(propertyTypeLabel("villa", "en")).toBe("Villa");
+  });
+
+  it("falls back to a capitalized id for an unknown type", () => {
+    expect(propertyTypeLabel("townhouse", "fr")).toBe("Townhouse");
+  });
+});
+
+describe("frPrepositionFor", () => {
+  it("returns 'à' for a proper-noun locality", () => {
+    expect(frPrepositionFor("limpertsberg")).toBe("à");
+    expect(frPrepositionFor("differdange")).toBe("à");
+  });
+
+  it("returns 'au' for centre-ville", () => {
+    expect(frPrepositionFor("centre-ville")).toBe("au");
   });
 });
