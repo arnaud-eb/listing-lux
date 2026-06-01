@@ -216,8 +216,8 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 2.2", () => {
-    expect(PROMPT_VERSION).toBe("2.2");
+  it("has version 2.3", () => {
+    expect(PROMPT_VERSION).toBe("2.3");
   });
 
   describe("v2.1 — transaction type, availability, floor", () => {
@@ -294,7 +294,7 @@ describe("buildListingPrompt", () => {
   });
 
   describe("v2.2 — qualitative energy-class prose for top-tier classes only", () => {
-    it("forbids naming the class letter in the English system prompt", () => {
+    it("forbids naming either class letter in the English system prompt", () => {
       const { system } = buildListingPrompt(
         "en",
         mockProperty,
@@ -302,6 +302,27 @@ describe("buildListingPrompt", () => {
         mockLocality,
       );
       expect(system).toMatch(/never name the energy performance class letter/i);
+      expect(system).toMatch(/thermal-insulation class letter/i);
+    });
+
+    it("includes the thermal_insulation_class in the user prompt when provided", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        { ...mockProperty, thermal_insulation_class: "A" },
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).toContain("Thermal insulation class: A");
+    });
+
+    it("omits the thermal-insulation line when not provided", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        mockProperty,
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).not.toMatch(/Thermal insulation class/);
     });
 
     it("allows neutral qualitative wording for A+/A/B in every language", () => {

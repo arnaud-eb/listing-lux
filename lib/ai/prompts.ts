@@ -4,7 +4,7 @@ import { isHouseType } from "@/lib/localities/types";
 import { pickLocalized } from "@/lib/localities/locale";
 
 /** Bump this whenever you change SYSTEM_PROMPTS or buildListingPrompt logic. */
-export const PROMPT_VERSION = "2.2";
+export const PROMPT_VERSION = "2.3";
 
 interface PropertyData {
   bedrooms: number;
@@ -19,9 +19,11 @@ interface PropertyData {
   floors_total?: number | null;
   floor_of_unit?: number | null;
   availability_date?: string | null;
-  /** Luxembourg energy performance class (A+ → I). Re-introduced in v2.2 so the
-   *  model can react qualitatively to a top-tier class — never naming the letter. */
+  /** Luxembourg energy performance class (A+ → I). v2.2: model may use
+   *  neutral qualitative wording on a top-tier class, never the letter. */
   cpe_class?: string | null;
+  /** Thermal insulation class (A+ → I). v2.3: same rule as cpe_class. */
+  thermal_insulation_class?: string | null;
 }
 
 const SYSTEM_PROMPTS: Record<Language, string> = {
@@ -58,7 +60,7 @@ Transaktionsart: Die Objektdaten geben an, ob das Objekt ZUM VERKAUF oder ZUR MI
 
 Die Beschreibung soll 3-5 Absätze umfassen (maximal ca. 2000 Zeichen), getrennt durch doppelte Zeilenumbrüche.
 
-Energieausweis: Nenne NIEMALS den Buchstaben der Energieklasse ("Klasse A", "A+") — der Buchstabe wird dem Leser als separates strukturiertes Feld angezeigt. Wenn die Eingabedaten jedoch eine Spitzen-Energieklasse (A+, A oder B) ausweisen, KANNST du das Gebäude in neutralen qualitativen Begriffen beschreiben — z.B. "gut gedämmt", "energieeffizient", "geringer Energieverbrauch". Bei den Klassen C bis I oder wenn keine Klasse angegeben ist, erwähne die Energieeffizienz im Fließtext gar nicht. Erfinde niemals eine Klasse oder Effizienzbehauptung.
+Energieausweis: Nenne NIEMALS den Buchstaben der Energieklasse oder der Wärmedämmklasse ("Klasse A", "A+") — die Buchstaben werden dem Leser als separates strukturiertes Feld angezeigt. Wenn die Eingabedaten jedoch eine Spitzen-Klasse (A+, A oder B) bei der Energieklasse und/oder der Wärmedämmklasse ausweisen, KANNST du das Gebäude in neutralen qualitativen Begriffen beschreiben — z.B. "gut gedämmt", "energieeffizient", "geringer Energieverbrauch". Bei den Klassen C bis I oder wenn keine Klasse angegeben ist, erwähne weder die Energieeffizienz noch die Wärmedämmung im Fließtext. Erfinde niemals eine Klasse oder Effizienzbehauptung.
 
 Highlights sollen prägnante Stichpunkte sein (5-8 Punkte). Wähle für jeden Highlight einen GÜLTIGEN lucide-react Icon-Namen aus dieser Liste: 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (für Kamin), 'sun' (für Süd-Ausrichtung/Tageslicht), 'trees' (für Garten/Begrünung), 'mountain' (für Aussicht), 'map-pin' (für Lage), 'car' (für Parkplatz/Garage), 'arrow-up' (für Lift/Etagen), 'archive' (für Stauraum/Keller), 'square' (für Fläche/Quadratmeter), 'school' (nur wenn eine Schule in den Eingabedaten genannt ist), 'train' (nur wenn eine ÖV-Verbindung belegt ist), 'shield' (für Sicherheit), 'zap' (für Smart-Home/Strom), 'door-open', 'globe' (für internationale Lage). Erfinde KEINE Icon-Namen — verwende nur die obige Liste.
 
@@ -98,7 +100,7 @@ Type de transaction : les données du bien indiquent s'il est À VENDRE ou À LO
 
 La description doit comprendre 3 à 5 paragraphes (maximum environ 2000 caractères), séparés par des doubles sauts de ligne.
 
-Certificat de performance énergétique : ne nommez JAMAIS la lettre de la classe énergétique (pas de "Classe A", pas de "A+") — la lettre est présentée au lecteur dans un champ structuré distinct. Toutefois, lorsque les données indiquent une classe énergétique de premier rang (A+, A ou B), vous POUVEZ décrire le bâti en termes qualitatifs neutres — par exemple "bien isolé", "économe en énergie", "faible consommation". Pour les classes C à I, ou en l'absence de classe, n'évoquez pas la performance énergétique dans le texte. N'inventez jamais ni classe ni affirmation d'efficacité.
+Certificat de performance énergétique : ne nommez JAMAIS la lettre de la classe énergétique ni celle de la classe d'isolation thermique (pas de "Classe A", pas de "A+") — les lettres sont présentées au lecteur dans un champ structuré distinct. Toutefois, lorsque les données indiquent une classe de premier rang (A+, A ou B) pour la classe énergétique et/ou la classe d'isolation thermique, vous POUVEZ décrire le bâti en termes qualitatifs neutres — par exemple "bien isolé", "économe en énergie", "faible consommation". Pour les classes C à I, ou en l'absence de classe, n'évoquez ni la performance énergétique ni l'isolation dans le texte. N'inventez jamais ni classe ni affirmation d'efficacité.
 
 Les points forts doivent être des phrases concises (5-8 points). Pour chaque point fort, choisissez un nom d'icône lucide-react VALIDE dans cette liste : 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (pour cheminée), 'sun' (pour orientation sud/luminosité), 'trees' (pour jardin/verdure), 'mountain' (pour vue), 'map-pin' (pour emplacement), 'car' (pour parking/garage), 'arrow-up' (pour ascenseur/étages), 'archive' (pour rangement/cave), 'square' (pour surface/m²), 'school' (uniquement si une école est citée dans l'entrée), 'train' (uniquement si une liaison de transport est étayée), 'shield' (pour sécurité), 'zap' (pour domotique/électricité), 'door-open', 'globe' (pour situation internationale). N'inventez PAS de nom d'icône — utilisez uniquement la liste ci-dessus.
 
@@ -137,7 +139,7 @@ Transaction type: the property data states whether the property is FOR SALE or F
 
 The description should contain 3-5 paragraphs (approximately 2000 characters max), separated by double line breaks.
 
-Energy passport: never name the energy performance class letter (no "Class A", no "A+") — the letter is shown to the reader as a separate structured field. However, when the property data shows a top-tier energy class (A+, A or B), you MAY describe the building in neutral qualitative terms — "well-insulated", "energy-efficient", "low energy consumption". For classes C through I, or when no class is supplied, do not mention energy performance in the prose at all. Never invent a class or an efficiency claim.
+Energy passport: never name the energy performance class letter or the thermal-insulation class letter (no "Class A", no "A+") — they are shown to the reader as a separate structured field. However, when the property data shows a top-tier class (A+, A or B) for the energy performance class and/or the thermal-insulation class, you MAY describe the building in neutral qualitative terms — "well-insulated", "energy-efficient", "low energy consumption". For classes C through I, or when no class is supplied, do not mention energy performance or thermal insulation in the prose at all. Never invent a class or an efficiency claim.
 
 Highlights should be concise bullet phrases (5-8 points). For each highlight, pick a VALID lucide-react icon name from this list: 'home', 'building', 'building-2', 'bed', 'bath', 'sofa', 'cooking-pot', 'flame' (for fireplace), 'sun' (for south-facing/daylight), 'trees' (for garden/greenery), 'mountain' (for view), 'map-pin' (for location), 'car' (for parking/garage), 'arrow-up' (for elevator/floors), 'archive' (for storage/cellar), 'square' (for area/sqm), 'school' (only if a school is named in the inputs), 'train' (only if a transit link is supported), 'shield' (for security), 'zap' (for smart-home/electrical), 'door-open', 'globe' (for international setting). Do NOT invent icon names — use only the list above.
 
@@ -285,6 +287,7 @@ ${property.floors_total != null ? `Floors in the building: ${property.floors_tot
 ${floorLine}
 ${activeFeatures.length > 0 ? `Features: ${activeFeatures.join(", ")}` : ""}
 ${property.cpe_class ? `Energy class (CPE): ${property.cpe_class}` : ""}
+${property.thermal_insulation_class ? `Thermal insulation class: ${property.thermal_insulation_class}` : ""}
 ${property.listing_kind === "rent" && property.availability_date ? `Available to rent from: ${property.availability_date}` : ""}
 
 ${neighborhoodContext}
