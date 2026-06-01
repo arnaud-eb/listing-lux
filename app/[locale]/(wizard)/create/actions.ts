@@ -20,6 +20,14 @@ import {
 } from "@/lib/schemas/property-aggregates";
 import { PROPERTY_TYPES, FEATURE_OPTIONS } from "@/lib/constants";
 
+/** Feature ids the photo aggregator is forbidden to auto-select. See
+ *  derivePropertyAggregates for the per-id rationale. */
+const FEATURES_NEVER_AUTO_DERIVED = new Set<string>([
+  "furnished",
+  "basement",
+  "city-view",
+]);
+
 export async function getSignedUploadUrl(
   filename: string,
   contentType: string,
@@ -162,10 +170,17 @@ export async function derivePropertyAggregates(
     .join("\n");
 
   const propertyTypeList = PROPERTY_TYPES.map((t) => t.value).join(", ");
-  // 'furnished' is deliberately excluded from vision derivation: staging, or a
-  // current tenant's furniture in a photo, does not establish that the unit is
-  // sold/let furnished — that is a contractual fact only the agent can assert.
-  const featureList = FEATURE_OPTIONS.filter((f) => f.id !== "furnished")
+  // Features the photo-aggregator must NOT auto-select — a single photo cannot
+  // reliably establish them, so only the agent should tick them:
+  //   - 'furnished': whether furniture conveys is a contract decision, not
+  //     something staging or a tenant's belongings can prove.
+  //   - 'basement': a full sub-grade floor is a building characteristic; an
+  //     interior shot of a room "in the basement" still just looks like a room.
+  //   - 'city-view': views are perspective-dependent — a window with buildings
+  //     visible doesn't make it a marketable city view.
+  const featureList = FEATURE_OPTIONS.filter(
+    (f) => !FEATURES_NEVER_AUTO_DERIVED.has(f.id),
+  )
     .map((f) => `${f.id} (${f.label})`)
     .join(", ");
 
@@ -190,8 +205,10 @@ export async function derivePropertyAggregates(
 
   return {
     ...object,
-    // Guard in case the model emits 'furnished' despite it being omitted above.
-    features: object.features.filter((id) => id !== "furnished"),
+    // Guard in case the model emits an excluded feature despite the prompt.
+    features: object.features.filter(
+      (id) => !FEATURES_NEVER_AUTO_DERIVED.has(id),
+    ),
     cpe_class: cpeClass,
     thermal_insulation_class: thermalClass,
   };
