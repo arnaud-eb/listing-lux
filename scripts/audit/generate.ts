@@ -71,6 +71,7 @@ async function generateOne(
       floor_of_unit: fixture.property.floor_of_unit ?? null,
       availability_date: fixture.property.availability_date ?? null,
       cpe_class: fixture.property.cpe_class ?? null,
+      thermal_insulation_class: fixture.property.thermal_insulation_class ?? null,
     },
     fixture.photo_analyses,
     locality,
