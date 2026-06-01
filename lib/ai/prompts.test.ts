@@ -216,8 +216,8 @@ describe("buildListingPrompt", () => {
     expect(user).not.toContain("Current listing");
   });
 
-  it("has version 2.1", () => {
-    expect(PROMPT_VERSION).toBe("2.1");
+  it("has version 2.2", () => {
+    expect(PROMPT_VERSION).toBe("2.2");
   });
 
   describe("v2.1 — transaction type, availability, floor", () => {
@@ -279,7 +279,7 @@ describe("buildListingPrompt", () => {
       expect(user).toContain("basement level");
     });
 
-    it("instructs every language not to put the energy class in the prose", () => {
+    it("addresses energy performance in every language's system prompt", () => {
       for (const lang of ["de", "fr", "en"] as const) {
         const { system } = buildListingPrompt(
           lang,
@@ -290,13 +290,63 @@ describe("buildListingPrompt", () => {
         // Matches "energy" / "Energie…" / "énergétique" across the languages.
         expect(system).toMatch(/[ée]nerg/i);
       }
-      const { system: en } = buildListingPrompt(
+    });
+  });
+
+  describe("v2.2 — qualitative energy-class prose for top-tier classes only", () => {
+    it("forbids naming the class letter in the English system prompt", () => {
+      const { system } = buildListingPrompt(
         "en",
         mockProperty,
         mockAnalyses,
         mockLocality,
       );
-      expect(en).toMatch(/do NOT mention the energy performance class/i);
+      expect(system).toMatch(/never name the energy performance class letter/i);
+    });
+
+    it("allows neutral qualitative wording for A+/A/B in every language", () => {
+      const qualifiers: Record<string, RegExp> = {
+        en: /well-insulated|energy-efficient|low energy consumption/i,
+        de: /gut gedämmt|energieeffizient|geringer Energieverbrauch/i,
+        fr: /bien isolé|économe en énergie|faible consommation/i,
+      };
+      // Also assert the gating class list itself stays in the prompt — losing
+      // "A+, A or B" while keeping the qualifiers would invert the rule.
+      const gates: Record<string, RegExp> = {
+        en: /A\+, A or B/,
+        de: /A\+, A oder B/,
+        fr: /A\+, A ou B/,
+      };
+      for (const lang of ["de", "fr", "en"] as const) {
+        const { system } = buildListingPrompt(
+          lang,
+          mockProperty,
+          mockAnalyses,
+          mockLocality,
+        );
+        expect(system).toMatch(qualifiers[lang]);
+        expect(system).toMatch(gates[lang]);
+      }
+    });
+
+    it("includes the cpe_class in the user prompt when provided", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        { ...mockProperty, cpe_class: "A+" },
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).toContain("Energy class (CPE): A+");
+    });
+
+    it("omits the energy-class line when no cpe_class is provided", () => {
+      const { user } = buildListingPrompt(
+        "en",
+        mockProperty,
+        mockAnalyses,
+        mockLocality,
+      );
+      expect(user).not.toMatch(/Energy class \(CPE\)/);
     });
   });
 
