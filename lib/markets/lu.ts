@@ -13,6 +13,7 @@ export const luxembourgMarket: Market = {
   features: [
     'balcony',
     'parking',
+    'garage',
     'garden',
     'elevator',
     'cellar',

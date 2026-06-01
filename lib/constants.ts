@@ -91,7 +91,8 @@ export type PropertyTypeValue = (typeof PROPERTY_TYPES)[number]['value']
  */
 export const FEATURE_OPTIONS = [
   { id: 'balcony', label: 'Balcony' },
-  { id: 'parking', label: 'Parking' },
+  { id: 'parking', label: 'Parking (open or shared spot)' },
+  { id: 'garage', label: 'Garage (enclosed private parking)' },
   { id: 'garden', label: 'Garden' },
   { id: 'elevator', label: 'Elevator' },
   { id: 'cellar', label: 'Cellar (private storage room in the building)' },
