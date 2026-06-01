@@ -78,6 +78,7 @@ export const fixtures: ListingFixture[] = [
       price: 3_450_000,
       neighborhood: "belair",
       property_type: "penthouse",
+      listing_kind: "sale",
       features: {
         balcony: false,
         parking: true,
@@ -187,6 +188,7 @@ export const fixtures: ListingFixture[] = [
       price: 1_650_000,
       neighborhood: "kirchberg",
       property_type: "apartment",
+      listing_kind: "sale",
       features: {
         balcony: true,
         parking: true,
@@ -289,6 +291,7 @@ export const fixtures: ListingFixture[] = [
       price: 485_000,
       neighborhood: "bonnevoie",
       property_type: "apartment",
+      listing_kind: "sale",
       features: {
         balcony: false,
         parking: false,
@@ -355,6 +358,7 @@ export const fixtures: ListingFixture[] = [
       price: 2_100_000,
       neighborhood: "cloche-dor",
       property_type: "duplex",
+      listing_kind: "sale",
       features: {
         balcony: false,
         parking: true,
@@ -451,6 +455,7 @@ export const fixtures: ListingFixture[] = [
       price: 2_650_000,
       neighborhood: "grund",
       property_type: "penthouse",
+      listing_kind: "sale",
       features: {
         balcony: false,
         parking: true,
@@ -559,6 +564,7 @@ export const fixtures: ListingFixture[] = [
       price: 1_950_000,
       neighborhood: "strassen",
       property_type: "villa",
+      listing_kind: "sale",
       features: {
         balcony: false,
         parking: true,
@@ -683,6 +689,7 @@ export const fixtures: ListingFixture[] = [
       price: 1_350_000,
       neighborhood: "bertrange",
       property_type: "house",
+      listing_kind: "sale",
       features: {
         balcony: false,
         parking: true,
@@ -775,6 +782,7 @@ export const fixtures: ListingFixture[] = [
       price: 425_000,
       neighborhood: "esch-sur-alzette",
       property_type: "apartment",
+      listing_kind: "sale",
       features: {
         balcony: true,
         parking: true,
@@ -847,6 +855,7 @@ export const fixtures: ListingFixture[] = [
       price: 2_400, // monthly rent
       neighborhood: "limpertsberg",
       property_type: "apartment",
+      listing_kind: "rent",
       features: {
         balcony: true,
         parking: false,
@@ -942,6 +951,7 @@ export const fixtures: ListingFixture[] = [
       price: 2_900, // monthly rent
       neighborhood: "mamer",
       property_type: "house",
+      listing_kind: "rent",
       features: {
         balcony: false,
         parking: true,
@@ -1013,6 +1023,7 @@ export const fixtures: ListingFixture[] = [
       price: 3_400, // monthly rent
       neighborhood: "differdange",
       property_type: "villa",
+      listing_kind: "rent",
       features: {
         balcony: false,
         parking: true,
@@ -1084,6 +1095,7 @@ export const fixtures: ListingFixture[] = [
       price: 1_750, // monthly rent
       neighborhood: "clausen",
       property_type: "studio",
+      listing_kind: "rent",
       features: {
         balcony: false,
         parking: false,
