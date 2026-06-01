@@ -5,9 +5,9 @@
     "historyTitle": "Your Listings — ListingLux",
     "profileTitle": "Your Profile — ListingLux",
     "listingNotFoundTitle": "Listing Not Found — ListingLux",
-    "listingTitleTemplate": "{type} in {neighborhood} — ListingLux",
-    "listingDescriptionTemplate": "{bedrooms} bed · {bathrooms} bath · {sqm} m² luxury {type} in {neighborhood}, Luxembourg",
-    "listingDescriptionTemplateNoSqm": "{bedrooms} bed · {bathrooms} bath luxury {type} in {neighborhood}, Luxembourg"
+    "listingTitleTemplate": "{type} {prep} {neighborhood} — ListingLux",
+    "listingDescriptionTemplate": "{bedrooms} bed · {bathrooms} bath · {sqm} m² {type} {prep} {neighborhood}, Luxembourg",
+    "listingDescriptionTemplateNoSqm": "{bedrooms} bed · {bathrooms} bath {type} {prep} {neighborhood}, Luxembourg"
   },
   "common": {
     "skipToMain": "Skip to main content",

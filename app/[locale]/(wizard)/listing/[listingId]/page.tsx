@@ -8,7 +8,7 @@ import { getBySlug as getLocalityBySlug, listForDropdown } from "@/lib/localitie
 import { pickLocalized } from "@/lib/localities/locale";
 import PhotoCarousel from "@/components/listing/PhotoCarousel";
 import type { Language } from "@/lib/types";
-import { propertyTypeLabel } from "@/lib/constants";
+import { propertyTypeLabel, frPrepositionFor } from "@/lib/constants";
 import ListingPageClient from "./listing-page-client";
 import { propertySchema } from "@/lib/schemas/property";
 import type { Listing, Property } from "@/lib/types";
@@ -72,10 +72,14 @@ export async function generateMetadata({
     p.neighborhood,
   );
   const typeName = propertyTypeLabel(p.property_type, locale as Language);
+  // FR contracts the article ("au Centre-Ville", not "à Centre-Ville"); other
+  // locales just use the plain English/German connector.
+  const prep = locale === "fr" ? frPrepositionFor(p.neighborhood) : "in";
 
   return {
     title: t("listingTitleTemplate", {
       type: typeName,
+      prep,
       neighborhood: neighborhoodName,
     }),
     description:
@@ -84,13 +88,15 @@ export async function generateMetadata({
             bedrooms: p.bedrooms,
             bathrooms: p.bathrooms,
             sqm: p.sqm,
-            type: p.property_type,
+            type: typeName,
+            prep,
             neighborhood: neighborhoodName,
           })
         : t("listingDescriptionTemplateNoSqm", {
             bedrooms: p.bedrooms,
             bathrooms: p.bathrooms,
-            type: p.property_type,
+            type: typeName,
+            prep,
             neighborhood: neighborhoodName,
           }),
     openGraph: {
