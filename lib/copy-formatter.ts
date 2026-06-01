@@ -1,5 +1,5 @@
 import type { Listing, Property, Highlight, Language } from "./types";
-import { formatCurrency } from "./format";
+import { formatCurrency, formatListingDate } from "./format";
 import { PROPERTY_DETAIL_LABELS, BUILDING_DETAIL_LABELS } from "./constants";
 
 /** "For sale" / "For rent" label for a listing, or null when the kind is unknown. */
@@ -10,6 +10,58 @@ function listingKindLabel(
   if (!property.listing_kind) return null;
   const labels = BUILDING_DETAIL_LABELS[language] ?? BUILDING_DETAIL_LABELS.en;
   return property.listing_kind === "rent" ? labels.forRent : labels.forSale;
+}
+
+const BUILDING_EMOJIS = {
+  yearBuilt: "🏗️",
+  floorsTotal: "🏢",
+  floorOfUnit: "🛗",
+  energyClass: "⚡",
+  thermalClass: "🌡️",
+  monthlyCharges: "💶",
+  availableFrom: "📅",
+} as const;
+
+/**
+ * Building-detail line for email / social copy — mirrors the PDF's
+ * BuildingDetailsBar so an agent's emailed or shared listing carries the same
+ * facts the printable does. Returns null when no building fields are populated.
+ */
+function buildBuildingDetailsLine(
+  property: Property,
+  language: Language,
+  { emojis = false }: { emojis?: boolean } = {},
+): string | null {
+  const L = BUILDING_DETAIL_LABELS[language] ?? BUILDING_DETAIL_LABELS.en;
+  const e = (key: keyof typeof BUILDING_EMOJIS) =>
+    emojis ? `${BUILDING_EMOJIS[key]} ` : "";
+  const parts: string[] = [];
+  if (property.year_built != null)
+    parts.push(`${e("yearBuilt")}${L.yearBuilt}: ${property.year_built}`);
+  if (property.floors_total != null)
+    parts.push(`${e("floorsTotal")}${L.floorsTotal}: ${property.floors_total}`);
+  if (property.floor_of_unit != null)
+    parts.push(
+      `${e("floorOfUnit")}${L.floorOfUnit}: ${
+        property.floor_of_unit === 0 ? L.groundFloor : property.floor_of_unit
+      }`,
+    );
+  if (property.cpe_class)
+    parts.push(`${e("energyClass")}${L.energyClass}: ${property.cpe_class}`);
+  if (property.thermal_insulation_class)
+    parts.push(
+      `${e("thermalClass")}${L.thermalClass}: ${property.thermal_insulation_class}`,
+    );
+  if (property.charges_monthly != null)
+    parts.push(
+      `${e("monthlyCharges")}${L.monthlyCharges}: ${formatCurrency(property.charges_monthly)}`,
+    );
+  if (property.listing_kind === "rent" && property.availability_date)
+    parts.push(
+      `${e("availableFrom")}${L.availableFrom}: ${formatListingDate(property.availability_date, language)}`,
+    );
+  if (parts.length === 0) return null;
+  return parts.join(emojis ? " | " : " · ");
 }
 
 // --- Icon → Emoji mapping (derived at format-time, not stored in DB) ---
@@ -168,12 +220,14 @@ export function formatForEmail(
 
   const language = (listing.language ?? "en") as Language;
   const detailsLine = buildPropertyDetailsLine(property, language);
+  const buildingLine = buildBuildingDetailsLine(property, language);
   const addressLine = property.address ? `📍 ${property.address}` : "";
 
   // Plain text
   const plainParts = [
     title,
     detailsLine,
+    buildingLine,
     addressLine,
     description,
     highlights.length > 0 ? `HIGHLIGHTS:\n${highlights.join("\n")}` : "",
@@ -189,6 +243,7 @@ export function formatForEmail(
   const htmlParts = [
     `<strong>${title}</strong>`,
     `<strong>${detailsLine}</strong>`,
+    buildingLine ? `<p>${buildingLine}</p>` : "",
     addressLine ? `<p>${addressLine}</p>` : "",
     descriptionHtml,
     highlightsHtml ? `<strong>HIGHLIGHTS:</strong><br>\n${highlightsHtml}` : "",
@@ -220,11 +275,15 @@ export function formatForSocialMedia(
     `🚿 ${property.bathrooms} ${labels.bathroom(property.bathrooms)}`,
   ].filter((p): p is string => p !== null);
   const detailsLine = detailParts.join(" | ");
+  const buildingLine = buildBuildingDetailsLine(property, language, {
+    emojis: true,
+  });
   const addressLine = property.address ? `📍 ${property.address}` : "";
 
   const parts = [
     `🏠 ${title}`,
     detailsLine,
+    buildingLine,
     addressLine,
     description,
     highlights.length > 0 ? `HIGHLIGHTS:\n${highlights.join("\n")}` : "",

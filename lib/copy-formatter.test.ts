@@ -247,3 +247,68 @@ describe("listing kind in copy", () => {
     expect(result.plainText).not.toContain("For rent");
   });
 });
+
+describe("building details in email and social copy", () => {
+  const propertyWithBuilding: Property = {
+    ...mockProperty,
+    listing_kind: "sale",
+    year_built: 1998,
+    cpe_class: "C",
+    charges_monthly: 250,
+  };
+
+  it("email plain text includes the building details when present", () => {
+    const result = formatForEmail(mockListing, propertyWithBuilding);
+    expect(result.plainText).toContain("Year built: 1998");
+    expect(result.plainText).toContain("Energy class: C");
+    expect(result.plainText).toContain("Monthly charges");
+  });
+
+  it("email HTML wraps the building line in a <p>", () => {
+    const result = formatForEmail(mockListing, propertyWithBuilding);
+    expect(result.html).toMatch(/<p>[^<]*Year built: 1998[^<]*<\/p>/);
+  });
+
+  it("social-media output prefixes each building detail with an emoji", () => {
+    const result = formatForSocialMedia(mockListing, propertyWithBuilding);
+    expect(result).toContain("🏗️ Year built: 1998");
+    expect(result).toContain("⚡ Energy class: C");
+  });
+
+  it("omits the building line entirely when no building fields are set", () => {
+    const emailResult = formatForEmail(mockListing, mockProperty);
+    expect(emailResult.plainText).not.toContain("Year built");
+    expect(emailResult.plainText).not.toContain("Energy class");
+    const socialResult = formatForSocialMedia(mockListing, mockProperty);
+    expect(socialResult).not.toContain("Year built");
+    expect(socialResult).not.toContain("Energy class");
+  });
+
+  it("includes the rental availability date in the building line for rentals", () => {
+    const result = formatForEmail(mockListing, {
+      ...mockProperty,
+      listing_kind: "rent",
+      availability_date: "2026-09-01",
+    });
+    expect(result.plainText).toContain("Available from:");
+    expect(result.plainText).toContain("2026");
+  });
+});
+
+  it("labels floor 0 as the ground floor in the building line", () => {
+    const result = formatForEmail(mockListing, {
+      ...mockProperty,
+      floor_of_unit: 0,
+    });
+    expect(result.plainText).toContain("Ground floor");
+  });
+
+  it("omits the availability date when the listing is for sale (negative gate)", () => {
+    const result = formatForEmail(mockListing, {
+      ...mockProperty,
+      listing_kind: "sale",
+      availability_date: "2026-09-01",
+    });
+    expect(result.plainText).not.toContain("Available from");
+    expect(result.plainText).not.toContain("2026-09-01");
+  });
