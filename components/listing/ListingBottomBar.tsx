@@ -79,10 +79,8 @@ export default function ListingBottomBar({
       disabled={isGenerating || isEditing}
       className="gap-1.5 rounded-lg border-gray-300 text-gray-700 shadow-none"
     >
-      <RefreshCw
-        className={`size-3.5 ${isGenerating ? "animate-spin" : ""}`}
-      />
-      <span className="max-sm:hidden">{t("regenerate")}</span>
+      <RefreshCw className={`size-3.5 ${isGenerating ? "animate-spin" : ""}`} />
+      <span>{t("regenerate")}</span>
       {activeLanguage && (
         <span className="uppercase text-2xs font-bold bg-gold/10 text-gold rounded px-1.5 py-0.5">
           {activeLanguage}
