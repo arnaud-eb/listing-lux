@@ -35,6 +35,7 @@ export async function generateMetadata({
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({ locale, namespace: "metadata" });
   return {
+    metadataBase: new URL("https://www.listinglux.lu"),
     title: t("rootTitle"),
     description: t("rootDescription"),
     alternates: {
