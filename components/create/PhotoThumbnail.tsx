@@ -55,8 +55,6 @@ export default memo(function PhotoThumbnail({
         </div>
       )}
 
-      {/* Analyzing overlay — same size as uploading, gold ring distinguishes
-          the AI-analysis phase from the upload phase at a glance. */}
       {photo.status === "processing" && (
         <div
           className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center gap-2"
@@ -67,7 +65,9 @@ export default memo(function PhotoThumbnail({
             role="status"
             aria-label={t("ariaAnalyzing")}
           />
-          <span className="text-white text-xs font-medium">{t("analyzing")}</span>
+          <span className="text-white text-xs font-medium">
+            {t("analyzing")}
+          </span>
         </div>
       )}
 
