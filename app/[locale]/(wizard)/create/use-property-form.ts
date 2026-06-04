@@ -140,7 +140,12 @@ export function formReducer(
 export function usePropertyForm() {
   const [state, dispatch] = useReducer(formReducer, INITIAL_STATE);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-  const hasDerivedRef = useRef(false);
+  // Ids of photos a successful derivation has already accounted for. A new
+  // analyzed photo re-runs the aggregator (so a lift photo added later still
+  // yields the elevator feature); committed only on success so a transient
+  // failure leaves its photos eligible for a later retry.
+  const derivedIdsRef = useRef<Set<string>>(new Set());
+  const derivingRef = useRef(false);
   const [pendingAggregates, setPendingAggregates] = useState(false);
 
   // --- Field updaters ---
@@ -213,38 +218,38 @@ export function usePropertyForm() {
           : [],
       };
       dispatch({ type: "RESTORE_DRAFT", state: restored });
-      // Skip derivation: a restored draft already has whatever propertyType /
-      // features the user (or last session's derivation) settled on.
-      if (restored.photos.length > 0) {
-        hasDerivedRef.current = true;
-      }
+      // Seed the derived-ids set with the restored analyzed photos so the draft
+      // keeps its settled features, while newly added photos still re-derive.
+      derivedIdsRef.current = new Set(
+        restored.photos.filter((p) => p.aiAnalysis != null).map((p) => p.id),
+      );
     } catch {
       // Ignore corrupt data
     }
   }, []);
 
-  // Derive property_type + features from photo analyses, once per session.
-  // Fires after the first time all photos finish analyzing and we have at least
-  // MIN_PHOTOS ready. Failure is silent — defaults stay in place.
+  // Derive property_type + features once all photos finish analyzing with at
+  // least MIN_PHOTOS ready, and re-derive whenever a photo not yet accounted
+  // for appears (photos added later contribute their features too). The reducer
+  // OR-merges, so re-runs never clobber user toggles. Failure is silent — the
+  // user can submit with defaults, and the set is left un-committed to retry.
   useEffect(() => {
-    if (hasDerivedRef.current) return;
     if (inFlightPhotoCount > 0) return;
     if (readyPhotoCount < MIN_PHOTOS) return;
+    if (derivingRef.current) return;
 
-    const analyses = state.photos
-      .map((p) => p.aiAnalysis)
-      .filter((a): a is NonNullable<typeof a> => a != null);
+    const analyzed = state.photos.filter((p) => p.aiAnalysis != null);
+    const hasNewPhoto = analyzed.some((p) => !derivedIdsRef.current.has(p.id));
+    if (!hasNewPhoto) return;
 
-    if (analyses.length === 0) {
-      hasDerivedRef.current = true;
-      return;
-    }
-
-    hasDerivedRef.current = true;
+    const analyses = analyzed.map((p) => p.aiAnalysis!);
+    const derivedIds = analyzed.map((p) => p.id);
+    derivingRef.current = true;
     setPendingAggregates(true);
 
     derivePropertyAggregates(analyses)
       .then((result) => {
+        derivedIdsRef.current = new Set(derivedIds);
         dispatch({
           type: "SET_AGGREGATES",
           propertyType: result.property_type,
@@ -257,6 +262,7 @@ export function usePropertyForm() {
         // Silent failure — user can still submit with defaults.
       })
       .finally(() => {
+        derivingRef.current = false;
         setPendingAggregates(false);
       });
   }, [inFlightPhotoCount, readyPhotoCount, state.photos]);
@@ -409,7 +415,7 @@ export function usePropertyForm() {
   // --- Reset ---
   function reset() {
     sessionStorage.removeItem(DRAFT_KEY);
-    hasDerivedRef.current = false;
+    derivedIdsRef.current = new Set();
     dispatch({ type: "RESET" });
   }
 

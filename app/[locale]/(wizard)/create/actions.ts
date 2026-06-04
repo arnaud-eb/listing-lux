@@ -18,7 +18,13 @@ import {
   propertyAggregatesSchema,
   type DerivedAggregates,
 } from "@/lib/schemas/property-aggregates";
-import { PROPERTY_TYPES, FEATURE_OPTIONS } from "@/lib/constants";
+import {
+  PROPERTY_TYPES,
+  FEATURE_OPTIONS,
+  normalizeRoomType,
+} from "@/lib/constants";
+
+const FEATURE_ID_SET = new Set<string>(FEATURE_OPTIONS.map((f) => f.id));
 
 /** Feature ids the photo aggregator is forbidden to auto-select. See
  *  derivePropertyAggregates for the per-id rationale. */
@@ -203,11 +209,23 @@ export async function derivePropertyAggregates(
     ],
   });
 
+  // A photo the vision step classified as e.g. a "garage" evidences that
+  // feature more reliably than re-deriving it from prose against qualified
+  // labels. Mirrors the room-type-correction sync in use-property-form.ts.
+  const roomTypeFeatures = analyses
+    .map((a) => normalizeRoomType(a.room_type))
+    .filter(
+      (id) => FEATURE_ID_SET.has(id) && !FEATURES_NEVER_AUTO_DERIVED.has(id),
+    );
+
   return {
     ...object,
     // Guard in case the model emits an excluded feature despite the prompt.
-    features: object.features.filter(
-      (id) => !FEATURES_NEVER_AUTO_DERIVED.has(id),
+    features: Array.from(
+      new Set([
+        ...object.features.filter((id) => !FEATURES_NEVER_AUTO_DERIVED.has(id)),
+        ...roomTypeFeatures,
+      ]),
     ),
     cpe_class: cpeClass,
     thermal_insulation_class: thermalClass,
