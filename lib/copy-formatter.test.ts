@@ -293,6 +293,30 @@ describe("building details in email and social copy", () => {
     expect(result.plainText).toContain("Available from:");
     expect(result.plainText).toContain("2026");
   });
+
+  it("appends the address as the last item of the building line (email)", () => {
+    const result = formatForEmail(mockListing, propertyWithBuilding);
+    expect(result.plainText).toContain("· 12 Rue de Clausen");
+    expect(result.plainText).not.toContain("📍");
+    const buildingPara = result.plainText
+      .split("\n\n")
+      .find((p) => p.includes("Year built: 1998"));
+    expect(buildingPara).toContain("12 Rue de Clausen");
+  });
+
+  it("appends the address as the last item of the building line (social)", () => {
+    const result = formatForSocialMedia(mockListing, propertyWithBuilding);
+    expect(result).toContain("| 📍 12 Rue de Clausen");
+    const buildingPara = result
+      .split("\n\n")
+      .find((p) => p.includes("Year built: 1998"));
+    expect(buildingPara).toContain("📍 12 Rue de Clausen");
+  });
+
+  it("uses the address alone as the building line when no building fields are set", () => {
+    const result = formatForEmail(mockListing, mockProperty);
+    expect(result.plainText.split("\n\n")).toContain(mockProperty.address);
+  });
 });
 
   it("labels floor 0 as the ground floor in the building line", () => {
