@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:20.942Z",
+  "output": {
+    "title": "Penthouse rénové 4 chambres avec terrasse panoramique et vue sur la ville",
+    "description": "Situé dans le quartier résidentiel prisé de Belair, ce penthouse rénové de 220 m² offre un cadre de vie contemporain conjuguant confort et luminosité. Son agencement ouvert met en valeur un séjour baigné de lumière naturelle grâce à ses baies vitrées du sol au plafond, équipées d'un système d'éclairage domotique intégré. Le parquet en chêne massif et la cheminée à bois apportent une touche chaleureuse à cet espace de vie raffiné.\n\nLa cuisine intégrée, contemporaine et élégante, est dotée d’appareils Gaggenau de haute gamme et d’un îlot central en marbre de Carrare, idéal pour les réceptions. Un cellier attenant complète cet espace fonctionnel. Vous disposerez de quatre chambres, dont une suite parentale avec dressing, salle de bains privative et accès direct à une terrasse particulière, prolongement extérieur intime.\n\nLa terrasse principale, orientée plein sud, s’étend largement avec un sol en lames composites et une balustrade en verre, offrant une vue dégagée à 180 degrés sur la ville. Cet espace extérieur est aménagé en salon d’été. Parmi les prestations complémentaires figurent un ascenseur desservant l’étage, un emplacement de parking privatif ainsi qu’une cave. L’ensemble conjugue modernité architecturale et qualité de vie au sein d’un quartier calme et verdoyant.",
+    "highlights": [
+      {
+        "text": "Penthouse de 220 m² avec quatre chambres",
+        "icon": "home"
+      },
+      {
+        "text": "Cuisine équipée Gaggenau avec îlot en marbre de Carrare",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse sud avec vue panoramique à 180° sur la ville",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée à bois dans le séjour avec parquet en chêne",
+        "icon": "flame"
+      },
+      {
+        "text": "Ascenseur intérieur et parking privé",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cave de rangement séparée comprise",
+        "icon": "archive"
+      },
+      {
+        "text": "Système d'éclairage intelligent intégré",
+        "icon": "zap"
+      },
+      {
+        "text": "Quartier résidentiel verdoyant de Belair",
+        "icon": "trees"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLuxe",
+      "TerrasseVueVille",
+      "CuisineGaggenau",
+      "AscenseurPrivatif",
+      "QuartierBelair"
+    ]
+  }
+}

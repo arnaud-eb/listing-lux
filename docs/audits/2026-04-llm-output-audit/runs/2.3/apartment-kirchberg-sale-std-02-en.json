@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:49.311Z",
+  "output": {
+    "title": "Contemporary 3-Bedroom Apartment with Balcony and Parking in Kirchberg",
+    "description": "This newly built 3-bedroom apartment offers 145 m² of thoughtfully designed living space in Luxembourg's Kirchberg district. Featuring a spacious living room with double-height ceilings and engineered wood flooring, the area benefits from abundant natural light through large south-facing windows, enhancing the open-plan connection to the dining space.\n\nThe kitchen is outfitted with high-end Bulthaup cabinetry and a stone worktop, complemented by an induction cooktop and a breakfast bar that serves as a functional focal point. The finishes present a minimalist and modern aesthetic consistent throughout the residence.\n\nA private balcony with glass balustrades and tiled flooring overlooks Kirchberg park, providing a quiet setting suitable for relaxed mornings. The property includes two bathrooms finished with porcelain tiles; the master ensuite is equipped with a walk-in rain shower, a double vanity, and underfloor heating that extends to the entire apartment.\n\nAdditional amenities comprise an elevator for convenient access, an assigned parking space, and a cellar offering separate storage in the building. The apartment provides city views characteristic of the Kirchberg area, known for its modern architecture and role as a European business district housing EU institutions and cultural venues such as the Philharmonie and MUDAM.",
+    "highlights": [
+      {
+        "text": "145 m² newly built apartment",
+        "icon": "square"
+      },
+      {
+        "text": "3 bedrooms, 2 bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "South-facing living room with double-height ceiling",
+        "icon": "sun"
+      },
+      {
+        "text": "Bulthaup kitchen with induction cooktop and stone worktop",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Balcony overlooking Kirchberg park",
+        "icon": "trees"
+      },
+      {
+        "text": "Elevator access and parking space included",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Underfloor heating throughout bathrooms and ensuite",
+        "icon": "flame"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "KirchbergViews",
+      "BulthaupKitchen",
+      "ParkBalcony",
+      "CityApartment"
+    ]
+  }
+}

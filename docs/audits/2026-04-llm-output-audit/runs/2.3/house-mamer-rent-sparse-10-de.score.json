@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Reihenhaus aus den 1980er Jahren... Wohnfläche von 130 m²... drei Schlafzimmer sowie ein Badezimmer' matches inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 130 m², 3 Schlafzimmer, 1 Bad, Garten, Keller, Stellplatz, Mamer, 1980s row house."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'Komfort der Widmung als Wohnhaus' is awkward/unidiomatic; 'Mamer's' uses anglicized apostrophe; 'suburbanen Lage' is an inflection error."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'Reihenhaus', 'Stellplatz', 'Kellerraum' are appropriate, but 'suburbanen' is anglicism rather than LU/DE 'Vorortlage' or 'Wohngegend'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; omitted appropriately."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title '3-Schlafzimmer-Reihenhaus mit Garten und Stellplatz in Mamer zu vermieten' (~10 words, Mamer included); 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole, no exclamation marks; cautious tone ('erfordert sie eine Modernisierung')."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Lycée Josy Barthel' and 'European School Luxembourg II in der Umgebung Bertrange-Mamer' (named schools not in inputs), and 'exzellente Autobahn- und Zuganbindungen' (transit quality not in inputs; Mamer not in registry)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 130 m², 3 bedrooms, 1 bathroom, garden, parking, cellar, row house, 1980s. EN and DE add named schools (Lycée Josy Barthel, European School Luxembourg II) that FR omits — non-contradictory addition, minor disagreement on detail set."
+    }
+  },
+  "overall_pass": false
+}

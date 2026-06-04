@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:21.200Z",
+  "output": {
+    "title": "Contemporary 3-Bedroom Duplex with Panoramic City and Park Views in Cloche d'Or",
+    "description": "This newly built duplex apartment offers 180 square meters of living space within Luxembourg's prominent Cloche d'Or district, a modern business hub featuring notable office developments, shopping centers, and parks. The residence benefits from an elevator-accessible building with secured parking and a cellar for additional storage.\n\nThe ground floor presents a voluminous living room characterized by double-height ceilings and panoramic glazing, allowing expansive views over a newly established park. The interior staircase connects the floors, complementing the engineered oak flooring that runs through the living area. An open-plan kitchen is seamlessly integrated into the living space and fitted with Siemens appliances, quartz worktops, and soft-close cabinetry, designed to optimize functionality and sociability.\n\nUpstairs, the master bedroom includes fitted wardrobes and direct access to a private terrace featuring wood decking with wraparound views towards the shopping center. Two additional bedrooms and a second bathroom complete the upper level, offering a balance of privacy and comfort. The terrace benefits from evening sun exposure, adding an outdoor dimension to the living experience.\n\nThis property is offered for sale and combines modern architectural elements with practical urban conveniences. Prospective buyers will appreciate its position within a newly developed area known for combining residential comfort with commercial amenities and green spaces.",
+    "highlights": [
+      {
+        "text": "180 m² newly built duplex",
+        "icon": "home"
+      },
+      {
+        "text": "3 bedrooms and 2 bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Double-height living room with panoramic glazing",
+        "icon": "square"
+      },
+      {
+        "text": "Open-plan kitchen with Siemens appliances",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Wraparound terrace with city and park views",
+        "icon": "sun"
+      },
+      {
+        "text": "Private parking space and cellar included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Located in Cloche d'Or business and retail district",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "NewBuild",
+      "CityView",
+      "ModernDuplex",
+      "OpenPlanLiving",
+      "ClocheDOr"
+    ]
+  }
+}

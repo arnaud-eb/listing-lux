@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:07.170Z",
+  "output": {
+    "title": "Maison semi-adossée avec jardin orienté sud et parking à Bertrange",
+    "description": "Cette maison semi-adossée, construite dans les années 1990, présente une façade en brique et un petit jardin avant soigneusement entretenu. Située dans une commune réputée pour ses infrastructures et son cadre résidentiel, elle s'intègre dans un environnement calme avec accès privé par une allée de stationnement.\n\nLa pièce de vie principale accueille un séjour avec cheminée et s'ouvre sur la salle à manger, offrant une continuité visuelle et un accès direct au jardin arrière exposé au sud. Le sol en carrelage participe à une ambiance chaleureuse et fonctionnelle.\n\nLa cuisine indépendante, équipée de mobiliers en bois et d'un plan de travail carrelé, dispose d'un coin repas de type petit-déjeuner, garantissant un espace convivial et pratique. La maison comprend quatre chambres et deux salles de bains, adaptées à diverses configurations d'usage.\n\nLe jardin arrière, orienté plein sud, propose une pelouse et une terrasse privative, un cadre calme propice aux moments en extérieur. Une cave complète les surfaces disponibles, offrant un espace de rangement supplémentaire.\n\nL'emplacement de la maison bénéficie des infrastructures développées de la commune de Bertrange, connue notamment pour le centre commercial Belle Étoile et la desserte en tramway via la zone de la Cloche d'Or.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "4 chambres et 2 salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Jardin orienté sud avec terrasse privative",
+        "icon": "sun"
+      },
+      {
+        "text": "Cheminée dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine fonctionnelle avec coin petit-déjeuner",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parking privé avec allée d’accès",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée pour rangement",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "SemiAdossée",
+      "JardinOrientéSud",
+      "Cheminée",
+      "CuisineAvecCoinRepas",
+      "ParkingPrivé"
+    ]
+  }
+}

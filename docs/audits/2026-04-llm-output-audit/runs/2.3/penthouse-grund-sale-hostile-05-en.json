@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:37.166Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de Alzette en Grund",
+    "description": "Este penthouse de 175 m² se encuentra en una ubicación emblemática del histórico barrio de Grund, en el valle de Alzette. La propiedad combina elementos arquitectónicos característicos, como una pared de piedra vista y vigas expuestas, con una renovación que aporta funcionalidad y confort moderno.\n\nEl salón presenta un techo abovedado y amplios ventanales que ofrecen vistas a la campiña del valle, mientras que la cocina, equipada con mobiliario de madera maciza y una encimera de mármol, incluye una cocina profesional de acero inoxidable. Tres dormitorios y dos baños completan el interior de la vivienda.\n\nUna terraza privada con pavimento de piedra y barandilla de hierro forjado proporciona un espacio exterior con vistas directas al valle, en un entorno declarado Patrimonio de la Humanidad por la UNESCO. Entre las comodidades adicionales se incluyen un ascensor para acceder al piso, una plaza de aparcamiento y un sótano. La propiedad está disponible para su compra.",
+    "highlights": [
+      {
+        "text": "175 m² de superficie habitable",
+        "icon": "square"
+      },
+      {
+        "text": "3 dormitorios y 2 baños",
+        "icon": "bed"
+      },
+      {
+        "text": "Terraza privada con vistas al valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Pared de piedra vista y vigas originales",
+        "icon": "building-2"
+      },
+      {
+        "text": "Cocina con mobiliario de madera y encimera de mármol",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de parking incluida",
+        "icon": "car"
+      },
+      {
+        "text": "Sótano independiente",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "HistoricArchitecture",
+      "AlzetteValleyViews",
+      "RenovatedPenthouse",
+      "UNESCOHeritage",
+      "CityTerrace"
+    ]
+  }
+}

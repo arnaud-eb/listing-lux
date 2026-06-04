@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-rent-basement-13",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'48 square meters... basement level of a four-story building' matches inputs precisely."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds, bath, neighborhood, elevator, cellar, renovation, walk-in shower, fitted kitchen, electric hob, availability date; omits monthly charges."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads naturally in English: 'a practical setup for culinary activities' is slightly stiff but acceptable."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate rental terms 'fitted kitchen', 'walk-in shower', 'cellar', 'elevator'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and description omits CPE entirely."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Renovated 1-Bedroom Apartment with Cellar and Elevator Access' is only 9 words and omits Bonnevoie neighborhood; 5 CamelCase hashtags fine."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; phrasing like 'well-maintained residence' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics anywhere in the EN copy."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'vibrant market scene' references a market not in inputs. 'multicultural and lively area' is generic adjective, not concrete."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE and EN agree the unit is on the basement ('Untergeschoss' / 'basement level'); FR contradicts with 'au rez-de-jardin' — a floor/level disagreement."
+    }
+  },
+  "overall_pass": false
+}

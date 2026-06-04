@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'three-bedroom house offers 130 m² of living space... well-maintained row house' aligns with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 130 m², three bedrooms, one bathroom, Mamer, garden, parking, cellar, shed, 1980s row house."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Fluent English; slightly stiff ('facilitating extra storage options') but reads natively."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'row house', 'cellar', 'reserved parking space' are appropriate; 'ReadyToModernize' is a softer LU style."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned; appropriate since none supplied."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Three-Bedroom House with Garden and Parking in Mamer for Rent' (12 words, Mamer included); 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained: 'understated exterior', 'potential for modernization' — no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No protected-class references."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Lycée Josy Barthel', 'European School Luxembourg II at Bertrange-Mamer' (named schools not in inputs), and 'The rental is available immediately' (availability not stated). Inputs contained no neighborhood data."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 130 m², 3 bedrooms, 1 bathroom, garden, parking, cellar, row house, 1980s. EN and DE add named schools (Lycée Josy Barthel, European School Luxembourg II) that FR omits — non-contradictory addition, minor disagreement on detail set."
+    }
+  },
+  "overall_pass": false
+}

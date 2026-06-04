@@ -1,0 +1,44 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:44.755Z",
+  "output": {
+    "title": "3-Schlafzimmer-Reihenhaus mit Garten und Stellplatz in Mamer zu vermieten",
+    "description": "Das zur Miete angebotene Reihenhaus aus den 1980er Jahren präsentiert sich in einem gut gepflegten Zustand und zeichnet sich durch eine ruhige Wohnlage in Mamer aus. Mit einer Wohnfläche von 130 m² bietet das Haus drei Schlafzimmer sowie ein Badezimmer und eignet sich für verschiedene Wohnbedürfnisse.\n\nDas Erdgeschoss verfügt über einen Wohnbereich mit direktem Zugang zum privaten hinteren Garten, der mit einem gepflegten Rasen, einem Holzzaun und einem kleinen Gartenhaus ausgestattet ist. Der Garten erweitert die nutzbare Fläche des Hauses und stellt eine angenehme Freifläche dar. Die Innengestaltung ist zweckmäßig, allerdings erfordert sie eine Modernisierung, insbesondere im Wohnraum, der mit einem beigen Teppichboden ausgestattet ist.\n\nZur Immobilie gehört ein Kellerraum, der zusätzlichen Stauraum bietet. Ein privater Stellplatz ist ebenfalls vorhanden, was den Komfort der Widmung als Wohnhaus unterstreicht. Das Anwesen ist eingebettet in eine ruhige Nachbarschaft mit suburbanem Charakter und profitiert von der guten Infrastruktur Mamer's, das unter anderem über exzellente Autobahn- und Zuganbindungen verfügt.\n\nDie Lage bietet Zugang zu Bildungsinstitutionen wie dem Lycée Josy Barthel und der European School Luxembourg II in der Umgebung Bertrange-Mamer, wobei das Haus selbst keine direkte Nähe zu diesen Einrichtungen aufweist. Die Nachbarschaft ist geprägt von einer gewachsenen Wohnbebauung, die das Umfeld des Hauses angenehm gestaltet.",
+    "highlights": [
+      {
+        "text": "Reihenhaus gebaut in den 1980er Jahren",
+        "icon": "building-2"
+      },
+      {
+        "text": "Drei Schlafzimmer und ein Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Privater Garten mit Rasen und Gartenhaus",
+        "icon": "trees"
+      },
+      {
+        "text": "Eigener Kellerraum als Abstellfläche",
+        "icon": "archive"
+      },
+      {
+        "text": "Privater Stellplatz vorhanden",
+        "icon": "car"
+      },
+      {
+        "text": "Ruhige suburbanen Lage in Mamer",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Reihenhaus",
+      "PrivatGarten",
+      "Stellplatz",
+      "Keller",
+      "SuburbanLiving"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All claims align with inputs: '145 m²', '3 chambres', '2 salles de bains', 'ascenseur', 'parking', 'cave', 'balcon'."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers all active features and most photo selling points but omits explicit mention of new-build/'neuf' beyond 'nouvel appartement' and does not mention EU/international context."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads as native French immobilier prose: 'douche à l'italienne', 'plan de travail en pierre', 'plafond double hauteur'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses Luxembourg/FR corpus terms: 'cuisine équipée Bulthaup', 'douche à l'italienne', 'chauffage par le sol'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned, consistent with null inputs."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement 3 chambres 145 m² avec balcon et vue sur la ville à Kirchberg' is ~13 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamations; 'pour un confort optimal' is restrained."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. 'parc de Kirchberg' from photo analysis ('view over Kirchberg park'); all numerics, materials, and features traceable to inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN/DE/FR all agree on 145m²/3BR/2BA/sale/balcony/parking/elevator/cellar/new-build. Minor disagreement: DE adds 'Eichenparkett' (oak) and 'Panoramablick' which EN/FR do not assert, but these are non-contradictory additions."
+    }
+  },
+  "overall_pass": true
+}

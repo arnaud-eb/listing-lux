@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:24.374Z",
+  "output": {
+    "title": "Appartement 2 chambres avec balcon et parking à Esch-sur-Alzette à vendre",
+    "description": "Ce appartement de 78 m² à vendre à Esch-sur-Alzette propose un aménagement fonctionnel et un accès à un espace extérieur grâce à son balcon. Le séjour lumineux, aux murs beige clair et au sol stratifié, s'ouvre sur ce balcon qui offre un lieu tranquille pour des moments à l'air libre.\n\nLa cuisine en L, équipée de meubles blancs et disposant d'une surface adaptée, intègre un coin repas pour accueillir une table de petite dimension. L'agencement optimise l'espace tout en conservant une simplicité soignée.\n\nL'appartement comprend deux chambres ainsi qu'une salle de bains, réparties de manière rationnelle pour un usage confortable. La présence d'un ascenseur facilite l'accès à l'étage.\n\nUn emplacement de parking est également inclus, un atout pratique compte tenu de la dynamique urbaine d'Esch-sur-Alzette. La deuxième ville du Luxembourg se distingue par sa scène culturelle dynamique et ses projets de développement, notamment autour de l'université et de Belval.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 78 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Deux chambres fonctionnelles",
+        "icon": "bed"
+      },
+      {
+        "text": "Balcon avec accès depuis le séjour",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine en L avec coin repas",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains complète",
+        "icon": "bath"
+      },
+      {
+        "text": "Ascenseur dans l'immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Place de parking incluse",
+        "icon": "car"
+      },
+      {
+        "text": "Situation dans Esch-sur-Alzette, ville en développement",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "BalconUrbain",
+      "CuisineOptimisee",
+      "ParkingPrivatif",
+      "EschAlzette",
+      "Appartement2Chambres"
+    ]
+  }
+}

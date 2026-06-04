@@ -1,0 +1,51 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:12.167Z",
+  "output": {
+    "title": "Exklusive 3-Zimmer-Duplexwohnung mit Panoramablick und großzügiger Terrasse in Cloche d'Or",
+    "description": "Diese neu erbaute Duplexwohnung präsentiert sich auf 180 m² mit einer klaren, modernen Architektur und durchdachtem Raumkonzept im aufstrebenden Stadtviertel Cloche d'Or. Das lichtdurchflutete Wohn- und Esszimmer besticht durch eine doppelte Raumhöhe sowie eine offene, luftige Atmosphäre mit Blick auf den angrenzenden Park. Hochwertiges Eichenparkett und großflächige Panoramaverglasungen unterstreichen die stilvolle Innenausstattung.\n\nDie angrenzende Küche ist offen zum Wohnbereich gestaltet und mit vollintegrierten Siemens-Geräten ausgestattet sowie mit einer widerstandsfähigen Arbeitsplatte aus Quarz. Weiche, leise schließende Schränke bieten Funktionalität und optische Klarheit. Die integrierte Gestaltung erlaubt fließende Übergänge zwischen Kochen, Essen und Wohnen.\n\nOben befindet sich der Ruhebereich mit drei Schlafzimmern; das Hauptschlafzimmer verfügt über direkten Zugang zur umlaufenden Terrasse mit Holzdeck und Ausblick auf das belebte Einkaufszentrum. Die Terrasse ist so ausgerichtet, dass sie am Abend Sonnenlicht empfängt und vielseitige Nutzungsmöglichkeiten bietet.\n\nWeiterhin bietet die Wohnung ein Kellerabteil und einen Stellplatz, die über den vorhandenen Aufzug barrierefrei erschlossen sind. Die Ausstattung und Bauweise entsprechen modernen Standards des Neubaus und unterstützen den urbanen Lebensstil, den das Cloche d'Or Viertel mit seinen vielfältigen Infrastrukturangeboten typisiert.\n\nDiese Immobilie steht zum Erwerb und ist Teil eines Neubauprojekts, das die Konturen des wirtschaftlichen Zentrums Luxemburgs prägt. Die Kombination von moderner Architektur, großzügigen Grundrissen und einer zentralen Lage macht dieses Angebot zu einer attraktiven Investition.",
+    "highlights": [
+      {
+        "text": "180 m² Wohnfläche in Duplexanlage",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlafzimmer, 2 Bäder",
+        "icon": "bed"
+      },
+      {
+        "text": "Offene Küche mit Siemens-Geräten",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Großzügige Terrasse mit Abendsonne",
+        "icon": "sun"
+      },
+      {
+        "text": "Doppelhöhen-Living mit Parkblick",
+        "icon": "sofa"
+      },
+      {
+        "text": "Kellerabteil",
+        "icon": "archive"
+      },
+      {
+        "text": "Privater Stellplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "DuplexLuxus",
+      "Panoramablick",
+      "ModerneArchitektur",
+      "Terrassenwohnung"
+    ]
+  }
+}

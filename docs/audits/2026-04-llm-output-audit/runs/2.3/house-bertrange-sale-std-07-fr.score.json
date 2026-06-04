@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'quatre chambres et deux salles de bains' and '195 m²' match inputs exactly."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers beds/baths/sqm, neighborhood, garden, terrace, cellar, parking, fireplace, breakfast nook: 'Cave complète les surfaces disponibles'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French: 'offrant une continuité visuelle et un accès direct au jardin arrière exposé au sud'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU luxury vocabulary like 'maison semi-adossée' and 'jardin orienté sud'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned in inputs and none invented in description."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison semi-adossée avec jardin orienté sud et parking à Bertrange' is 11 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamations: 'cadre calme propice aux moments en extérieur'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting: 'adaptées à diverses configurations d'usage'."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'centre commercial Belle Étoile', 'la desserte en tramway via la zone de la Cloche d'Or' (tram does not currently serve Bertrange through Cloche d'Or in inputs), and the 1990s 'construite dans les années 1990' is from photo style guess not a property year field, but the named Belle Étoile and tram-via-Cloche-d'Or claims have no input support since Bertrange has no neighborhood data."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 195 m², 4 bedrooms, 2 bathrooms, garden/terrace/cellar/parking/fireplace. Minor: DE title labels 'Einfamilienhaus' while FR ('semi-adossée') and EN ('semi-detached') agree on the actual type — translation-choice mismatch but body text in DE confirms 'Doppelhaus', so axes (a)-(c) substantively agree."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Bertrange not in registry — model invented landmark/transit claims."
+}

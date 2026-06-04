@@ -1,0 +1,52 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:17.338Z",
+  "output": {
+    "title": "Duplex neuf 3 chambres avec terrasse et vue urbaine à Cloche d'Or",
+    "description": "Ce duplex contemporain de 180 m², situé dans le quartier récent de la Cloche d'Or, se déploie sur deux niveaux avec un aménagement soigneusement pensé. Le séjour bénéficie d’un double volume sous plafond, éclairé naturellement par une large baie vitrée offrant une vue dégagée sur le parc voisin. Le sol en chêne massif souligne le caractère moderne et chaleureux de cet espace de vie.\n\nLa cuisine ouverte sur le séjour est équipée d’appareils Siemens intégrés et d’un plan de travail en quartz, tandis que les rangements à fermeture douce confèrent fonctionnalité et élégance. Ce dispositif favorise une circulation fluide entre les espaces de vie et de repas.\n\nL’étage accueille trois chambres, incluant une suite parentale dotée d’un dressing intégré et d’un accès direct à une terrasse enveloppante en bois au rendement esthétique et pratique. Deux salles de bains complètent ce niveau, assurant confort et intimité. L’exposition de la terrasse permet de profiter du soleil couchant dans un cadre ouvert.\n\nParmi les prestations complètes, ce bien comprend un emplacement de parking privatif, un ascenseur desservant directement l’appartement et une cave indépendante. L’ensemble est implanté dans un immeuble neuf, conforme aux normes actuelles en vigueur, au sein d’un environnement dédié aux activités tertiaires, aux commerces et espaces verts.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 180 m² répartie sur un duplex",
+        "icon": "square"
+      },
+      {
+        "text": "Trois chambres avec rangements intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Séjour double hauteur avec grande baie vitrée",
+        "icon": "home"
+      },
+      {
+        "text": "Cuisine équipée Siemens et quartz",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Terrasse enveloppante en bois accessible depuis la chambre principale",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking privé et cave",
+        "icon": "car"
+      },
+      {
+        "text": "Ascenseur dans l’immeuble",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Vue dégagée sur le parc et le centre commercial",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "DuplexContemporain",
+      "TerrasseEnveloppante",
+      "CuisineEquipée",
+      "DoubleHauteur",
+      "ClocheDor"
+    ]
+  }
+}

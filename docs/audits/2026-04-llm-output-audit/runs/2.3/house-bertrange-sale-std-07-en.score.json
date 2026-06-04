@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'4 bedrooms, 2 bathrooms' and '195 m²' align with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "All key features covered: 'South-facing garden and terrace', 'Cellar for additional storage', 'Private driveway parking'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'Double doors from this space grant direct access to the garden, enhancing the flow between indoor and outdoor areas.'"
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU English property vocabulary: 'semi-detached house' and 'south-facing garden'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, matching null input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title is 11 words with neighborhood; 5 CamelCase hashtags including 'SouthFacingGarden'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Spacious' in title is mild marketing language but acceptable; otherwise restrained: 'designed for casual meals and everyday convenience'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references: 'suitable for comfortable residential living'."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Luxembourg's largest shopping centre' (Belle Étoile unstated in inputs), 'tram connections via Cloche d'Or', and 'oriented to maximize natural daylight in the afternoon' (specific claim not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 195 m², 4 bedrooms, 2 bathrooms, garden/terrace/cellar/parking/fireplace. Minor: DE title labels 'Einfamilienhaus' while FR ('semi-adossée') and EN ('semi-detached') agree on the actual type — translation-choice mismatch but body text in DE confirms 'Doppelhaus', so axes (a)-(c) substantively agree."
+    }
+  },
+  "overall_pass": false,
+  "notes": ""
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Ce logement de 52 m² situé à Bonnevoie' and 'Une cave accompagne ce bien' align with inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², Bonnevoie, séjour sud, cuisine, salle de bains, cave; missing explicit bedroom count in prose but covered in highlight 'Une chambre à coucher'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'agencement en couloir' and 'apport lumineux naturel' read natively French, though slightly formulaic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'cave privative', 'séjour orienté plein sud' match LU/FR luxury portal vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented and none mentioned, consistent with absent input data."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Appartement 1 chambre lumineux de 52 m² avec cave à vendre à Bonnevoie' is well-shaped, but hashtag 'AppartementLuminuex' is misspelled (should be Lumineux)."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'compacte et fonctionnelle' avoids hyperbole; no exclamation marks or breathless adjectives."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics — neutral phrasing like 'futur acquéreur'."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'marché local réputé' (named Bonnevoie market not in inputs) and 'La gare centrale est accessible dans le quartier' (station proximity not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN describe a 1-bedroom apartment ('1 chambre', '1-Bedroom') with separate living room; DE labels it '1-Zimmer-Wohnung' with 'Wohn-/Schlafzimmer', implying a studio — a feature-list disagreement on layout."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Hashtag typo 'Luminuex' lowers SEO."
+}

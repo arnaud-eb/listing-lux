@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'1-Zimmer-Wohnung' and 'Wohn-/Schlafzimmer' contradict input bedrooms=1 (which in LU typically means 1 separate bedroom + living room = 2-room layout); calling it Wohn-/Schlafzimmer suggests studio."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 52 m², Südausrichtung, Küche, Bad, Keller, Bonneweg, Hauptbahnhof."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'sinnvoll genutzten Räumen' and 'angenehme Lichtverhältnisse' (minor agreement slip — should be 'angenehme Lichtverhältnisse' OK) read mostly native."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Bonneweg', 'Wohnfläche', 'Stadtwohnung' match LU-DE portal vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with sparse input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Gut geschnittene 1-Zimmer-Wohnung mit Südausrichtung in Bonneweg zu verkaufen' is well-shaped; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'überschaubare Grundfläche mit sinnvoll genutzten Räumen' is restrained, no hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'dem bekannten Bonnevoie-Markt' and 'gute Anbindung an den Hauptbahnhof' (transit/landmark proximity not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN describe a 1-bedroom apartment ('1 chambre', '1-Bedroom') with separate living room; DE labels it '1-Zimmer-Wohnung' with 'Wohn-/Schlafzimmer', implying a studio — a feature-list disagreement on layout."
+    }
+  },
+  "overall_pass": false,
+  "notes": "'1-Zimmer-Wohnung' / 'Wohn-/Schlafzimmer' framing implies studio, which conflicts with FR/EN '1 chambre + séjour'."
+}

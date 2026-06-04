@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'145 m²', '3-bedroom', 'two bathrooms', 'newly built', 'balcony', 'elevator', 'parking space', 'cellar' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers beds/baths/sqm/Kirchberg, all active features (balcony, parking, elevator, cellar, new-build, city-view), and photo selling points like 'Bulthaup cabinetry' and 'Kirchberg park'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads naturally in English: 'a quiet setting suitable for relaxed mornings' — slightly formal but idiomatic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses corpus-appropriate phrasing: 'engineered wood flooring', 'walk-in rain shower', 'European business district'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class is mentioned, consistent with null inputs; no fabrication."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Contemporary 3-Bedroom Apartment with Balcony and Parking in Kirchberg' is 10 words with neighborhood + adjective; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamations; restrained adjectives like 'thoughtfully designed' and 'characteristic of the Kirchberg area'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or occupant references; purely property-focused."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. 'Philharmonie and MUDAM' supported by neighborhood notes ('cultural venues'); 'Kirchberg park' from photo balcony analysis; 145m²/3BR/2BA/Bulthaup/induction/stone worktop/breakfast bar/glass balustrade/walk-in rain shower/double vanity/underfloor heating/elevator/parking/cellar all in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN/DE/FR all agree on 145m²/3BR/2BA/sale/balcony/parking/elevator/cellar/new-build. Minor disagreement: DE adds 'Eichenparkett' (oak) and 'Panoramablick' which EN/FR do not assert, but these are non-contradictory additions."
+    }
+  },
+  "overall_pass": true
+}

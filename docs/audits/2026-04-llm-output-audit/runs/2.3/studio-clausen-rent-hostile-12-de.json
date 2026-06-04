@@ -1,0 +1,48 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:50:18.338Z",
+  "output": {
+    "title": "Renoviertes möbliertes Studio in historischem Clausen zu vermieten",
+    "description": "Dieses umfassend renovierte Studio befindet sich in einem historischen Gebäude im Alzette-Tal, einem UNESCO-Welterbe-Viertel, das für seine gut erhaltene Bausubstanz und die lebendige Ausgehkultur bekannt ist. Die Lage in Clausen bietet eine authentische Atmosphäre im Herzen eines der ältesten Viertel Luxemburgs.\n\nDie Wohnfläche von 38 m² ist funktional gestaltet und vollständig möbliert. Charakteristische freiliegende Holzbalken und ein hochwertiger Holzboden verleihen dem Wohnbereich ein rustikal-modernes Ambiente. Die kompakte Küchenzeile ist mit einem Zweiflammen-Herd, einem kleinen Kühlschrank sowie einer Edelstahlspüle ausgestattet und erfüllt alle Anforderungen für die Zubereitung einfacher Mahlzeiten.\n\nDas Badezimmer wurde ebenfalls kürzlich modernisiert und ist mit einer Dusche sowie einer praktischen Waschtischanlage mit weißen Fliesen ausgestattet. Die ruhige Straße von Clausen und das erhaltene historische Mauerwerk des Gebäudes zeichnen das äußere Erscheinungsbild aus. Das Mietverhältnis richtet sich an kurzfristige Belegungen mit Bezug ab sofort.",
+    "highlights": [
+      {
+        "text": "Vollständig möbliert",
+        "icon": "sofa"
+      },
+      {
+        "text": "Freiliegende historische Holzbalken",
+        "icon": "building-2"
+      },
+      {
+        "text": "Komfortabel und gut organisiert",
+        "icon": "home"
+      },
+      {
+        "text": "Renoviertes Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Historisches Gebäude in Clausen",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Kompakte Küchenzeile",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "38 m² Wohnfläche",
+        "icon": "square"
+      }
+    ],
+    "hashtags": [
+      "HistoricLiving",
+      "FurnishedStudio",
+      "ClausenValley",
+      "RenovatedInterior",
+      "CompactDesign"
+    ]
+  }
+}

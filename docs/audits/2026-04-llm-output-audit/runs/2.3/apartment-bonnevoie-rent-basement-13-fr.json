@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-bonnevoie-rent-basement-13",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:50:45.169Z",
+  "output": {
+    "title": "Appartement rénové 1 chambre avec cuisine équipée à louer à Bonnevoie",
+    "description": "Ce logement d'une surface de 48 m² se situe au rez-de-jardin d'un immeuble de quatre niveaux doté d'un ascenseur. Il bénéficie d'une rénovation récente qui apporte une ambiance fonctionnelle et contemporaine.\n\nLe séjour présente un revêtement en carrelage et une conception ouverte favorisant une utilisation optimisée de l'espace. La cuisine attenante, entièrement équipée et moderne, comprend une plaque de cuisson électrique adaptée aux usages quotidiens.\n\nLa salle de bains rénovée est pourvue d'une douche à l'italienne avec des murs carrelés, offrant des prestations actuelles. Une cave vient compléter cette offre en tant que rangement séparé.\n\nL'appartement est proposé à la location avec une disponibilité effective à partir du 1er septembre 2026. Situé dans le quartier dynamique de Bonnevoie, connu pour son marché local et sa multiculturalité, ce logement bénéficie également d'une bonne desserte par les transports en commun ainsi que d'un environnement urbain accessible.",
+    "highlights": [
+      {
+        "text": "Surface de 48 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Rénové récemment",
+        "icon": "building-2"
+      },
+      {
+        "text": "Cuisine équipée moderne avec plaque électrique",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains avec douche à l'italienne",
+        "icon": "bath"
+      },
+      {
+        "text": "Situé en rez-de-jardin",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Immeuble avec ascenseur",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cave privée en sous-sol",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier multiculturel animé de Bonnevoie",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "AppartementRénové",
+      "Bonnevoie",
+      "CuisineÉquipée",
+      "LocationUrbaine",
+      "ConfortModerne"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:04.807Z",
+  "output": {
+    "title": "Bright 1-Bedroom Apartment with South-Facing Living Room in Bonnevoie",
+    "description": "This 52 m² apartment offers a well-maintained living space in the lively Bonnevoie district. The main living room benefits from a south-facing window, providing natural daylight. The laminate flooring and white walls create a neutral and clean backdrop ready for personalization.\n\nThe kitchen features a compact galley layout with white cabinetry and ceramic tile flooring. While its traditional style suggests potential for modernization, the functional setup meets daily needs. The bathroom comprises a full-size tub with shower, white tiles, and a single vanity, presenting a practical and well-kept area.\n\nAdditional storage is available with a cellar included in the sale. Bonnevoie is a multicultural and vibrant neighborhood, known for its diverse dining options and the popular Bonnevoie market. The area offers good connections to the central station and is recognized for its relatively affordable prices within Luxembourg City.\n\nThis property is offered for sale, presenting an opportunity to acquire a one-bedroom apartment in this central and dynamic part of the city.",
+    "highlights": [
+      {
+        "text": "52 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "South-facing living room",
+        "icon": "sun"
+      },
+      {
+        "text": "Compact galley kitchen",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Bathroom with full-size tub",
+        "icon": "bath"
+      },
+      {
+        "text": "Cellar included",
+        "icon": "archive"
+      },
+      {
+        "text": "Located in vibrant Bonnevoie neighborhood",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "BonnevoieLiving",
+      "SouthFacing",
+      "CompactKitchen",
+      "CellarStorage",
+      "CityApartment"
+    ]
+  }
+}

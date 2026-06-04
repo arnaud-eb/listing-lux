@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-rent-basement-13",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 3,
+      "evidence": "'au rez-de-jardin' contradicts inputs: floor_of_unit is -1 (basement) and notes explicitly warn against turning the basement into a garden-level feature."
+    },
+    "completeness": {
+      "score": 3,
+      "evidence": "Mentions 48 m², ascenseur, cuisine, douche italienne, cave, Bonnevoie, disponibilité; but omits bedroom count ('1 chambre' only in title, not body) and bathroom count, plus charges."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively: 'douche à l'italienne avec des murs carrelés' is idiomatic FR real-estate language."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Standard LU/FR vocabulary: 'cuisine équipée', 'douche à l'italienne', 'cave', 'ascenseur'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and prose omits CPE."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Appartement rénové 1 chambre avec cuisine équipée à louer à Bonnevoie' is 11 words with neighborhood; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Restrained tone, no hyperbole: 'prestations actuelles' rather than superlatives."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or occupant profile in the FR text."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'rez-de-jardin' (invents garden level; basement is -1) and 'son marché local' (no market in inputs); 'bonne desserte par les transports en commun' is borderline generic."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE and EN agree the unit is on the basement ('Untergeschoss' / 'basement level'); FR contradicts with 'au rez-de-jardin' — a floor/level disagreement."
+    }
+  },
+  "overall_pass": false,
+  "notes": "FR introduces 'rez-de-jardin' which the fixture notes explicitly warned against."
+}

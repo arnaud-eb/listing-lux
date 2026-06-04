@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'78 square meters', 'two bedrooms and one bathroom', 'balcony', 'parking space', 'elevator' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, bath, neighborhood, all active features and photo points ('laminate flooring and beige walls', 'L-shaped', 'tiled outdoor space')."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively; phrasing 'arranged over a practical layout' is slightly awkward but acceptable."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Neutral, restrained English appropriate to entry-tier: 'practical layout', 'compact', 'modest tiled outdoor space'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and description omits CPE, consistent with v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette' = 9 words with neighborhood; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "Sober register: 'practical option', 'modest tiled outdoor space' — zero hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; 'Residents benefit from an elevator' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'the presence of the university and the Belval district' (not in inputs). 'Affordable property prices' is a soft generalization but borderline; counting one concrete unsupported named-place claim."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, sale; e.g. FR '78 m²... deux chambres', DE '78 m²... zwei Schlafzimmern', EN '78 square meters... two bedrooms'."
+    }
+  },
+  "overall_pass": false
+}

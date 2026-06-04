@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m² Wohnfläche', '4 Schlafzimmer und 3 Bäder' match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, beds/baths, Belair, Gaggenau, Carrara, terrace, elevator, cellar, parking; smart-home lighting from photo analysis is omitted."
+    },
+    "native_quality": {
+      "score": 3,
+      "evidence": "'die adjacent Küche' is an English word left in German text, a clear translation artifact."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'gehobenes Wohngebiet', 'begehbarer Kleiderschrank', 'Eichenparkett' fit LU luxury corpus, though 'adjacent' jars."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented; consistent with absent input data."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Exklusive 4-Zimmer Penthouse-Wohnung mit großer Terrasse und Stadtblick' (10 words) omits Belair; hashtag 'PenthouseLux' is borderline generic."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly measured; 'Exklusive' in title and 'elegante Villen' lean slightly promotional but no exclamation marks or 'must-see'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic, family, or age references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'elegante Villen und baumgesäumte Straßen' characterizes Belair streets with no neighborhood data input supporting villas/tree-lined streets. Other claims (Gaggenau, Carrara, 180-Grad, südlich, Eichenparkett) all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/DE/EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, sale listing kind, and feature set (elevator, parking, cellar, terrace, fireplace, Gaggenau kitchen, smart-home, south-facing 180° view)."
+    }
+  },
+  "overall_pass": false
+}

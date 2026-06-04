@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'penthouse rénové de 220 m²' and 'quatre chambres' match inputs exactly."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 220m², 4 chambres, Belair, parquet chêne, Gaggenau, Carrara, terrasse sud 180°, ascenseur, parking, cave — covers all active features and photo selling points."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'prolongement extérieur intime' and 'conjuguant confort et luminosité' read as native French luxury copy."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "Vocabulary like 'suite parentale', 'emplacement de parking privatif', 'cave' matches LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely as inputs supply none."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Penthouse rénové 4 chambres avec terrasse panoramique et vue sur la ville' is 11 words with property-defining adjective but omits Belair; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbole like 'breathtaking'; phrasing such as 'cadre de vie contemporain' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to ideal occupant demographics or family status."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. 'Belair' (neighborhood), '220 m²' (sqm), 'quatre chambres' (bedrooms), 'Gaggenau' (photo), 'marbre de Carrare' (photo), '180 degrés' (photo), 'plein sud' (photo), 'parquet en chêne' (photo), 'cheminée à bois' (photo), 'ascenseur/parking/cave' (features) all supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/DE/EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, sale listing kind, and feature set (elevator, parking, cellar, terrace, fireplace, Gaggenau kitchen, smart-home, south-facing 180° view)."
+    }
+  },
+  "overall_pass": true
+}

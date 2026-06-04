@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:49.359Z",
+  "output": {
+    "title": "Maison avec 3 chambres à louer avec jardin et parking à Mamer",
+    "description": "Cette maison mitoyenne construite dans les années 1980 propose une surface habitable de 130 m² répartis sur plusieurs niveaux. Sa façade neutre est agrémentée d'un petit jardinet fermant l'entrée. Le salon bénéficie d'une vue directe sur le jardin arrière à travers des baies vitrées coulissantes, doté d’une moquette beige et d’un espace aménagé pour équipement audiovisuel.\n\nLe jardin privatif, d’une superficie modeste, est clôturé par une palissade en bois et comprend une pelouse entretenue ainsi qu’un petit abri de rangement. Cet espace extérieur offre un cadre calme et fonctionnel.\n\nLa maison dispose de trois chambres et d’une salle de bains. Elle comprend également une cave, utile pour le stockage. Un emplacement de parking vient compléter les prestations. La commune de Mamer se situe à l’ouest de Luxembourg-ville, offrant un réseau autoroutier et ferroviaire performant, ainsi que la présence d’établissements scolaires reconnus.",
+    "highlights": [
+      {
+        "text": "130 m² habitables",
+        "icon": "square"
+      },
+      {
+        "text": "3 chambres",
+        "icon": "bed"
+      },
+      {
+        "text": "1 salle de bains",
+        "icon": "bath"
+      },
+      {
+        "text": "Jardin privatif bien entretenu",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking réservé",
+        "icon": "car"
+      },
+      {
+        "text": "Cave séparée disponible",
+        "icon": "archive"
+      },
+      {
+        "text": "Maison mitoyenne années 1980",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "LocationMamer",
+      "JardinPrivatif",
+      "MaisonMitoyenne",
+      "ParkingPrivé",
+      "CaveSéparée"
+    ]
+  }
+}

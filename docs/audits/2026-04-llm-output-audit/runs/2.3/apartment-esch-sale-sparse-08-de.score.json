@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'78 m²', 'zwei Schlafzimmern und einem Badezimmer', 'Balkon', 'Parkplatz', 'Aufzug' all consistent with inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, bath, neighborhood ('Esch an der Alzette'), and all active features plus L-kitchen and tiled balcony from photos."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads native, though closing sentence is clunky: 'um eine gut gelegene und solide ausgestattete Immobilie in Esch an der Alzette zu erwerben' repeats 'erwerben'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU DE vocab: 'Wohnfläche', 'Einbaumöbel', 'Stellmöglichkeit' — appropriate entry-tier."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented in prose; description omits CPE consistent with v1.5 default."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Hashtag 'EnergieEffizient' is unsupported (no CPE in inputs) and misleading — a fabricated SEO claim. Title is otherwise well-shaped."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'Modern geschnittene' in title and 'überzeugt' lean mildly promotional; no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references; focuses on property and city character."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Universität und das Entwicklungsgebiet Belval' (not in inputs), 'Immobilienpreise sind hier vergleichsweise erschwinglich' (price comparison not in inputs), hashtag 'EnergieEffizient' (no CPE/energy data provided)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "All three languages agree on 78 m², 2 bedrooms, 1 bathroom, balcony, parking, elevator, sale; e.g. FR '78 m²... deux chambres', DE '78 m²... zwei Schlafzimmern', EN '78 square meters... two bedrooms'."
+    }
+  },
+  "overall_pass": false
+}

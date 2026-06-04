@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'280 m² Wohnfläche', 'Fünf Schlafzimmer und drei Badezimmer', 'Renovierte' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, baths, neighborhood, garden, terrace, cellar, parking, fireplace, kitchen island, SW exposure: 'Etablierter Garten mit Südwest-Terrasse'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively but 'Doppelbackofen-Einheit' is slightly awkward German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'großzügige Villa', 'etablierter Garten', 'ruhige Wohngegend' align with LU luxury corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and description omits CPE entirely, per v1.5 default."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 5-Zimmer-Villa mit Garten und Terrasse in Strassen' is 9 words with neighborhood; 5 hashtags but not strict CamelCase ('GartenmitTerrasse')."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; 'gepflegt' and 'großzügig' are restrained."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "'richtet sich an Käufer, die ein großzügiges und gepflegtes Einzelhaus ... suchen' addresses buyers neutrally, but earlier 'wohnlich gestaltete Wohnzimmer' is fine; borderline phrase 'familienfreundlich' avoided. Slight concern over targeting language."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'eine Auswahl exzellenter Schulen' (schools not in inputs). All other concrete claims (280 m², 5 beds, 3 baths, slate roof, parquet, granite, double oven, SW exposure, cellar, parking) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 280 m², 5 beds, 3 baths, sale, parking, garden, terrace, cellar, SW exposure. Minor: FR title features 'parking' while DE/EN titles feature 'terrace'; FR describes fireplace as 'foyer ouvert' while DE/EN say wood-burning — minor non-contradictory variance."
+    }
+  },
+  "overall_pass": false
+}

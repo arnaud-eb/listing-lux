@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:35.520Z",
+  "output": {
+    "title": "Moderne 3-Zimmer-Wohnung mit Balkon und Parkblick im Geschäftsviertel Kirchberg",
+    "description": "Diese Neubauwohnung umfasst 145 m² und bietet mit drei Schlafzimmern und zwei Bädern eine großzügige Raumaufteilung in moderner Architektur. Der offene Wohn- und Essbereich ist durch eine doppelte Deckenhöhe und südlich ausgerichtete Fenster geprägt, die für viel Tageslicht sorgen und einen weiten Blick ins Grüne ermöglichen. Das Eichenparkett verstärkt den zeitgemäßen Charakter der Wohnung.\n\nDie Küche ist mit hochwertigen Bulthaup-Einbauten ausgestattet und verfügt über eine Induktionskochfläche sowie eine Arbeitsplatte aus Naturstein. Eine zentrale Kochinsel mit Frühstücksbar ergänzt die funktionale Ausstattung und schafft einen fließenden Übergang zum Wohnbereich.\n\nDer nach Süden ausgerichtete Balkon mit Glasgeländer und Fliesenboden bietet einen ruhigen Blick auf den gegenüberliegenden Park von Kirchberg und ist ein angenehmer Ort für entspannte Stunden im Freien. Die Bäder sind mit einer begehbaren Regendusche, einer Doppelwaschbeckenanlage sowie einer Fußbodenheizung versehen, ausgesuchte Feinsteinzeugfliesen komplettieren den gehobenen Ausstattungsstandard.\n\nDas Apartment befindet sich in einem Neubau mit Aufzug, einem eigenen Kellerraum und Stellplatz. Kirchberg als Standort zeichnet sich durch seine moderne und internationale Ausprägung aus, ist Sitz bedeutender EU-Institutionen, kultureller Einrichtungen wie Philharmonie und MUDAM sowie internationaler Schulen. Die Wohnung wird zum Erwerb angeboten.",
+    "highlights": [
+      {
+        "text": "145 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "3 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "2 Badezimmer mit Regendusche und Fußbodenheizung",
+        "icon": "bath"
+      },
+      {
+        "text": "Moderne Bulthaup-Einbauküche mit Induktionskochfeld",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlich ausgerichteter Balkon mit Blick auf Park",
+        "icon": "sun"
+      },
+      {
+        "text": "Neubau mit Aufzug und Kellerraum",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Eigener Stellplatz",
+        "icon": "car"
+      },
+      {
+        "text": "Panoramablick über Kirchberg",
+        "icon": "mountain"
+      }
+    ],
+    "hashtags": [
+      "NeubauWohnung",
+      "BulthaupKüche",
+      "KirchbergLiving",
+      "Parkblick",
+      "LuxusAusstattung"
+    ]
+  }
+}

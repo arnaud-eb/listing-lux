@@ -1,0 +1,44 @@
+{
+  "fixture_id": "studio-clausen-rent-hostile-12",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:50:26.671Z",
+  "output": {
+    "title": "Studio meublé rénové au cœur du quartier historique de Clausen",
+    "description": "Ce studio récemment rénové situé dans le quartier de Clausen combine un charme historique avec un confort contemporain. Le séjour présente un parquet en bois et des poutres apparentes qui soulignent le cachet de la construction ancienne, tout en offrant un espace entièrement meublé et bien agencé.\n\nLa kitchenette fonctionnelle, intégrée dans un coin du séjour, comprend un plan de cuisson à deux foyers, un petit réfrigérateur et un évier en acier inoxydable, idéale pour une utilisation pratique au quotidien. La salle de bains rénovée affiche un style moderne avec une cabine de douche et des revêtements carrelés blancs.\n\nLe logement se trouve dans un bâtiment en pierre caractéristique de la vallée de l'Alzette, dans une rue étroite du quartier classé UNESCO de Clausen. Ce secteur mêle patrimoine historique et animation, offrant un cadre vivant tout en conservant une atmosphère particulière.\n\nCette location meublée de 38 m² convient à ceux qui recherchent un pied-à-terre dans un environnement chargé d'histoire, dans un quartier palpitant proche du centre-ville.",
+    "highlights": [
+      {
+        "text": "Logement meublé intégralement",
+        "icon": "home"
+      },
+      {
+        "text": "Poutres apparentes authentiques",
+        "icon": "building-2"
+      },
+      {
+        "text": "Studio compact et fonctionnel",
+        "icon": "square"
+      },
+      {
+        "text": "Salle de bain rénovée récemment",
+        "icon": "bath"
+      },
+      {
+        "text": "Quartier classé UNESCO avec patrimoine",
+        "icon": "map-pin"
+      },
+      {
+        "text": "Bâtiment en pierre du quartier de Clausen",
+        "icon": "building"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "RenovatedStudio",
+      "FurnishedLiving",
+      "ClausenValley",
+      "CompactComfort"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Cette maison mitoyenne construite dans les années 1980 propose une surface habitable de 130 m²' — matches inputs (row house, 1980s, 130 sqm)."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions '3 chambres', '1 salle de bains', '130 m²', 'Mamer', garden, parking, cave, and 1980s row house style."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in French; minor awkwardness with 'jardinet fermant l'entrée' but overall fluent."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'maison mitoyenne', 'surface habitable', 'cave', 'emplacement de parking' are standard LU/FR real estate terms."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits energy class entirely as inputs supplied none."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Maison avec 3 chambres à louer avec jardin et parking à Mamer' — 11 words, includes Mamer; 5 hashtags CamelCase, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; tone is restrained ('cadre calme et fonctionnel')."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to demographics, family status, or any protected category."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. Claims about Mamer being west of Luxembourg City and having motorway/rail and schools are generic ('établissements scolaires reconnus' — no named schools); all specifics (130 m², 3 ch, 1 sdb, 1980s, garden, shed, fence, cellar, parking) are in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 130 m², 3 bedrooms, 1 bathroom, garden, parking, cellar, row house, 1980s. EN and DE add named schools (Lycée Josy Barthel, European School Luxembourg II) that FR omits — non-contradictory addition, minor disagreement on detail set."
+    }
+  },
+  "overall_pass": true
+}

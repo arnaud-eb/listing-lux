@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-rent-basement-13",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:50:38.511Z",
+  "output": {
+    "title": "Renovierte 1-Zimmer-Wohnung mit moderner Küche und Keller in Bonneweg",
+    "description": "Diese 48 m² große Wohnung befindet sich im Untergeschoss eines viergeschossigen Gebäudes mit Aufzug in Bonneweg. Der Grundriss ist gut strukturiert und umfasst einen Wohnbereich, eine offene Küche sowie ein Badezimmer mit moderner Ausstattung. Die Räume wurden kürzlich renoviert und zeichnen sich durch eine ruhige, funktionale Gestaltung aus.\n\nDie moderne Einbauküche ist mit einem Elektroherd ausgestattet und fügt sich dezent in den Wohnraum ein. Das Badezimmer verfügt über eine begehbare Dusche und vollständig verflieste Wände, was die Pflege erleichtert und einen zeitgemäßen Eindruck vermittelt.\n\nZur Wohnung gehört ein separater Kellerraum, der zusätzlichen Stauraum bietet. Die Lage im multikulturellen und lebendigen Stadtteil Bonneweg bietet eine vielfältige gastronomische Szene und den beliebten Bonnevoie-Markt. Durch die gute Anbindung an den Hauptbahnhof ist eine bequeme Mobilität gewährleistet.\n\nDas Mietverhältnis beginnt ab dem 1. September 2026. Die Wohnung ist aufgrund ihrer Größe und Ausstattung für eine Einzelperson oder ein Paar geeignet, die eine praktische und ruhige Wohnlösung in einem zentral gelegenen Stadtteil suchen.\n\nDas gesamte Gebäude wurde durchgehende gut instand gehalten und verfügt über einen Aufzug, der den Zugang zum Untergeschoss erleichtert. Die funktionale und gehobene Modernisierung der Wohnung ist durchgängig sichtbar.",
+    "highlights": [
+      {
+        "text": "Wohnfläche 48 m²",
+        "icon": "square"
+      },
+      {
+        "text": "1 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer mit begehbarer Dusche",
+        "icon": "bath"
+      },
+      {
+        "text": "Renoviert mit modernem Ausstattungsstandard",
+        "icon": "home"
+      },
+      {
+        "text": "Moderne Einbauküche mit Elektroherd",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Kellerraum inklusive",
+        "icon": "archive"
+      },
+      {
+        "text": "Aufzug im Gebäude vorhanden",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "RenovierteWohnung",
+      "ModerneKüche",
+      "BonnewegLeben",
+      "Kellerraum",
+      "ZentralWohnen"
+    ]
+  }
+}

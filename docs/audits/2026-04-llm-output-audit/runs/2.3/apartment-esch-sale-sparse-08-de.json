@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:19.112Z",
+  "output": {
+    "title": "Modern geschnittene 2-Zimmer-Wohnung mit Balkon und Parkplatz in Esch",
+    "description": "Diese zum Verkauf stehende Wohnung bietet auf 78 m² Wohnfläche ein funktionales Raumkonzept mit zwei Schlafzimmern und einem Badezimmer. Die Räume präsentieren sich in einem gepflegten Zustand mit hellen, neutralen Wänden und einem Laminatboden, der den Wohnbereich ansprechend gestaltet. Vom Wohnzimmer aus gelangt man direkt auf den Balkon, der zusätzlichen Außenraum bietet.\n\nDie Küche ist kompakt in L-Form gestaltet und verfügt über weiße Einbaumöbel sowie Platz für einen kleinen Essbereich. Dieses praktische Arrangement unterstützt eine zweckmäßige Nutzung der Fläche ohne Beeinträchtigung des Wohnkomforts.\n\nDie Wohnung befindet sich in einem Gebäude mit Aufzug, was den Zugang erleichtert. Ein zugehöriger Parkplatz rundet das Angebot ab und gewährleistet eine komfortable Stellmöglichkeit für ein Fahrzeug. Der Balkon ist mit Fliesen ausgelegt und mit einem Geländer versehen, sodass ein geschützter Außenbereich vorhanden ist.\n\nEsch an der Alzette, als zweitgrößte Stadt Luxemburgs, zeichnet sich durch ein vielfältiges Kulturangebot und einen wachsenden Standort durch Universität und das Entwicklungsgebiet Belval aus. Die Immobilienpreise sind hier vergleichsweise erschwinglich, was die Lage besonders attraktiv macht.\n\nDiese Wohnung eignet sich für den Erwerb, um eine gut gelegene und solide ausgestattete Immobilie in Esch an der Alzette zu erwerben, wobei die Kombination aus Wohnqualität und praktischen Ausstattungsmerkmalen überzeugt.",
+    "highlights": [
+      {
+        "text": "78 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "2 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer",
+        "icon": "bath"
+      },
+      {
+        "text": "Balkon mit Außenbereich",
+        "icon": "sun"
+      },
+      {
+        "text": "Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "BalkonWohnung",
+      "EnergieEffizient",
+      "ParkplatzInkl",
+      "ModernerGrundriss",
+      "Aufzug"
+    ]
+  }
+}

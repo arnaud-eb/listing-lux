@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'280 m²', 'cinq chambres', 'Trois salles de bains' all match input."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions sqm, beds, baths, neighborhood, garden, terrace, cellar, parking, fireplace, kitchen island, SW exposure: 'exposés sud-ouest'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'cheminée à foyer ouvert', 'plan de travail en granite', 'cave attenante' read as native French."
+    },
+    "market_fit": {
+      "score": 5,
+      "evidence": "'villa individuelle', 'suite parentale', 'commune de Strassen' match athome.lu French corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE supplied and none invented in prose."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa rénovée 280 m² avec jardin et parking à Strassen' is 10 words with neighborhood; 5 hashtags CamelCase though 'CheminéeBois' uses accent."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; restrained phrasing like 'garantissant une certaine intimité'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting; describes 'suite parentale' as a room type only."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'ses écoles de qualité' (schools not in inputs). 'cheminée à foyer ouvert' is a slight mischaracterization of the wood-burning fireplace but supported by 'fireplace'. Other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 280 m², 5 beds, 3 baths, sale, parking, garden, terrace, cellar, SW exposure. Minor: FR title features 'parking' while DE/EN titles feature 'terrace'; FR describes fireplace as 'foyer ouvert' while DE/EN say wood-burning — minor non-contradictory variance."
+    }
+  },
+  "overall_pass": false
+}

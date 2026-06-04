@@ -1,0 +1,56 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:12.266Z",
+  "output": {
+    "title": "Exklusive 4-Zimmer Penthouse-Wohnung mit großer Terrasse und Stadtblick",
+    "description": "Diese moderne Penthouse-Wohnung mit 220 m² Wohnfläche befindet sich in einem gehobenen Wohngebiet in Belair. Die 4 Schlafzimmer und 3 Bäder verteilen sich großzügig auf eine offene, helle Raumgestaltung, die durch eine umfassende Renovierung modernisiert wurde.\n\nDas Wohnzimmer präsentiert sich mit bodentiefen Fenstern, Eichenparkett und einem Kamin, der eine wohnliche Atmosphäre bietet. Die offene Raumaufteilung ermöglicht einen fließenden Übergang in die adjacent Küche, die mit Gaggenau-Geräten, einer Carrara-Marmorinsel und einem integrierten Weinkühler ausgestattet ist.\n\nDie Hauptsuite verfügt über einen begehbaren Kleiderschrank, ein eigenes Badezimmer und einen direkten Zugang zur privaten Terrasse. Die weitläufige Terrasse bietet eine 180-Grad-Aussicht auf die Stadt Luxemburg und ist südlich ausgerichtet, was für viel Tageslicht sorgt.\n\nZum Objekt gehört ein Aufzug, ein separater Kellerraum sowie ein Parkplatz. Die Wohnung verbindet urbanen Komfort mit der ruhigen und grünen Wohnqualität des Belair-Viertels, das sich durch elegante Villen und baumgesäumte Straßen auszeichnet.",
+    "highlights": [
+      {
+        "text": "220 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "4 Schlafzimmer, 3 Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Großzügige Terrasse mit 180° Stadtblick",
+        "icon": "mountain"
+      },
+      {
+        "text": "Renoviert mit moderner Ausstattung",
+        "icon": "sofa"
+      },
+      {
+        "text": "Gaggenau Profi-Küche mit Carrara-Marmor",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Kamin im Wohnzimmer",
+        "icon": "flame"
+      },
+      {
+        "text": "Parkplatz inklusive",
+        "icon": "car"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "PenthouseLux",
+      "Stadtblick",
+      "ModerneKüche",
+      "TerrassenWohnung",
+      "BelairLiving"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'This 52 m² apartment' and 'a cellar included in the sale' faithful to inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm, bedroom (in title), bathroom, kitchen, cellar, south-facing, neighborhood."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'ready for personalization' and 'meets daily needs' read natively English."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "'CompactKitchen', 'CellarStorage' are acceptable but generic; lacks LU-specific luxury vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned or invented, consistent with sparse input."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Bright 1-Bedroom Apartment with South-Facing Living Room in Bonnevoie' is 11 words with neighborhood and adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "'practical and well-kept area' avoids hyperbole, no exclamations."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references — neutral phrasing."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'the popular Bonnevoie market', 'good connections to the central station', 'relatively affordable prices within Luxembourg City' — none in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "FR/EN describe a 1-bedroom apartment ('1 chambre', '1-Bedroom') with separate living room; DE labels it '1-Zimmer-Wohnung' with 'Wohn-/Schlafzimmer', implying a studio — a feature-list disagreement on layout."
+    }
+  },
+  "overall_pass": false,
+  "notes": ""
+}
