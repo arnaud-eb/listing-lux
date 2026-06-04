@@ -353,6 +353,38 @@ describe("derivePropertyAggregates", () => {
     expect(mockGenerateObject).toHaveBeenCalledTimes(1);
   });
 
+  it("syncs garage/parking features off the canonical room_type, deduped against the LLM result", async () => {
+    mockGenerateObject.mockResolvedValueOnce({
+      object: { property_type: "house", features: ["garden"] },
+    });
+
+    const result = await derivePropertyAggregates([
+      makeAnalysis({ room_type: "garage" }),
+      makeAnalysis({ room_type: "garden" }),
+      makeAnalysis({ room_type: "kitchen" }),
+    ]);
+
+    // garage comes from the room_type sync (the LLM didn't emit it); garden is
+    // contributed by both and must not duplicate; kitchen is not a feature id.
+    // Features are a set — assert membership, not order.
+    expect(result.features).toEqual(
+      expect.arrayContaining(["garden", "garage"]),
+    );
+    expect(result.features).toHaveLength(2);
+  });
+
+  it("does not sync room types in FEATURES_NEVER_AUTO_DERIVED", async () => {
+    mockGenerateObject.mockResolvedValueOnce({
+      object: { property_type: "house", features: [] },
+    });
+
+    const result = await derivePropertyAggregates([
+      makeAnalysis({ room_type: "basement" }),
+    ]);
+
+    expect(result.features).toEqual([]);
+  });
+
   it("returns defaults without calling the LLM when analyses is empty", async () => {
     mockGenerateObject.mockClear();
     const result = await derivePropertyAggregates([]);
