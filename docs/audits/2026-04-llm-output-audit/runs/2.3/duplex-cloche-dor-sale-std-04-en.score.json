@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "Matches inputs: '180 square meters', '3 bedrooms and 2 bathrooms', 'Cloche d'Or district', 'elevator', 'parking', 'cellar'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds/baths, neighborhood, new-build, terrace, double-height living, Siemens kitchen, oak flooring, park view, elevator, parking, cellar, evening sun."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "Reads as native English: 'The residence benefits from an elevator-accessible building with secured parking and a cellar for additional storage.'"
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses 'duplex apartment', 'engineered oak flooring', 'quartz worktops', 'soft-close cabinetry' — appropriate luxury portal English."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class in inputs and prose correctly omits any energy class reference."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Contemporary 3-Bedroom Duplex with Panoramic City and Park Views in Cloche d'Or' is 12 words and well-shaped; 5 CamelCase hashtags including 'ClocheDOr'."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; descriptors like 'voluminous' and 'expansive' are restrained and photo-supported."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic references — 'Prospective buyers will appreciate its position' is neutral."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'secured parking' adds 'secured' which is not in the inputs (parking is listed as true but no security attribute). All other claims supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 180 m², 3 beds, 2 baths, sale, parking, cellar, elevator, terrace. FR adds 'dressing intégré' on the master where DE/EN say 'fitted wardrobes' — a minor non-contradictory detail."
+    }
+  },
+  "overall_pass": false
+}

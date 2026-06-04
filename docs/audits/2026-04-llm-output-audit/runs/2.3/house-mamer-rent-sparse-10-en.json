@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-mamer-rent-sparse-10",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:55.196Z",
+  "output": {
+    "title": "Three-Bedroom House with Garden and Parking in Mamer for Rent",
+    "description": "This three-bedroom house offers 130 m² of living space within a quiet suburban setting in Mamer. Constructed in the 1980s, the property is a well-maintained row house characterized by a neutral facade and includes a small front yard that complements the residence's understated exterior.\n\nInside, the living room features a garden view through patio doors and retains a dated interior with beige carpeting and a dedicated alcove suitable for a TV setup. The layout provides potential for modernization according to tenant preferences.\n\nThe property benefits from a private rear garden comprising a lawn area bordered by a wood fence, alongside a small storage shed, offering outdoor space for various uses. Additional amenities include a designated parking space and a cellar located in the building, facilitating extra storage options.\n\nSituated in Mamer, the property benefits from the commune's residential character with convenient access to local schools such as the Lycée Josy Barthel and the European School Luxembourg II at Bertrange-Mamer, as well as good motorway and rail connections. The rental is available immediately, making it suitable for those seeking accommodation in this well-connected western suburb of Luxembourg City.",
+    "highlights": [
+      {
+        "text": "130 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "Three bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "One bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Private rear garden with shed",
+        "icon": "trees"
+      },
+      {
+        "text": "Reserved parking space",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar in building",
+        "icon": "archive"
+      },
+      {
+        "text": "1980s well-maintained row house",
+        "icon": "building-2"
+      }
+    ],
+    "hashtags": [
+      "SuburbanLiving",
+      "PrivateGarden",
+      "ParkingIncluded",
+      "CellarStorage",
+      "ReadyToModernize"
+    ]
+  }
+}

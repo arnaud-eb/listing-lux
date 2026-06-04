@@ -1,0 +1,48 @@
+{
+  "fixture_id": "duplex-cloche-dor-sale-std-04",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "All key facts align with inputs: '180 m²', '3 Schlafzimmer, 2 Bäder', 'Stellplatz', 'Kellerabteil', 'Aufzug', 'Cloche d'Or'."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds/baths, neighborhood, parking, cellar, elevator, terrace, new-build, double-height living, Siemens kitchen, oak flooring, park view, evening sun."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively but 'das Cloche d'Or Viertel mit seinen vielfältigen Infrastrukturangeboten typisiert' is awkward German phrasing."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU corpus terms like 'Duplexwohnung', 'Eichenparkett', 'vollintegrierten Siemens-Geräten', 'Kellerabteil', 'Stellplatz'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied and the description correctly omits any energy class mention."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Exklusive 3-Zimmer-Duplexwohnung mit Panoramablick und großzügiger Terrasse in Cloche d'Or' is well-shaped (12 words), but only 4 hashtags and none reference Cloche d'Or."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained; 'Exklusive' in title and 'attraktiven Investition' lean slightly promotional but no exclamations or hyperbole like 'breathtaking'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No reference to demographics, family status, or protected categories — 'unterstützen den urbanen Lebensstil' is generic."
+    },
+    "hallucination": {
+      "score": 5,
+      "evidence": "Unsupported: 0. All concrete claims ('180 m²','3 Schlafzimmer','2 Bäder','Siemens','Quarz','Eichenparkett','Aufzug','Stellplatz','Kellerabteil','Park','Einkaufszentrum','Abendsonne','Cloche d'Or') trace to property/photo inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three languages agree on 180 m², 3 beds, 2 baths, sale, parking, cellar, elevator, terrace. FR adds 'dressing intégré' on the master where DE/EN say 'fitted wardrobes' — a minor non-contradictory detail."
+    }
+  },
+  "overall_pass": true
+}

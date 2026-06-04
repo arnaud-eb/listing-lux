@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'280 m²', 'Five bedrooms, three bathrooms', 'Renovated' all match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds/baths, neighborhood, garden, terrace, cellar, parking, fireplace, kitchen features, SW exposure: 'Established mature garden with south-west exposure'."
+    },
+    "native_quality": {
+      "score": 5,
+      "evidence": "'seamless indoor-outdoor flow' and 'a warm focal point' read as native English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'detached villa', 'established mature garden', 'suburban municipality west of Luxembourg City' fits LU luxury English corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE in inputs and none invented in prose."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title is 11 words with neighborhood and adjective; 5 hashtags in CamelCase but 'FamilyResidence' is somewhat generic and borderline fair-housing."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No 'breathtaking' or exclamation marks; restrained adjectives like 'tranquil' and 'warm focal point'."
+    },
+    "fair_housing": {
+      "score": 3,
+      "evidence": "Hashtag 'FamilyResidence' and 'family gatherings' reference family status — a fair-housing steering signal."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1 — 'hosts reputable schools' (schools not in inputs). Other concrete claims (280 m², 5/3, slate roof, plaster facade, parquet, granite, double oven, SW exposure) supported."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 280 m², 5 beds, 3 baths, sale, parking, garden, terrace, cellar, SW exposure. Minor: FR title features 'parking' while DE/EN titles feature 'terrace'; FR describes fireplace as 'foyer ouvert' while DE/EN say wood-burning — minor non-contradictory variance."
+    }
+  },
+  "overall_pass": false
+}

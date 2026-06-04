@@ -1,0 +1,44 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:50:11.887Z",
+  "output": {
+    "title": "Detached 4-Bedroom Villa with Garden and Double Garage in Established Residential Area",
+    "description": "This villa, built in the 1970s, offers approximately 200 m² of living space set on private grounds in an established residential area of Differdange. The stone facade reflects the architectural style typical of the era and Luxembourg's residential design, complemented by well-maintained exterior landscaping including a front lawn and a mature garden. The property includes a double garage and parking facilities, enhancing convenience for residents.\n\nInside, the living room exemplifies traditional 1970s interior design, featuring wood paneling and an original stone fireplace that adds character and warmth. Large windows provide views over the garden, connecting the indoor space with the natural surroundings. The villa’s layout includes four bedrooms and two bathrooms, accommodating diverse living arrangements.\n\nThe generous garden surrounding the house is maintained with mature trees and a spacious lawn, complemented by a terrace and a patio area suited for outdoor seating and leisure. There is also a cellar available, providing additional storage separate from the main living spaces.\n\nLocated in Differdange, Luxembourg's third-largest city, the property benefits from a context marked by industrial heritage and recent residential developments. The area includes landmarks such as Differdange castle, now the campus for Miami University. This dwelling is available for rent, offering a residence that balances traditional architecture with private external spaces and practical amenities.",
+    "highlights": [
+      {
+        "text": "Detached villa with 200 m² living space",
+        "icon": "home"
+      },
+      {
+        "text": "Four bedrooms and two bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Double garage and parking",
+        "icon": "car"
+      },
+      {
+        "text": "Original stone fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Mature private garden with terrace and patio",
+        "icon": "trees"
+      },
+      {
+        "text": "Separate cellar for additional storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "1970sArchitecture",
+      "MatureGarden",
+      "DoubleGarage",
+      "TraditionalInterior",
+      "PrivateTerrace"
+    ]
+  }
+}

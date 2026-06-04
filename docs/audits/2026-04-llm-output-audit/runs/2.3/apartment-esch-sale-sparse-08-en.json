@@ -1,0 +1,44 @@
+{
+  "fixture_id": "apartment-esch-sale-sparse-08",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:28.625Z",
+  "output": {
+    "title": "Two-Bedroom Apartment with Balcony and Parking in Esch-sur-Alzette",
+    "description": "This apartment offers 78 square meters of living space arranged over a practical layout with two bedrooms and one bathroom. The living room features laminate flooring and beige walls, creating a neutral palette that complements the natural light entering through the balcony door. Access to the balcony extends the living area outdoors, providing a modest tiled outdoor space.\n\nThe kitchen is compact and equipped with white cabinetry in an L-shaped configuration. There is sufficient room for a small dining table, enhancing the functionality of the kitchen area. The bathroom and bedrooms maintain a straightforward and neutral style consistent with the rest of the apartment.\n\nResidents benefit from an elevator providing convenient access to the apartment floor, as well as an included parking space. The apartment's location in Esch-sur-Alzette situates it within Luxembourg's second-largest city, an area recognized for its affordable property prices, evolving urban environment, cultural offerings, and the presence of the university and the Belval district.\n\nThis property is available for sale and presents a practical option for those seeking an apartment with outdoor space and parking in a city undergoing growth and diversification.\n\n",
+    "highlights": [
+      {
+        "text": "78 m² living area",
+        "icon": "square"
+      },
+      {
+        "text": "2 bedrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "1 bathroom",
+        "icon": "bath"
+      },
+      {
+        "text": "Balcony with outdoor space",
+        "icon": "sun"
+      },
+      {
+        "text": "Parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "CityLiving",
+      "OutdoorSpace",
+      "ParkingIncluded",
+      "EschSurAlzette",
+      "GrowingUrbanArea"
+    ]
+  }
+}

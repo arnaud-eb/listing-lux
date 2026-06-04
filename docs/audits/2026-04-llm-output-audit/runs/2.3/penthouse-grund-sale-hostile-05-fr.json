@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:31.843Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de la Alzette",
+    "description": "Este penthouse de 175 m² se encuentra en el histórico barrio de Grund, área reconocida por su valor cultural y la inscripción de su entorno en la lista de la UNESCO. La propiedad combina elementos arquitectónicos tradicionales, como muros de piedra vista y vigas originales, con acabados contemporáneos cuidadosamente renovados.\n\nEl salón, dotado de techo abovedado y suelos de roble de tablas anchas, ofrece una vista panorámica hacia la valle de la Alzette. La cocina, equipada con mobiliario de madera maciza, encimera de mármol y electrodomésticos de acero inoxidable, presenta un diseño funcional y cálido.\n\nEl inmueble dispone de tres dormitorios y dos baños, donde se enfatizan detalles como ventanas bajo cubiertas y la presencia de vigas a la vista. La terraza privada, con solería de piedra y barandilla de hierro forjado, permite disfrutar de las vistas del paisaje protegido que caracteriza al Grund.\n\nAdemás, la propiedad incluye un espacio de aparcamiento, un ascensor que proporciona acceso directo al piso, así como una bodega independiente. Su localización en un entorno declarado Patrimonio de la Humanidad aporta un marco singular a este penthouse que se ofrece a la venta.",
+    "highlights": [
+      {
+        "text": "Superficie habitable de 175 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Tres dormitorios y dos baños",
+        "icon": "bed"
+      },
+      {
+        "text": "Terraza privada con vistas a la valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Cocina equipada con mobiliario a medida",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Ascensor con acceso directo al piso",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento",
+        "icon": "car"
+      },
+      {
+        "text": "Bodega independiente",
+        "icon": "archive"
+      },
+      {
+        "text": "Ubicación en zona declarada Patrimonio UNESCO",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "HistoricCharm",
+      "UNESCOZone",
+      "ValleyViews",
+      "RenovatedPenthouse",
+      "PrivateTerrace"
+    ]
+  }
+}

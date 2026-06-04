@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "States '2 Schlafzimmer' in highlights but property has 2 bedrooms total (likely 1 bedroom + living room in a 2-Zimmer apartment); minor inconsistency. Otherwise '95 m²', 'Balkon', 'Aufzug', 'Keller' all match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Covers sqm ('95 m²'), neighborhood (Limpertsberg), balcony, elevator, cellar, furnished, renovated, kitchen features, bedroom features. Omits bathroom count entirely."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Mostly natural German, but small grammar slip: 'Die Lage in Limpertsberg zeichnen sich' (should be 'zeichnet sich'); 'Moderner Einbauküche' case error in highlight."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses appropriate LU/DE vocabulary like 'Zur Vermietung', 'Stadtteil Limpertsberg', 'Parkettboden', 'Einbauküche', 'Induktionskochfeld'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class supplied in inputs and the description omits CPE entirely, which is correct per v1.5 default."
+    },
+    "seo_signal": {
+      "score": 2,
+      "evidence": "Title 'Furnished 2-Zimmer-Wohnung mit Balkon und Aufzug im begehrten Limpertsberg' mixes English ('Furnished') in a DE title; hashtags are space-separated rather than #-prefixed and only 4 tags, acceptable count but format is questionable."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, but 'im begehrten Stadtteil Limpertsberg' and 'im begehrten Limpertsberg' (twice) leans slightly promotional; no exclamation marks or 'breathtaking'-class hyperbole."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No references to occupant demographics, family status, religion, age, or origin — 'eignet sich für eine sofortige Anmietung' is neutral."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'Grand Théâtre' and 'Tony-Neuman-Park' are named landmarks not present in any input (no neighborhood data was provided). 'im Nordwesten Luxemburgs' is also a geographic claim not in inputs but is generally true; 'Parkettboden' is paraphrase of 'engineered wood flooring' — supported."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "Only one language (DE) present, so no cross-language disagreement is possible."
+    }
+  },
+  "overall_pass": false,
+  "notes": "DE-only fixture; rent framing handled adequately ('Zur Vermietung', 'Mietverhältnis beginnt nach Absprache')."
+}

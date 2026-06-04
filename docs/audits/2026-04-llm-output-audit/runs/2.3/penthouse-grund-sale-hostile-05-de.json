@@ -1,0 +1,51 @@
+{
+  "fixture_id": "penthouse-grund-sale-hostile-05",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:26.004Z",
+  "output": {
+    "title": "Penthouse renovado con terraza y vistas a la valle de Alzette en Grund",
+    "description": "Este penthouse situado en el histórico barrio de Grund ofrece una superficie habitable de 175 m² distribuidos en tres dormitorios y dos baños.\n\nLa vivienda presenta una combinación armoniosa entre elementos arquitectónicos originales como paredes de piedra vista y techos abovedados, junto a acabados contemporáneos. El salón destaca por su amplitud y luminosidad, con un suelo de tablones anchos de roble y una atractiva vista al valle de la Alzette.\n\nLa cocina se encuentra equipada con mobiliario de madera maciza, encimera de mármol y una placa profesional de acero inoxidable. Uno de los dormitorios incorpora una ventana abuhardillada con vista al valle, reforzando el carácter acogedor del espacio.\n\nComplementa la propiedad una terraza privada con pavimento de piedra y barandilla de hierro forjado, que proporciona un espacio exterior enmarcado en una zona declarada Patrimonio de la Humanidad por la UNESCO. Además, el inmueble dispone de ascensor, plaza de aparcamiento y un cuarto de sótano para almacenamiento.",
+    "highlights": [
+      {
+        "text": "Superficie de 175 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Tres dormitorios",
+        "icon": "bed"
+      },
+      {
+        "text": "Dos baños",
+        "icon": "bath"
+      },
+      {
+        "text": "Terraza privada con vistas al valle",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascensor en el edificio",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Plaza de aparcamiento",
+        "icon": "car"
+      },
+      {
+        "text": "Sótano independiente",
+        "icon": "archive"
+      },
+      {
+        "text": "Renovación reciente",
+        "icon": "home"
+      }
+    ],
+    "hashtags": [
+      "GrundLiving",
+      "ValleAlzetteView",
+      "HistoricRenovation",
+      "PrivateTerrace"
+    ]
+  }
+}

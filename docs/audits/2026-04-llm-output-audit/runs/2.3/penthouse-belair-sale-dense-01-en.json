@@ -1,0 +1,52 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:28.687Z",
+  "output": {
+    "title": "Renovated 4-Bedroom Penthouse with Panoramic City Views and Terrace in Belair",
+    "description": "This recently renovated penthouse offers 220 m² of refined living space in the prestigious Belair neighborhood. Designed with contemporary style and attention to detail, the open-plan living area features floor-to-ceiling windows and oak parquet flooring, creating a bright and airy atmosphere. A wood-burning fireplace adds a tasteful focal point, enhancing the sophisticated ambiance.\n\nThe kitchen is equipped with professional-grade Gaggenau appliances and features a Carrara marble island with an integrated wine fridge and matte black fixtures, combining functionality with modern elegance. This layout supports entertaining and culinary activities with ease.\n\nThe master bedroom includes a walk-in closet, ensuite bathroom, and direct access to a private terrace. Two additional bedrooms and bathrooms ensure ample accommodation options. The large, south-facing terrace spans the length of the penthouse, offering an expansive 180-degree view over Luxembourg City. It is finished with composite decking, a glass balustrade, and an outdoor lounge area.\n\nAdditional amenities include dedicated parking, elevator access, and a cellar for storage. The property’s smart-home lighting system complements its contemporary design. Positioned in Belair, known for its upscale and green residential streets, this penthouse combines urban convenience with an exclusive setting.\n\nOffered for sale, this penthouse presents a notable residence within one of Luxembourg's most distinguished areas.",
+    "highlights": [
+      {
+        "text": "220 m² renovated penthouse",
+        "icon": "square"
+      },
+      {
+        "text": "4 bedrooms, 3 bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "Expansive south-facing terrace with city view",
+        "icon": "sun"
+      },
+      {
+        "text": "Open-plan living with wood-burning fireplace",
+        "icon": "flame"
+      },
+      {
+        "text": "Professional Gaggenau kitchen with marble island",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Dedicated parking space included",
+        "icon": "car"
+      },
+      {
+        "text": "Elevator access to top floor",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Separate cellar for storage",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "RenovatedPenthouse",
+      "CityViewTerrace",
+      "GaggenauKitchen",
+      "BelairResidency",
+      "SmartHome"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "apartment-bonnevoie-rent-basement-13",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "'gehobene Modernisierung' slightly overstates the entry-tier renovation, but core facts (48 m², Aufzug, Keller, Untergeschoss) match inputs."
+    },
+    "completeness": {
+      "score": 4,
+      "evidence": "Mentions 48 m², 1 Schlafzimmer, 1 Badezimmer, Bonneweg, Aufzug, Keller, Renovierung, Elektroherd, begehbare Dusche, Verfügbarkeit 1. September 2026; omits monthly charges."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German ('Der Grundriss ist gut strukturiert'), though 'durchgehende gut instand gehalten' has a small agreement slip."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses standard LU/DE rental vocabulary like 'Einbauküche', 'begehbare Dusche', 'Kellerraum', 'Untergeschoss'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class is supplied in inputs and the description omits CPE entirely, as expected."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Renovierte 1-Zimmer-Wohnung mit moderner Küche und Keller in Bonneweg' is 11 words with neighborhood; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, but 'gehobene Modernisierung' is mildly aspirational for an entry-tier basement unit."
+    },
+    "fair_housing": {
+      "score": 2,
+      "evidence": "'für eine Einzelperson oder ein Paar geeignet' explicitly targets household composition — a fair-housing violation."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2 — 'beliebten Bonnevoie-Markt' (named market not in inputs) and 'gute Anbindung an den Hauptbahnhof' (Hauptbahnhof proximity not in inputs)."
+    },
+    "cross_lang_consistency": {
+      "score": 3,
+      "evidence": "DE and EN agree the unit is on the basement ('Untergeschoss' / 'basement level'); FR contradicts with 'au rez-de-jardin' — a floor/level disagreement."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Fair-housing hard-fail due to targeting singles/couples."
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Title says 'Einfamilienhaus' but body correctly says 'Doppelhaus'—mild internal inconsistency, though 195 m² and bed/bath counts correct."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "All key features included: 'Vier Schlafzimmer und zwei Badezimmer', 'Südlich ausgerichteter Garten mit Terrasse', 'Separater Kellerraum'."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads natively in German: 'Die angrenzende, traditionell gestaltete Küche mit Holzfronten ist funktional eingerichtet'."
+    },
+    "market_fit": {
+      "score": 3,
+      "evidence": "Title's 'Hochwertiges Einfamilienhaus' mismatches actual property type ('Doppelhaus' in body) — weakens market fit."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned, consistent with null input."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Hochwertiges Einfamilienhaus mit Garten und Parkplatz in Bertrange' misidentifies property type vs body; 5 CamelCase hashtags otherwise fine."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "'Hochwertiges' in title is mild marketing puff; rest restrained: 'praktischen Stauraum'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic targeting beyond generic 'Familienalltag unterstützt' which references a use-case, not exclusionary—borderline but acceptable."
+    },
+    "hallucination": {
+      "score": 1,
+      "evidence": "Unsupported: 4 — 'wohlhabende Vorortgemeinde' (socioeconomic claim), 'größte Einkaufszentrum Luxemburgs, die Belle Étoile', 'die Tram' connection (Bertrange tram not in inputs), 'gut ausgebaute Schulinfrastruktur'. Bertrange has no neighborhood data supplied."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "All three agree on 195 m², 4 bedrooms, 2 bathrooms, garden/terrace/cellar/parking/fireplace. Minor: DE title labels 'Einfamilienhaus' while FR ('semi-adossée') and EN ('semi-detached') agree on the actual type — translation-choice mismatch but body text in DE confirms 'Doppelhaus', so axes (a)-(c) substantively agree."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Title says 'Einfamilienhaus' but photo says semi-detached — factual slip."
+}

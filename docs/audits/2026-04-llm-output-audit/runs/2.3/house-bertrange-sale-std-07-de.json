@@ -1,0 +1,52 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:01.333Z",
+  "output": {
+    "title": "Hochwertiges Einfamilienhaus mit Garten und Parkplatz in Bertrange",
+    "description": "Dieses gepflegte Doppelhaus aus den 1990er-Jahren bietet auf ca. 195 m² Wohnfläche vier Schlafzimmer und zwei Badezimmer, ideal für komfortables Wohnen in ruhiger Lage. Die Fassade aus Ziegelstein vermittelt einen zeitlosen Charakter, während der kleine Vorgarten und die private Einfahrt den Außenbereich zusätzlich aufwerten.\n\nDas offen gestaltete Wohnzimmer mit Zugang zum südlich ausgerichteten Garten verfügt über einen Kamin und Fliesenböden, die eine angenehme Atmosphäre schaffen. Die angrenzende, traditionell gestaltete Küche mit Holzfronten ist funktional eingerichtet und beinhaltet eine gemütliche Frühstücksecke, welche den Familienalltag unterstützt.\n\nDer Garten mit Rasenfläche und Terrasse liegt zur Sonnenseite und bietet einen privaten, geschützten Außenbereich. Ein separater Kellerraum ergänzt die Immobilie um praktischen Stauraum. Der vorhandene Parkplatz sichert eine bequeme und sichere Abstellmöglichkeit für Fahrzeuge.\n\nBertrange zeichnet sich als wohlhabende Vorortgemeinde westlich von Luxemburg-Stadt aus und beherbergt bedeutende Einrichtungen wie das größte Einkaufszentrum Luxemburgs, die Belle Étoile. Die gute Anbindung an den öffentlichen Nahverkehr, insbesondere die Tram, sowie eine gut ausgebaute Schulinfrastruktur unterstreichen die Attraktivität der Lage.",
+    "highlights": [
+      {
+        "text": "Vier Schlafzimmer und zwei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Offener Wohn- und Essbereich mit Kamin",
+        "icon": "sofa"
+      },
+      {
+        "text": "Traditionelle Holz-Küche mit Frühstücksecke",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Südlich ausgerichteter Garten mit Terrasse",
+        "icon": "sun"
+      },
+      {
+        "text": "Privater Parkplatz und Einfahrt",
+        "icon": "car"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Wohnfläche von ca. 195 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Lage in gepflegter Vorortgemeinde Bertrange",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Doppelhaus",
+      "GartenTerrasse",
+      "Kamin",
+      "Privatparkplatz",
+      "Bertrange"
+    ]
+  }
+}

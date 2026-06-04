@@ -1,0 +1,52 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:54.670Z",
+  "output": {
+    "title": "Gut geschnittene 1-Zimmer-Wohnung mit Südausrichtung in Bonneweg zu verkaufen",
+    "description": "Diese 1-Zimmer-Wohnung mit 52 m² Wohnfläche befindet sich im lebendigen Viertel Bonneweg und wird zum Erwerb angeboten. Das Wohn-/Schlafzimmer ist südlich ausgerichtet, was eine helle und freundliche Atmosphäre schafft. Laminatboden und weiße Wände unterstreichen den klaren, gepflegten Zustand des Raumes.\n\nDie kompakte Küche verfügt über eine traditionelle, funktionale Anordnung mit weißen Einbaumöbeln und einem keramischen Fliesenboden, was die Nutzung zweckmäßig gestaltet. Das Badezimmer ist mit einer Dusch- und Badewannenkombination ausgestattet, ebenfalls im traditionellen Stil gehalten und gut instandgehalten.\n\nEin separater Kellerraum ergänzt diese Wohnung und bietet zusätzlichen Stauraum. Die Lage in Bonneweg zeichnet sich durch ein lebendiges Stadtviertel mit vielfältiger Gastronomie und dem bekannten Bonnevoie-Markt aus. Die gute Anbindung an den Hauptbahnhof gewährleistet eine schnelle Verbindung in andere Stadtteile und Regionen.\n\nDas Viertel ist bekannt für seine multikulturelle Atmosphäre sowie ein erschwingliches Preisniveau, was sich auch im Angebot dieser Wohnung widerspiegelt. Die Immobilie bietet eine überschaubare Grundfläche mit sinnvoll genutzten Räumen und sichert durch die Südausrichtung eine angenehme Lichtverhältnisse.",
+    "highlights": [
+      {
+        "text": "1 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "1 Badezimmer mit Badewanne",
+        "icon": "bath"
+      },
+      {
+        "text": "52 m² Wohnfläche",
+        "icon": "square"
+      },
+      {
+        "text": "Südlich ausgerichtetes Wohnzimmer",
+        "icon": "sun"
+      },
+      {
+        "text": "Separate Küche mit funktionaler Anordnung",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Kellerraum im Gebäude",
+        "icon": "archive"
+      },
+      {
+        "text": "Gute Anbindung an den Hauptbahnhof",
+        "icon": "train"
+      },
+      {
+        "text": "Lage im lebendigen Bonneweg",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Suedlage",
+      "Kellerraum",
+      "KompakteKueche",
+      "Bonneweg",
+      "Stadtwohnung"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'Insgesamt stehen vier Schlafzimmer sowie zwei Badezimmer zur Verfügung' and '200 m²' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers 200 m², 4 beds, 2 baths, Differdingen, garten, terrasse, doppelgarage, kellerraum, kamin."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'lädt zu entspannten Stunden im Freien ein' reads natively German."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Freistehende Villa', 'Wohnfläche', 'Doppelgarage', 'Kellerraum' align with LU/DE listing vocabulary."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class is mentioned anywhere; inputs supply none, so omission is correct."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Freistehende Villa mit Garten, Terrasse und Garage in Differdingen zu vermieten' is 11 words with neighborhood and adjective; 5 CamelCase hashtags."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole or exclamation marks; restrained language like 'vielfältige Gestaltungsmöglichkeiten'."
+    },
+    "fair_housing": {
+      "score": 4,
+      "evidence": "'die den Wohnraum familiengerecht abrunden' references family suitability — borderline fair-housing concern."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'drittgrößten Stadt Luxemburgs', 'Campus der Miami University', and 'industrielles Erbe' are not in inputs (neighborhood not in registry)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, rental, Differdange, double garage, garden, terrace, cellar, fireplace."
+    }
+  },
+  "overall_pass": false,
+  "notes": "Family reference and unsupported Miami University/third-largest-city claims."
+}

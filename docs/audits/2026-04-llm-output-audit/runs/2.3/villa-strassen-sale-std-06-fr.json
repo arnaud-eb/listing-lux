@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:47.692Z",
+  "output": {
+    "title": "Villa rénovée 280 m² avec jardin et parking à Strassen",
+    "description": "Cette villa individuelle, d'une surface habitable d'environ 280 m², s'inscrit dans un environnement résidentiel calme typique de Strassen. Elle présente une façade en crépi blanc et un toit à deux pans en ardoise, selon l'architecture traditionnelle locale, et bénéficie d'un jardin planté d'arbres matures garantissant une certaine intimité.\n\nL'intérieur rénové privilégie un style de transition associant confort et fonctionnalité. Le séjour se distingue par un parquet au sol, des plafonds hauts et une cheminée à foyer ouvert en bois, ainsi que par de larges portes-fenêtres offrant un accès direct sur le jardin. La cuisine aménagée réunit des éléments de qualité tels que des meubles shaker, un plan de travail en granite, un îlot central avec espace repas et un four double intégré.\n\nLa propriété compte cinq chambres à coucher, dont une suite parentale avec des rangements intégrés et une vue sur le jardin. Trois salles de bains équipées complètent ce logement. Une terrasse en pierre et des espaces extérieurs exposés sud-ouest permettent de bénéficier d'une lumière naturelle prolongée tout au long de la journée.\n\nUn parking privatif est disponible sur le terrain, complété par une cave attenante à la maison. La commune de Strassen, à l'ouest de la ville de Luxembourg, est reconnue pour son caractère villageois, ses écoles de qualité et son accès aux axes autoroutiers.",
+    "highlights": [
+      {
+        "text": "Villa individuelle rénovée de 280 m²",
+        "icon": "building-2"
+      },
+      {
+        "text": "Cinq chambres spacieuses avec rangements intégrés",
+        "icon": "bed"
+      },
+      {
+        "text": "Trois salles de bains équipées",
+        "icon": "bath"
+      },
+      {
+        "text": "Cheminée à foyer ouvert et parquet au sol",
+        "icon": "flame"
+      },
+      {
+        "text": "Cuisine équipée avec îlot central et four double",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Jardin mature exposé sud-ouest avec terrasse pavée",
+        "icon": "trees"
+      },
+      {
+        "text": "Parking privatif sur terrain",
+        "icon": "car"
+      },
+      {
+        "text": "Cave attenante à la maison",
+        "icon": "archive"
+      }
+    ],
+    "hashtags": [
+      "VillaRénovée",
+      "JardinMature",
+      "CheminéeBois",
+      "CuisineAménagée",
+      "TerrasseSudOuest"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'environ 200 m²' and 'quatre chambres et deux salles de bains' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds, baths, Differdange, jardin, terrasse, double garage, cave, cheminée."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'agrémenté d'arbres matures et d'une pelouse' reads natively French."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Villa indépendante', 'salles de bains', 'cave', 'double garage fermé' fit LU FR corpus."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned; inputs supply none."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Villa indépendante avec jardin, 4 chambres et double garage à louer à Differdange' is 13 words with neighborhood; 5 hashtags CamelCase though mixed EN/FR."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No exclamation marks or hyperbole; 'cadre d'habitation confortable'."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'à ceux qui recherchent un domicile' is neutral."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'troisième ville du pays', 'château de Differdange', 'campus de Miami University' not in inputs; also 'projets résidentiels émergents du centre-ville' unsupported (4)."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, rental, Differdange, double garage, garden, terrace, cellar, fireplace."
+    }
+  },
+  "overall_pass": false
+}

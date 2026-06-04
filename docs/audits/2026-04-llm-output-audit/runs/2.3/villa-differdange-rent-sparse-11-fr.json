@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:50:06.666Z",
+  "output": {
+    "title": "Villa indépendante avec jardin, 4 chambres et double garage à louer à Differdange",
+    "description": "Cette villa indépendante d'environ 200 m² offre un cadre d'habitation confortable avec une architecture typique des années 1970 au Luxembourg. Elle s'organise sur un terrain privatif bien entretenu comportant un jardin spacieux agrémenté d'arbres matures et d'une pelouse, ainsi qu'une terrasse attenante favorisant les moments extérieurs.\n\nL'intérieur se compose de quatre chambres et deux salles de bains, ce qui convient à une disposition résidentielle équilibrée. Le séjour séduit par son ambiance chaleureuse, notamment grâce à un habillage boisé d'origine et une cheminée en pierre fonctionnelle qui encadre une vue dégagée vers le jardin.\n\nComplémentairement, le bien dispose d'un double garage fermé, garantissant une capacité de stationnement sécurisée, ainsi qu'une cave offrant un espace de rangement supplémentaire. Ce logement est situé dans la troisième ville du pays, Differdange, un environnement marqué par son patrimoine industriel et la présence du château de Differdange, aujourd'hui campus de Miami University.\n\nCette location s'adresse à ceux qui recherchent un domicile avec des volumes généreux dans un quartier résidentiel établi, à proximité des projets résidentiels émergents du centre-ville.",
+    "highlights": [
+      {
+        "text": "Villa indépendante des années 1970",
+        "icon": "building-2"
+      },
+      {
+        "text": "Surface habitable d'environ 200 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Quatre chambres et deux salles de bains",
+        "icon": "bed"
+      },
+      {
+        "text": "Double garage fermé",
+        "icon": "car"
+      },
+      {
+        "text": "Jardin privatif avec arbres matures et terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Cheminée en pierre dans le séjour",
+        "icon": "flame"
+      },
+      {
+        "text": "Cave séparée",
+        "icon": "archive"
+      },
+      {
+        "text": "Situation à Differdange, ville au riche patrimoine industriel",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Villa1970",
+      "GardenLiving",
+      "DoubleGarage",
+      "StoneFireplace",
+      "Differdange"
+    ]
+  }
+}

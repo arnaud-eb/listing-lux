@@ -1,0 +1,48 @@
+{
+  "fixture_id": "house-bertrange-sale-std-07",
+  "language": "en",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:13.740Z",
+  "output": {
+    "title": "Spacious 4-Bedroom Semi-Detached House with South-Facing Garden in Bertrange",
+    "description": "This semi-detached house, constructed in the 1990s, offers 195 m² of living space across well-defined areas suitable for comfortable residential living. The property features a brick facade and a modest front garden leading to a private driveway, providing convenient parking. \n\nInside, the living room presents a transitional style with tile flooring and an open-plan connection to the dining area. Double doors from this space grant direct access to the garden, enhancing the flow between indoor and outdoor areas. A fireplace adds a functional and aesthetic element to the living room.\n\nThe kitchen maintains a traditional warmth with wood cabinetry, complemented by a tile splashback and a freestanding range. It also includes a breakfast nook, designed for casual meals and everyday convenience. \n\nThe outdoor space comprises a south-facing garden with a lawn and patio area, oriented to maximize natural daylight in the afternoon. The presence of both a terrace and a garden area provides options for outdoor enjoyment and relaxation in a private setting. A cellar is also available, offering additional storage capacity.\n\nSituated in Bertrange, a commune characterized by its suburban environment and proximity to Luxembourg's largest shopping centre, the property benefits from access to residential amenities and tram connections via Cloche d'Or. This combination supports both convenience and connectivity within the broader region.",
+    "highlights": [
+      {
+        "text": "195 m² living space",
+        "icon": "square"
+      },
+      {
+        "text": "4 bedrooms, 2 bathrooms",
+        "icon": "bed"
+      },
+      {
+        "text": "South-facing garden and terrace",
+        "icon": "sun"
+      },
+      {
+        "text": "Fireplace in living room",
+        "icon": "flame"
+      },
+      {
+        "text": "Private driveway parking",
+        "icon": "car"
+      },
+      {
+        "text": "Cellar for additional storage",
+        "icon": "archive"
+      },
+      {
+        "text": "Open-plan living and dining areas",
+        "icon": "sofa"
+      }
+    ],
+    "hashtags": [
+      "SemiDetached",
+      "BertrangeLiving",
+      "SouthFacingGarden",
+      "PrivateParking",
+      "FunctionalLayout"
+    ]
+  }
+}

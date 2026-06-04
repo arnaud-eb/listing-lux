@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:47:42.689Z",
+  "output": {
+    "title": "Appartement 3 chambres 145 m² avec balcon et vue sur la ville à Kirchberg",
+    "description": "Situé dans le quartier dynamique et moderne de Kirchberg, ce nouvel appartement de 145 m² offre un cadre de vie adapté au rythme urbain et aux exigences contemporaines. Il est desservi par un ascenseur et comprend un parking ainsi qu'une cave, facilitant ainsi le confort au quotidien.\n\nLe séjour présente un plafond double hauteur et un parquet en bois d'ingénierie, soulignant une luminosité naturelle abondante grâce à ses fenêtres orientées sud. L'agencement ouvert permet une circulation fluide entre les espaces de vie et la salle à manger, accentuant la sensation d'espace.\n\nLa cuisine équipée Bulthaup intègre une plaque à induction et un plan de travail en pierre, accompagnée d'un îlot central avec bar pour le petit-déjeuner. Elle répond aux critères de fonctionnalité et d'esthétique minimaliste.\n\nLe balcon, protégé par une balustrade en verre, bénéficie d’un revêtement en carrelage et offre une vue dégagée sur le parc de Kirchberg. Cet espace extérieur calme complète l’ensemble.\n\nLes deux salles de bains affichent un style contemporain avec double vasque, douche à l’italienne et chauffage par le sol, pour un confort optimal. Les revêtements en porcelaine renforcent l’ambiance soignée des espaces sanitaires.",
+    "highlights": [
+      {
+        "text": "145 m² habitables avec 3 chambres et 2 salles de bains",
+        "icon": "square"
+      },
+      {
+        "text": "Balcon avec vue dégagée sur parc",
+        "icon": "sun"
+      },
+      {
+        "text": "Ascenseur et parking inclus",
+        "icon": "arrow-up"
+      },
+      {
+        "text": "Cuisine Bulthaup équipée avec îlot central",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Parquet en bois d'ingénierie et double hauteur sous plafond",
+        "icon": "home"
+      },
+      {
+        "text": "Cave privative accessible",
+        "icon": "archive"
+      },
+      {
+        "text": "Bains modernes avec chauffage au sol",
+        "icon": "bath"
+      }
+    ],
+    "hashtags": [
+      "ModernLiving",
+      "KirchbergView",
+      "BulthaupKitchen",
+      "BalconyLife",
+      "UrbanComfort"
+    ]
+  }
+}

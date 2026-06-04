@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-kirchberg-sale-std-02",
+  "language": "de",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 4,
+      "evidence": "Mostly accurate but introduces 'Eichenparkett' (oak parquet) where the photo input says 'engineered wood flooring' without specifying species."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers '145 m²', '3 Schlafzimmer', '2 Bäder', balcony, elevator, cellar, parking, new-build, and photo selling points (Bulthaup, Regendusche, Park)."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Natural German real-estate prose: 'eine großzügige Raumaufteilung in moderner Architektur'."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "Uses corpus vocabulary: 'Neubauwohnung', 'Einbauküche', 'Fußbodenheizung', 'Stellplatz'."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented or mentioned, consistent with null inputs."
+    },
+    "seo_signal": {
+      "score": 4,
+      "evidence": "Title 'Moderne 3-Zimmer-Wohnung mit Balkon und Parkblick im Geschäftsviertel Kirchberg' is 11 words; 5 CamelCase hashtags including 'NeubauWohnung', 'BulthaupKüche'."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained but 'Panoramablick über Kirchberg' in the highlights is a slight stretch beyond the 'city-view' input."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No occupant demographic references."
+    },
+    "hallucination": {
+      "score": 3,
+      "evidence": "Unsupported: 2. 'Eichenparkett' (input only says 'engineered wood flooring', not oak) and 'Panoramablick über Kirchberg' (input is just 'city-view', no panorama claim). 'internationaler Schulen' is supported by the fixture's notes about international schools."
+    },
+    "cross_lang_consistency": {
+      "score": 4,
+      "evidence": "EN/DE/FR all agree on 145m²/3BR/2BA/sale/balcony/parking/elevator/cellar/new-build. Minor disagreement: DE adds 'Eichenparkett' (oak) and 'Panoramablick' which EN/FR do not assert, but these are non-contradictory additions."
+    }
+  },
+  "overall_pass": false
+}

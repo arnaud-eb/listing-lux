@@ -1,0 +1,52 @@
+{
+  "fixture_id": "villa-strassen-sale-std-06",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:42.095Z",
+  "output": {
+    "title": "Renovierte 5-Zimmer-Villa mit Garten und Terrasse in Strassen",
+    "description": "Die großzügige Villa mit 280 m² Wohnfläche befindet sich in einer ruhigen Wohngegend in Strassen. Das zweigeschossige Einfamilienhaus präsentiert sich mit einer weißen Putzfassade und einem traditionell geneigten Schieferdach. Umgeben von einem etablierten Garten mit Rasen und reifen Bäumen bietet das Grundstück Privatsphäre und eine natürliche Atmosphäre.\n\nIm Inneren überzeugt die Immobilie durch hohe Decken und ein stimmiges Parkett. Das Herzstück bildet das wohnlich gestaltete Wohnzimmer mit einem Holzofen-Kamin und direktem Zugang zum Garten über Patio-Türen. Die angrenzende Küche wurde modernisiert und verfügt über eine einladende Kochinsel mit Sitzgelegenheiten, eine Doppelbackofen-Einheit sowie umfangreiche Granitarbeitsflächen.\n\nDie fünf Schlafzimmer sind gepflegt, mit Einbauschränken ausgestattet und teilweise mit Ausblicken in den Garten. Die drei Bäder entsprechen dem renovierten Gesamtstand des Hauses. Zusätzlich bietet ein separater Kellerraum weiteren Stauraum. Eine Terrasse mit Südwestausrichtung erweitert den Wohnraum ins Freie.\n\nDie Lage in Strassen zeichnet sich durch ein dörfliches Ambiente bei gleichzeitiger Erreichbarkeit der Stadt aus. Gute Anbindungen an das Autobahnnetz und eine Auswahl exzellenter Schulen prägen den Standort. Die Villa wird zum Erwerb angeboten und richtet sich an Käufer, die ein großzügiges und gepflegtes Einzelhaus in einer etablierten Wohngegend suchen.",
+    "highlights": [
+      {
+        "text": "280 m² Wohnfläche auf zwei Etagen",
+        "icon": "square"
+      },
+      {
+        "text": "Fünf Schlafzimmer und drei Badezimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Renovierte Wohn- und Kücheneinrichtung",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Gemütlicher Kamin im Wohnbereich",
+        "icon": "flame"
+      },
+      {
+        "text": "Etablierter Garten mit Südwest-Terrasse",
+        "icon": "trees"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Parkmöglichkeiten auf dem Grundstück",
+        "icon": "car"
+      },
+      {
+        "text": "Ruhige Lage in Strassen mit dörflichem Charakter",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "RenovierteVilla",
+      "GartenmitTerrasse",
+      "Kaminofen",
+      "GroßzügigesWohnen",
+      "StrassenLage"
+    ]
+  }
+}

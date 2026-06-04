@@ -1,0 +1,48 @@
+{
+  "fixture_id": "apartment-bonnevoie-sale-sparse-03",
+  "language": "fr",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:48:00.815Z",
+  "output": {
+    "title": "Appartement 1 chambre lumineux de 52 m² avec cave à vendre à Bonnevoie",
+    "description": "Ce logement de 52 m² situé à Bonnevoie se compose d'un séjour orienté plein sud, bénéficiant d'un apport lumineux naturel grâce à une fenêtre unique. Le sol en stratifié clair et les murs blancs participent à une ambiance épurée et soignée.\n\nLa cuisine, de style traditionnel, présente un agencement en couloir avec un mobilier blanc et un sol en carrelage céramique. Bien que fonctionnelle, elle offre un potentiel de modernisation selon les préférences du futur acquéreur.\n\nLa salle de bains, compacte et fonctionnelle, inclut une baignoire avec douche, un lavabo simple et un carrelage aux teintes claires, le tout en bon état d'entretien.\n\nUne cave accompagne ce bien, apportant un espace de rangement supplémentaire.\n\nBonnevoie se distingue comme un quartier vivant et multiculturel, doté d'une offre gastronomique variée et d'un marché local réputé. La gare centrale est accessible dans le quartier, facilitant les déplacements.",
+    "highlights": [
+      {
+        "text": "Surface habitable de 52 m²",
+        "icon": "square"
+      },
+      {
+        "text": "Séjour lumineux orienté sud",
+        "icon": "sun"
+      },
+      {
+        "text": "Cuisine fonctionnelle avec agencement en couloir",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Salle de bains avec baignoire-douche",
+        "icon": "bath"
+      },
+      {
+        "text": "Une chambre à coucher",
+        "icon": "bed"
+      },
+      {
+        "text": "Cave privative incluse",
+        "icon": "archive"
+      },
+      {
+        "text": "Quartier dynamique et multicultural à Bonnevoie",
+        "icon": "map-pin"
+      }
+    ],
+    "hashtags": [
+      "Bonnevoie",
+      "AppartementLuminuex",
+      "CavePrivative",
+      "CuisineFonctionnelle",
+      "QuartierVivant"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "fixture_id": "apartment-limpertsberg-rent-de-only-09",
+  "language": "de",
+  "prompt_version": "2.3",
+  "model": "gpt-4.1-mini",
+  "generated_at": "2026-06-01T04:49:37.071Z",
+  "output": {
+    "title": "Furnished 2-Zimmer-Wohnung mit Balkon und Aufzug im begehrten Limpertsberg",
+    "description": "Zur Vermietung steht diese vollständig renovierte und möblierte 2-Zimmer-Wohnung mit einer Wohnfläche von 95 m² im begehrten Stadtteil Limpertsberg im Nordwesten Luxemburgs. Das Apartment bietet einen Wohnbereich in warmem, skandinavischem Stil mit hochwertigem Parkettboden, das durch seine hellen Räume überzeugt. Die Einrichtung ist modern und geschmackvoll abgestimmt und die Wohnung befindet sich im Zustand eines sofortigen Bezugs.\n\nDie separate, moderne Küche ist mit einer Induktionskochplatte, einem Geschirrspüler sowie allen notwendigen Geräten ausgestattet und verfügt über eine integrierte Essgelegenheit. Das Schlafzimmer ist mit einem Doppelbett, einem Kleiderschrank sowie lichtdichten Rollläden ausgestattet, die zu erholsamen Nächten beitragen.\n\nEin nach Norden ausgerichteter Balkon mit Fliesenboden ermöglicht den Zugang zu Frischluft vor dem Gebäude. Die Wohnung befindet sich in einem Gebäude mit Aufzug und verfügt über einen separaten Kellerraum als zusätzlichen Stauraum. Die Lage in Limpertsberg zeichnen sich durch die Präsenz kultureller Einrichtungen wie das Grand Théâtre und eine grüne Umgebung mit dem Tony-Neuman-Park aus, verbunden mit einem lebendigen Stadtviertelcharakter.\n\nDie Wohnung wird komplett möbliert angeboten und eignet sich für eine sofortige Anmietung. Das Mietverhältnis beginnt nach Absprache. Die zentrale Lage in Limpertsberg ermöglicht eine urbane Lebensweise mit vielfältigen Nahversorgungsmöglichkeiten und Erholungsflächen.",
+    "highlights": [
+      {
+        "text": "2 Schlafzimmer",
+        "icon": "bed"
+      },
+      {
+        "text": "Renovierte, möblierte Wohnung",
+        "icon": "home"
+      },
+      {
+        "text": "Balkon nach Norden",
+        "icon": "sun"
+      },
+      {
+        "text": "Moderner Einbauküche mit Induktionskochfeld",
+        "icon": "cooking-pot"
+      },
+      {
+        "text": "Separater Kellerraum",
+        "icon": "archive"
+      },
+      {
+        "text": "Aufzug im Gebäude",
+        "icon": "arrow-up"
+      }
+    ],
+    "hashtags": [
+      "Möbliert",
+      "Renoviert",
+      "LimpertsbergLiving",
+      "Balkonwohnung"
+    ]
+  }
+}

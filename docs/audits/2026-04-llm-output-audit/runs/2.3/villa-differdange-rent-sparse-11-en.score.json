@@ -1,0 +1,48 @@
+{
+  "fixture_id": "villa-differdange-rent-sparse-11",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'200 m² of living space', 'four bedrooms and two bathrooms' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Mentions 200 m², 4 bed/2 bath, Differdange, garden, double garage, fireplace, cellar, terrace."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "'connecting the indoor space with the natural surroundings' reads naturally in English."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'Detached villa', 'double garage', 'cellar', 'mature garden' are standard LU English listing terms."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class mentioned; inputs supply none."
+    },
+    "seo_signal": {
+      "score": 3,
+      "evidence": "Title 'Detached 4-Bedroom Villa with Garden and Double Garage in Established Residential Area' lacks the neighborhood name Differdange."
+    },
+    "tone_discipline": {
+      "score": 5,
+      "evidence": "No hyperbole; 'offers approximately 200 m²' is measured."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "'accommodating diverse living arrangements' avoids demographic targeting."
+    },
+    "hallucination": {
+      "score": 2,
+      "evidence": "Unsupported: 3 — 'Luxembourg's third-largest city', 'Differdange castle', 'campus for Miami University' are not in inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "DE/EN/FR all agree on 200 m², 4 bedrooms, 2 bathrooms, rental, Differdange, double garage, garden, terrace, cellar, fireplace."
+    }
+  },
+  "overall_pass": false
+}

@@ -1,0 +1,48 @@
+{
+  "fixture_id": "penthouse-belair-sale-dense-01",
+  "language": "en",
+  "prompt_version": "2.3",
+  "scores": {
+    "factual_fidelity": {
+      "score": 5,
+      "evidence": "'220 m² of refined living space', '4 bedrooms, 3 bathrooms' match inputs."
+    },
+    "completeness": {
+      "score": 5,
+      "evidence": "Covers sqm, beds/baths, Belair, Gaggenau, Carrara, fireplace, oak parquet, terrace 180°, south-facing, smart-home, elevator, parking, cellar."
+    },
+    "native_quality": {
+      "score": 4,
+      "evidence": "Reads native; 'BelairResidency' is awkward but body prose like 'tasteful focal point' is idiomatic."
+    },
+    "market_fit": {
+      "score": 4,
+      "evidence": "'prestigious Belair neighborhood', 'professional-grade Gaggenau' aligns with LU luxury English copy."
+    },
+    "compliance_cpe": {
+      "score": 5,
+      "evidence": "No CPE class invented; description omits CPE entirely, consistent with absent inputs."
+    },
+    "seo_signal": {
+      "score": 5,
+      "evidence": "Title 'Renovated 4-Bedroom Penthouse with Panoramic City Views and Terrace in Belair' is 11 words with neighborhood + adjective; 5 CamelCase hashtags, no duplicates."
+    },
+    "tone_discipline": {
+      "score": 4,
+      "evidence": "Mostly restrained, but 'one of Luxembourg's most distinguished areas' is mildly promotional; no exclamation marks."
+    },
+    "fair_housing": {
+      "score": 5,
+      "evidence": "No demographic or family references."
+    },
+    "hallucination": {
+      "score": 4,
+      "evidence": "Unsupported: 1. 'known for its upscale and green residential streets' is a neighborhood characterization not provided in inputs. All other concrete claims (220 m², Gaggenau, Carrara marble, 180-degree, south-facing, oak parquet, composite decking, glass balustrade) supported by inputs."
+    },
+    "cross_lang_consistency": {
+      "score": 5,
+      "evidence": "FR/DE/EN all agree on 220 m², 4 bedrooms, 3 bathrooms, Belair, sale listing kind, and feature set (elevator, parking, cellar, terrace, fireplace, Gaggenau kitchen, smart-home, south-facing 180° view)."
+    }
+  },
+  "overall_pass": false
+}
