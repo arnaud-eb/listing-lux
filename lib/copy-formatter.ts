@@ -1,18 +1,13 @@
 import type { Listing, Property, Highlight, Language } from "./types";
-import { formatCurrency, formatListingDate } from "./format";
-import { PROPERTY_DETAIL_LABELS, BUILDING_DETAIL_LABELS } from "./constants";
+import { formatCurrency } from "./format";
+import { PROPERTY_DETAIL_LABELS } from "./constants";
+import {
+  buildingDetailItems,
+  listingKindLabel,
+  type BuildingDetailKey,
+} from "./building-details";
 
-/** "For sale" / "For rent" label for a listing, or null when the kind is unknown. */
-function listingKindLabel(
-  property: Property,
-  language: Language,
-): string | null {
-  if (!property.listing_kind) return null;
-  const labels = BUILDING_DETAIL_LABELS[language] ?? BUILDING_DETAIL_LABELS.en;
-  return property.listing_kind === "rent" ? labels.forRent : labels.forSale;
-}
-
-const BUILDING_EMOJIS = {
+const BUILDING_EMOJIS: Partial<Record<BuildingDetailKey, string>> = {
   yearBuilt: "🏗️",
   floorsTotal: "🏢",
   floorOfUnit: "🛗",
@@ -20,48 +15,32 @@ const BUILDING_EMOJIS = {
   thermalClass: "🌡️",
   monthlyCharges: "💶",
   availableFrom: "📅",
-} as const;
+  address: "📍",
+};
 
 /**
- * Building-detail line for email / social copy — mirrors the PDF's
- * BuildingDetailsBar so an agent's emailed or shared listing carries the same
- * facts the printable does. Returns null when no building fields are populated.
+ * Building-detail line for email / social copy — formats the shared
+ * buildingDetailItems (with the address appended last) so an agent's emailed or
+ * shared listing carries the same facts in the same layout the PDF's
+ * BuildingDetailsBar does. Returns null when nothing is populated.
  */
 function buildBuildingDetailsLine(
   property: Property,
   language: Language,
   { emojis = false }: { emojis?: boolean } = {},
 ): string | null {
-  const L = BUILDING_DETAIL_LABELS[language] ?? BUILDING_DETAIL_LABELS.en;
-  const e = (key: keyof typeof BUILDING_EMOJIS) =>
-    emojis ? `${BUILDING_EMOJIS[key]} ` : "";
-  const parts: string[] = [];
-  if (property.year_built != null)
-    parts.push(`${e("yearBuilt")}${L.yearBuilt}: ${property.year_built}`);
-  if (property.floors_total != null)
-    parts.push(`${e("floorsTotal")}${L.floorsTotal}: ${property.floors_total}`);
-  if (property.floor_of_unit != null)
-    parts.push(
-      `${e("floorOfUnit")}${L.floorOfUnit}: ${
-        property.floor_of_unit === 0 ? L.groundFloor : property.floor_of_unit
-      }`,
-    );
-  if (property.cpe_class)
-    parts.push(`${e("energyClass")}${L.energyClass}: ${property.cpe_class}`);
-  if (property.thermal_insulation_class)
-    parts.push(
-      `${e("thermalClass")}${L.thermalClass}: ${property.thermal_insulation_class}`,
-    );
-  if (property.charges_monthly != null)
-    parts.push(
-      `${e("monthlyCharges")}${L.monthlyCharges}: ${formatCurrency(property.charges_monthly)}`,
-    );
-  if (property.listing_kind === "rent" && property.availability_date)
-    parts.push(
-      `${e("availableFrom")}${L.availableFrom}: ${formatListingDate(property.availability_date, language)}`,
-    );
-  if (parts.length === 0) return null;
-  return parts.join(emojis ? " | " : " · ");
+  const items = buildingDetailItems(property, language, { includeAddress: true });
+  if (items.length === 0) return null;
+  return items
+    .map((item) => {
+      const prefix = emojis && BUILDING_EMOJIS[item.key]
+        ? `${BUILDING_EMOJIS[item.key]} `
+        : "";
+      return item.label
+        ? `${prefix}${item.label}: ${item.value}`
+        : `${prefix}${item.value}`;
+    })
+    .join(emojis ? " | " : " · ");
 }
 
 // --- Icon → Emoji mapping (derived at format-time, not stored in DB) ---
@@ -221,14 +200,12 @@ export function formatForEmail(
   const language = (listing.language ?? "en") as Language;
   const detailsLine = buildPropertyDetailsLine(property, language);
   const buildingLine = buildBuildingDetailsLine(property, language);
-  const addressLine = property.address ? `📍 ${property.address}` : "";
 
   // Plain text
   const plainParts = [
     title,
     detailsLine,
     buildingLine,
-    addressLine,
     description,
     highlights.length > 0 ? `HIGHLIGHTS:\n${highlights.join("\n")}` : "",
   ].filter(Boolean);
@@ -244,7 +221,6 @@ export function formatForEmail(
     `<strong>${title}</strong>`,
     `<strong>${detailsLine}</strong>`,
     buildingLine ? `<p>${buildingLine}</p>` : "",
-    addressLine ? `<p>${addressLine}</p>` : "",
     descriptionHtml,
     highlightsHtml ? `<strong>HIGHLIGHTS:</strong><br>\n${highlightsHtml}` : "",
   ].filter(Boolean);
@@ -278,13 +254,11 @@ export function formatForSocialMedia(
   const buildingLine = buildBuildingDetailsLine(property, language, {
     emojis: true,
   });
-  const addressLine = property.address ? `📍 ${property.address}` : "";
 
   const parts = [
     `🏠 ${title}`,
     detailsLine,
     buildingLine,
-    addressLine,
     description,
     highlights.length > 0 ? `HIGHLIGHTS:\n${highlights.join("\n")}` : "",
     hashtags,
