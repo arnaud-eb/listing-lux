@@ -317,7 +317,6 @@ describe("building details in email and social copy", () => {
     const result = formatForEmail(mockListing, mockProperty);
     expect(result.plainText.split("\n\n")).toContain(mockProperty.address);
   });
-});
 
   it("labels floor 0 as the ground floor in the building line", () => {
     const result = formatForEmail(mockListing, {
@@ -336,3 +335,4 @@ describe("building details in email and social copy", () => {
     expect(result.plainText).not.toContain("Available from");
     expect(result.plainText).not.toContain("2026-09-01");
   });
+});
