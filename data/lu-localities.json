@@ -2,9 +2,9 @@
   "_meta": {
     "country_code": "LU",
     "source": "Single source of truth for the LU locality hierarchy: country → 12 cantons → communes → quartiers. Migration 010 bootstraps schema + price_tiers; this file owns every locality row (seeded by scripts/seed-localities.ts). asking_price_per_sqm_* are auto-refreshed quarterly from STATEC / Observatoire de l'Habitat by scripts/statec/fetch-prices.ts.",
-    "data_as_of": "2026-03-26",
+    "data_as_of": "2026-06-25",
     "notes": "Complete hierarchy: 1 country + 12 cantons + 103 communes + 24 LU-Ville quartiers + 8 Esch-sur-Alzette quartiers. Commune asking prices come from STATEC's by-commune dataset, LU-Ville quartier asking prices from STATEC's by-quartier dataset; Esch quartiers inherit their commune's price at read time. Hand-curated multilingual descriptions + objective keywords on high-volume communes and quartiers; long-tail rural communes are tier-only. Descriptions follow the Fair Housing rule from the 2026-04 LLM output audit appendix on neighborhood metadata — no demographic descriptors; only objective amenity language. LU-language commune name spellings use authoritative Lëtzebuergesch forms where they differ from FR; unfamiliar ones default to the FR spelling. The seed script topo-sorts by kind and resolves parent_id at insert time.",
-    "statec_last_modified": "2026-03-26T10:03:54.143000+00:00"
+    "statec_last_modified": "2026-06-25T08:13:09.766000+00:00"
   },
   "localities": [
     {
@@ -182,8 +182,8 @@
       ],
       "price_tier_id": "lu_premium_urban",
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 12362,
-      "asking_price_per_sqm_house": 8669
+      "asking_price_per_sqm_apt": 12229,
+      "asking_price_per_sqm_house": 8638
     },
     {
       "kind": "commune",
@@ -233,8 +233,8 @@
       "price_per_sqm_median": 8500,
       "price_per_sqm_max": 10500,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10780,
-      "asking_price_per_sqm_house": 8734
+      "asking_price_per_sqm_apt": 10870,
+      "asking_price_per_sqm_house": 8663
     },
     {
       "kind": "commune",
@@ -285,8 +285,8 @@
       "price_per_sqm_median": 6000,
       "price_per_sqm_max": 8000,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 7392,
-      "asking_price_per_sqm_house": 5135
+      "asking_price_per_sqm_apt": 7406,
+      "asking_price_per_sqm_house": 5127
     },
     {
       "kind": "quartier",
@@ -333,8 +333,8 @@
         "business district"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11407,
-      "asking_price_per_sqm_house": 7713
+      "asking_price_per_sqm_apt": 11307,
+      "asking_price_per_sqm_house": 8029
     },
     {
       "kind": "quartier",
@@ -381,8 +381,8 @@
         "green"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 14273,
-      "asking_price_per_sqm_house": 10967
+      "asking_price_per_sqm_apt": 13497,
+      "asking_price_per_sqm_house": 11399
     },
     {
       "kind": "quartier",
@@ -430,8 +430,8 @@
         "sought-after"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11977,
-      "asking_price_per_sqm_house": 10880
+      "asking_price_per_sqm_apt": 12101,
+      "asking_price_per_sqm_house": 11441
     },
     {
       "kind": "quartier",
@@ -478,8 +478,8 @@
         "green"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11768,
-      "asking_price_per_sqm_house": 8989
+      "asking_price_per_sqm_apt": 11707,
+      "asking_price_per_sqm_house": 9061
     },
     {
       "kind": "quartier",
@@ -527,8 +527,8 @@
         "urban"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11406,
-      "asking_price_per_sqm_house": 9007
+      "asking_price_per_sqm_apt": 11578,
+      "asking_price_per_sqm_house": 9403
     },
     {
       "kind": "quartier",
@@ -576,8 +576,8 @@
         "central"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10560,
-      "asking_price_per_sqm_house": 7594
+      "asking_price_per_sqm_apt": 10699,
+      "asking_price_per_sqm_house": 7437
     },
     {
       "kind": "quartier",
@@ -625,8 +625,8 @@
         "walkable"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11743,
-      "asking_price_per_sqm_house": 9054
+      "asking_price_per_sqm_apt": 11817,
+      "asking_price_per_sqm_house": 8939
     },
     {
       "kind": "quartier",
@@ -674,8 +674,8 @@
         "central"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10829,
-      "asking_price_per_sqm_house": 8092
+      "asking_price_per_sqm_apt": 10738,
+      "asking_price_per_sqm_house": 8114
     },
     {
       "kind": "quartier",
@@ -770,8 +770,8 @@
         "accessible"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 8892,
-      "asking_price_per_sqm_house": 8182
+      "asking_price_per_sqm_apt": 8789,
+      "asking_price_per_sqm_house": 7977
     },
     {
       "kind": "quartier",
@@ -819,8 +819,8 @@
         "growing"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 12289,
-      "asking_price_per_sqm_house": 9587
+      "asking_price_per_sqm_apt": 12355,
+      "asking_price_per_sqm_house": 9182
     },
     {
       "kind": "quartier",
@@ -914,7 +914,7 @@
         "transport"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10124,
+      "asking_price_per_sqm_apt": 10100,
       "asking_price_per_sqm_house": 7149
     },
     {
@@ -962,8 +962,8 @@
         "central"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10900,
-      "asking_price_per_sqm_house": 8750
+      "asking_price_per_sqm_apt": 11041,
+      "asking_price_per_sqm_house": 9132
     },
     {
       "kind": "quartier",
@@ -1011,7 +1011,7 @@
         "premium"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 9960
+      "asking_price_per_sqm_apt": 10685
     },
     {
       "kind": "quartier",
@@ -1058,8 +1058,8 @@
         "near Kirchberg"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 9990,
-      "asking_price_per_sqm_house": 7256
+      "asking_price_per_sqm_apt": 10467,
+      "asking_price_per_sqm_house": 7590
     },
     {
       "kind": "quartier",
@@ -1106,7 +1106,7 @@
         "quiet"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11182,
+      "asking_price_per_sqm_apt": 11030,
       "asking_price_per_sqm_house": 7111
     },
     {
@@ -1154,8 +1154,8 @@
         "green"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10559,
-      "asking_price_per_sqm_house": 7674
+      "asking_price_per_sqm_apt": 10749,
+      "asking_price_per_sqm_house": 7372
     },
     {
       "kind": "quartier",
@@ -1202,8 +1202,8 @@
         "green"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11695,
-      "asking_price_per_sqm_house": 8133
+      "asking_price_per_sqm_apt": 11240,
+      "asking_price_per_sqm_house": 7938
     },
     {
       "kind": "quartier",
@@ -1250,8 +1250,8 @@
         "well-connected"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 13601,
-      "asking_price_per_sqm_house": 8727
+      "asking_price_per_sqm_apt": 13531,
+      "asking_price_per_sqm_house": 8072
     },
     {
       "kind": "quartier",
@@ -1298,7 +1298,8 @@
         "valley"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 9665
+      "asking_price_per_sqm_apt": 9853,
+      "asking_price_per_sqm_house": 7281
     },
     {
       "kind": "quartier",
@@ -1392,8 +1393,8 @@
         "accessible"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11014,
-      "asking_price_per_sqm_house": 8524
+      "asking_price_per_sqm_apt": 11497,
+      "asking_price_per_sqm_house": 8347
     },
     {
       "kind": "quartier",
@@ -1440,8 +1441,8 @@
         "historic"
       ],
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10062,
-      "asking_price_per_sqm_house": 7368
+      "asking_price_per_sqm_apt": 9129,
+      "asking_price_per_sqm_house": 7752
     },
     {
       "kind": "quartier",
@@ -1725,8 +1726,8 @@
       "price_per_sqm_median": 9500,
       "price_per_sqm_max": 12000,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 11331,
-      "asking_price_per_sqm_house": 8350
+      "asking_price_per_sqm_apt": 11277,
+      "asking_price_per_sqm_house": 8371
     },
     {
       "kind": "commune",
@@ -1776,8 +1777,8 @@
       "price_per_sqm_median": 7500,
       "price_per_sqm_max": 9500,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 9766,
-      "asking_price_per_sqm_house": 7702
+      "asking_price_per_sqm_apt": 9693,
+      "asking_price_per_sqm_house": 8051
     },
     {
       "kind": "commune",
@@ -1827,8 +1828,8 @@
       "price_per_sqm_median": 9000,
       "price_per_sqm_max": 11500,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 10040,
-      "asking_price_per_sqm_house": 7864
+      "asking_price_per_sqm_apt": 10071,
+      "asking_price_per_sqm_house": 7938
     },
     {
       "kind": "commune",
@@ -1878,8 +1879,8 @@
       "price_per_sqm_median": 8500,
       "price_per_sqm_max": 10500,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 9584,
-      "asking_price_per_sqm_house": 7529
+      "asking_price_per_sqm_apt": 9657,
+      "asking_price_per_sqm_house": 7930
     },
     {
       "kind": "commune",
@@ -1929,8 +1930,8 @@
       "price_per_sqm_median": 6000,
       "price_per_sqm_max": 7500,
       "currency": "EUR",
-      "asking_price_per_sqm_apt": 7221,
-      "asking_price_per_sqm_house": 5026
+      "asking_price_per_sqm_apt": 7206,
+      "asking_price_per_sqm_house": 5106
     },
     {
       "kind": "commune",
@@ -1977,8 +1978,8 @@
         "near Kirchberg"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_apt": 10327,
-      "asking_price_per_sqm_house": 7564
+      "asking_price_per_sqm_apt": 10202,
+      "asking_price_per_sqm_house": 7555
     },
     {
       "kind": "commune",
@@ -2025,7 +2026,7 @@
         "well-connected"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_house": 7455
+      "asking_price_per_sqm_house": 7450
     },
     {
       "kind": "commune",
@@ -2072,8 +2073,8 @@
         "near capital"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_apt": 9569,
-      "asking_price_per_sqm_house": 6931
+      "asking_price_per_sqm_apt": 9839,
+      "asking_price_per_sqm_house": 6823
     },
     {
       "kind": "commune",
@@ -2120,8 +2121,8 @@
         "villas"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_apt": 8935,
-      "asking_price_per_sqm_house": 8559
+      "asking_price_per_sqm_apt": 8831,
+      "asking_price_per_sqm_house": 8726
     },
     {
       "kind": "commune",
@@ -2168,8 +2169,8 @@
         "business park"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_apt": 9432,
-      "asking_price_per_sqm_house": 7406
+      "asking_price_per_sqm_apt": 9288,
+      "asking_price_per_sqm_house": 6469
     },
     {
       "kind": "commune",
@@ -2216,8 +2217,8 @@
         "well-connected"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_apt": 9496,
-      "asking_price_per_sqm_house": 6328
+      "asking_price_per_sqm_apt": 9389,
+      "asking_price_per_sqm_house": 6762
     },
     {
       "kind": "commune",
@@ -2264,8 +2265,8 @@
         "growing"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 9558,
-      "asking_price_per_sqm_house": 6265
+      "asking_price_per_sqm_apt": 9513,
+      "asking_price_per_sqm_house": 6194
     },
     {
       "kind": "commune",
@@ -2311,8 +2312,8 @@
         "rail"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8234,
-      "asking_price_per_sqm_house": 7175
+      "asking_price_per_sqm_apt": 8208,
+      "asking_price_per_sqm_house": 7317
     },
     {
       "kind": "commune",
@@ -2359,8 +2360,8 @@
         "growing"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8760,
-      "asking_price_per_sqm_house": 7697
+      "asking_price_per_sqm_apt": 8696,
+      "asking_price_per_sqm_house": 7664
     },
     {
       "kind": "commune",
@@ -2406,8 +2407,8 @@
         "schools"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8802,
-      "asking_price_per_sqm_house": 7554
+      "asking_price_per_sqm_apt": 8750,
+      "asking_price_per_sqm_house": 7494
     },
     {
       "kind": "commune",
@@ -2454,8 +2455,8 @@
         "industrial heritage"
       ],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 7139,
-      "asking_price_per_sqm_house": 5490
+      "asking_price_per_sqm_apt": 7134,
+      "asking_price_per_sqm_house": 5279
     },
     {
       "kind": "commune",
@@ -2502,8 +2503,8 @@
         "border"
       ],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 7041,
-      "asking_price_per_sqm_house": 5037
+      "asking_price_per_sqm_apt": 7008,
+      "asking_price_per_sqm_house": 4952
     },
     {
       "kind": "commune",
@@ -2549,8 +2550,8 @@
         "industrial heritage"
       ],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 6964,
-      "asking_price_per_sqm_house": 5139
+      "asking_price_per_sqm_apt": 7293,
+      "asking_price_per_sqm_house": 5083
     },
     {
       "kind": "commune",
@@ -2597,8 +2598,8 @@
         "rail"
       ],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 7459,
-      "asking_price_per_sqm_house": 5497
+      "asking_price_per_sqm_apt": 7406,
+      "asking_price_per_sqm_house": 5486
     },
     {
       "kind": "commune",
@@ -2645,8 +2646,8 @@
         "retail"
       ],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 7226,
-      "asking_price_per_sqm_house": 6557
+      "asking_price_per_sqm_apt": 7138,
+      "asking_price_per_sqm_house": 6607
     },
     {
       "kind": "commune",
@@ -2694,7 +2695,7 @@
       ],
       "price_tier_id": "lu_secondary",
       "asking_price_per_sqm_apt": 7522,
-      "asking_price_per_sqm_house": 6297
+      "asking_price_per_sqm_house": 6416
     },
     {
       "kind": "commune",
@@ -2740,8 +2741,8 @@
         "rail"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 9229,
-      "asking_price_per_sqm_house": 6124
+      "asking_price_per_sqm_apt": 9306,
+      "asking_price_per_sqm_house": 6196
     },
     {
       "kind": "commune",
@@ -2787,8 +2788,8 @@
         "rail"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 9543,
-      "asking_price_per_sqm_house": 5432
+      "asking_price_per_sqm_apt": 9287,
+      "asking_price_per_sqm_house": 5439
     },
     {
       "kind": "commune",
@@ -2835,8 +2836,8 @@
         "border"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8735,
-      "asking_price_per_sqm_house": 6179
+      "asking_price_per_sqm_apt": 8642,
+      "asking_price_per_sqm_house": 6142
     },
     {
       "kind": "commune",
@@ -2883,8 +2884,8 @@
         "rolling"
       ],
       "price_tier_id": "lu_urban",
-      "asking_price_per_sqm_apt": 8256,
-      "asking_price_per_sqm_house": 5953
+      "asking_price_per_sqm_apt": 8208,
+      "asking_price_per_sqm_house": 6078
     },
     {
       "kind": "commune",
@@ -2931,7 +2932,7 @@
         "castle"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 6792
+      "asking_price_per_sqm_apt": 6832
     },
     {
       "kind": "commune",
@@ -2979,8 +2980,8 @@
         "border"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 6555,
-      "asking_price_per_sqm_house": 5257
+      "asking_price_per_sqm_apt": 6612,
+      "asking_price_per_sqm_house": 5248
     },
     {
       "kind": "commune",
@@ -3027,8 +3028,8 @@
         "river"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8554,
-      "asking_price_per_sqm_house": 5647
+      "asking_price_per_sqm_apt": 8566,
+      "asking_price_per_sqm_house": 5712
     },
     {
       "kind": "commune",
@@ -3075,8 +3076,8 @@
         "scenic"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8527,
-      "asking_price_per_sqm_house": 5182
+      "asking_price_per_sqm_apt": 8615,
+      "asking_price_per_sqm_house": 5283
     },
     {
       "kind": "commune",
@@ -3123,8 +3124,8 @@
         "river"
       ],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8018,
-      "asking_price_per_sqm_house": 6500
+      "asking_price_per_sqm_apt": 7756,
+      "asking_price_per_sqm_house": 6492
     },
     {
       "kind": "commune",
@@ -3149,8 +3150,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8729,
-      "asking_price_per_sqm_house": 6051
+      "asking_price_per_sqm_apt": 8724,
+      "asking_price_per_sqm_house": 6206
     },
     {
       "kind": "commune",
@@ -3175,8 +3176,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8481,
-      "asking_price_per_sqm_house": 5996
+      "asking_price_per_sqm_apt": 8446,
+      "asking_price_per_sqm_house": 6047
     },
     {
       "kind": "commune",
@@ -3201,7 +3202,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 6874
+      "asking_price_per_sqm_house": 6687,
+      "asking_price_per_sqm_apt": 7900
     },
     {
       "kind": "commune",
@@ -3226,8 +3228,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 7313,
-      "asking_price_per_sqm_house": 5358
+      "asking_price_per_sqm_apt": 7120,
+      "asking_price_per_sqm_house": 5493
     },
     {
       "kind": "commune",
@@ -3252,8 +3254,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 6925,
-      "asking_price_per_sqm_house": 6404
+      "asking_price_per_sqm_apt": 6928,
+      "asking_price_per_sqm_house": 6502
     },
     {
       "kind": "commune",
@@ -3278,8 +3280,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 5899,
-      "asking_price_per_sqm_house": 5123
+      "asking_price_per_sqm_apt": 5896,
+      "asking_price_per_sqm_house": 4906
     },
     {
       "kind": "commune",
@@ -3305,7 +3307,7 @@
       "tags": [],
       "price_tier_id": "lu_rural",
       "asking_price_per_sqm_apt": 5917,
-      "asking_price_per_sqm_house": 4763
+      "asking_price_per_sqm_house": 4646
     },
     {
       "kind": "commune",
@@ -3330,7 +3332,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4078
+      "asking_price_per_sqm_house": 4405
     },
     {
       "kind": "commune",
@@ -3355,7 +3357,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 6680
+      "asking_price_per_sqm_apt": 6652
     },
     {
       "kind": "commune",
@@ -3380,7 +3382,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4292
+      "asking_price_per_sqm_house": 4316
     },
     {
       "kind": "commune",
@@ -3405,7 +3407,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 5566
+      "asking_price_per_sqm_house": 5546
     },
     {
       "kind": "commune",
@@ -3454,8 +3456,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 7490,
-      "asking_price_per_sqm_house": 5232
+      "asking_price_per_sqm_apt": 7579,
+      "asking_price_per_sqm_house": 4826
     },
     {
       "kind": "commune",
@@ -3504,8 +3506,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 6854,
-      "asking_price_per_sqm_house": 4865
+      "asking_price_per_sqm_apt": 6551,
+      "asking_price_per_sqm_house": 4754
     },
     {
       "kind": "commune",
@@ -3530,7 +3532,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4902
+      "asking_price_per_sqm_house": 4739
     },
     {
       "kind": "commune",
@@ -3555,7 +3557,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 5771
+      "asking_price_per_sqm_house": 5892
     },
     {
       "kind": "commune",
@@ -3580,7 +3582,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 6050
+      "asking_price_per_sqm_house": 6116
     },
     {
       "kind": "commune",
@@ -3604,7 +3606,8 @@
         "en": []
       },
       "tags": [],
-      "price_tier_id": "lu_rural"
+      "price_tier_id": "lu_rural",
+      "asking_price_per_sqm_apt": 7628
     },
     {
       "kind": "commune",
@@ -3629,7 +3632,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4824
+      "asking_price_per_sqm_house": 4682
     },
     {
       "kind": "commune",
@@ -3655,7 +3658,7 @@
       "tags": [],
       "price_tier_id": "lu_rural",
       "asking_price_per_sqm_apt": 7285,
-      "asking_price_per_sqm_house": 5352
+      "asking_price_per_sqm_house": 5497
     },
     {
       "kind": "commune",
@@ -3728,7 +3731,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 5486
+      "asking_price_per_sqm_house": 5398
     },
     {
       "kind": "commune",
@@ -3753,7 +3756,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4807
+      "asking_price_per_sqm_house": 4863
     },
     {
       "kind": "commune",
@@ -3778,7 +3781,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 5278
+      "asking_price_per_sqm_house": 5488
     },
     {
       "kind": "commune",
@@ -3803,8 +3806,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 7661,
-      "asking_price_per_sqm_house": 6243
+      "asking_price_per_sqm_apt": 7883,
+      "asking_price_per_sqm_house": 6167
     },
     {
       "kind": "commune",
@@ -3829,8 +3832,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 8788,
-      "asking_price_per_sqm_house": 5739
+      "asking_price_per_sqm_apt": 8764,
+      "asking_price_per_sqm_house": 5678
     },
     {
       "kind": "commune",
@@ -3855,8 +3858,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 6475,
-      "asking_price_per_sqm_house": 4919
+      "asking_price_per_sqm_apt": 6518,
+      "asking_price_per_sqm_house": 4988
     },
     {
       "kind": "commune",
@@ -3881,8 +3884,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_secondary",
-      "asking_price_per_sqm_apt": 7299,
-      "asking_price_per_sqm_house": 5692
+      "asking_price_per_sqm_apt": 7406,
+      "asking_price_per_sqm_house": 5658
     },
     {
       "kind": "commune",
@@ -3907,7 +3910,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_house": 6015
+      "asking_price_per_sqm_house": 6461
     },
     {
       "kind": "commune",
@@ -3931,7 +3934,8 @@
         "en": []
       },
       "tags": [],
-      "price_tier_id": "lu_rural"
+      "price_tier_id": "lu_rural",
+      "asking_price_per_sqm_house": 6119
     },
     {
       "kind": "commune",
@@ -3956,7 +3960,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_house": 5496
+      "asking_price_per_sqm_house": 5658
     },
     {
       "kind": "commune",
@@ -4005,8 +4009,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 7142,
-      "asking_price_per_sqm_house": 5619
+      "asking_price_per_sqm_apt": 6973,
+      "asking_price_per_sqm_house": 5690
     },
     {
       "kind": "commune",
@@ -4031,8 +4035,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8387,
-      "asking_price_per_sqm_house": 6475
+      "asking_price_per_sqm_apt": 8046,
+      "asking_price_per_sqm_house": 5993
     },
     {
       "kind": "commune",
@@ -4057,8 +4061,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 7665,
-      "asking_price_per_sqm_house": 5969
+      "asking_price_per_sqm_apt": 7867,
+      "asking_price_per_sqm_house": 5898
     },
     {
       "kind": "commune",
@@ -4083,8 +4087,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 7366,
-      "asking_price_per_sqm_house": 5268
+      "asking_price_per_sqm_apt": 6897,
+      "asking_price_per_sqm_house": 5541
     },
     {
       "kind": "commune",
@@ -4109,8 +4113,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 6928,
-      "asking_price_per_sqm_house": 5425
+      "asking_price_per_sqm_apt": 6840,
+      "asking_price_per_sqm_house": 5401
     },
     {
       "kind": "commune",
@@ -4159,8 +4163,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 8311,
-      "asking_price_per_sqm_house": 5370
+      "asking_price_per_sqm_apt": 8211,
+      "asking_price_per_sqm_house": 5361
     },
     {
       "kind": "commune",
@@ -4234,7 +4238,7 @@
       "tags": [],
       "price_tier_id": "lu_rural",
       "asking_price_per_sqm_apt": 6614,
-      "asking_price_per_sqm_house": 4983
+      "asking_price_per_sqm_house": 5116
     },
     {
       "kind": "commune",
@@ -4259,7 +4263,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 5381
+      "asking_price_per_sqm_house": 5306
     },
     {
       "kind": "commune",
@@ -4284,7 +4288,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4212
+      "asking_price_per_sqm_house": 4440
     },
     {
       "kind": "commune",
@@ -4308,7 +4312,8 @@
         "en": []
       },
       "tags": [],
-      "price_tier_id": "lu_rural"
+      "price_tier_id": "lu_rural",
+      "asking_price_per_sqm_house": 5524
     },
     {
       "kind": "commune",
@@ -4333,7 +4338,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4609
+      "asking_price_per_sqm_house": 4762
     },
     {
       "kind": "commune",
@@ -4358,8 +4363,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 6747,
-      "asking_price_per_sqm_house": 4630
+      "asking_price_per_sqm_apt": 6764,
+      "asking_price_per_sqm_house": 4623
     },
     {
       "kind": "commune",
@@ -4408,7 +4413,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 5277
+      "asking_price_per_sqm_house": 5156
     },
     {
       "kind": "commune",
@@ -4433,8 +4438,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 8038,
-      "asking_price_per_sqm_house": 5916
+      "asking_price_per_sqm_apt": 8133,
+      "asking_price_per_sqm_house": 5890
     },
     {
       "kind": "commune",
@@ -4459,8 +4464,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 7052,
-      "asking_price_per_sqm_house": 6901
+      "asking_price_per_sqm_apt": 7056,
+      "asking_price_per_sqm_house": 6914
     },
     {
       "kind": "commune",
@@ -4485,7 +4490,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_house": 5496
+      "asking_price_per_sqm_house": 5159
     },
     {
       "kind": "commune",
@@ -4510,8 +4515,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 7830,
-      "asking_price_per_sqm_house": 6170
+      "asking_price_per_sqm_apt": 8013,
+      "asking_price_per_sqm_house": 6250
     },
     {
       "kind": "commune",
@@ -4537,7 +4542,7 @@
       "tags": [],
       "price_tier_id": "lu_suburban",
       "asking_price_per_sqm_apt": 6969,
-      "asking_price_per_sqm_house": 5396
+      "asking_price_per_sqm_house": 5277
     },
     {
       "kind": "commune",
@@ -4562,7 +4567,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_house": 5838
+      "asking_price_per_sqm_house": 5852
     },
     {
       "kind": "commune",
@@ -4635,7 +4640,7 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_house": 4223
+      "asking_price_per_sqm_house": 4270
     },
     {
       "kind": "commune",
@@ -4659,7 +4664,8 @@
         "en": []
       },
       "tags": [],
-      "price_tier_id": "lu_rural"
+      "price_tier_id": "lu_rural",
+      "asking_price_per_sqm_house": 4604
     },
     {
       "kind": "commune",
@@ -4684,8 +4690,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 5684,
-      "asking_price_per_sqm_house": 4311
+      "asking_price_per_sqm_apt": 5671,
+      "asking_price_per_sqm_house": 4648
     },
     {
       "kind": "commune",
@@ -4710,8 +4716,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_rural",
-      "asking_price_per_sqm_apt": 6151,
-      "asking_price_per_sqm_house": 4546
+      "asking_price_per_sqm_apt": 6218,
+      "asking_price_per_sqm_house": 4476
     },
     {
       "kind": "commune",
@@ -4759,7 +4765,8 @@
         "en": []
       },
       "tags": [],
-      "price_tier_id": "lu_rural"
+      "price_tier_id": "lu_rural",
+      "asking_price_per_sqm_house": 4476
     },
     {
       "kind": "commune",
@@ -4784,8 +4791,8 @@
       },
       "tags": [],
       "price_tier_id": "lu_suburban",
-      "asking_price_per_sqm_apt": 5628,
-      "asking_price_per_sqm_house": 4213
+      "asking_price_per_sqm_apt": 5759,
+      "asking_price_per_sqm_house": 4171
     },
     {
       "kind": "commune",
